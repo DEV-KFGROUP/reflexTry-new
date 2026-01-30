@@ -1,0 +1,229 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+// ============================================
+// User & Authentication
+// ============================================
+
+model User {
+  id            String    @id @default(cuid())
+  email         String    @unique
+  username      String    @unique
+  displayName   String?
+  avatarUrl     String?
+  passwordHash  String
+  emailVerified Boolean   @default(false)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  
+  // Relations
+  preferences   UserPreferences?
+  testResults   TestResult[]
+  achievements  UserAchievement[]
+  progress      UserProgress?
+  sessions      Session[]
+  
+  @@index([email])
+  @@index([username])
+}
+
+model UserPreferences {
+  id                    String  @id @default(cuid())
+  userId                String  @unique
+  theme                 String  @default("system")
+  language              String  @default("en")
+  soundEnabled          Boolean @default(true)
+  notificationsEnabled  Boolean @default(true)
+  showInLeaderboards    Boolean @default(true)
+  allowDataSharing      Boolean @default(true)
+  profileVisibility     String  @default("public")
+  
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@index([userId])
+}
+
+model Session {
+  id        String   @id @default(cuid())
+  userId    String
+  token     String   @unique
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+  
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@index([userId])
+  @@index([token])
+}
+
+// ============================================
+// Test Results
+// ============================================
+
+model TestResult {
+  id          String   @id @default(cuid())
+  userId      String?
+  testType    String
+  score       Float
+  rawData     Json
+  metrics     Json
+  percentile  Float?
+  completedAt DateTime @default(now())
+  duration    Int
+  isValid     Boolean  @default(true)
+  metadata    Json
+  
+  user User? @relation(fields: [userId], references: [id], onDelete: SetNull)
+  
+  @@index([userId])
+  @@index([testType])
+  @@index([completedAt])
+  @@index([score])
+}
+
+// ============================================
+// User Progress
+// ============================================
+
+model UserProgress {
+  id              String   @id @default(cuid())
+  userId          String   @unique
+  cognitiveProfile Json
+  statistics      Json
+  lastUpdated     DateTime @updatedAt
+  
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  
+  @@index([userId])
+}
+
+// ============================================
+// Achievements
+// ============================================
+
+model Achievement {
+  id          String   @id @default(cuid())
+  name        String
+  description String
+  icon        String
+  category    String
+  requirement Json
+  createdAt   DateTime @default(now())
+  
+  userAchievements UserAchievement[]
+  
+  @@index([category])
+}
+
+model UserAchievement {
+  id            String    @id @default(cuid())
+  userId        String
+  achievementId String
+  progress      Float     @default(0)
+  unlockedAt    DateTime?
+  createdAt     DateTime  @default(now())
+  
+  user        User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  achievement Achievement @relation(fields: [achievementId], references: [id], onDelete: Cascade)
+  
+  @@unique([userId, achievementId])
+  @@index([userId])
+  @@index([achievementId])
+}
+
+// ============================================
+// Leaderboards
+// ============================================
+
+model LeaderboardEntry {
+  id          String   @id @default(cuid())
+  userId      String
+  testType    String
+  score       Float
+  achievedAt  DateTime @default(now())
+  timeframe   String   // 'daily', 'weekly', 'monthly', 'all-time'
+  
+  @@index([testType, timeframe, score])
+  @@index([userId])
+}
+
+// ============================================
+// Content Management
+// ============================================
+
+model Article {
+  id            String   @id @default(cuid())
+  slug          String   @unique
+  title         String
+  description   String
+  content       String   @db.Text
+  authorId      String
+  category      String
+  tags          String[]
+  featuredImage String
+  publishedAt   DateTime
+  updatedAt     DateTime @updatedAt
+  readingTime   Int
+  views         Int      @default(0)
+  seoMetadata   Json
+  relatedTests  String[]
+  relatedArticles String[]
+  
+  author Author @relation(fields: [authorId], references: [id])
+  
+  @@index([slug])
+  @@index([category])
+  @@index([publishedAt])
+}
+
+model Author {
+  id          String   @id @default(cuid())
+  name        String
+  bio         String
+  avatarUrl   String
+  credentials String[]
+  socialLinks Json
+  
+  articles Article[]
+}
+
+// ============================================
+// Analytics
+// ============================================
+
+model AnalyticsEvent {
+  id            String   @id @default(cuid())
+  eventName     String
+  eventCategory String
+  eventLabel    String?
+  eventValue    Float?
+  userId        String?
+  sessionId     String
+  timestamp     DateTime @default(now())
+  properties    Json
+  
+  @@index([eventName])
+  @@index([eventCategory])
+  @@index([timestamp])
+  @@index([userId])
+}
+
+model PageView {
+  id        String   @id @default(cuid())
+  path      String
+  title     String
+  referrer  String
+  userId    String?
+  sessionId String
+  timestamp DateTime @default(now())
+  duration  Int?
+  
+  @@index([path])
+  @@index([timestamp])
+  @@index([userId])
+}

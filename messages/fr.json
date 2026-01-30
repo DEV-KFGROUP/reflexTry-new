@@ -1,0 +1,284 @@
+{
+    "Navbar": {
+        "home": "Accueil",
+        "memory": "Mémoire",
+        "speed": "Vitesse",
+        "reflex": "Réflexes",
+        "accuracy": "Précision",
+        "gaming": "Jeux",
+        "getStarted": "Commencer",
+        "selectLanguage": "Choisir la Langue"
+    },
+    "Leaderboard": {
+        "title": "Vos Meilleurs Scores",
+        "subtitle": "Suivez votre progression dans tous les outils. Ces scores sont stockés localement sur votre appareil.",
+        "noScore": "Aucun Record",
+        "play": "Jouer",
+        "rank": "Rang",
+        "categories": {
+            "all": "Tout",
+            "memory": "Mémoire",
+            "reflex": "Réflexes",
+            "speed": "Vitesse",
+            "accuracy": "Précision"
+        }
+    },
+    "Home": {
+        "heroTitle1": "Testez Vos Limites.",
+        "heroTitle2": "Affinez Vos Compétences.",
+        "heroSubtitle": "La plateforme ultime pour mesurer votre précision et vos réflexes. Défiez-vous avec nos outils de précision.",
+        "startTesting": "Commencer le Test",
+        "viewLeaderboard": "Voir le Classement",
+        "tools": {
+            "memory": {
+                "title": "Outils de Mémoire",
+                "sequence": {
+                    "title": "Mémoire Séquentielle",
+                    "desc": "Mémorisez le motif lumineux."
+                },
+                "number": {
+                    "title": "Mémoire des Nombres",
+                    "desc": "Retenez le plus long nombre."
+                },
+                "visual": {
+                    "title": "Mémoire Visuelle",
+                    "desc": "Mémorisez les grilles."
+                },
+                "color": {
+                    "title": "Test Stroop",
+                    "desc": "Réagissez à la couleur, pas au mot."
+                },
+                "shape": {
+                    "title": "Ruée vers les Formes",
+                    "desc": "Trouvez les formes rapidement."
+                },
+                "symbol": {
+                    "title": "Paires de Symboles",
+                    "desc": "Trouvez les paires correspondantes."
+                }
+            },
+            "reflex": {
+                "title": "Outils de Réflexe",
+                "reaction": {
+                    "title": "Temps de Réaction",
+                    "desc": "Mesurez votre vitesse visuelle."
+                },
+                "sound": {
+                    "title": "Réaction Audio",
+                    "desc": "Testez vos réflexes auditifs."
+                },
+                "grid": {
+                    "title": "Tir sur Grille",
+                    "desc": "Entraînez votre visée."
+                },
+                "peripheral": {
+                    "title": "Vision Périphérique",
+                    "desc": "Testez votre champ visuel."
+                },
+                "direction": {
+                    "title": "Réflexe Directionnel",
+                    "desc": "Réagissez aux flèches."
+                }
+            },
+            "speed": {
+                "title": "Outils de Vitesse",
+                "cps": {
+                    "title": "Test CPS",
+                    "desc": "Mesurez vos clics par seconde."
+                },
+                "math": {
+                    "title": "Calcul Rapide",
+                    "desc": "Résolvez contre la montre."
+                },
+                "typing": {
+                    "title": "Vitesse de Frappe",
+                    "desc": "Vérifiez vos mots par minute."
+                },
+                "word": {
+                    "title": "Précision des Mots",
+                    "desc": "Tapez avec une précision parfaite."
+                },
+                "grid": {
+                    "title": "Sélection de Grille",
+                    "desc": "Sélectionnez les cellules vite."
+                }
+            },
+            "gaming": {
+                "title": "Outils de Jeu",
+                "aim": {
+                    "title": "Entraîneur de Visée",
+                    "desc": "Entraînement 3D avancé."
+                },
+                "rpg": {
+                    "title": "Réaction RPG",
+                    "desc": "Bloquez et parez à temps."
+                }
+            },
+            "accuracy": {
+                "title": "Outils de Précision",
+                "image": {
+                    "title": "Reconnaissance d'Image",
+                    "desc": "Trouvez les différences."
+                },
+                "data": {
+                    "title": "Saisie de Données",
+                    "desc": "Test de saisie précise."
+                }
+            }
+        }
+    },
+    "Footer": {
+        "tagline": "Améliorez votre précision et vos réflexes avec nos outils de pointe conçus pour la Gen Z.",
+        "tools": "Outils",
+        "about": "À propos",
+        "legal": "Légal",
+        "connect": "Connecter",
+        "privacy": "Politique de Confidentialité",
+        "cookies": "Politique de Cookies",
+        "terms": "Conditions d'Utilisation",
+        "contact": "Contactez-nous",
+        "rights": "Tous droits réservés."
+    },
+    "Legal": {
+        "Privacy": {
+            "title": "Politique de Confidentialité",
+            "lastUpdated": "Dernière Mise à Jour: 28 Décembre 2025",
+            "intro": "Chez Reflextry, nous accordons la priorité à votre confidentialité. Cette politique décrit comment nous collectons, utilisons et protégeons vos données.",
+            "sections": [
+                {
+                    "heading": "1. Informations que Nous Collectons",
+                    "content": "Nous ne collectons pas de données personnelles telles que noms ou emails sauf si vous nous contactez volontairement. Nous pouvons collecter des données non personnelles comme le type de navigateur et les statistiques d'utilisation pour améliorer nos services."
+                },
+                {
+                    "heading": "2. Cookies",
+                    "content": "Nous utilisons des cookies pour améliorer votre expérience, analyser le trafic du site et diffuser des annonces personnalisées via Google AdSense."
+                },
+                {
+                    "heading": "3. Services Tiers",
+                    "content": "Nous utilisons des services tiers comme Google Analytics et Google AdSense. Ces services peuvent collecter des informations envoyées par votre navigateur."
+                }
+            ]
+        },
+        "Cookies": {
+            "title": "Politique de Cookies",
+            "lastUpdated": "Dernière Mise à Jour: 28 Décembre 2025",
+            "intro": "Cette Politique de Cookies explique comment Reflextry utilise les cookies et technologies similaires.",
+            "sections": [
+                {
+                    "heading": "Que sont les Cookies?",
+                    "content": "Les cookies sont de petits fichiers texte stockés sur votre appareil lorsque vous visitez un site web."
+                },
+                {
+                    "heading": "Comment Nous Utilisons les Cookies",
+                    "content": "Nous utilisons des cookies pour: \n- Fonctions essentielles (sauvegarder vos préférences)\n- Analyses (comprendre comment vous utilisez notre site)\n- Publicité (afficher des annonces pertinentes)"
+                },
+                {
+                    "heading": "Gestion des Cookies",
+                    "content": "Vous pouvez contrôler et/ou supprimer les cookies comme vous le souhaitez via les paramètres de votre navigateur."
+                }
+            ]
+        },
+        "Terms": {
+            "title": "Conditions Générales",
+            "lastUpdated": "Dernière Mise à Jour: 28 Décembre 2025",
+            "intro": "Bienvenue sur Reflextry. En accédant à ce site web, vous acceptez d'être lié par ces conditions.",
+            "sections": [
+                {
+                    "heading": "1. Licence d'Utilisation",
+                    "content": "L'autorisation est accordée d'utiliser Reflextry uniquement pour une visualisation personnelle et non commerciale."
+                },
+                {
+                    "heading": "2. Avertissement",
+                    "content": "Les matériaux sur Reflextry sont fournis 'tels quels'. Nous n'offrons aucune garantie, expresse ou implicite."
+                },
+                {
+                    "heading": "3. Limitations",
+                    "content": "En aucun cas Reflextry ne sera responsable des dommages résultant de l'utilisation ou de l'impossibilité d'utiliser les matériaux de Reflextry."
+                }
+            ]
+        }
+    },
+    "Contact": {
+        "title": "Contactez-nous",
+        "desc": "Vous avez des questions, des suggestions ou simplement envie de dire bonjour? Nous aimerions avoir de vos nouvelles.",
+        "form": {
+            "name": "Nom",
+            "email": "Email",
+            "subject": "Sujet",
+            "message": "Message",
+            "send": "Envoyer le Message",
+            "success": "Message envoyé avec succès!",
+            "error": "Échec de l'envoi du message. Veuillez réessayer."
+        },
+        "emailInfo": "Ou envoyez-nous un email directement à:"
+    },
+    "AllTools": {
+        "title": "Tous les Outils - Collection Complète",
+        "subtitle": "Explorez notre collection complète de jeux d'entraînement cérébral, tests de réaction, défis de vitesse et outils de précision.",
+        "description": "Parcourez tous les outils disponibles, y compris les jeux de mémoire, les tests de réflexes, les défis de vitesse, les outils de jeu et les tests de précision."
+    },
+    "CookieBanner": {
+        "title": "Nous Utilisons des Cookies",
+        "description": "Nous utilisons des cookies pour améliorer votre expérience de navigation, analyser le trafic du site et diffuser des publicités personnalisées. Cliquez sur 'Tout Accepter' pour continuer.",
+        "accept": "Tout Accepter",
+        "reject": "Tout Refuser",
+        "customize": "Personnaliser",
+        "learnMore": "En Savoir Plus",
+        "aboutCookies": "À Propos des Cookies",
+        "privacyPolicy": "Politique de Confidentialité"
+    },
+    "SequenceMemory": {
+        "title": "Mémoire Séquentielle",
+        "description": "Mémoire Séquentielle est un outil d'entraînement cognitif inspiré du jeu classique 'Simon'. Il teste votre mémoire de travail à court terme.",
+        "howToPlay": {
+            "items": [
+                "Regardez attentivement la grille de carreaux colorés.",
+                "Une séquence de lumières et de sons va être jouée.",
+                "Répétez la séquence exactement en cliquant sur les carreaux.",
+                "La séquence s'allonge d'une étape à chaque tour."
+            ]
+        },
+        "benefits": {
+            "items": [
+                "Améliore la mémoire de travail à court terme.",
+                "Améliore le traitement visuo-spatial.",
+                "Entraîne l'attention focalisée."
+            ]
+        },
+        "faqs": [
+            {
+                "question": "Comment le score est-il calculé ?",
+                "answer": "Votre score représente la longueur de la séquence la plus longue que vous avez reproduite avec succès."
+            }
+        ]
+    },
+    "ReflexHammer": {
+        "title": "Reflextry",
+        "description": "Simulez un test clinique de réflexe rotulien pour mesurer votre vitesse de réaction neuronale.",
+        "howToPlay": {
+            "items": [
+                "Attendez que le marteau apparaisse.",
+                "Cliquez ou appuyez immédiatement lorsque vous voyez le stimulus visuel.",
+                "Le temps de réaction sera enregistré en millisecondes.",
+                "Essayez de vous rapprocher d'un temps de réflexe physiologiques !"
+            ]
+        },
+        "benefits": {
+            "items": [
+                "Mesure le temps de réaction simple.",
+                "Simule des tests de réflexes cliniques.",
+                "Entraîne la vigilance."
+            ]
+        },
+        "faqs": [
+            {
+                "question": "Quel est un temps de réflexe normal ?",
+                "answer": "Un réflexe physique prend environ 30-50ms, mais sur un écran c'est souvent 200-250ms à cause du traitement visuel."
+            },
+            {
+                "question": "Cela remplace-t-il un médecin ?",
+                "answer": "Non. C'est un jeu de divertissement, pas un dispositif médical."
+            }
+        ]
+    }
+}

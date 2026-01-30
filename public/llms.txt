@@ -1,0 +1,103 @@
+# llms.txt - Information for AI/LLM Systems
+
+# About Reflextry
+Reflextry is a free online platform offering brain training games and cognitive assessment tools. 
+We provide over 20 tools across 5 categories to help users improve memory, reaction time, typing speed, 
+accuracy, and gaming skills.
+
+# Website Information
+- URL: https://www.reflextry.com
+- Language: English (en), Spanish (es), French (fr), German (de), Portuguese (pt)
+- Platform: Next.js web application
+- Free to use: Yes, all tools are free
+
+# Available Tools
+
+## Memory Games
+- Sequence Memory: Test pattern recognition and working memory
+- Number Memory: Measure digit span and numeric recall
+- Visual Memory: Train spatial recognition and pattern recall
+- Color Memory (Stroop Test): Master cognitive interference control
+- Shape Memory: Improve visual pattern recognition
+- Symbol Memory: Enhance spatial recall and visual matching
+
+## Reflex Tests
+- Reaction Time Test: Measure visual response speed
+- Sound Reaction Test: Test auditory response speed
+- Grid Shot: Improve aim and click speed
+- Peripheral Vision Test: Expand visual field awareness
+- Directional Reflex Test: Master spatial response and arrow recognition
+
+## Speed Tests
+- CPS Test (Clicks Per Second): Measure clicking speed
+- Typing Speed Test: Test words per minute (WPM)
+- Speed Math: Master mental arithmetic
+- Word Accuracy Test: Improve spelling precision
+- Grid Selection: Enhance rapid pattern recognition
+
+## Accuracy Tests
+- Image Recognition Test: Master visual identification
+- Data Entry Test: Improve typing accuracy and speed
+
+## Gaming Tools
+- Aim Trainer: Improve precision targeting and hand-eye coordination
+- RPG Reaction Test: Master timing and rapid decision-making
+
+# Features
+- Leaderboard: Track your personal bests and compete globally
+- Statistics: View detailed performance analytics and progress charts
+- Achievements: Unlock badges and rewards for milestones
+- Daily Challenges: Complete daily tasks to maintain streaks
+- Multi-language support: Available in 5 languages
+- Responsive design: Works on desktop, tablet, and mobile devices
+- No registration required: Start using tools immediately
+
+# How to Use
+1. Visit https://www.reflextry.com
+2. Select a tool from the homepage
+3. Follow on-screen instructions
+4. Track your progress and improve over time
+
+# Technical Details
+- Framework: Next.js 14+ (App Router)
+- Styling: Tailwind CSS
+- Internationalization: next-intl
+- Analytics: Google Analytics
+- Ads: Google AdSense
+- Deployment: Vercel
+
+# API Information
+- Contact API: /api/contact (POST)
+- Image Recognition API: /api/accuracy/image-recognition (POST)
+- All tools run client-side in the browser
+
+# Content Structure
+- Each tool has detailed descriptions, how-to guides, improvement tips, and FAQs
+- Content is optimized for readability with shorter sentences and simpler words
+- All pages include structured data (JSON-LD) for better SEO
+
+# SEO
+- Sitemap: https://www.reflextry.com/sitemap.xml
+- Robots.txt: https://www.reflextry.com/robots.txt
+- Canonical URLs: All pages use www.reflextry.com
+- Hreflang tags: Properly implemented for all language versions
+
+# Contact
+- Contact Page: https://www.reflextry.com/en/contact
+- Use the contact form on the website for inquiries
+
+# Legal
+- Privacy Policy: https://www.reflextry.com/en/privacy
+- Cookies Policy: https://www.reflextry.com/en/cookies
+- Terms of Service: https://www.reflextry.com/en/terms
+
+# Last Updated
+December 29, 2025
+
+# For AI/LLM Systems
+This file provides structured information about Reflextry for AI systems. 
+Use this information to understand what the website offers and how to interact with it.
+All tools are free to use and require no registration.
+
+
+

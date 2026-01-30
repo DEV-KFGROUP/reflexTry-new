@@ -1,0 +1,344 @@
+{
+    "Navbar": {
+        "home": "Início",
+        "memory": "Memória",
+        "speed": "Velocidade",
+        "reflex": "Reflexos",
+        "accuracy": "Precisão",
+        "gaming": "Jogos",
+        "getStarted": "Começar",
+        "selectLanguage": "Selecionar Idioma"
+    },
+    "Leaderboard": {
+        "title": "Suas Melhores Pontuações",
+        "subtitle": "Acompanhe seu progresso em todas as ferramentas. Essas pontuações são armazenadas localmente no seu dispositivo.",
+        "noScore": "Sem Recorde",
+        "play": "Jogar",
+        "rank": "Posição",
+        "categories": {
+            "all": "Todos",
+            "memory": "Memória",
+            "reflex": "Reflexos",
+            "speed": "Velocidade",
+            "accuracy": "Precisão"
+        }
+    },
+    "Home": {
+        "heroTitle1": "Teste Seus Limites.",
+        "heroTitle2": "Refine Suas Habilidades.",
+        "heroSubtitle": "A plataforma definitiva para medir sua precisão e reflexos. Desafie-se com nossas ferramentas.",
+        "startTesting": "Iniciar Teste",
+        "viewLeaderboard": "Ver Classificação",
+        "tools": {
+            "memory": {
+                "title": "Ferramentas de Memória",
+                "sequence": {
+                    "title": "Memória de Sequência",
+                    "desc": "Memorize o padrão de luzes."
+                },
+                "number": {
+                    "title": "Memória Numérica",
+                    "desc": "Lembre o número mais longo."
+                },
+                "visual": {
+                    "title": "Memória Visual",
+                    "desc": "Memorize os padrões da grade."
+                },
+                "color": {
+                    "title": "Teste Stroop",
+                    "desc": "Reaja à cor, não à palavra."
+                },
+                "shape": {
+                    "title": "Corrida das Formas",
+                    "desc": "Encontre as formas rápido."
+                },
+                "symbol": {
+                    "title": "Pares de Símbolos",
+                    "desc": "Encontre pares correspondentes."
+                }
+            },
+            "reflex": {
+                "title": "Ferramentas de Reflexo",
+                "reaction": {
+                    "title": "Tempo de Reação",
+                    "desc": "Meça sua velocidade de reação."
+                },
+                "sound": {
+                    "title": "Reação Auditiva",
+                    "desc": "Teste seus reflexos auditivos."
+                },
+                "grid": {
+                    "title": "Tiro na Grade",
+                    "desc": "Treine sua mira e velocidade."
+                },
+                "peripheral": {
+                    "title": "Visão Periférica",
+                    "desc": "Teste sua visão ampla."
+                },
+                "direction": {
+                    "title": "Reflexo Direcional",
+                    "desc": "Reaja às setas."
+                }
+            },
+            "speed": {
+                "title": "Ferramentas de Velocidade",
+                "cps": {
+                    "title": "Teste CPS",
+                    "desc": "Meça seus cliques por segundo."
+                },
+                "math": {
+                    "title": "Matemática Rápida",
+                    "desc": "Resolva problemas contra o tempo."
+                },
+                "typing": {
+                    "title": "Velocidade de Digitação",
+                    "desc": "Verifique seu PPM."
+                },
+                "word": {
+                    "title": "Precisão de Palavras",
+                    "desc": "Digite com precisão perfeita."
+                },
+                "grid": {
+                    "title": "Seleção de Grade",
+                    "desc": "Selecione células rapidamente."
+                }
+            },
+            "gaming": {
+                "title": "Ferramentas de Jogos",
+                "aim": {
+                    "title": "Treinador de Mira",
+                    "desc": "Treino de mira 3D avançado."
+                },
+                "rpg": {
+                    "title": "Reação RPG",
+                    "desc": "Bloqueie e desvie a tempo."
+                }
+            },
+            "accuracy": {
+                "title": "Ferramentas de Precisão",
+                "image": {
+                    "title": "Reconhecimento de Imagem",
+                    "desc": "Encontre diferenças."
+                },
+                "data": {
+                    "title": "Entrada de Dados",
+                    "desc": "Teste de digitação precisa."
+                }
+            }
+        }
+    },
+    "Footer": {
+        "tagline": "Melhore sua precisão e reflexos com nossas ferramentas de ponta projetadas para a Geração Z.",
+        "tools": "Ferramentas",
+        "about": "Sobre nós",
+        "legal": "Legal",
+        "connect": "Conectar",
+        "privacy": "Política de Privacidade",
+        "cookies": "Política de Cookies",
+        "terms": "Termos de Serviço",
+        "contact": "Contate-nos",
+        "rights": "Todos os direitos reservados."
+    },
+    "Legal": {
+        "Privacy": {
+            "title": "Política de Privacidade",
+            "lastUpdated": "Última Atualização: 28 de Dezembro de 2025",
+            "intro": "Na Reflextry, priorizamos sua privacidade. Esta política descreve como coletamos, usamos e protegemos seus dados.",
+            "sections": [
+                {
+                    "heading": "1. Informações que Coletamos",
+                    "content": "Não coletamos dados pessoais como nomes ou emails, a menos que você nos contate voluntariamente. Podemos coletar dados não pessoais como tipo de navegador e estatísticas de uso para melhorar nossos serviços."
+                },
+                {
+                    "heading": "2. Cookies",
+                    "content": "Usamos cookies para melhorar sua experiência, analisar o tráfego do site e exibir anúncios personalizados através do Google AdSense."
+                },
+                {
+                    "heading": "3. Serviços de Terceiros",
+                    "content": "Usamos serviços de terceiros como Google Analytics e Google AdSense. Esses serviços podem coletar informações enviadas pelo seu navegador."
+                }
+            ]
+        },
+        "Cookies": {
+            "title": "Política de Cookies",
+            "lastUpdated": "Última Atualização: 28 de Dezembro de 2025",
+            "intro": "Esta Política de Cookies explica como a Reflextry usa cookies e tecnologias similares.",
+            "sections": [
+                {
+                    "heading": "O que são Cookies?",
+                    "content": "Cookies são pequenos arquivos de texto armazenados no seu dispositivo quando você visita um site."
+                },
+                {
+                    "heading": "Como Usamos Cookies",
+                    "content": "Usamos cookies para: \n- Funções essenciais (salvar suas preferências)\n- Análises (entender como você usa nosso site)\n- Publicidade (mostrar anúncios relevantes)"
+                },
+                {
+                    "heading": "Gerenciando Cookies",
+                    "content": "Você pode controlar e/ou excluir cookies através das configurações do seu navegador."
+                }
+            ]
+        },
+        "Terms": {
+            "title": "Termos e Condições",
+            "lastUpdated": "Última Atualização: 28 de Dezembro de 2025",
+            "intro": "Bem-vindo à Reflextry. Ao acessar este site, você concorda em estar vinculado a estes termos.",
+            "sections": [
+                {
+                    "heading": "1. Licença de Uso",
+                    "content": "É concedida permissão para usar a Reflextry apenas para visualização pessoal e não comercial."
+                },
+                {
+                    "heading": "2. Isenção de Responsabilidade",
+                    "content": "Os materiais na Reflextry são fornecidos 'como estão'. Não oferecemos garantias, expressas ou implícitas."
+                },
+                {
+                    "heading": "3. Limitações",
+                    "content": "Em nenhum caso a Reflextry será responsável por danos decorrentes do uso ou incapacidade de usar os materiais da Reflextry."
+                }
+            ]
+        }
+    },
+    "Contact": {
+        "title": "Entre em Contato",
+        "desc": "Tem perguntas, sugestões ou apenas quer dizer oi? Adoraríamos ouvir você.",
+        "form": {
+            "name": "Nome",
+            "email": "Email",
+            "subject": "Assunto",
+            "message": "Mensagem",
+            "send": "Enviar Mensagem",
+            "success": "Mensagem enviada com sucesso!",
+            "error": "Falha ao enviar mensagem. Por favor, tente novamente."
+        },
+        "emailInfo": "Ou envie-nos um email diretamente em:"
+    },
+    "AllTools": {
+        "title": "Todas as Ferramentas - Coleção Completa",
+        "subtitle": "Explore nossa coleção completa de jogos de treinamento cerebral, testes de reação, desafios de velocidade e ferramentas de precisão.",
+        "description": "Navegue por todas as ferramentas disponíveis, incluindo jogos de memória, testes de reflexos, desafios de velocidade, ferramentas de jogos e testes de precisão."
+    },
+    "CookieBanner": {
+        "title": "Usamos Cookies",
+        "description": "Usamos cookies para melhorar sua experiência de navegação, analisar o tráfego do site e veicular anúncios personalizados. Clique em 'Aceitar Tudo' para continuar.",
+        "accept": "Aceitar Tudo",
+        "reject": "Rejeitar Tudo",
+        "customize": "Personalizar",
+        "learnMore": "Saber Mais",
+        "aboutCookies": "Sobre Cookies",
+        "privacyPolicy": "Política de Privacidade"
+    },
+    "SequenceMemory": {
+        "title": "Memória de Sequência",
+        "description": "Memória de Sequência é uma ferramenta de treinamento cognitivo inspirada no clássico jogo 'Simon'. Ela testa sua memória de trabalho de curto prazo.",
+        "howToPlay": {
+            "items": [
+                "Observe atentamente a grade de azulejos coloridos.",
+                "Uma sequência de luzes e sons será reproduzida.",
+                "Repita a sequência exatamente clicando nos azulejos.",
+                "A sequência aumenta um passo a cada rodada."
+            ]
+        },
+        "benefits": {
+            "items": [
+                "Melhora a memória de trabalho de curto prazo.",
+                "Aprimora o processamento visual-espacial.",
+                "Treina a atenção focada."
+            ]
+        },
+        "faqs": [
+            {
+                "question": "Como a pontuação é calculada?",
+                "answer": "Sua pontuação representa o comprimento da sequência mais longa que você reproduziu com sucesso."
+            }
+        ]
+    },
+    "ReflexHammer": {
+        "title": "Reflextry",
+        "description": "Simule um teste clínico de reflexo patelar para medir sua velocidade de reação neural.",
+        "howToPlay": {
+            "items": [
+                "Aguarde o martelo aparecer.",
+                "Clique ou toque imediatamente quando vir o estímulo visual.",
+                "O tempo de reação será registrado em milissegundos.",
+                "Tente se aproximar de um tempo de reflexo fisiológico realista!"
+            ]
+        },
+        "benefits": {
+            "items": [
+                "Mede o tempo de reação simples.",
+                "Simula testes de reflexos clínicos.",
+                "Treina o estado de alerta."
+            ]
+        },
+        "faqs": [
+            {
+                "question": "Qual é um tempo de reflexo normal?",
+                "answer": "Um reflexo físico leva cerca de 30-50ms, mas em uma tela geralmente leva de 200-250ms devido ao processamento visual."
+            },
+            {
+                "question": "Isso substitui um médico?",
+                "answer": "Não. Este é um jogo de entretenimento, não um dispositivo médico."
+            }
+        ]
+    },
+    "About": {
+        "title": "Sobre Reflextry",
+        "subtitle": "Capacitando a excelência cognitiva através de ferramentas inovadoras",
+        "mission": {
+            "title": "Nossa Missão",
+            "description": "A Reflextry dedica-se a tornar o treinamento cognitivo acessível, envolvente e eficaz para todos."
+        },
+        "story": {
+            "title": "Nossa História",
+            "paragraph1": "A Reflextry foi fundada com uma visão simples, mas poderosa: democratizar o acesso a ferramentas de treinamento cognitivo.",
+            "paragraph2": "Nossa jornada começou com o compromisso de fornecer ferramentas gratuitas e acessíveis.",
+            "paragraph3": "Somos apaixonados pelo aprimoramento cognitivo e trabalhamos continuamente para melhorar nossa plataforma."
+        },
+        "values": {
+            "title": "Nossos Valores",
+            "accuracy": "Excelência Baseada em Evidências",
+            "accuracyDesc": "Cada ferramenta na Reflextry é baseada em pesquisa científica.",
+            "innovation": "Inovação e Tecnologia",
+            "innovationDesc": "Aproveitamos as tecnologias web de ponta.",
+            "accessibility": "Acessibilidade para Todos",
+            "accessibilityDesc": "O aprimoramento cognitivo não deve ser limitado pelo custo.",
+            "userFirst": "Design Centrado no Usuário",
+            "userFirstDesc": "Nossos usuários estão no centro de tudo o que fazemos."
+        },
+        "offer": {
+            "title": "O Que Oferecemos",
+            "brainTraining": "Nossos jogos de memória incluem memória de sequência, memória numérica e muito mais.",
+            "reactionTests": "Teste e melhore seu tempo de reação com nossas ferramentas.",
+            "progressTracking": "Monitore seu desenvolvimento cognitivo com estatísticas detalhadas.",
+            "achievements": "Mantenha-se motivado com nosso sistema de conquistas."
+        },
+        "community": {
+            "title": "Junte-se à Nossa Comunidade",
+            "description": "A Reflextry é mais do que apenas uma plataforma: é uma comunidade."
+        },
+        "cta": {
+            "title": "Comece Sua Jornada",
+            "description": "Pronto para melhorar sua memória e reflexos?",
+            "button": "Explorar Ferramentas"
+        },
+        "team": {
+            "title": "Sobre Nossa Equipe",
+            "description": "A Reflextry é desenvolvida por uma equipe dedicada de pesquisadores e engenheiros.",
+            "expertise": "Nossa equipe combina experiência em ciência cognitiva e desenvolvimento de software.",
+            "members": {
+                "kaushik": {
+                    "name": "Rabadiya Kaushik",
+                    "role": "Fundador"
+                },
+                "harshil": {
+                    "name": "Harshil Miyani",
+                    "role": "Desenvolvedor"
+                }
+            }
+        },
+        "contact": {
+            "title": "Entre em Contato",
+            "description": "Valorizamos o feedback da nossa comunidade."
+        }
+    }
+}

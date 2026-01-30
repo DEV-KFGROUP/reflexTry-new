@@ -1,0 +1,64 @@
+{
+  "name": "Reflextry - Brain Training Games",
+  "short_name": "Reflextry",
+  "description": "Test your accuracy and reflexes with our Gen Z tools. Free online brain training games.",
+  "start_url": "/en",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#00f0ff",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/logo-80x80.png",
+      "sizes": "80x80",
+      "type": "image/png"
+    },
+    {
+      "src": "/apple-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["games", "education", "health"],
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "Reaction Time Test",
+      "short_name": "Reaction",
+      "description": "Test your reaction time",
+      "url": "/en/reflex/reaction",
+      "icons": [{ "src": "/android-icon-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Typing Speed Test",
+      "short_name": "Typing",
+      "description": "Test your typing speed",
+      "url": "/en/speed/typing",
+      "icons": [{ "src": "/android-icon-192x192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "All Tools",
+      "short_name": "Tools",
+      "description": "Browse all brain training tools",
+      "url": "/en/tools",
+      "icons": [{ "src": "/android-icon-192x192.png", "sizes": "192x192" }]
+    }
+  ]
+}
+

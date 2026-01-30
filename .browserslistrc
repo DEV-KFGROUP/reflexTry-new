@@ -1,0 +1,27 @@
+# Modern browsers only - removes unnecessary polyfills
+# Targets browsers that support ES2022 features natively
+
+# Last 2 versions of major browsers
+last 2 Chrome versions
+last 2 Firefox versions
+last 2 Safari versions
+last 2 Edge versions
+
+# Modern mobile browsers
+iOS >= 15
+Android >= 10
+
+# Exclude dead browsers
+not dead
+not op_mini all
+
+# Exclude IE
+not IE 11
+
+
+
+
+
+
+
+
