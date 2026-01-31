@@ -19,11 +19,6 @@ const AchievementNotificationManager = dynamic(() => import("@/components/Achiev
   loading: () => null,
 });
 
-const CookieBanner = dynamic(() => import("@/components/CookieBanner").then(mod => ({ default: mod.CookieBanner })), {
-  ssr: false,
-  loading: () => null,
-});
-
 const SoundInteractions = dynamic(() => import("@/components/SoundInteractions").then(mod => ({ default: mod.SoundInteractions })), {
   ssr: false,
   loading: () => null,
@@ -38,7 +33,6 @@ export function LazyLoadedComponents() {
   return (
     <>
       <SettingsPanel />
-      <CookieBanner />
       <AchievementNotificationManager />
       <SoundInteractions />
       <LevelUpModal />
