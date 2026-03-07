@@ -1,5 +1,5 @@
 import { XP_REWARDS } from "./achievements";
-import { getLevel, getXPProgress, getRank, LEVEL_THRESHOLDS } from "./achievements";
+import { getLevel, getXPProgress, getRank } from "./achievements";
 
 const XP_STORAGE_KEY = "reflextry_total_xp";
 const LAST_LEVEL_STORAGE_KEY = "reflextry_last_level";
@@ -22,29 +22,29 @@ export const XPSystem = {
         if (typeof window === "undefined") {
             return XPSystem.getProgress();
         }
-        
+
         const currentXP = XPSystem.getTotalXP();
         const oldLevel = getLevel(currentXP);
         const newXP = currentXP + amount;
-        
+
         localStorage.setItem(XP_STORAGE_KEY, newXP.toString());
-        
+
         const newLevel = getLevel(newXP);
         const progress = getXPProgress(newXP);
         const rank = getRank(newLevel);
-        
+
         // Check if level up
         if (newLevel > oldLevel) {
             localStorage.setItem(LAST_LEVEL_STORAGE_KEY, newLevel.toString());
             // Dispatch level up event
-            window.dispatchEvent(new CustomEvent('level_up', { 
-                detail: { level: newLevel, oldLevel, reason } 
+            window.dispatchEvent(new CustomEvent('level_up', {
+                detail: { level: newLevel, oldLevel, reason }
             }));
         }
 
         // Dispatch general XP update event
         window.dispatchEvent(new CustomEvent('xp_updated'));
-        
+
         return {
             totalXP: newXP,
             level: newLevel,
@@ -53,7 +53,7 @@ export const XPSystem = {
             xpToNextLevel: progress.nextLevelXP - newXP,
         };
     },
-    
+
     /**
      * Get total XP
      */
@@ -62,7 +62,7 @@ export const XPSystem = {
         const stored = localStorage.getItem(XP_STORAGE_KEY);
         return stored ? parseInt(stored, 10) : 0;
     },
-    
+
     /**
      * Get current XP progress
      */
@@ -71,7 +71,7 @@ export const XPSystem = {
         const level = getLevel(totalXP);
         const progress = getXPProgress(totalXP);
         const rank = getRank(level);
-        
+
         return {
             totalXP,
             level,
@@ -80,35 +80,35 @@ export const XPSystem = {
             xpToNextLevel: progress.nextLevelXP - totalXP,
         };
     },
-    
+
     /**
      * Award XP for completing a game
      */
     awardGameComplete: (): XPProgress => {
         return XPSystem.addXP(XP_REWARDS.gameComplete, "game_complete");
     },
-    
+
     /**
      * Award XP for new high score
      */
     awardNewHighScore: (): XPProgress => {
         return XPSystem.addXP(XP_REWARDS.newHighScore, "new_high_score");
     },
-    
+
     /**
      * Award XP for unlocking achievement
      */
     awardAchievement: (achievementXP: number): XPProgress => {
         return XPSystem.addXP(XP_REWARDS.achievementUnlock + achievementXP, "achievement");
     },
-    
+
     /**
      * Award XP for daily challenge
      */
     awardDailyChallenge: (): XPProgress => {
         return XPSystem.addXP(XP_REWARDS.dailyChallengeComplete, "daily_challenge");
     },
-    
+
     /**
      * Award XP for streak milestone
      */
@@ -119,7 +119,7 @@ export const XPSystem = {
         }
         return XPSystem.getProgress();
     },
-    
+
     /**
      * Reset XP (for testing/admin)
      */

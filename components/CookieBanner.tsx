@@ -4,15 +4,13 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/Button";
 import { Cookie, Settings } from "lucide-react";
-import { Link } from "@/i18n/routing";
-import { useTranslations } from "next-intl";
+import Link from "next/link";
 
 const COOKIE_CONSENT_KEY = "reflextry_cookie_consent";
 
 export function CookieBanner() {
     const [showBanner, setShowBanner] = useState(false);
     const [showCustomize, setShowCustomize] = useState(false);
-    const t = useTranslations('CookieBanner');
 
     useEffect(() => {
         // Check if user has already given consent
@@ -68,18 +66,18 @@ export function CookieBanner() {
                             {/* Content */}
                             <div className="flex-1 min-w-0">
                                 <h3 className="text-lg font-bold text-white mb-2">
-                                    {t('title')}
+                                    We value your privacy
                                 </h3>
                                 <p className="text-sm text-slate-300 leading-relaxed mb-2">
-                                    {t('description')}
+                                    We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.
                                 </p>
                                 <div className="flex flex-wrap gap-2 text-xs text-slate-400">
                                     <Link href="/cookies" className="text-neon-teal hover:text-cyan-300 transition-colors underline decoration-neon-teal/50 hover:decoration-neon-teal" aria-label="Learn more about our cookie policy">
-                                        {t('learnMore')} {t('aboutCookies')}
+                                        Learn more about our cookies
                                     </Link>
                                     <span className="text-slate-600">•</span>
                                     <Link href="/privacy" className="text-neon-teal hover:text-cyan-300 transition-colors underline decoration-neon-teal/50 hover:decoration-neon-teal">
-                                        {t('privacyPolicy')}
+                                        Privacy Policy
                                     </Link>
                                 </div>
                             </div>
@@ -92,13 +90,13 @@ export function CookieBanner() {
                                     className="text-sm whitespace-nowrap border-2 border-slate-600 text-slate-300 hover:text-white hover:border-neon-teal/50 hover:bg-neon-teal/10 transition-all px-4 py-2 flex items-center justify-center gap-2 order-2 sm:order-1"
                                 >
                                     <Settings className="w-4 h-4" />
-                                    {t('customize')}
+                                    Customize
                                 </Button>
                                 <Button
                                     onClick={handleAccept}
                                     className="text-sm font-semibold whitespace-nowrap bg-gradient-to-r from-neon-teal to-electric-purple hover:from-neon-teal/90 hover:to-electric-purple/90 text-white shadow-lg shadow-neon-teal/30 hover:shadow-neon-teal/40 transition-all px-5 py-2 order-1 sm:order-2"
                                 >
-                                    {t('accept')}
+                                    Accept All
                                 </Button>
                             </div>
                         </div>

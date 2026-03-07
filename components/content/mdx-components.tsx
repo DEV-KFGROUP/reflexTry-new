@@ -1,6 +1,6 @@
 import { MDXRemote } from 'next-mdx-remote/rsc';
 import { cn } from '@/lib/utils';
-import { Card } from '@/components/ui/card';
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 
 const components = {
     h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
@@ -58,6 +58,10 @@ const components = {
         />
     ),
     Card: Card,
+    CardContent: CardContent,
+    CardHeader: CardHeader,
+    CardTitle: CardTitle,
+    CardDescription: CardDescription,
     // Add other components like Callout, Table, etc. here
 };
 

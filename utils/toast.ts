@@ -3,6 +3,7 @@
 
 "use client";
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 let toastInstance: any = null;
 
 function getToast() {
@@ -22,11 +23,13 @@ function getToast() {
     // Try to load sonner
     try {
         // Dynamic import for client-side only
+        // eslint-disable-next-line @typescript-eslint/no-require-imports
         const sonner = require("sonner");
         toastInstance = sonner.toast;
         return toastInstance;
-    } catch (e) {
+    } catch (_e) {
         // Fallback to custom toast
+        // eslint-disable-next-line @typescript-eslint/no-require-imports
         const { toast: fallbackToast } = require("./toast-fallback");
         toastInstance = fallbackToast;
         return toastInstance;
@@ -34,12 +37,15 @@ function getToast() {
 }
 
 export const toast = {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     success: (message: string, options?: any) => {
         getToast().success(message, options);
     },
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     error: (message: string, options?: any) => {
         getToast().error(message, options);
     },
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     info: (message: string, options?: any) => {
         getToast().info(message, options);
     },

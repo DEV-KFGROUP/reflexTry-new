@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { generateSEOMetadata } from "@/components/SEO";
 
-export function getLegalPageMetadata(page: "privacy" | "cookies" | "terms" | "contact" | "about", locale: string = "en"): Metadata {
+export function getLegalPageMetadata(page: "privacy" | "cookies" | "terms" | "contact" | "about"): Metadata {
     const configs = {
         about: {
             title: "About Us - Our Mission & Team | Reflextry",
@@ -66,13 +66,12 @@ export function getLegalPageMetadata(page: "privacy" | "cookies" | "terms" | "co
         title: config.title,
         description: config.description,
         keywords: config.keywords,
-        url: `/${page}`, // Path without locale prefix
-        locale,
+        url: `/${page}`,
         type: "website",
     });
 }
 
-export function getLeaderboardMetadata(locale: string = "en"): Metadata {
+export function getLeaderboardMetadata(): Metadata {
     return generateSEOMetadata({
         title: "Leaderboard - Track Your Personal Bests | Reflextry",
         description: "View your personal best scores across all Reflextry tools. Track your progress in memory games, reaction tests, typing speed, and more.",
@@ -83,8 +82,7 @@ export function getLeaderboardMetadata(locale: string = "en"): Metadata {
             "game leaderboard", "score tracking", "best performance", "achievement scores",
             "personal statistics", "score comparison", "performance metrics", "game statistics"
         ],
-        url: `/leaderboard`, // Path without locale prefix
-        locale,
+        url: `/leaderboard`,
         type: "website",
     });
 }

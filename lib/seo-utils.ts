@@ -2,9 +2,9 @@ import { Metadata } from "next";
 import { generateSEOMetadata } from "@/components/SEO";
 import { SEO_CONFIGS } from "@/config/seo-config";
 
-export function getToolMetadata(toolId: string, locale: string = "en", url: string): Metadata {
+export function getToolMetadata(toolId: string, url: string): Metadata {
     const config = SEO_CONFIGS[toolId as keyof typeof SEO_CONFIGS];
-    
+
     if (!config) {
         return {
             title: "Tool Not Found | Reflextry",
@@ -12,18 +12,16 @@ export function getToolMetadata(toolId: string, locale: string = "en", url: stri
         };
     }
 
-    // url should be the path without locale prefix (e.g., '/memory/sequence')
     return generateSEOMetadata({
         title: config.title,
         description: config.description,
         keywords: config.keywords,
-        url: url, // Pass path without locale prefix
-        locale,
+        url: url,
         type: "website",
     });
 }
 
-export function getHomeMetadata(locale: string = "en"): Metadata {
+export function getHomeMetadata(): Metadata {
     return generateSEOMetadata({
         title: "Reflextry - Test Your Accuracy & Reflexes | Free Brain Training Games",
         description: "Test your accuracy and reflexes with our Gen Z tools. Free online brain training games, reaction time tests, typing speed tests, memory games, and more. Improve your cognitive skills today!",
@@ -40,13 +38,12 @@ export function getHomeMetadata(locale: string = "en"): Metadata {
             "reaction time game", "typing speed game", "memory game", "brain training tool",
             "free cognitive training", "brain games online", "mental exercise games", "cognitive improvement"
         ],
-        url: "", // Empty for home page
-        locale,
+        url: "",
         type: "website",
     });
 }
 
-export function getCategoryMetadata(category: string, locale: string = "en"): Metadata {
+export function getCategoryMetadata(category: string): Metadata {
     const categoryConfigs: Record<string, { title: string; description: string; keywords: string[] }> = {
         memory: {
             title: "Memory Games - Train Your Brain | Reflextry",
@@ -111,8 +108,7 @@ export function getCategoryMetadata(category: string, locale: string = "en"): Me
         title: config.title,
         description: config.description,
         keywords: config.keywords,
-        url: `/${category}`, // Path without locale prefix
-        locale,
+        url: `/${category}`,
         type: "website",
     });
 }

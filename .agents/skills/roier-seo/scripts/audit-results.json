@@ -1,0 +1,435 @@
+{
+  "url": "http://localhost:3000",
+  "fetchTime": "2026-02-25T06:20:47.065Z",
+  "scores": {
+    "performance": 98,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "seo": 100,
+    "pwa": 0
+  },
+  "webVitals": {
+    "FCP": 1206.267,
+    "LCP": 2337.5339999999997,
+    "TBT": 9.5,
+    "CLS": 0,
+    "SI": 1206.267
+  },
+  "issues": {
+    "critical": [
+      {
+        "id": "unused-javascript",
+        "title": "Reduce unused JavaScript",
+        "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).",
+        "score": 0,
+        "displayValue": "Est savings of 42 KiB",
+        "category": "performance",
+        "items": [
+          {
+            "url": "http://localhost:3000/_next/static/chunks/249261e921aeebba.js",
+            "totalBytes": 69915,
+            "wastedBytes": 22820,
+            "wastedPercent": 32.64030846167265
+          },
+          {
+            "url": "http://localhost:3000/_next/static/chunks/7c8f62b683198731.js",
+            "totalBytes": 36968,
+            "wastedBytes": 20560,
+            "wastedPercent": 55.616966005285086
+          }
+        ]
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "title": "Network dependency tree",
+        "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/lighthouse/performance/critical-request-chains) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load.",
+        "score": 0,
+        "displayValue": null,
+        "category": "performance",
+        "items": [
+          {
+            "type": "list-section",
+            "value": {
+              "type": "network-tree",
+              "chains": {
+                "132E9BC2441A42B8E56179A891BF805D": {
+                  "url": "http://localhost:3000/",
+                  "navStartToEndTime": 25,
+                  "transferSize": 16833,
+                  "isLongest": true,
+                  "children": {
+                    "52529.5": {
+                      "url": "http://localhost:3000/_next/static/chunks/86f8f0670d0e6401.css",
+                      "navStartToEndTime": 39,
+                      "transferSize": 19407,
+                      "isLongest": true,
+                      "children": {}
+                    },
+                    "52529.36": {
+                      "url": "http://localhost:3000/manifest.json",
+                      "navStartToEndTime": 37,
+                      "transferSize": 1109,
+                      "children": {}
+                    },
+                    "52529.4": {
+                      "url": "http://localhost:3000/_next/static/chunks/53361344467506df.css",
+                      "navStartToEndTime": 34,
+                      "transferSize": 1383,
+                      "children": {}
+                    }
+                  }
+                }
+              },
+              "longestChain": {
+                "duration": 39
+              }
+            }
+          },
+          {
+            "type": "list-section",
+            "title": "Preconnected origins",
+            "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+            "value": {
+              "type": "text",
+              "value": "no origins were preconnected"
+            }
+          },
+          {
+            "type": "list-section",
+            "title": "Preconnect candidates",
+            "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4.",
+            "value": {
+              "type": "text",
+              "value": "No additional origins are good candidates for preconnecting"
+            }
+          }
+        ]
+      },
+      {
+        "id": "render-blocking-insight",
+        "title": "Render blocking requests",
+        "description": "Requests are blocking the page's initial render, which may delay LCP. [Deferring or inlining](https://web.dev/learn/performance/understanding-the-critical-path#render-blocking_resources) can move these network requests out of the critical path.",
+        "score": 0,
+        "displayValue": "Est savings of 400 ms",
+        "category": "performance",
+        "items": [
+          {
+            "url": "http://localhost:3000/_next/static/chunks/86f8f0670d0e6401.css",
+            "totalBytes": 19407,
+            "wastedMs": 453
+          },
+          {
+            "url": "http://localhost:3000/_next/static/chunks/53361344467506df.css",
+            "totalBytes": 1383,
+            "wastedMs": 153
+          }
+        ]
+      }
+    ],
+    "serious": [],
+    "moderate": [
+      {
+        "id": "render-blocking-resources",
+        "title": "Eliminate render-blocking resources",
+        "description": "Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/).",
+        "score": 0.5,
+        "displayValue": "Est savings of 0 ms",
+        "category": "performance",
+        "items": [
+          {
+            "url": "http://localhost:3000/_next/static/chunks/86f8f0670d0e6401.css",
+            "totalBytes": 19407,
+            "wastedMs": 453
+          },
+          {
+            "url": "http://localhost:3000/_next/static/chunks/53361344467506df.css",
+            "totalBytes": 1383,
+            "wastedMs": 153
+          }
+        ]
+      },
+      {
+        "id": "legacy-javascript",
+        "title": "Avoid serving legacy JavaScript to modern browsers",
+        "description": "Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/baseline) features, unless you know you must support legacy browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://philipwalton.com/articles/the-state-of-es5-on-the-web/)",
+        "score": 0.5,
+        "displayValue": "Est savings of 13 KiB",
+        "category": "performance",
+        "items": [
+          {
+            "url": "http://localhost:3000/_next/static/chunks/249261e921aeebba.js",
+            "wastedBytes": 13693,
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "signal": "Array.prototype.at",
+                  "location": {
+                    "type": "source-location",
+                    "url": "http://localhost:3000/_next/static/chunks/249261e921aeebba.js",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 5107
+                  }
+                },
+                {
+                  "signal": "Array.prototype.flat",
+                  "location": {
+                    "type": "source-location",
+                    "url": "http://localhost:3000/_next/static/chunks/249261e921aeebba.js",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 4495
+                  }
+                },
+                {
+                  "signal": "Array.prototype.flatMap",
+                  "location": {
+                    "type": "source-location",
+                    "url": "http://localhost:3000/_next/static/chunks/249261e921aeebba.js",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 4608
+                  }
+                },
+                {
+                  "signal": "Object.fromEntries",
+                  "location": {
+                    "type": "source-location",
+                    "url": "http://localhost:3000/_next/static/chunks/249261e921aeebba.js",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 4984
+                  }
+                },
+                {
+                  "signal": "Object.hasOwn",
+                  "location": {
+                    "type": "source-location",
+                    "url": "http://localhost:3000/_next/static/chunks/249261e921aeebba.js",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 5242
+                  }
+                },
+                {
+                  "signal": "String.prototype.trimEnd",
+                  "location": {
+                    "type": "source-location",
+                    "url": "http://localhost:3000/_next/static/chunks/249261e921aeebba.js",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 4237
+                  }
+                },
+                {
+                  "signal": "String.prototype.trimStart",
+                  "location": {
+                    "type": "source-location",
+                    "url": "http://localhost:3000/_next/static/chunks/249261e921aeebba.js",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 4152
+                  }
+                }
+              ]
+            },
+            "totalBytes": 0
+          },
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-Y88CPQZ0HG",
+            "wastedBytes": 0,
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "signal": "@babel/plugin-transform-regenerator",
+                  "location": {
+                    "type": "source-location",
+                    "url": "https://www.googletagmanager.com/gtag/js?id=G-Y88CPQZ0HG",
+                    "urlProvider": "network",
+                    "line": 185,
+                    "column": 388
+                  }
+                }
+              ]
+            },
+            "totalBytes": 0
+          }
+        ]
+      },
+      {
+        "id": "dom-size",
+        "title": "Avoid an excessive DOM size",
+        "description": "A large DOM will increase memory usage, cause longer [style calculations](https://developers.google.com/web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations), and produce costly [layout reflows](https://developers.google.com/speed/articles/reflow). [Learn how to avoid an excessive DOM size](https://developer.chrome.com/docs/lighthouse/performance/dom-size/).",
+        "score": 0.5,
+        "displayValue": "892 elements",
+        "category": "performance",
+        "items": [
+          {
+            "statistic": "Total DOM Elements",
+            "value": {
+              "type": "numeric",
+              "granularity": 1,
+              "value": 892
+            }
+          },
+          {
+            "node": {
+              "selector": "div.flex > div.p-2 > svg.lucide > path",
+              "snippet": "<path d=\"M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 1…\">"
+            },
+            "statistic": "Maximum DOM Depth",
+            "value": {
+              "type": "numeric",
+              "granularity": 1,
+              "value": 13
+            }
+          },
+          {
+            "node": {
+              "selector": "body.outfit_85cb3b0f-module__ywSh3W__variable",
+              "snippet": "<body class=\"outfit_85cb3b0f-module__ywSh3W__variable antialiased bg-background text-fo…\">"
+            },
+            "statistic": "Maximum Child Elements",
+            "value": {
+              "type": "numeric",
+              "granularity": 1,
+              "value": 23
+            }
+          }
+        ]
+      },
+      {
+        "id": "legacy-javascript-insight",
+        "title": "Legacy JavaScript",
+        "description": "Polyfills and transforms enable older browsers to use new JavaScript features. However, many aren't necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/articles/baseline-and-polyfills) features, unless you know you must support older browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://philipwalton.com/articles/the-state-of-es5-on-the-web/)",
+        "score": 0.5,
+        "displayValue": "Est savings of 13 KiB",
+        "category": "performance",
+        "items": [
+          {
+            "url": "http://localhost:3000/_next/static/chunks/249261e921aeebba.js",
+            "wastedBytes": 13807,
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "signal": "Array.prototype.at",
+                  "location": {
+                    "type": "source-location",
+                    "url": "http://localhost:3000/_next/static/chunks/249261e921aeebba.js",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 5107
+                  }
+                },
+                {
+                  "signal": "Array.prototype.flat",
+                  "location": {
+                    "type": "source-location",
+                    "url": "http://localhost:3000/_next/static/chunks/249261e921aeebba.js",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 4495
+                  }
+                },
+                {
+                  "signal": "Array.prototype.flatMap",
+                  "location": {
+                    "type": "source-location",
+                    "url": "http://localhost:3000/_next/static/chunks/249261e921aeebba.js",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 4608
+                  }
+                },
+                {
+                  "signal": "Object.fromEntries",
+                  "location": {
+                    "type": "source-location",
+                    "url": "http://localhost:3000/_next/static/chunks/249261e921aeebba.js",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 4984
+                  }
+                },
+                {
+                  "signal": "Object.hasOwn",
+                  "location": {
+                    "type": "source-location",
+                    "url": "http://localhost:3000/_next/static/chunks/249261e921aeebba.js",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 5242
+                  }
+                },
+                {
+                  "signal": "String.prototype.trimEnd",
+                  "location": {
+                    "type": "source-location",
+                    "url": "http://localhost:3000/_next/static/chunks/249261e921aeebba.js",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 4237
+                  }
+                },
+                {
+                  "signal": "String.prototype.trimStart",
+                  "location": {
+                    "type": "source-location",
+                    "url": "http://localhost:3000/_next/static/chunks/249261e921aeebba.js",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 4152
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "minor": [
+      {
+        "id": "first-contentful-paint",
+        "title": "First Contentful Paint",
+        "description": "First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/).",
+        "score": 0.99,
+        "displayValue": "1.2 s",
+        "category": "performance"
+      },
+      {
+        "id": "largest-contentful-paint",
+        "title": "Largest Contentful Paint",
+        "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+        "score": 0.92,
+        "displayValue": "2.3 s",
+        "category": "performance"
+      },
+      {
+        "id": "max-potential-fid",
+        "title": "Max Potential First Input Delay",
+        "description": "The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).",
+        "score": 0.99,
+        "displayValue": "70 ms",
+        "category": "performance"
+      },
+      {
+        "id": "interactive",
+        "title": "Time to Interactive",
+        "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).",
+        "score": 0.96,
+        "displayValue": "2.9 s",
+        "category": "performance"
+      }
+    ]
+  },
+  "summary": {
+    "totalIssues": 11,
+    "critical": 3,
+    "serious": 0,
+    "moderate": 4,
+    "minor": 4
+  }
+}

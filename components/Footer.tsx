@@ -1,15 +1,13 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Link } from "@/i18n/routing";
+import Link from "next/link";
 import { Github, Twitter, Instagram, Trophy, Heart, Gamepad2, Shield, Swords } from "lucide-react";
-import { useTranslations } from "next-intl";
 import Image from "next/image";
 
 export function Footer() {
     const [mounted, setMounted] = useState(false);
     const [currentYear, setCurrentYear] = useState(2024);
-    const t = useTranslations('Footer');
 
     useEffect(() => {
         setMounted(true);
@@ -41,7 +39,7 @@ export function Footer() {
                             </span>
                         </Link>
                         <p className="text-muted-foreground/80 max-w-xs leading-relaxed">
-                            {t('tagline')}
+                            Train your brain, improve your reflexes, and compete with players worldwide.
                         </p>
                         <div className="flex gap-3">
                             {[
@@ -65,7 +63,7 @@ export function Footer() {
                     <div>
                         <h4 className="flex items-center gap-2 text-sm font-bold text-white uppercase tracking-wider mb-6">
                             <Swords className="w-4 h-4 text-reflex" />
-                            {t('tools')}
+                            Training Tools
                         </h4>
                         <ul className="space-y-3">
                             <li>
@@ -133,37 +131,37 @@ export function Footer() {
                     <div>
                         <h4 className="flex items-center gap-2 text-sm font-bold text-white uppercase tracking-wider mb-6">
                             <Shield className="w-4 h-4 text-gray-400" />
-                            {t('legal')}
+                            Legal
                         </h4>
                         <ul className="space-y-3">
                             <li>
                                 <Link href="/about" className="text-muted-foreground hover:text-white transition-colors capitalize flex items-center gap-2 group">
                                     <span className="w-1 h-1 bg-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
-                                    {t('about')}
+                                    About Us
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/privacy" className="text-muted-foreground hover:text-white transition-colors capitalize flex items-center gap-2 group">
                                     <span className="w-1 h-1 bg-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
-                                    {t('privacy')}
+                                    Privacy Policy
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/cookies" className="text-muted-foreground hover:text-white transition-colors capitalize flex items-center gap-2 group">
                                     <span className="w-1 h-1 bg-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
-                                    {t('cookies')}
+                                    Cookie Policy
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/terms" className="text-muted-foreground hover:text-white transition-colors capitalize flex items-center gap-2 group">
                                     <span className="w-1 h-1 bg-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
-                                    {t('terms')}
+                                    Terms of Service
                                 </Link>
                             </li>
                             <li>
                                 <Link href="/contact" className="text-muted-foreground hover:text-white transition-colors capitalize flex items-center gap-2 group">
                                     <span className="w-1 h-1 bg-white rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
-                                    {t('contact')}
+                                    Contact Us
                                 </Link>
                             </li>
                         </ul>
@@ -173,7 +171,7 @@ export function Footer() {
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
                     <div className="text-sm text-muted-foreground/60">
-                        &copy; {mounted ? currentYear : 2024} Reflextry. {t('rights')}
+                        &copy; {mounted ? currentYear : 2024} Reflextry. All rights reserved.
                     </div>
                     <div className="flex items-center gap-2 text-sm text-muted-foreground/60">
                         <span>Made with</span>

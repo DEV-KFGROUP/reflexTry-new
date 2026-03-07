@@ -30,7 +30,7 @@ function createNotification(message: string, type: "success" | "error" | "info" 
         max-width: 400px;
         animation: slideIn 0.3s ease-out;
     `;
-    
+
     // Add animation
     const style = document.createElement("style");
     style.textContent = `
@@ -49,10 +49,10 @@ function createNotification(message: string, type: "success" | "error" | "info" 
         style.setAttribute("data-toast-animation", "true");
         document.head.appendChild(style);
     }
-    
+
     notification.textContent = message;
     document.body.appendChild(notification);
-    
+
     setTimeout(() => {
         notification.style.animation = "slideIn 0.3s ease-out reverse";
         setTimeout(() => {
@@ -62,13 +62,13 @@ function createNotification(message: string, type: "success" | "error" | "info" 
 }
 
 export const toast = {
-    success: (message: string, options?: any) => {
+    success: (message: string, _options?: unknown) => {
         createNotification(message, "success");
     },
-    error: (message: string, options?: any) => {
+    error: (message: string, _options?: unknown) => {
         createNotification(message, "error");
     },
-    info: (message: string, options?: any) => {
+    info: (message: string, _options?: unknown) => {
         createNotification(message, "info");
     },
 };

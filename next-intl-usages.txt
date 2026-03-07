@@ -1,0 +1,19 @@
+app/contact/ContactClient.tsx:4:import { useTranslations } from "next-intl";
+app/tools/AllToolsClient.tsx:6:import { useTranslations } from "next-intl";
+app/tools/page.tsx:2:import { getTranslations } from "next-intl/server";
+app/NotFoundClient.tsx:6:import { useTranslations } from 'next-intl';
+app/privacy/PrivacyPolicyClient.tsx:3:import { useTranslations } from "next-intl";
+app/memory/number/NumberMemoryPageClient.tsx:8:import { useTranslations } from "next-intl";
+app/terms/TermsClient.tsx:3:import { useTranslations } from "next-intl";
+app/leaderboard/LeaderboardClient.tsx:9:import { useTranslations } from "next-intl";
+app/about/AboutClient.tsx:4:import { useTranslations } from "next-intl";
+app/layout.tsx:12:import { NextIntlClientProvider } from 'next-intl';
+app/layout.tsx:13:import { getMessages } from 'next-intl/server';
+app/HomeClient.tsx:19:import { useTranslations } from "next-intl";
+app/HeroSection.tsx:1:import { getTranslations } from 'next-intl/server';
+app/cookies/CookiesPolicyClient.tsx:3:import { useTranslations } from "next-intl";
+app/not-found.tsx:3:import { getLocale } from 'next-intl/server';
+app/not-found.tsx:18:  // Get locale from next-intl context
+components/Navbar.tsx:7:import { useTranslations, useLocale } from "next-intl";
+components/CookieBanner.tsx:8:import { useTranslations } from "next-intl";
+components/Footer.tsx:6:import { useTranslations } from "next-intl";

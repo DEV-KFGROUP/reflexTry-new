@@ -369,6 +369,31 @@ export const SEO_CONFIGS = {
             "rpg reaction tool", "combat reaction tool", "rpg reflex free", "block and parry free"
         ]
     },
+    "endless-dodge": {
+        title: "Endless Dodge - Reaction Survival | Reflextry",
+        description: "Survive as long as you can in this infinite reaction test. Dodge the incoming projectiles. Free endless browser game to test pure dodging reflexes.",
+        keywords: [
+            "endless dodge game", "reaction survival test", "bullet hell browser", "dodge projectiles",
+            "survival time test", "pure reaction game", "infinite reflex test", "mouse dodge game",
+            "cursor dodge", "evasion training", "reaction speed trainer"
+        ]
+    },
+    "stroop-drop": {
+        title: "Infinite Stroop Drop - Cognitive Reflection | Reflextry",
+        description: "An infinite cognitive reflection test. Suppress your reading reflex and click the font color of the falling text. Free endless stroop effect game.",
+        keywords: [
+            "infinite stroop test", "cognitive reflection game", "falling words game", "color word test endless",
+            "brain reflex game", "impulse control training", "stroop drop browser game", "reaction inhibition test"
+        ]
+    },
+    "target-tracking": {
+        title: "Target Tracking - Aim Accuracy | Reflextry",
+        description: "Track an erratic moving target with your mouse for as long as possible. Test your continuous accuracy and precision. Free endless target tracking aim trainer.",
+        keywords: [
+            "target tracking aim", "continuous tracking test", "mouse accuracy tracking", "erratic target game",
+            "aim trainer browser", "infinite tracking practice", "precision mouse control", "hover aim test"
+        ]
+    },
 
     // --- ACCURACY ---
     "image-recognition": {
@@ -436,6 +461,96 @@ export const SEO_CONFIGS = {
             "precision clicking practice", "hand-eye coordination practice", "mouse accuracy practice", "click precision practice",
             "precision clicking tool", "hand-eye coordination tool", "mouse accuracy tool", "click precision tool",
             "precision clicking free", "hand-eye coordination free", "mouse accuracy free", "click precision free"
+        ]
+    },
+    "word-recall": {
+        title: "Word Recall Memory Test - Verbal Memory Training | Reflextry",
+        description: "Test your verbal memory by remembering and recalling lists of words. Words flash on screen, then type them all back from memory. Free word recall test to improve verbal memory and cognitive recall.",
+        keywords: [
+            "word recall test", "verbal memory test", "word memory game", "recall memory training",
+            "word list memory", "verbal recall test", "word memory training", "free memory test",
+            "cognitive recall test", "word memorization game", "verbal memory training", "word recall game"
+        ]
+    },
+    "card-match": {
+        title: "Card Match Memory Game - Classic Pairs Matching | Reflextry",
+        description: "Play the classic card matching memory game. Flip cards to find matching pairs using your visual memory. Fewer flips = better score. Free card match game to train pattern recognition and spatial memory.",
+        keywords: [
+            "card match game", "memory card game", "matching pairs game", "card flip memory",
+            "concentration game", "pairs matching test", "card memory training", "free matching game",
+            "visual memory game", "card matching puzzle", "memory pairs game", "card flip game"
+        ]
+    },
+    "whack-a-mole": {
+        title: "Whack-a-Mole Reflex Game - Reaction Speed Test | Reflextry",
+        description: "Test your reaction speed with the classic Whack-a-Mole game. Tap moles as they pop up before they disappear. Faster reactions earn higher scores. Free whack-a-mole game for reflex training.",
+        keywords: [
+            "whack a mole game", "reaction speed game", "mole whacking game", "reflex speed test",
+            "tap reaction game", "whack mole online", "reaction training game", "free reflex game",
+            "mole game online", "reaction time game", "whack a mole free", "reflex training game"
+        ]
+    },
+    "color-switch": {
+        title: "Color Switch Reflex Test - Color Reaction Training | Reflextry",
+        description: "React to color flashes by pressing the correct button. Ignore distractors and stay focused. Tests selective attention and reaction speed. Free color switch game for cognitive reflex training.",
+        keywords: [
+            "color switch game", "color reaction test", "color reflex game", "selective attention test",
+            "color identification speed", "color matching reflex", "reaction color game", "free color game",
+            "color discrimination test", "fast color matching", "color reflex training", "color response test"
+        ]
+    },
+    "number-rush": {
+        title: "Number Rush Speed Test - Find Numbers In Order | Reflextry",
+        description: "Find and click numbers 1 through N in ascending order as fast as possible. Tests visual scanning speed and number processing. Free number rush game to improve speed and visual attention.",
+        keywords: [
+            "number rush game", "number speed test", "find numbers game", "number order game",
+            "visual scanning speed", "number sequence game", "speed number game", "free number game",
+            "number clicking speed", "ascending number game", "number search game", "fast number game"
+        ]
+    },
+    "quick-sort": {
+        title: "Quick Sort Speed Game - Category Sorting Challenge | Reflextry",
+        description: "Sort items into the correct categories before time runs out. Tests rapid categorization and decision-making speed. Free quick sort game to improve cognitive processing speed.",
+        keywords: [
+            "quick sort game", "sorting speed game", "category sorting test", "rapid categorization",
+            "sorting challenge game", "speed sorting test", "cognitive sorting game", "free sorting game",
+            "fast sorting game", "category matching speed", "sort speed test", "decision speed game"
+        ]
+    },
+    "angle-estimation": {
+        title: "Angle Estimation Test - Visual Precision Training | Reflextry",
+        description: "Estimate the angle shown on screen. The closer your guess, the higher your score. Tests spatial awareness and visual estimation skills. Free angle estimation test for precision training.",
+        keywords: [
+            "angle estimation test", "angle guessing game", "visual estimation test", "angle accuracy test",
+            "spatial awareness test", "geometry accuracy game", "angle precision test", "free angle game",
+            "visual precision test", "angle measurement game", "estimation accuracy test", "angle training game"
+        ]
+    },
+    "color-match": {
+        title: "Color Match Accuracy Test - RGB Color Matching | Reflextry",
+        description: "Match a target color by adjusting RGB sliders. Tests color perception accuracy and fine motor control. Free color matching test to train your color discrimination skills.",
+        keywords: [
+            "color match game", "color matching test", "RGB color game", "color accuracy test",
+            "color perception test", "color discrimination game", "color slider game", "free color match",
+            "color mixing game", "color precision test", "color matching accuracy", "color training game"
+        ]
+    },
+    "flick-shot": {
+        title: "Flick Shot Aim Trainer - Quick Aim Training | Reflextry",
+        description: "Train your flick aim with targets that appear briefly at random positions. Snap to targets quickly and accurately. Free flick shot trainer for FPS gaming improvement.",
+        keywords: [
+            "flick shot trainer", "flick aim training", "quick aim game", "snap aim trainer",
+            "FPS aim training", "flick shot practice", "aim flick game", "free aim trainer",
+            "quick aim trainer", "target flick game", "aim snap training", "flick shot game"
+        ]
+    },
+    "rhythm-tap": {
+        title: "Rhythm Tap Game - Musical Timing Test | Reflextry",
+        description: "Tap notes arriving on beat to test your timing precision. Notes fall toward a hit zone — tap at the perfect moment. Free rhythm tap game to improve timing and coordination.",
+        keywords: [
+            "rhythm tap game", "timing test game", "beat tapping game", "musical timing test",
+            "rhythm training game", "tap timing game", "beat accuracy game", "free rhythm game",
+            "music timing test", "rhythm accuracy game", "tap beat game", "timing precision game"
         ]
     }
 };

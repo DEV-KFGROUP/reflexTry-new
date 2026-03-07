@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { getBaseUrl, buildHreflangMap, SUPPORTED_LOCALES, DEFAULT_LOCALE, type SupportedLocale } from "@/lib/base-url";
+import { getBaseUrl } from "@/lib/base-url";
 
 interface SEOProps {
     title: string;
@@ -8,7 +8,6 @@ interface SEOProps {
     url?: string;
     image?: string;
     type?: "website" | "article";
-    locale?: string;
 }
 
 export function generateSEOMetadata({
@@ -18,17 +17,11 @@ export function generateSEOMetadata({
     url = "",
     image = "/og-image.png",
     type = "website",
-    locale = "en"
 }: SEOProps): Metadata {
     const baseUrl = getBaseUrl();
-    const normalizedLocale = SUPPORTED_LOCALES.includes(locale as SupportedLocale) ? locale : DEFAULT_LOCALE;
-    
-    // Clean path - remove locale prefix if present
+
+    // Clean path
     let cleanPath = url || "";
-    const localePattern = /^\/(en|es|fr|de|pt)(\/|$)/;
-    if (cleanPath && localePattern.test(cleanPath)) {
-        cleanPath = cleanPath.replace(localePattern, '/');
-    }
     // Ensure path starts with / if not empty
     if (cleanPath && !cleanPath.startsWith('/')) {
         cleanPath = `/${cleanPath}`;
@@ -37,14 +30,11 @@ export function generateSEOMetadata({
     if (cleanPath.endsWith('/') && cleanPath !== '/') {
         cleanPath = cleanPath.slice(0, -1);
     }
-    
-    // Build canonical URL - this is the URL for the CURRENT page
-    // Format: https://www.reflextry.com/{locale}{/path}
-    const canonicalUrl = `${baseUrl}/${normalizedLocale}${cleanPath === '/' ? '' : cleanPath}`;
+
+    // Build canonical URL - simple path without locale prefix
+    // Format: https://www.reflextry.com{/path}
+    const canonicalUrl = `${baseUrl}${cleanPath === '/' ? '' : cleanPath}`;
     const fullImageUrl = image.startsWith("http") ? image : `${baseUrl}${image}`;
-    
-    // Build hreflang URLs - all point to www version
-    const hreflangLanguages = buildHreflangMap(normalizedLocale, cleanPath === '/' ? '' : cleanPath);
 
     return {
         title,
@@ -66,7 +56,7 @@ export function generateSEOMetadata({
         },
         openGraph: {
             type,
-            locale: normalizedLocale,
+            locale: "en",
             url: canonicalUrl,
             title,
             description,
@@ -89,7 +79,6 @@ export function generateSEOMetadata({
         },
         alternates: {
             canonical: canonicalUrl,
-            languages: hreflangLanguages,
         },
     };
 }

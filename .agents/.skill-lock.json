@@ -1,0 +1,15 @@
+{
+  "version": 3,
+  "skills": {
+    "roier-seo": {
+      "source": "davila7/claude-code-templates",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/davila7/claude-code-templates.git",
+      "skillPath": "cli-tool/components/skills/web-development/roier-seo/SKILL.md",
+      "skillFolderHash": "88ce96764ffc8f1e1154f4041f71109ab6b84c52",
+      "installedAt": "2026-02-25T06:05:25.704Z",
+      "updatedAt": "2026-02-25T06:05:25.704Z"
+    }
+  },
+  "dismissed": {}
+}

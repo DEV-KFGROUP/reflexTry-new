@@ -1,9 +1,4 @@
-import createNextIntlPlugin from 'next-intl/plugin';
 // Rebuild trigger 1769746000
-
-const withNextIntl = createNextIntlPlugin(
-  './i18n/request.ts'
-);
 
 /** @type {import('next').NextConfig} */
 const nextConfig: import('next').NextConfig = {
@@ -30,67 +25,17 @@ const nextConfig: import('next').NextConfig = {
   // Base path if needed (usually empty for root domain)
   basePath: '',
 
-  // Target modern browsers only - removes unnecessary polyfills
-  // This reduces bundle size by ~14 KiB
   compiler: {
     // Remove legacy JavaScript polyfills for modern browsers
     // Modern browsers support ES2022 features natively
+    removeConsole: process.env.NODE_ENV === "production" ? { exclude: ["error"] } : false,
   },
 
   // Optimize CSS loading - Next.js automatically inlines critical CSS
   // The globals.css is automatically optimized and non-critical CSS is deferred
   // Critical CSS is already inlined in layout.tsx <head> section
 
-  // Optimize JavaScript bundles - Aggressive code splitting
-  webpack: (config, { isServer }) => {
-    if (!isServer) {
-      // Split chunks for better caching and reduced initial bundle size
-      config.optimization = {
-        ...config.optimization,
-        splitChunks: {
-          chunks: 'all',
-          maxInitialRequests: 20, // Limit initial chunk requests
-          minSize: 20000, // Only split chunks larger than 20KB
-          cacheGroups: {
-            default: false,
-            vendors: false,
-            // Vendor chunk for third-party libraries
-            vendor: {
-              name: 'vendor',
-              chunks: 'all',
-              test: /node_modules/,
-              priority: 20,
-              minChunks: 1,
-            },
-            // Common chunk for shared code (used in 2+ places)
-            common: {
-              name: 'common',
-              minChunks: 2,
-              chunks: 'all',
-              priority: 10,
-              reuseExistingChunk: true,
-              enforce: true,
-            },
-            // Separate chunk for framer-motion (large library)
-            framerMotion: {
-              name: 'framer-motion',
-              test: /[\\/]node_modules[\\/](framer-motion)[\\/]/,
-              chunks: 'async', // Only load when needed (lazy)
-              priority: 30,
-            },
-            // Separate chunk for next-intl (internationalization)
-            nextIntl: {
-              name: 'next-intl',
-              test: /[\\/]node_modules[\\/](next-intl)[\\/]/,
-              chunks: 'all',
-              priority: 25,
-            },
-          },
-        },
-      };
-    }
-    return config;
-  },
+
 
   // Canonicalization: Redirect non-www to www
   async redirects() {
@@ -192,4 +137,4 @@ const nextConfig: import('next').NextConfig = {
   },
 };
 
-export default withNextIntl(nextConfig);
+export default nextConfig;
