@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight, Target, Keyboard, Zap, Activity, MousePointer2, Calculator, Type, Grid3X3, Volume2, Eye, Move, Brain } from "lucide-react";
+import { ArrowRight, Target, Keyboard, Zap, Activity, MousePointer2, Calculator, Type, Grid3X3, Volume2, Eye, Move, Brain, Hash } from "lucide-react";
 
 export default function AllToolsClient() {
 
@@ -39,6 +39,8 @@ export default function AllToolsClient() {
                 { id: "color", href: "/memory/color", icon: Activity, title: "Color Match", desc: "Does the meaning of the top word match the text color of the bottom word?" },
                 { id: "shape", href: "/memory/shape", icon: Zap, title: "Shape Memory", desc: "Remember shapes from the grid" },
                 { id: "symbol", href: "/memory/symbol", icon: Target, title: "Symbol Memory", desc: "Remember and redraw the symbols" },
+                { id: "word-recall", href: "/memory/word-recall", icon: Target, title: "Word Recall", desc: "Memorize and recall lists of words." },
+                { id: "card-match", href: "/memory/card-match", icon: Activity, title: "Card Match", desc: "Classic card-flipping pairs memory game." },
             ]
         },
         {
@@ -55,6 +57,8 @@ export default function AllToolsClient() {
                 { id: "direction", href: "/reflex/direction", icon: Move, title: "Direction Match", desc: "React to directional cues" },
                 { id: "multi-stimulus", href: "/reflex/multi-stimulus", icon: Zap, title: "Multi Stimulus", desc: "React to multiple sensory cues" },
                 { id: "sequence-reaction", href: "/reflex/sequence-reaction", icon: Activity, title: "Sequence Reaction", desc: "Follow reaction sequences" },
+                { id: "whack-a-mole", href: "/reflex/whack-a-mole", icon: Zap, title: "Whack-a-Mole", desc: "Tap moles before they disappear!" },
+                { id: "color-switch", href: "/reflex/color-switch", icon: Brain, title: "Color Switch", desc: "Identify ink colors, ignore the word." },
             ]
         },
         {
@@ -69,6 +73,8 @@ export default function AllToolsClient() {
                 { id: "typing", href: "/speed/typing", icon: Keyboard, title: "Typing Test", desc: "How many words per minute can you type?" },
                 { id: "word", href: "/speed/words", icon: Type, title: "Word Reading", desc: "Test your reading speed" },
                 { id: "grid", href: "/speed/grid", icon: Grid3X3, title: "Grid Speed", desc: "Clear the grid as fast as possible" },
+                { id: "number-rush", href: "/speed/number-rush", icon: Hash, title: "Number Rush", desc: "Find numbers 1→N in order, as fast as possible." },
+                { id: "quick-sort", href: "/speed/quick-sort", icon: ArrowRight, title: "Quick Sort", desc: "Sort items into categories before time runs out." },
             ]
         },
         {
@@ -80,6 +86,11 @@ export default function AllToolsClient() {
             tools: [
                 { id: "aim", href: "/gaming/aim", icon: Target, title: "Aim Trainer", desc: "How quickly can you hit all the targets?" },
                 { id: "rpg", href: "/gaming/reaction", icon: Zap, title: "RPG Reaction", desc: "Test your situational gaming reaction" },
+                { id: "target-tracking", href: "/gaming/target-tracking", icon: Target, title: "Target Tracking", desc: "Infinite smooth tracking accuracy test." },
+                { id: "endless-dodge", href: "/gaming/endless-dodge", icon: Zap, title: "Endless Dodge", desc: "Survive a bullet-hell reaction test." },
+                { id: "stroop-drop", href: "/gaming/stroop-drop", icon: Brain, title: "Stroop Drop", desc: "Infinite falling words cognitive test." },
+                { id: "flick-shot", href: "/gaming/flick-shot", icon: Target, title: "Flick Shot", desc: "Snap to targets before they vanish." },
+                { id: "rhythm-tap", href: "/gaming/rhythm-tap", icon: Activity, title: "Rhythm Tap", desc: "Hit falling notes with perfect timing." },
             ]
         },
         {
@@ -93,6 +104,8 @@ export default function AllToolsClient() {
                 { id: "data", href: "/accuracy/data", icon: Keyboard, title: "Data Entry", desc: "Type data accurately" },
                 { id: "pattern-matching", href: "/accuracy/pattern-matching", icon: Brain, title: "Pattern Matching", desc: "Find the matching patterns" },
                 { id: "precision-click", href: "/accuracy/precision-click", icon: Target, title: "Precision Click", desc: "Hit small moving targets" },
+                { id: "angle-estimation", href: "/accuracy/angle-estimation", icon: Target, title: "Angle Estimation", desc: "Guess the angle and test your geometric intuition" },
+                { id: "color-match", href: "/accuracy/color-match", icon: Activity, title: "Color Match", desc: "Match the target color using RGB sliders" },
             ]
         }
     ];

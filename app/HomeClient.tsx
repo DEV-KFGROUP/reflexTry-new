@@ -58,6 +58,8 @@ export default function HomeClient() {
         { id: "color", href: "/memory/color", icon: Activity, difficulty: "Easy" },
         { id: "shape", href: "/memory/shape", icon: Sparkles, difficulty: "Medium" },
         { id: "symbol", href: "/memory/symbol", icon: Target, difficulty: "Hard" },
+        { id: "word-recall", href: "/memory/word-recall", icon: Target, difficulty: "Hard" },
+        { id: "card-match", href: "/memory/card-match", icon: Sparkles, difficulty: "Easy" },
       ]
     },
     {
@@ -77,6 +79,8 @@ export default function HomeClient() {
         { id: "direction", href: "/reflex/direction", icon: ArrowRight, difficulty: "Medium" },
         { id: "multi-stimulus", href: "/reflex/multi-stimulus", icon: Zap, difficulty: "Expert" },
         { id: "sequence-reaction", href: "/reflex/sequence-reaction", icon: Activity, difficulty: "Hard" },
+        { id: "whack-a-mole", href: "/reflex/whack-a-mole", icon: Target, difficulty: "Easy" },
+        { id: "color-switch", href: "/reflex/color-switch", icon: Brain, difficulty: "Medium" },
       ]
     },
     {
@@ -94,6 +98,8 @@ export default function HomeClient() {
         { id: "typing", href: "/speed/typing", icon: Keyboard, difficulty: "Medium" },
         { id: "word", href: "/speed/words", icon: Target, difficulty: "Medium" },
         { id: "grid", href: "/speed/grid", icon: Target, difficulty: "Hard" },
+        { id: "number-rush", href: "/speed/number-rush", icon: Target, difficulty: "Medium" },
+        { id: "quick-sort", href: "/speed/quick-sort", icon: ArrowRight, difficulty: "Medium" },
       ]
     },
     {
@@ -111,6 +117,8 @@ export default function HomeClient() {
         { id: "target-tracking", href: "/gaming/target-tracking", icon: Target, difficulty: "Hard" },
         { id: "endless-dodge", href: "/gaming/endless-dodge", icon: Zap, difficulty: "Expert" },
         { id: "stroop-drop", href: "/gaming/stroop-drop", icon: Brain, difficulty: "Hard" },
+        { id: "flick-shot", href: "/gaming/flick-shot", icon: Target, difficulty: "Medium" },
+        { id: "rhythm-tap", href: "/gaming/rhythm-tap", icon: Activity, difficulty: "Hard" },
       ]
     },
     {
@@ -127,6 +135,8 @@ export default function HomeClient() {
         { id: "data", href: "/accuracy/data", icon: Keyboard, difficulty: "Expert" },
         { id: "pattern-matching", href: "/accuracy/pattern-matching", icon: Target, difficulty: "Medium" },
         { id: "precision-click", href: "/accuracy/precision-click", icon: Target, difficulty: "Medium" },
+        { id: "angle-estimation", href: "/accuracy/angle-estimation", icon: Target, difficulty: "Hard" },
+        { id: "color-match", href: "/accuracy/color-match", icon: Target, difficulty: "Medium" },
       ]
     }
   ];
