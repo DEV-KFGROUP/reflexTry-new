@@ -39,6 +39,23 @@ export async function getContentBySlug<T = Article | TestContent>(
     };
 }
 
+/** Latest modified time across blog posts (for sitemap fallbacks). */
+export async function getLatestBlogModifiedDate(): Promise<Date> {
+    const slugs = await getContentSlugs('blog');
+    let latestMs = 0;
+    for (const file of slugs) {
+        const slug = file.replace(/\.mdx?$/, '');
+        try {
+            const { meta } = await getContentBySlug<Article>('blog', slug);
+            const t = new Date(meta.updatedAt ?? meta.publishedAt).getTime();
+            if (t > latestMs) latestMs = t;
+        } catch {
+            /* skip missing */
+        }
+    }
+    return latestMs === 0 ? new Date() : new Date(latestMs);
+}
+
 export async function getAllContent<T = Article>(type: ContentType) {
     const slugs = await getContentSlugs(type);
     const content = await Promise.all(

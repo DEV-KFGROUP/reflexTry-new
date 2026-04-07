@@ -9,8 +9,6 @@ import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { LazyLoadedComponents } from "@/components/LazyLoadedComponents";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { ThemeProvider } from "@/components/ThemeProvider";
-import { notFound } from 'next/navigation';
-
 const outfit = Outfit({
   variable: "--font-outfit",
   subsets: ["latin"],
@@ -55,11 +53,20 @@ export async function generateMetadata(): Promise<Metadata> {
       siteName: "Reflextry",
       title: "Reflextry - Test Your Accuracy & Reflexes",
       description: "Test your accuracy and reflexes with our Gen Z tools. Free online brain training games.",
+      images: [
+        {
+          url: "/opengraph-image",
+          width: 1200,
+          height: 630,
+          alt: "Reflextry — Free brain training games",
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
       title: "Reflextry - Test Your Accuracy & Reflexes",
       description: "Test your accuracy and reflexes with our Gen Z tools.",
+      images: ["/opengraph-image"],
     },
     alternates: {
       // Canonical URLs are handled by individual pages via generateSEOMetadata

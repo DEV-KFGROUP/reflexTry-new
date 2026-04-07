@@ -15,7 +15,7 @@ export function generateSEOMetadata({
     description,
     keywords,
     url = "",
-    image = "/og-image.png",
+    image = "/opengraph-image",
     type = "website",
 }: SEOProps): Metadata {
     const baseUrl = getBaseUrl();

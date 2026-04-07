@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
-import { getContentSlugs } from '@/lib/content/loader';
+import { getContentSlugs, getContentBySlug, getLatestBlogModifiedDate } from '@/lib/content/loader';
 import { getBaseUrl } from '@/lib/base-url';
+import type { Article } from '@/lib/content/types';
 
 export const dynamic = 'force-static';
 
@@ -78,8 +79,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const siteUrl = getBaseUrl();
     const allRoutes = [...STATIC_ROUTES, ...GAME_ROUTES];
 
-    // Generate entries for all routes
     const entries: MetadataRoute.Sitemap = [];
+    const staticLastMod = await getLatestBlogModifiedDate();
 
     for (const route of allRoutes) {
         const isHome = route === '';
@@ -87,22 +88,32 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
         entries.push({
             url: `${siteUrl}${route}`,
-            lastModified: new Date().toISOString(),
+            lastModified: staticLastMod,
             changeFrequency: isHome ? 'daily' : 'weekly',
             priority,
         });
     }
 
-    // Dynamic Blog Posts
     const blogSlugs = await getContentSlugs('blog');
-    for (const slug of blogSlugs) {
-        const cleanSlug = slug.replace(/\.mdx?$/, '');
-        entries.push({
-            url: `${siteUrl}/blog/${cleanSlug}`,
-            lastModified: new Date().toISOString(),
-            changeFrequency: 'weekly',
-            priority: 0.7,
-        });
+    for (const file of blogSlugs) {
+        const cleanSlug = file.replace(/\.mdx?$/, '');
+        try {
+            const { meta } = await getContentBySlug<Article>('blog', cleanSlug);
+            const lastModified = new Date(meta.updatedAt ?? meta.publishedAt);
+            entries.push({
+                url: `${siteUrl}/blog/${cleanSlug}`,
+                lastModified,
+                changeFrequency: 'weekly',
+                priority: 0.7,
+            });
+        } catch {
+            entries.push({
+                url: `${siteUrl}/blog/${cleanSlug}`,
+                lastModified: staticLastMod,
+                changeFrequency: 'weekly',
+                priority: 0.7,
+            });
+        }
     }
 
     return entries;

@@ -2,7 +2,7 @@
   "name": "Reflextry - Brain Training Games",
   "short_name": "Reflextry",
   "description": "Test your accuracy and reflexes with our Gen Z tools. Free online brain training games.",
-  "start_url": "/en",
+  "start_url": "/",
   "display": "standalone",
   "background_color": "#0a0a0a",
   "theme_color": "#00f0ff",
@@ -42,23 +42,22 @@
       "name": "Reaction Time Test",
       "short_name": "Reaction",
       "description": "Test your reaction time",
-      "url": "/en/reflex/reaction",
+      "url": "/reflex/reaction",
       "icons": [{ "src": "/android-icon-192x192.png", "sizes": "192x192" }]
     },
     {
       "name": "Typing Speed Test",
       "short_name": "Typing",
       "description": "Test your typing speed",
-      "url": "/en/speed/typing",
+      "url": "/speed/typing",
       "icons": [{ "src": "/android-icon-192x192.png", "sizes": "192x192" }]
     },
     {
       "name": "All Tools",
       "short_name": "Tools",
       "description": "Browse all brain training tools",
-      "url": "/en/tools",
+      "url": "/tools",
       "icons": [{ "src": "/android-icon-192x192.png", "sizes": "192x192" }]
     }
   ]
 }
-

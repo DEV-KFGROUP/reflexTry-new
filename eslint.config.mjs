@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Installed agent skills ship vendored/minified JS (e.g. next-browser extension builds)
+    ".agents/skills/**",
   ]),
   {
     rules: {

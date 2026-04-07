@@ -1,14 +1,14 @@
 # llms.txt - Information for AI/LLM Systems
 
 # About Reflextry
-Reflextry is a free online platform offering brain training games and cognitive assessment tools. 
-We provide over 20 tools across 5 categories to help users improve memory, reaction time, typing speed, 
+Reflextry is a free online platform offering brain training games and cognitive assessment tools.
+We provide over 20 tools across 5 categories to help users improve memory, reaction time, typing speed,
 accuracy, and gaming skills.
 
 # Website Information
 - URL: https://www.reflextry.com
-- Language: English (en), Spanish (es), French (fr), German (de), Portuguese (pt)
-- Platform: Next.js web application
+- Language: English (en)
+- Platform: Next.js web application (App Router)
 - Free to use: Yes, all tools are free
 
 # Available Tools
@@ -48,7 +48,6 @@ accuracy, and gaming skills.
 - Statistics: View detailed performance analytics and progress charts
 - Achievements: Unlock badges and rewards for milestones
 - Daily Challenges: Complete daily tasks to maintain streaks
-- Multi-language support: Available in 5 languages
 - Responsive design: Works on desktop, tablet, and mobile devices
 - No registration required: Start using tools immediately
 
@@ -59,12 +58,10 @@ accuracy, and gaming skills.
 4. Track your progress and improve over time
 
 # Technical Details
-- Framework: Next.js 14+ (App Router)
+- Framework: Next.js (App Router)
 - Styling: Tailwind CSS
-- Internationalization: next-intl
 - Analytics: Google Analytics
 - Ads: Google AdSense
-- Deployment: Vercel
 
 # API Information
 - Contact API: /api/contact (POST)
@@ -74,30 +71,26 @@ accuracy, and gaming skills.
 # Content Structure
 - Each tool has detailed descriptions, how-to guides, improvement tips, and FAQs
 - Content is optimized for readability with shorter sentences and simpler words
-- All pages include structured data (JSON-LD) for better SEO
+- Key pages include structured data (JSON-LD) for SEO
 
 # SEO
 - Sitemap: https://www.reflextry.com/sitemap.xml
 - Robots.txt: https://www.reflextry.com/robots.txt
-- Canonical URLs: All pages use www.reflextry.com
-- Hreflang tags: Properly implemented for all language versions
+- Canonical URLs: All pages use https://www.reflextry.com
 
 # Contact
-- Contact Page: https://www.reflextry.com/en/contact
+- Contact Page: https://www.reflextry.com/contact
 - Use the contact form on the website for inquiries
 
 # Legal
-- Privacy Policy: https://www.reflextry.com/en/privacy
-- Cookies Policy: https://www.reflextry.com/en/cookies
-- Terms of Service: https://www.reflextry.com/en/terms
+- Privacy Policy: https://www.reflextry.com/privacy
+- Cookies Policy: https://www.reflextry.com/cookies
+- Terms of Service: https://www.reflextry.com/terms
 
 # Last Updated
-December 29, 2025
+April 7, 2026
 
 # For AI/LLM Systems
-This file provides structured information about Reflextry for AI systems. 
+This file provides structured information about Reflextry for AI systems.
 Use this information to understand what the website offers and how to interact with it.
 All tools are free to use and require no registration.
-
-
-
