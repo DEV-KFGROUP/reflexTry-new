@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Outfit } from "next/font/google";
 // CSS is automatically optimized by Next.js - critical CSS is inlined above
 import "./globals.css";
-import { Navbar } from "@/components/Navbar";
+import { NavbarDynamic } from "@/components/NavbarDynamic";
 import { Footer } from "@/components/Footer";
 import { AdSense } from "@/components/AdSense";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
@@ -81,7 +81,7 @@ export default async function RootLayout({
 }) {
 
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en" className="light" suppressHydrationWarning>
       <head>
         {/* Critical CSS - Inline for faster initial render */}
         <style
@@ -89,25 +89,25 @@ export default async function RootLayout({
             __html: `
               /* Critical above-the-fold styles */
               :root {
-                --background: #020617;
-                --foreground: #f8fafc;
-                --reflex: #8b5cf6;
-                --speed: #06b6d4;
-                --accuracy: #10b981;
-                --memory: #ec4899;
-                --wisdom: #f59e0b;
-                --info: #3b82f6;
-                --muted: #1e293b;
-                --muted-foreground: #94a3b8;
-                --border: #1e293b;
-                --card: #0f172a;
-                --card-foreground: #f8fafc;
+                --background: #f8fafc;
+                --foreground: #0f172a;
+                --reflex: #64748b;
+                --speed: #475569;
+                --accuracy: #334155;
+                --memory: #94a3b8;
+                --wisdom: #52525b;
+                --info: #2563eb;
+                --muted: #e2e8f0;
+                --muted-foreground: #64748b;
+                --border: #dbe2ea;
+                --card: #ffffff;
+                --card-foreground: #0f172a;
               }
               * {
                 box-sizing: border-box;
               }
               html {
-                color-scheme: dark;
+                color-scheme: light;
                 -webkit-font-smoothing: antialiased;
                 -moz-osx-font-smoothing: grayscale;
               }
@@ -244,13 +244,13 @@ export default async function RootLayout({
               .bg-clip-text {
                 -webkit-background-clip: text;
                 background-clip: text;
-                -webkit-text-fill-color: transparent;
               }
               .text-transparent {
                 color: transparent;
               }
-              /* Ensure gradient text is visible */
+              /* Gradient text: only hide glyph fill when both utilities are used (avoids inheriting transparent fill into unrelated descendants) */
               .bg-clip-text.text-transparent {
+                -webkit-text-fill-color: transparent;
                 background-size: 100%;
                 background-repeat: no-repeat;
               }
@@ -292,7 +292,7 @@ export default async function RootLayout({
                 line-height: 1.75rem;
               }
               .text-theme-secondary {
-                color: #94a3b8;
+                color: #64748b;
               }
               .max-w-2xl {
                 max-width: 42rem;
@@ -384,27 +384,16 @@ export default async function RootLayout({
         <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
         <link rel="apple-touch-icon" href="/apple-icon.png" />
         <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#00f0ff" />
+        <meta name="theme-color" content="#f8fafc" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function() {
-                // Always apply dark theme
-                document.documentElement.classList.remove('light');
-                document.documentElement.classList.add('dark');
-              })();
-            `,
-          }}
-        />
       </head>
       <body
         className={`${outfit.variable} antialiased bg-background text-foreground flex flex-col min-h-screen`}
       >
         <ThemeProvider>
           <ErrorBoundary>
-            <Navbar />
+            <NavbarDynamic />
             <main className="flex-1 pt-20">
               {children}
             </main>

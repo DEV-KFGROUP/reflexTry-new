@@ -101,95 +101,70 @@
 }
 
 :root {
-  /* ESPORTS VISUAL SYSTEM - Deep Space Gaming Palette */
-  --background: 222.2 71% 4%;
-  /* Near-black with blue undertone - #020617 */
-  --foreground: 210 40% 98%;
-  --card: 222.2 47.4% 8%;
-  /* Deep dark card - #0c1222 */
-  --card-foreground: 210 40% 98%;
-  --popover: 222.2 84% 4.5%;
-  /* Near-black */
-  --popover-foreground: 210 40% 98%;
-  --primary: 210 100% 98%;
-  /* Pure white */
-  --primary-foreground: 222.2 47.4% 4%;
-  --secondary: 217.2 32.6% 12%;
-  /* Dark surface */
-  --secondary-foreground: 210 40% 98%;
-  --muted: 217.2 32.6% 12%;
-  --muted-foreground: 215 20.2% 55%;
-  /* Brighter muted text */
-  --accent: 280 100% 60%;
-  /* Electric Purple - #a855f7 */
-  --accent-foreground: 210 40% 98%;
+  /* SIMPLE SOBER LIGHT THEME */
+  --background: 210 33% 98%;
+  --foreground: 222 47% 11%;
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222 47% 11%;
+  --primary: 222 47% 11%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 24% 96%;
+  --secondary-foreground: 222 47% 11%;
+  --muted: 210 24% 96%;
+  --muted-foreground: 215 16% 47%;
+
+  --accent: 214 32% 91%;
+  --accent-foreground: 222 47% 11%;
   --destructive: 0 72% 51%;
-  /* Bright red */
   --destructive-foreground: 210 40% 98%;
-  --border: 217.2 32.6% 15%;
-  /* Slightly lighter border */
-  --input: 217.2 32.6% 12%;
-  --ring: 280 100% 60%;
-  /* Electric Purple */
+
+  --border: 214 24% 88%;
+  --input: 214 24% 88%;
+  --ring: 215 20% 65%;
   --radius: 0.75rem;
 
-  /* NEON SEMANTIC COLORS (High Saturation) */
-  --reflex: 280 100% 65%;
-  /* Electric Purple #a855f7 */
-  --speed: 185 100% 50%;
-  /* Neon Cyan #00e5ff */
-  --accuracy: 145 100% 45%;
-  /* Neon Green #00e676 */
-  --memory: 320 100% 60%;
-  /* Hot Pink #f50076 */
-  --wisdom: 35 100% 55%;
-  /* Bright Orange #ff9500 */
-  --info: 210 100% 60%;
-  /* Electric Blue #2563eb */
+  /* Soft neutral semantic colors */
+  --reflex: 221 39% 34%;
+  --speed: 215 25% 27%;
+  --accuracy: 199 18% 40%;
+  --memory: 215 16% 47%;
+  --wisdom: 220 9% 46%;
+  --info: 217 91% 60%;
 
-  /* ARENA NEON COLORS (Ultra Bright for Glows) */
-  --arena-memory: 320 100% 65%;
-  /* Hot Pink */
-  --arena-reflex: 280 100% 70%;
-  /* Electric Violet */
-  --arena-speed: 185 100% 55%;
-  /* Neon Cyan */
-  --arena-gaming: 25 100% 55%;
-  /* Bright Orange-Red */
-  --arena-accuracy: 145 100% 50%;
-  /* Neon Green */
+  --arena-memory: 215 16% 47%;
+  --arena-reflex: 221 39% 34%;
+  --arena-speed: 215 25% 27%;
+  --arena-gaming: 220 9% 46%;
+  --arena-accuracy: 199 18% 40%;
 
-  /* GAME UI SYSTEM COLORS */
-  --game-glow: 280 100% 60%;
-  --game-surface: 222.2 71% 4%;
-  --game-border: 217.2 50% 20%;
-  --game-highlight: 185 100% 50%;
+  --game-glow: 215 16% 47%;
+  --game-surface: 210 33% 98%;
+  --game-border: 214 24% 88%;
+  --game-highlight: 215 25% 27%;
 }
 
-/* 
-   Explicit Light Mode Overrides 
-   (Kept for compatibility, but site is primarily dark-themed)
-*/
 .light {
-  --background: 0 0% 100%;
-  --foreground: 222.2 84% 4.9%;
+  --background: 210 33% 98%;
+  --foreground: 222 47% 11%;
   --card: 0 0% 100%;
-  --card-foreground: 222.2 84% 4.9%;
+  --card-foreground: 222 47% 11%;
   --popover: 0 0% 100%;
-  --popover-foreground: 222.2 84% 4.9%;
-  --primary: 222.2 47.4% 11.2%;
+  --popover-foreground: 222 47% 11%;
+  --primary: 222 47% 11%;
   --primary-foreground: 210 40% 98%;
-  --secondary: 210 40% 96.1%;
-  --secondary-foreground: 222.2 47.4% 11.2%;
-  --muted: 210 40% 96.1%;
-  --muted-foreground: 215.4 16.3% 46.9%;
-  --accent: 262.1 83.3% 57.8%;
-  --accent-foreground: 222.2 47.4% 11.2%;
+  --secondary: 210 24% 96%;
+  --secondary-foreground: 222 47% 11%;
+  --muted: 210 24% 96%;
+  --muted-foreground: 215 16% 47%;
+  --accent: 214 32% 91%;
+  --accent-foreground: 222 47% 11%;
   --destructive: 0 84.2% 60.2%;
   --destructive-foreground: 210 40% 98%;
-  --border: 214.3 31.8% 91.4%;
-  --input: 214.3 31.8% 91.4%;
-  --ring: 262.1 83.3% 57.8%;
+  --border: 214 24% 88%;
+  --input: 214 24% 88%;
+  --ring: 215 16% 47%;
 }
 
 @layer base {

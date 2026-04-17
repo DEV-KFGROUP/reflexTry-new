@@ -11,35 +11,25 @@ const Card = React.forwardRef<
         default: "rounded-lg border bg-card text-card-foreground shadow-sm",
         game: `
             rounded-xl 
-            bg-card/60 
-            backdrop-blur-xl 
+            bg-card
             text-card-foreground 
-            border border-white/10
-            shadow-lg
-            transition-all duration-300
-            hover:border-speed/50
-            hover:shadow-[0_0_30px_rgba(6,182,212,0.15)]
-            hover:translate-y-[-2px]
+            border border-border
+            shadow-sm
+            transition-all duration-200
+            hover:shadow-md
             relative
             overflow-hidden
         `,
         quest: `
             rounded-xl 
-            bg-gradient-to-br from-card/80 to-card/60
-            backdrop-blur-xl 
+            bg-card
             text-card-foreground 
-            border border-white/10
-            shadow-lg
-            transition-all duration-300
-            hover:border-reflex/50
-            hover:shadow-[0_0_30px_rgba(139,92,246,0.2)]
-            hover:translate-y-[-4px]
+            border border-border
+            shadow-sm
+            transition-all duration-200
+            hover:shadow-md
             relative
             overflow-hidden
-            before:absolute before:inset-0 
-            before:bg-gradient-to-br before:from-white/5 before:to-transparent
-            before:opacity-0 before:hover:opacity-100
-            before:transition-opacity before:duration-300
         `,
     };
 

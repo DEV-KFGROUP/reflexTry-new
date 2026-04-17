@@ -6,7 +6,7 @@ const components = {
     h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
         <h1
             className={cn(
-                "scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl mb-6",
+                "scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl mb-6 text-foreground",
                 className
             )}
             {...props}
@@ -15,7 +15,7 @@ const components = {
     h2: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
         <h2
             className={cn(
-                "scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0 mb-4 mt-8",
+                "scroll-m-20 border-b border-border pb-2 text-3xl font-semibold tracking-tight first:mt-0 mb-4 mt-8 text-foreground",
                 className
             )}
             {...props}
@@ -24,7 +24,7 @@ const components = {
     h3: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
         <h3
             className={cn(
-                "scroll-m-20 text-2xl font-semibold tracking-tight mb-4 mt-6",
+                "scroll-m-20 text-2xl font-semibold tracking-tight mb-4 mt-6 text-foreground",
                 className
             )}
             {...props}
@@ -32,7 +32,7 @@ const components = {
     ),
     p: ({ className, ...props }: React.HTMLAttributes<HTMLParagraphElement>) => (
         <p
-            className={cn("leading-7 [&:not(:first-child)]:mt-6", className)}
+            className={cn("leading-7 text-foreground [&:not(:first-child)]:mt-6", className)}
             {...props}
         />
     ),
@@ -51,7 +51,7 @@ const components = {
     pre: ({ className, ...props }: React.HTMLAttributes<HTMLPreElement>) => (
         <pre
             className={cn(
-                "mb-4 mt-6 overflow-x-auto rounded-lg border bg-black py-4 px-4 text-white",
+                "mb-4 mt-6 overflow-x-auto rounded-lg border border-border bg-slate-100 py-4 px-4 text-slate-900",
                 className
             )}
             {...props}

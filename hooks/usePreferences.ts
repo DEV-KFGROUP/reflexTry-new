@@ -24,11 +24,6 @@ export function usePreferences() {
     useEffect(() => {
         if (typeof window === "undefined") return;
 
-        // Always apply dark theme
-        const root = document.documentElement;
-        root.classList.remove("light");
-        root.classList.add("dark");
-        
         // Load preferences from localStorage
         const stored = localStorage.getItem("reflextry_preferences");
         let loadedPrefs = DEFAULT_PREFERENCES;

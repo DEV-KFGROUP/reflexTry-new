@@ -1,5 +1,4 @@
 // Difficulty settings utilities
-import { usePreferences } from "@/hooks/usePreferences";
 
 export type Difficulty = "easy" | "medium" | "hard";
 

@@ -56,6 +56,8 @@ const nextConfig: import('next').NextConfig = {
 
   // CDN and Security Headers
   async headers() {
+    const isProd = process.env.NODE_ENV === 'production';
+
     return [
       {
         // Security headers for all routes
@@ -83,46 +85,48 @@ const nextConfig: import('next').NextConfig = {
           },
         ],
       },
-      {
-        // Long cache for static assets (images, fonts, icons) - 1 year immutable
-        source: '/:path*.(ico|png|jpg|jpeg|svg|gif|webp|woff|woff2|ttf|eot|avif)',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
-      },
-      {
-        // Cache JavaScript chunks - 1 year immutable (Next.js adds content hash)
-        source: '/_next/static/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
-      },
-      {
-        // Cache CSS files - 1 year immutable
-        source: '/_next/static/:path*.css',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
-      },
-      {
-        // Cache manifest and robots.txt - 1 day (can change)
-        source: '/:path*(manifest.json|robots.txt|sitemap.xml|ads.txt)',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=86400, must-revalidate',
-          },
-        ],
-      },
+      // Long-lived caching for hashed assets — production only. In dev, immutable
+      // Cache-Control on /_next/static breaks Turbopack HMR (stale chunks → "module factory is not available").
+      ...(isProd
+        ? [
+            {
+              source: '/:path*.(ico|png|jpg|jpeg|svg|gif|webp|woff|woff2|ttf|eot|avif)',
+              headers: [
+                {
+                  key: 'Cache-Control',
+                  value: 'public, max-age=31536000, immutable',
+                },
+              ],
+            },
+            {
+              source: '/_next/static/:path*',
+              headers: [
+                {
+                  key: 'Cache-Control',
+                  value: 'public, max-age=31536000, immutable',
+                },
+              ],
+            },
+            {
+              source: '/_next/static/:path*.css',
+              headers: [
+                {
+                  key: 'Cache-Control',
+                  value: 'public, max-age=31536000, immutable',
+                },
+              ],
+            },
+            {
+              source: '/:path*(manifest.json|robots.txt|sitemap.xml|ads.txt)',
+              headers: [
+                {
+                  key: 'Cache-Control',
+                  value: 'public, max-age=86400, must-revalidate',
+                },
+              ],
+            },
+          ]
+        : []),
       {
         // Short cache for API routes - 5 minutes
         source: '/api/:path*',

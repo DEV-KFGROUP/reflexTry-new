@@ -3,14 +3,13 @@
 import { useEffect } from "react";
 
 /**
- * Client component that ensures dark theme is always applied
+ * Client component that ensures the neutral default theme is applied
  */
 export function ThemeProvider({ children }: { children: React.ReactNode }) {
     useEffect(() => {
-        // Always apply dark theme
         const root = document.documentElement;
-        root.classList.remove("light");
-        root.classList.add("dark");
+        root.classList.remove("dark");
+        root.classList.add("light");
     }, []);
 
     return <>{children}</>;

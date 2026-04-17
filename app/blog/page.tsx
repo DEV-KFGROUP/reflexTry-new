@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
-import BlogHubClient from './BlogHubClient';
+import BlogHubClient, { type BlogPost } from './BlogHubClient';
 import { getBaseUrl } from '@/lib/base-url';
+import { getAllContent } from '@/lib/content/loader';
+import type { Article } from '@/lib/content/types';
 
 export async function generateMetadata(): Promise<Metadata> {
     const baseUrl = getBaseUrl();
@@ -21,6 +23,16 @@ export async function generateMetadata(): Promise<Metadata> {
     };
 }
 
-export default function Blog() {
-    return <BlogHubClient />;
+export default async function Blog() {
+    const items = await getAllContent<Article>('blog');
+    const posts: BlogPost[] = items.map(({ slug, meta }) => ({
+        slug,
+        title: meta.title,
+        description: meta.description,
+        readTime: meta.readingTime ?? '5 min read',
+        category: meta.category,
+        date: meta.publishedAt,
+    }));
+
+    return <BlogHubClient posts={posts} />;
 }

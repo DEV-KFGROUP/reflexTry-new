@@ -113,7 +113,7 @@ export default function SpeedHubClient() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.1 }}
-                            className="group relative p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-white/20 hover:bg-white/10 transition-all hover:-translate-y-1"
+                            className="group relative p-6 rounded-2xl bg-white border border-theme/40 hover:border-theme/70 hover:bg-slate-50 transition-all hover:-translate-y-1"
                         >
                             <div className="absolute inset-0 bg-gradient-to-br from-transparent to-white/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
                             <Link
@@ -124,8 +124,8 @@ export default function SpeedHubClient() {
                                 <span className="sr-only">{tool.title} - {tool.desc}</span>
                             </Link>
                             <tool.icon className={`w-10 h-10 ${tool.color} mb-4 group-hover:scale-110 transition-transform`} />
-                            <h3 className="text-xl font-bold text-white mb-2">{tool.title}</h3>
-                            <p className="text-gray-400">{tool.desc}</p>
+                            <h3 className="text-xl font-bold text-theme-primary mb-2">{tool.title}</h3>
+                            <p className="text-theme-secondary">{tool.desc}</p>
                         </motion.div>
                     ))}
                 </div>

@@ -46,10 +46,10 @@ export default function HomeClient() {
       id: "memory",
       icon: Brain,
       arenaName: "Memory Arena",
-      color: "text-memory",
-      bgGlow: "from-memory/20 to-memory/5",
-      borderColor: "border-memory/30 hover:border-memory/60",
-      shadowColor: "hover:shadow-[0_0_30px_rgba(236,72,153,0.3)]",
+      color: "text-foreground",
+      bgGlow: "from-slate-100 to-slate-50",
+      borderColor: "border-border hover:border-slate-300",
+      shadowColor: "hover:shadow-md",
       xpRange: "50-200",
       tools: [
         { id: "sequence", href: "/memory/sequence", icon: Zap, difficulty: "Medium" },
@@ -66,10 +66,10 @@ export default function HomeClient() {
       id: "reflex",
       icon: Zap,
       arenaName: "Reflex Arena",
-      color: "text-reflex",
-      bgGlow: "from-reflex/20 to-reflex/5",
-      borderColor: "border-reflex/30 hover:border-reflex/60",
-      shadowColor: "hover:shadow-[0_0_30px_rgba(139,92,246,0.3)]",
+      color: "text-foreground",
+      bgGlow: "from-slate-100 to-slate-50",
+      borderColor: "border-border hover:border-slate-300",
+      shadowColor: "hover:shadow-md",
       xpRange: "75-300",
       tools: [
         { id: "reaction", href: "/reflex/reaction", icon: Zap, difficulty: "Easy" },
@@ -87,10 +87,10 @@ export default function HomeClient() {
       id: "speed",
       icon: Gauge,
       arenaName: "Speed Arena",
-      color: "text-speed",
-      bgGlow: "from-speed/20 to-speed/5",
-      borderColor: "border-speed/30 hover:border-speed/60",
-      shadowColor: "hover:shadow-[0_0_30px_rgba(6,182,212,0.3)]",
+      color: "text-foreground",
+      bgGlow: "from-slate-100 to-slate-50",
+      borderColor: "border-border hover:border-slate-300",
+      shadowColor: "hover:shadow-md",
       xpRange: "100-500",
       tools: [
         { id: "cps", href: "/speed/click", icon: Activity, difficulty: "Easy" },
@@ -106,10 +106,10 @@ export default function HomeClient() {
       id: "gaming",
       icon: Gamepad2,
       arenaName: "Gaming Arena",
-      color: "text-wisdom",
-      bgGlow: "from-wisdom/20 to-wisdom/5",
-      borderColor: "border-wisdom/30 hover:border-wisdom/60",
-      shadowColor: "hover:shadow-[0_0_30px_rgba(245,158,11,0.3)]",
+      color: "text-foreground",
+      bgGlow: "from-slate-100 to-slate-50",
+      borderColor: "border-border hover:border-slate-300",
+      shadowColor: "hover:shadow-md",
       xpRange: "150-400",
       tools: [
         { id: "aim", href: "/gaming/aim", icon: Target, difficulty: "Medium" },
@@ -125,10 +125,10 @@ export default function HomeClient() {
       id: "accuracy",
       icon: Target,
       arenaName: "Accuracy Arena",
-      color: "text-accuracy",
-      bgGlow: "from-accuracy/20 to-accuracy/5",
-      borderColor: "border-accuracy/30 hover:border-accuracy/60",
-      shadowColor: "hover:shadow-[0_0_30px_rgba(16,185,129,0.3)]",
+      color: "text-foreground",
+      bgGlow: "from-slate-100 to-slate-50",
+      borderColor: "border-border hover:border-slate-300",
+      shadowColor: "hover:shadow-md",
       xpRange: "80-350",
       tools: [
         { id: "image", href: "/accuracy/image-recognition", icon: Target, difficulty: "Hard" },
@@ -149,8 +149,7 @@ export default function HomeClient() {
   };
 
   return (
-    <GameBackground variant="default" showParticles={true} showGrid={true}>
-      {/* Hero Section with Game Vibe */}
+    <GameBackground variant="default" showParticles={false} showGrid={false}>
       <div className="px-4 sm:px-6 lg:px-8 pt-8">
         <motion.div
           variants={containerVariants}
@@ -162,20 +161,18 @@ export default function HomeClient() {
           <h2 className="sr-only">Key Features</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {[
-              { icon: Brain, title: "Memory Games", desc: "Challenge your working memory with pattern recognition and sequence tests.", color: "text-memory", glow: "group-hover:shadow-[0_0_20px_rgba(236,72,153,0.3)]" },
-              { icon: Zap, title: "Reflex Tests", desc: "Measure and improve your reaction time with visual and audio challenges.", color: "text-reflex", glow: "group-hover:shadow-[0_0_20px_rgba(139,92,246,0.3)]" },
-              { icon: Gauge, title: "Speed Challenges", desc: "Test your typing speed, clicking speed, and mental math abilities.", color: "text-speed", glow: "group-hover:shadow-[0_0_20px_rgba(6,182,212,0.3)]" },
-              { icon: Target, title: "Accuracy & Gaming", desc: "Improve precision with aim training and image recognition exercises.", color: "text-accuracy", glow: "group-hover:shadow-[0_0_20px_rgba(16,185,129,0.3)]" },
-            ].map((feature, index) => (
+              { icon: Brain, title: "Memory Games", desc: "Challenge your working memory with pattern recognition and sequence tests.", color: "text-foreground", glow: "hover:shadow-md" },
+              { icon: Zap, title: "Reflex Tests", desc: "Measure and improve your reaction time with visual and audio challenges.", color: "text-foreground", glow: "hover:shadow-md" },
+              { icon: Gauge, title: "Speed Challenges", desc: "Test your typing speed, clicking speed, and mental math abilities.", color: "text-foreground", glow: "hover:shadow-md" },
+              { icon: Target, title: "Accuracy & Gaming", desc: "Improve precision with aim training and image recognition exercises.", color: "text-foreground", glow: "hover:shadow-md" },
+            ].map((feature) => (
               <motion.div
                 key={feature.title}
                 variants={itemVariants}
-                className={`group relative space-y-2 p-5 rounded-xl bg-card/40 backdrop-blur-xl border border-white/10 hover:border-white/20 transition-all duration-300 ${feature.glow}`}
+                className={`group relative space-y-2 p-5 rounded-2xl bg-white border border-border transition-all duration-200 ${feature.glow}`}
               >
-                {/* Glow effect on hover */}
-                <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity rounded-xl" />
                 <h3 className={`text-lg font-bold ${feature.color} flex items-center gap-2 relative z-10`}>
-                  <feature.icon className="w-5 h-5" aria-hidden="true" />
+                  <feature.icon className="w-5 h-5 text-muted-foreground" aria-hidden="true" />
                   {feature.title}
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed relative z-10">
@@ -186,7 +183,7 @@ export default function HomeClient() {
           </div>
 
           {/* Game Progress Bar Style Info */}
-          <motion.div variants={itemVariants} className="pt-3 border-t border-white/10">
+          <motion.div variants={itemVariants} className="pt-3 border-t border-border">
             <div className="flex items-center justify-center gap-4 flex-wrap">
               {[
                 { icon: Trophy, text: "Track Progress" },
@@ -195,7 +192,7 @@ export default function HomeClient() {
                 { icon: Zap, text: "Daily Challenges" },
               ].map((item) => (
                 <span key={item.text} className="flex items-center gap-1.5 text-sm text-muted-foreground">
-                  <item.icon className="w-4 h-4 text-speed" />
+                  <item.icon className="w-4 h-4 text-muted-foreground" />
                   {item.text}
                 </span>
               ))}
@@ -212,7 +209,7 @@ export default function HomeClient() {
         >
           <motion.div variants={itemVariants}>
             <Link href="/tools">
-              <Button variant="game" size="lg" className="w-full sm:w-auto shadow-[0_0_30px_rgba(6,182,212,0.3)]" aria-label="Start Testing">
+              <Button variant="primary" size="lg" className="w-full sm:w-auto" aria-label="Start Testing">
                 <Gamepad2 className="w-5 h-5" />
                 Start Testing
                 <ArrowRight className="w-5 h-5" aria-hidden="true" />
@@ -222,10 +219,7 @@ export default function HomeClient() {
           <motion.div variants={itemVariants}>
             <Link
               href="/leaderboard"
-              style={{
-                background: 'linear-gradient(to right, #8b5cf6, #06b6d4)',
-              }}
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 text-lg rounded-full font-bold transition-all duration-300 cursor-pointer border-2 border-reflex/60 text-white hover:border-reflex hover:shadow-[0_0_30px_rgba(139,92,246,0.5)] hover:scale-105 w-full sm:w-auto"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 text-lg rounded-xl font-semibold transition-all duration-200 cursor-pointer border border-border text-foreground bg-white hover:bg-slate-50 shadow-sm w-full sm:w-auto"
             >
               <Trophy className="w-5 h-5" />
               View Leaderboard
@@ -248,11 +242,11 @@ export default function HomeClient() {
             {/* Arena Header */}
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-4">
-                <div className={`p-3 rounded-xl bg-gradient-to-br ${category.bgGlow} border ${category.borderColor}`}>
+                <div className={`p-3 rounded-xl bg-white border ${category.borderColor}`}>
                   <category.icon className={`w-8 h-8 ${category.color}`} />
                 </div>
                 <div>
-                  <h2 className={`text-2xl md:text-3xl font-bold ${category.color}`}>
+                  <h2 className={`text-2xl md:text-3xl font-semibold ${category.color}`}>
                     {category.arenaName}
                   </h2>
                   <p className="text-sm text-muted-foreground">
@@ -261,7 +255,7 @@ export default function HomeClient() {
                 </div>
               </div>
               {/* Quest count badge */}
-              <div className={`hidden sm:flex items-center gap-2 px-4 py-2 rounded-full ${category.borderColor} border bg-card/30 backdrop-blur-sm`}>
+              <div className={`hidden sm:flex items-center gap-2 px-4 py-2 rounded-full ${category.borderColor} border bg-white`}>
                 <span className="text-sm text-muted-foreground">{category.tools.length} Quests</span>
               </div>
             </div>
@@ -275,16 +269,8 @@ export default function HomeClient() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.05 }}
                   viewport={{ once: true }}
-                  className={`group relative p-5 rounded-xl bg-card/50 backdrop-blur-xl border ${category.borderColor} ${category.shadowColor} transition-all duration-300 cursor-pointer overflow-hidden`}
+                  className={`group relative p-5 rounded-2xl bg-white border ${category.borderColor} ${category.shadowColor} transition-all duration-200 cursor-pointer overflow-hidden`}
                 >
-                  {/* Hover glow effect */}
-                  <div className={`absolute inset-0 bg-gradient-to-br ${category.bgGlow} opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
-
-                  {/* Corner accent */}
-                  <div className={`absolute top-0 right-0 w-12 h-12 bg-gradient-to-bl ${category.bgGlow} opacity-30`}
-                    style={{ clipPath: 'polygon(100% 0, 0 0, 100% 100%)' }}
-                  />
-
                   <Link
                     href={tool.href}
                     className="absolute inset-0 z-10"
@@ -296,7 +282,7 @@ export default function HomeClient() {
                   <div className="relative z-0 space-y-3">
                     {/* Icon and difficulty */}
                     <div className="flex items-start justify-between">
-                      <div className={`p-2 rounded-lg bg-gradient-to-br ${category.bgGlow} border ${category.borderColor}`}>
+                      <div className={`p-2 rounded-lg bg-secondary border ${category.borderColor}`}>
                         <tool.icon className={`w-6 h-6 ${category.color}`} />
                       </div>
                       <span className={`text-xs px-2 py-1 rounded-full border ${difficultyColors[tool.difficulty]}`}>
@@ -306,7 +292,7 @@ export default function HomeClient() {
 
                     {/* Title and description */}
                     <div>
-                      <h3 className="text-base font-bold text-white mb-1 group-hover:text-speed transition-colors capitalize">
+                      <h3 className="text-base font-semibold text-foreground mb-1 transition-colors capitalize">
                         {tool.id.replace('-', ' ')}
                       </h3>
                       <p className="text-sm text-muted-foreground line-clamp-2">
@@ -315,9 +301,9 @@ export default function HomeClient() {
                     </div>
 
                     {/* Play indicator */}
-                    <div className="flex items-center justify-between pt-2 border-t border-white/5">
+                    <div className="flex items-center justify-between pt-2 border-t border-border">
                       <span className="text-xs text-muted-foreground/70">Start Quest</span>
-                      <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-speed group-hover:translate-x-1 transition-all" />
+                      <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:translate-x-1 transition-all" />
                     </div>
                   </div>
                 </motion.div>

@@ -11,37 +11,30 @@ interface ButtonProps extends Omit<HTMLMotionProps<"button">, "asChild"> {
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     ({ className, variant = "primary", size = "md", children, style, ...props }, ref) => {
-        // Explicit background colors for each variant
         const variantStyles: Record<string, { background?: string; boxShadow?: string }> = {
             primary: {
-                background: "linear-gradient(135deg, #00e5ff 0%, #00bcd4 100%)",
+                background: "#0f172a",
             },
             secondary: {
-                background: "linear-gradient(135deg, #a855f7 0%, #9333ea 100%)",
+                background: "#ffffff",
             },
             speed: {
-                background: "linear-gradient(135deg, #00e5ff 0%, #00bcd4 100%)",
-                boxShadow: "0 0 20px rgba(0, 229, 255, 0.4)",
+                background: "#ffffff",
             },
             reflex: {
-                background: "linear-gradient(135deg, #a855f7 0%, #9333ea 100%)",
-                boxShadow: "0 0 20px rgba(168, 85, 247, 0.4)",
+                background: "#ffffff",
             },
             memory: {
-                background: "linear-gradient(135deg, #ec4899 0%, #db2777 100%)",
-                boxShadow: "0 0 20px rgba(236, 72, 153, 0.4)",
+                background: "#ffffff",
             },
             wisdom: {
-                background: "linear-gradient(135deg, #f59e0b 0%, #d97706 100%)",
-                boxShadow: "0 0 20px rgba(245, 158, 11, 0.4)",
+                background: "#ffffff",
             },
             accuracy: {
-                background: "linear-gradient(135deg, #00e676 0%, #00c853 100%)",
-                boxShadow: "0 0 20px rgba(0, 230, 118, 0.4)",
+                background: "#ffffff",
             },
             game: {
-                background: "linear-gradient(135deg, #00e5ff 0%, #a855f7 50%, #00e5ff 100%)",
-                boxShadow: "0 0 25px rgba(0, 229, 255, 0.5)",
+                background: "#ffffff",
             },
             outline: {},
             ghost: {},
@@ -49,24 +42,22 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         };
 
         const variantClasses = {
-            primary: "text-white font-bold border-none hover:shadow-[0_0_30px_rgba(0,229,255,0.6)]",
-            secondary: "text-white font-bold border-none hover:shadow-[0_0_30px_rgba(168,85,247,0.6)]",
-            outline: "border-2 border-[#00e5ff] text-[#00e5ff] hover:bg-[#00e5ff]/20 hover:text-white bg-transparent",
-            ghost: "text-gray-400 hover:text-white hover:bg-white/10 bg-transparent",
-            game: "text-white font-bold border-none",
+            primary: "text-white font-semibold border border-slate-900 hover:bg-slate-800",
+            secondary: "text-slate-900 font-semibold border border-border hover:bg-slate-50",
+            outline: "border border-border text-slate-700 hover:bg-slate-50 bg-transparent font-medium",
+            ghost: "text-slate-600 hover:text-slate-900 hover:bg-slate-100 bg-transparent font-medium",
+            game: "text-slate-900 font-semibold border border-border hover:bg-slate-50",
             mission: `
-                bg-slate-900/80 
-                text-white 
-                border-2 border-[#00e5ff]/50
-                backdrop-blur-sm
-                hover:border-[#00e5ff]
-                hover:shadow-[0_0_25px_rgba(0,229,255,0.5)]
+                bg-white
+                text-slate-900
+                border border-border
+                hover:bg-slate-50
             `,
-            speed: "text-white font-bold border-none",
-            reflex: "text-white font-bold border-none",
-            memory: "text-white font-bold border-none",
-            wisdom: "text-white font-bold border-none",
-            accuracy: "text-white font-bold border-none",
+            speed: "text-slate-900 font-semibold border border-border hover:bg-slate-50",
+            reflex: "text-slate-900 font-semibold border border-border hover:bg-slate-50",
+            memory: "text-slate-900 font-semibold border border-border hover:bg-slate-50",
+            wisdom: "text-slate-900 font-semibold border border-border hover:bg-slate-50",
+            accuracy: "text-slate-900 font-semibold border border-border hover:bg-slate-50",
         };
 
         const sizes = {
@@ -83,10 +74,10 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         return (
             <motion.button
                 ref={ref}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ y: -1 }}
+                whileTap={{ scale: 0.98 }}
                 className={cn(
-                    "rounded-full font-bold transition-all duration-300 cursor-pointer flex items-center justify-center gap-2",
+                    "rounded-xl font-semibold transition-all duration-200 cursor-pointer flex items-center justify-center gap-2 shadow-sm",
                     variantClasses[variant],
                     sizes[size],
                     className
