@@ -11,7 +11,7 @@ export default function NotFoundClient({ locale }: { locale: string }) {
       <div className="max-w-3xl w-full text-center">
         {/* 404 Number with Animation - Must be prominent for 404 detection */}
         <div className="mb-8">
-          <h1 className="text-9xl md:text-[12rem] font-bold bg-gradient-to-r from-neon-teal via-electric-purple to-neon-teal bg-clip-text text-transparent animate-pulse">
+          <h1 className="text-9xl md:text-[12rem] font-bold bg-gradient-to-r from-teal-500 via-purple-500 to-teal-500 bg-clip-text text-transparent animate-pulse">
             404
           </h1>
           <div className="text-lg font-semibold text-theme-primary mt-4">Error 404 - Page Not Found</div>
@@ -22,8 +22,8 @@ export default function NotFoundClient({ locale }: { locale: string }) {
 
         {/* Main Message */}
         <div className="mb-10">
-          <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-gradient-to-br from-neon-teal/20 to-electric-purple/20 border-2 border-neon-teal/30 mb-6 animate-bounce">
-            <AlertCircle className="w-12 h-12 text-neon-teal" />
+          <div className="inline-flex items-center justify-center w-24 h-24 rounded-full bg-gradient-to-br from-teal-500/20 to-purple-500/20 border-2 border-teal-500/30 mb-6 animate-bounce">
+            <AlertCircle className="w-12 h-12 text-teal-500" />
           </div>
           <h2 className="text-3xl md:text-5xl font-bold text-theme-primary mb-4">
             Page Not Found
@@ -43,7 +43,7 @@ export default function NotFoundClient({ locale }: { locale: string }) {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 max-w-2xl mx-auto">
             <Link href="/">
-              <Button className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-neon-teal to-electric-purple hover:opacity-90 text-lg py-6">
+              <Button className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-teal-500 to-purple-500 hover:opacity-90 text-lg py-6">
                 <Home className="w-5 h-5" />
                 Go to Homepage
               </Button>
@@ -61,32 +61,32 @@ export default function NotFoundClient({ locale }: { locale: string }) {
             <p className="text-theme-secondary mb-6 text-lg font-medium">Explore our popular tools:</p>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4 max-w-4xl mx-auto">
               <Link href="/memory" className="group">
-                <div className="p-4 rounded-xl bg-theme-surface/50 border border-theme/30 hover:border-neon-teal/50 hover:bg-theme-surface transition-all cursor-pointer">
-                  <Activity className="w-8 h-8 text-neon-pink mx-auto mb-2 group-hover:scale-110 transition-transform" />
+                <div className="p-4 rounded-xl bg-theme-surface/50 border border-theme/30 hover:border-teal-500/50 hover:bg-theme-surface transition cursor-pointer">
+                  <Activity className="w-8 h-8 text-pink-500 mx-auto mb-2 group-hover:scale-110 transition-transform" />
                   <div className="text-sm font-semibold text-theme-primary">Memory</div>
                 </div>
               </Link>
               <Link href="/reflex" className="group">
-                <div className="p-4 rounded-xl bg-theme-surface/50 border border-theme/30 hover:border-neon-teal/50 hover:bg-theme-surface transition-all cursor-pointer">
-                  <Zap className="w-8 h-8 text-neon-yellow mx-auto mb-2 group-hover:scale-110 transition-transform" />
+                <div className="p-4 rounded-xl bg-theme-surface/50 border border-theme/30 hover:border-teal-500/50 hover:bg-theme-surface transition cursor-pointer">
+                  <Zap className="w-8 h-8 text-amber-500 mx-auto mb-2 group-hover:scale-110 transition-transform" />
                   <div className="text-sm font-semibold text-theme-primary">Reflex</div>
                 </div>
               </Link>
               <Link href="/speed" className="group">
-                <div className="p-4 rounded-xl bg-theme-surface/50 border border-theme/30 hover:border-neon-teal/50 hover:bg-theme-surface transition-all cursor-pointer">
-                  <Keyboard className="w-8 h-8 text-neon-teal mx-auto mb-2 group-hover:scale-110 transition-transform" />
+                <div className="p-4 rounded-xl bg-theme-surface/50 border border-theme/30 hover:border-teal-500/50 hover:bg-theme-surface transition cursor-pointer">
+                  <Keyboard className="w-8 h-8 text-teal-500 mx-auto mb-2 group-hover:scale-110 transition-transform" />
                   <div className="text-sm font-semibold text-theme-primary">Speed</div>
                 </div>
               </Link>
               <Link href="/accuracy" className="group">
-                <div className="p-4 rounded-xl bg-theme-surface/50 border border-theme/30 hover:border-neon-teal/50 hover:bg-theme-surface transition-all cursor-pointer">
-                  <Target className="w-8 h-8 text-electric-purple mx-auto mb-2 group-hover:scale-110 transition-transform" />
+                <div className="p-4 rounded-xl bg-theme-surface/50 border border-theme/30 hover:border-teal-500/50 hover:bg-theme-surface transition cursor-pointer">
+                  <Target className="w-8 h-8 text-purple-500 mx-auto mb-2 group-hover:scale-110 transition-transform" />
                   <div className="text-sm font-semibold text-theme-primary">Accuracy</div>
                 </div>
               </Link>
               <Link href="/gaming" className="group">
-                <div className="p-4 rounded-xl bg-theme-surface/50 border border-theme/30 hover:border-neon-teal/50 hover:bg-theme-surface transition-all cursor-pointer">
-                  <Activity className="w-8 h-8 text-vibrant-coral mx-auto mb-2 group-hover:scale-110 transition-transform" />
+                <div className="p-4 rounded-xl bg-theme-surface/50 border border-theme/30 hover:border-teal-500/50 hover:bg-theme-surface transition cursor-pointer">
+                  <Activity className="w-8 h-8 text-rose-500 mx-auto mb-2 group-hover:scale-110 transition-transform" />
                   <div className="text-sm font-semibold text-theme-primary">Gaming</div>
                 </div>
               </Link>
@@ -111,7 +111,7 @@ export default function NotFoundClient({ locale }: { locale: string }) {
         <div className="mt-8">
           <button
             onClick={() => window.history.back()}
-            className="text-theme-secondary hover:text-neon-teal transition-colors flex items-center gap-2 mx-auto font-medium"
+            className="text-theme-secondary hover:text-teal-500 transition-colors flex items-center gap-2 mx-auto font-medium"
             aria-label="Go back"
           >
             <ArrowLeft className="w-5 h-5" />

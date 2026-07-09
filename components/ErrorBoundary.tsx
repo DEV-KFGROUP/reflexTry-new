@@ -67,7 +67,7 @@ export class ErrorBoundary extends Component<Props, State> {
                             </Button>
                             <Link 
                                 href="/"
-                                className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base rounded-full font-bold transition-all duration-300 cursor-pointer border-2 border-neon-teal text-neon-teal hover:bg-neon-teal/10"
+                                className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base rounded-full font-bold transition duration-200 cursor-pointer border-2 border-teal-500 text-teal-500 hover:bg-teal-500/10"
                             >
                                 <Home className="w-4 h-4" />
                                 Go Home

@@ -202,7 +202,7 @@ export default function SequenceReactionGame() {
                                                     key={index}
                                                     onClick={() => handleClick(index)}
                                                     disabled={gameState === "showing"}
-                                                    className={`h-28 md:h-36 rounded-2xl border-4 transition-all ${isActive || isUserClick
+                                                    className={`h-28 md:h-36 rounded-2xl border-4 transition ${isActive || isUserClick
                                                             ? `${color.light} border-white ${color.shadow} scale-105`
                                                             : `${color.bg} border-transparent opacity-80`
                                                         }`}

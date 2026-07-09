@@ -63,13 +63,13 @@ export function LevelUpModal() {
                     initial={{ scale: 0.5, y: 100 }}
                     animate={{ scale: 1, y: 0 }}
                     exit={{ scale: 0.5, y: 100 }}
-                    className="relative bg-gradient-to-br from-[#1a1f3c] to-[#0f1123] border border-neon-teal/30 p-8 rounded-3xl max-w-sm w-full text-center shadow-[0_0_50px_rgba(0,240,255,0.3)] overflow-hidden"
+                    className="relative bg-gradient-to-br from-[#1a1f3c] to-[#0f1123] border border-teal-500/30 p-8 rounded-3xl max-w-sm w-full text-center shadow-[0_0_50px_rgba(0,240,255,0.3)] overflow-hidden"
                     onClick={(e) => e.stopPropagation()}
                 >
                     {/* Background effects */}
                     <div className="absolute inset-0 bg-[url('/noise.png')] opacity-5 mix-blend-overlay"></div>
-                    <div className="absolute -top-20 -left-20 w-40 h-40 bg-neon-teal/20 rounded-full blur-3xl"></div>
-                    <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-electric-purple/20 rounded-full blur-3xl"></div>
+                    <div className="absolute -top-20 -left-20 w-40 h-40 bg-teal-500/20 rounded-full blur-3xl"></div>
+                    <div className="absolute -bottom-20 -right-20 w-40 h-40 bg-purple-500/20 rounded-full blur-3xl"></div>
 
                     <motion.div
                         initial={{ scale: 0, rotate: -180 }}
@@ -77,14 +77,14 @@ export function LevelUpModal() {
                         transition={{ type: "spring", bounce: 0.5, delay: 0.2 }}
                         className="relative mx-auto mb-6 w-24 h-24 flex items-center justify-center"
                     >
-                        <div className="absolute inset-0 bg-gradient-to-r from-neon-teal to-electric-purple rounded-full animate-pulse blur-md"></div>
+                        <div className="absolute inset-0 bg-gradient-to-r from-teal-500 to-purple-500 rounded-full animate-pulse blur-md"></div>
                         <div className="relative bg-[#0f1123] w-20 h-20 rounded-full flex items-center justify-center border-2 border-white/20">
                             <Crown className="w-10 h-10 text-yellow-400" />
                         </div>
                         <motion.div 
                             animate={{ rotate: 360 }}
                             transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-                            className="absolute -inset-2 border-t-2 border-r-2 border-neon-teal/50 rounded-full"
+                            className="absolute -inset-2 border-t-2 border-r-2 border-teal-500/50 rounded-full"
                         ></motion.div>
                     </motion.div>
 
@@ -106,7 +106,7 @@ export function LevelUpModal() {
                         <div className="bg-white/5 rounded-xl p-4 border border-white/10 mb-6">
                             <div className="flex justify-between items-center mb-2">
                                 <span className="text-sm text-gray-400">Next Reward</span>
-                                <span className="text-sm text-neon-teal font-bold">Locked <LockIcon className="inline w-3 h-3 ml-1" /></span>
+                                <span className="text-sm text-teal-500 font-bold">Locked <LockIcon className="inline w-3 h-3 ml-1" /></span>
                             </div>
                             <div className="w-full bg-black/50 h-2 rounded-full overflow-hidden">
                                 <div className="h-full bg-gray-700 w-full opacity-30"></div>
@@ -115,7 +115,7 @@ export function LevelUpModal() {
 
                         <button
                             onClick={() => setLevelData(null)}
-                            className="w-full py-3 bg-gradient-to-r from-neon-teal to-electric-purple text-white font-bold rounded-xl hover:opacity-90 transition-opacity active:scale-95"
+                            className="w-full py-3 bg-gradient-to-r from-teal-500 to-purple-500 text-white font-bold rounded-xl hover:opacity-90 transition-opacity active:scale-95"
                         >
                             AWESOME!
                         </button>

@@ -28,7 +28,7 @@ export default function ArticleClient({ article }: ArticleClientProps) {
                 {/* Back Button */}
                 <Link
                     href="/blog"
-                    className="inline-flex items-center gap-2 text-neon-teal hover:text-neon-yellow transition-colors mb-8 group"
+                    className="inline-flex items-center gap-2 text-teal-500 hover:text-amber-500 transition-colors mb-8 group"
                 >
                     <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
                     Back to Articles
@@ -41,7 +41,7 @@ export default function ArticleClient({ article }: ArticleClientProps) {
                     className="mb-8"
                 >
                     <div className="flex items-center gap-3 mb-4">
-                        <span className="px-3 py-1 text-sm font-medium bg-neon-teal/20 text-neon-teal rounded-full">
+                        <span className="px-3 py-1 text-sm font-medium bg-teal-500/20 text-teal-500 rounded-full">
                             {article.category}
                         </span>
                         <div className="flex items-center gap-4 text-sm text-gray-400">
@@ -83,12 +83,12 @@ export default function ArticleClient({ article }: ArticleClientProps) {
                             prose-headings:text-white prose-headings:font-bold
                             prose-h1:text-3xl prose-h2:text-2xl prose-h3:text-xl
                             prose-p:text-gray-300 prose-p:leading-relaxed
-                            prose-a:text-neon-teal prose-a:no-underline hover:prose-a:underline
+                            prose-a:text-teal-500 prose-a:no-underline hover:prose-a:underline
                             prose-strong:text-white prose-strong:font-semibold
                             prose-ul:text-gray-300 prose-ol:text-gray-300
-                            prose-li:marker:text-neon-teal
-                            prose-blockquote:border-l-neon-teal prose-blockquote:text-gray-300
-                            prose-code:text-neon-yellow prose-code:bg-white/10 prose-code:px-1 prose-code:rounded"
+                            prose-li:marker:text-teal-500
+                            prose-blockquote:border-l-teal-500 prose-blockquote:text-gray-300
+                            prose-code:text-amber-500 prose-code:bg-white/10 prose-code:px-1 prose-code:rounded"
                         dangerouslySetInnerHTML={{ __html: article.content }}
                     />
                 </motion.article>
@@ -106,7 +106,7 @@ export default function ArticleClient({ article }: ArticleClientProps) {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 }}
-                    className="bg-gradient-to-r from-neon-teal/20 to-electric-purple/20 border border-neon-teal/30 rounded-2xl p-8 text-center"
+                    className="bg-gradient-to-r from-teal-500/20 to-purple-500/20 border border-teal-500/30 rounded-2xl p-8 text-center"
                 >
                     <h2 className="text-2xl font-bold text-white mb-4">
                         Ready to Put These Strategies Into Practice?
@@ -117,7 +117,7 @@ export default function ArticleClient({ article }: ArticleClientProps) {
                     <div className="flex flex-wrap justify-center gap-4">
                         <Link
                             href="/tools"
-                            className="px-6 py-3 bg-neon-teal text-black rounded-lg font-semibold hover:bg-neon-yellow transition-colors"
+                            className="px-6 py-3 bg-teal-500 text-black rounded-lg font-semibold hover:bg-amber-500 transition-colors"
                         >
                             Explore All Tools
                         </Link>

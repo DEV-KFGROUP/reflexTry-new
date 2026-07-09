@@ -199,7 +199,7 @@ export default function PatternMatchingGame() {
                                                     key={option.id}
                                                     onClick={() => handleSelect(index)}
                                                     disabled={selectedIndex !== null}
-                                                    className={`p-8 rounded-2xl border-4 transition-all ${showResult
+                                                    className={`p-8 rounded-2xl border-4 transition ${showResult
                                                             ? isCorrect
                                                                 ? "bg-green-500/20 border-green-500"
                                                                 : isSelected

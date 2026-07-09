@@ -22,7 +22,7 @@ export function Footer() {
                     {/* Brand Section */}
                     <div className="lg:col-span-2 space-y-6">
                         <Link href="/" className="flex items-center gap-3 group w-fit">
-                            <div className="relative w-10 h-10 flex items-center justify-center overflow-hidden rounded-lg border border-border bg-secondary transition-all">
+                            <div className="relative w-10 h-10 flex items-center justify-center overflow-hidden rounded-lg border border-border bg-secondary transition">
                                 <Image
                                     src="/apple-icon.png"
                                     alt="Reflextry Logo"
@@ -34,7 +34,7 @@ export function Footer() {
                             <span className="text-2xl font-semibold text-foreground">Reflextry</span>
                         </Link>
                         <p className="text-muted-foreground/80 max-w-xs leading-relaxed">
-                            Train your brain, improve your reflexes, and compete with players worldwide.
+                            Cognitive training tools designed for gamers, students, and professionals. Train your brain, improve your reflexes, and compete worldwide.
                         </p>
                         <div className="flex gap-3">
                             {[
@@ -45,7 +45,7 @@ export function Footer() {
                                 <Link
                                     key={social.label}
                                     href={social.href}
-                                    className={`p-2.5 bg-secondary border border-border rounded-lg text-muted-foreground transition-all duration-300 ${social.color}`}
+                                    className={`p-2.5 bg-secondary border border-border rounded-lg text-muted-foreground transition duration-200 ${social.color}`}
                                     aria-label={social.label}
                                 >
                                     <social.icon className="w-5 h-5" />
@@ -163,10 +163,19 @@ export function Footer() {
                     </div>
                 </div>
 
+                {/* SEO/AEO Global Context */}
+                <div className="pt-8 mb-8 border-t border-border/50 text-xs text-muted-foreground/60 text-center">
+                    <p>
+                        <strong>Scientific Context:</strong> Consistent cognitive exercises are designed to leverage neuroplasticity. Read more about <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6128435/" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">brain training research</a>.
+                    </p>
+                </div>
+
                 {/* Bottom Bar */}
                 <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
-                    <div className="text-sm text-muted-foreground/60">
-                        &copy; {mounted ? currentYear : 2024} Reflextry. All rights reserved.
+                    <div className="text-sm text-muted-foreground/60 flex items-center flex-wrap gap-2 justify-center">
+                        <span>&copy; {mounted ? currentYear : 2024} Reflextry. All rights reserved.</span>
+                        <span className="hidden md:inline border-l border-border/50 h-4 mx-1"></span>
+                        <time dateTime="2026-07-09">Last updated: July 2026</time>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-muted-foreground/60">
                         <span>Made with</span>

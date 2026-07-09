@@ -116,7 +116,7 @@ export default function NumberRushGame() {
                                 <button
                                     key={count}
                                     onClick={() => setTotalNumbers(count)}
-                                    className={`px-6 py-2 rounded-lg font-bold border-2 transition-all duration-200 ${totalNumbers === count
+                                    className={`px-6 py-2 rounded-lg font-bold border-2 transition duration-200 ${totalNumbers === count
                                         ? 'bg-speed/20 border-speed text-white shadow-[0_0_15px_rgba(6,182,212,0.4)]'
                                         : 'bg-black/20 border-white/10 text-gray-400 hover:border-speed/50 hover:text-white'}`}
                                 >

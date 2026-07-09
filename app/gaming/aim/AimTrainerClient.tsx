@@ -211,7 +211,7 @@ export default function AimTrainerClient() {
                         {/* Game Content */}
                         <div
                             ref={containerRef}
-                            className={`w-full h-full cursor-crosshair relative transition-opacity duration-300 ${engine.gameState !== 'PLAYING' && engine.gameState !== 'PAUSED' ? 'opacity-20 pointer-events-none' : 'opacity-100'}`}
+                            className={`w-full h-full cursor-crosshair relative transition-opacity duration-200 ${engine.gameState !== 'PLAYING' && engine.gameState !== 'PAUSED' ? 'opacity-20 pointer-events-none' : 'opacity-100'}`}
                             onMouseDown={handleMiss}
                         >
                             {isPlaying && (

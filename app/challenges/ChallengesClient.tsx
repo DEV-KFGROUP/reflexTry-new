@@ -42,7 +42,7 @@ export default function ChallengesClient() {
                         animate={{ scale: 1 }}
                         className="inline-block p-4 rounded-full bg-white/5 border border-white/10 mb-4"
                     >
-                        <Calendar className="w-12 h-12 text-neon-teal" />
+                        <Calendar className="w-12 h-12 text-teal-500" />
                     </motion.div>
                     <h1
                         className="text-4xl md:text-5xl font-bold"
@@ -107,7 +107,7 @@ export default function ChallengesClient() {
                     <div className="flex items-start justify-between mb-6">
                         <div>
                             <div className="flex items-center gap-2 mb-2">
-                                <Target className="w-6 h-6 text-neon-teal" />
+                                <Target className="w-6 h-6 text-teal-500" />
                                 <h2 className="text-2xl font-bold text-white">Today's Challenge</h2>
                             </div>
                             <p className="text-gray-400">
@@ -132,7 +132,7 @@ export default function ChallengesClient() {
                             <p className="text-gray-300 text-lg mb-4">{challenge.description}</p>
                             <div className="bg-white/5 rounded-xl p-4">
                                 <div className="flex items-baseline gap-2">
-                                    <span className="text-3xl font-bold text-neon-teal">
+                                    <span className="text-3xl font-bold text-teal-500">
                                         {challenge.target}
                                     </span>
                                     <span className="text-gray-400 uppercase">{challenge.unit}</span>
@@ -151,7 +151,7 @@ export default function ChallengesClient() {
                         {!isCompleted && (
                             <Link
                                 href={toolPath}
-                                className="inline-flex items-center justify-center gap-2 px-8 py-4 text-lg rounded-full font-bold transition-all duration-300 cursor-pointer bg-neon-teal text-black hover:shadow-[0_0_20px_rgba(0,240,255,0.6)] border-none w-full"
+                                className="inline-flex items-center justify-center gap-2 px-8 py-4 text-lg rounded-full font-bold transition duration-200 cursor-pointer bg-teal-500 text-black hover:shadow-[0_0_20px_rgba(0,240,255,0.6)] border-none w-full"
                             >
                                 Start Challenge <ArrowRight className="w-5 h-5" />
                             </Link>

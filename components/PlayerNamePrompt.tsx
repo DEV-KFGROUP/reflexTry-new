@@ -62,7 +62,7 @@ export function PlayerNamePrompt({ isOpen, onClose, onSave, score, toolName }: P
                     animate={{ scale: 1, opacity: 1 }}
                     exit={{ scale: 0.9, opacity: 0 }}
                     onClick={(e) => e.stopPropagation()}
-                    className="bg-background border-2 border-neon-teal/40 rounded-2xl p-8 max-w-md w-full shadow-2xl"
+                    className="bg-background border-2 border-teal-500/40 rounded-2xl p-8 max-w-md w-full shadow-2xl"
                 >
                     <div className="flex items-start justify-between mb-6">
                         <div className="flex items-center gap-3">
@@ -102,12 +102,12 @@ export function PlayerNamePrompt({ isOpen, onClose, onSave, score, toolName }: P
                                 }}
                                 placeholder="Your name"
                                 maxLength={20}
-                                className="w-full px-4 py-3 bg-theme-surface border border-theme rounded-lg focus:outline-none focus:ring-2 focus:ring-neon-teal/50 text-theme-primary placeholder-theme-muted"
+                                className="w-full px-4 py-3 bg-theme-surface border border-theme rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500/50 text-theme-primary placeholder-theme-muted"
                                 autoFocus
                             />
                             {savedName && (
                                 <p className="text-xs text-theme-muted mt-2">
-                                    Previously saved as: <span className="text-neon-teal">{savedName}</span>
+                                    Previously saved as: <span className="text-teal-500">{savedName}</span>
                                 </p>
                             )}
                         </div>

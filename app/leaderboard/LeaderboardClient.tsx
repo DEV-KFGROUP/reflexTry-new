@@ -42,7 +42,7 @@ export default function LeaderboardClient() {
 
     const getScoreColor = (score: Score | null, unit: string) => {
         if (!score) return "text-theme-muted";
-        return "text-neon-yellow";
+        return "text-amber-500";
     };
 
     return (
@@ -113,7 +113,7 @@ export default function LeaderboardClient() {
                                 key={tool.id}
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                className="bg-theme-surface border border-theme rounded-2xl p-6 hover:border-neon-teal/50 transition-all shadow-lg"
+                                className="bg-theme-surface border border-theme rounded-2xl p-6 hover:border-teal-500/50 transition shadow-lg"
                             >
                                 <h3 className="text-xl font-bold text-theme-primary mb-4">{tool.label}</h3>
                                 {score ? (
@@ -124,7 +124,7 @@ export default function LeaderboardClient() {
                                                 {score.value.toLocaleString()} <span className="text-lg text-theme-secondary">{score.unit}</span>
                                             </p>
                                             {score.playerName && (
-                                                <p className="text-sm text-neon-teal mt-2">
+                                                <p className="text-sm text-teal-500 mt-2">
                                                     Player: {score.playerName}
                                                 </p>
                                             )}
@@ -135,7 +135,7 @@ export default function LeaderboardClient() {
                                             </p>
                                             <Link
                                                 href={tool.path}
-                                                className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base rounded-full font-bold transition-all duration-300 cursor-pointer border-2 border-neon-teal text-neon-teal hover:bg-neon-teal/10 w-full"
+                                                className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base rounded-full font-bold transition duration-200 cursor-pointer border-2 border-teal-500 text-teal-500 hover:bg-teal-500/10 w-full"
                                             >
                                                 Play <ArrowRight className="w-4 h-4" />
                                             </Link>
@@ -146,7 +146,7 @@ export default function LeaderboardClient() {
                                         <p className="text-theme-muted mb-4">No score yet</p>
                                         <Link
                                             href={tool.path}
-                                            className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base rounded-full font-bold transition-all duration-300 cursor-pointer border-2 border-neon-teal text-neon-teal hover:bg-neon-teal/10 w-full"
+                                            className="inline-flex items-center justify-center gap-2 px-6 py-3 text-base rounded-full font-bold transition duration-200 cursor-pointer border-2 border-teal-500 text-teal-500 hover:bg-teal-500/10 w-full"
                                         >
                                             Play <ArrowRight className="w-4 h-4" />
                                         </Link>
@@ -163,7 +163,7 @@ export default function LeaderboardClient() {
                         return (
                             <div key={tool.id} className="bg-theme-surface border border-theme rounded-2xl p-6 shadow-lg">
                                 <h3 className="text-2xl font-bold text-theme-primary mb-6 flex items-center gap-2">
-                                    <TrendingUp className="w-6 h-6 text-neon-teal" />
+                                    <TrendingUp className="w-6 h-6 text-teal-500" />
                                     {tool.label}
                                 </h3>
                                 {entries.length > 0 ? (
@@ -191,7 +191,7 @@ export default function LeaderboardClient() {
                                                     </div>
                                                 </div>
                                                 <div className="text-right">
-                                                    <p className="text-xl font-bold text-neon-teal">
+                                                    <p className="text-xl font-bold text-teal-500">
                                                         {entry.score.toLocaleString()}
                                                     </p>
                                                     <p className="text-xs text-theme-secondary uppercase">{entry.unit}</p>

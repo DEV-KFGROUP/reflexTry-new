@@ -101,7 +101,7 @@ export default function ReactionGame() {
                     <motion.div
                         className={`
                             hud-frame w-full h-[500px] rounded-[3rem] flex flex-col items-center justify-center 
-                            cursor-pointer transition-all duration-300 select-none shadow-2xl relative overflow-hidden
+                            cursor-pointer transition duration-200 select-none shadow-2xl relative overflow-hidden
                             ${bgColor}
                             ${gameState === "ready" ? "shadow-[0_0_100px_rgba(34,197,94,0.6)]" : ""}
                         `}

@@ -178,7 +178,7 @@ export default function GridSpeedGame() {
                                                 whileTap={{ scale: 0.9 }}
                                                 whileHover={{ scale: 1.05 }}
                                                 onClick={() => handleCellClick(isTarget, i)}
-                                                className={`w-14 h-14 sm:w-18 sm:h-18 md:w-20 md:h-20 rounded-xl cursor-pointer transition-all duration-100 
+                                                className={`w-14 h-14 sm:w-18 sm:h-18 md:w-20 md:h-20 rounded-xl cursor-pointer transition duration-100 
                                                     ${isTarget
                                                         ? "bg-speed hover:bg-speed/80 shadow-[0_0_20px_rgba(0,229,255,0.6)] border-2 border-white/30"
                                                         : "bg-white/5 hover:bg-white/10 border border-white/10"

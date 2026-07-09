@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 import PatternMatchingGame from './PatternMatchingGame';
 import { getToolMetadata } from '@/lib/seo-utils';
-import { StructuredData } from '@/components/StructuredData';
-import { generateToolStructuredData } from '@/lib/structured-data';
+import { SchemaInjector } from '@/components/SchemaInjector';
+import { generateToolStructuredData, generateBreadcrumbStructuredData, generateWebPageSchema } from '@/lib/structured-data';
 import { SEO_CONFIGS } from '@/config/seo-config';
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -21,9 +21,21 @@ export default function Page() {
         `/accuracy/pattern-matching`
     );
 
+    const breadcrumbSchema = generateBreadcrumbStructuredData([
+        { name: "Home", url: "/" },
+        { name: "Accuracy Tools", url: "/accuracy" },
+        { name: config.title, url: `/accuracy/pattern-matching` },
+    ]);
+    
+    const webPageSchema = generateWebPageSchema(
+        config.title,
+        config.description,
+        `/accuracy/pattern-matching`
+    );
+
     return (
         <>
-            <StructuredData type="WebApplication" data={structuredData} />
+            <SchemaInjector schemas={[structuredData, breadcrumbSchema, webPageSchema]} />
             <PatternMatchingGame />
         </>
     );

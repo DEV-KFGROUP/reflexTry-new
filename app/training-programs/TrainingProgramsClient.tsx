@@ -244,7 +244,7 @@ export default function TrainingProgramsClient() {
                         animate={{ scale: 1 }}
                         className="inline-block p-4 rounded-full bg-white/5 border border-white/10 mb-6"
                     >
-                        <Trophy className="w-12 h-12 text-neon-yellow" />
+                        <Trophy className="w-12 h-12 text-amber-500" />
                     </motion.div>
                     <h1
                         className="text-4xl md:text-5xl font-bold mb-4"
@@ -280,13 +280,13 @@ export default function TrainingProgramsClient() {
                                 </div>
                             </div>
                             <div className="flex flex-wrap gap-4 text-sm">
-                                <div className="flex items-center gap-2 px-4 py-2 bg-neon-teal/20 border border-neon-teal/30 rounded-lg">
-                                    <Clock className="w-4 h-4 text-neon-teal" />
-                                    <span className="text-neon-teal font-semibold">{program.duration}</span>
+                                <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/20 border border-teal-500/30 rounded-lg">
+                                    <Clock className="w-4 h-4 text-teal-500" />
+                                    <span className="text-teal-500 font-semibold">{program.duration}</span>
                                 </div>
-                                <div className="flex items-center gap-2 px-4 py-2 bg-electric-purple/20 border border-electric-purple/30 rounded-lg">
-                                    <Target className="w-4 h-4 text-electric-purple" />
-                                    <span className="text-electric-purple font-semibold">{program.level}</span>
+                                <div className="flex items-center gap-2 px-4 py-2 bg-purple-500/20 border border-purple-500/30 rounded-lg">
+                                    <Target className="w-4 h-4 text-purple-500" />
+                                    <span className="text-purple-500 font-semibold">{program.level}</span>
                                 </div>
                             </div>
                         </div>
@@ -294,13 +294,13 @@ export default function TrainingProgramsClient() {
                         {/* Goals */}
                         <div className="mb-6">
                             <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                                <Trophy className="w-5 h-5 text-neon-yellow" />
+                                <Trophy className="w-5 h-5 text-amber-500" />
                                 Program Goals
                             </h3>
                             <div className="grid md:grid-cols-2 gap-3">
                                 {program.goals.map((goal, idx) => (
                                     <div key={idx} className="flex items-start gap-3 bg-white/5 border border-white/10 rounded-lg p-3">
-                                        <CheckCircle2 className="w-5 h-5 text-neon-teal flex-shrink-0 mt-0.5" />
+                                        <CheckCircle2 className="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" />
                                         <span className="text-gray-300 text-sm">{goal}</span>
                                     </div>
                                 ))}
@@ -310,17 +310,17 @@ export default function TrainingProgramsClient() {
                         {/* Schedule */}
                         <div className="mb-6">
                             <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                                <TrendingUp className="w-5 h-5 text-electric-purple" />
+                                <TrendingUp className="w-5 h-5 text-purple-500" />
                                 Training Schedule
                             </h3>
                             <div className="space-y-4">
                                 {program.schedule.map((week, idx) => (
                                     <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-4">
-                                        <h4 className="text-lg font-semibold text-neon-teal mb-3">{week.day}</h4>
+                                        <h4 className="text-lg font-semibold text-teal-500 mb-3">{week.day}</h4>
                                         <ul className="space-y-2">
                                             {week.activities.map((activity, actIdx) => (
                                                 <li key={actIdx} className="flex items-start gap-3 text-gray-300 text-sm">
-                                                    <span className="text-neon-teal mt-1">•</span>
+                                                    <span className="text-teal-500 mt-1">•</span>
                                                     <span>{activity}</span>
                                                 </li>
                                             ))}
@@ -333,13 +333,13 @@ export default function TrainingProgramsClient() {
                         {/* Tips */}
                         <div>
                             <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                                <Zap className="w-5 h-5 text-neon-yellow" />
+                                <Zap className="w-5 h-5 text-amber-500" />
                                 Success Tips
                             </h3>
                             <div className="grid md:grid-cols-2 gap-3">
                                 {program.tips.map((tip, idx) => (
-                                    <div key={idx} className="flex items-start gap-3 bg-gradient-to-r from-neon-yellow/10 to-neon-yellow/5 border border-neon-yellow/20 rounded-lg p-3">
-                                        <span className="text-neon-yellow text-lg flex-shrink-0">💡</span>
+                                    <div key={idx} className="flex items-start gap-3 bg-gradient-to-r from-amber-500/10 to-amber-500/5 border border-amber-500/20 rounded-lg p-3">
+                                        <span className="text-amber-500 text-lg flex-shrink-0">💡</span>
                                         <span className="text-gray-300 text-sm">{tip}</span>
                                     </div>
                                 ))}
@@ -358,64 +358,64 @@ export default function TrainingProgramsClient() {
                     <h2 className="text-2xl font-bold text-white mb-6">General Training Guidelines</h2>
                     <div className="grid md:grid-cols-2 gap-6">
                         <div>
-                            <h3 className="text-lg font-semibold text-neon-teal mb-3">Before You Start</h3>
+                            <h3 className="text-lg font-semibold text-teal-500 mb-3">Before You Start</h3>
                             <ul className="space-y-2 text-gray-300 text-sm">
                                 <li className="flex items-start gap-2">
-                                    <span className="text-neon-teal mt-1">•</span>
+                                    <span className="text-teal-500 mt-1">•</span>
                                     <span>Establish baseline scores for all tools you'll use</span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <span className="text-neon-teal mt-1">•</span>
+                                    <span className="text-teal-500 mt-1">•</span>
                                     <span>Set specific, measurable goals</span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <span className="text-neon-teal mt-1">•</span>
+                                    <span className="text-teal-500 mt-1">•</span>
                                     <span>Schedule training at consistent times daily</span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <span className="text-neon-teal mt-1">•</span>
+                                    <span className="text-teal-500 mt-1">•</span>
                                     <span>Prepare a quiet, distraction-free training environment</span>
                                 </li>
                             </ul>
                         </div>
                         <div>
-                            <h3 className="text-lg font-semibold text-electric-purple mb-3">During Training</h3>
+                            <h3 className="text-lg font-semibold text-purple-500 mb-3">During Training</h3>
                             <ul className="space-y-2 text-gray-300 text-sm">
                                 <li className="flex items-start gap-2">
-                                    <span className="text-electric-purple mt-1">•</span>
+                                    <span className="text-purple-500 mt-1">•</span>
                                     <span>Focus fully on each exercise - avoid multitasking</span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <span className="text-electric-purple mt-1">•</span>
+                                    <span className="text-purple-500 mt-1">•</span>
                                     <span>Prioritize accuracy over speed initially</span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <span className="text-electric-purple mt-1">•</span>
+                                    <span className="text-purple-500 mt-1">•</span>
                                     <span>Take short breaks between intense sessions</span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <span className="text-electric-purple mt-1">•</span>
+                                    <span className="text-purple-500 mt-1">•</span>
                                     <span>Track your scores after each session</span>
                                 </li>
                             </ul>
                         </div>
                         <div>
-                            <h3 className="text-lg font-semibold text-neon-yellow mb-3">Progress Tracking</h3>
+                            <h3 className="text-lg font-semibold text-amber-500 mb-3">Progress Tracking</h3>
                             <ul className="space-y-2 text-gray-300 text-sm">
                                 <li className="flex items-start gap-2">
-                                    <span className="text-neon-yellow mt-1">•</span>
+                                    <span className="text-amber-500 mt-1">•</span>
                                     <span>Record scores weekly to monitor improvement</span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <span className="text-neon-yellow mt-1">•</span>
+                                    <span className="text-amber-500 mt-1">•</span>
                                     <span>Compare current performance to baseline</span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <span className="text-neon-yellow mt-1">•</span>
+                                    <span className="text-amber-500 mt-1">•</span>
                                     <span>Adjust difficulty as you improve</span>
                                 </li>
                                 <li className="flex items-start gap-2">
-                                    <span className="text-neon-yellow mt-1">•</span>
+                                    <span className="text-amber-500 mt-1">•</span>
                                     <span>Celebrate milestones to maintain motivation</span>
                                 </li>
                             </ul>
@@ -449,9 +449,9 @@ export default function TrainingProgramsClient() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.6 }}
-                    className="bg-gradient-to-r from-neon-teal/20 to-electric-purple/20 border border-neon-teal/30 rounded-2xl p-8 text-center"
+                    className="bg-gradient-to-r from-teal-500/20 to-purple-500/20 border border-teal-500/30 rounded-2xl p-8 text-center"
                 >
-                    <Award className="w-12 h-12 text-neon-teal mx-auto mb-4" />
+                    <Award className="w-12 h-12 text-teal-500 mx-auto mb-4" />
                     <h2 className="text-2xl font-bold text-white mb-4">
                         Ready to Start Your Training Journey?
                     </h2>
@@ -461,7 +461,7 @@ export default function TrainingProgramsClient() {
                     <div className="flex flex-wrap justify-center gap-4">
                         <Link
                             href="/tools"
-                            className="px-6 py-3 bg-neon-teal text-black rounded-lg font-semibold hover:bg-neon-yellow transition-colors"
+                            className="px-6 py-3 bg-teal-500 text-black rounded-lg font-semibold hover:bg-amber-500 transition-colors"
                         >
                             Start Training Now
                         </Link>

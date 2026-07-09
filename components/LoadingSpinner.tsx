@@ -22,7 +22,7 @@ export function LoadingSpinner({ size = "md", text, fullScreen = false }: Loadin
                 animate={{ rotate: 360 }}
                 transition={{ duration: 1, repeat: Infinity, ease: "linear" }}
             >
-                <Loader2 className={`${sizeClasses[size]} text-neon-teal`} />
+                <Loader2 className={`${sizeClasses[size]} text-teal-500`} />
             </motion.div>
             {text && <p className="text-gray-400 text-sm">{text}</p>}
         </div>

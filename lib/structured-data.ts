@@ -87,3 +87,69 @@ export function generateBreadcrumbStructuredData(items: { name: string; url: str
         })),
     };
 }
+
+export function generateOrganizationSchema() {
+    const baseUrl = getBaseUrl();
+    return {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name: "Reflextry",
+        url: baseUrl,
+        logo: `${baseUrl}/icon.png`,
+        sameAs: [
+            // Add social media links here if any
+        ]
+    };
+}
+
+export function generateWebPageSchema(title: string, description: string, urlPath: string) {
+    const baseUrl = getBaseUrl();
+    return {
+        "@context": "https://schema.org",
+        "@type": "WebPage",
+        name: title,
+        description: description,
+        url: `${baseUrl}${urlPath}`,
+        isPartOf: {
+            "@type": "WebSite",
+            url: baseUrl
+        },
+        publisher: {
+            "@type": "Organization",
+            name: "Reflextry"
+        }
+    };
+}
+
+export function generateFAQPageSchema(faqs: { question: string; answer: string }[]) {
+    return {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqs.map(faq => ({
+            "@type": "Question",
+            name: faq.question,
+            acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.answer
+            }
+        }))
+    };
+}
+
+export function generateSoftwareApplicationSchema(title: string, description: string, urlPath: string, category = "GameApplication") {
+    const baseUrl = getBaseUrl();
+    return {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        name: title,
+        description: description,
+        url: `${baseUrl}${urlPath}`,
+        applicationCategory: category,
+        operatingSystem: "Web Browser",
+        offers: {
+            "@type": "Offer",
+            price: "0",
+            priceCurrency: "USD"
+        }
+    };
+}

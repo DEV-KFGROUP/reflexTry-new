@@ -5,7 +5,7 @@ export default function TermsClient() {
     return (
         <div className="max-w-4xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8 sm:p-12">
-                <h1 className="text-4xl font-bold bg-gradient-to-r from-neon-teal to-electric-purple bg-clip-text text-transparent mb-4">
+                <h1 className="text-4xl font-bold bg-gradient-to-r from-teal-500 to-purple-500 bg-clip-text text-transparent mb-4">
                     Terms and Conditions
                 </h1>
                 <p className="text-gray-400 mb-8">Last Updated: February 2024</p>
@@ -36,7 +36,7 @@ export default function TermsClient() {
                         <p className="mb-3">Our website displays advertisements provided by Google AdSense and other third-party advertising networks. These advertisements may be targeted to content, information gathered on this website, or other information.</p>
                         <p className="mb-3"><strong>Ad Content:</strong> We do not control the content of advertisements displayed on our website. Advertisers are responsible for ensuring that materials submitted for inclusion on our website comply with applicable laws and regulations.</p>
                         <p className="mb-3"><strong>Third-Party Links:</strong> Our website may contain links to third-party websites. We are not responsible for the content, privacy policies, or practices of any third-party websites.</p>
-                        <p className="mb-3"><strong>Google AdSense:</strong> We participate in Google AdSense, an advertising service provided by Google Inc. Google uses cookies to serve ads based on your prior visits to our website or other websites. You may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" className="text-neon-teal hover:underline" target="_blank" rel="noopener noreferrer">Google's Ads Settings</a>.</p>
+                        <p className="mb-3"><strong>Google AdSense:</strong> We participate in Google AdSense, an advertising service provided by Google Inc. Google uses cookies to serve ads based on your prior visits to our website or other websites. You may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" className="text-teal-500 hover:underline" target="_blank" rel="noopener noreferrer">Google's Ads Settings</a>.</p>
                     </section>
 
                     <section>
@@ -83,7 +83,7 @@ export default function TermsClient() {
 
                     <section>
                         <h2 className="text-2xl font-semibold text-white mb-3">12. Contact Information</h2>
-                        <p>If you have any questions about these Terms and Conditions, please contact us at <a href="mailto:support@reflextry.com" className="text-neon-teal hover:underline">support@reflextry.com</a>.</p>
+                        <p>If you have any questions about these Terms and Conditions, please contact us at <a href="mailto:support@reflextry.com" className="text-teal-500 hover:underline">support@reflextry.com</a>.</p>
                     </section>
                 </div>
             </div>

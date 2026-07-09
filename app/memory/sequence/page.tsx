@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 import SequenceGame from './SequenceGame';
 import { getToolMetadata } from '@/lib/seo-utils';
-import { StructuredData } from '@/components/StructuredData';
-import { generateToolStructuredData } from '@/lib/structured-data';
+import { SchemaInjector } from '@/components/SchemaInjector';
+import { generateToolStructuredData, generateBreadcrumbStructuredData, generateWebPageSchema } from '@/lib/structured-data';
 import { SEO_CONFIGS } from '@/config/seo-config';
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -18,9 +18,21 @@ export default function Page() {
         `/memory/sequence`
     );
 
+    const breadcrumbSchema = generateBreadcrumbStructuredData([
+        { name: "Home", url: "/" },
+        { name: "Memory Tools", url: "/memory" },
+        { name: config.title, url: `/memory/sequence` },
+    ]);
+    
+    const webPageSchema = generateWebPageSchema(
+        config.title,
+        config.description,
+        `/memory/sequence`
+    );
+
     return (
         <>
-            <StructuredData type="WebApplication" data={structuredData} />
+            <SchemaInjector schemas={[structuredData, breadcrumbSchema, webPageSchema]} />
             <SequenceGame />
         </>
     );

@@ -261,7 +261,7 @@ export default function StroopDropClient() {
                                     key={c}
                                     disabled={!isPlaying}
                                     onClick={() => handleColorClick(c)}
-                                    className={`flex-1 h-full rounded-xl transition-all font-bold text-xl md:text-2xl text-white shadow-xl
+                                    className={`flex-1 h-full rounded-xl transition font-bold text-xl md:text-2xl text-white shadow-xl
                                         disabled:opacity-50 disabled:cursor-not-allowed
                                         hover:scale-105 active:scale-95`}
                                     style={{

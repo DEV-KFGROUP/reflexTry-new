@@ -171,7 +171,7 @@ export default function FAQClient() {
                         animate={{ scale: 1 }}
                         className="inline-block p-4 rounded-full bg-white/5 border border-white/10 mb-6"
                     >
-                        <HelpCircle className="w-12 h-12 text-neon-teal" />
+                        <HelpCircle className="w-12 h-12 text-teal-500" />
                     </motion.div>
                     <h1
                         className="text-4xl md:text-5xl font-bold mb-4"
@@ -201,7 +201,7 @@ export default function FAQClient() {
                             <a
                                 key={category}
                                 href={`#${category.toLowerCase().replace(/\s+/g, '-')}`}
-                                className="px-4 py-2 bg-white/10 hover:bg-neon-teal/20 border border-white/20 hover:border-neon-teal/50 rounded-lg text-sm text-gray-300 hover:text-neon-teal transition-all"
+                                className="px-4 py-2 bg-white/10 hover:bg-teal-500/20 border border-white/20 hover:border-teal-500/50 rounded-lg text-sm text-gray-300 hover:text-teal-500 transition"
                             >
                                 {category}
                             </a>
@@ -220,7 +220,7 @@ export default function FAQClient() {
                         className="mb-12"
                     >
                         <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
-                            <span className="w-2 h-8 bg-gradient-to-b from-neon-teal to-electric-purple rounded-full"></span>
+                            <span className="w-2 h-8 bg-gradient-to-b from-teal-500 to-purple-500 rounded-full"></span>
                             {category}
                         </h2>
                         <div className="space-y-4">
@@ -232,14 +232,14 @@ export default function FAQClient() {
                                         initial={{ opacity: 0, x: -20 }}
                                         animate={{ opacity: 1, x: 0 }}
                                         transition={{ delay: categoryIndex * 0.1 + index * 0.05 }}
-                                        className="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-neon-teal/30 transition-all"
+                                        className="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-teal-500/30 transition"
                                     >
                                         <h3 className="text-lg font-semibold text-white mb-3 flex items-start gap-3">
-                                            <span className="text-neon-teal mt-1 flex-shrink-0">Q:</span>
+                                            <span className="text-teal-500 mt-1 flex-shrink-0">Q:</span>
                                             <span>{faq.question}</span>
                                         </h3>
                                         <div className="flex items-start gap-3 ml-8">
-                                            <span className="text-electric-purple mt-1 flex-shrink-0 font-semibold">A:</span>
+                                            <span className="text-purple-500 mt-1 flex-shrink-0 font-semibold">A:</span>
                                             <p className="text-gray-300 leading-relaxed">{faq.answer}</p>
                                         </div>
                                     </motion.div>
@@ -253,9 +253,9 @@ export default function FAQClient() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.6 }}
-                    className="bg-gradient-to-r from-neon-teal/20 to-electric-purple/20 border border-neon-teal/30 rounded-2xl p-8 text-center"
+                    className="bg-gradient-to-r from-teal-500/20 to-purple-500/20 border border-teal-500/30 rounded-2xl p-8 text-center"
                 >
-                    <HelpCircle className="w-12 h-12 text-neon-teal mx-auto mb-4" />
+                    <HelpCircle className="w-12 h-12 text-teal-500 mx-auto mb-4" />
                     <h2 className="text-2xl font-bold text-white mb-4">
                         Still Have Questions?
                     </h2>
@@ -265,7 +265,7 @@ export default function FAQClient() {
                     <div className="flex flex-wrap justify-center gap-4">
                         <Link
                             href="/contact"
-                            className="px-6 py-3 bg-neon-teal text-black rounded-lg font-semibold hover:bg-neon-yellow transition-colors"
+                            className="px-6 py-3 bg-teal-500 text-black rounded-lg font-semibold hover:bg-amber-500 transition-colors"
                         >
                             Contact Support
                         </Link>

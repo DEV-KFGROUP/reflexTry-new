@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
 import ScienceClient from './ScienceClient';
 import { getBaseUrl } from '@/lib/base-url';
+import { SchemaInjector } from "@/components/SchemaInjector";
+import { generateBreadcrumbStructuredData, generateWebPageSchema } from "@/lib/structured-data";
 
 export async function generateMetadata(): Promise<Metadata> {
     const baseUrl = getBaseUrl();
@@ -22,5 +24,23 @@ export async function generateMetadata(): Promise<Metadata> {
 }
 
 export default function Science() {
-    return <ScienceClient />;
+    const breadcrumbSchema = generateBreadcrumbStructuredData([
+        { name: "Home", url: "/" },
+        { name: "Science", url: "/science" },
+    ]);
+    
+    // For these static pages, we don't have the config object imported, 
+    // but we can generate a basic WebPage schema with the title.
+    const webPageSchema = generateWebPageSchema(
+        "Science | Reflextry",
+        "Learn more about Reflextry and our brain training tools.",
+        "/science"
+    );
+
+    return (
+        <>
+            <SchemaInjector schemas={[breadcrumbSchema, webPageSchema]} />
+            <ScienceClient />
+        </>
+    );
 }

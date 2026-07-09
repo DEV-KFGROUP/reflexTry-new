@@ -5,7 +5,7 @@ export default function CookiesPolicyClient() {
     return (
         <div className="max-w-4xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8 sm:p-12">
-                <h1 className="text-4xl font-bold bg-gradient-to-r from-neon-teal to-electric-purple bg-clip-text text-transparent mb-4">
+                <h1 className="text-4xl font-bold bg-gradient-to-r from-teal-500 to-purple-500 bg-clip-text text-transparent mb-4">
                     Cookie Policy (Global)
                 </h1>
                 <p className="text-gray-400 mb-8">Last Updated: February 2024</p>
@@ -57,9 +57,9 @@ export default function CookiesPolicyClient() {
                         <p className="mb-3"><strong>Browser Settings:</strong> Most web browsers allow you to control cookies through their settings preferences. However, limiting cookies may impact your experience on our website.</p>
                         <p className="mb-3"><strong>Opt-Out of Personalized Advertising:</strong></p>
                         <ul className="list-disc list-inside ml-4 space-y-2">
-                            <li>Visit <a href="https://www.google.com/settings/ads" className="text-neon-teal hover:underline" target="_blank" rel="noopener noreferrer">Google's Ads Settings</a> to opt out of Google's use of cookies for personalized advertising</li>
-                            <li>Visit <a href="https://www.aboutads.info/choices/" className="text-neon-teal hover:underline" target="_blank" rel="noopener noreferrer">www.aboutads.info/choices</a> to opt out of a third-party vendor's use of cookies for personalized advertising</li>
-                            <li>Use the <a href="https://tools.google.com/dlpage/gaoptout" className="text-neon-teal hover:underline" target="_blank" rel="noopener noreferrer">Google Analytics Opt-out Browser Add-on</a> to prevent Google Analytics from collecting information about your visits</li>
+                            <li>Visit <a href="https://www.google.com/settings/ads" className="text-teal-500 hover:underline" target="_blank" rel="noopener noreferrer">Google's Ads Settings</a> to opt out of Google's use of cookies for personalized advertising</li>
+                            <li>Visit <a href="https://www.aboutads.info/choices/" className="text-teal-500 hover:underline" target="_blank" rel="noopener noreferrer">www.aboutads.info/choices</a> to opt out of a third-party vendor's use of cookies for personalized advertising</li>
+                            <li>Use the <a href="https://tools.google.com/dlpage/gaoptout" className="text-teal-500 hover:underline" target="_blank" rel="noopener noreferrer">Google Analytics Opt-out Browser Add-on</a> to prevent Google Analytics from collecting information about your visits</li>
                         </ul>
                     </section>
 
@@ -70,7 +70,7 @@ export default function CookiesPolicyClient() {
 
                     <section>
                         <h2 className="text-2xl font-semibold text-white mb-3">Contact Us</h2>
-                        <p>If you have any questions about our use of cookies, please contact us at <a href="mailto:support@reflextry.com" className="text-neon-teal hover:underline">support@reflextry.com</a>.</p>
+                        <p>If you have any questions about our use of cookies, please contact us at <a href="mailto:support@reflextry.com" className="text-teal-500 hover:underline">support@reflextry.com</a>.</p>
                     </section>
                 </div>
             </div>

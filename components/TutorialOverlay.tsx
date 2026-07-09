@@ -73,7 +73,7 @@ export function TutorialOverlay({ steps, onComplete, storageKey }: TutorialOverl
                         initial={{ scale: 0.9, opacity: 0 }}
                         animate={{ scale: 1, opacity: 1 }}
                         exit={{ scale: 0.9, opacity: 0 }}
-                        className="bg-background border-2 border-neon-teal/40 rounded-2xl p-8 max-w-md w-full shadow-2xl"
+                        className="bg-background border-2 border-teal-500/40 rounded-2xl p-8 max-w-md w-full shadow-2xl"
                     >
                         <div className="flex items-start justify-between mb-6">
                             <div>
@@ -108,7 +108,7 @@ export function TutorialOverlay({ steps, onComplete, storageKey }: TutorialOverl
                                         key={index}
                                         className={`w-2 h-2 rounded-full ${
                                             index === currentStep
-                                                ? "bg-neon-teal"
+                                                ? "bg-teal-500"
                                                 : "bg-gray-600"
                                         }`}
                                     />

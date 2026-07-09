@@ -73,7 +73,7 @@ export default function StatisticsClient() {
                         animate={{ scale: 1 }}
                         className="inline-block p-4 rounded-full bg-white/5 border border-white/10 mb-4"
                     >
-                        <BarChart3 className="w-12 h-12 text-neon-teal" />
+                        <BarChart3 className="w-12 h-12 text-teal-500" />
                     </motion.div>
                     <h1 
                         className="text-4xl md:text-5xl font-bold"
@@ -100,10 +100,10 @@ export default function StatisticsClient() {
                         className="bg-white/5 border border-white/10 rounded-2xl p-6"
                     >
                         <div className="flex items-center gap-3 mb-4">
-                            <Activity className="w-8 h-8 text-neon-teal" />
+                            <Activity className="w-8 h-8 text-teal-500" />
                             <h3 className="text-xl font-bold text-white">Total Games</h3>
                         </div>
-                        <p className="text-4xl font-bold text-neon-teal">{totalGames}</p>
+                        <p className="text-4xl font-bold text-teal-500">{totalGames}</p>
                     </motion.div>
 
                     <motion.div
@@ -174,7 +174,7 @@ export default function StatisticsClient() {
                                         </div>
                                         <div className="flex justify-between">
                                             <span className="text-gray-400">Best Score:</span>
-                                            <span className="text-neon-teal font-bold">
+                                            <span className="text-teal-500 font-bold">
                                                 {stats.best.toLocaleString()}
                                             </span>
                                         </div>

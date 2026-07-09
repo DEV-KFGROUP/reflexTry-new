@@ -2,7 +2,7 @@
 // This component just renders JSON-LD structured data
 
 interface StructuredDataProps {
-    type: "WebApplication" | "Game" | "Article" | "WebSite" | "BreadcrumbList";
+    type: "WebApplication" | "Game" | "Article" | "WebSite" | "BreadcrumbList" | "Organization" | "WebPage" | "FAQPage" | "SoftwareApplication";
     data: any;
 }
 
@@ -25,6 +25,10 @@ export function StructuredData({ type, data }: StructuredDataProps) {
 export { 
     generateToolStructuredData, 
     generateWebsiteStructuredData, 
-    generateBreadcrumbStructuredData 
+    generateBreadcrumbStructuredData,
+    generateOrganizationSchema,
+    generateWebPageSchema,
+    generateFAQPageSchema,
+    generateSoftwareApplicationSchema
 } from "@/lib/structured-data";
 

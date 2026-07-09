@@ -47,7 +47,7 @@ export default function BlogHubClient({ posts }: { posts: BlogPost[] }) {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.1 }}
-                                className="group bg-white border border-border rounded-2xl p-6 hover:shadow-md transition-all text-foreground"
+                                className="group bg-white border border-border rounded-2xl p-6 hover:shadow-md transition text-foreground"
                             >
                                 <Link
                                     href={`/blog/${post.slug}`}

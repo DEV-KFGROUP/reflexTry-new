@@ -105,7 +105,7 @@ export default function SoundReactionGame() {
                     <div className="absolute inset-0 bg-gradient-to-br from-reflex/10 via-speed/5 to-transparent rounded-[3rem] blur-2xl -z-10" />
 
                     <motion.div
-                        className={`hud-frame w-full min-h-[500px] rounded-[3rem] flex flex-col items-center justify-center cursor-pointer transition-all duration-300 select-none shadow-2xl relative overflow-hidden ${bgColor} ${gameState === "ready" ? "shadow-[0_0_100px_rgba(34,197,94,0.6)]" : ""}`}
+                        className={`hud-frame w-full min-h-[500px] rounded-[3rem] flex flex-col items-center justify-center cursor-pointer transition duration-200 select-none shadow-2xl relative overflow-hidden ${bgColor} ${gameState === "ready" ? "shadow-[0_0_100px_rgba(34,197,94,0.6)]" : ""}`}
                         onClick={handleAction}
                         whileHover={{ scale: 1.01 }}
                         whileTap={{ scale: 0.99 }}

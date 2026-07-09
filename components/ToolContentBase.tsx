@@ -103,7 +103,7 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
             <div className="relative space-y-8 before:absolute before:inset-y-0 before:left-5 before:w-0.5 before:-translate-x-px before:bg-gradient-to-b before:from-transparent before:via-accuracy/50 before:to-transparent">
                 {howToUse.map((step, idx) => (
                     <div key={idx} className="relative flex items-start gap-6 group">
-                        <div className="relative flex-shrink-0 flex h-10 w-10 items-center justify-center rounded-full border border-accuracy/30 bg-card shadow-lg shadow-accuracy/20 group-hover:border-accuracy group-hover:scale-110 transition-all duration-300 z-10">
+                        <div className="relative flex-shrink-0 flex h-10 w-10 items-center justify-center rounded-full border border-accuracy/30 bg-card shadow-lg shadow-accuracy/20 group-hover:border-accuracy group-hover:scale-110 transition duration-200 z-10">
                             <span className="text-lg font-bold text-accuracy">{idx + 1}</span>
                         </div>
                         <div className="flex-1 min-w-0 space-y-2 pt-1">
@@ -147,7 +147,7 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
                 {howToImprove.map((tip, idx) => (
                     <div
                         key={idx}
-                        className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-card to-card/50 border border-border p-5 hover:border-wisdom/50 transition-all duration-300 hover:shadow-lg hover:shadow-wisdom/10"
+                        className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-card to-card/50 border border-border p-5 hover:border-wisdom/50 transition duration-200 hover:shadow-lg hover:shadow-wisdom/10"
                     >
                         <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
                             <Target className="w-16 h-16 text-wisdom transform rotate-12 group-hover:scale-110 transition-transform" />
@@ -192,10 +192,10 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
             <motion.div variants={itemVariants}>
                 <Tabs defaultValue="about" className="w-full">
                     <TabsList className="w-full justify-start overflow-x-auto bg-card/50 border border-border rounded-xl p-1 mb-8">
-                        <TabsTrigger value="about" className="flex-1 min-w-[100px] data-[state=active]:bg-info data-[state=active]:text-white data-[state=active]:shadow-lg transition-all rounded-lg py-2.5">About</TabsTrigger>
-                        <TabsTrigger value="how-to-play" className="flex-1 min-w-[120px] data-[state=active]:bg-accuracy data-[state=active]:text-white data-[state=active]:shadow-lg transition-all rounded-lg py-2.5">How to Play</TabsTrigger>
-                        <TabsTrigger value="tips" className="flex-1 min-w-[100px] data-[state=active]:bg-wisdom data-[state=active]:text-white data-[state=active]:shadow-lg transition-all rounded-lg py-2.5">Pro Tips</TabsTrigger>
-                        <TabsTrigger value="faq" className="flex-1 min-w-[100px] data-[state=active]:bg-reflex data-[state=active]:text-white data-[state=active]:shadow-lg transition-all rounded-lg py-2.5">FAQ</TabsTrigger>
+                        <TabsTrigger value="about" className="flex-1 min-w-[100px] data-[state=active]:bg-info data-[state=active]:text-white data-[state=active]:shadow-lg transition rounded-lg py-2.5">About</TabsTrigger>
+                        <TabsTrigger value="how-to-play" className="flex-1 min-w-[120px] data-[state=active]:bg-accuracy data-[state=active]:text-white data-[state=active]:shadow-lg transition rounded-lg py-2.5">How to Play</TabsTrigger>
+                        <TabsTrigger value="tips" className="flex-1 min-w-[100px] data-[state=active]:bg-wisdom data-[state=active]:text-white data-[state=active]:shadow-lg transition rounded-lg py-2.5">Pro Tips</TabsTrigger>
+                        <TabsTrigger value="faq" className="flex-1 min-w-[100px] data-[state=active]:bg-reflex data-[state=active]:text-white data-[state=active]:shadow-lg transition rounded-lg py-2.5">FAQ</TabsTrigger>
                     </TabsList>
 
                     {/* About Content */}
@@ -271,7 +271,7 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
                                     initial={{ opacity: 0, y: 10 }}
                                     animate={{ opacity: 1, y: 0 }}
                                     transition={{ delay: idx * 0.05 }}
-                                    className="group relative bg-card/50 backdrop-blur-sm border border-border rounded-xl p-6 hover:border-reflex/30 hover:bg-card transition-all duration-300 cursor-pointer"
+                                    className="group relative bg-card/50 backdrop-blur-sm border border-border rounded-xl p-6 hover:border-reflex/30 hover:bg-card transition duration-200 cursor-pointer"
                                     onClick={() => setExpandedFaq(expandedFaq === idx ? null : idx)}
                                 >
                                     <div className="flex items-start justify-between gap-4">
@@ -322,7 +322,7 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
                             <Link
                                 key={tool.id}
                                 href={tool.href}
-                                className="group flex items-center gap-3 p-3 rounded-xl bg-card border border-border hover:border-reflex/50 hover:shadow-lg hover:shadow-reflex/5 transition-all duration-300"
+                                className="group flex items-center gap-3 p-3 rounded-xl bg-card border border-border hover:border-reflex/50 hover:shadow-lg hover:shadow-reflex/5 transition duration-200"
                             >
                                 <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-reflex/10 flex items-center justify-center group-hover:scale-110 transition-transform">
                                     <Target className="w-4 h-4 text-reflex" />
@@ -330,7 +330,7 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
                                 <span className="text-muted-foreground text-sm font-medium group-hover:text-foreground transition-colors flex-1">
                                     {tool.title}
                                 </span>
-                                <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-reflex group-hover:translate-x-1 transition-all" />
+                                <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:text-reflex group-hover:translate-x-1 transition" />
                             </Link>
                         ))}
                     </div>

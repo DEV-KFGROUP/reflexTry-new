@@ -23,8 +23,8 @@ export function getToolMetadata(toolId: string, url: string): Metadata {
 
 export function getHomeMetadata(): Metadata {
     return generateSEOMetadata({
-        title: "Reflextry - Test Your Accuracy & Reflexes | Free Brain Training Games",
-        description: "Test your accuracy and reflexes with our Gen Z tools. Free online brain training games, reaction time tests, typing speed tests, memory games, and more. Improve your cognitive skills today!",
+        title: "Free Brain Training Games & Reflex Tests | Reflextry",
+        description: "Improve your cognitive skills with free brain training games. Test your reaction time, memory, typing speed, and accuracy to track your progress.",
         keywords: [
             "reaction time test", "typing speed test", "brain training games", "memory games",
             "accuracy test", "reflex test", "cognitive training", "brain games free",
@@ -46,8 +46,8 @@ export function getHomeMetadata(): Metadata {
 export function getCategoryMetadata(category: string): Metadata {
     const categoryConfigs: Record<string, { title: string; description: string; keywords: string[] }> = {
         memory: {
-            title: "Memory Games - Train Your Brain | Reflextry",
-            description: "Test and improve your memory with our free memory games. Sequence memory, number memory, visual memory, and more. Train your brain and boost cognitive function.",
+            title: "Memory Games & Cognitive Training | Reflextry",
+            description: "Improve your working memory with free brain training games. Test your visual, sequence, and short-term memory to boost your cognitive function.",
             keywords: [
                 "memory games", "memory test", "memory training", "brain memory games",
                 "working memory", "short term memory", "visual memory", "sequence memory",
@@ -57,8 +57,8 @@ export function getCategoryMetadata(category: string): Metadata {
             ],
         },
         reflex: {
-            title: "Reflex Tests - Measure Your Reaction Time | Reflextry",
-            description: "Test your reflexes and reaction time with our free reflex tests. Visual reaction, audio reaction, grid shot, peripheral vision, and more. Improve your reaction speed.",
+            title: "Reflex Tests & Reaction Time Games | Reflextry",
+            description: "Test your reflexes with free online reaction time games. Measure your visual and audio reaction speeds to improve your physical response times.",
             keywords: [
                 "reflex test", "reaction time test", "reflex training", "reaction speed test",
                 "visual reflex", "audio reflex", "reflex games", "reaction time game",
@@ -67,8 +67,8 @@ export function getCategoryMetadata(category: string): Metadata {
             ],
         },
         speed: {
-            title: "Speed Tests - CPS, Typing, Math | Reflextry",
-            description: "Test your speed with our free speed tests. Click speed (CPS), typing speed (WPM), math speed, and more. Challenge yourself and improve your speed skills.",
+            title: "Speed Tests: CPS & Typing Speed Games | Reflextry",
+            description: "Test your physical speed with free click speed (CPS) and typing (WPM) tests. Challenge your limits and improve your fast-twitch muscle response.",
             keywords: [
                 "speed test", "cps test", "typing speed", "click speed", "typing test",
                 "wpm test", "speed training", "click speed test", "typing speed test",
@@ -77,8 +77,8 @@ export function getCategoryMetadata(category: string): Metadata {
             ],
         },
         accuracy: {
-            title: "Accuracy Tests - Precision Training | Reflextry",
-            description: "Test your accuracy and precision with our free accuracy tests. Image recognition, data entry, typing accuracy, and more. Improve your attention to detail.",
+            title: "Accuracy Tests & Precision Training | Reflextry",
+            description: "Improve your attention to detail with free accuracy training games. Test your visual precision, pattern matching, and spatial awareness skills.",
             keywords: [
                 "accuracy test", "precision test", "accuracy training", "precision training",
                 "typing accuracy", "data entry accuracy", "image recognition", "accuracy improvement",
@@ -87,8 +87,8 @@ export function getCategoryMetadata(category: string): Metadata {
             ],
         },
         gaming: {
-            title: "Gaming Training Tools - Aim Trainer & Reflex Games | Reflextry",
-            description: "Warm up your hands and sharpen your senses for your next ranked match. Aim trainer, RPG reflex games, and more. Improve your gaming skills.",
+            title: "Esports Training: Aim & Reflex Games | Reflextry",
+            description: "Warm up your hands and sharpen your aim for competitive gaming. Improve your flick shots, tracking, and reaction times with free esports tools.",
             keywords: [
                 "aim trainer", "gaming training", "FPS aim trainer", "gaming reflex test",
                 "aim practice", "gaming warmup", "aim improvement", "gaming skills training",

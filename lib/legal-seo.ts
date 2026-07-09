@@ -5,7 +5,7 @@ export function getLegalPageMetadata(page: "privacy" | "cookies" | "terms" | "co
     const configs = {
         about: {
             title: "About Us - Our Mission & Team | Reflextry",
-            description: "Learn about Reflextry's mission to improve cognitive performance through brain training. Meet our team and discover our evidence-based approach to memory, reaction time, and speed training.",
+            description: "Learn about Reflextry's mission to improve cognitive performance. Discover our evidence-based approach to memory, reaction time, and speed training.",
             keywords: [
                 "about us", "our mission", "team", "brain training", "cognitive enhancement",
                 "memory training", "reaction time", "speed training", "brain games",

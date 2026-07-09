@@ -15,7 +15,7 @@ const Card = React.forwardRef<
             text-card-foreground 
             border border-border
             shadow-sm
-            transition-all duration-200
+            transition duration-200
             hover:shadow-md
             relative
             overflow-hidden
@@ -26,7 +26,7 @@ const Card = React.forwardRef<
             text-card-foreground 
             border border-border
             shadow-sm
-            transition-all duration-200
+            transition duration-200
             hover:shadow-md
             relative
             overflow-hidden

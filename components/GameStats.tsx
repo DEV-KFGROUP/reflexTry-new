@@ -17,17 +17,17 @@ export function GameStats({ currentScore, highScore, attempts, averageScore, uni
             label: "Current",
             value: currentScore ?? "--",
             icon: Zap,
-            color: "text-neon-teal",
-            bgColor: "bg-neon-teal/10",
-            borderColor: "border-neon-teal/30",
+            color: "text-teal-500",
+            bgColor: "bg-teal-500/10",
+            borderColor: "border-teal-500/30",
         },
         {
             label: "Best",
             value: highScore ?? "--",
             icon: Trophy,
-            color: "text-neon-yellow",
-            bgColor: "bg-neon-yellow/10",
-            borderColor: "border-neon-yellow/30",
+            color: "text-amber-500",
+            bgColor: "bg-amber-500/10",
+            borderColor: "border-amber-500/30",
         },
         ...(attempts !== undefined
             ? [
@@ -35,9 +35,9 @@ export function GameStats({ currentScore, highScore, attempts, averageScore, uni
                       label: "Attempts",
                       value: attempts,
                       icon: Target,
-                      color: "text-electric-purple",
-                      bgColor: "bg-electric-purple/10",
-                      borderColor: "border-electric-purple/30",
+                      color: "text-purple-500",
+                      bgColor: "bg-purple-500/10",
+                      borderColor: "border-purple-500/30",
                   },
               ]
             : []),
@@ -63,7 +63,7 @@ export function GameStats({ currentScore, highScore, attempts, averageScore, uni
                     initial={{ opacity: 0, scale: 0.8 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: idx * 0.1 }}
-                    className={`relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border ${stat.borderColor} rounded-2xl p-4 min-w-[120px] hover:scale-105 transition-transform duration-300 shadow-lg`}
+                    className={`relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm border ${stat.borderColor} rounded-2xl p-4 min-w-[120px] hover:scale-105 transition-transform duration-200 shadow-lg`}
                 >
                     <div className={`inline-flex p-2 rounded-lg ${stat.bgColor} mb-2`}>
                         <stat.icon className={`w-4 h-4 ${stat.color}`} />

@@ -203,7 +203,7 @@ export default function ShapeMemoryPageClient() {
                                                     animate={{ scale: 1 }}
                                                     whileHover={{ scale: 1.1 }}
                                                     whileTap={{ scale: 0.8 }}
-                                                    className={`aspect-square rounded-2xl bg-white/5 border-2 border-white/10 hover:bg-white/10 flex items-center justify-center transition-all
+                                                    className={`aspect-square rounded-2xl bg-white/5 border-2 border-white/10 hover:bg-white/10 flex items-center justify-center transition
                                                         ${shapeIdx === targetShape ? "hover:border-memory hover:shadow-[0_0_20px_rgba(236,72,153,0.5)]" : "hover:border-red-500/50"}
                                                     `}
                                                     onClick={() => handleShapeClick(i, shapeIdx)}

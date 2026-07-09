@@ -67,7 +67,7 @@ export default function GamingHubClient() {
                         className="inline-block p-4 rounded-full bg-white/5 border border-white/10 mb-4"
                         suppressHydrationWarning
                     >
-                        <Gamepad2 className="w-12 h-12 text-electric-purple" />
+                        <Gamepad2 className="w-12 h-12 text-purple-500" />
                     </motion.div>
                     <h1
                         className="text-4xl md:text-5xl font-bold"
@@ -82,8 +82,11 @@ export default function GamingHubClient() {
                     >
                         Pro Gaming Lab
                     </h1>
-                    <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+                    <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-2">
                         Warm up your hands and sharpen your senses for your next ranked match.
+                    </p>
+                    <p className="text-md text-theme-secondary max-w-3xl mx-auto">
+                        Professional esports players don't just play—they train. Our free gaming tools are designed to help you develop the core mechanics that separate casual players from competitive ones. Improve your flick shots, aiming precision, and reaction timing.
                     </p>
                 </div>
 
@@ -113,7 +116,7 @@ export default function GamingHubClient() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.1 }}
-                            className="group relative p-6 rounded-2xl bg-white border border-theme/40 hover:border-theme/70 hover:bg-slate-50 transition-all hover:-translate-y-1"
+                            className="group relative p-6 rounded-2xl bg-white border border-theme/40 hover:border-theme/70 hover:bg-slate-50 transition hover:-translate-y-1"
                         >
                             <div className="absolute inset-0 bg-gradient-to-br from-transparent to-white/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
                             <Link
@@ -130,51 +133,51 @@ export default function GamingHubClient() {
                     ))}
                 </div>
 
-                {/* Detailed Description for SEO */}
-                <div className="max-w-4xl mx-auto bg-theme-surface/30 border border-theme/30 rounded-2xl p-6">
-                    <h2 className="text-2xl font-bold text-theme-primary mb-4">Level Up Your Gaming Skills</h2>
-                    <p className="text-theme-secondary mb-4 leading-relaxed">
-                        Professional esports players don't just play—they train. Our gaming tools are designed to help you
-                        develop the core skills that separate casual players from competitive ones. From aim precision to
-                        reaction timing, these exercises target the fundamentals that matter in FPS, MOBA, and action games.
-                    </p>
-                    <p className="text-theme-secondary mb-4 leading-relaxed">
-                        The best time to warm up is 10-15 minutes before your gaming session. This activates your hand-eye
-                        coordination and gets your reflexes firing at peak performance. Many pro players use similar tools
-                        as part of their daily training routine.
-                    </p>
-                    <h3 className="text-xl font-semibold text-theme-primary mb-3">Why Gaming Training Works</h3>
-                    <ul className="text-theme-secondary space-y-2 mb-4">
-                        <li>• Improved aim accuracy for FPS games like Valorant, CS2, and Apex</li>
-                        <li>• Faster reaction times for clutch moments</li>
-                        <li>• Better tracking skills for moving targets</li>
-                        <li>• Muscle memory development through repetition</li>
-                        <li>• Consistent warm-up routine before ranked matches</li>
-                    </ul>
-                    <p className="text-theme-secondary leading-relaxed">
-                        Whether you're preparing for a tournament or just want to climb the ranks, consistent practice
-                        with our gaming tools above can give you the competitive edge you need.
-                    </p>
+                {/* Detailed Description & FAQ for SEO/AEO */}
+                <div className="max-w-4xl mx-auto mt-20">
+                    <h2 className="text-3xl font-bold text-center mb-10 text-theme-primary">Frequently Asked Questions About Aim & Gaming Training</h2>
+                    <div className="space-y-8 text-left">
+                        <div className="bg-theme-surface border border-theme-muted p-6 rounded-2xl">
+                            <h3 className="text-xl font-bold text-theme-primary mb-3">Does aim training actually improve my game?</h3>
+                            <p className="text-theme-secondary mb-3">Yes. Aim trainers isolate the physical mechanics of using a mouse, such as tracking and flicking. By separating these from game sense, map awareness, and strategy, you can build raw mechanical muscle memory much faster than just playing the game alone.</p>
+                            <p className="text-theme-secondary">Our Aim Trainer and Flick Shot tools are specifically designed to replicate the mouse movements required in popular tactical shooters like CS2, Valorant, and Apex Legends.</p>
+                        </div>
+                        
+                        <div className="bg-theme-surface border border-theme-muted p-6 rounded-2xl">
+                            <h3 className="text-xl font-bold text-theme-primary mb-3">What is the best way to warm up before a ranked match?</h3>
+                            <p className="text-theme-secondary mb-3">A solid pre-game warmup should last 5-10 minutes and involve progressively faster movements. We recommend this sequence:</p>
+                            <ul className="list-disc pl-6 text-theme-secondary space-y-1">
+                                <li>2 minutes of Grid Click to establish base accuracy and coordinate hand-eye movement.</li>
+                                <li>3 minutes of Aim Trainer to practice tracking and steady movements.</li>
+                                <li>2 minutes of Flick Shot to push your speed limits and wake up your reflexes.</li>
+                            </ul>
+                        </div>
+
+                        <div className="bg-theme-surface border border-theme-muted p-6 rounded-2xl">
+                            <h3 className="text-xl font-bold text-theme-primary mb-3">How does CPS (Clicks Per Second) affect gaming?</h3>
+                            <p className="text-theme-secondary">A higher CPS rate allows you to attack faster in PvP games like Minecraft, or register actions quicker in MOBAs like League of Legends. Training your CPS builds finger endurance, reducing fatigue during long gaming sessions while maintaining high performance.</p>
+                        </div>
+                    </div>
                 </div>
 
                 {/* Related Categories Section - Internal Linking */}
                 <div className="mt-12 pt-8 border-t border-theme">
                     <h3 className="text-2xl font-bold text-theme-primary mb-6 text-center">Explore Other Categories</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <Link href="/memory" className="p-4 rounded-xl bg-theme-surface border border-theme hover:border-neon-teal/50 transition-all text-center">
-                            <div className="text-electric-purple text-2xl mb-2">🧠</div>
+                        <Link href="/memory" className="p-4 rounded-xl bg-theme-surface border border-theme hover:border-teal-500/50 transition text-center">
+                            <div className="text-purple-500 text-2xl mb-2">🧠</div>
                             <div className="text-sm font-semibold text-theme-primary">Memory Games</div>
                         </Link>
-                        <Link href="/reflex" className="p-4 rounded-xl bg-theme-surface border border-theme hover:border-neon-teal/50 transition-all text-center">
-                            <div className="text-neon-yellow text-2xl mb-2">⚡</div>
+                        <Link href="/reflex" className="p-4 rounded-xl bg-theme-surface border border-theme hover:border-teal-500/50 transition text-center">
+                            <div className="text-amber-500 text-2xl mb-2">⚡</div>
                             <div className="text-sm font-semibold text-theme-primary">Reflex Tests</div>
                         </Link>
-                        <Link href="/speed" className="p-4 rounded-xl bg-theme-surface border border-theme hover:border-neon-teal/50 transition-all text-center">
-                            <div className="text-neon-teal text-2xl mb-2">⌨️</div>
+                        <Link href="/speed" className="p-4 rounded-xl bg-theme-surface border border-theme hover:border-teal-500/50 transition text-center">
+                            <div className="text-teal-500 text-2xl mb-2">⌨️</div>
                             <div className="text-sm font-semibold text-theme-primary">Speed Tests</div>
                         </Link>
-                        <Link href="/accuracy" className="p-4 rounded-xl bg-theme-surface border border-theme hover:border-neon-teal/50 transition-all text-center">
-                            <div className="text-electric-purple text-2xl mb-2">🎯</div>
+                        <Link href="/accuracy" className="p-4 rounded-xl bg-theme-surface border border-theme hover:border-teal-500/50 transition text-center">
+                            <div className="text-purple-500 text-2xl mb-2">🎯</div>
                             <div className="text-sm font-semibold text-theme-primary">Accuracy Tools</div>
                         </Link>
                     </div>

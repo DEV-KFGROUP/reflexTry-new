@@ -100,7 +100,7 @@ export default function VisualMemoryPageClient() {
                     <div className="flex justify-center gap-8 mt-8">
                         <div className="text-center p-4 glass rounded-xl border-memory/30 min-w-[120px]">
                             <div className="text-sm text-muted-foreground uppercase tracking-widest mb-1">Level</div>
-                            <div className="text-4xl font-bold text-white">{level}</div>
+                            <div className="text-4xl font-bold text-foreground">{level}</div>
                         </div>
                         <div className="text-center p-4 glass rounded-xl border-memory/30 min-w-[120px]">
                             <div className="text-sm text-muted-foreground uppercase tracking-widest mb-1">Lives</div>
@@ -131,8 +131,8 @@ export default function VisualMemoryPageClient() {
                                     className="text-center space-y-6"
                                 >
                                     <Brain className="w-24 h-24 text-memory mx-auto animate-pulse-game" />
-                                    <h2 className="text-3xl font-bold text-white">Retain Visual Patterns</h2>
-                                    <p className="text-gray-400 max-w-md mx-auto">Memorize the highlighted tiles. Replicate the pattern when the grid clears.</p>
+                                    <h2 className="text-3xl font-bold text-foreground">Retain Visual Patterns</h2>
+                                    <p className="text-muted-foreground max-w-md mx-auto">Memorize the highlighted tiles. Replicate the pattern when the grid clears.</p>
                                     <Button
                                         variant="memory"
                                         size="lg"
@@ -178,7 +178,7 @@ export default function VisualMemoryPageClient() {
                                                 onClick={() => handleTileClick(i)}
                                                 className={`
                                                     w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 rounded-xl cursor-pointer 
-                                                    transition-all duration-200 relative overflow-hidden
+                                                    transition duration-200 relative overflow-hidden
                                                     ${bgClass}
                                                     hover:bg-white/10
                                                 `}
@@ -199,7 +199,7 @@ export default function VisualMemoryPageClient() {
                                     animate={{ opacity: 1, backdropFilter: "blur(8px)" }}
                                     className="absolute inset-0 z-50 rounded-[3rem] bg-black/60 flex flex-col items-center justify-center text-center p-8"
                                 >
-                                    <div className="text-6xl md:text-8xl font-black text-white mb-4 drop-shadow-[0_0_30px_rgba(239,68,68,0.6)]">
+                                    <div className="text-6xl md:text-8xl font-black text-foreground mb-4 drop-shadow-[0_0_30px_rgba(239,68,68,0.6)]">
                                         SYSTEM FAILURE
                                     </div>
                                     <div className="text-2xl text-gray-300 mb-8">

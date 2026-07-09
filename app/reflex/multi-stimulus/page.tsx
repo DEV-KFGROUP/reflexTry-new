@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 import MultiStimulusGame from './MultiStimulusGame';
 import { getToolMetadata } from '@/lib/seo-utils';
-import { StructuredData } from '@/components/StructuredData';
-import { generateToolStructuredData } from '@/lib/structured-data';
+import { SchemaInjector } from '@/components/SchemaInjector';
+import { generateToolStructuredData, generateBreadcrumbStructuredData, generateWebPageSchema } from '@/lib/structured-data';
 import { SEO_CONFIGS } from '@/config/seo-config';
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -21,9 +21,21 @@ export default function Page() {
         `/reflex/multi-stimulus`
     );
 
+    const breadcrumbSchema = generateBreadcrumbStructuredData([
+        { name: "Home", url: "/" },
+        { name: "Reflex Tools", url: "/reflex" },
+        { name: config.title, url: `/reflex/multi-stimulus` },
+    ]);
+    
+    const webPageSchema = generateWebPageSchema(
+        config.title,
+        config.description,
+        `/reflex/multi-stimulus`
+    );
+
     return (
         <>
-            <StructuredData type="WebApplication" data={structuredData} />
+            <SchemaInjector schemas={[structuredData, breadcrumbSchema, webPageSchema]} />
             <MultiStimulusGame />
         </>
     );

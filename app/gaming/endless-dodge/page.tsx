@@ -1,8 +1,8 @@
 import { Metadata } from 'next';
 import EndlessDodgeClient from './EndlessDodgeClient';
 import { getToolMetadata } from '@/lib/seo-utils';
-import { StructuredData } from '@/components/StructuredData';
-import { generateToolStructuredData } from '@/lib/structured-data';
+import { SchemaInjector } from '@/components/SchemaInjector';
+import { generateToolStructuredData, generateBreadcrumbStructuredData, generateWebPageSchema } from '@/lib/structured-data';
 import { SEO_CONFIGS } from '@/config/seo-config';
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -18,9 +18,21 @@ export default function Page() {
         `/gaming/endless-dodge`
     );
 
+    const breadcrumbSchema = generateBreadcrumbStructuredData([
+        { name: "Home", url: "/" },
+        { name: "Gaming Tools", url: "/gaming" },
+        { name: config.title, url: `/gaming/endless-dodge` },
+    ]);
+    
+    const webPageSchema = generateWebPageSchema(
+        config.title,
+        config.description,
+        `/gaming/endless-dodge`
+    );
+
     return (
         <>
-            <StructuredData type="WebApplication" data={structuredData} />
+            <SchemaInjector schemas={[structuredData, breadcrumbSchema, webPageSchema]} />
             <EndlessDodgeClient />
         </>
     );

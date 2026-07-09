@@ -105,10 +105,10 @@ export default function ContactClient() {
                             {contactMethods.map((method, index) => (
                                 <div
                                     key={index}
-                                    className={`group relative p-6 rounded-xl bg-card/50 backdrop-blur-xl border ${method.borderColor} ${method.shadowColor} transition-all duration-300`}
+                                    className={`group relative p-6 rounded-xl bg-card/50 backdrop-blur-xl border ${method.borderColor} ${method.shadowColor} transition duration-200`}
                                 >
                                     {/* Hover glow effect */}
-                                    <div className={`absolute inset-0 bg-gradient-to-br ${method.color} opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl`} />
+                                    <div className={`absolute inset-0 bg-gradient-to-br ${method.color} opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-xl`} />
 
                                     <div className="relative z-10 space-y-3">
                                         <div className="flex items-start gap-4">
@@ -145,7 +145,7 @@ export default function ContactClient() {
                                     href={social.href}
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className={`flex items-center gap-2 px-6 py-3 bg-card/50 border border-white/10 rounded-lg text-muted-foreground transition-all duration-300 ${social.color} hover:shadow-[0_0_15px_rgba(255,255,255,0.1)]`}
+                                    className={`flex items-center gap-2 px-6 py-3 bg-card/50 border border-white/10 rounded-lg text-muted-foreground transition duration-200 ${social.color} hover:shadow-[0_0_15px_rgba(255,255,255,0.1)]`}
                                     aria-label={social.name}
                                 >
                                     <social.icon className="w-5 h-5" />

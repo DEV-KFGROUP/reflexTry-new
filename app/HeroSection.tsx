@@ -10,12 +10,17 @@ export function HeroSection() {
         </div>
 
         <h1 className="text-4xl sm:text-6xl font-semibold tracking-tight text-foreground">
-          Improve focus, speed, memory and accuracy.
+          Free Brain Training Games & Cognitive Tests
         </h1>
 
-        <p className="text-lg text-theme-secondary max-w-2xl mx-auto">
-          A simple collection of practice tools to help you train consistently and track progress over time.
-        </p>
+        <div className="text-lg text-theme-secondary max-w-2xl mx-auto space-y-4">
+          <p>
+            <strong>Key Takeaway:</strong> Brain training involves exercises designed to improve cognitive skills like memory, speed, and accuracy. 
+          </p>
+          <p>
+            Whether you are a competitive gamer looking to improve reaction times, a student aiming to boost working memory, or just seeking to keep your mind sharp, these tools offer scientifically-inspired exercises to measure and enhance your mental agility.
+          </p>
+        </div>
       </div>
     </div>
   );

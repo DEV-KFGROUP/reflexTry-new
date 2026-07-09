@@ -5,7 +5,7 @@ export default function PrivacyPolicyClient() {
     return (
         <div className="max-w-4xl mx-auto px-4 py-8 sm:px-6 lg:px-8">
             <div className="bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 p-8 sm:p-12">
-                <h1 className="text-4xl font-bold bg-gradient-to-r from-neon-teal to-electric-purple bg-clip-text text-transparent mb-4">
+                <h1 className="text-4xl font-bold bg-gradient-to-r from-teal-500 to-purple-500 bg-clip-text text-transparent mb-4">
                     Privacy Policy
                 </h1>
                 <p className="text-gray-400 mb-8">Last Updated: February 2024</p>
@@ -35,7 +35,7 @@ export default function PrivacyPolicyClient() {
                         <p className="mb-3">We use Google AdSense to display advertisements on our website. Google AdSense is a program run by Google that allows publishers to display ads on their websites.</p>
                         <p className="mb-3"><strong>Third-Party Vendors:</strong> Third-party vendors, including Google, use cookies to serve ads based on your prior visits to our website or other websites.</p>
                         <p className="mb-3"><strong>Google's Use of Advertising Cookies:</strong> Google uses cookies to serve ads on our site. Google's use of advertising cookies enables it and its partners to serve ads to you based on your visit to our site and/or other sites on the Internet.</p>
-                        <p className="mb-3"><strong>Opt-Out:</strong> You may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" className="text-neon-teal hover:underline" target="_blank" rel="noopener noreferrer">Google's Ads Settings</a>. Alternatively, you can opt out of a third-party vendor's use of cookies for personalized advertising by visiting <a href="https://www.aboutads.info/choices/" className="text-neon-teal hover:underline" target="_blank" rel="noopener noreferrer">www.aboutads.info/choices</a>.</p>
+                        <p className="mb-3"><strong>Opt-Out:</strong> You may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" className="text-teal-500 hover:underline" target="_blank" rel="noopener noreferrer">Google's Ads Settings</a>. Alternatively, you can opt out of a third-party vendor's use of cookies for personalized advertising by visiting <a href="https://www.aboutads.info/choices/" className="text-teal-500 hover:underline" target="_blank" rel="noopener noreferrer">www.aboutads.info/choices</a>.</p>
                         <p className="mb-3"><strong>AdSense Publisher ID:</strong> Our Google AdSense publisher ID is ca-pub-3064655546051154.</p>
                     </section>
 
@@ -68,7 +68,7 @@ export default function PrivacyPolicyClient() {
 
                     <section>
                         <h2 className="text-2xl font-semibold text-white mb-3">7. Contact Us</h2>
-                        <p>If you have any questions about this Privacy Policy, please contact us at <a href="mailto:support@reflextry.com" className="text-neon-teal hover:underline">support@reflextry.com</a>.</p>
+                        <p>If you have any questions about this Privacy Policy, please contact us at <a href="mailto:support@reflextry.com" className="text-teal-500 hover:underline">support@reflextry.com</a>.</p>
                     </section>
                 </div>
             </div>

@@ -169,7 +169,7 @@ export default function HomeClient() {
               <motion.div
                 key={feature.title}
                 variants={itemVariants}
-                className={`group relative space-y-2 p-5 rounded-2xl bg-white border border-border transition-all duration-200 ${feature.glow}`}
+                className={`group relative space-y-2 p-5 rounded-2xl bg-white border border-border transition duration-200 ${feature.glow}`}
               >
                 <h3 className={`text-lg font-bold ${feature.color} flex items-center gap-2 relative z-10`}>
                   <feature.icon className="w-5 h-5 text-muted-foreground" aria-hidden="true" />
@@ -219,7 +219,7 @@ export default function HomeClient() {
           <motion.div variants={itemVariants}>
             <Link
               href="/leaderboard"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 text-lg rounded-xl font-semibold transition-all duration-200 cursor-pointer border border-border text-foreground bg-white hover:bg-slate-50 shadow-sm w-full sm:w-auto"
+              className="inline-flex items-center justify-center gap-2 px-8 py-4 text-lg rounded-xl font-semibold transition duration-200 cursor-pointer border border-border text-foreground bg-white hover:bg-slate-50 shadow-sm w-full sm:w-auto"
             >
               <Trophy className="w-5 h-5" />
               View Leaderboard
@@ -269,7 +269,7 @@ export default function HomeClient() {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.05 }}
                   viewport={{ once: true }}
-                  className={`group relative p-5 rounded-2xl bg-white border ${category.borderColor} ${category.shadowColor} transition-all duration-200 cursor-pointer overflow-hidden`}
+                  className={`group relative p-5 rounded-2xl bg-white border ${category.borderColor} ${category.shadowColor} transition duration-200 cursor-pointer overflow-hidden`}
                 >
                   <Link
                     href={tool.href}
@@ -303,7 +303,7 @@ export default function HomeClient() {
                     {/* Play indicator */}
                     <div className="flex items-center justify-between pt-2 border-t border-border">
                       <span className="text-xs text-muted-foreground/70">Start Quest</span>
-                      <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:translate-x-1 transition-all" />
+                      <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:translate-x-1 transition" />
                     </div>
                   </div>
                 </motion.div>
@@ -311,6 +311,33 @@ export default function HomeClient() {
             </div>
           </motion.div>
         ))}
+      </div>
+
+      {/* Detailed Description & FAQ for SEO/AEO */}
+      <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+        <h2 className="text-3xl font-bold text-center mb-10 text-foreground">Frequently Asked Questions About Brain Training</h2>
+        <div className="space-y-8 text-left">
+          <div className="bg-white/60 border border-border p-6 rounded-2xl shadow-sm">
+            <h3 className="text-xl font-bold text-foreground mb-3">Does brain training actually work?</h3>
+            <p className="text-muted-foreground mb-3">Yes, regular engagement in cognitive tasks leverages neuroplasticity—the brain's ability to reorganize itself by forming new neural connections. Consistent practice with tools like our Sequence Memory or Reaction Time tests can lead to measurable improvements in those specific skills over time.</p>
+            <p className="text-muted-foreground">While it won't magically increase your overall IQ, it will sharpen the specific cognitive faculties (like working memory, visual discrimination, and fine motor skills) that you train.</p>
+          </div>
+          
+          <div className="bg-white/60 border border-border p-6 rounded-2xl shadow-sm">
+            <h3 className="text-xl font-bold text-foreground mb-3">How often should I use these cognitive training games?</h3>
+            <p className="text-muted-foreground">For optimal results, we suggest practicing for 10-15 minutes daily. Consistency is key in neuroplasticity. Use the Memory arena to improve retention, and the Speed arena to enhance quick decision-making.</p>
+          </div>
+
+          <div className="bg-white/60 border border-border p-6 rounded-2xl shadow-sm">
+            <h3 className="text-xl font-bold text-foreground mb-3">Who are these brain training tools for?</h3>
+            <p className="text-muted-foreground mb-3">Reflextry's suite of cognitive games is designed to benefit a wide variety of users, including:</p>
+            <ul className="list-disc pl-6 text-muted-foreground space-y-1">
+              <li><strong>Competitive Gamers:</strong> Using the Aim Trainer, Grid Click, and Flick Shot tools to warm up physical mechanics, hand-eye coordination, and peripheral vision before matches.</li>
+              <li><strong>Students & Professionals:</strong> Enhancing working memory, focus, and typing speed for better academic and workplace productivity.</li>
+              <li><strong>General Audience:</strong> Anyone looking to keep their mind sharp, challenge their reflexes, and track their cognitive performance over time.</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </GameBackground>
   );

@@ -117,7 +117,7 @@ export default function CardMatchGame() {
                                 <button
                                     key={count}
                                     onClick={() => setPairCount(count)}
-                                    className={`px-6 py-2 rounded-lg font-bold border-2 transition-all duration-200 ${pairCount === count
+                                    className={`px-6 py-2 rounded-lg font-bold border-2 transition duration-200 ${pairCount === count
                                         ? 'bg-memory/20 border-memory text-white shadow-[0_0_15px_rgba(168,85,247,0.4)]'
                                         : 'bg-black/20 border-white/10 text-gray-400 hover:border-memory/50 hover:text-white'}`}
                                 >
@@ -177,7 +177,7 @@ export default function CardMatchGame() {
                                             key={card.id}
                                             onClick={() => handleCardClick(card.id)}
                                             whileTap={{ scale: 0.95 }}
-                                            className={`aspect-square rounded-2xl text-3xl md:text-4xl font-bold flex items-center justify-center cursor-pointer transition-all duration-300 border-2 ${card.matched
+                                            className={`aspect-square rounded-2xl text-3xl md:text-4xl font-bold flex items-center justify-center cursor-pointer transition duration-200 border-2 ${card.matched
                                                     ? 'bg-memory/20 border-memory/40 opacity-60'
                                                     : isFlipped
                                                         ? 'bg-white/10 border-memory/60'

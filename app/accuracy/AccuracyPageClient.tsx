@@ -39,8 +39,11 @@ export default function AccuracyPageClient() {
                     >
                         Accuracy Testing Lab
                     </h1>
-                    <p className="text-xl text-gray-400">
+                    <p className="text-xl text-gray-400 mb-2">
                         Precision is key. Choose your challenge.
+                    </p>
+                    <p className="text-md text-theme-secondary max-w-3xl mx-auto">
+                        Accuracy is about control and precise execution. Our accuracy training tools—from pattern matching and angle estimation to precision clicking—are designed to hone your hand-eye coordination, visual discrimination, and fine motor control.
                     </p>
                 </div>
 
@@ -112,7 +115,7 @@ export default function AccuracyPageClient() {
                         ) : activeTab === "pattern" ? (
                             <Link href="/accuracy/pattern-matching" className="block">
                                 <div className="text-center space-y-4 p-12">
-                                    <Target className="w-16 h-16 text-neon-teal mx-auto" />
+                                    <Target className="w-16 h-16 text-teal-500 mx-auto" />
                                     <h3 className="text-2xl font-bold">Pattern Matching Test</h3>
                                     <p className="text-gray-400">Test your visual accuracy by matching patterns with precision</p>
                                     <Button className="mt-4">Play Pattern Matching</Button>
@@ -121,7 +124,7 @@ export default function AccuracyPageClient() {
                         ) : activeTab === "precision" ? (
                             <Link href="/accuracy/precision-click" className="block">
                                 <div className="text-center space-y-4 p-12">
-                                    <Target className="w-16 h-16 text-neon-teal mx-auto" />
+                                    <Target className="w-16 h-16 text-teal-500 mx-auto" />
                                     <h3 className="text-2xl font-bold">Precision Clicking Test</h3>
                                     <p className="text-gray-400">Test your hand-eye coordination and precision clicking</p>
                                     <Button className="mt-4">Play Precision Click</Button>
@@ -130,7 +133,7 @@ export default function AccuracyPageClient() {
                         ) : activeTab === "angle" ? (
                             <Link href="/accuracy/angle-estimation" className="block">
                                 <div className="text-center space-y-4 p-12">
-                                    <Crosshair className="w-16 h-16 text-neon-teal mx-auto" />
+                                    <Crosshair className="w-16 h-16 text-teal-500 mx-auto" />
                                     <h3 className="text-2xl font-bold">Angle Estimation</h3>
                                     <p className="text-gray-400">Guess the angle and test your geometric intuition</p>
                                     <Button className="mt-4">Play Angle Estimation</Button>
@@ -139,7 +142,7 @@ export default function AccuracyPageClient() {
                         ) : (
                             <Link href="/accuracy/color-match" className="block">
                                 <div className="text-center space-y-4 p-12">
-                                    <Palette className="w-16 h-16 text-neon-teal mx-auto" />
+                                    <Palette className="w-16 h-16 text-teal-500 mx-auto" />
                                     <h3 className="text-2xl font-bold">Color Match</h3>
                                     <p className="text-gray-400">Match the target color using RGB sliders</p>
                                     <Button className="mt-4">Play Color Match</Button>
@@ -149,24 +152,51 @@ export default function AccuracyPageClient() {
                     </AnimatePresence>
                 </div>
 
+                {/* Detailed Description & FAQ for SEO/AEO */}
+                <div className="max-w-4xl mx-auto mt-20">
+                    <h2 className="text-3xl font-bold text-center mb-10 text-theme-primary">Frequently Asked Questions About Accuracy Training</h2>
+                    <div className="space-y-8 text-left">
+                        <div className="bg-theme-surface border border-theme-muted p-6 rounded-2xl">
+                            <h3 className="text-xl font-bold text-theme-primary mb-3">Why is accuracy testing important?</h3>
+                            <p className="text-theme-secondary mb-3">While speed determines how fast you can act, accuracy determines how effectively you can perform a task without errors. In gaming, professional work, and everyday tasks, high accuracy reduces the time spent correcting mistakes.</p>
+                            <p className="text-theme-secondary">Our accuracy tests isolate and train specific skills like spatial awareness, visual discrimination, and precision mouse control.</p>
+                        </div>
+                        
+                        <div className="bg-theme-surface border border-theme-muted p-6 rounded-2xl">
+                            <h3 className="text-xl font-bold text-theme-primary mb-3">What are the benefits of precision and accuracy training?</h3>
+                            <p className="text-theme-secondary mb-3">Engaging in precision tasks provides several tangible benefits:</p>
+                            <ul className="list-disc pl-6 text-theme-secondary space-y-1">
+                                <li>Better hand-eye coordination and fine motor skills</li>
+                                <li>Improved aiming precision for FPS and tactical games (Aim training)</li>
+                                <li>Enhanced visual-spatial intelligence (Angle Estimation, Pattern Matching)</li>
+                                <li>Fewer data entry and typing errors in professional work</li>
+                            </ul>
+                        </div>
+
+                        <div className="bg-theme-surface border border-theme-muted p-6 rounded-2xl">
+                            <h3 className="text-xl font-bold text-theme-primary mb-3">How can I improve my hand-eye coordination?</h3>
+                            <p className="text-theme-secondary">Improving hand-eye coordination requires deliberate, focused practice. Start with our Precision Click or Pattern Matching tools. Initially, focus entirely on hitting the exact target rather than speed. Once your accuracy consistently reaches 95-100%, you can gradually increase your speed.</p>
+                        </div>
+                    </div>
+                </div>
                 {/* Related Categories Section - Internal Linking */}
                 <div className="mt-12 pt-8 border-t border-theme">
                     <h3 className="text-2xl font-bold text-theme-primary mb-6 text-center">Explore Other Categories</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <Link href="/memory" className="p-4 rounded-xl bg-theme-surface border border-theme hover:border-neon-teal/50 transition-all text-center">
-                            <div className="text-electric-purple text-2xl mb-2">🧠</div>
+                        <Link href="/memory" className="p-4 rounded-xl bg-theme-surface border border-theme hover:border-teal-500/50 transition text-center">
+                            <div className="text-purple-500 text-2xl mb-2">🧠</div>
                             <div className="text-sm font-semibold text-theme-primary">Memory Games</div>
                         </Link>
-                        <Link href="/reflex" className="p-4 rounded-xl bg-theme-surface border border-theme hover:border-neon-teal/50 transition-all text-center">
-                            <div className="text-neon-yellow text-2xl mb-2">⚡</div>
+                        <Link href="/reflex" className="p-4 rounded-xl bg-theme-surface border border-theme hover:border-teal-500/50 transition text-center">
+                            <div className="text-amber-500 text-2xl mb-2">⚡</div>
                             <div className="text-sm font-semibold text-theme-primary">Reflex Tests</div>
                         </Link>
-                        <Link href="/speed" className="p-4 rounded-xl bg-theme-surface border border-theme hover:border-neon-teal/50 transition-all text-center">
-                            <div className="text-neon-teal text-2xl mb-2">⌨️</div>
+                        <Link href="/speed" className="p-4 rounded-xl bg-theme-surface border border-theme hover:border-teal-500/50 transition text-center">
+                            <div className="text-teal-500 text-2xl mb-2">⌨️</div>
                             <div className="text-sm font-semibold text-theme-primary">Speed Tests</div>
                         </Link>
-                        <Link href="/gaming" className="p-4 rounded-xl bg-theme-surface border border-theme hover:border-neon-teal/50 transition-all text-center">
-                            <div className="text-vibrant-coral text-2xl mb-2">🎮</div>
+                        <Link href="/gaming" className="p-4 rounded-xl bg-theme-surface border border-theme hover:border-teal-500/50 transition text-center">
+                            <div className="text-rose-500 text-2xl mb-2">🎮</div>
                             <div className="text-sm font-semibold text-theme-primary">Gaming Tools</div>
                         </Link>
                     </div>
@@ -214,7 +244,7 @@ function ImageAccuracyTest() {
         <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="space-y-8 text-center">
             <h2 className="text-2xl font-bold text-white">Identify the Object</h2>
 
-            <div className="w-64 h-64 mx-auto bg-black rounded-lg flex items-center justify-center text-9xl border-2 border-neon-teal shadow-[0_0_30px_rgba(0,240,255,0.3)]">
+            <div className="w-64 h-64 mx-auto bg-black rounded-lg flex items-center justify-center text-9xl border-2 border-teal-500 shadow-[0_0_30px_rgba(0,240,255,0.3)]">
                 {currentImage.hint}
             </div>
 
@@ -225,7 +255,7 @@ function ImageAccuracyTest() {
                         value={input}
                         onChange={(e) => setInput(e.target.value)}
                         placeholder="Type what you see..."
-                        className="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-full text-white placeholder-gray-500 focus:outline-none focus:border-neon-teal focus:ring-1 focus:ring-neon-teal transition-all"
+                        className="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-full text-white placeholder-gray-500 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition"
                         autoFocus
                     />
                     <Button type="submit" className="w-full">Check Accuracy</Button>
@@ -276,7 +306,7 @@ function DataEntryTest() {
                 {target.split('').map((char, i) => {
                     let color = "text-gray-400";
                     if (i < input.length) {
-                        color = input[i] === char ? "text-neon-teal" : "text-red-500";
+                        color = input[i] === char ? "text-teal-500" : "text-red-500";
                     }
                     return <span key={i} className={color}>{char}</span>;
                 })}
@@ -286,7 +316,7 @@ function DataEntryTest() {
                 <textarea
                     value={input}
                     onChange={(e) => setInput(e.target.value)}
-                    className="w-full p-4 bg-transparent border-b-2 border-white/20 text-xl text-white focus:outline-none focus:border-neon-teal transition-colors font-mono text-center"
+                    className="w-full p-4 bg-transparent border-b-2 border-white/20 text-xl text-white focus:outline-none focus:border-teal-500 transition-colors font-mono text-center"
                     placeholder="Start typing..."
                     autoFocus
                 />
@@ -294,7 +324,7 @@ function DataEntryTest() {
                 <div className="space-y-6">
                     <div className="flex justify-center gap-8">
                         <div className="text-center">
-                            <div className="text-4xl font-bold text-neon-teal">{wpm}</div>
+                            <div className="text-4xl font-bold text-teal-500">{wpm}</div>
                             <div className="text-sm text-gray-400">WPM</div>
                         </div>
                         <div className="text-center">

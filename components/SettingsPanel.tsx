@@ -109,7 +109,7 @@ export function SettingsPanel() {
                         >
                             <div className="p-6 space-y-6">
                                 <div className="flex items-center justify-between">
-                                    <h2 className="text-2xl font-bold bg-gradient-to-r from-neon-teal to-electric-purple bg-clip-text text-transparent">
+                                    <h2 className="text-2xl font-bold bg-gradient-to-r from-teal-500 to-purple-500 bg-clip-text text-transparent">
                                         Settings
                                     </h2>
                                     <Button
@@ -187,7 +187,7 @@ export function SettingsPanel() {
                                             }}
                                             placeholder="Enter your name"
                                             maxLength={20}
-                                            className="flex-1 px-4 py-2 bg-theme-surface border border-theme rounded-lg focus:outline-none focus:ring-2 focus:ring-neon-teal/50 text-theme-primary placeholder-theme-muted"
+                                            className="flex-1 px-4 py-2 bg-theme-surface border border-theme rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500/50 text-theme-primary placeholder-theme-muted"
                                         />
                                     </div>
                                     <p className="text-xs text-theme-muted">

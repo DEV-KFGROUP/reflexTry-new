@@ -3,6 +3,8 @@ import BlogHubClient, { type BlogPost } from './BlogHubClient';
 import { getBaseUrl } from '@/lib/base-url';
 import { getAllContent } from '@/lib/content/loader';
 import type { Article } from '@/lib/content/types';
+import { SchemaInjector } from "@/components/SchemaInjector";
+import { generateBreadcrumbStructuredData, generateWebPageSchema } from "@/lib/structured-data";
 
 export async function generateMetadata(): Promise<Metadata> {
     const baseUrl = getBaseUrl();
@@ -34,5 +36,21 @@ export default async function Blog() {
         date: meta.publishedAt,
     }));
 
-    return <BlogHubClient posts={posts} />;
+    const breadcrumbSchema = generateBreadcrumbStructuredData([
+        { name: "Home", url: "/" },
+        { name: "Blog", url: "/blog" },
+    ]);
+    
+    const webPageSchema = generateWebPageSchema(
+        "Brain Training Articles & Guides | Reflextry Blog",
+        "Discover expert insights on brain training, memory improvement, reaction time, and cognitive enhancement.",
+        "/blog"
+    );
+
+    return (
+        <>
+            <SchemaInjector schemas={[breadcrumbSchema, webPageSchema]} />
+            <BlogHubClient posts={posts} />
+        </>
+    );
 }

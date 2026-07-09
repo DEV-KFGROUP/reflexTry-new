@@ -88,7 +88,7 @@ export default function ClickGame() {
                                 key={duration}
                                 onClick={() => setTestDuration(duration)}
                                 className={`
-                                    px-6 py-2 rounded-lg font-bold border-2 transition-all duration-200
+                                    px-6 py-2 rounded-lg font-bold border-2 transition duration-200
                                     ${testDuration === duration
                                         ? 'bg-speed/20 border-speed text-white shadow-[0_0_15px_rgba(6,182,212,0.4)]'
                                         : 'bg-black/20 border-white/10 text-gray-400 hover:border-speed/50 hover:text-white'}
@@ -134,7 +134,7 @@ export default function ClickGame() {
                             className={`
                                 flex-1 w-full mt-24 rounded-3xl relative
                                 flex items-center justify-center
-                                transition-all duration-200 select-none
+                                transition duration-200 select-none
                                 ${isPlaying
                                     ? 'cursor-pointer active:scale-[0.99] active:bg-white/5 bg-transparent'
                                     : 'bg-black/40'}

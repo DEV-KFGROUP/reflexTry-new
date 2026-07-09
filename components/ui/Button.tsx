@@ -77,7 +77,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
                 whileHover={{ y: -1 }}
                 whileTap={{ scale: 0.98 }}
                 className={cn(
-                    "rounded-xl font-semibold transition-all duration-200 cursor-pointer flex items-center justify-center gap-2 shadow-sm",
+                    "rounded-xl font-semibold transition duration-200 cursor-pointer active:scale-[0.97] flex items-center justify-center gap-2 shadow-sm",
                     variantClasses[variant],
                     sizes[size],
                     className

@@ -15,7 +15,7 @@ export default function ScienceClient() {
                         animate={{ scale: 1 }}
                         className="inline-block p-4 rounded-full bg-white/5 border border-white/10 mb-6"
                     >
-                        <Brain className="w-12 h-12 text-neon-teal" />
+                        <Brain className="w-12 h-12 text-teal-500" />
                     </motion.div>
                     <h1
                         className="text-4xl md:text-5xl font-bold mb-4"
@@ -40,7 +40,7 @@ export default function ScienceClient() {
                     className="bg-white/5 border border-white/10 rounded-2xl p-8 mb-8"
                 >
                     <div className="flex items-start gap-4 mb-6">
-                        <Sparkles className="w-8 h-8 text-neon-yellow flex-shrink-0 mt-1" />
+                        <Sparkles className="w-8 h-8 text-amber-500 flex-shrink-0 mt-1" />
                         <div>
                             <h2 className="text-3xl font-bold text-white mb-4">Neuroplasticity: Your Brain's Superpower</h2>
                             <p className="text-gray-300 leading-relaxed mb-4">
@@ -51,19 +51,19 @@ export default function ScienceClient() {
                             </p>
                             <ul className="space-y-3 text-gray-300">
                                 <li className="flex items-start gap-3">
-                                    <span className="text-neon-teal mt-1">•</span>
+                                    <span className="text-teal-500 mt-1">•</span>
                                     <span><strong className="text-white">Myelination:</strong> Fatty sheaths around neurons thicken, allowing signals to travel up to 100 times faster</span>
                                 </li>
                                 <li className="flex items-start gap-3">
-                                    <span className="text-neon-teal mt-1">•</span>
+                                    <span className="text-teal-500 mt-1">•</span>
                                     <span><strong className="text-white">Synaptogenesis:</strong> New connections form between neurons, creating alternative pathways for information processing</span>
                                 </li>
                                 <li className="flex items-start gap-3">
-                                    <span className="text-neon-teal mt-1">•</span>
+                                    <span className="text-teal-500 mt-1">•</span>
                                     <span><strong className="text-white">Long-Term Potentiation (LTP):</strong> Repeated activation strengthens synaptic connections, making pathways more efficient</span>
                                 </li>
                                 <li className="flex items-start gap-3">
-                                    <span className="text-neon-teal mt-1">•</span>
+                                    <span className="text-teal-500 mt-1">•</span>
                                     <span><strong className="text-white">Neurogenesis:</strong> In certain brain regions, new neurons continue to form throughout life, especially with exercise and learning</span>
                                 </li>
                             </ul>
@@ -79,7 +79,7 @@ export default function ScienceClient() {
                     className="bg-white/5 border border-white/10 rounded-2xl p-8 mb-8"
                 >
                     <div className="flex items-start gap-4 mb-6">
-                        <Activity className="w-8 h-8 text-electric-purple flex-shrink-0 mt-1" />
+                        <Activity className="w-8 h-8 text-purple-500 flex-shrink-0 mt-1" />
                         <div>
                             <h2 className="text-3xl font-bold text-white mb-4">How Brain Training Improves Cognitive Function</h2>
                             <p className="text-gray-300 leading-relaxed mb-4">
@@ -89,25 +89,25 @@ export default function ScienceClient() {
                             <h3 className="text-xl font-bold text-white mb-3 mt-6">The Training Process</h3>
                             <div className="space-y-4 mb-6">
                                 <div className="bg-white/5 border border-white/10 rounded-xl p-4">
-                                    <h4 className="text-lg font-semibold text-neon-teal mb-2">1. Challenge & Adaptation</h4>
+                                    <h4 className="text-lg font-semibold text-teal-500 mb-2">1. Challenge & Adaptation</h4>
                                     <p className="text-gray-300 text-sm leading-relaxed">
                                         When you practice a cognitive task, you challenge your brain beyond its current capacity. This challenge triggers adaptive responses, prompting your brain to become more efficient at that task.
                                     </p>
                                 </div>
                                 <div className="bg-white/5 border border-white/10 rounded-xl p-4">
-                                    <h4 className="text-lg font-semibold text-neon-teal mb-2">2. Neural Efficiency</h4>
+                                    <h4 className="text-lg font-semibold text-teal-500 mb-2">2. Neural Efficiency</h4>
                                     <p className="text-gray-300 text-sm leading-relaxed">
                                         With repeated practice, your brain learns to process information more efficiently. Tasks that initially required significant mental effort become automatic, freeing cognitive resources for other activities.
                                     </p>
                                 </div>
                                 <div className="bg-white/5 border border-white/10 rounded-xl p-4">
-                                    <h4 className="text-lg font-semibold text-neon-teal mb-2">3. Network Optimization</h4>
+                                    <h4 className="text-lg font-semibold text-teal-500 mb-2">3. Network Optimization</h4>
                                     <p className="text-gray-300 text-sm leading-relaxed">
                                         Your brain optimizes neural networks by strengthening frequently-used connections and pruning rarely-used ones. This creates more efficient information processing pathways.
                                     </p>
                                 </div>
                                 <div className="bg-white/5 border border-white/10 rounded-xl p-4">
-                                    <h4 className="text-lg font-semibold text-neon-teal mb-2">4. Cognitive Reserve Building</h4>
+                                    <h4 className="text-lg font-semibold text-teal-500 mb-2">4. Cognitive Reserve Building</h4>
                                     <p className="text-gray-300 text-sm leading-relaxed">
                                         Regular training builds cognitive reserve—your brain's resilience against age-related changes and damage. Higher reserve means better ability to maintain function despite brain changes.
                                     </p>
@@ -125,7 +125,7 @@ export default function ScienceClient() {
                     className="bg-white/5 border border-white/10 rounded-2xl p-8 mb-8"
                 >
                     <div className="flex items-start gap-4 mb-6">
-                        <BookOpen className="w-8 h-8 text-neon-yellow flex-shrink-0 mt-1" />
+                        <BookOpen className="w-8 h-8 text-amber-500 flex-shrink-0 mt-1" />
                         <div>
                             <h2 className="text-3xl font-bold text-white mb-4">Research Evidence & Scientific Studies</h2>
                             <p className="text-gray-300 leading-relaxed mb-6">
@@ -133,12 +133,12 @@ export default function ScienceClient() {
                             </p>
 
                             <div className="space-y-6">
-                                <div className="border-l-4 border-neon-teal pl-6">
+                                <div className="border-l-4 border-teal-500 pl-6">
                                     <h3 className="text-xl font-bold text-white mb-2">ACTIVE Study (2002-2014)</h3>
                                     <p className="text-gray-300 text-sm leading-relaxed mb-2">
                                         The Advanced Cognitive Training for Independent and Vital Elderly study, one of the largest cognitive training studies, followed 2,832 adults for over 10 years.
                                     </p>
-                                    <p className="text-neon-teal text-sm font-semibold mb-2">Key Findings:</p>
+                                    <p className="text-teal-500 text-sm font-semibold mb-2">Key Findings:</p>
                                     <ul className="space-y-2 text-gray-300 text-sm">
                                         <li>• Cognitive training produced improvements lasting up to 10 years</li>
                                         <li>• Participants showed better performance in trained abilities</li>
@@ -147,12 +147,12 @@ export default function ScienceClient() {
                                     </ul>
                                 </div>
 
-                                <div className="border-l-4 border-electric-purple pl-6">
+                                <div className="border-l-4 border-purple-500 pl-6">
                                     <h3 className="text-xl font-bold text-white mb-2">Working Memory Training Research</h3>
                                     <p className="text-gray-300 text-sm leading-relaxed mb-2">
                                         Multiple studies have examined working memory training, particularly n-back tasks similar to our memory games.
                                     </p>
-                                    <p className="text-electric-purple text-sm font-semibold mb-2">Key Findings:</p>
+                                    <p className="text-purple-500 text-sm font-semibold mb-2">Key Findings:</p>
                                     <ul className="space-y-2 text-gray-300 text-sm">
                                         <li>• Working memory capacity can be improved through training</li>
                                         <li>• Improvements persist for months after training ends</li>
@@ -161,12 +161,12 @@ export default function ScienceClient() {
                                     </ul>
                                 </div>
 
-                                <div className="border-l-4 border-neon-yellow pl-6">
+                                <div className="border-l-4 border-amber-500 pl-6">
                                     <h3 className="text-xl font-bold text-white mb-2">Reaction Time & Processing Speed</h3>
                                     <p className="text-gray-300 text-sm leading-relaxed mb-2">
                                         Research in sports science and cognitive psychology has extensively studied reaction time training.
                                     </p>
-                                    <p className="text-neon-yellow text-sm font-semibold mb-2">Key Findings:</p>
+                                    <p className="text-amber-500 text-sm font-semibold mb-2">Key Findings:</p>
                                     <ul className="space-y-2 text-gray-300 text-sm">
                                         <li>• Reaction time is trainable at any age</li>
                                         <li>• Improvements of 10-20% are common with consistent practice</li>
@@ -201,7 +201,7 @@ export default function ScienceClient() {
                     className="bg-white/5 border border-white/10 rounded-2xl p-8 mb-8"
                 >
                     <div className="flex items-start gap-4 mb-6">
-                        <TrendingUp className="w-8 h-8 text-neon-teal flex-shrink-0 mt-1" />
+                        <TrendingUp className="w-8 h-8 text-teal-500 flex-shrink-0 mt-1" />
                         <div>
                             <h2 className="text-3xl font-bold text-white mb-4">Understanding Transfer Effects</h2>
                             <p className="text-gray-300 leading-relaxed mb-6">
@@ -209,12 +209,12 @@ export default function ScienceClient() {
                             </p>
 
                             <div className="grid md:grid-cols-2 gap-6">
-                                <div className="bg-gradient-to-br from-neon-teal/20 to-neon-teal/5 border border-neon-teal/30 rounded-xl p-6">
+                                <div className="bg-gradient-to-br from-teal-500/20 to-teal-500/5 border border-teal-500/30 rounded-xl p-6">
                                     <h3 className="text-xl font-bold text-white mb-3">Near Transfer</h3>
                                     <p className="text-gray-300 text-sm leading-relaxed mb-3">
                                         Improvements in tasks similar to those trained. Near transfer is well-documented and reliable.
                                     </p>
-                                    <p className="text-neon-teal text-sm font-semibold mb-2">Examples:</p>
+                                    <p className="text-teal-500 text-sm font-semibold mb-2">Examples:</p>
                                     <ul className="space-y-2 text-gray-300 text-sm">
                                         <li>• Memory training → Better recall in daily life</li>
                                         <li>• Reaction training → Faster gaming responses</li>
@@ -223,12 +223,12 @@ export default function ScienceClient() {
                                     </ul>
                                 </div>
 
-                                <div className="bg-gradient-to-br from-electric-purple/20 to-electric-purple/5 border border-electric-purple/30 rounded-xl p-6">
+                                <div className="bg-gradient-to-br from-purple-500/20 to-purple-500/5 border border-purple-500/30 rounded-xl p-6">
                                     <h3 className="text-xl font-bold text-white mb-3">Far Transfer</h3>
                                     <p className="text-gray-300 text-sm leading-relaxed mb-3">
                                         Improvements in abilities different from those trained. Far transfer is more limited but can occur.
                                     </p>
-                                    <p className="text-electric-purple text-sm font-semibold mb-2">Examples:</p>
+                                    <p className="text-purple-500 text-sm font-semibold mb-2">Examples:</p>
                                     <ul className="space-y-2 text-gray-300 text-sm">
                                         <li>• Working memory training → Better focus</li>
                                         <li>• Processing speed training → Improved driving</li>
@@ -249,7 +249,7 @@ export default function ScienceClient() {
                     className="bg-white/5 border border-white/10 rounded-2xl p-8 mb-8"
                 >
                     <div className="flex items-start gap-4 mb-6">
-                        <Target className="w-8 h-8 text-electric-purple flex-shrink-0 mt-1" />
+                        <Target className="w-8 h-8 text-purple-500 flex-shrink-0 mt-1" />
                         <div>
                             <h2 className="text-3xl font-bold text-white mb-4">Principles for Effective Brain Training</h2>
                             <p className="text-gray-300 leading-relaxed mb-6">
@@ -258,37 +258,37 @@ export default function ScienceClient() {
 
                             <div className="grid md:grid-cols-2 gap-4">
                                 <div className="bg-white/5 border border-white/10 rounded-xl p-4">
-                                    <h4 className="text-lg font-semibold text-neon-teal mb-2">Progressive Challenge</h4>
+                                    <h4 className="text-lg font-semibold text-teal-500 mb-2">Progressive Challenge</h4>
                                     <p className="text-gray-300 text-sm leading-relaxed">
                                         Training must be challenging but achievable. Too easy provides minimal benefit; too hard causes frustration. Gradually increase difficulty as you improve.
                                     </p>
                                 </div>
                                 <div className="bg-white/5 border border-white/10 rounded-xl p-4">
-                                    <h4 className="text-lg font-semibold text-neon-teal mb-2">Consistent Practice</h4>
+                                    <h4 className="text-lg font-semibold text-teal-500 mb-2">Consistent Practice</h4>
                                     <p className="text-gray-300 text-sm leading-relaxed">
                                         Regular practice (daily or near-daily) produces better results than sporadic intensive sessions. Consistency maintains neural plasticity and ensures continuous adaptation.
                                     </p>
                                 </div>
                                 <div className="bg-white/5 border border-white/10 rounded-xl p-4">
-                                    <h4 className="text-lg font-semibold text-neon-teal mb-2">Immediate Feedback</h4>
+                                    <h4 className="text-lg font-semibold text-teal-500 mb-2">Immediate Feedback</h4>
                                     <p className="text-gray-300 text-sm leading-relaxed">
                                         Knowing your performance immediately helps your brain adjust and improve. Our tools provide instant feedback on every attempt.
                                     </p>
                                 </div>
                                 <div className="bg-white/5 border border-white/10 rounded-xl p-4">
-                                    <h4 className="text-lg font-semibold text-neon-teal mb-2">Variety & Novelty</h4>
+                                    <h4 className="text-lg font-semibold text-teal-500 mb-2">Variety & Novelty</h4>
                                     <p className="text-gray-300 text-sm leading-relaxed">
                                         Engaging with diverse cognitive activities prevents over-specialization and builds broader cognitive abilities. Rotate through different tools.
                                     </p>
                                 </div>
                                 <div className="bg-white/5 border border-white/10 rounded-xl p-4">
-                                    <h4 className="text-lg font-semibold text-neon-teal mb-2">Motivation & Engagement</h4>
+                                    <h4 className="text-lg font-semibold text-teal-500 mb-2">Motivation & Engagement</h4>
                                     <p className="text-gray-300 text-sm leading-relaxed">
                                         Enjoyment and motivation enhance learning. Choose tools that interest you and set personal goals to maintain engagement.
                                     </p>
                                 </div>
                                 <div className="bg-white/5 border border-white/10 rounded-xl p-4">
-                                    <h4 className="text-lg font-semibold text-neon-teal mb-2">Adequate Rest</h4>
+                                    <h4 className="text-lg font-semibold text-teal-500 mb-2">Adequate Rest</h4>
                                     <p className="text-gray-300 text-sm leading-relaxed">
                                         Sleep consolidates learning and allows neural adaptation. Quality sleep is essential for maximizing training benefits.
                                     </p>
@@ -364,9 +364,9 @@ export default function ScienceClient() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.6 }}
-                    className="bg-gradient-to-r from-neon-teal/20 to-electric-purple/20 border border-neon-teal/30 rounded-2xl p-8 text-center"
+                    className="bg-gradient-to-r from-teal-500/20 to-purple-500/20 border border-teal-500/30 rounded-2xl p-8 text-center"
                 >
-                    <Award className="w-12 h-12 text-neon-teal mx-auto mb-4" />
+                    <Award className="w-12 h-12 text-teal-500 mx-auto mb-4" />
                     <h2 className="text-2xl font-bold text-white mb-4">
                         Put Science Into Practice
                     </h2>
@@ -376,7 +376,7 @@ export default function ScienceClient() {
                     <div className="flex flex-wrap justify-center gap-4">
                         <Link
                             href="/tools"
-                            className="px-6 py-3 bg-neon-teal text-black rounded-lg font-semibold hover:bg-neon-yellow transition-colors"
+                            className="px-6 py-3 bg-teal-500 text-black rounded-lg font-semibold hover:bg-amber-500 transition-colors"
                         >
                             Explore All Tools
                         </Link>

@@ -9,7 +9,7 @@ const REFLEX_TOOLS = [
         title: "Reaction Time",
         desc: "Classic traffic light reaction test.",
         icon: Zap,
-        color: "text-neon-yellow",
+        color: "text-amber-500",
         href: "/reflex/reaction",
     },
     {
@@ -23,7 +23,7 @@ const REFLEX_TOOLS = [
         title: "Directional Reflex",
         desc: "Respond to Arrow Keys rapidly.",
         icon: Move,
-        color: "text-electric-purple",
+        color: "text-purple-500",
         href: "/reflex/direction",
     },
     {
@@ -37,7 +37,7 @@ const REFLEX_TOOLS = [
         title: "Grid Shot",
         desc: "Aim training warmup game.",
         icon: Activity,
-        color: "text-vibrant-coral",
+        color: "text-rose-500",
         href: "/reflex/grid",
     },
     {
@@ -81,7 +81,7 @@ export default function ReflexHubClient() {
                         className="inline-block p-4 rounded-full bg-white/5 border border-white/10 mb-4"
                         suppressHydrationWarning
                     >
-                        <Timer className="w-12 h-12 text-neon-teal" />
+                        <Timer className="w-12 h-12 text-teal-500" />
                     </motion.div>
                     <h1
                         className="text-4xl md:text-5xl font-bold"
@@ -96,8 +96,11 @@ export default function ReflexHubClient() {
                     >
                         Reflex & Reaction Lab
                     </h1>
-                    <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+                    <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-2">
                         Measure your raw reaction speeds across visual, auditory, and cognitive stimuli.
+                    </p>
+                    <p className="text-md text-theme-secondary max-w-3xl mx-auto">
+                        Our reflex training tools are designed for competitive gamers, athletes, and anyone wanting to improve their cognitive processing speed. Test your physical limits, track your millisecond improvements, and boost your hand-eye coordination with scientifically-backed exercises.
                     </p>
                 </div>
 
@@ -127,7 +130,7 @@ export default function ReflexHubClient() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.1 }}
-                            className="group relative p-6 rounded-2xl bg-white border border-theme/40 hover:border-theme/70 hover:bg-slate-50 transition-all hover:-translate-y-1"
+                            className="group relative p-6 rounded-2xl bg-white border border-theme/40 hover:border-theme/70 hover:bg-slate-50 transition hover:-translate-y-1"
                         >
                             <div className="absolute inset-0 bg-gradient-to-br from-transparent to-slate-100/80 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
                             <Link
@@ -144,51 +147,52 @@ export default function ReflexHubClient() {
                     ))}
                 </div>
 
-                {/* Detailed Description for SEO */}
-                <div className="max-w-4xl mx-auto bg-theme-surface/30 border border-theme/30 rounded-2xl p-6">
-                    <h2 className="text-2xl font-bold text-theme-primary mb-4">Why Test Your Reflexes?</h2>
-                    <p className="text-theme-secondary mb-4 leading-relaxed">
-                        Reaction time is a crucial cognitive skill that affects everything from driving safety to gaming performance.
-                        Our reflex tests measure how quickly your brain processes stimuli and sends signals to your muscles. The
-                        average human reaction time is around 250 milliseconds, but with practice, you can significantly improve.
-                    </p>
-                    <p className="text-theme-secondary mb-4 leading-relaxed">
-                        Whether you're an esports athlete looking to gain a competitive edge, a driver wanting to stay alert, or
-                        anyone interested in brain health, regular reflex training offers measurable benefits. Our tests cover
-                        visual, auditory, and directional reflexes to provide a comprehensive assessment.
-                    </p>
-                    <h3 className="text-xl font-semibold text-theme-primary mb-3">Benefits of Reflex Training</h3>
-                    <ul className="text-theme-secondary space-y-2 mb-4">
-                        <li>• Faster reaction times in gaming and sports</li>
-                        <li>• Improved alertness and situational awareness</li>
-                        <li>• Better hand-eye coordination</li>
-                        <li>• Enhanced processing speed for quick decisions</li>
-                        <li>• Useful benchmark for tracking cognitive health</li>
-                    </ul>
-                    <p className="text-theme-secondary leading-relaxed">
-                        Try each test above to discover your baseline and track improvements over time. Most people see
-                        noticeable gains within 2-4 weeks of regular practice.
-                    </p>
+                {/* Detailed Description & FAQ for SEO/AEO */}
+                <div className="max-w-4xl mx-auto mt-20">
+                    <h2 className="text-3xl font-bold text-center mb-10 text-theme-primary">Frequently Asked Questions About Reflex Training</h2>
+                    <div className="space-y-8 text-left">
+                        <div className="bg-theme-surface border border-theme-muted p-6 rounded-2xl">
+                            <h3 className="text-xl font-bold text-theme-primary mb-3">Why is testing your reflexes important?</h3>
+                            <p className="text-theme-secondary mb-3">Reaction time is a crucial cognitive skill that affects everything from driving safety to competitive gaming performance. Our reflex tests measure how quickly your brain processes stimuli and sends signals to your muscles.</p>
+                            <p className="text-theme-secondary">The average human reaction time is around 250 milliseconds, but with targeted practice using tools like the Visual Reaction test, you can significantly lower this benchmark.</p>
+                        </div>
+                        
+                        <div className="bg-theme-surface border border-theme-muted p-6 rounded-2xl">
+                            <h3 className="text-xl font-bold text-theme-primary mb-3">What are the benefits of reflex training?</h3>
+                            <p className="text-theme-secondary mb-3">Regular reflex training offers measurable benefits across multiple areas of your daily life and hobbies:</p>
+                            <ul className="list-disc pl-6 text-theme-secondary space-y-1">
+                                <li>Faster reaction times in gaming (FPS, MOBAs) and sports</li>
+                                <li>Improved alertness and situational awareness</li>
+                                <li>Better hand-eye coordination and fine motor skills</li>
+                                <li>Enhanced processing speed for quick decision-making under pressure</li>
+                            </ul>
+                        </div>
+
+                        <div className="bg-theme-surface border border-theme-muted p-6 rounded-2xl">
+                            <h3 className="text-xl font-bold text-theme-primary mb-3">How fast can I improve my reaction time?</h3>
+                            <p className="text-theme-secondary">If you practice consistently for 10-15 minutes a day across different tests (visual, auditory, and directional), most people see noticeable gains within 2 to 4 weeks. Your baseline will improve as your neural pathways adapt to rapid processing.</p>
+                        </div>
+                    </div>
                 </div>
 
                 {/* Related Categories Section - Internal Linking */}
                 <div className="mt-12 pt-8 border-t border-theme">
                     <h3 className="text-2xl font-bold text-theme-primary mb-6 text-center">Explore Other Categories</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <Link href="/memory" className="p-4 rounded-xl bg-theme-surface border border-theme hover:border-neon-teal/50 transition-all text-center">
-                            <div className="text-electric-purple text-2xl mb-2">🧠</div>
+                        <Link href="/memory" className="p-4 rounded-xl bg-theme-surface border border-theme hover:border-teal-500/50 transition text-center">
+                            <div className="text-purple-500 text-2xl mb-2">🧠</div>
                             <div className="text-sm font-semibold text-theme-primary">Memory Games</div>
                         </Link>
-                        <Link href="/speed" className="p-4 rounded-xl bg-theme-surface border border-theme hover:border-neon-teal/50 transition-all text-center">
-                            <div className="text-neon-teal text-2xl mb-2">⌨️</div>
+                        <Link href="/speed" className="p-4 rounded-xl bg-theme-surface border border-theme hover:border-teal-500/50 transition text-center">
+                            <div className="text-teal-500 text-2xl mb-2">⌨️</div>
                             <div className="text-sm font-semibold text-theme-primary">Speed Tests</div>
                         </Link>
-                        <Link href="/accuracy" className="p-4 rounded-xl bg-theme-surface border border-theme hover:border-neon-teal/50 transition-all text-center">
-                            <div className="text-electric-purple text-2xl mb-2">🎯</div>
+                        <Link href="/accuracy" className="p-4 rounded-xl bg-theme-surface border border-theme hover:border-teal-500/50 transition text-center">
+                            <div className="text-purple-500 text-2xl mb-2">🎯</div>
                             <div className="text-sm font-semibold text-theme-primary">Accuracy Tools</div>
                         </Link>
-                        <Link href="/gaming" className="p-4 rounded-xl bg-theme-surface border border-theme hover:border-neon-teal/50 transition-all text-center">
-                            <div className="text-vibrant-coral text-2xl mb-2">🎮</div>
+                        <Link href="/gaming" className="p-4 rounded-xl bg-theme-surface border border-theme hover:border-teal-500/50 transition text-center">
+                            <div className="text-rose-500 text-2xl mb-2">🎮</div>
                             <div className="text-sm font-semibold text-theme-primary">Gaming Tools</div>
                         </Link>
                     </div>

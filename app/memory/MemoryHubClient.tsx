@@ -9,28 +9,28 @@ const MEMORY_TOOLS = [
         title: "Sequence Memory",
         desc: "Memorize the pattern of buttons displayed.",
         icon: Activity,
-        color: "text-neon-teal",
+        color: "text-teal-500",
         href: "/memory/sequence",
     },
     {
         title: "Number Memory",
         desc: "Remember the longest number you can.",
         icon: Hash,
-        color: "text-electric-purple",
+        color: "text-purple-500",
         href: "/memory/number",
     },
     {
         title: "Visual Memory",
         desc: "Memorize the grid tiles that light up.",
         icon: Grid,
-        color: "text-neon-yellow",
+        color: "text-amber-500",
         href: "/memory/visual",
     },
     {
         title: "Color Matching",
         desc: "Match colors to their names or similar shades.",
         icon: Palette,
-        color: "text-vibrant-coral",
+        color: "text-rose-500",
         href: "/memory/color",
     },
     {
@@ -74,7 +74,7 @@ export default function MemoryHubClient() {
                         className="inline-block p-4 rounded-full bg-white/5 border border-white/10 mb-4"
                         suppressHydrationWarning
                     >
-                        <Brain className="w-12 h-12 text-electric-purple" />
+                        <Brain className="w-12 h-12 text-purple-500" />
                     </motion.div>
                     <h1
                         className="text-4xl md:text-5xl font-bold"
@@ -89,8 +89,11 @@ export default function MemoryHubClient() {
                     >
                         Cognitive & Memory Lab
                     </h1>
-                    <p className="text-xl text-gray-400 max-w-2xl mx-auto">
+                    <p className="text-xl text-gray-400 max-w-2xl mx-auto mb-2">
                         Push your brain to the limit. Test your working memory, pattern recognition, and cognitive speed.
+                    </p>
+                    <p className="text-md text-theme-secondary max-w-3xl mx-auto">
+                        Our memory training games are designed for students, professionals, and anyone looking to enhance their short-term and working memory. By practicing these tools regularly, you can improve focus, information retention, and overall cognitive health.
                     </p>
                 </div>
 
@@ -120,7 +123,7 @@ export default function MemoryHubClient() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: index * 0.1 }}
-                            className="group relative p-6 rounded-2xl bg-white border border-theme/40 hover:border-theme/70 hover:bg-slate-50 transition-all hover:-translate-y-1"
+                            className="group relative p-6 rounded-2xl bg-white border border-theme/40 hover:border-theme/70 hover:bg-slate-50 transition hover:-translate-y-1"
                         >
                             <div className="absolute inset-0 bg-gradient-to-br from-transparent to-slate-100/80 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
                             <Link
@@ -137,51 +140,52 @@ export default function MemoryHubClient() {
                     ))}
                 </div>
 
-                {/* Detailed Description for SEO */}
-                <div className="max-w-4xl mx-auto bg-theme-surface/30 border border-theme/30 rounded-2xl p-6">
-                    <h2 className="text-2xl font-bold text-theme-primary mb-4">Why Train Your Memory?</h2>
-                    <p className="text-theme-secondary mb-4 leading-relaxed">
-                        Memory training is essential for cognitive health. Our brain games are designed to challenge and strengthen
-                        your working memory, pattern recognition, and recall abilities. Regular practice can help improve focus,
-                        concentration, and mental agility in daily life.
-                    </p>
-                    <p className="text-theme-secondary mb-4 leading-relaxed">
-                        Whether you're a student looking to improve study habits, a professional wanting to stay sharp, or
-                        simply someone who enjoys mental challenges, our memory games offer something for everyone. Each game
-                        targets different aspects of memory function, from visual-spatial memory to numerical recall.
-                    </p>
-                    <h3 className="text-xl font-semibold text-theme-primary mb-3">Benefits of Memory Training</h3>
-                    <ul className="text-theme-secondary space-y-2 mb-4">
-                        <li>• Improved short-term and working memory capacity</li>
-                        <li>• Enhanced concentration and focus during tasks</li>
-                        <li>• Better pattern recognition and problem-solving skills</li>
-                        <li>• Faster information processing and recall speed</li>
-                        <li>• Stronger neural connections through regular practice</li>
-                    </ul>
-                    <p className="text-theme-secondary leading-relaxed">
-                        Start with any game above and track your progress over time. Consistent practice, even just 10-15 minutes
-                        daily, can lead to measurable improvements in memory performance.
-                    </p>
+                {/* Detailed Description & FAQ for SEO/AEO */}
+                <div className="max-w-4xl mx-auto mt-20">
+                    <h2 className="text-3xl font-bold text-center mb-10 text-theme-primary">Frequently Asked Questions About Memory Training</h2>
+                    <div className="space-y-8 text-left">
+                        <div className="bg-theme-surface border border-theme-muted p-6 rounded-2xl">
+                            <h3 className="text-xl font-bold text-theme-primary mb-3">Why is memory training important?</h3>
+                            <p className="text-theme-secondary mb-3">Memory training is essential for maintaining cognitive health and neuroplasticity. Our brain games are designed to challenge and strengthen your working memory, pattern recognition, and active recall abilities.</p>
+                            <p className="text-theme-secondary">Whether you're a student looking to improve study habits or a professional wanting to stay sharp, regular practice helps improve focus, concentration, and mental agility in daily life.</p>
+                        </div>
+                        
+                        <div className="bg-theme-surface border border-theme-muted p-6 rounded-2xl">
+                            <h3 className="text-xl font-bold text-theme-primary mb-3">What are the benefits of playing memory games?</h3>
+                            <p className="text-theme-secondary mb-3">Engaging in daily cognitive exercises provides several scientifically-backed benefits:</p>
+                            <ul className="list-disc pl-6 text-theme-secondary space-y-1">
+                                <li>Improved short-term and working memory capacity</li>
+                                <li>Enhanced concentration and prolonged focus during deep work</li>
+                                <li>Better visual-spatial memory and pattern recognition</li>
+                                <li>Faster information processing and recall speed</li>
+                            </ul>
+                        </div>
+
+                        <div className="bg-theme-surface border border-theme-muted p-6 rounded-2xl">
+                            <h3 className="text-xl font-bold text-theme-primary mb-3">How often should I practice memory exercises?</h3>
+                            <p className="text-theme-secondary">For the best results, consistency is more important than duration. We recommend starting with 10-15 minutes of daily practice using games like Sequence Memory or Number Memory. Tracking your progress over a few weeks will reveal measurable improvements.</p>
+                        </div>
+                    </div>
                 </div>
 
                 {/* Related Categories Section - Internal Linking */}
                 <div className="mt-12 pt-8 border-t border-theme">
                     <h3 className="text-2xl font-bold text-theme-primary mb-6 text-center">Explore Other Categories</h3>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <Link href="/reflex" className="p-4 rounded-xl bg-theme-surface border border-theme hover:border-neon-teal/50 transition-all text-center">
-                            <div className="text-neon-yellow text-2xl mb-2">⚡</div>
+                        <Link href="/reflex" className="p-4 rounded-xl bg-theme-surface border border-theme hover:border-teal-500/50 transition text-center">
+                            <div className="text-amber-500 text-2xl mb-2">⚡</div>
                             <div className="text-sm font-semibold text-theme-primary">Reflex Tests</div>
                         </Link>
-                        <Link href="/speed" className="p-4 rounded-xl bg-theme-surface border border-theme hover:border-neon-teal/50 transition-all text-center">
-                            <div className="text-neon-teal text-2xl mb-2">⌨️</div>
+                        <Link href="/speed" className="p-4 rounded-xl bg-theme-surface border border-theme hover:border-teal-500/50 transition text-center">
+                            <div className="text-teal-500 text-2xl mb-2">⌨️</div>
                             <div className="text-sm font-semibold text-theme-primary">Speed Tests</div>
                         </Link>
-                        <Link href="/accuracy" className="p-4 rounded-xl bg-theme-surface border border-theme hover:border-neon-teal/50 transition-all text-center">
-                            <div className="text-electric-purple text-2xl mb-2">🎯</div>
+                        <Link href="/accuracy" className="p-4 rounded-xl bg-theme-surface border border-theme hover:border-teal-500/50 transition text-center">
+                            <div className="text-purple-500 text-2xl mb-2">🎯</div>
                             <div className="text-sm font-semibold text-theme-primary">Accuracy Tools</div>
                         </Link>
-                        <Link href="/gaming" className="p-4 rounded-xl bg-theme-surface border border-theme hover:border-neon-teal/50 transition-all text-center">
-                            <div className="text-vibrant-coral text-2xl mb-2">🎮</div>
+                        <Link href="/gaming" className="p-4 rounded-xl bg-theme-surface border border-theme hover:border-teal-500/50 transition text-center">
+                            <div className="text-rose-500 text-2xl mb-2">🎮</div>
                             <div className="text-sm font-semibold text-theme-primary">Gaming Tools</div>
                         </Link>
                     </div>

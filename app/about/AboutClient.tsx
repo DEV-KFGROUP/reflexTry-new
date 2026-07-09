@@ -11,19 +11,19 @@ export default function AboutClient() {
             icon: Target,
             title: "Accuracy",
             description: "We provide precise measurements and reliable testing methods to track your true performance capabilities.",
-            color: "text-neon-teal"
+            color: "text-teal-500"
         },
         {
             icon: Zap,
             title: "Innovation",
             description: "Constantly developing new ways to challenge both cognitive and physical response times.",
-            color: "text-neon-yellow"
+            color: "text-amber-500"
         },
         {
             icon: Users,
             title: "Accessibility",
             description: "Making professional-grade testing tools available to everyone globally, completely free of charge.",
-            color: "text-electric-purple"
+            color: "text-purple-500"
         },
         {
             icon: Heart,
@@ -69,7 +69,7 @@ export default function AboutClient() {
                     className="bg-white/5 border border-white/10 rounded-2xl p-8"
                 >
                     <div className="flex items-start gap-4 mb-4">
-                        <Sparkles className="w-8 h-8 text-neon-yellow flex-shrink-0 mt-1" />
+                        <Sparkles className="w-8 h-8 text-amber-500 flex-shrink-0 mt-1" />
                         <div>
                             <h2 className="text-2xl font-bold text-white mb-4">Our Mission</h2>
                             <p className="text-gray-300 leading-relaxed">
@@ -165,7 +165,7 @@ export default function AboutClient() {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                         {/* Rabadiya Kaushik */}
                         <div className="flex flex-col items-center text-center group">
-                            <div className="relative w-48 h-48 mb-4 rounded-full overflow-hidden border-4 border-neon-teal/20 group-hover:border-neon-teal/50 transition-colors duration-300">
+                            <div className="relative w-48 h-48 mb-4 rounded-full overflow-hidden border-4 border-teal-500/20 group-hover:border-teal-500/50 transition-colors duration-200">
                                 <Image
                                     src="/images/team/rabadiya-kaushik.webp"
                                     alt="Rabadiya Kaushik"
@@ -173,13 +173,13 @@ export default function AboutClient() {
                                     className="object-cover"
                                 />
                             </div>
-                            <h3 className="text-xl font-bold text-white mb-1 group-hover:text-neon-teal transition-colors">Rabadiya Kaushik</h3>
-                            <p className="text-neon-teal font-medium tracking-wide">Founder & Developer</p>
+                            <h3 className="text-xl font-bold text-white mb-1 group-hover:text-teal-500 transition-colors">Rabadiya Kaushik</h3>
+                            <p className="text-teal-500 font-medium tracking-wide">Founder & Developer</p>
                         </div>
 
                         {/* Harshil Miyani */}
                         <div className="flex flex-col items-center text-center group">
-                            <div className="relative w-48 h-48 mb-4 rounded-full overflow-hidden border-4 border-electric-purple/20 group-hover:border-electric-purple/50 transition-colors duration-300">
+                            <div className="relative w-48 h-48 mb-4 rounded-full overflow-hidden border-4 border-purple-500/20 group-hover:border-purple-500/50 transition-colors duration-200">
                                 <Image
                                     src="/images/team/harshil-miyani.webp"
                                     alt="Harshil Miyani"
@@ -187,8 +187,8 @@ export default function AboutClient() {
                                     className="object-cover"
                                 />
                             </div>
-                            <h3 className="text-xl font-bold text-white mb-1 group-hover:text-electric-purple transition-colors">Harshil Miyani</h3>
-                            <p className="text-electric-purple font-medium tracking-wide">SEO Expert</p>
+                            <h3 className="text-xl font-bold text-white mb-1 group-hover:text-purple-500 transition-colors">Harshil Miyani</h3>
+                            <p className="text-purple-500 font-medium tracking-wide">SEO Expert</p>
                         </div>
                     </div>
 
@@ -205,7 +205,7 @@ export default function AboutClient() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.55 }}
-                    className="bg-gradient-to-r from-neon-teal/20 to-electric-purple/20 border border-neon-teal/30 rounded-2xl p-8"
+                    className="bg-gradient-to-r from-teal-500/20 to-purple-500/20 border border-teal-500/30 rounded-2xl p-8"
                 >
                     <h2 className="text-2xl font-bold text-white mb-4">Join the Community</h2>
                     <p className="text-gray-300 leading-relaxed mb-6">
@@ -214,7 +214,7 @@ export default function AboutClient() {
                     <div className="flex flex-wrap gap-4">
                         <Link
                             href="/leaderboard"
-                            className="px-6 py-3 bg-neon-teal text-black rounded-lg font-semibold hover:bg-neon-yellow transition-colors"
+                            className="px-6 py-3 bg-teal-500 text-black rounded-lg font-semibold hover:bg-amber-500 transition-colors"
                         >
                             View Leaderboard
                         </Link>
@@ -241,19 +241,19 @@ export default function AboutClient() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <Link
                             href="/privacy"
-                            className="flex items-center justify-center gap-2 px-6 py-4 bg-white/5 border border-white/10 rounded-xl text-white font-medium hover:bg-white/10 hover:border-neon-teal/50 transition-all"
+                            className="flex items-center justify-center gap-2 px-6 py-4 bg-white/5 border border-white/10 rounded-xl text-white font-medium hover:bg-white/10 hover:border-teal-500/50 transition"
                         >
                             🔒 Privacy Policy
                         </Link>
                         <Link
                             href="/terms"
-                            className="flex items-center justify-center gap-2 px-6 py-4 bg-white/5 border border-white/10 rounded-xl text-white font-medium hover:bg-white/10 hover:border-neon-teal/50 transition-all"
+                            className="flex items-center justify-center gap-2 px-6 py-4 bg-white/5 border border-white/10 rounded-xl text-white font-medium hover:bg-white/10 hover:border-teal-500/50 transition"
                         >
                             📋 Terms of Service
                         </Link>
                         <Link
                             href="/cookies"
-                            className="flex items-center justify-center gap-2 px-6 py-4 bg-white/5 border border-white/10 rounded-xl text-white font-medium hover:bg-white/10 hover:border-neon-teal/50 transition-all"
+                            className="flex items-center justify-center gap-2 px-6 py-4 bg-white/5 border border-white/10 rounded-xl text-white font-medium hover:bg-white/10 hover:border-teal-500/50 transition"
                         >
                             🍪 Cookie Policy
                         </Link>
@@ -273,7 +273,7 @@ export default function AboutClient() {
                     </p>
                     <Link
                         href="/"
-                        className="inline-block px-8 py-3 bg-gradient-to-r from-neon-teal to-electric-purple text-white rounded-lg font-semibold hover:from-neon-yellow hover:to-neon-teal transition-all"
+                        className="inline-block px-8 py-3 bg-gradient-to-r from-teal-500 to-purple-500 text-white rounded-lg font-semibold hover:from-amber-500 hover:to-teal-500 transition"
                     >
                         Start Playing Now
                     </Link>

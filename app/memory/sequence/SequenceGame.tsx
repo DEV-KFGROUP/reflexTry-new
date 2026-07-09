@@ -172,7 +172,7 @@ export default function SequenceGame() {
                                         whileHover={{ scale: 1.02 }}
                                         whileTap={{ scale: 0.95 }}
                                         className={`
-                                            rounded-3xl transition-all duration-200 cursor-pointer relative overflow-hidden
+                                            rounded-3xl transition duration-200 cursor-pointer relative overflow-hidden
                                             ${activeButton === i ? activeColors[i] : color}
                                             disabled:cursor-not-allowed
                                         `}

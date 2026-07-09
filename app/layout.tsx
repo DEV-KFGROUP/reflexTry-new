@@ -9,6 +9,7 @@ import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { LazyLoadedComponents } from "@/components/LazyLoadedComponents";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { StructuredData, generateOrganizationSchema } from "@/components/StructuredData";
 const outfit = Outfit({
   variable: "--font-outfit",
   subsets: ["latin"],
@@ -80,9 +81,12 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
 
+  const organizationSchema = generateOrganizationSchema();
+
   return (
     <html lang="en" className="light" suppressHydrationWarning>
       <head>
+        <StructuredData type="Organization" data={organizationSchema} />
         {/* Critical CSS - Inline for faster initial render */}
         <style
           dangerouslySetInnerHTML={{
