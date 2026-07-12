@@ -171,6 +171,16 @@ export default function SpeedHubClient() {
                     </p>
                 </motion.div>
 
+                {/* AI Summary / Bottom Line for SEO/AEO */}
+                <motion.section variants={itemVariants} className="bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 p-6 rounded-3xl mb-8 relative z-10 max-w-4xl mx-auto">
+                    <h2 className="text-xl font-bold text-foreground mb-2 flex items-center gap-2">
+                        <Sparkles className="w-5 h-5 text-red-500" /> Key Takeaway
+                    </h2>
+                    <p className="text-muted-foreground leading-relaxed">
+                        <strong className="text-foreground">Bottom Line:</strong> The Speed Arena focuses on testing and enhancing your raw physical execution speed. Built for competitive typists, data entry professionals, and gamers, it features Click Speed (CPS) tests and Typing (WPM) evaluations designed to minimize input latency and maximize motor neuron efficiency.
+                    </p>
+                </motion.section>
+
                 {/* Main Glassmorphic Container */}
                 <motion.div 
                     variants={itemVariants}
@@ -219,31 +229,82 @@ export default function SpeedHubClient() {
                         ))}
                     </div>
 
-                    {/* SEO Blocks */}
-                    <div className="max-w-4xl mx-auto mt-16 text-left space-y-4 pt-6 border-t border-black/10 dark:border-white/10 relative z-10">
-                        <h3 className="text-xl font-bold text-foreground flex items-center gap-2">
-                            ★ The Science of Speed Training
-                        </h3>
-                        <p className="text-sm text-muted-foreground leading-relaxed font-sans">
-                            <strong>Definition:</strong> Speed training focuses on optimizing motor neuron firing rates and reducing the cognitive friction required to execute a physical action after perceiving a stimulus.
-                        </p>
-                        <p className="text-sm text-muted-foreground leading-relaxed font-sans">
-                            <strong>The bottom line:</strong> High CPS (Clicks Per Second) and fast typing speeds rely on muscle endurance and myelin sheath development in the nervous system. Regular speed training forces biological adaptations that make rapid movements feel effortless and subconscious.
-                        </p>
-                    </div>
+                    {/* Detailed SEO / AEO / GEO Section */}
+                    <div className="max-w-4xl mx-auto mt-16 space-y-12 text-left pt-6 border-t border-black/10 dark:border-white/10 relative z-10">
+                        
+                        <div className="space-y-4">
+                            <h2 className="text-3xl font-bold text-foreground">What is Speed & Latency Training?</h2>
+                            <p className="text-muted-foreground leading-relaxed">
+                                Speed training focuses on optimizing motor neuron firing rates and reducing the cognitive friction required to execute a physical action after perceiving a stimulus. High CPS (Clicks Per Second) and fast typing speeds rely on muscle endurance and myelin sheath development in the nervous system. Regular speed training forces biological adaptations that make rapid movements feel effortless and subconscious.
+                            </p>
+                        </div>
 
-                    {/* Detailed Description & FAQ */}
-                    <div className="max-w-4xl mx-auto mt-16 relative z-10">
-                        <h2 className="text-3xl font-bold text-center mb-10 text-foreground">Frequently Asked Questions About Speed Training</h2>
-                        <div className="space-y-6 text-left">
+                        <div className="space-y-4">
+                            <h2 className="text-2xl font-bold text-foreground">How to Improve Your Speed and CPS?</h2>
+                            <ol className="list-decimal list-inside space-y-2 text-muted-foreground">
+                                <li><strong>Improve your posture:</strong> Plant your wrists firmly to create a stable pivot point for rapid finger movements.</li>
+                                <li><strong>Experiment with clicking styles:</strong> Try Jitter clicking or Butterfly clicking to maximize hardware input rates.</li>
+                                <li><strong>Prioritize accuracy first:</strong> In typing tests, backspacing takes more time than typing slowly. Accuracy breeds speed.</li>
+                                <li><strong>Train in short bursts:</strong> Speed training is fatiguing. Limit high-intensity CPS bursts to 10-30 seconds to prevent strain.</li>
+                            </ol>
+                        </div>
+
+                        <div className="space-y-4">
+                            <h3 className="text-2xl font-bold text-foreground">Should I Practice Daily?</h3>
+                            <p className="text-muted-foreground leading-relaxed">
+                                Yes. Just like physical weightlifting, daily brief, intense sessions are much more effective at building fast-twitch muscle fiber endurance than occasional, prolonged sessions.
+                            </p>
+                        </div>
+
+                        <div className="space-y-4">
+                            <h2 className="text-2xl font-bold text-foreground">Speed Tools Comparison</h2>
+                            <div className="overflow-x-auto">
+                                <table className="w-full text-left border-collapse">
+                                    <thead>
+                                        <tr className="border-b border-black/10 dark:border-white/10">
+                                            <th className="p-3 text-foreground font-bold">Tool Name</th>
+                                            <th className="p-3 text-foreground font-bold">Best For (Use Case)</th>
+                                            <th className="p-3 text-foreground font-bold">Core Benefit</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="text-muted-foreground">
+                                        <tr className="border-b border-black/5 dark:border-white/5">
+                                            <td className="p-3 font-semibold text-red-500">Click Speed (CPS)</td>
+                                            <td className="p-3">Minecraft PvP, MOBA Gamers</td>
+                                            <td className="p-3">Increases raw finger clicking stamina and speed.</td>
+                                        </tr>
+                                        <tr className="border-b border-black/5 dark:border-white/5">
+                                            <td className="p-3 font-semibold text-red-500">Typing Test (WPM)</td>
+                                            <td className="p-3">Writers, Coders, Data Entry</td>
+                                            <td className="p-3">Measures and boosts words-per-minute rate and keystroke accuracy.</td>
+                                        </tr>
+                                        <tr className="border-b border-black/5 dark:border-white/5">
+                                            <td className="p-3 font-semibold text-red-500">Speed Math</td>
+                                            <td className="p-3">Students, Financial Analysts</td>
+                                            <td className="p-3">Trains rapid arithmetic processing under time pressure.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div className="space-y-4">
+                            <h2 className="text-2xl font-bold text-foreground">Benchmarks & Scientific Proof</h2>
+                            <p className="text-muted-foreground leading-relaxed">
+                                The average internet user types at roughly 40 Words Per Minute (WPM), whereas professional typists and coders regularly exceed 90 WPM. Similarly, average clicking speeds hover around 6 CPS, while competitive gamers achieve 10-14 CPS. According to studies on human motor performance published on <a href="https://pubmed.ncbi.nlm.nih.gov/20485641/" target="_blank" rel="noopener noreferrer" className="text-red-500 hover:underline">PubMed</a>, targeted repetition combined with immediate feedback is the most effective way to permanently increase motor action speeds.
+                            </p>
+                        </div>
+                        
+                        <div className="space-y-4">
+                            <h2 className="text-2xl font-bold text-foreground">Frequently Asked Questions</h2>
                             <div className="bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 p-6 rounded-3xl">
                                 <h3 className="text-xl font-bold text-foreground mb-3">How can I increase my CPS?</h3>
-                                <p className="text-muted-foreground">Increasing your Clicks Per Second requires developing specific twitch muscle fibers in your fingers and forearms. Techniques like jitter clicking and butterfly clicking can yield immediate boosts, but long-term improvement requires consistent, daily endurance training to build stamina and prevent fatigue.</p>
+                                <p className="text-muted-foreground mb-3">Increasing your Clicks Per Second requires developing specific twitch muscle fibers in your fingers and forearms. Techniques like jitter clicking and butterfly clicking can yield immediate boosts, but long-term improvement requires consistent, daily endurance training to build stamina and prevent fatigue.</p>
                             </div>
                             
                             <div className="bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 p-6 rounded-3xl">
                                 <h3 className="text-xl font-bold text-foreground mb-3">Why is my WPM (Words Per Minute) stuck?</h3>
-                                <p className="text-muted-foreground">Plateaus in typing speed are usually caused by a lack of accuracy, not a lack of finger speed. If you are constantly backspacing, your WPM will drop significantly. Our Typing Test and Word Accuracy tools emphasize precision first, which naturally translates to higher raw speeds over time.</p>
+                                <p className="text-muted-foreground mb-3">Plateaus in typing speed are usually caused by a lack of accuracy, not a lack of finger speed. If you are constantly backspacing, your WPM will drop significantly. Our Typing Test and Word Accuracy tools emphasize precision first, which naturally translates to higher raw speeds over time.</p>
                             </div>
                         </div>
                     </div>

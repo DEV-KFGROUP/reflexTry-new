@@ -240,7 +240,7 @@ export default function QuickSortGame() {
     });
 
     // Populate category sorting bins (include Discard if professional is active)
-    let list = [...d.activeCategories];
+    const list = [...d.activeCategories];
     if (d.hasDistractor) {
       list.push("Discard");
     }

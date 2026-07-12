@@ -466,7 +466,7 @@ export default function FlickShotGame() {
                       <AnimatePresence>
                         {targets.map(t => {
                           const isDecoy = t.type === "decoy";
-                          let bulletColor = isDecoy 
+                          const bulletColor = isDecoy 
                             ? "bg-cyan-600 border-white shadow-[0_4px_12px_rgba(6,182,212,0.4)]"
                             : "bg-cyan-500 border-white shadow-[0_4px_12px_rgba(6,182,212,0.35)]";
 

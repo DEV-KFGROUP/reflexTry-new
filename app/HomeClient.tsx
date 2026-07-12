@@ -152,6 +152,16 @@ export default function HomeClient() {
       <FloatingBackground />
       {/* ── Game Arenas ── */}
       <div className="relative z-10 w-full max-w-7xl mx-auto space-y-16 pt-12 pb-20 px-4 sm:px-6 lg:px-8">
+        {/* AI Summary / Bottom Line for SEO/AEO */}
+        <section className="bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 p-6 rounded-3xl mb-8">
+            <h2 className="text-xl font-bold text-foreground mb-2 flex items-center gap-2">
+                <Sparkles className="w-5 h-5 text-blue-500" /> Key Takeaway
+            </h2>
+            <p className="text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Bottom Line:</strong> Reflextry is a comprehensive suite of cognitive and physical training games designed for competitive gamers, students, and athletes. It provides structured tests to measure and improve your reaction time, working memory, typing speed, and cursor precision. By practicing daily, you can track performance benchmarks and enhance your neuroplasticity.
+            </p>
+        </section>
+
         {toolCategories.map((category, categoryIndex) => (
           <motion.div
             key={category.id}
@@ -246,6 +256,82 @@ export default function HomeClient() {
             </Link>
           </motion.div>
         ))}
+
+        {/* Detailed SEO / AEO / GEO Section */}
+        <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-20 space-y-12 bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 p-8 rounded-3xl"
+        >
+            <div className="space-y-4">
+                <h2 className="text-3xl font-bold text-foreground">What is Brain Training and Reflex Testing?</h2>
+                <p className="text-muted-foreground leading-relaxed">
+                    Brain training involves engaging in structured mental and physical exercises to improve cognitive functions like memory, attention, and processing speed. Reflex testing measures your physical reaction time to visual or auditory stimuli. Regular engagement in these tasks leverages neuroplasticity—the brain's ability to form new neural connections.
+                </p>
+            </div>
+
+            <div className="space-y-4">
+                <h2 className="text-2xl font-bold text-foreground">How to Improve Your Scores?</h2>
+                <ol className="list-decimal list-inside space-y-2 text-muted-foreground">
+                    <li><strong>Warm up:</strong> Start with easy tasks like Click Speed Test or Color Match.</li>
+                    <li><strong>Focus on accuracy:</strong> Speed comes naturally once you are consistently accurate. Don't rush.</li>
+                    <li><strong>Practice daily:</strong> Aim for 10-15 minutes of varied exercises across different arenas.</li>
+                    <li><strong>Track your progress:</strong> Use our Statistics page to identify areas where your reaction time or memory limits you.</li>
+                </ol>
+            </div>
+
+            <div className="space-y-4">
+                <h3 className="text-2xl font-bold text-foreground">Should I Practice Daily?</h3>
+                <p className="text-muted-foreground leading-relaxed">
+                    Yes. Consistent, daily practice is more effective for building procedural memory and fast-twitch muscle response than infrequent, long sessions. Aim for at least 15 minutes a day for optimal results.
+                </p>
+            </div>
+
+            <div className="space-y-4">
+                <h2 className="text-2xl font-bold text-foreground">Arena Comparison & Use Cases</h2>
+                <div className="overflow-x-auto">
+                    <table className="w-full text-left border-collapse">
+                        <thead>
+                            <tr className="border-b border-black/10 dark:border-white/10">
+                                <th className="p-3 text-foreground font-bold">Arena Name</th>
+                                <th className="p-3 text-foreground font-bold">Best For (Use Case)</th>
+                                <th className="p-3 text-foreground font-bold">Core Benefit</th>
+                            </tr>
+                        </thead>
+                        <tbody className="text-muted-foreground">
+                            <tr className="border-b border-black/5 dark:border-white/5">
+                                <td className="p-3 font-semibold text-blue-500">Memory Arena</td>
+                                <td className="p-3">Students, lifelong learners</td>
+                                <td className="p-3">Enhances working memory & recall capacity.</td>
+                            </tr>
+                            <tr className="border-b border-black/5 dark:border-white/5">
+                                <td className="p-3 font-semibold text-amber-500">Reflex Arena</td>
+                                <td className="p-3">FPS Gamers, Drivers, Athletes</td>
+                                <td className="p-3">Decreases reaction time to sudden stimuli.</td>
+                            </tr>
+                            <tr className="border-b border-black/5 dark:border-white/5">
+                                <td className="p-3 font-semibold text-orange-500">Speed Arena</td>
+                                <td className="p-3">Typists, Data Entry, MOBA Gamers</td>
+                                <td className="p-3">Increases raw physical speed (CPS, WPM).</td>
+                            </tr>
+                            <tr className="border-b border-black/5 dark:border-white/5">
+                                <td className="p-3 font-semibold text-purple-500">Gaming Arena</td>
+                                <td className="p-3">Competitive eSports Players</td>
+                                <td className="p-3">Improves mouse tracking, flick accuracy, and multi-tasking.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <div className="space-y-4">
+                <h2 className="text-2xl font-bold text-foreground">Benchmarks & Scientific Evidence</h2>
+                <p className="text-muted-foreground leading-relaxed">
+                    The average human visual reaction time is approximately 250 milliseconds. However, elite esports professionals frequently average between 150ms and 180ms. According to the <a href="https://pubmed.ncbi.nlm.nih.gov/24718593/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">National Institutes of Health (NIH)</a>, repetitive cognitive and motor skill training can significantly reduce reaction times and improve working memory capacity.
+                </p>
+            </div>
+        </motion.div>
       </div>
     </div>
   );

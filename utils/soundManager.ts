@@ -27,7 +27,7 @@ export class SoundManager {
         if (!SoundManager.enabled || typeof window === "undefined") return;
 
         try {
-            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+             
             const AudioContextClass = (window.AudioContext || (window as any).webkitAudioContext);
             if (!AudioContextClass) return;
 

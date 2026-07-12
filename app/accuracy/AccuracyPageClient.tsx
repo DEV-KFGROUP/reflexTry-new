@@ -161,6 +161,16 @@ export default function AccuracyPageClient() {
                     </p>
                 </motion.div>
 
+                {/* AI Summary / Bottom Line for SEO/AEO */}
+                <motion.section variants={itemVariants} className="bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 p-6 rounded-3xl mb-8 relative z-10 max-w-4xl mx-auto">
+                    <h2 className="text-xl font-bold text-foreground mb-2 flex items-center gap-2">
+                        <Sparkles className="w-5 h-5 text-emerald-500" /> Key Takeaway
+                    </h2>
+                    <p className="text-muted-foreground leading-relaxed">
+                        <strong className="text-foreground">Bottom Line:</strong> The Accuracy Arena focuses entirely on fine motor control and visual discernment. By removing the pressure of time, these tools help coders, designers, and gamers eliminate errors and build flawless muscle memory before gradually introducing speed.
+                    </p>
+                </motion.section>
+
                 {/* Main Glassmorphic Container */}
                 <motion.div 
                     variants={itemVariants}
@@ -209,31 +219,82 @@ export default function AccuracyPageClient() {
                         ))}
                     </div>
 
-                    {/* SEO Blocks */}
-                    <div className="max-w-4xl mx-auto mt-16 text-left space-y-4 pt-6 border-t border-black/10 dark:border-white/10 relative z-10">
-                        <h3 className="text-xl font-bold text-foreground flex items-center gap-2">
-                            ★ The Science of Accuracy Training
-                        </h3>
-                        <p className="text-sm text-muted-foreground leading-relaxed font-sans">
-                            <strong>Definition:</strong> Accuracy in psychomotor testing refers to the degree to which a user's action conforms to the true or correct target location, value, or sequence without deviation.
-                        </p>
-                        <p className="text-sm text-muted-foreground leading-relaxed font-sans">
-                            <strong>The bottom line:</strong> Training accuracy before speed is a fundamental principle of motor learning (often summarized as "slow is smooth, smooth is fast"). Focusing purely on precision initially allows the brain to myelinate the exact neural pathways required, preventing bad habits from hardcoding into your muscle memory.
-                        </p>
-                    </div>
+                    {/* Detailed SEO / AEO / GEO Section */}
+                    <div className="max-w-4xl mx-auto mt-16 space-y-12 text-left pt-6 border-t border-black/10 dark:border-white/10 relative z-10">
+                        
+                        <div className="space-y-4">
+                            <h2 className="text-3xl font-bold text-foreground">What is Accuracy and Precision Training?</h2>
+                            <p className="text-muted-foreground leading-relaxed">
+                                Accuracy training in psychomotor testing refers to the degree to which a user's physical action or cognitive estimation conforms to a true target without deviation. It focuses entirely on fine motor control and visual discernment, deliberately ignoring speed to prevent hardcoding bad habits and mistakes into your muscle memory.
+                            </p>
+                        </div>
 
-                    {/* Detailed Description & FAQ */}
-                    <div className="max-w-4xl mx-auto mt-16 relative z-10">
-                        <h2 className="text-3xl font-bold text-center mb-10 text-foreground">Frequently Asked Questions About Accuracy</h2>
-                        <div className="space-y-6 text-left">
+                        <div className="space-y-4">
+                            <h2 className="text-2xl font-bold text-foreground">How to Improve Your Accuracy Score?</h2>
+                            <ol className="list-decimal list-inside space-y-2 text-muted-foreground">
+                                <li><strong>Slow Down:</strong> Speed is a byproduct of precision. Move at a pace where you make zero mistakes.</li>
+                                <li><strong>Adjust DPI/Sensitivity:</strong> For gamers, lower mouse sensitivities often yield higher precision in aim trainers.</li>
+                                <li><strong>Focus on Center:</strong> In visual tasks like Angle Estimation, fixate your eyes on the central vertex before scanning outward.</li>
+                                <li><strong>Breathe:</strong> Rushing causes tension. Stay physically relaxed to allow for micro-adjustments.</li>
+                            </ol>
+                        </div>
+
+                        <div className="space-y-4">
+                            <h3 className="text-2xl font-bold text-foreground">Should I Practice Daily?</h3>
+                            <p className="text-muted-foreground leading-relaxed">
+                                Yes, but keep sessions short. High-precision tasks are cognitively draining. 5-10 minutes a day is sufficient to reinforce accurate neural pathways without causing fatigue-induced errors.
+                            </p>
+                        </div>
+
+                        <div className="space-y-4">
+                            <h2 className="text-2xl font-bold text-foreground">Accuracy Tools Comparison</h2>
+                            <div className="overflow-x-auto">
+                                <table className="w-full text-left border-collapse">
+                                    <thead>
+                                        <tr className="border-b border-black/10 dark:border-white/10">
+                                            <th className="p-3 text-foreground font-bold">Tool Name</th>
+                                            <th className="p-3 text-foreground font-bold">Best For (Use Case)</th>
+                                            <th className="p-3 text-foreground font-bold">Core Benefit</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="text-muted-foreground">
+                                        <tr className="border-b border-black/5 dark:border-white/5">
+                                            <td className="p-3 font-semibold text-emerald-500">Precision Clicking</td>
+                                            <td className="p-3">Graphic Designers, Gamers</td>
+                                            <td className="p-3">Enhances fine motor control for clicking tiny, sub-pixel targets.</td>
+                                        </tr>
+                                        <tr className="border-b border-black/5 dark:border-white/5">
+                                            <td className="p-3 font-semibold text-emerald-500">Data Entry Accuracy</td>
+                                            <td className="p-3">Programmers, Typists</td>
+                                            <td className="p-3">Reduces keystroke errors when typing complex syntax or alphanumeric strings.</td>
+                                        </tr>
+                                        <tr className="border-b border-black/5 dark:border-white/5">
+                                            <td className="p-3 font-semibold text-emerald-500">Angle Estimation</td>
+                                            <td className="p-3">Architects, Artists</td>
+                                            <td className="p-3">Develops cognitive visual-spatial intelligence and geometric perception.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div className="space-y-4">
+                            <h2 className="text-2xl font-bold text-foreground">Benchmarks & Scientific Proof</h2>
+                            <p className="text-muted-foreground leading-relaxed">
+                                The concept of prioritizing accuracy over speed is a fundamental principle of motor learning, often summarized in the military maxim "slow is smooth, smooth is fast." According to the <a href="https://www.apa.org/pubs/journals/xhp" target="_blank" rel="noopener noreferrer" className="text-emerald-500 hover:underline">Journal of Experimental Psychology</a>, focusing purely on precision initially allows the brain to myelinate the exact neural pathways required, preventing error correction delays from surfacing at higher speeds.
+                            </p>
+                        </div>
+                        
+                        <div className="space-y-4">
+                            <h2 className="text-2xl font-bold text-foreground">Frequently Asked Questions</h2>
                             <div className="bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 p-6 rounded-3xl">
                                 <h3 className="text-xl font-bold text-foreground mb-3">Should I train speed or accuracy first?</h3>
-                                <p className="text-muted-foreground">Always train accuracy first. When you practice making mistakes quickly, your brain literally gets better at making mistakes. By forcing 100% accuracy at a slow pace, you guarantee that the movement patterns you build are flawless. Once the pattern is ingrained, speed will naturally follow.</p>
+                                <p className="text-muted-foreground mb-3">Always train accuracy first. When you practice making mistakes quickly, your brain literally gets better at making mistakes. By forcing 100% accuracy at a slow pace, you guarantee that the movement patterns you build are flawless. Once the pattern is ingrained, speed will naturally follow.</p>
                             </div>
                             
                             <div className="bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 p-6 rounded-3xl">
                                 <h3 className="text-xl font-bold text-foreground mb-3">How does this help my typing?</h3>
-                                <p className="text-muted-foreground">The biggest bottleneck to high WPM (Words Per Minute) is the time spent pressing the backspace key. By using tools like Data Entry Accuracy, you build confidence in your keystrokes, significantly reducing the cognitive hesitation that slows down average typists.</p>
+                                <p className="text-muted-foreground mb-3">The biggest bottleneck to high WPM (Words Per Minute) is the time spent pressing the backspace key. By using tools like Data Entry Accuracy, you build confidence in your keystrokes, significantly reducing the cognitive hesitation that slows down average typists.</p>
                             </div>
                         </div>
                     </div>
