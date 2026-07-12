@@ -269,7 +269,7 @@ export default function MemoryHubClient() {
                         <div className="space-y-4">
                             <h2 className="text-2xl font-bold text-foreground">Memory Tools Comparison</h2>
                             <div className="overflow-x-auto">
-                                <table className="w-full text-left border-collapse">
+                                <table className="w-full text-left border-collapse min-w-[600px]">
                                     <thead>
                                         <tr className="border-b border-black/10 dark:border-white/10">
                                             <th className="p-3 text-foreground font-bold">Tool Name</th>

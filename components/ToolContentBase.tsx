@@ -285,12 +285,12 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
                             </div>
 
                             {/* Comparison Table */}
-                            <div className="mt-12 mb-8 pt-8 border-t border-black/10 dark:border-white/10 overflow-x-auto">
+                            <div className="mt-12 mb-8 pt-8 border-t border-black/10 dark:border-white/10">
                                 <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-3">
                                     <Activity className="w-6 h-6 text-purple-400" /> Use Cases & Training Modes
                                 </h3>
-                                <div className="bg-black/5 dark:bg-black/20 rounded-2xl overflow-hidden border border-white/5">
-                                    <table className="w-full text-base text-left border-collapse">
+                                <div className="bg-black/5 dark:bg-black/20 rounded-2xl overflow-x-auto border border-white/5">
+                                    <table className="w-full text-base text-left border-collapse min-w-[600px]">
                                         <thead className="bg-black/5 dark:bg-white/5">
                                             <tr className="border-b border-black/10 dark:border-white/10 text-foreground">
                                                 <th className="py-4 px-6 font-bold tracking-wide">Primary Use Case</th>
