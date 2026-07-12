@@ -153,3 +153,40 @@ export function generateSoftwareApplicationSchema(title: string, description: st
         }
     };
 }
+
+export function generateBlogPostingSchema(title: string, description: string, urlPath: string) {
+    const baseUrl = getBaseUrl();
+    return {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        headline: title,
+        description: description,
+        url: `${baseUrl}${urlPath}`,
+        author: {
+            "@type": "Organization",
+            name: "Reflextry"
+        },
+        publisher: {
+            "@type": "Organization",
+            name: "Reflextry",
+            logo: {
+                "@type": "ImageObject",
+                url: `${baseUrl}/icon.png`
+            }
+        },
+        datePublished: new Date().toISOString().split('T')[0],
+        dateModified: new Date().toISOString().split('T')[0]
+    };
+}
+
+export function generateHowToSchema(title: string, steps: string[]) {
+    return {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        name: `How to play ${title}`,
+        step: steps.map(step => ({
+            "@type": "HowToStep",
+            text: step
+        }))
+    };
+}

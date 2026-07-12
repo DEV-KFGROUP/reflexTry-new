@@ -65,7 +65,7 @@ export function CookieBanner() {
 
                             {/* Content */}
                             <div className="flex-1 min-w-0">
-                                <h3 className="text-lg font-bold text-white mb-2">
+                                <h3 className="text-lg font-bold text-black mb-2">
                                     We value your privacy
                                 </h3>
                                 <p className="text-sm text-slate-300 leading-relaxed mb-2">
@@ -87,14 +87,14 @@ export function CookieBanner() {
                                 <Button
                                     variant="outline"
                                     onClick={handleCustomize}
-                                    className="text-sm whitespace-nowrap border-2 border-slate-600 text-slate-300 hover:text-white hover:border-teal-500/50 hover:bg-teal-500/10 transition px-4 py-2 flex items-center justify-center gap-2 order-2 sm:order-1"
+                                    className="text-sm whitespace-nowrap border-2 border-slate-600 text-slate-300 hover:text-black hover:border-teal-500/50 hover:bg-teal-500/10 transition px-4 py-2 flex items-center justify-center gap-2 order-2 sm:order-1"
                                 >
                                     <Settings className="w-4 h-4" />
                                     Customize
                                 </Button>
                                 <Button
                                     onClick={handleAccept}
-                                    className="text-sm font-semibold whitespace-nowrap bg-gradient-to-r from-teal-500 to-purple-500 hover:from-teal-500/90 hover:to-purple-500/90 text-white shadow-lg shadow-teal-500/30 hover:shadow-teal-500/40 transition px-5 py-2 order-1 sm:order-2"
+                                    className="text-sm font-semibold whitespace-nowrap bg-gradient-to-r from-teal-500 to-purple-500 hover:from-teal-500/90 hover:to-purple-500/90 text-black shadow-lg shadow-teal-500/30 hover:shadow-teal-500/40 transition px-5 py-2 order-1 sm:order-2"
                                 >
                                     Accept All
                                 </Button>
@@ -110,18 +110,18 @@ export function CookieBanner() {
                                 className="mt-4 pt-4 border-t border-slate-700/50"
                             >
                                 <div className="space-y-3">
-                                    <h4 className="text-sm font-semibold text-white mb-3">Cookie Preferences</h4>
+                                    <h4 className="text-sm font-semibold text-black mb-3">Cookie Preferences</h4>
                                     <div className="space-y-3">
                                         <div className="flex items-center justify-between p-3 bg-slate-800/50 rounded-lg">
                                             <div>
-                                                <p className="text-sm font-medium text-white">Essential Cookies</p>
+                                                <p className="text-sm font-medium text-black">Essential Cookies</p>
                                                 <p className="text-xs text-slate-400 mt-1">Required for the site to function properly</p>
                                             </div>
                                             <div className="text-sm text-slate-400">Always Active</div>
                                         </div>
                                         <div className="flex items-center justify-between p-3 bg-slate-800/50 rounded-lg">
                                             <div>
-                                                <p className="text-sm font-medium text-white">Analytics Cookies</p>
+                                                <p className="text-sm font-medium text-black">Analytics Cookies</p>
                                                 <p className="text-xs text-slate-400 mt-1">Help us understand how visitors interact with our site</p>
                                             </div>
                                             <label className="relative inline-flex items-center cursor-pointer">
@@ -131,7 +131,7 @@ export function CookieBanner() {
                                         </div>
                                         <div className="flex items-center justify-between p-3 bg-slate-800/50 rounded-lg">
                                             <div>
-                                                <p className="text-sm font-medium text-white">Advertising Cookies</p>
+                                                <p className="text-sm font-medium text-black">Advertising Cookies</p>
                                                 <p className="text-xs text-slate-400 mt-1">Used to deliver personalized ads</p>
                                             </div>
                                             <label className="relative inline-flex items-center cursor-pointer">
@@ -144,13 +144,13 @@ export function CookieBanner() {
                                         <Button
                                             variant="outline"
                                             onClick={() => setShowCustomize(false)}
-                                            className="flex-1 border-slate-600 text-slate-300 hover:text-white hover:border-slate-500"
+                                            className="flex-1 border-slate-600 text-slate-300 hover:text-black hover:border-slate-500"
                                         >
                                             Cancel
                                         </Button>
                                         <Button
                                             onClick={handleSaveCustomize}
-                                            className="flex-1 bg-gradient-to-r from-teal-500 to-purple-500 hover:from-teal-500/90 hover:to-purple-500/90 text-white"
+                                            className="flex-1 bg-gradient-to-r from-teal-500 to-purple-500 hover:from-teal-500/90 hover:to-purple-500/90 text-black"
                                         >
                                             Save Preferences
                                         </Button>

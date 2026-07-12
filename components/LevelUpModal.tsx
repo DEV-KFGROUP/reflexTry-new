@@ -96,7 +96,7 @@ export function LevelUpModal() {
                         <h2 className="text-3xl font-black italic tracking-tighter text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 mb-2">
                             LEVEL UP!
                         </h2>
-                        <div className="text-6xl font-black text-white mb-2 drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]">
+                        <div className="text-6xl font-black text-black mb-2 drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]">
                             {levelData.level}
                         </div>
                         <p className="text-gray-400 mb-6 uppercase tracking-widest text-sm font-bold">
@@ -115,7 +115,7 @@ export function LevelUpModal() {
 
                         <button
                             onClick={() => setLevelData(null)}
-                            className="w-full py-3 bg-gradient-to-r from-teal-500 to-purple-500 text-white font-bold rounded-xl hover:opacity-90 transition-opacity active:scale-95"
+                            className="w-full py-3 bg-gradient-to-r from-teal-500 to-purple-500 text-black font-bold rounded-xl hover:opacity-90 transition-opacity active:scale-95"
                         >
                             AWESOME!
                         </button>

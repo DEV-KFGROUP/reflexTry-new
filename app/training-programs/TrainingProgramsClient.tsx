@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Target, Zap, Brain, Trophy, TrendingUp, Clock, Award, CheckCircle2 } from "lucide-react";
+import { Target, Zap, Brain, Trophy, TrendingUp, Clock, Award, CheckCircle2, Sparkles, Dumbbell } from "lucide-react";
 import Link from "next/link";
 
 interface Program {
@@ -233,247 +233,178 @@ const programs: Program[] = [
     }
 ];
 
-export default function TrainingProgramsClient() {
+const FloatingBackground = () => {
     return (
-        <div className="bg-background py-12 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-6xl mx-auto">
-                {/* Header */}
-                <div className="text-center mb-12">
+        <div className="absolute inset-0 overflow-hidden pointer-events-none z-[-1] rounded-3xl">
+            <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-500/20 rounded-full blur-[100px] animate-pulse" />
+            <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-indigo-500/20 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '2s' }} />
+            
+            <motion.div
+                animate={{ y: [0, -20, 0], rotate: [0, 10, 0] }}
+                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute top-[15%] left-[5%] opacity-20"
+            >
+                <Dumbbell className="w-32 h-32 text-blue-400 drop-shadow-[0_0_15px_rgba(96,165,250,0.8)]" />
+            </motion.div>
+
+            <motion.div
+                animate={{ y: [0, 30, 0], rotate: [0, -15, 0] }}
+                transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute bottom-[20%] right-[5%] opacity-20"
+            >
+                <Trophy className="w-40 h-40 text-indigo-400 drop-shadow-[0_0_15px_rgba(129,140,248,0.8)]" />
+            </motion.div>
+        </div>
+    );
+};
+
+export default function TrainingProgramsClient() {
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: { staggerChildren: 0.1 }
+        }
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0 }
+    };
+
+    return (
+        <div className="bg-background py-8 px-4 sm:px-6 lg:px-8 min-h-screen overflow-hidden relative">
+            <motion.div 
+                initial="hidden"
+                animate="visible"
+                variants={containerVariants}
+                className="max-w-7xl mx-auto space-y-12 relative z-10"
+            >
+                {/* Header Section */}
+                <motion.div variants={itemVariants} className="text-center space-y-4 mb-12 relative z-10">
                     <motion.div
-                        initial={{ scale: 0 }}
-                        animate={{ scale: 1 }}
-                        className="inline-block p-4 rounded-full bg-white/5 border border-white/10 mb-6"
+                        initial={{ scale: 0, rotate: -180 }}
+                        animate={{ scale: 1, rotate: 0 }}
+                        transition={{ type: "spring", stiffness: 200, damping: 20 }}
+                        className="inline-block relative mb-4"
+                        suppressHydrationWarning
                     >
-                        <Trophy className="w-12 h-12 text-amber-500" />
+                        <div className="absolute inset-0 bg-blue-500/30 blur-2xl rounded-full" />
+                        <div className="relative p-4 rounded-full bg-white/5 border border-black/10 dark:border-white/10 backdrop-blur-md shadow-[0_0_30px_rgba(59,130,246,0.2)]">
+                            <Dumbbell className="w-12 h-12 text-blue-400 drop-shadow-[0_0_10px_rgba(96,165,250,0.8)]" />
+                        </div>
                     </motion.div>
-                    <h1
-                        className="text-4xl md:text-5xl font-bold mb-4"
-                        style={{
-                            background: 'linear-gradient(to right, #00f0ff, #9d00ff)',
-                            WebkitBackgroundClip: 'text',
-                            WebkitTextFillColor: 'transparent',
-                            backgroundClip: 'text',
-                        }}
-                    >
-                        Structured Training Programs
-                    </h1>
-                    <p className="text-gray-400 text-lg max-w-3xl mx-auto">
-                        Follow our evidence-based training programs designed for specific goals. Each program provides a structured path to cognitive improvement with daily schedules and expert guidance.
+                    
+                    <div className="inline-block relative">
+                        <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-500 blur-2xl opacity-30 animate-pulse" />
+                        <h1 
+                            className="text-4xl md:text-5xl lg:text-6xl font-black bg-gradient-to-br from-slate-900 via-slate-800 to-slate-600 dark:from-blue-400 dark:via-indigo-400 dark:to-indigo-500 bg-clip-text text-transparent inline-flex items-center gap-3 relative z-10 drop-shadow-sm"
+                            suppressHydrationWarning
+                        >
+                            <Sparkles className="w-10 h-10 text-blue-400" />
+                            Training Programs
+                        </h1>
+                    </div>
+                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-medium">
+                        Structured, goal-oriented programs to systematically improve your cognitive performance.
                     </p>
-                </div>
+                    <p className="text-md text-muted-foreground/80 max-w-3xl mx-auto">
+                        Randomly playing games provides limited benefits. To truly enhance neuroplasticity, you need structured progressive overload. Choose a program below and stick to the routine for measurable results.
+                    </p>
+                </motion.div>
 
-                {/* Programs */}
-                {programs.map((program, index) => (
-                    <motion.div
-                        key={program.title}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: index * 0.1 }}
-                        className="bg-white/5 border border-white/10 rounded-2xl p-8 mb-8"
-                    >
-                        {/* Program Header */}
-                        <div className="mb-6">
-                            <div className="flex items-start justify-between mb-4">
-                                <div>
-                                    <h2 className="text-3xl font-bold text-white mb-2">{program.title}</h2>
-                                    <p className="text-gray-300 leading-relaxed">{program.description}</p>
-                                </div>
-                            </div>
-                            <div className="flex flex-wrap gap-4 text-sm">
-                                <div className="flex items-center gap-2 px-4 py-2 bg-teal-500/20 border border-teal-500/30 rounded-lg">
-                                    <Clock className="w-4 h-4 text-teal-500" />
-                                    <span className="text-teal-500 font-semibold">{program.duration}</span>
-                                </div>
-                                <div className="flex items-center gap-2 px-4 py-2 bg-purple-500/20 border border-purple-500/30 rounded-lg">
-                                    <Target className="w-4 h-4 text-purple-500" />
-                                    <span className="text-purple-500 font-semibold">{program.level}</span>
-                                </div>
-                            </div>
-                        </div>
+                {/* Main Glassmorphic Container */}
+                <motion.div 
+                    variants={itemVariants}
+                    className="relative bg-white/40 dark:bg-black/40 backdrop-blur-3xl border border-black/10 dark:border-white/10 rounded-3xl p-4 md:p-8 shadow-[0_0_50px_rgba(59,130,246,0.1)] z-10 space-y-12"
+                >
+                    <FloatingBackground />
 
-                        {/* Goals */}
-                        <div className="mb-6">
-                            <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                                <Trophy className="w-5 h-5 text-amber-500" />
-                                Program Goals
-                            </h3>
-                            <div className="grid md:grid-cols-2 gap-3">
-                                {program.goals.map((goal, idx) => (
-                                    <div key={idx} className="flex items-start gap-3 bg-white/5 border border-white/10 rounded-lg p-3">
-                                        <CheckCircle2 className="w-5 h-5 text-teal-500 flex-shrink-0 mt-0.5" />
-                                        <span className="text-gray-300 text-sm">{goal}</span>
+                    <div className="grid gap-12">
+                        {programs.map((program, index) => (
+                            <motion.div
+                                key={program.title}
+                                variants={itemVariants}
+                                className="bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-3xl p-6 md:p-8 shadow-lg hover:shadow-[0_0_30px_rgba(59,130,246,0.15)] transition-all duration-300 relative overflow-hidden"
+                            >
+                                <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-blue-500 to-indigo-500" />
+                                
+                                <div className="grid md:grid-cols-3 gap-8">
+                                    <div className="md:col-span-1 space-y-6">
+                                        <div>
+                                            <h2 className="text-2xl font-bold text-foreground mb-2">{program.title}</h2>
+                                            <p className="text-muted-foreground text-sm">{program.description}</p>
+                                        </div>
+                                        
+                                        <div className="flex flex-col gap-3">
+                                            <div className="flex items-center gap-2 text-sm text-foreground bg-white/5 px-3 py-2 rounded-lg border border-black/10 dark:border-white/10">
+                                                <Clock className="w-4 h-4 text-blue-400" />
+                                                <span>Duration: <strong className="text-blue-500">{program.duration}</strong></span>
+                                            </div>
+                                            <div className="flex items-center gap-2 text-sm text-foreground bg-white/5 px-3 py-2 rounded-lg border border-black/10 dark:border-white/10">
+                                                <Target className="w-4 h-4 text-indigo-400" />
+                                                <span>Level: <strong className="text-indigo-500">{program.level}</strong></span>
+                                            </div>
+                                        </div>
+
+                                        <div className="space-y-3">
+                                            <h3 className="font-bold text-foreground flex items-center gap-2">
+                                                <Award className="w-5 h-5 text-amber-500" />
+                                                Program Goals
+                                            </h3>
+                                            <ul className="space-y-2">
+                                                {program.goals.map((goal, i) => (
+                                                    <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
+                                                        <CheckCircle2 className="w-4 h-4 text-emerald-500 mt-0.5 flex-shrink-0" />
+                                                        <span>{goal}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
                                     </div>
-                                ))}
-                            </div>
-                        </div>
 
-                        {/* Schedule */}
-                        <div className="mb-6">
-                            <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                                <TrendingUp className="w-5 h-5 text-purple-500" />
-                                Training Schedule
-                            </h3>
-                            <div className="space-y-4">
-                                {program.schedule.map((week, idx) => (
-                                    <div key={idx} className="bg-white/5 border border-white/10 rounded-xl p-4">
-                                        <h4 className="text-lg font-semibold text-teal-500 mb-3">{week.day}</h4>
-                                        <ul className="space-y-2">
-                                            {week.activities.map((activity, actIdx) => (
-                                                <li key={actIdx} className="flex items-start gap-3 text-gray-300 text-sm">
-                                                    <span className="text-teal-500 mt-1">•</span>
-                                                    <span>{activity}</span>
-                                                </li>
+                                    <div className="md:col-span-2 space-y-6">
+                                        <h3 className="font-bold text-foreground flex items-center gap-2 text-lg">
+                                            <TrendingUp className="w-5 h-5 text-blue-500" />
+                                            Training Schedule
+                                        </h3>
+                                        <div className="grid sm:grid-cols-2 gap-4">
+                                            {program.schedule.map((week, i) => (
+                                                <div key={i} className="bg-white/5 border border-black/10 dark:border-white/10 rounded-2xl p-4">
+                                                    <h4 className="font-bold text-blue-500 mb-3 text-sm uppercase tracking-wider">{week.day}</h4>
+                                                    <ul className="space-y-2">
+                                                        {week.activities.map((activity, j) => (
+                                                            <li key={j} className="text-sm text-muted-foreground flex items-start gap-2">
+                                                                <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-1.5 flex-shrink-0" />
+                                                                <span className="leading-tight">{activity}</span>
+                                                            </li>
+                                                        ))}
+                                                    </ul>
+                                                </div>
                                             ))}
-                                        </ul>
-                                    </div>
-                                ))}
-                            </div>
-                        </div>
+                                        </div>
 
-                        {/* Tips */}
-                        <div>
-                            <h3 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
-                                <Zap className="w-5 h-5 text-amber-500" />
-                                Success Tips
-                            </h3>
-                            <div className="grid md:grid-cols-2 gap-3">
-                                {program.tips.map((tip, idx) => (
-                                    <div key={idx} className="flex items-start gap-3 bg-gradient-to-r from-amber-500/10 to-amber-500/5 border border-amber-500/20 rounded-lg p-3">
-                                        <span className="text-amber-500 text-lg flex-shrink-0">💡</span>
-                                        <span className="text-gray-300 text-sm">{tip}</span>
+                                        <div className="mt-6 bg-blue-500/10 border border-blue-500/20 rounded-2xl p-5">
+                                            <h3 className="font-bold text-foreground flex items-center gap-2 mb-3">
+                                                <Brain className="w-5 h-5 text-blue-500" />
+                                                Pro Tips for Success
+                                            </h3>
+                                            <ul className="grid sm:grid-cols-2 gap-2">
+                                                {program.tips.map((tip, i) => (
+                                                    <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
+                                                        <Zap className="w-4 h-4 text-amber-500 flex-shrink-0" />
+                                                        <span>{tip}</span>
+                                                    </li>
+                                                ))}
+                                            </ul>
+                                        </div>
                                     </div>
-                                ))}
-                            </div>
-                        </div>
-                    </motion.div>
-                ))}
-
-                {/* General Guidelines */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.5 }}
-                    className="bg-white/5 border border-white/10 rounded-2xl p-8 mb-8"
-                >
-                    <h2 className="text-2xl font-bold text-white mb-6">General Training Guidelines</h2>
-                    <div className="grid md:grid-cols-2 gap-6">
-                        <div>
-                            <h3 className="text-lg font-semibold text-teal-500 mb-3">Before You Start</h3>
-                            <ul className="space-y-2 text-gray-300 text-sm">
-                                <li className="flex items-start gap-2">
-                                    <span className="text-teal-500 mt-1">•</span>
-                                    <span>Establish baseline scores for all tools you'll use</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-teal-500 mt-1">•</span>
-                                    <span>Set specific, measurable goals</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-teal-500 mt-1">•</span>
-                                    <span>Schedule training at consistent times daily</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-teal-500 mt-1">•</span>
-                                    <span>Prepare a quiet, distraction-free training environment</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 className="text-lg font-semibold text-purple-500 mb-3">During Training</h3>
-                            <ul className="space-y-2 text-gray-300 text-sm">
-                                <li className="flex items-start gap-2">
-                                    <span className="text-purple-500 mt-1">•</span>
-                                    <span>Focus fully on each exercise - avoid multitasking</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-purple-500 mt-1">•</span>
-                                    <span>Prioritize accuracy over speed initially</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-purple-500 mt-1">•</span>
-                                    <span>Take short breaks between intense sessions</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-purple-500 mt-1">•</span>
-                                    <span>Track your scores after each session</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 className="text-lg font-semibold text-amber-500 mb-3">Progress Tracking</h3>
-                            <ul className="space-y-2 text-gray-300 text-sm">
-                                <li className="flex items-start gap-2">
-                                    <span className="text-amber-500 mt-1">•</span>
-                                    <span>Record scores weekly to monitor improvement</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-amber-500 mt-1">•</span>
-                                    <span>Compare current performance to baseline</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-amber-500 mt-1">•</span>
-                                    <span>Adjust difficulty as you improve</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-amber-500 mt-1">•</span>
-                                    <span>Celebrate milestones to maintain motivation</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 className="text-lg font-semibold text-red-400 mb-3">Lifestyle Support</h3>
-                            <ul className="space-y-2 text-gray-300 text-sm">
-                                <li className="flex items-start gap-2">
-                                    <span className="text-red-400 mt-1">•</span>
-                                    <span>Get 7-9 hours of quality sleep nightly</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-red-400 mt-1">•</span>
-                                    <span>Exercise regularly (150 min/week minimum)</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-red-400 mt-1">•</span>
-                                    <span>Maintain a brain-healthy diet</span>
-                                </li>
-                                <li className="flex items-start gap-2">
-                                    <span className="text-red-400 mt-1">•</span>
-                                    <span>Manage stress through meditation or relaxation</span>
-                                </li>
-                            </ul>
-                        </div>
+                                </div>
+                            </motion.div>
+                        ))}
                     </div>
                 </motion.div>
-
-                {/* Call to Action */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.6 }}
-                    className="bg-gradient-to-r from-teal-500/20 to-purple-500/20 border border-teal-500/30 rounded-2xl p-8 text-center"
-                >
-                    <Award className="w-12 h-12 text-teal-500 mx-auto mb-4" />
-                    <h2 className="text-2xl font-bold text-white mb-4">
-                        Ready to Start Your Training Journey?
-                    </h2>
-                    <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                        Choose a program that matches your goals and start training today. Consistency is key—commit to the program and watch your cognitive abilities soar.
-                    </p>
-                    <div className="flex flex-wrap justify-center gap-4">
-                        <Link
-                            href="/tools"
-                            className="px-6 py-3 bg-teal-500 text-black rounded-lg font-semibold hover:bg-amber-500 transition-colors"
-                        >
-                            Start Training Now
-                        </Link>
-                        <Link
-                            href="/faq"
-                            className="px-6 py-3 bg-white/10 text-white border border-white/20 rounded-lg font-semibold hover:bg-white/20 transition-colors"
-                        >
-                            View FAQ
-                        </Link>
-                    </div>
-                </motion.div>
-            </div>
+            </motion.div>
         </div>
     );
 }

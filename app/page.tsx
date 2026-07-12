@@ -4,7 +4,7 @@ import { HeroSection } from "./HeroSection";
 import { getHomeMetadata } from "@/lib/seo-utils";
 import { StructuredData } from "@/components/StructuredData";
 import { SchemaInjector } from "@/components/SchemaInjector";
-import { generateWebsiteStructuredData, generateFAQPageSchema } from "@/lib/structured-data";
+import { generateWebsiteStructuredData, generateFAQPageSchema, generateBreadcrumbStructuredData, generateBlogPostingSchema } from "@/lib/structured-data";
 
 export async function generateMetadata(): Promise<Metadata> {
     return getHomeMetadata();
@@ -27,10 +27,19 @@ export default function Home() {
         }
     ]);
 
+    const breadcrumbSchema = generateBreadcrumbStructuredData([
+        { name: "Home", url: "/" }
+    ]);
+    const blogPostingSchema = generateBlogPostingSchema(
+        "Sharpen Your Mind: Free Brain Training Games & Reflex Tests",
+        "Improve your cognitive skills with free brain training games. Test your reaction time, memory, typing speed, and accuracy to track your progress.",
+        "/"
+    );
+
     return (
         <>
             <StructuredData type="WebSite" data={structuredData} />
-            <SchemaInjector schemas={[faqSchema]} />
+            <SchemaInjector schemas={[faqSchema, breadcrumbSchema, blogPostingSchema]} />
             {/* Server-rendered hero section for immediate LCP */}
             <HeroSection />
             {/* Client component for interactive tools grid */}

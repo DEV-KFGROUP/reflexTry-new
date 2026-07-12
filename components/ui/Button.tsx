@@ -42,7 +42,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         };
 
         const variantClasses = {
-            primary: "text-white font-semibold border border-slate-900 hover:bg-slate-800",
+            primary: "text-black font-semibold border border-slate-900 hover:bg-slate-800",
             secondary: "text-slate-900 font-semibold border border-border hover:bg-slate-50",
             outline: "border border-border text-slate-700 hover:bg-slate-50 bg-transparent font-medium",
             ghost: "text-slate-600 hover:text-slate-900 hover:bg-slate-100 bg-transparent font-medium",

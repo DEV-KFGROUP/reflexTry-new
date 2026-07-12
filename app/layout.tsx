@@ -26,7 +26,7 @@ export async function generateMetadata(): Promise<Metadata> {
     // Use canonical www version
     metadataBase: getBaseUrlObject(),
     title: {
-      default: "Reflextry - Test Your Accuracy & Reflexes | Free Brain Training Games",
+      default: "Brain Training & Reflex Games | Reflextry",
       template: "%s | Reflextry"
     },
     description: "Test your accuracy and reflexes with our Gen Z tools. Free online brain training games, reaction time tests, typing speed tests, memory games, and more.",
@@ -338,7 +338,7 @@ export default async function RootLayout({
               .mb-2 {
                 margin-bottom: 0.5rem;
               }
-              .text-white {
+              .text-black {
                 color: #ffffff;
               }
               .items-center {

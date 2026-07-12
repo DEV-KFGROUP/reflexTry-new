@@ -49,13 +49,13 @@ export class ErrorBoundary extends Component<Props, State> {
                             <AlertTriangle className="w-12 h-12 text-red-500" />
                         </div>
                         <div>
-                            <h1 className="text-3xl font-bold text-white mb-2">Oops! Something went wrong</h1>
+                            <h1 className="text-3xl font-bold text-black mb-2">Oops! Something went wrong</h1>
                             <p className="text-gray-400 mb-4">
                                 We encountered an unexpected error. Don't worry, your data is safe.
                             </p>
                             {this.state.error && (
                                 <details className="text-left bg-white/5 rounded-lg p-4 text-sm text-gray-400">
-                                    <summary className="cursor-pointer text-white mb-2">Error Details</summary>
+                                    <summary className="cursor-pointer text-black mb-2">Error Details</summary>
                                     <pre className="overflow-auto">{this.state.error.message}</pre>
                                 </details>
                             )}

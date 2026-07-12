@@ -65,7 +65,7 @@ export function XPProgressBar({ showCompact = false, className = "" }: XPProgres
             <div className={`flex items-center gap-2 ${className}`}>
                 <div className="flex items-center gap-1">
                     <Trophy className="w-4 h-4 text-yellow-400" />
-                    <span className="text-sm font-bold text-white">Lv.{displayProgress.level}</span>
+                    <span className="text-sm font-bold text-black">Lv.{displayProgress.level}</span>
                 </div>
                 <div className="flex-1 bg-white/10 rounded-full h-2 overflow-hidden relative">
                     <motion.div
@@ -90,7 +90,7 @@ export function XPProgressBar({ showCompact = false, className = "" }: XPProgres
                     </div>
                 </div>
                 <div className="text-right">
-                    <div className="text-sm font-bold text-white">{displayProgress.totalXP.toLocaleString()} XP</div>
+                    <div className="text-sm font-bold text-black">{displayProgress.totalXP.toLocaleString()} XP</div>
                     <div className="text-xs text-gray-400">{displayProgress.xpToNextLevel.toLocaleString()} to next level</div>
                 </div>
             </div>

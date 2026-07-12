@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Button } from "@/components/ui/Button";
 import Link from "next/link";
 import {
   ArrowRight,
@@ -12,45 +11,33 @@ import {
   Brain,
   Gauge,
   Gamepad2,
-  Trophy,
+  CheckCircle2,
   Sparkles,
-  Star
 } from "lucide-react";
-import { GameBackground } from "@/components/GameBackground";
+
+const FloatingBackground = () => {
+    return (
+        <div className="absolute inset-0 overflow-hidden pointer-events-none z-[-1]">
+            <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-500/10 rounded-full blur-[100px] animate-pulse" />
+            <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-purple-500/10 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '2s' }} />
+        </div>
+    );
+};
 
 export default function HomeClient() {
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: { duration: 0.5 },
-    },
-  };
-
-
-
-  // Arena-themed tool categories with unique colors
   const toolCategories = [
     {
       id: "memory",
       icon: Brain,
       arenaName: "Memory Arena",
-      color: "text-foreground",
-      bgGlow: "from-slate-100 to-slate-50",
-      borderColor: "border-border hover:border-slate-300",
-      shadowColor: "hover:shadow-md",
-      xpRange: "50-200",
+      accentColor: "#3b82f6",
+      accentBg: "bg-blue-500/10",
+      accentBorder: "border-blue-500/30",
+      accentText: "text-blue-500",
+      accentGlow: "hover:shadow-[0_0_24px_rgba(59,130,246,0.15)]",
+      topBorder: "via-blue-500/50",
+      xpRange: "50–200",
+      tag: "COGNITION",
       tools: [
         { id: "sequence", href: "/memory/sequence", icon: Zap, difficulty: "Medium" },
         { id: "number", href: "/memory/number", icon: Keyboard, difficulty: "Hard" },
@@ -60,17 +47,20 @@ export default function HomeClient() {
         { id: "symbol", href: "/memory/symbol", icon: Target, difficulty: "Hard" },
         { id: "word-recall", href: "/memory/word-recall", icon: Target, difficulty: "Hard" },
         { id: "card-match", href: "/memory/card-match", icon: Sparkles, difficulty: "Easy" },
-      ]
+      ],
     },
     {
       id: "reflex",
       icon: Zap,
       arenaName: "Reflex Arena",
-      color: "text-foreground",
-      bgGlow: "from-slate-100 to-slate-50",
-      borderColor: "border-border hover:border-slate-300",
-      shadowColor: "hover:shadow-md",
-      xpRange: "75-300",
+      accentColor: "#f59e0b",
+      accentBg: "bg-amber-500/10",
+      accentBorder: "border-amber-500/30",
+      accentText: "text-amber-500",
+      accentGlow: "hover:shadow-[0_0_24px_rgba(245,158,11,0.15)]",
+      topBorder: "via-amber-500/50",
+      xpRange: "75–300",
+      tag: "REACTION",
       tools: [
         { id: "reaction", href: "/reflex/reaction", icon: Zap, difficulty: "Easy" },
         { id: "sound", href: "/reflex/sound", icon: Activity, difficulty: "Medium" },
@@ -81,17 +71,20 @@ export default function HomeClient() {
         { id: "sequence-reaction", href: "/reflex/sequence-reaction", icon: Activity, difficulty: "Hard" },
         { id: "whack-a-mole", href: "/reflex/whack-a-mole", icon: Target, difficulty: "Easy" },
         { id: "color-switch", href: "/reflex/color-switch", icon: Brain, difficulty: "Medium" },
-      ]
+      ],
     },
     {
       id: "speed",
       icon: Gauge,
       arenaName: "Speed Arena",
-      color: "text-foreground",
-      bgGlow: "from-slate-100 to-slate-50",
-      borderColor: "border-border hover:border-slate-300",
-      shadowColor: "hover:shadow-md",
-      xpRange: "100-500",
+      accentColor: "#f97316",
+      accentBg: "bg-orange-500/10",
+      accentBorder: "border-orange-500/30",
+      accentText: "text-orange-500",
+      accentGlow: "hover:shadow-[0_0_24px_rgba(249,115,22,0.15)]",
+      topBorder: "via-orange-500/50",
+      xpRange: "100–500",
+      tag: "VELOCITY",
       tools: [
         { id: "cps", href: "/speed/click", icon: Activity, difficulty: "Easy" },
         { id: "math", href: "/speed/math", icon: Keyboard, difficulty: "Hard" },
@@ -100,17 +93,20 @@ export default function HomeClient() {
         { id: "grid", href: "/speed/grid", icon: Target, difficulty: "Hard" },
         { id: "number-rush", href: "/speed/number-rush", icon: Target, difficulty: "Medium" },
         { id: "quick-sort", href: "/speed/quick-sort", icon: ArrowRight, difficulty: "Medium" },
-      ]
+      ],
     },
     {
       id: "gaming",
       icon: Gamepad2,
       arenaName: "Gaming Arena",
-      color: "text-foreground",
-      bgGlow: "from-slate-100 to-slate-50",
-      borderColor: "border-border hover:border-slate-300",
-      shadowColor: "hover:shadow-md",
-      xpRange: "150-400",
+      accentColor: "#a855f7",
+      accentBg: "bg-purple-500/10",
+      accentBorder: "border-purple-500/30",
+      accentText: "text-purple-500",
+      accentGlow: "hover:shadow-[0_0_24px_rgba(168,85,247,0.15)]",
+      topBorder: "via-purple-500/50",
+      xpRange: "150–400",
+      tag: "PERFORMANCE",
       tools: [
         { id: "aim", href: "/gaming/aim", icon: Target, difficulty: "Medium" },
         { id: "rpg", href: "/gaming/reaction", icon: Zap, difficulty: "Hard" },
@@ -119,17 +115,20 @@ export default function HomeClient() {
         { id: "stroop-drop", href: "/gaming/stroop-drop", icon: Brain, difficulty: "Hard" },
         { id: "flick-shot", href: "/gaming/flick-shot", icon: Target, difficulty: "Medium" },
         { id: "rhythm-tap", href: "/gaming/rhythm-tap", icon: Activity, difficulty: "Hard" },
-      ]
+      ],
     },
     {
       id: "accuracy",
       icon: Target,
       arenaName: "Accuracy Arena",
-      color: "text-foreground",
-      bgGlow: "from-slate-100 to-slate-50",
-      borderColor: "border-border hover:border-slate-300",
-      shadowColor: "hover:shadow-md",
-      xpRange: "80-350",
+      accentColor: "#10b981",
+      accentBg: "bg-emerald-500/10",
+      accentBorder: "border-emerald-500/30",
+      accentText: "text-emerald-500",
+      accentGlow: "hover:shadow-[0_0_24px_rgba(16,185,129,0.15)]",
+      topBorder: "via-emerald-500/50",
+      xpRange: "80–350",
+      tag: "PRECISION",
       tools: [
         { id: "image", href: "/accuracy/image-recognition", icon: Target, difficulty: "Hard" },
         { id: "data", href: "/accuracy/data", icon: Keyboard, difficulty: "Expert" },
@@ -137,127 +136,54 @@ export default function HomeClient() {
         { id: "precision-click", href: "/accuracy/precision-click", icon: Target, difficulty: "Medium" },
         { id: "angle-estimation", href: "/accuracy/angle-estimation", icon: Target, difficulty: "Hard" },
         { id: "color-match", href: "/accuracy/color-match", icon: Target, difficulty: "Medium" },
-      ]
-    }
+      ],
+    },
   ];
 
   const difficultyColors: Record<string, string> = {
-    "Easy": "text-green-400 bg-green-400/10 border-green-400/30",
-    "Medium": "text-yellow-400 bg-yellow-400/10 border-yellow-400/30",
-    "Hard": "text-orange-400 bg-orange-400/10 border-orange-400/30",
-    "Expert": "text-red-400 bg-red-400/10 border-red-400/30",
+    Easy: "text-emerald-500 bg-emerald-500/10 border-emerald-500/30",
+    Medium: "text-amber-500 bg-amber-500/10 border-amber-500/30",
+    Hard: "text-orange-500 bg-orange-500/10 border-orange-500/30",
+    Expert: "text-rose-500 bg-rose-500/10 border-rose-500/30",
   };
 
   return (
-    <GameBackground variant="default" showParticles={false} showGrid={false}>
-      <div className="px-4 sm:px-6 lg:px-8 pt-8">
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="max-w-5xl mx-auto space-y-6"
-        >
-          {/* Feature Cards - Game Quest Style */}
-          <h2 className="sr-only">Key Features</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {[
-              { icon: Brain, title: "Memory Games", desc: "Challenge your working memory with pattern recognition and sequence tests.", color: "text-foreground", glow: "hover:shadow-md" },
-              { icon: Zap, title: "Reflex Tests", desc: "Measure and improve your reaction time with visual and audio challenges.", color: "text-foreground", glow: "hover:shadow-md" },
-              { icon: Gauge, title: "Speed Challenges", desc: "Test your typing speed, clicking speed, and mental math abilities.", color: "text-foreground", glow: "hover:shadow-md" },
-              { icon: Target, title: "Accuracy & Gaming", desc: "Improve precision with aim training and image recognition exercises.", color: "text-foreground", glow: "hover:shadow-md" },
-            ].map((feature) => (
-              <motion.div
-                key={feature.title}
-                variants={itemVariants}
-                className={`group relative space-y-2 p-5 rounded-2xl bg-white border border-border transition duration-200 ${feature.glow}`}
-              >
-                <h3 className={`text-lg font-bold ${feature.color} flex items-center gap-2 relative z-10`}>
-                  <feature.icon className="w-5 h-5 text-muted-foreground" aria-hidden="true" />
-                  {feature.title}
-                </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed relative z-10">
-                  {feature.desc}
-                </p>
-              </motion.div>
-            ))}
-          </div>
-
-          {/* Game Progress Bar Style Info */}
-          <motion.div variants={itemVariants} className="pt-3 border-t border-border">
-            <div className="flex items-center justify-center gap-4 flex-wrap">
-              {[
-                { icon: Trophy, text: "Track Progress" },
-                { icon: Star, text: "Compete on Leaderboards" },
-                { icon: Sparkles, text: "Unlock Achievements" },
-                { icon: Zap, text: "Daily Challenges" },
-              ].map((item) => (
-                <span key={item.text} className="flex items-center gap-1.5 text-sm text-muted-foreground">
-                  <item.icon className="w-4 h-4 text-muted-foreground" />
-                  {item.text}
-                </span>
-              ))}
-            </div>
-          </motion.div>
-        </motion.div>
-
-        {/* CTA Buttons - Game Style */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center max-w-4xl mx-auto mt-8"
-        >
-          <motion.div variants={itemVariants}>
-            <Link href="/tools">
-              <Button variant="primary" size="lg" className="w-full sm:w-auto" aria-label="Start Testing">
-                <Gamepad2 className="w-5 h-5" />
-                Start Testing
-                <ArrowRight className="w-5 h-5" aria-hidden="true" />
-              </Button>
-            </Link>
-          </motion.div>
-          <motion.div variants={itemVariants}>
-            <Link
-              href="/leaderboard"
-              className="inline-flex items-center justify-center gap-2 px-8 py-4 text-lg rounded-xl font-semibold transition duration-200 cursor-pointer border border-border text-foreground bg-white hover:bg-slate-50 shadow-sm w-full sm:w-auto"
-            >
-              <Trophy className="w-5 h-5" />
-              View Leaderboard
-            </Link>
-          </motion.div>
-        </motion.div>
-      </div>
-
-      {/* Game Arenas - Tool Categories */}
-      <div className="w-full max-w-7xl mx-auto space-y-16 mt-16 mb-12 px-4 sm:px-6 lg:px-8">
+    <div className="bg-background min-h-screen overflow-hidden relative">
+      <FloatingBackground />
+      {/* ── Game Arenas ── */}
+      <div className="relative z-10 w-full max-w-7xl mx-auto space-y-16 pt-12 pb-20 px-4 sm:px-6 lg:px-8">
         {toolCategories.map((category, categoryIndex) => (
           <motion.div
             key={category.id}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: categoryIndex * 0.1 }}
+            transition={{ delay: categoryIndex * 0.08 }}
             viewport={{ once: true }}
             className="space-y-6"
           >
             {/* Arena Header */}
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-4">
-                <div className={`p-3 rounded-xl bg-white border ${category.borderColor}`}>
-                  <category.icon className={`w-8 h-8 ${category.color}`} />
+                <div
+                  className={`p-3 rounded-2xl ${category.accentBg} border ${category.accentBorder} shadow-sm backdrop-blur-sm`}
+                >
+                  <category.icon className={`w-8 h-8 ${category.accentText} drop-shadow-sm`} />
                 </div>
                 <div>
-                  <h2 className={`text-2xl md:text-3xl font-semibold ${category.color}`}>
+                  <div className={`text-[10px] font-bold tracking-widest uppercase mb-0.5 ${category.accentText} opacity-80`}>
+                    {category.tag}
+                  </div>
+                  <h2 className="text-2xl md:text-3xl font-bold text-foreground">
                     {category.arenaName}
                   </h2>
-                  <p className="text-sm text-muted-foreground">
-                    Brain Training Games • XP: {category.xpRange}
-                  </p>
                 </div>
               </div>
-              {/* Quest count badge */}
-              <div className={`hidden sm:flex items-center gap-2 px-4 py-2 rounded-full ${category.borderColor} border bg-white`}>
-                <span className="text-sm text-muted-foreground">{category.tools.length} Quests</span>
-              </div>
+              <Link 
+                  href={`/${category.id}`}
+                  className={`hidden sm:flex items-center gap-2 px-4 py-2 rounded-xl border ${category.accentBorder} ${category.accentBg} hover:bg-opacity-20 transition-all font-bold text-sm ${category.accentText}`}
+              >
+                  Enter Arena <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
 
             {/* Quest Cards Grid */}
@@ -265,82 +191,62 @@ export default function HomeClient() {
               {category.tools.map((tool, index) => (
                 <motion.div
                   key={tool.id}
-                  initial={{ opacity: 0, y: 20 }}
+                  initial={{ opacity: 0, y: 16 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.05 }}
+                  transition={{ delay: index * 0.04 }}
                   viewport={{ once: true }}
-                  className={`group relative p-5 rounded-2xl bg-white border ${category.borderColor} ${category.shadowColor} transition duration-200 cursor-pointer overflow-hidden`}
+                  className={`group relative p-5 rounded-3xl bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 ${category.accentGlow} hover:${category.accentBorder} transition-all duration-300 cursor-pointer overflow-hidden flex flex-col h-full`}
                 >
-                  <Link
-                    href={tool.href}
-                    className="absolute inset-0 z-10"
-                    aria-label={`${tool.id} challenge`}
-                  >
+                  <div className={`absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
+
+                  <Link href={tool.href} className="absolute inset-0 z-10" aria-label={`${tool.id} challenge`}>
                     <span className="sr-only">Start {tool.id} challenge</span>
                   </Link>
 
-                  <div className="relative z-0 space-y-3">
-                    {/* Icon and difficulty */}
+                  <div className="relative z-0 space-y-4 flex-1 flex flex-col">
                     <div className="flex items-start justify-between">
-                      <div className={`p-2 rounded-lg bg-secondary border ${category.borderColor}`}>
-                        <tool.icon className={`w-6 h-6 ${category.color}`} />
+                      <div
+                        className={`p-3 rounded-2xl ${category.accentBg} border ${category.accentBorder} group-hover:scale-110 transition-transform duration-300`}
+                      >
+                        <tool.icon className={`w-6 h-6 ${category.accentText} drop-shadow-sm`} />
                       </div>
-                      <span className={`text-xs px-2 py-1 rounded-full border ${difficultyColors[tool.difficulty]}`}>
+                      <span className={`text-[10px] font-bold px-2 py-1 rounded-full border ${difficultyColors[tool.difficulty]}`}>
                         {tool.difficulty}
                       </span>
                     </div>
 
-                    {/* Title and description */}
-                    <div>
-                      <h3 className="text-base font-semibold text-foreground mb-1 transition-colors capitalize">
-                        {tool.id.replace('-', ' ')}
+                    <div className="flex-1">
+                      <h3 className="text-base font-bold text-foreground mb-1 capitalize group-hover:text-foreground/90 transition-colors">
+                        {tool.id.replace(/-/g, " ")}
                       </h3>
-                      <p className="text-sm text-muted-foreground line-clamp-2">
-                        Challenge yourself in the {tool.id.replace('-', ' ')} arena and improve your skills.
+                      <p className="text-sm text-muted-foreground line-clamp-2 leading-relaxed">
+                        Challenge yourself in the {tool.id.replace(/-/g, " ")} arena and improve your skills.
                       </p>
                     </div>
 
-                    {/* Play indicator */}
-                    <div className="flex items-center justify-between pt-2 border-t border-border">
-                      <span className="text-xs text-muted-foreground/70">Start Quest</span>
-                      <ArrowRight className="w-4 h-4 text-muted-foreground group-hover:translate-x-1 transition" />
+                    <div className="flex items-center justify-between pt-3 border-t border-black/10 dark:border-white/10 mt-auto">
+                      <span className="text-xs font-bold text-muted-foreground tracking-wider uppercase">
+                        Start Quest
+                      </span>
+                      <ArrowRight
+                        className={`w-4 h-4 ${category.accentText} transform group-hover:translate-x-1 transition-transform`}
+                      />
                     </div>
                   </div>
                 </motion.div>
               ))}
             </div>
+            
+            {/* Mobile Link */}
+            <Link 
+                href={`/${category.id}`}
+                className={`sm:hidden flex justify-center items-center gap-2 mt-4 px-4 py-3 rounded-xl border ${category.accentBorder} ${category.accentBg} font-bold text-sm ${category.accentText}`}
+            >
+                Enter {category.arenaName} <ArrowRight className="w-4 h-4" />
+            </Link>
           </motion.div>
         ))}
       </div>
-
-      {/* Detailed Description & FAQ for SEO/AEO */}
-      <div className="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
-        <h2 className="text-3xl font-bold text-center mb-10 text-foreground">Frequently Asked Questions About Brain Training</h2>
-        <div className="space-y-8 text-left">
-          <div className="bg-white/60 border border-border p-6 rounded-2xl shadow-sm">
-            <h3 className="text-xl font-bold text-foreground mb-3">Does brain training actually work?</h3>
-            <p className="text-muted-foreground mb-3">Yes, regular engagement in cognitive tasks leverages neuroplasticity—the brain's ability to reorganize itself by forming new neural connections. Consistent practice with tools like our Sequence Memory or Reaction Time tests can lead to measurable improvements in those specific skills over time.</p>
-            <p className="text-muted-foreground">While it won't magically increase your overall IQ, it will sharpen the specific cognitive faculties (like working memory, visual discrimination, and fine motor skills) that you train.</p>
-          </div>
-          
-          <div className="bg-white/60 border border-border p-6 rounded-2xl shadow-sm">
-            <h3 className="text-xl font-bold text-foreground mb-3">How often should I use these cognitive training games?</h3>
-            <p className="text-muted-foreground">For optimal results, we suggest practicing for 10-15 minutes daily. Consistency is key in neuroplasticity. Use the Memory arena to improve retention, and the Speed arena to enhance quick decision-making.</p>
-          </div>
-
-          <div className="bg-white/60 border border-border p-6 rounded-2xl shadow-sm">
-            <h3 className="text-xl font-bold text-foreground mb-3">Who are these brain training tools for?</h3>
-            <p className="text-muted-foreground mb-3">Reflextry's suite of cognitive games is designed to benefit a wide variety of users, including:</p>
-            <ul className="list-disc pl-6 text-muted-foreground space-y-1">
-              <li><strong>Competitive Gamers:</strong> Using the Aim Trainer, Grid Click, and Flick Shot tools to warm up physical mechanics, hand-eye coordination, and peripheral vision before matches.</li>
-              <li><strong>Students & Professionals:</strong> Enhancing working memory, focus, and typing speed for better academic and workplace productivity.</li>
-              <li><strong>General Audience:</strong> Anyone looking to keep their mind sharp, challenge their reflexes, and track their cognitive performance over time.</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </GameBackground>
+    </div>
   );
 }
-
-

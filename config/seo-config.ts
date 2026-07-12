@@ -1,8 +1,8 @@
 export const SEO_CONFIGS = {
     // --- MEMORY TOOLS ---
     "sequence-memory": {
-        title: "Sequence Memory Test - Train Your Brain | Reflextry",
-        description: "Test your short-term memory with this Simon Says style game. Watch the pattern and repeat it. How long of a sequence can you remember? Free online memory training tool to improve working memory and cognitive function.",
+        title: "Sequence Memory Test - Train Your Brain",
+        description: "Improve working memory with our sequence recall game. Repeat the pattern to train your brain and boost cognitive function.",
         keywords: [
             "sequence memory test", "simon says game online", "memory training", "working memory test",
             "brain training games", "short term memory test", "pattern memory", "visual memory test",
@@ -20,8 +20,8 @@ export const SEO_CONFIGS = {
         ]
     },
     "number-memory": {
-        title: "Number Memory Test - Human Benchmark | Reflextry",
-        description: "How many digits can you memorize? The average person can remember 7. Challenge your brain with this number memory test. Free digit span test to measure working memory capacity and improve numeric recall.",
+        title: "Number Memory Test - Human Benchmark",
+        description: "Measure working memory with this number memory test. Challenge your digit span capacity and improve numeric recall.",
         keywords: [
             "number memory test", "digit span test", "human benchmark memory", "working memory capacity",
             "short term memory numbers", "memorize numbers", "brain test numbers", "cognitive assessment",
@@ -39,8 +39,8 @@ export const SEO_CONFIGS = {
         ]
     },
     "visual-memory": {
-        title: "Visual Memory Test - Spatial Recognition | Reflextry",
-        description: "Test your spatial memory. Memorize the grid pattern in seconds. Using this tool can help improve your visual processing and recall. Free visual memory training to enhance spatial awareness and pattern recognition.",
+        title: "Visual Memory Test - Spatial Recognition",
+        description: "Enhance spatial awareness and pattern recognition. Test your visual memory by recalling grid patterns in seconds.",
         keywords: [
             "visual memory test", "spatial memory test", "pattern recall", "grid memory game",
             "photographic memory test", "visual spatial testing", "memory blocks game", "brain training visual",
@@ -58,8 +58,8 @@ export const SEO_CONFIGS = {
         ]
     },
     "color-memory": {
-        title: "Stroop Effect Test - Cognitive Flexibility | Reflextry",
-        description: "Challenge your brain with the Stroop Test. Can you identify the ink color while ignoring the word? Test your reaction inhibition and cognitive flexibility. Free Stroop effect game to improve attention and mental processing speed.",
+        title: "Stroop Effect Test - Cognitive Flexibility",
+        description: "Improve attention and mental processing speed. Try the Stroop Test to challenge your cognitive flexibility today.",
         keywords: [
             "stroop test online", "stroop effect game", "color matching test", "cognitive flexibility test",
             "impulse control test", "brain training colors", "attention test", "psychology test online",
@@ -77,8 +77,8 @@ export const SEO_CONFIGS = {
         ]
     },
     "shape-memory": {
-        title: "Shape Rush - Visual Processing Speed | Reflextry",
-        description: "Find the target shapes as fast as you can. Train your visual discrimination and processing speed with Shape Rush. Free visual search game to improve attention to detail and rapid visual processing.",
+        title: "Shape Rush - Visual Processing Speed",
+        description: "Train visual discrimination and processing speed with Shape Rush. Find target shapes fast to boost attention to detail.",
         keywords: [
             "shape recognition test", "visual processing test", "speed search game", "visual discrimination",
             "find the shape game", "brain training focus", "attention to detail test", "visual scanning test",
@@ -95,8 +95,8 @@ export const SEO_CONFIGS = {
         ]
     },
     "symbol-memory": {
-        title: "Symbol Pairs - Memory Match Game | Reflextry",
-        description: "The classic card matching game. Flip cards to find matching symbols. Requires focus, concentration, and spatial memory. Free memory match game to improve concentration and visual memory skills.",
+        title: "Symbol Pairs - Memory Match Game",
+        description: "Improve concentration and visual memory with Symbol Pairs. Match cards to train your focus and spatial memory.",
         keywords: [
             "memory match game", "card matching game", "concentration game", "symbol matching",
             "pairs game online", "memory training cards", "brain game pairs", "visual memory cards",
@@ -115,8 +115,8 @@ export const SEO_CONFIGS = {
 
     // --- REFLEX TOOLS ---
     "reaction-time": {
-        title: "Reaction Time Test - Measure Your MS | Reflextry",
-        description: "Measure your visual reaction time in milliseconds. Click as fast as you can when the color changes. Compare with the world average of 250ms. Free reaction time test to improve reflexes and cognitive speed.",
+        title: "Reaction Time Test - Measure Your MS",
+        description: "Measure and improve your visual reaction time. Click as fast as you can to boost reflexes and cognitive speed.",
         keywords: [
             "reaction time test", "human benchmark reaction", "click speed test", "reflex test",
             "measure reaction time", "visual reaction time", "ms test", "reaction speed",
@@ -134,8 +134,8 @@ export const SEO_CONFIGS = {
         ]
     },
     "sound-reaction": {
-        title: "Audio Reaction Time Test - Sound Reflex | Reflextry",
-        description: "Test your auditory reaction speed. Humans react faster to sound than light. Measure your audio response time now. Free audio reaction test to improve hearing reflexes and auditory processing speed.",
+        title: "Audio Reaction Time Test - Sound Reflex",
+        description: "Improve auditory processing speed with this audio reaction test. Measure your hearing reflexes in milliseconds.",
         keywords: [
             "audio reaction test", "sound reflex test", "auditory reaction time", "hearing reaction test",
             "sound response time", "beep test reflex", "audio latency test", "ear reaction test",
@@ -153,8 +153,8 @@ export const SEO_CONFIGS = {
         ]
     },
     "grid-shot": {
-        title: "Grid Shot - FPS Aim Trainer | Reflextry",
-        description: "Train your aim and mouse speed. Click the targets as they appear on the grid. Essential training for FPS gamers. Free aim trainer to improve mouse accuracy, click precision, and target tracking skills.",
+        title: "Grid Shot - FPS Aim Trainer",
+        description: "Boost mouse accuracy, click precision, and target tracking. Essential aim training to improve your FPS gaming skills.",
         keywords: [
             "aim trainer", "grid shot", "mouse accuracy test", "fps training",
             "click accuracy", "tracking test", "aim booster", "mouse speed test",
@@ -172,8 +172,8 @@ export const SEO_CONFIGS = {
         ]
     },
     "peripheral-vision": {
-        title: "Peripheral Vision Test - Wide Field Awareness | Reflextry",
-        description: "Test your peripheral awareness. Keep your eye on the center while spotting targets in your peripheral vision. Free peripheral vision test to improve visual field awareness and side vision skills.",
+        title: "Peripheral Vision Test - Wide Field Awareness",
+        description: "Improve your visual field awareness and side vision. Spot targets in your peripheral vision to train your eye focus.",
         keywords: [
             "peripheral vision test", "field of view test", "visual awareness", "eye training",
             "peripheral reflex", "vision test online", "eye focus training", "wide vision test",
@@ -190,8 +190,8 @@ export const SEO_CONFIGS = {
         ]
     },
     "directional-reflex": {
-        title: "Directional Reflex - Arrow Key Speed | Reflextry",
-        description: "Test your cognitive processing and motor skills. Press the correct arrow key as soon as the direction appears. Free directional reflex test to improve decision-making speed and keyboard reaction time.",
+        title: "Directional Reflex - Arrow Key Speed",
+        description: "Improve decision-making speed and keyboard reaction time. Press the correct arrow key to boost cognitive processing.",
         keywords: [
             "directional reflex test", "arrow key game", "decision making speed", "cognitive reflex",
             "motor skills test", "keyboard reaction test", "wasd reaction", "choice reaction time",
@@ -208,8 +208,8 @@ export const SEO_CONFIGS = {
         ]
     },
     "multi-stimulus": {
-        title: "Multi-Stimulus Reaction Test - Selective Attention | Reflextry",
-        description: "Test your ability to process multiple stimuli and make quick decisions. Click the correct target based on changing instructions. Free multi-stimulus test to improve selective attention and decision-making speed.",
+        title: "Multi-Stimulus Reaction Test - Selective Attention",
+        description: "Boost selective attention and decision-making speed. Process multiple stimuli quickly in this cognitive reaction test.",
         keywords: [
             "multi-stimulus test", "selective attention test", "multiple stimuli reaction", "decision making speed",
             "cognitive processing test", "attention test", "stimulus processing", "quick decision test",
@@ -225,8 +225,8 @@ export const SEO_CONFIGS = {
         ]
     },
     "sequence-reaction": {
-        title: "Sequence Reaction Test - Memory & Speed | Reflextry",
-        description: "Combine memory and reaction speed. Watch a sequence of lights, then click them in order as fast as possible. Free sequence reaction test to improve working memory combined with reaction time.",
+        title: "Sequence Reaction Test - Memory & Speed",
+        description: "Improve working memory and reaction time. Watch a sequence of lights and click them fast to boost cognitive speed.",
         keywords: [
             "sequence reaction test", "memory reaction test", "sequence memory speed", "pattern reaction test",
             "working memory reaction", "sequence recall speed", "memory speed test", "pattern speed test",
@@ -243,8 +243,8 @@ export const SEO_CONFIGS = {
 
     // --- SPEED TOOLS ---
     "cps-test": {
-        title: "CPS Test - Clicks Per Second | Reflextry",
-        description: "How fast can you click? Take the 1/5/10 second CPS test. Challenge your friends and improve your clicking speed. Free CPS counter to measure clicks per second and improve mouse clicking speed.",
+        title: "CPS Test - Clicks Per Second",
+        description: "Measure and improve your mouse clicking speed. Take the CPS test to boost your clicks per second and finger speed.",
         keywords: [
             "cps test", "clicks per second", "click speed test", "fast clicking",
             "jitter click test", "kohi click test", "butterfly clicking", "mouse clicking speed",
@@ -262,8 +262,8 @@ export const SEO_CONFIGS = {
         ]
     },
     "speed-math": {
-        title: "Speed Math - Arithmetic Sprint | Reflextry",
-        description: "Solve basic math problems against the clock. Test your mental math speed and accuracy under pressure. Free speed math game to improve arithmetic skills, calculation speed, and mental math fluency.",
+        title: "Speed Math - Arithmetic Sprint",
+        description: "Improve arithmetic skills and mental math fluency. Solve basic math problems quickly to boost calculation speed.",
         keywords: [
             "speed math test", "mental math game", "arithmetic speed", "math reflex",
             "calculation speed", "brain training math", "fast math", "math sprint",
@@ -280,8 +280,8 @@ export const SEO_CONFIGS = {
         ]
     },
     "typing-speed": {
-        title: "Typing Speed Test - WPM Check | Reflextry",
-        description: "Check your WPM (Words Per Minute). A clean, fast typing test to improve your keyboarding skills and accuracy. Free typing speed test with real-time WPM and accuracy tracking.",
+        title: "Typing Speed Test - WPM Check",
+        description: "Improve your keyboarding skills and accuracy. Take the typing speed test to track your WPM and boost typing speed.",
         keywords: [
             "typing speed test", "wpm test", "words per minute", "keyboard test",
             "typing practice", "touch typing", "typing accuracy", "fast typing",
@@ -298,8 +298,8 @@ export const SEO_CONFIGS = {
         ]
     },
     "word-accuracy": {
-        title: "Word Accuracy - Precision Typing | Reflextry",
-        description: "Type the exact words shown without errors. Focuses on typing precision and spelling accuracy rather than just speed. Free word accuracy test to improve typing precision and reduce errors.",
+        title: "Word Accuracy - Precision Typing",
+        description: "Improve typing precision and reduce errors. Type exact words quickly to boost your keyboard accuracy and focus.",
         keywords: [
             "word accuracy test", "precision typing", "spelling test game", "accurate typing",
             "error free typing", "keyboard accuracy", "typing precision", "word fast fire",
@@ -315,8 +315,8 @@ export const SEO_CONFIGS = {
         ]
     },
     "grid-selection": {
-        title: "Grid Selection - Visual Search Speed | Reflextry",
-        description: "Find and select the highlighted cells in the grid. A test of visual scanning and mouse precision. Free grid selection game to improve visual search speed and mouse accuracy.",
+        title: "Grid Selection - Visual Search Speed",
+        description: "Improve visual search speed and mouse accuracy. Find and select highlighted cells to train visual scanning skills.",
         keywords: [
             "visual search test", "grid selection", "mouse precision", "scanning speed",
             "matrix test", "find matching cells", "visual attention", "grid click test",
@@ -335,8 +335,8 @@ export const SEO_CONFIGS = {
 
     // --- GAMING ---
     "aim-trainer": {
-        title: "Aim Trainer Pro - 3D Tracking | Reflextry",
-        description: "Advanced aim training with moving targets. Improve your tracking, flicking, and mouse precision for FPS games. Free browser-based aim trainer alternative to Kovaak's and Aim Lab.",
+        title: "Aim Trainer Pro - 3D Tracking",
+        description: "Improve your tracking, flicking, and mouse precision for FPS games. Advanced aim training with moving targets.",
         keywords: [
             "3d aim trainer", "fps aim practice", "tracking aim", "flick shots",
             "aim practice online", "browser aim trainer", "kovaaks alternative", "aim lab alternative",
@@ -353,8 +353,8 @@ export const SEO_CONFIGS = {
         ]
     },
     "rpg-reaction": {
-        title: "RPG Reaction - Block and Parry | Reflextry",
-        description: "Gamified reaction test. Block incoming attacks at the right moment. RPG style combat reflex training. Free gamified reaction game to improve timing and defensive reflexes.",
+        title: "RPG Reaction - Block and Parry",
+        description: "Improve timing and defensive reflexes with this RPG combat test. Block incoming attacks to train reaction speed.",
         keywords: [
             "gamified reaction test", "rpg reflex game", "block and parry", "combat reaction",
             "gaming reflex training", "quick time event practice", "visual reaction game", "defense timing",
@@ -370,8 +370,8 @@ export const SEO_CONFIGS = {
         ]
     },
     "endless-dodge": {
-        title: "Endless Dodge - Reaction Survival | Reflextry",
-        description: "Survive as long as you can in this infinite reaction test. Dodge the incoming projectiles. Free endless browser game to test pure dodging reflexes.",
+        title: "Endless Dodge - Reaction Survival",
+        description: "Test your pure dodging reflexes in this infinite reaction game. Survive projectile attacks to boost evasion speed.",
         keywords: [
             "endless dodge game", "reaction survival test", "bullet hell browser", "dodge projectiles",
             "survival time test", "pure reaction game", "infinite reflex test", "mouse dodge game",
@@ -379,16 +379,16 @@ export const SEO_CONFIGS = {
         ]
     },
     "stroop-drop": {
-        title: "Infinite Stroop Drop - Cognitive Reflection | Reflextry",
-        description: "An infinite cognitive reflection test. Suppress your reading reflex and click the font color of the falling text. Free endless stroop effect game.",
+        title: "Infinite Stroop Drop - Cognitive Reflection",
+        description: "Improve impulse control with this cognitive reflection game. Click the font color of falling text to train focus.",
         keywords: [
             "infinite stroop test", "cognitive reflection game", "falling words game", "color word test endless",
             "brain reflex game", "impulse control training", "stroop drop browser game", "reaction inhibition test"
         ]
     },
     "target-tracking": {
-        title: "Target Tracking - Aim Accuracy | Reflextry",
-        description: "Track an erratic moving target with your mouse for as long as possible. Test your continuous accuracy and precision. Free endless target tracking aim trainer.",
+        title: "Target Tracking - Aim Accuracy",
+        description: "Improve continuous accuracy and precision. Track an erratic moving target with your mouse to train aiming skills.",
         keywords: [
             "target tracking aim", "continuous tracking test", "mouse accuracy tracking", "erratic target game",
             "aim trainer browser", "infinite tracking practice", "precision mouse control", "hover aim test"
@@ -397,8 +397,8 @@ export const SEO_CONFIGS = {
 
     // --- ACCURACY ---
     "image-recognition": {
-        title: "Image Recognition Accuracy | Reflextry",
-        description: "Compare two images and spot the differences or identify matches. Test your visual observation skills. Free image recognition test to improve visual accuracy and attention to detail.",
+        title: "Image Recognition Accuracy",
+        description: "Improve visual accuracy and attention to detail. Spot differences and identify matches to train observation skills.",
         keywords: [
             "image recognition test", "spot the difference", "visual accuracy", "observation skills",
             "image matching", "visual comparison", "detailed observation", "brain training image",
@@ -415,8 +415,8 @@ export const SEO_CONFIGS = {
         ]
     },
     "data-entry": {
-        title: "Data Entry Accuracy Test | Reflextry",
-        description: "Type the complex codes exactly as shown. Measure your data entry precision and attention to detail. Free data entry test for employment screening and clerical skills assessment.",
+        title: "Data Entry Accuracy Test",
+        description: "Measure your data entry precision and attention to detail. Type complex codes accurately to assess clerical skills.",
         keywords: [
             "data entry test", "typing accuracy test", "clerical skills test", "admin testing",
             "copy typing", "text accuracy", "precision data entry", "employment testing",
@@ -433,8 +433,8 @@ export const SEO_CONFIGS = {
         ]
     },
     "pattern-matching": {
-        title: "Pattern Matching Accuracy Test - Visual Precision | Reflextry",
-        description: "Test your visual accuracy by matching patterns with precision. Patterns become more complex and appear for shorter durations. Free pattern matching test to improve visual memory and attention to detail.",
+        title: "Pattern Matching Accuracy Test - Visual Precision",
+        description: "Improve visual memory and attention to detail. Match complex patterns accurately to train visual precision skills.",
         keywords: [
             "pattern matching test", "visual accuracy test", "pattern recognition accuracy", "visual memory test",
             "pattern matching game", "visual precision test", "pattern recall accuracy", "visual attention test",
@@ -449,8 +449,8 @@ export const SEO_CONFIGS = {
         ]
     },
     "precision-click": {
-        title: "Precision Clicking Test - Hand-Eye Coordination | Reflextry",
-        description: "Test your precision clicking accuracy. Click small targets that appear briefly on screen. Targets get smaller as you progress. Free precision clicking test to improve hand-eye coordination and mouse control.",
+        title: "Precision Clicking Test - Hand-Eye Coordination",
+        description: "Improve hand-eye coordination and mouse control. Click small targets accurately to train your precision clicking.",
         keywords: [
             "precision clicking test", "hand-eye coordination test", "mouse accuracy test", "click precision test",
             "target clicking accuracy", "mouse control test", "precision mouse test", "click accuracy game",
@@ -464,8 +464,8 @@ export const SEO_CONFIGS = {
         ]
     },
     "word-recall": {
-        title: "Word Recall Memory Test - Verbal Memory Training | Reflextry",
-        description: "Test your verbal memory by remembering and recalling lists of words. Words flash on screen, then type them all back from memory. Free word recall test to improve verbal memory and cognitive recall.",
+        title: "Word Recall Memory Test - Verbal Memory Training",
+        description: "Improve verbal memory and cognitive recall. Remember and recall word lists accurately to train memory retention.",
         keywords: [
             "word recall test", "verbal memory test", "word memory game", "recall memory training",
             "word list memory", "verbal recall test", "word memory training", "free memory test",
@@ -473,8 +473,8 @@ export const SEO_CONFIGS = {
         ]
     },
     "card-match": {
-        title: "Card Match Memory Game - Classic Pairs Matching | Reflextry",
-        description: "Play the classic card matching memory game. Flip cards to find matching pairs using your visual memory. Fewer flips = better score. Free card match game to train pattern recognition and spatial memory.",
+        title: "Card Match Memory Game - Classic Pairs Matching",
+        description: "Train pattern recognition and spatial memory. Play this classic card matching game to improve your visual memory.",
         keywords: [
             "card match game", "memory card game", "matching pairs game", "card flip memory",
             "concentration game", "pairs matching test", "card memory training", "free matching game",
@@ -482,8 +482,8 @@ export const SEO_CONFIGS = {
         ]
     },
     "whack-a-mole": {
-        title: "Whack-a-Mole Reflex Game - Reaction Speed Test | Reflextry",
-        description: "Test your reaction speed with the classic Whack-a-Mole game. Tap moles as they pop up before they disappear. Faster reactions earn higher scores. Free whack-a-mole game for reflex training.",
+        title: "Whack-a-Mole Reflex Game - Reaction Speed Test",
+        description: "Test and improve your reaction speed. Tap moles as they pop up to train your reflexes and hand-eye coordination.",
         keywords: [
             "whack a mole game", "reaction speed game", "mole whacking game", "reflex speed test",
             "tap reaction game", "whack mole online", "reaction training game", "free reflex game",
@@ -491,8 +491,8 @@ export const SEO_CONFIGS = {
         ]
     },
     "color-switch": {
-        title: "Color Switch Reflex Test - Color Reaction Training | Reflextry",
-        description: "React to color flashes by pressing the correct button. Ignore distractors and stay focused. Tests selective attention and reaction speed. Free color switch game for cognitive reflex training.",
+        title: "Color Switch Reflex Test - Color Reaction Training",
+        description: "Train cognitive reflexes and selective attention. React to color flashes quickly to improve mental processing speed.",
         keywords: [
             "color switch game", "color reaction test", "color reflex game", "selective attention test",
             "color identification speed", "color matching reflex", "reaction color game", "free color game",
@@ -500,8 +500,8 @@ export const SEO_CONFIGS = {
         ]
     },
     "number-rush": {
-        title: "Number Rush Speed Test - Find Numbers In Order | Reflextry",
-        description: "Find and click numbers 1 through N in ascending order as fast as possible. Tests visual scanning speed and number processing. Free number rush game to improve speed and visual attention.",
+        title: "Number Rush Speed Test - Find Numbers In Order",
+        description: "Improve visual scanning speed and attention. Find and click numbers in ascending order to train visual processing.",
         keywords: [
             "number rush game", "number speed test", "find numbers game", "number order game",
             "visual scanning speed", "number sequence game", "speed number game", "free number game",
@@ -509,8 +509,8 @@ export const SEO_CONFIGS = {
         ]
     },
     "quick-sort": {
-        title: "Quick Sort Speed Game - Category Sorting Challenge | Reflextry",
-        description: "Sort items into the correct categories before time runs out. Tests rapid categorization and decision-making speed. Free quick sort game to improve cognitive processing speed.",
+        title: "Quick Sort Speed Game - Category Sorting Challenge",
+        description: "Improve cognitive processing and decision-making speed. Sort items into correct categories before time runs out.",
         keywords: [
             "quick sort game", "sorting speed game", "category sorting test", "rapid categorization",
             "sorting challenge game", "speed sorting test", "cognitive sorting game", "free sorting game",
@@ -518,8 +518,8 @@ export const SEO_CONFIGS = {
         ]
     },
     "angle-estimation": {
-        title: "Angle Estimation Test - Visual Precision Training | Reflextry",
-        description: "Estimate the angle shown on screen. The closer your guess, the higher your score. Tests spatial awareness and visual estimation skills. Free angle estimation test for precision training.",
+        title: "Angle Estimation Test - Visual Precision Training",
+        description: "Test spatial awareness and visual estimation skills. Estimate angles accurately to train visual precision skills.",
         keywords: [
             "angle estimation test", "angle guessing game", "visual estimation test", "angle accuracy test",
             "spatial awareness test", "geometry accuracy game", "angle precision test", "free angle game",
@@ -527,8 +527,8 @@ export const SEO_CONFIGS = {
         ]
     },
     "color-match": {
-        title: "Color Match Accuracy Test - RGB Color Matching | Reflextry",
-        description: "Match a target color by adjusting RGB sliders. Tests color perception accuracy and fine motor control. Free color matching test to train your color discrimination skills.",
+        title: "Color Match Accuracy Test - RGB Color Matching",
+        description: "Improve visual accuracy and color recognition. Match exact color shades quickly to train your visual discrimination.",
         keywords: [
             "color match game", "color matching test", "RGB color game", "color accuracy test",
             "color perception test", "color discrimination game", "color slider game", "free color match",
@@ -536,8 +536,8 @@ export const SEO_CONFIGS = {
         ]
     },
     "flick-shot": {
-        title: "Flick Shot Aim Trainer - Quick Aim Training | Reflextry",
-        description: "Train your flick aim with targets that appear briefly at random positions. Snap to targets quickly and accurately. Free flick shot trainer for FPS gaming improvement.",
+        title: "Flick Shot Aim Trainer - Quick Aim Training",
+        description: "Improve flicking accuracy and muscle memory for FPS games. Practice your flick shots to boost mouse control and response.",
         keywords: [
             "flick shot trainer", "flick aim training", "quick aim game", "snap aim trainer",
             "FPS aim training", "flick shot practice", "aim flick game", "free aim trainer",
@@ -545,8 +545,8 @@ export const SEO_CONFIGS = {
         ]
     },
     "rhythm-tap": {
-        title: "Rhythm Tap Game - Musical Timing Test | Reflextry",
-        description: "Tap notes arriving on beat to test your timing precision. Notes fall toward a hit zone — tap at the perfect moment. Free rhythm tap game to improve timing and coordination.",
+        title: "Rhythm Tap Game - Musical Timing Test",
+        description: "Test and improve your rhythmic timing and reaction speed. Tap to the beat to train your audio-visual coordination.",
         keywords: [
             "rhythm tap game", "timing test game", "beat tapping game", "musical timing test",
             "rhythm training game", "tap timing game", "beat accuracy game", "free rhythm game",

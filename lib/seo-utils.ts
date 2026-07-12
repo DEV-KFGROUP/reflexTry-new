@@ -7,7 +7,7 @@ export function getToolMetadata(toolId: string, url: string): Metadata {
 
     if (!config) {
         return {
-            title: "Tool Not Found | Reflextry",
+            title: "Tool Not Found",
             description: "Tool page on Reflextry",
         };
     }
@@ -23,7 +23,7 @@ export function getToolMetadata(toolId: string, url: string): Metadata {
 
 export function getHomeMetadata(): Metadata {
     return generateSEOMetadata({
-        title: "Free Brain Training Games & Reflex Tests | Reflextry",
+        title: "Brain Training Games to Sharpen Your Mind & Reflexes",
         description: "Improve your cognitive skills with free brain training games. Test your reaction time, memory, typing speed, and accuracy to track your progress.",
         keywords: [
             "reaction time test", "typing speed test", "brain training games", "memory games",
@@ -46,7 +46,7 @@ export function getHomeMetadata(): Metadata {
 export function getCategoryMetadata(category: string): Metadata {
     const categoryConfigs: Record<string, { title: string; description: string; keywords: string[] }> = {
         memory: {
-            title: "Memory Games & Cognitive Training | Reflextry",
+            title: "Memory Games & Cognitive Training",
             description: "Improve your working memory with free brain training games. Test your visual, sequence, and short-term memory to boost your cognitive function.",
             keywords: [
                 "memory games", "memory test", "memory training", "brain memory games",
@@ -57,7 +57,7 @@ export function getCategoryMetadata(category: string): Metadata {
             ],
         },
         reflex: {
-            title: "Reflex Tests & Reaction Time Games | Reflextry",
+            title: "Reflex Tests & Reaction Time Games",
             description: "Test your reflexes with free online reaction time games. Measure your visual and audio reaction speeds to improve your physical response times.",
             keywords: [
                 "reflex test", "reaction time test", "reflex training", "reaction speed test",
@@ -67,7 +67,7 @@ export function getCategoryMetadata(category: string): Metadata {
             ],
         },
         speed: {
-            title: "Speed Tests: CPS & Typing Speed Games | Reflextry",
+            title: "Speed Tests: CPS & Typing Speed Games",
             description: "Test your physical speed with free click speed (CPS) and typing (WPM) tests. Challenge your limits and improve your fast-twitch muscle response.",
             keywords: [
                 "speed test", "cps test", "typing speed", "click speed", "typing test",
@@ -77,7 +77,7 @@ export function getCategoryMetadata(category: string): Metadata {
             ],
         },
         accuracy: {
-            title: "Accuracy Tests & Precision Training | Reflextry",
+            title: "Accuracy Tests & Precision Training",
             description: "Improve your attention to detail with free accuracy training games. Test your visual precision, pattern matching, and spatial awareness skills.",
             keywords: [
                 "accuracy test", "precision test", "accuracy training", "precision training",
@@ -87,7 +87,7 @@ export function getCategoryMetadata(category: string): Metadata {
             ],
         },
         gaming: {
-            title: "Esports Training: Aim & Reflex Games | Reflextry",
+            title: "Esports Training: Aim & Reflex Games",
             description: "Warm up your hands and sharpen your aim for competitive gaming. Improve your flick shots, tracking, and reaction times with free esports tools.",
             keywords: [
                 "aim trainer", "gaming training", "FPS aim trainer", "gaming reflex test",

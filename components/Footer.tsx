@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Twitter, Instagram, Trophy, Heart, Shield, Swords } from "lucide-react";
+import { Twitter, Instagram, Trophy, Heart, Shield, Swords, ArrowRight } from "lucide-react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export function Footer() {
     const [mounted, setMounted] = useState(false);
@@ -15,37 +16,76 @@ export function Footer() {
         setCurrentYear(new Date().getFullYear());
     }, []);
 
+    const FLOATING_SHAPES = [
+        { value: "▲", x: "8%", y: "15%", size: "text-5xl", delay: 0, duration: 11, opacity: 0.05, rotate: 15 },
+        { value: "⛶", x: "88%", y: "12%", size: "text-6xl", delay: 1, duration: 13, opacity: 0.04, rotate: -25 },
+        { value: "●", x: "6%", y: "75%", size: "text-7xl", delay: 2, duration: 10, opacity: 0.05, rotate: 35 },
+        { value: "■", x: "85%", y: "60%", size: "text-5xl", delay: 0.5, duration: 9, opacity: 0.03, rotate: -15 },
+    ];
+
     return (
-        <footer className="relative mt-20 border-t border-border bg-white overflow-hidden">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 relative z-10">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 mb-12">
+        <footer className="relative mt-20 bg-[#f8fafc] border-t border-slate-200 overflow-hidden font-sans">
+            {/* Background Grids */}
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.04)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none z-0" />
+            <div className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] bg-indigo-500/[0.02] blur-[140px] rounded-full pointer-events-none z-0" />
+            <div className="absolute bottom-[-20%] right-[-10%] w-[500px] h-[500px] bg-cyan-500/[0.02] blur-[120px] rounded-full pointer-events-none z-0" />
+
+            {/* Floating parallax elements */}
+            {FLOATING_SHAPES.map((item, idx) => (
+                <motion.div
+                    key={idx}
+                    className="absolute pointer-events-none select-none z-0"
+                    style={{ left: item.x, top: item.y, opacity: item.opacity }}
+                    animate={{ y: [0, -15, 0] }}
+                    transition={{ duration: item.duration, repeat: Infinity, ease: "easeInOut", delay: item.delay }}
+                >
+                    <div
+                        className={`${item.size} font-mono font-black text-slate-800`}
+                        style={{
+                            transform: `perspective(800px) rotateX(25deg) rotateY(-20deg) rotateZ(${item.rotate}deg)`,
+                        }}
+                    >
+                        {item.value}
+                    </div>
+                </motion.div>
+            ))}
+
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 mb-16 relative">
+                    
+                    {/* Decal Corner Borders for the Grid area */}
+                    <div className="absolute -top-4 -left-4 w-4 h-4 border-t-2 border-l-2 border-slate-200 pointer-events-none hidden lg:block" />
+                    <div className="absolute -top-4 -right-4 w-4 h-4 border-t-2 border-r-2 border-slate-200 pointer-events-none hidden lg:block" />
+
                     {/* Brand Section */}
                     <div className="lg:col-span-2 space-y-6">
                         <Link href="/" className="flex items-center gap-3 group w-fit">
-                            <div className="relative w-10 h-10 flex items-center justify-center overflow-hidden rounded-lg border border-border bg-secondary transition">
+                            <div className="relative w-12 h-12 flex items-center justify-center overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm group-hover:border-indigo-300 group-hover:shadow-[0_0_15px_rgba(79,70,229,0.15)] transition-all duration-300">
                                 <Image
                                     src="/apple-icon.png"
                                     alt="Reflextry Logo"
-                                    width={40}
-                                    height={40}
-                                    className="object-contain"
+                                    width={48}
+                                    height={48}
+                                    className="object-contain group-hover:scale-105 transition-transform duration-300"
                                 />
                             </div>
-                            <span className="text-2xl font-semibold text-foreground">Reflextry</span>
+                            <div className="flex flex-col">
+                                <span className="text-2xl font-mono font-black text-slate-800 tracking-tighter group-hover:text-indigo-600 transition-colors">REFLEXTRY</span>
+                                <span className="text-[10px] font-mono font-bold text-slate-400 tracking-[0.2em] uppercase">Cognitive Lab</span>
+                            </div>
                         </Link>
-                        <p className="text-muted-foreground/80 max-w-xs leading-relaxed">
-                            Cognitive training tools designed for gamers, students, and professionals. Train your brain, improve your reflexes, and compete worldwide.
+                        <p className="text-slate-500 text-sm max-w-sm leading-relaxed font-sans">
+                            Advanced cognitive telemetry tools designed for gamers, students, and professionals. Train your brain, measure latency, and establish your baselines.
                         </p>
-                        <div className="flex gap-3">
+                        <div className="flex gap-3 pt-2">
                             {[
-                                { icon: Twitter, href: "https://twitter.com/reflextry_", label: "Twitter", color: "hover:bg-[#1DA1F2] hover:text-white hover:border-[#1DA1F2]" },
-                                { icon: Instagram, href: "https://instagram.com/reflextry_", label: "Instagram", color: "hover:bg-[#E1306C] hover:text-white hover:border-[#E1306C]" },
-                                // { icon: Github, href: "#", label: "GitHub", color: "hover:bg-[#333] hover:text-white hover:border-[#333]" },
+                                { icon: Twitter, href: "https://twitter.com/reflextry_", label: "Twitter", color: "hover:bg-[#1DA1F2]/10 hover:text-[#1DA1F2] hover:border-[#1DA1F2]/30" },
+                                { icon: Instagram, href: "https://instagram.com/reflextry_", label: "Instagram", color: "hover:bg-[#E1306C]/10 hover:text-[#E1306C] hover:border-[#E1306C]/30" },
                             ].map((social) => (
                                 <Link
                                     key={social.label}
                                     href={social.href}
-                                    className={`p-2.5 bg-secondary border border-border rounded-lg text-muted-foreground transition duration-200 ${social.color}`}
+                                    className={`p-2.5 bg-white border border-slate-200 shadow-[0_2px_8px_rgba(15,23,42,0.02)] rounded-xl text-slate-400 transition-all duration-300 ${social.color}`}
                                     aria-label={social.label}
                                 >
                                     <social.icon className="w-5 h-5" />
@@ -56,135 +96,100 @@ export function Footer() {
 
                     {/* Links Column 1: Tools / Quests */}
                     <div>
-                        <h4 className="flex items-center gap-2 text-sm font-bold text-foreground uppercase tracking-wider mb-6">
-                            <Swords className="w-4 h-4 text-reflex" />
-                            Training Tools
+                        <h4 className="flex items-center gap-2 text-xs font-mono font-bold text-slate-800 uppercase tracking-widest mb-6">
+                            <Swords className="w-4 h-4 text-indigo-500" />
+                            Arenas
                         </h4>
                         <ul className="space-y-3">
-                            <li>
-                                <Link href="/reflex" className="text-muted-foreground hover:text-reflex transition-colors flex items-center gap-2 group">
-                                    <span className="w-1 h-1 bg-reflex rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
-                                    Reflex Tests
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/speed" className="text-muted-foreground hover:text-speed transition-colors flex items-center gap-2 group">
-                                    <span className="w-1 h-1 bg-speed rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
-                                    Speed Tests
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/accuracy" className="text-muted-foreground hover:text-accuracy transition-colors flex items-center gap-2 group">
-                                    <span className="w-1 h-1 bg-accuracy rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
-                                    Accuracy Tools
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/memory" className="text-muted-foreground hover:text-memory transition-colors flex items-center gap-2 group">
-                                    <span className="w-1 h-1 bg-memory rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
-                                    Memory Games
-                                </Link>
-                            </li>
+                            {[
+                                { name: "Reflex Tests", href: "/reflex", color: "text-amber-500" },
+                                { name: "Speed Tests", href: "/speed", color: "text-cyan-500" },
+                                { name: "Accuracy Tools", href: "/accuracy", color: "text-emerald-500" },
+                                { name: "Memory Games", href: "/memory", color: "text-purple-500" },
+                            ].map(link => (
+                                <li key={link.name}>
+                                    <Link href={link.href} className="group flex items-center gap-2 text-sm text-slate-500 hover:text-slate-800 transition-colors">
+                                        <ArrowRight className={`w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 ${link.color}`} />
+                                        <span className="relative">
+                                            {link.name}
+                                            <span className={`absolute -bottom-0.5 left-0 w-full h-[1px] bg-current opacity-0 group-hover:opacity-100 transition-opacity ${link.color.replace('text-', 'bg-')}`} />
+                                        </span>
+                                    </Link>
+                                </li>
+                            ))}
                         </ul>
                     </div>
 
                     {/* Links Column 2: Features / Stats */}
                     <div>
-                        <h4 className="flex items-center gap-2 text-sm font-bold text-foreground uppercase tracking-wider mb-6">
-                            <Trophy className="w-4 h-4 text-wisdom" />
+                        <h4 className="flex items-center gap-2 text-xs font-mono font-bold text-slate-800 uppercase tracking-widest mb-6">
+                            <Trophy className="w-4 h-4 text-amber-500" />
                             Features
                         </h4>
                         <ul className="space-y-3">
-                            <li className="flex items-start">
-                                <Link href="/leaderboard" className="text-muted-foreground hover:text-wisdom transition-colors flex items-center gap-2 group">
-                                    <span className="w-1 h-1 bg-wisdom rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
-                                    Leaderboard
-                                </Link>
-                            </li>
-                            <li className="flex items-start">
-                                <Link href="/statistics" className="text-muted-foreground hover:text-wisdom transition-colors flex items-center gap-2 group">
-                                    <span className="w-1 h-1 bg-wisdom rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
-                                    Statistics
-                                </Link>
-                            </li>
-                            <li className="flex items-start">
-                                <Link href="/achievements" className="text-muted-foreground hover:text-wisdom transition-colors flex items-center gap-2 group">
-                                    <span className="w-1 h-1 bg-wisdom rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
-                                    Achievements
-                                </Link>
-                            </li>
-                            <li className="flex items-start">
-                                <Link href="/challenges" className="text-muted-foreground hover:text-wisdom transition-colors flex items-center gap-2 group">
-                                    <span className="w-1 h-1 bg-wisdom rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
-                                    Daily Challenges
-                                </Link>
-                            </li>
+                            {[
+                                { name: "Leaderboard", href: "/leaderboard" },
+                                { name: "Statistics", href: "/statistics" },
+                                { name: "Achievements", href: "/achievements" },
+                                { name: "Daily Challenges", href: "/challenges" },
+                            ].map(link => (
+                                <li key={link.name}>
+                                    <Link href={link.href} className="group flex items-center gap-2 text-sm text-slate-500 hover:text-slate-800 transition-colors">
+                                        <ArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-amber-500" />
+                                        <span>{link.name}</span>
+                                    </Link>
+                                </li>
+                            ))}
                         </ul>
                     </div>
 
                     {/* Links Column 3: Legal / Guild Info */}
                     <div>
-                        <h4 className="flex items-center gap-2 text-sm font-bold text-foreground uppercase tracking-wider mb-6">
-                            <Shield className="w-4 h-4 text-muted-foreground/70" />
+                        <h4 className="flex items-center gap-2 text-xs font-mono font-bold text-slate-800 uppercase tracking-widest mb-6">
+                            <Shield className="w-4 h-4 text-slate-400" />
                             Legal
                         </h4>
                         <ul className="space-y-3">
-                            <li>
-                                <Link href="/about" className="text-muted-foreground hover:text-foreground transition-colors capitalize flex items-center gap-2 group">
-                                    <span className="w-1 h-1 bg-foreground/30 rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
-                                    About Us
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/privacy" className="text-muted-foreground hover:text-foreground transition-colors capitalize flex items-center gap-2 group">
-                                    <span className="w-1 h-1 bg-foreground/30 rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
-                                    Privacy Policy
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/cookies" className="text-muted-foreground hover:text-foreground transition-colors capitalize flex items-center gap-2 group">
-                                    <span className="w-1 h-1 bg-foreground/30 rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
-                                    Cookie Policy
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/terms" className="text-muted-foreground hover:text-foreground transition-colors capitalize flex items-center gap-2 group">
-                                    <span className="w-1 h-1 bg-foreground/30 rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
-                                    Terms of Service
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href="/contact" className="text-muted-foreground hover:text-foreground transition-colors capitalize flex items-center gap-2 group">
-                                    <span className="w-1 h-1 bg-foreground/30 rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
-                                    Contact Us
-                                </Link>
-                            </li>
+                            {[
+                                { name: "About Us", href: "/about" },
+                                { name: "Privacy Policy", href: "/privacy" },
+                                { name: "Cookie Policy", href: "/cookies" },
+                                { name: "Terms of Service", href: "/terms" },
+                                { name: "Contact Us", href: "/contact" },
+                            ].map(link => (
+                                <li key={link.name}>
+                                    <Link href={link.href} className="group flex items-center gap-2 text-sm text-slate-500 hover:text-slate-800 transition-colors">
+                                        <ArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-slate-400" />
+                                        <span>{link.name}</span>
+                                    </Link>
+                                </li>
+                            ))}
                         </ul>
                     </div>
                 </div>
 
                 {/* SEO/AEO Global Context */}
-                <div className="pt-8 mb-8 border-t border-border/50 text-xs text-muted-foreground/60 text-center">
-                    <p>
-                        <strong>Scientific Context:</strong> Consistent cognitive exercises are designed to leverage neuroplasticity. Read more about <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6128435/" target="_blank" rel="noopener noreferrer" className="underline hover:text-foreground">brain training research</a>.
+                <div className="py-6 border-t border-slate-200/60 text-xs font-mono uppercase tracking-widest text-slate-400 text-center">
+                    <p className="leading-relaxed">
+                        <span className="text-slate-500 font-bold">Clinical Ref:</span> Consistent cognitive exercises are designed to leverage neuroplasticity. Read more about <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6128435/" target="_blank" rel="noopener noreferrer" className="text-indigo-400 hover:text-indigo-600 underline underline-offset-2 transition-colors">brain training research</a>.
                     </p>
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="pt-8 border-t border-border flex flex-col md:flex-row justify-between items-center gap-4">
-                    <div className="text-sm text-muted-foreground/60 flex items-center flex-wrap gap-2 justify-center">
-                        <span>&copy; {mounted ? currentYear : 2024} Reflextry. All rights reserved.</span>
-                        <span className="hidden md:inline border-l border-border/50 h-4 mx-1"></span>
-                        <time dateTime="2026-07-09">Last updated: July 2026</time>
+                <div className="pt-6 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <div className="text-xs font-mono uppercase tracking-widest text-slate-400 flex items-center flex-wrap gap-2 justify-center">
+                        <span>&copy; {mounted ? currentYear : 2024} REFLEXTRY. ALL RIGHTS RESERVED.</span>
+                        <span className="hidden md:inline border-l border-slate-300 h-3 mx-1"></span>
+                        <time dateTime="2026-07-09">LST UPDATE: JUL 2026</time>
                     </div>
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground/60">
-                        <span>Made with</span>
-                        <Heart className="w-4 h-4 text-red-500 fill-red-500 animate-pulse" />
-                        <span>for Gamers</span>
+                    <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-slate-400">
+                        <span>BUILT WITH</span>
+                        <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500 animate-pulse" />
+                        <span>FOR GAMERS</span>
                     </div>
                 </div>
             </div>
-
         </footer>
     );
 }
+

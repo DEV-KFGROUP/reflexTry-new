@@ -5,6 +5,7 @@ import { MDXContent } from '@/components/content/mdx-components';
 import { Article } from '@/lib/content/types';
 import { getBaseUrl } from '@/lib/base-url';
 import { generateArticleStructuredData } from '@/lib/structured-data';
+import ArticleClient from './ArticleClient';
 
 interface Props {
     params: Promise<{
@@ -79,43 +80,24 @@ export default async function BlogPostPage({ params }: Props) {
         const { meta, content } = await getContentBySlug<Article>('blog', slug);
         const articleLd = generateArticleStructuredData(meta, slug);
 
+        const articleData = {
+            slug,
+            title: meta.title,
+            description: meta.description,
+            readTime: meta.readingTime ?? '5 min read',
+            category: meta.category ?? '',
+            date: meta.publishedAt,
+        };
+
         return (
             <>
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }}
                 />
-                <article className="container max-w-3xl py-12 text-foreground">
-                    <header className="mb-10 text-center">
-                        {meta.category && (
-                            <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
-                                {meta.category}
-                            </span>
-                        )}
-                        <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-foreground lg:text-5xl">
-                            {meta.title}
-                        </h1>
-                        <div className="mt-6 flex items-center justify-center space-x-4 text-sm text-muted-foreground">
-                            <time dateTime={meta.publishedAt}>
-                                {new Date(meta.publishedAt).toLocaleDateString('en-US', {
-                                    year: 'numeric',
-                                    month: 'long',
-                                    day: 'numeric',
-                                })}
-                            </time>
-                            {meta.readingTime && (
-                                <>
-                                    <span>•</span>
-                                    <span>{meta.readingTime}</span>
-                                </>
-                            )}
-                        </div>
-                    </header>
-
-                    <div className="prose prose-lg mx-auto max-w-none text-foreground prose-headings:text-foreground prose-p:text-foreground prose-strong:text-foreground prose-li:text-foreground prose-a:text-slate-700 prose-h1:text-foreground prose-h2:text-foreground prose-h3:text-foreground">
-                        <MDXContent source={content} />
-                    </div>
-                </article>
+                <ArticleClient article={articleData}>
+                    <MDXContent source={content} />
+                </ArticleClient>
             </>
         );
     } catch {

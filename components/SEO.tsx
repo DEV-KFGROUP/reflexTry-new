@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { getBaseUrl } from "@/lib/base-url";
+import { getBaseUrl, getBaseUrlObject } from "@/lib/base-url";
 
 interface SEOProps {
     title: string;
@@ -37,6 +37,7 @@ export function generateSEOMetadata({
     const fullImageUrl = image.startsWith("http") ? image : `${baseUrl}${image}`;
 
     return {
+        metadataBase: getBaseUrlObject(),
         title,
         description,
         keywords: keywords.join(", "),
@@ -78,7 +79,7 @@ export function generateSEOMetadata({
             creator: "@reflextry",
         },
         alternates: {
-            canonical: canonicalUrl,
+            canonical: cleanPath || '/',
         },
     };
 }

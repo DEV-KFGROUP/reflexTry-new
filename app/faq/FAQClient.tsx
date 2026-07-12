@@ -195,7 +195,7 @@ export default function FAQClient() {
                     animate={{ opacity: 1, y: 0 }}
                     className="bg-white/5 border border-white/10 rounded-2xl p-6 mb-12"
                 >
-                    <h2 className="text-xl font-bold text-white mb-4">Jump to Category</h2>
+                    <h2 className="text-xl font-bold text-black mb-4">Jump to Category</h2>
                     <div className="flex flex-wrap gap-3">
                         {categories.map((category) => (
                             <a
@@ -219,7 +219,7 @@ export default function FAQClient() {
                         transition={{ delay: categoryIndex * 0.1 }}
                         className="mb-12"
                     >
-                        <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-3">
+                        <h2 className="text-2xl font-bold text-black mb-6 flex items-center gap-3">
                             <span className="w-2 h-8 bg-gradient-to-b from-teal-500 to-purple-500 rounded-full"></span>
                             {category}
                         </h2>
@@ -234,7 +234,7 @@ export default function FAQClient() {
                                         transition={{ delay: categoryIndex * 0.1 + index * 0.05 }}
                                         className="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-teal-500/30 transition"
                                     >
-                                        <h3 className="text-lg font-semibold text-white mb-3 flex items-start gap-3">
+                                        <h3 className="text-lg font-semibold text-black mb-3 flex items-start gap-3">
                                             <span className="text-teal-500 mt-1 flex-shrink-0">Q:</span>
                                             <span>{faq.question}</span>
                                         </h3>
@@ -256,7 +256,7 @@ export default function FAQClient() {
                     className="bg-gradient-to-r from-teal-500/20 to-purple-500/20 border border-teal-500/30 rounded-2xl p-8 text-center"
                 >
                     <HelpCircle className="w-12 h-12 text-teal-500 mx-auto mb-4" />
-                    <h2 className="text-2xl font-bold text-white mb-4">
+                    <h2 className="text-2xl font-bold text-black mb-4">
                         Still Have Questions?
                     </h2>
                     <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
@@ -271,7 +271,7 @@ export default function FAQClient() {
                         </Link>
                         <Link
                             href="/blog"
-                            className="px-6 py-3 bg-white/10 text-white border border-white/20 rounded-lg font-semibold hover:bg-white/20 transition-colors"
+                            className="px-6 py-3 bg-white/10 text-black border border-white/20 rounded-lg font-semibold hover:bg-white/20 transition-colors"
                         >
                             Read Our Blog
                         </Link>

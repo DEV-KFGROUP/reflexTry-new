@@ -1,341 +1,267 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Button } from "@/components/ui/Button";
-import { Target, Keyboard, CheckCircle, XCircle, RefreshCw, Crosshair, Palette } from "lucide-react";
+import { motion } from "framer-motion";
 import Link from "next/link";
+import {
+  Target, Keyboard, CheckCircle, XCircle, Crosshair,
+  Palette, Eye, Brain, Sparkles
+} from "lucide-react";
 
-const DATA_SAMPLES = [
-    "The quick brown fox jumps over the lazy dog",
-    "Sphinx of black quartz, judge my vow",
-    "Pack my box with five dozen liquor jugs",
-    "How vexingly quick daft zebras jump",
+interface ToolItem {
+  title: string;
+  desc: string;
+  icon: React.ElementType;
+  color: string;
+  bg: string;
+  border: string;
+  glow: string;
+  href: string;
+}
+
+const ACCURACY_TOOLS: ToolItem[] = [
+  {
+    title: "Image Recognition",
+    desc: "Scan and identify heavily blurred, rotated, and distorted emojis.",
+    icon: Eye,
+    color: "text-emerald-600",
+    bg: "bg-emerald-50",
+    border: "border-emerald-200/60",
+    glow: "shadow-[0_0_12px_rgba(16,185,129,0.06)]",
+    href: "/accuracy/image-recognition",
+  },
+  {
+    title: "Data Entry Accuracy",
+    desc: "Type complex cryptographic keys and code fragments with absolute precision.",
+    icon: Keyboard,
+    color: "text-emerald-655",
+    bg: "bg-emerald-50/80",
+    border: "border-emerald-200/60",
+    glow: "shadow-[0_0_12px_rgba(16,185,129,0.06)]",
+    href: "/accuracy/data",
+  },
+  {
+    title: "Pattern Matching",
+    desc: "Match long spatial sequences of symbols amidst highly confusing decoy sets.",
+    icon: Brain,
+    color: "text-emerald-600",
+    bg: "bg-emerald-50",
+    border: "border-emerald-200/60",
+    glow: "shadow-[0_0_12px_rgba(16,185,129,0.06)]",
+    href: "/accuracy/pattern-matching",
+  },
+  {
+    title: "Precision Clicking",
+    desc: "Aim and snap-click tiny targets that drift and vibrate across boundaries.",
+    icon: Target,
+    color: "text-emerald-655",
+    bg: "bg-emerald-50/80",
+    border: "border-emerald-200/60",
+    glow: "shadow-[0_0_12px_rgba(16,185,129,0.06)]",
+    href: "/accuracy/precision-click",
+  },
+  {
+    title: "Angle Estimation",
+    desc: "Observe visual geometry elements and estimate angles under rotated baselines.",
+    icon: Crosshair,
+    color: "text-emerald-600",
+    bg: "bg-emerald-50",
+    border: "border-emerald-200/60",
+    glow: "shadow-[0_0_12px_rgba(16,185,129,0.06)]",
+    href: "/accuracy/angle-estimation",
+  },
+  {
+    title: "Color Match",
+    desc: "Recall flashed target colors and replicate them precisely using RGB sliders.",
+    icon: Palette,
+    color: "text-emerald-655",
+    bg: "bg-emerald-50/80",
+    border: "border-emerald-200/60",
+    glow: "shadow-[0_0_12px_rgba(16,185,129,0.06)]",
+    href: "/accuracy/color-match",
+  },
 ];
 
-const IMAGE_SAMPLES = [
-    { id: "img_001", hint: "🐱", correct: "cat" },
-    { id: "img_002", hint: "🌅", correct: "sunset" },
-    { id: "img_003", hint: "🔷", correct: "geometric shapes" },
-];
+const FloatingBackground = () => {
+    return (
+        <div className="absolute inset-0 overflow-hidden pointer-events-none z-[-1] rounded-3xl">
+            <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-emerald-500/20 rounded-full blur-[100px] animate-pulse" />
+            <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-teal-500/20 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '2s' }} />
+            
+            <motion.div
+                animate={{ y: [0, -20, 0], rotate: [0, 10, 0] }}
+                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute top-[15%] left-[5%] opacity-20"
+            >
+                <Target className="w-32 h-32 text-emerald-400 drop-shadow-[0_0_15px_rgba(16,185,129,0.8)]" />
+            </motion.div>
+
+            <motion.div
+                animate={{ y: [0, 30, 0], rotate: [0, -15, 0] }}
+                transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute bottom-[20%] right-[5%] opacity-20"
+            >
+                <Crosshair className="w-40 h-40 text-teal-400 drop-shadow-[0_0_15px_rgba(20,184,166,0.8)]" />
+            </motion.div>
+        </div>
+    );
+};
 
 export default function AccuracyPageClient() {
-    const [activeTab, setActiveTab] = useState<"image" | "data" | "pattern" | "precision" | "angle" | "colormatch">("image");
+    const containerVariants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: { staggerChildren: 0.1 }
+        }
+    };
+
+    const itemVariants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0 }
+    };
 
     return (
-        <div className="bg-background text-foreground py-8 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto space-y-8">
-                <div className="text-center space-y-4">
-                    <h1
-                        className="text-4xl md:text-5xl font-bold"
-                        style={{
-                            background: 'linear-gradient(to right, #00f0ff, #9d00ff)',
-                            WebkitBackgroundClip: 'text',
-                            WebkitTextFillColor: 'transparent',
-                            backgroundClip: 'text',
-                            color: '#00f0ff'
-                        }}
+        <div className="bg-background py-8 px-4 sm:px-6 lg:px-8 min-h-screen overflow-hidden relative">
+            <motion.div 
+                initial="hidden"
+                animate="visible"
+                variants={containerVariants}
+                className="max-w-7xl mx-auto space-y-12 relative z-10"
+            >
+                {/* Header Section */}
+                <motion.div variants={itemVariants} className="text-center space-y-4 mb-12 relative z-10">
+                    <motion.div
+                        initial={{ scale: 0, rotate: -180 }}
+                        animate={{ scale: 1, rotate: 0 }}
+                        transition={{ type: "spring", stiffness: 200, damping: 20 }}
+                        className="inline-block relative mb-4"
                         suppressHydrationWarning
                     >
-                        Accuracy Testing Lab
-                    </h1>
-                    <p className="text-xl text-gray-400 mb-2">
-                        Precision is key. Choose your challenge.
+                        <div className="absolute inset-0 bg-emerald-500/30 blur-2xl rounded-full" />
+                        <div className="relative p-4 rounded-full bg-white/5 border border-black/10 dark:border-white/10 backdrop-blur-md shadow-[0_0_30px_rgba(16,185,129,0.2)]">
+                            <Target className="w-12 h-12 text-emerald-400 drop-shadow-[0_0_10px_rgba(16,185,129,0.8)]" />
+                        </div>
+                    </motion.div>
+                    
+                    <div className="inline-block relative">
+                        <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-teal-500 blur-2xl opacity-30 animate-pulse" />
+                        <h1 
+                            className="text-4xl md:text-5xl lg:text-6xl font-black bg-gradient-to-br from-slate-900 via-slate-800 to-slate-600 dark:from-emerald-400 dark:via-teal-400 dark:to-teal-500 bg-clip-text text-transparent inline-flex items-center gap-3 relative z-10 drop-shadow-sm"
+                            suppressHydrationWarning
+                        >
+                            <Sparkles className="w-10 h-10 text-emerald-400" />
+                            Accuracy & Precision
+                        </h1>
+                    </div>
+                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-medium">
+                        Develop absolute precision in your motor control and visual estimations.
                     </p>
-                    <p className="text-md text-theme-secondary max-w-3xl mx-auto">
-                        Accuracy is about control and precise execution. Our accuracy training tools—from pattern matching and angle estimation to precision clicking—are designed to hone your hand-eye coordination, visual discrimination, and fine motor control.
+                    <p className="text-md text-muted-foreground/80 max-w-3xl mx-auto">
+                        Speed is nothing without control. The accuracy training suite forces you to prioritize exactness over raw velocity, helping you eliminate errors, reduce backspaces, and build a foundation of reliable muscle memory.
                     </p>
-                </div>
+                </motion.div>
 
-                {/* Quick benefits - Clean card layout */}
-                <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-                    <div className="p-4 rounded-xl bg-theme-surface/50 border border-theme/30 text-center">
-                        <div className="text-2xl mb-2">🎯</div>
-                        <h3 className="text-sm font-semibold text-theme-primary mb-1">Better Precision</h3>
-                        <p className="text-xs text-theme-secondary">Fewer mistakes</p>
-                    </div>
-                    <div className="p-4 rounded-xl bg-theme-surface/50 border border-theme/30 text-center">
-                        <div className="text-2xl mb-2">👁️</div>
-                        <h3 className="text-sm font-semibold text-theme-primary mb-1">Sharper Focus</h3>
-                        <p className="text-xs text-theme-secondary">Attention to detail</p>
-                    </div>
-                    <div className="p-4 rounded-xl bg-theme-surface/50 border border-theme/30 text-center">
-                        <div className="text-2xl mb-2">✅</div>
-                        <h3 className="text-sm font-semibold text-theme-primary mb-1">Track Errors</h3>
-                        <p className="text-xs text-theme-secondary">Monitor accuracy</p>
-                    </div>
-                </div>
+                {/* Main Glassmorphic Container */}
+                <motion.div 
+                    variants={itemVariants}
+                    className="relative bg-white/40 dark:bg-black/40 backdrop-blur-3xl border border-black/10 dark:border-white/10 rounded-3xl p-4 md:p-8 shadow-[0_0_50px_rgba(16,185,129,0.1)] z-10"
+                >
+                    <FloatingBackground />
 
-                {/* Tabs */}
-                <div className="flex flex-wrap justify-center gap-4">
-                    <Button
-                        variant={activeTab === "image" ? "primary" : "ghost"}
-                        onClick={() => setActiveTab("image")}
-                    >
-                        <Target className="w-5 h-5 mr-2" /> Image Recognition
-                    </Button>
-                    <Button
-                        variant={activeTab === "data" ? "primary" : "ghost"}
-                        onClick={() => setActiveTab("data")}
-                    >
-                        <Keyboard className="w-5 h-5 mr-2" /> Data Entry
-                    </Button>
-                    <Button
-                        variant={activeTab === "pattern" ? "primary" : "ghost"}
-                        onClick={() => setActiveTab("pattern")}
-                    >
-                        <Target className="w-5 h-5 mr-2" /> Pattern Matching
-                    </Button>
-                    <Button
-                        variant={activeTab === "precision" ? "primary" : "ghost"}
-                        onClick={() => setActiveTab("precision")}
-                    >
-                        <Target className="w-5 h-5 mr-2" /> Precision Click
-                    </Button>
-                    <Button
-                        variant={activeTab === "angle" ? "primary" : "ghost"}
-                        onClick={() => setActiveTab("angle")}
-                    >
-                        <Crosshair className="w-5 h-5 mr-2" /> Angle Estimation
-                    </Button>
-                    <Button
-                        variant={activeTab === "colormatch" ? "primary" : "ghost"}
-                        onClick={() => setActiveTab("colormatch")}
-                    >
-                        <Palette className="w-5 h-5 mr-2" /> Color Match
-                    </Button>
-                </div>
-
-                <div className="bg-white/5 border border-white/10 rounded-3xl p-8 shadow-[0_0_50px_rgba(0,0,0,0.2)]">
-                    <AnimatePresence mode="wait">
-                        {activeTab === "image" ? (
-                            <ImageAccuracyTest key="image" />
-                        ) : activeTab === "data" ? (
-                            <DataEntryTest key="data" />
-                        ) : activeTab === "pattern" ? (
-                            <Link href="/accuracy/pattern-matching" className="block">
-                                <div className="text-center space-y-4 p-12">
-                                    <Target className="w-16 h-16 text-teal-500 mx-auto" />
-                                    <h3 className="text-2xl font-bold">Pattern Matching Test</h3>
-                                    <p className="text-gray-400">Test your visual accuracy by matching patterns with precision</p>
-                                    <Button className="mt-4">Play Pattern Matching</Button>
-                                </div>
-                            </Link>
-                        ) : activeTab === "precision" ? (
-                            <Link href="/accuracy/precision-click" className="block">
-                                <div className="text-center space-y-4 p-12">
-                                    <Target className="w-16 h-16 text-teal-500 mx-auto" />
-                                    <h3 className="text-2xl font-bold">Precision Clicking Test</h3>
-                                    <p className="text-gray-400">Test your hand-eye coordination and precision clicking</p>
-                                    <Button className="mt-4">Play Precision Click</Button>
-                                </div>
-                            </Link>
-                        ) : activeTab === "angle" ? (
-                            <Link href="/accuracy/angle-estimation" className="block">
-                                <div className="text-center space-y-4 p-12">
-                                    <Crosshair className="w-16 h-16 text-teal-500 mx-auto" />
-                                    <h3 className="text-2xl font-bold">Angle Estimation</h3>
-                                    <p className="text-gray-400">Guess the angle and test your geometric intuition</p>
-                                    <Button className="mt-4">Play Angle Estimation</Button>
-                                </div>
-                            </Link>
-                        ) : (
-                            <Link href="/accuracy/color-match" className="block">
-                                <div className="text-center space-y-4 p-12">
-                                    <Palette className="w-16 h-16 text-teal-500 mx-auto" />
-                                    <h3 className="text-2xl font-bold">Color Match</h3>
-                                    <p className="text-gray-400">Match the target color using RGB sliders</p>
-                                    <Button className="mt-4">Play Color Match</Button>
-                                </div>
-                            </Link>
-                        )}
-                    </AnimatePresence>
-                </div>
-
-                {/* Detailed Description & FAQ for SEO/AEO */}
-                <div className="max-w-4xl mx-auto mt-20">
-                    <h2 className="text-3xl font-bold text-center mb-10 text-theme-primary">Frequently Asked Questions About Accuracy Training</h2>
-                    <div className="space-y-8 text-left">
-                        <div className="bg-theme-surface border border-theme-muted p-6 rounded-2xl">
-                            <h3 className="text-xl font-bold text-theme-primary mb-3">Why is accuracy testing important?</h3>
-                            <p className="text-theme-secondary mb-3">While speed determines how fast you can act, accuracy determines how effectively you can perform a task without errors. In gaming, professional work, and everyday tasks, high accuracy reduces the time spent correcting mistakes.</p>
-                            <p className="text-theme-secondary">Our accuracy tests isolate and train specific skills like spatial awareness, visual discrimination, and precision mouse control.</p>
+                    {/* Quick benefits */}
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12 relative z-10">
+                        <div className="p-6 rounded-2xl bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 text-center hover:bg-white/10 transition-colors">
+                            <Target className="w-8 h-8 text-emerald-400 mx-auto mb-3 drop-shadow-[0_0_10px_rgba(16,185,129,0.8)]" />
+                            <h3 className="text-base font-bold text-foreground mb-1">Fine Motor Control</h3>
+                            <p className="text-sm text-muted-foreground">Hit tiny targets</p>
                         </div>
-                        
-                        <div className="bg-theme-surface border border-theme-muted p-6 rounded-2xl">
-                            <h3 className="text-xl font-bold text-theme-primary mb-3">What are the benefits of precision and accuracy training?</h3>
-                            <p className="text-theme-secondary mb-3">Engaging in precision tasks provides several tangible benefits:</p>
-                            <ul className="list-disc pl-6 text-theme-secondary space-y-1">
-                                <li>Better hand-eye coordination and fine motor skills</li>
-                                <li>Improved aiming precision for FPS and tactical games (Aim training)</li>
-                                <li>Enhanced visual-spatial intelligence (Angle Estimation, Pattern Matching)</li>
-                                <li>Fewer data entry and typing errors in professional work</li>
-                            </ul>
+                        <div className="p-6 rounded-2xl bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 text-center hover:bg-white/10 transition-colors">
+                            <Eye className="w-8 h-8 text-teal-400 mx-auto mb-3 drop-shadow-[0_0_10px_rgba(20,184,166,0.8)]" />
+                            <h3 className="text-base font-bold text-foreground mb-1">Visual Discernment</h3>
+                            <p className="text-sm text-muted-foreground">Spot the difference</p>
                         </div>
-
-                        <div className="bg-theme-surface border border-theme-muted p-6 rounded-2xl">
-                            <h3 className="text-xl font-bold text-theme-primary mb-3">How can I improve my hand-eye coordination?</h3>
-                            <p className="text-theme-secondary">Improving hand-eye coordination requires deliberate, focused practice. Start with our Precision Click or Pattern Matching tools. Initially, focus entirely on hitting the exact target rather than speed. Once your accuracy consistently reaches 95-100%, you can gradually increase your speed.</p>
+                        <div className="p-6 rounded-2xl bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 text-center hover:bg-white/10 transition-colors">
+                            <div className="text-2xl mb-2 drop-shadow-md">🎯</div>
+                            <h3 className="text-base font-bold text-foreground mb-1">Zero Mistakes</h3>
+                            <p className="text-sm text-muted-foreground">Minimize errors</p>
                         </div>
                     </div>
-                </div>
-                {/* Related Categories Section - Internal Linking */}
-                <div className="mt-12 pt-8 border-t border-theme">
-                    <h3 className="text-2xl font-bold text-theme-primary mb-6 text-center">Explore Other Categories</h3>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        <Link href="/memory" className="p-4 rounded-xl bg-theme-surface border border-theme hover:border-teal-500/50 transition text-center">
-                            <div className="text-purple-500 text-2xl mb-2">🧠</div>
-                            <div className="text-sm font-semibold text-theme-primary">Memory Games</div>
-                        </Link>
-                        <Link href="/reflex" className="p-4 rounded-xl bg-theme-surface border border-theme hover:border-teal-500/50 transition text-center">
-                            <div className="text-amber-500 text-2xl mb-2">⚡</div>
-                            <div className="text-sm font-semibold text-theme-primary">Reflex Tests</div>
-                        </Link>
-                        <Link href="/speed" className="p-4 rounded-xl bg-theme-surface border border-theme hover:border-teal-500/50 transition text-center">
-                            <div className="text-teal-500 text-2xl mb-2">⌨️</div>
-                            <div className="text-sm font-semibold text-theme-primary">Speed Tests</div>
-                        </Link>
-                        <Link href="/gaming" className="p-4 rounded-xl bg-theme-surface border border-theme hover:border-teal-500/50 transition text-center">
-                            <div className="text-rose-500 text-2xl mb-2">🎮</div>
-                            <div className="text-sm font-semibold text-theme-primary">Gaming Tools</div>
-                        </Link>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
+                        {ACCURACY_TOOLS.map((tool, index) => (
+                            <motion.div
+                                key={tool.title}
+                                variants={itemVariants}
+                                className="group relative p-6 rounded-3xl bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 hover:border-emerald-500/50 hover:bg-emerald-500/5 transition-all duration-300 shadow-lg hover:shadow-[0_0_30px_rgba(16,185,129,0.2)] overflow-hidden"
+                            >
+                                <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                <Link
+                                    href={tool.href}
+                                    className="absolute inset-0 z-10"
+                                    aria-label={`${tool.title} - ${tool.desc}`}
+                                >
+                                    <span className="sr-only">{tool.title} - {tool.desc}</span>
+                                </Link>
+                                <tool.icon className={`w-12 h-12 text-emerald-500 dark:text-emerald-400 mb-4 group-hover:scale-110 transition-transform drop-shadow-[0_0_8px_currentColor]`} />
+                                <h3 className="text-xl font-bold text-foreground mb-2 drop-shadow-sm">{tool.title}</h3>
+                                <p className="text-muted-foreground leading-relaxed">{tool.desc}</p>
+                            </motion.div>
+                        ))}
                     </div>
-                </div>
-            </div>
+
+                    {/* SEO Blocks */}
+                    <div className="max-w-4xl mx-auto mt-16 text-left space-y-4 pt-6 border-t border-black/10 dark:border-white/10 relative z-10">
+                        <h3 className="text-xl font-bold text-foreground flex items-center gap-2">
+                            ★ The Science of Accuracy Training
+                        </h3>
+                        <p className="text-sm text-muted-foreground leading-relaxed font-sans">
+                            <strong>Definition:</strong> Accuracy in psychomotor testing refers to the degree to which a user's action conforms to the true or correct target location, value, or sequence without deviation.
+                        </p>
+                        <p className="text-sm text-muted-foreground leading-relaxed font-sans">
+                            <strong>The bottom line:</strong> Training accuracy before speed is a fundamental principle of motor learning (often summarized as "slow is smooth, smooth is fast"). Focusing purely on precision initially allows the brain to myelinate the exact neural pathways required, preventing bad habits from hardcoding into your muscle memory.
+                        </p>
+                    </div>
+
+                    {/* Detailed Description & FAQ */}
+                    <div className="max-w-4xl mx-auto mt-16 relative z-10">
+                        <h2 className="text-3xl font-bold text-center mb-10 text-foreground">Frequently Asked Questions About Accuracy</h2>
+                        <div className="space-y-6 text-left">
+                            <div className="bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 p-6 rounded-3xl">
+                                <h3 className="text-xl font-bold text-foreground mb-3">Should I train speed or accuracy first?</h3>
+                                <p className="text-muted-foreground">Always train accuracy first. When you practice making mistakes quickly, your brain literally gets better at making mistakes. By forcing 100% accuracy at a slow pace, you guarantee that the movement patterns you build are flawless. Once the pattern is ingrained, speed will naturally follow.</p>
+                            </div>
+                            
+                            <div className="bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 p-6 rounded-3xl">
+                                <h3 className="text-xl font-bold text-foreground mb-3">How does this help my typing?</h3>
+                                <p className="text-muted-foreground">The biggest bottleneck to high WPM (Words Per Minute) is the time spent pressing the backspace key. By using tools like Data Entry Accuracy, you build confidence in your keystrokes, significantly reducing the cognitive hesitation that slows down average typists.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Related Categories */}
+                    <div className="mt-16 pt-8 border-t border-black/10 dark:border-white/10 relative z-10">
+                        <h3 className="text-2xl font-bold text-foreground mb-6 text-center">Explore Other Categories</h3>
+                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                            <Link href="/gaming" className="p-4 rounded-2xl bg-white/5 border border-black/10 dark:border-white/10 hover:border-purple-500/50 hover:bg-purple-500/5 transition-all text-center">
+                                <div className="text-purple-500 text-2xl mb-2 drop-shadow-sm">🎮</div>
+                                <div className="text-sm font-bold text-foreground">Gaming Lab</div>
+                            </Link>
+                            <Link href="/memory" className="p-4 rounded-2xl bg-white/5 border border-black/10 dark:border-white/10 hover:border-blue-500/50 hover:bg-blue-500/5 transition-all text-center">
+                                <div className="text-blue-500 text-2xl mb-2 drop-shadow-sm">🧠</div>
+                                <div className="text-sm font-bold text-foreground">Memory Games</div>
+                            </Link>
+                            <Link href="/speed" className="p-4 rounded-2xl bg-white/5 border border-black/10 dark:border-white/10 hover:border-red-500/50 hover:bg-red-500/5 transition-all text-center">
+                                <div className="text-red-500 text-2xl mb-2 drop-shadow-sm">⌨️</div>
+                                <div className="text-sm font-bold text-foreground">Speed Tests</div>
+                            </Link>
+                            <Link href="/reflex" className="p-4 rounded-2xl bg-white/5 border border-black/10 dark:border-white/10 hover:border-amber-500/50 hover:bg-amber-500/5 transition-all text-center">
+                                <div className="text-amber-500 text-2xl mb-2 drop-shadow-sm">⚡</div>
+                                <div className="text-sm font-bold text-foreground">Reflex Tests</div>
+                            </Link>
+                        </div>
+                    </div>
+                </motion.div>
+            </motion.div>
         </div>
     );
 }
-
-function ImageAccuracyTest() {
-    const [currentImage, setCurrentImage] = useState(IMAGE_SAMPLES[0]);
-    const [input, setInput] = useState("");
-    const [result, setResult] = useState<{ accuracy: number; message: string } | null>(null);
-
-    const handleSubmit = async (e: React.FormEvent) => {
-        e.preventDefault();
-        try {
-            const res = await fetch("/api/accuracy/image-recognition", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ imageId: currentImage.id, userInput: input }),
-            });
-            const data = await res.json();
-            setResult(data);
-        } catch (error) {
-            // Handle error silently in production, show user-friendly message
-            if (process.env.NODE_ENV === 'development') {
-                console.error("Accuracy check error:", error);
-            }
-            setResult({
-                accuracy: 0,
-                message: "Unable to process request. Please try again.",
-            });
-        }
-    };
-
-    const nextImage = () => {
-        const idx = Math.floor(Math.random() * IMAGE_SAMPLES.length);
-        setCurrentImage(IMAGE_SAMPLES[idx]);
-        setInput("");
-        setResult(null);
-    };
-
-    return (
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="space-y-8 text-center">
-            <h2 className="text-2xl font-bold text-white">Identify the Object</h2>
-
-            <div className="w-64 h-64 mx-auto bg-black rounded-lg flex items-center justify-center text-9xl border-2 border-teal-500 shadow-[0_0_30px_rgba(0,240,255,0.3)]">
-                {currentImage.hint}
-            </div>
-
-            {!result ? (
-                <form onSubmit={handleSubmit} className="max-w-md mx-auto space-y-4">
-                    <input
-                        type="text"
-                        value={input}
-                        onChange={(e) => setInput(e.target.value)}
-                        placeholder="Type what you see..."
-                        className="w-full px-6 py-4 bg-white/10 border border-white/20 rounded-full text-white placeholder-gray-500 focus:outline-none focus:border-teal-500 focus:ring-1 focus:ring-teal-500 transition"
-                        autoFocus
-                    />
-                    <Button type="submit" className="w-full">Check Accuracy</Button>
-                </form>
-            ) : (
-                <div className="space-y-6">
-                    <div className={`text-4xl font-bold ${result.accuracy === 100 ? "text-green-500" : "text-yellow-500"}`}>
-                        {result.message}
-                    </div>
-                    <Button variant="secondary" onClick={nextImage}>
-                        Next Image <RefreshCw className="w-4 h-4 ml-2" />
-                    </Button>
-                </div>
-            )}
-        </motion.div>
-    );
-}
-
-function DataEntryTest() {
-    const [target, setTarget] = useState(DATA_SAMPLES[0]);
-    const [input, setInput] = useState("");
-    const [startTime, setStartTime] = useState(0);
-    const [wpm, setWpm] = useState(0);
-    const [completed, setCompleted] = useState(false);
-
-    useEffect(() => {
-        if (input.length === 1 && !startTime) setStartTime(Date.now());
-        if (input === target && !completed) {
-            const time = (Date.now() - startTime) / 1000 / 60; // minutes
-            const words = target.split(" ").length;
-            setWpm(Math.round(words / time));
-            setCompleted(true);
-        }
-    }, [input, target, startTime, completed]);
-
-    const reset = () => {
-        setTarget(DATA_SAMPLES[Math.floor(Math.random() * DATA_SAMPLES.length)]);
-        setInput("");
-        setStartTime(0);
-        setCompleted(false);
-    };
-
-    return (
-        <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="space-y-8 text-center">
-            <h2 className="text-2xl font-bold text-white">Speed Typing Test</h2>
-
-            <div className="p-6 bg-white/5 rounded-xl border border-white/10 text-xl font-mono text-gray-300">
-                {target.split('').map((char, i) => {
-                    let color = "text-gray-400";
-                    if (i < input.length) {
-                        color = input[i] === char ? "text-teal-500" : "text-red-500";
-                    }
-                    return <span key={i} className={color}>{char}</span>;
-                })}
-            </div>
-
-            {!completed ? (
-                <textarea
-                    value={input}
-                    onChange={(e) => setInput(e.target.value)}
-                    className="w-full p-4 bg-transparent border-b-2 border-white/20 text-xl text-white focus:outline-none focus:border-teal-500 transition-colors font-mono text-center"
-                    placeholder="Start typing..."
-                    autoFocus
-                />
-            ) : (
-                <div className="space-y-6">
-                    <div className="flex justify-center gap-8">
-                        <div className="text-center">
-                            <div className="text-4xl font-bold text-teal-500">{wpm}</div>
-                            <div className="text-sm text-gray-400">WPM</div>
-                        </div>
-                        <div className="text-center">
-                            <div className="text-4xl font-bold text-green-500">100%</div>
-                            <div className="text-sm text-gray-400">Accuracy</div>
-                        </div>
-                    </div>
-                    <Button onClick={reset}><RefreshCw className="w-4 h-4 mr-2" /> Try Again</Button>
-                </div>
-            )}
-        </motion.div>
-    );
-}
-
