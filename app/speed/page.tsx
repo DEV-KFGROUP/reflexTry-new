@@ -15,7 +15,7 @@ export default function SpeedHub() {
     ]);
     
     const webPageSchema = generateWebPageSchema(
-        "Speed Tests - Clicks Per Second & Typing Speed | Reflextry",
+        "Speed Tests - Clicks Per Second & Typing Speed",
         "Test your raw speed with our click speed tests (CPS) and typing tests (WPM). Improve your finger dexterity and mental calculation speed.",
         "/speed"
     );

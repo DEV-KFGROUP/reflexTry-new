@@ -193,10 +193,27 @@ export function Footer() {
                 </div>
 
                 {/* SEO/AEO Global Context */}
-                <div className="py-6 border-t border-black/10 dark:border-white/10 text-xs font-mono uppercase tracking-widest text-muted-foreground text-center">
-                    <p className="leading-relaxed">
-                        <span className="text-foreground font-bold">Clinical Ref:</span> Consistent cognitive exercises are designed to leverage neuroplasticity. Read more about <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6128435/" target="_blank" rel="noopener noreferrer" className="text-indigo-400 hover:text-indigo-600 underline underline-offset-2 transition-colors">brain training research</a>.
-                    </p>
+                <div className="py-6 border-t border-black/10 dark:border-white/10 text-xs text-muted-foreground">
+                    <details className="group cursor-pointer">
+                        <summary className="font-mono uppercase tracking-widest text-center list-none flex items-center justify-center gap-2 hover:text-foreground transition-colors">
+                            <span>About Reflextry Platform & Methodology</span>
+                            <span className="transition group-open:rotate-180">▼</span>
+                        </summary>
+                        <div className="mt-6 text-sm text-muted-foreground/80 leading-relaxed max-w-5xl mx-auto space-y-4 text-justify px-4">
+                            <p>
+                                <strong className="text-foreground font-mono uppercase tracking-wide">Cognitive Training & Neuroplasticity:</strong> Reflextry is a premier platform dedicated to measuring, tracking, and improving cognitive and mechanical performance. Rooted in the principles of neuroplasticity, our tools are engineered to bridge the gap between biological potential and physical execution. Neuroplasticity refers to the brain's remarkable ability to reorganize itself by forming new neural connections throughout life. By consistently engaging in targeted brain training games, users can stimulate these neural pathways, potentially enhancing working memory, processing speed, and executive function. Our memory games, ranging from sequence recall to visual pattern recognition, isolate specific cognitive faculties. This isolation forces the brain to adapt to increasing cognitive loads, a process widely utilized in cognitive behavioral therapies and professional sports training to maintain mental sharpness.
+                            </p>
+                            <p>
+                                <strong className="text-foreground font-mono uppercase tracking-wide">Esports & Mechanical Latency:</strong> In the realm of competitive gaming (esports) and high-stakes data entry, milliseconds dictate the difference between success and failure. Our Speed Arena and Reflex Testing suites are meticulously designed to measure human reaction time down to the exact millisecond. We provide rigorous Click-Per-Second (CPS) tests, flick shot aim trainers, and typing speed (WPM) evaluations. These tools are critical for identifying a player's baseline physical latency. Hardware factors—such as a monitor's refresh rate (Hz), mouse polling rate, and peripheral input lag—are inextricably linked to human performance. Reflextry's testing environment is highly optimized to minimize browser-level latency, providing a true reflection of your biological response time combined with your hardware's capabilities. Pro gamers utilize these exact paradigms to warm up their fast-twitch muscle fibers before tournament play.
+                            </p>
+                            <p>
+                                <strong className="text-foreground font-mono uppercase tracking-wide">Accuracy & Precision Diagnostics:</strong> Speed without control is counterproductive. The Reflextry Accuracy Hub forces users to prioritize exactness over raw velocity. By engaging with our spatial awareness grids, angle estimation tools, and color matching tests, users refine their fine motor control and visual acuity. This dual-focus on speed and accuracy trains the central nervous system to execute complex mechanical movements efficiently without sacrificing precision. All telemetry data gathered during your sessions is processed securely, allowing you to view detailed historical progress charts on your personal dashboard. Consistent, daily practice for just 10-15 minutes yields vastly superior neurological adaptations compared to sporadic, lengthy sessions.
+                            </p>
+                            <p className="text-center mt-4">
+                                <span className="font-bold text-foreground">Clinical Ref:</span> Consistent cognitive exercises are designed to leverage neuroplasticity. Read more about <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6128435/" target="_blank" rel="noopener noreferrer" className="text-indigo-400 hover:text-indigo-600 underline underline-offset-2 transition-colors">brain training research</a>.
+                            </p>
+                        </div>
+                    </details>
                 </div>
 
                 {/* Bottom Bar */}

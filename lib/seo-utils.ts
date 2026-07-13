@@ -99,7 +99,7 @@ export function getCategoryMetadata(category: string): Metadata {
     };
 
     const config = categoryConfigs[category] || {
-        title: `${category} Tools | Reflextry`,
+        title: `${category} Tools`,
         description: `Explore ${category} tools on Reflextry`,
         keywords: [`${category} tools`, `${category} games`, `${category} test`],
     };

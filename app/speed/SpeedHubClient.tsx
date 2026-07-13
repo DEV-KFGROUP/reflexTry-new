@@ -160,7 +160,7 @@ export default function SpeedHubClient() {
                             suppressHydrationWarning
                         >
                             <Sparkles className="w-10 h-10 text-red-400" />
-                            Speed & Latency
+                            Speed Tests & Latency Games
                         </h1>
                     </div>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-medium">

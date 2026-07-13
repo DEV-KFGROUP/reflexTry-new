@@ -33,7 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             : `${baseUrl}/opengraph-image`;
 
         return {
-            title: `${meta.title} | Reflextry`,
+            title: meta.title,
             description: meta.description,
             authors: [{ name: meta.author?.name ?? 'Reflextry' }],
             alternates: { canonical: pageUrl },

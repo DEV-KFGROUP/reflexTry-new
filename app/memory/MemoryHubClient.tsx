@@ -200,7 +200,7 @@ export default function MemoryHubClient() {
                             suppressHydrationWarning
                         >
                             <Sparkles className="w-10 h-10 text-blue-400" />
-                            Memory Training
+                            Memory Capacity & Training Games
                         </h1>
                     </div>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-medium">

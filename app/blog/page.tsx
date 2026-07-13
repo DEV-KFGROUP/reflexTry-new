@@ -10,14 +10,14 @@ export async function generateMetadata(): Promise<Metadata> {
     const baseUrl = getBaseUrl();
 
     return {
-        title: 'Brain Training Articles & Guides | Reflextry Blog',
+        title: 'Brain Training Articles & Guides Blog',
         description: 'Discover expert insights on brain training, memory improvement, reaction time, and cognitive enhancement. In-depth articles, research-backed guides, and practical tips for improving your mental performance.',
         keywords: ['brain training', 'memory improvement', 'cognitive enhancement', 'reaction time', 'mental performance', 'brain health', 'cognitive training'],
         alternates: {
             canonical: `${baseUrl}/blog`,
         },
         openGraph: {
-            title: 'Brain Training Articles & Guides | Reflextry Blog',
+            title: 'Brain Training Articles & Guides Blog',
             description: 'Expert insights on brain training, memory improvement, and cognitive enhancement.',
             url: `${baseUrl}/blog`,
             type: 'website',
@@ -42,7 +42,7 @@ export default async function Blog() {
     ]);
     
     const webPageSchema = generateWebPageSchema(
-        "Brain Training Articles & Guides | Reflextry Blog",
+        "Brain Training Articles & Guides Blog",
         "Discover expert insights on brain training, memory improvement, reaction time, and cognitive enhancement.",
         "/blog"
     );

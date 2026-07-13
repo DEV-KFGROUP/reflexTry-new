@@ -15,7 +15,7 @@ export default function GamingHub() {
     ]);
     
     const webPageSchema = generateWebPageSchema(
-        "Pro Gaming Lab - Aim & Reaction Training | Reflextry",
+        "Pro Gaming Lab - Aim & Reaction Training",
         "Warm up your hands and sharpen your senses with our esports tools. Aim trainer, flick shot, and grid click for competitive gamers.",
         "/gaming"
     );

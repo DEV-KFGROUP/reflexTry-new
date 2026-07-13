@@ -4,7 +4,7 @@ import { generateSEOMetadata } from "@/components/SEO";
 export function getLegalPageMetadata(page: "privacy" | "cookies" | "terms" | "contact" | "about"): Metadata {
     const configs = {
         about: {
-            title: "About Us - Our Mission & Team | Reflextry",
+            title: "About Us - Our Mission & Team",
             description: "Learn about Reflextry's mission to improve cognitive performance. Discover our evidence-based approach to memory, reaction time, and speed training.",
             keywords: [
                 "about us", "our mission", "team", "brain training", "cognitive enhancement",
@@ -15,7 +15,7 @@ export function getLegalPageMetadata(page: "privacy" | "cookies" | "terms" | "co
             ],
         },
         privacy: {
-            title: "Privacy Policy - Data Protection & Privacy | Reflextry",
+            title: "Privacy Policy - Data Protection & Privacy",
             description: "Read our privacy policy to understand how Reflextry collects, uses, and protects your data. We use Google AdSense and respect your privacy.",
             keywords: [
                 "privacy policy", "data protection", "privacy statement", "data privacy",
@@ -26,7 +26,7 @@ export function getLegalPageMetadata(page: "privacy" | "cookies" | "terms" | "co
             ],
         },
         cookies: {
-            title: "Cookies Policy - Cookie Usage & Management | Reflextry",
+            title: "Cookies Policy - Cookie Usage & Management",
             description: "Learn about how Reflextry uses cookies, including Google AdSense cookies. Manage your cookie preferences and understand our cookie policy.",
             keywords: [
                 "cookies policy", "cookie usage", "cookie management", "cookie consent",
@@ -37,7 +37,7 @@ export function getLegalPageMetadata(page: "privacy" | "cookies" | "terms" | "co
             ],
         },
         terms: {
-            title: "Terms and Conditions - User Agreement | Reflextry",
+            title: "Terms and Conditions - User Agreement",
             description: "Read our terms and conditions to understand the rules and guidelines for using Reflextry. User agreement and terms of service.",
             keywords: [
                 "terms and conditions", "terms of service", "user agreement", "terms of use",
@@ -48,7 +48,7 @@ export function getLegalPageMetadata(page: "privacy" | "cookies" | "terms" | "co
             ],
         },
         contact: {
-            title: "Contact Us - Get in Touch | Reflextry",
+            title: "Contact Us - Get in Touch",
             description: "Contact Reflextry for questions, support, or feedback. We're here to help with your brain training and cognitive testing needs.",
             keywords: [
                 "contact us", "get in touch", "support contact", "customer service",
@@ -73,7 +73,7 @@ export function getLegalPageMetadata(page: "privacy" | "cookies" | "terms" | "co
 
 export function getLeaderboardMetadata(): Metadata {
     return generateSEOMetadata({
-        title: "Leaderboard - Track Your Personal Bests | Reflextry",
+        title: "Leaderboard - Track Your Personal Bests",
         description: "View your personal best scores across all Reflextry tools. Track your progress in memory games, reaction tests, typing speed, and more.",
         keywords: [
             "leaderboard", "high scores", "personal bests", "score tracking",

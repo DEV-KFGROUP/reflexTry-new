@@ -189,7 +189,7 @@ export default function ReflexHubClient() {
                             suppressHydrationWarning
                         >
                             <Sparkles className="w-10 h-10 text-amber-400" />
-                            Reflex Testing
+                            Reflex Training & Reaction Games
                         </h1>
                     </div>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-medium">

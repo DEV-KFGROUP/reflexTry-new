@@ -25,7 +25,7 @@ export default function AllToolsPage() {
     ]);
     
     const webPageSchema = generateWebPageSchema(
-        "All Brain Training Tools & Games | Reflextry",
+        "All Brain Training Tools & Games",
         "Explore our complete collection of reaction, memory, speed, and accuracy tools.",
         "/tools"
     );

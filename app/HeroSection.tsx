@@ -66,7 +66,7 @@ export function HeroSection() {
 
           {/* Headline */}
           <h1 className="text-4xl sm:text-6xl font-mono font-black tracking-tight text-slate-900 uppercase leading-[1.05]">
-            Sharpen Your{" "}
+            Test Your{" "}
             <span
               style={{
                 background: "linear-gradient(110deg,#0891b2 0%,#2563eb 50%,#7c3aed 100%)",
@@ -75,11 +75,11 @@ export function HeroSection() {
                 backgroundClip: "text",
               }}
             >
-              Mind
+              Cognitive
             </span>
             <br />
             <span className="text-slate-700 text-3xl sm:text-5xl font-bold normal-case tracking-normal">
-              &amp; Reflexes
+              &amp; Physical Limits
             </span>
           </h1>
 

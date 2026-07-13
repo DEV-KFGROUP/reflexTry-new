@@ -125,7 +125,7 @@ export default function GamingHubClient() {
                             suppressHydrationWarning
                         >
                             <Sparkles className="w-10 h-10 text-purple-400" />
-                            Pro Gaming Lab
+                            Esports Training & Aim Lab
                         </h1>
                     </div>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-medium">

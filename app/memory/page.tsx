@@ -15,7 +15,7 @@ export default function MemoryHub() {
     ]);
     
     const webPageSchema = generateWebPageSchema(
-        "Memory Games - Test Your Working Memory | Reflextry",
+        "Memory Games - Test Your Working Memory",
         "Challenge your short-term and working memory with our collection of free cognitive tests. Sequence memory, visual recall, and more.",
         "/memory"
     );

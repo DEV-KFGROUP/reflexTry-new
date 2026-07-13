@@ -15,7 +15,7 @@ export default function ReflexHub() {
     ]);
     
     const webPageSchema = generateWebPageSchema(
-        "Reflex Tests - Measure Your Reaction Time | Reflextry",
+        "Reflex Tests - Measure Your Reaction Time",
         "Test your reflexes and reaction time with our free reflex tests. Visual reaction, audio reaction, grid shot, peripheral vision, and more.",
         "/reflex"
     );

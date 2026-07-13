@@ -15,7 +15,7 @@ export default function AccuracyHub() {
     ]);
     
     const webPageSchema = generateWebPageSchema(
-        "Accuracy Tests - Improve Your Precision | Reflextry",
+        "Accuracy Tests - Improve Your Precision",
         "Test your accuracy and precision with our free tools. Pattern matching, angle estimation, and precision clicking.",
         "/accuracy"
     );

@@ -4,7 +4,7 @@ import { generateSEOMetadata } from '@/components/SEO';
 
 export async function generateMetadata(): Promise<Metadata> {
     return generateSEOMetadata({
-        title: "Daily Challenges | Reflextry",
+        title: "Daily Challenges",
         description: "Complete daily challenges to earn rewards and maintain your streak. New challenges every day!",
         keywords: ["daily challenges", "streak", "rewards", "daily goals", "challenges"],
         url: `/challenges`,

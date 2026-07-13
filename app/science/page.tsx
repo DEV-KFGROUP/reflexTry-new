@@ -15,7 +15,7 @@ export async function generateMetadata(): Promise<Metadata> {
             canonical: `${baseUrl}/science`,
         },
         openGraph: {
-            title: 'The Science of Brain Training | Reflextry',
+            title: 'The Science of Brain Training',
             description: 'Discover the neuroscience behind cognitive training and how your brain adapts and improves.',
             url: `${baseUrl}/science`,
             type: 'website',
@@ -32,7 +32,7 @@ export default function Science() {
     // For these static pages, we don't have the config object imported, 
     // but we can generate a basic WebPage schema with the title.
     const webPageSchema = generateWebPageSchema(
-        "Science | Reflextry",
+        "Science",
         "Learn more about Reflextry and our brain training tools.",
         "/science"
     );

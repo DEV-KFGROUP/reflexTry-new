@@ -17,7 +17,7 @@ export default function Contact() {
     // For these static pages, we don't have the config object imported, 
     // but we can generate a basic WebPage schema with the title.
     const webPageSchema = generateWebPageSchema(
-        "Contact | Reflextry",
+        "Contact",
         "Learn more about Reflextry and our brain training tools.",
         "/contact"
     );

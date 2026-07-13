@@ -3,7 +3,7 @@ import NotFoundClient from './NotFoundClient';
 
 export async function generateMetadata(): Promise<Metadata> {
   return {
-    title: '404 - Page Not Found | Reflextry',
+    title: '404 - Page Not Found',
     description: 'The page you are looking for could not be found. Return to Reflextry homepage or explore our brain training games.',
     robots: {
       index: false,

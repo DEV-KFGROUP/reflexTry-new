@@ -13,7 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
             canonical: `${baseUrl}/training-programs`,
         },
         openGraph: {
-            title: 'Brain Training Programs | Reflextry',
+            title: 'Brain Training Programs',
             description: 'Structured training programs for memory, speed, gaming, and cognitive health.',
             url: `${baseUrl}/training-programs`,
             type: 'website',
