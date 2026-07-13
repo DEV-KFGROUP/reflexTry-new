@@ -257,6 +257,27 @@ export default function ChallengesClient() {
                         </div>
                     </div>
                 </motion.div>
+
+                {/* SEO & Content Block */}
+                <motion.div variants={itemVariants} className="max-w-4xl mx-auto mt-16 p-8 md:p-10 bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 rounded-3xl shadow-lg z-10 relative">
+                    <h2 className="text-2xl md:text-3xl font-black text-foreground mb-6">Understanding Daily Challenges</h2>
+                    <div className="space-y-6 text-muted-foreground leading-relaxed">
+                        <p>
+                            Consistency is the key to cognitive improvement. The <strong>Reflextry Daily Challenges</strong> system provides a randomized, curated goal every 24 hours to keep your brain training routine fresh and engaging. Whether it's hitting a new words-per-minute milestone or surviving a grueling memory sequence, these tasks are optimized to challenge different sectors of your cognitive load.
+                        </p>
+                        
+                        <h3 className="text-xl font-bold text-foreground mt-8 mb-4">How the Streak System Works</h3>
+                        <p>
+                            Every consecutive day you log in and successfully complete the Daily Challenge, your <strong>Streak Multiplier</strong> increases. Streaks are a proven psychological motivator (leveraging the brain's reward centers) to maintain healthy neuroplasticity habits. If you miss a day, the streak resets to zero, so consistency is paramount!
+                        </p>
+                        
+                        <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Why Randomize Challenges?</h3>
+                        <p>
+                            If you only practice one benchmark tool, your brain adapts specifically to that task, reducing overall cognitive agility. By randomizing our challenges across our four main arenas—<strong>Reflex, Speed, Accuracy, and Memory</strong>—we ensure balanced cognitive conditioning. One day might test your visual working memory, while the next demands raw reaction speed.
+                        </p>
+                    </div>
+                </motion.div>
+
             </motion.div>
         </div>
     );

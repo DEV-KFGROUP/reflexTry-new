@@ -295,6 +295,26 @@ export default function StatisticsClient() {
                             </div>
                         </div>
                     )}
+
+                    {/* SEO & Content Block */}
+                    <div className="w-full mt-16 p-8 md:p-10 bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 rounded-3xl shadow-lg relative z-10">
+                        <h2 className="text-2xl md:text-3xl font-black text-foreground mb-6">Deep Dive into Cognitive Statistics</h2>
+                        <div className="space-y-6 text-muted-foreground leading-relaxed">
+                            <p>
+                                At Reflextry, we believe that you can't improve what you don't measure. The <strong>Statistics & Progress</strong> dashboard is your personal cognitive telemetry center, designed to track your latency, working memory retention, and motor-skill accuracy over time.
+                            </p>
+                            
+                            <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Why Tracking Matters</h3>
+                            <p>
+                                Whether you're an esports athlete looking to optimize your flick-shot reaction times or a student aiming to improve focus and short-term memory, establishing a <strong>personal baseline</strong> is critical. By logging your scores daily, you can visualize whether your cognitive agility is trending upward, or if factors like fatigue and lack of sleep are impacting your latency.
+                            </p>
+                            
+                            <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Interpreting Your Averages</h3>
+                            <p>
+                                We calculate your average performance by aggregating your historical data points. It's completely normal to experience variance (standard deviation) in your scores based on time of day, hardware changes, or physical condition. We recommend focusing on the long-term <strong>Trend</strong> indicator rather than stressing over a single suboptimal session.
+                            </p>
+                        </div>
+                    </div>
                 </motion.div>
             </motion.div>
         </div>

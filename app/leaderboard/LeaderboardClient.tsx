@@ -324,6 +324,23 @@ export default function LeaderboardClient() {
                         
                         <ShareButton text="Check out my high scores on Reflextry!" />
                     </div>
+                    {/* SEO & Content Block */}
+                    <div className="w-full max-w-4xl mx-auto bg-white/5 border border-black/10 dark:border-white/10 backdrop-blur-md rounded-3xl p-8 md:p-10 shadow-lg relative mt-8 z-10">
+                        <h2 className="text-2xl font-black text-foreground mb-4">How the Reflextry Leaderboard Works</h2>
+                        <div className="space-y-4 text-muted-foreground leading-relaxed">
+                            <p>
+                                The Reflextry Leaderboard tracks the elite cognitive performances across our platform. Whether you're grinding the <strong>Reaction Time Test</strong> to hit sub-150ms latency, or proving your spatial memory in the <strong>Chimp Test</strong>, this is where the top 1% of players are immortalized.
+                            </p>
+                            <h3 className="text-xl font-bold text-foreground mt-6 mb-2">Local vs. Global Rankings</h3>
+                            <p>
+                                We offer two distinct tracking modes. The <strong>Local Leaderboard</strong> acts as your personal cognitive telemetry dashboard, securely saving your high scores locally so you can benchmark your own progress over time. The <strong>Global Leaderboard</strong> connects to our cloud infrastructure, displaying the absolute highest authenticated scores from users worldwide.
+                            </p>
+                            <h3 className="text-xl font-bold text-foreground mt-6 mb-2">Fair Play & Latency</h3>
+                            <p>
+                                Because hardware (like a 240Hz monitor vs a 60Hz phone screen) heavily impacts raw reaction scores, we employ statistical filtering algorithms to eliminate impossible scores (like 1ms bot clicks). This ensures the global rankings remain an accurate representation of peak human capability.
+                            </p>
+                        </div>
+                    </div>
                 </motion.div>
             </motion.div>
         </div>

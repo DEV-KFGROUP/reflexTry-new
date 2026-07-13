@@ -350,6 +350,33 @@ export default function ContactClient() {
                         </div>
                     </div>
                 </div>
+
+                {/* SEO & FAQ Content Block */}
+                <div className="w-full max-w-4xl mx-auto mt-16 p-8 md:p-10 bg-white/50 backdrop-blur-sm border border-slate-200/80 rounded-3xl shadow-sm z-10 relative">
+                    <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-6 font-mono tracking-tight">Support & Feedback FAQ</h2>
+                    <div className="space-y-6 text-slate-600 leading-relaxed font-sans">
+                        <p>
+                            Welcome to the Reflextry contact portal. We value community input above all else. Whether you're reporting a bug on our visual memory test, requesting a brand new typing speed variation, or inquiring about commercial licensing for cognitive research, our team is ready to assist.
+                        </p>
+                        
+                        <div className="space-y-4 mt-8">
+                            <div>
+                                <h4 className="font-bold text-slate-800">How do I report a bug or glitch?</h4>
+                                <p>If a specific brain training tool isn't loading or scoring correctly, please use the contact form above. Include your browser (Chrome, Safari, Firefox), your device type (Mobile/Desktop), and a brief description of the issue. This helps our engineers patch the problem rapidly.</p>
+                            </div>
+                            
+                            <div>
+                                <h4 className="font-bold text-slate-800">Can I request a new benchmark tool?</h4>
+                                <p>Absolutely! Many of our most popular games—like the Chimp Test and Sequence Memory—were heavily inspired by user suggestions. If you have an idea for a new reflex, accuracy, or speed test, drop us a message with the subject "New Tool Request".</p>
+                            </div>
+                            
+                            <div>
+                                <h4 className="font-bold text-slate-800">Do you offer API access or data exports?</h4>
+                                <p>We are currently exploring options for educational institutions, researchers, and professional esports teams who wish to export raw cognitive latency data or integrate our reaction tools via API. Please reach out to our business email for enterprise inquiries.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );

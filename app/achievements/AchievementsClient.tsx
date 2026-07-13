@@ -216,6 +216,36 @@ export default function AchievementsClient() {
                         </div>
                     )}
                 </motion.div>
+
+                {/* SEO & FAQ Content Block */}
+                <motion.div variants={itemVariants} className="max-w-4xl mx-auto mt-16 p-8 md:p-10 bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 rounded-3xl shadow-lg z-10 relative">
+                    <h2 className="text-2xl md:text-3xl font-black text-foreground mb-6">About Achievements & Badges</h2>
+                    <div className="space-y-6 text-muted-foreground leading-relaxed">
+                        <p>
+                            At Reflextry, we believe that gamifying cognitive development is one of the most effective ways to build consistency. The <strong>Achievements & Badges</strong> system is designed to reward you for hitting significant milestones across our various brain training tools, including reflex tests, memory games, and accuracy drills.
+                        </p>
+                        
+                        <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Frequently Asked Questions</h3>
+                        
+                        <div className="space-y-4">
+                            <div>
+                                <h4 className="font-bold text-foreground">How do I unlock new badges?</h4>
+                                <p>Badges are unlocked automatically when you reach specific targets. For example, completing a sequence memory test up to level 10, or achieving a reaction time under 200ms, will trigger an achievement unlock. These are instantly saved to your profile.</p>
+                            </div>
+                            
+                            <div>
+                                <h4 className="font-bold text-foreground">What types of achievements are available?</h4>
+                                <p>We offer a diverse range of badges categorized by cognitive skill: <strong>Speed, Accuracy, Memory, and Reflexes</strong>. There are also meta-achievements for daily streaks and overall consistency, encouraging long-term cognitive health and neuroplasticity.</p>
+                            </div>
+                            
+                            <div>
+                                <h4 className="font-bold text-foreground">Do my achievements reset?</h4>
+                                <p>No, once you earn a badge, it permanently belongs to your profile! While daily challenges and streaks reset based on time, your core achievements showcase your all-time personal bests and cognitive milestones.</p>
+                            </div>
+                        </div>
+                    </div>
+                </motion.div>
+
             </motion.div>
         </div>
     );
