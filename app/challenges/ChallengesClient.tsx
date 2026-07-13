@@ -63,6 +63,7 @@ export default function ChallengesClient() {
     if (!challenge) {
         return (
             <div className="min-h-screen bg-background flex items-center justify-center">
+                <h1 className="sr-only">Daily Challenges</h1>
                 <div className="text-center text-muted-foreground">
                     <p>Loading challenge...</p>
                 </div>
