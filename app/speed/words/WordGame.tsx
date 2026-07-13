@@ -6,8 +6,6 @@ import {
   Trophy, Play, RotateCcw, Shield, Star, Zap, Flame,
   Volume2, VolumeX, ArrowRight, Brain, Type
 } from "lucide-react";
-import { ToolContent } from "@/components/ToolContent";
-import { getToolContent } from "@/lib/tool-content";
 import { useGameSound } from "@/hooks/useGameSound";
 
 /* ─────────────────────────────────────────────
@@ -131,8 +129,7 @@ function DifficultyCard({
    MAIN COMPONENT
 ───────────────────────────────────────────── */
 export default function WordGame() {
-  const content = getToolContent("word-accuracy", "Word Accuracy Test");
-  const { play } = useGameSound();
+    const { play } = useGameSound();
 
   const [gameState, setGameState] = useState<"idle" | "playing" | "gameover">("idle");
   const [diffId, setDiffId] = useState<DiffId>("normal");
@@ -277,9 +274,9 @@ export default function WordGame() {
   const wpm = timeLeft < diff.timeLimitSec ? Math.round((wordsTyped / (diff.timeLimitSec - timeLeft)) * 60) : 0;
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] text-slate-800 font-sans relative overflow-hidden py-16 px-4">
+    <div className="w-full bg-[#f8fafc] dark:bg-slate-800 text-slate-800 dark:text-white font-sans relative overflow-hidden py-8 px-4 sm:px-6 lg:px-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm mb-8">
       {/* Background Grids */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.04)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none z-0" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.04)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none z-0" />
       <div className="absolute top-[-5%] left-[5%] w-[600px] h-[600px] bg-violet-500/[0.03] blur-[140px] rounded-full pointer-events-none z-0" />
       <div className="absolute bottom-[-5%] right-[5%] w-[500px] h-[500px] bg-cyan-500/[0.03] blur-[120px] rounded-full pointer-events-none z-0" />
 
@@ -531,32 +528,7 @@ export default function WordGame() {
           </motion.div>
         </div>
 
-        {/* SEO Content */}
-        <div className="w-full max-w-5xl bg-white border border-slate-200 shadow-sm rounded-3xl p-6 md:p-8 relative z-10">
-          <ToolContent
-            title="Word Accuracy Test"
-            description={content.description}
-            howToUse={content.howToUse}
-            howToImprove={content.howToImprove}
-            faqs={content.faqs}
-            relatedTools={content.relatedTools}
-            benefits={[
-              "Improves spelling dexterity and typing coordination speed.",
-              "Sharpens selective attention mechanisms under inverted text modes (Reverse typing).",
-              "Reinforces key mapping recognition across scrambled typeface weights.",
-              "Prevents key typo inputs through strict mistake strike limits.",
-              "Retains highest accuracy score benchmarks per difficulty level.",
-            ]}
-            howToPlay={[
-              "Choose a difficulty — Beginner (3-4 letters) to Professional (10-15 letters, scrambled typefaces, reverse typing).",
-              "Click 'Initialize Word Deck' to start the timer.",
-              "Observe the word inside the display LCD screen.",
-              "If the Reverse Typing warning is active, type the word backwards (e.g. 'flex' -> 'xelf').",
-              "Enter the correct string in the input box to populate the next word.",
-              "Exceeding mistake strikes aborts the session early.",
-            ]}
-          />
-        </div>
+        
       </div>
     </div>
   );

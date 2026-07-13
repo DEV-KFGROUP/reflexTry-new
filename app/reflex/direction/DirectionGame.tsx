@@ -7,8 +7,6 @@ import {
   Trophy, AlertTriangle, Shield, Star, Zap, Flame, Volume2, VolumeX, Brain,
   ChevronLeft, ChevronRight, ChevronUp, ChevronDown
 } from "lucide-react";
-import { ToolContent } from "@/components/ToolContent";
-import { getToolContent } from "@/lib/tool-content";
 import { useGameSound } from "@/hooks/useGameSound";
 
 /* ─────────────────────────────────────────────
@@ -134,8 +132,7 @@ function DifficultyCard({
    MAIN GAME
 ───────────────────────────────────────────── */
 export default function DirectionGame() {
-  const content = getToolContent("directional-reflex", "Directional Reflex Test");
-  const { play } = useGameSound();
+    const { play } = useGameSound();
 
   const [gameState, setGameState] = useState<"idle" | "playing" | "gameover">("idle");
   const [diffId, setDiffId] = useState<DiffId>("normal");
@@ -293,9 +290,9 @@ export default function DirectionGame() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] text-slate-800 font-sans relative overflow-hidden py-16 px-4">
+    <div className="w-full bg-[#f8fafc] dark:bg-slate-800 text-slate-800 dark:text-white font-sans relative overflow-hidden py-8 px-4 sm:px-6 lg:px-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm mb-8">
       {/* Background Grids */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.04)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none z-0" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.04)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none z-0" />
       <div className="absolute top-[-5%] left-[5%] w-[600px] h-[600px] bg-violet-500/[0.03] blur-[140px] rounded-full pointer-events-none z-0" />
       <div className="absolute bottom-[-5%] right-[5%] w-[500px] h-[500px] bg-cyan-500/[0.03] blur-[120px] rounded-full pointer-events-none z-0" />
 
@@ -604,32 +601,7 @@ export default function DirectionGame() {
           </motion.div>
         </div>
 
-        {/* SEO Content */}
-        <div className="w-full max-w-5xl bg-white border border-slate-200 shadow-sm rounded-3xl p-6 md:p-8 relative z-10">
-          <ToolContent
-            title="Directional Reflex Test"
-            description={content.description}
-            howToUse={content.howToUse}
-            howToImprove={content.howToImprove}
-            faqs={content.faqs}
-            relatedTools={content.relatedTools}
-            benefits={[
-              "Improves spatial orientation and choices under speed pressure.",
-              "Sharpens visual search filtering by tuning out flanker decoy arrows.",
-              "Enhances keyboard coordination muscle memory patterns (WASD/Arrows).",
-              "Forces cognitive flexibility through red/green inversion rules.",
-              "Provides stats metrics to track progress parameters.",
-            ]}
-            howToPlay={[
-              "Choose a difficulty — Beginner (Basic arrows, 45s) to Professional (Flanker decoys + prompt mods).",
-              "Click 'Initialize Vector' to begin.",
-              "Replicate arrows on screen using Arrow keys or on-screen D-pad.",
-              "On Normal/Hard, Green arrows mean direct entry, Red arrows require opposite directions.",
-              "On Professional, check the top prompt banner rule (Direct or Inverse opposite) on every turn.",
-              "Avoid misfires to ensure your final accuracy rating and scores stay optimal.",
-            ]}
-          />
-        </div>
+        
       </div>
     </div>
   );

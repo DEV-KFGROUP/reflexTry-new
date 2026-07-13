@@ -6,8 +6,6 @@ import {
   Trophy, Play, RotateCcw, Shield, Star, Zap, Flame,
   Volume2, VolumeX, ArrowRight, Brain, Palette, Lock, AlertTriangle
 } from "lucide-react";
-import { ToolContent } from "@/components/ToolContent";
-import { getToolContent } from "@/lib/tool-content";
 import { useGameSound } from "@/hooks/useGameSound";
 
 /* ─────────────────────────────────────────────
@@ -148,8 +146,7 @@ function DifficultyCard({
    MAIN COMPONENT
 ───────────────────────────────────────────── */
 export default function ColorMatchGame() {
-  const content = getToolContent("color-match", "Color Match");
-  const { play } = useGameSound();
+    const { play } = useGameSound();
 
   const [phase, setPhase] = useState<"idle" | "playing" | "result" | "failed">("idle");
   const [diffId, setDiffId] = useState<DiffId>("normal");
@@ -295,9 +292,9 @@ export default function ColorMatchGame() {
   const avgScore = scores.length > 0 ? Math.round(scores.reduce((a, b) => a + b, 0) / scores.length) : 0;
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] text-slate-800 font-sans relative overflow-hidden py-16 px-4">
+    <div className="w-full bg-[#f8fafc] dark:bg-slate-800 text-slate-800 dark:text-white font-sans relative overflow-hidden py-8 px-4 sm:px-6 lg:px-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm mb-8">
       {/* Background Grids */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.04)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none z-0" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.04)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none z-0" />
       <div className="absolute top-[-5%] left-[5%] w-[600px] h-[600px] bg-violet-500/[0.03] blur-[140px] rounded-full pointer-events-none z-0" />
       <div className="absolute bottom-[-5%] right-[5%] w-[500px] h-[500px] bg-cyan-500/[0.03] blur-[120px] rounded-full pointer-events-none z-0" />
 
@@ -670,31 +667,7 @@ export default function ColorMatchGame() {
           </motion.div>
         </div>
 
-        {/* SEO Content */}
-        <div className="w-full max-w-5xl bg-white border border-slate-200 shadow-sm rounded-3xl p-6 md:p-8 relative z-10">
-          <ToolContent
-            title="Color Match Accuracy Calibration Test"
-            description={content.description}
-            howToUse={content.howToUse}
-            howToImprove={content.howToImprove}
-            faqs={content.faqs}
-            relatedTools={content.relatedTools}
-            benefits={[
-              "Trains chromatic color differentiation and mixing precision.",
-              "Sharpens color retention by flashing targets in visual working memory.",
-              "Improves selective visual focus under micro time constraints.",
-              "Saves optimal average color score ratings per difficulty preset.",
-              "Essential calibration for web developers, graphic artists, and design specialists.",
-            ]}
-            howToPlay={[
-              "Select a level — Beginner (32-step snaps, values shown) to Professional (0.8s flash color, scanline distortion, 8s timer).",
-              "Click 'Initialize Spectrum Deck' to launch the 10 calibration rounds.",
-              "On Hard and Professional, memorize the target color quickly before it locks and fades grey.",
-              "Adjust Red, Green, and Blue sliders to match the user mix to the target.",
-              "Submit estimates; scoring low points strikes remaining lives on harder presets.",
-            ]}
-          />
-        </div>
+        
       </div>
     </div>
   );

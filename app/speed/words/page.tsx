@@ -4,6 +4,8 @@ import { getToolMetadata } from '@/lib/seo-utils';
 import { SchemaInjector } from '@/components/SchemaInjector';
 import { generateToolStructuredData, generateBreadcrumbStructuredData, generateWebPageSchema } from '@/lib/structured-data';
 import { SEO_CONFIGS } from '@/config/seo-config';
+import { ToolContent } from '@/components/ToolContent';
+import { getToolContent } from '@/lib/tool-content';
 
 export async function generateMetadata(): Promise<Metadata> {
     return getToolMetadata('word-accuracy', '/speed/words');
@@ -11,6 +13,7 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default function Page() {
     const config = SEO_CONFIGS['word-accuracy'];
+    const content = getToolContent('word-accuracy', config.title);
     const structuredData = generateToolStructuredData(
         'word-accuracy',
         config.title,
@@ -31,9 +34,37 @@ export default function Page() {
     );
 
     return (
-        <>
-            <SchemaInjector schemas={[structuredData, breadcrumbSchema, webPageSchema]} />
-            <WordGame />
-        </>
+        <div className="min-h-screen bg-slate-50 dark:bg-slate-900 pt-24 pb-12 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-7xl mx-auto space-y-8 flex flex-col items-center">
+                <SchemaInjector schemas={[structuredData, breadcrumbSchema, webPageSchema]} />
+                <WordGame />
+                
+                <div className="w-full max-w-5xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm rounded-3xl p-6 md:p-8 relative z-10 mt-8">
+                    <ToolContent
+                                title="Word Accuracy Test"
+                                description={content.description}
+                                howToUse={content.howToUse}
+                                howToImprove={content.howToImprove}
+                                faqs={content.faqs}
+                                relatedTools={content.relatedTools}
+                                benefits={[
+                                  "Improves spelling dexterity and typing coordination speed.",
+                                  "Sharpens selective attention mechanisms under inverted text modes (Reverse typing).",
+                                  "Reinforces key mapping recognition across scrambled typeface weights.",
+                                  "Prevents key typo inputs through strict mistake strike limits.",
+                                  "Retains highest accuracy score benchmarks per difficulty level.",
+                                ]}
+                                howToPlay={[
+                                  "Choose a difficulty — Beginner (3-4 letters) to Professional (10-15 letters, scrambled typefaces, reverse typing).",
+                                  "Click 'Initialize Word Deck' to start the timer.",
+                                  "Observe the word inside the display LCD screen.",
+                                  "If the Reverse Typing warning is active, type the word backwards (e.g. 'flex' -> 'xelf').",
+                                  "Enter the correct string in the input box to populate the next word.",
+                                  "Exceeding mistake strikes aborts the session early.",
+                                ]}
+                              />
+                </div>
+            </div>
+        </div>
     );
 }

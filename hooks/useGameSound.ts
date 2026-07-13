@@ -1,12 +1,14 @@
 "use client";
 
-import { useCallback, useRef, useEffect } from "react";
+import { useCallback, useRef, useEffect, useState } from "react";
 
 type SoundType = "click" | "hover" | "success" | "error" | "start" | "levelUp" | "tick";
 
 export const useGameSound = () => {
     const audioContextRef = useRef<AudioContext | null>(null);
     const masterGainRef = useRef<GainNode | null>(null);
+
+    const [isMuted, setIsMuted] = useState(false);
 
     // Initialize Audio Context on user interaction (handled lazily)
     const initAudio = useCallback(() => {
@@ -24,7 +26,12 @@ export const useGameSound = () => {
         }
     }, []);
 
+    const toggleMute = useCallback(() => {
+        setIsMuted((prev: boolean) => !prev);
+    }, []);
+
     const play = useCallback((type: SoundType) => {
+        if (isMuted) return;
         initAudio(); // Ensure context is ready
         if (!audioContextRef.current || !masterGainRef.current) return;
 
@@ -132,7 +139,7 @@ export const useGameSound = () => {
                 });
                 break;
         }
-    }, [initAudio]);
+    }, [initAudio, isMuted]);
 
-    return { play };
+    return { play, isMuted, toggleMute };
 };

@@ -24,9 +24,9 @@ export function Footer() {
     ];
 
     return (
-        <footer className="relative mt-20 bg-[#f8fafc] border-t border-slate-200 overflow-hidden font-sans">
+        <footer className="relative mt-20 bg-background border-t border-black/10 dark:border-white/10 overflow-hidden font-sans">
             {/* Background Grids */}
-            <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.04)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none z-0" />
+            <div className="absolute inset-0 bg-[linear-gradient(rgba(0,0,0,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.05)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.05)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none z-0" />
             <div className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] bg-indigo-500/[0.02] blur-[140px] rounded-full pointer-events-none z-0" />
             <div className="absolute bottom-[-20%] right-[-10%] w-[500px] h-[500px] bg-cyan-500/[0.02] blur-[120px] rounded-full pointer-events-none z-0" />
 
@@ -40,7 +40,7 @@ export function Footer() {
                     transition={{ duration: item.duration, repeat: Infinity, ease: "easeInOut", delay: item.delay }}
                 >
                     <div
-                        className={`${item.size} font-mono font-black text-slate-800`}
+                        className={`${item.size} font-mono font-black text-foreground`}
                         style={{
                             transform: `perspective(800px) rotateX(25deg) rotateY(-20deg) rotateZ(${item.rotate}deg)`,
                         }}
@@ -54,13 +54,13 @@ export function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 mb-16 relative">
                     
                     {/* Decal Corner Borders for the Grid area */}
-                    <div className="absolute -top-4 -left-4 w-4 h-4 border-t-2 border-l-2 border-slate-200 pointer-events-none hidden lg:block" />
-                    <div className="absolute -top-4 -right-4 w-4 h-4 border-t-2 border-r-2 border-slate-200 pointer-events-none hidden lg:block" />
+                    <div className="absolute -top-4 -left-4 w-4 h-4 border-t-2 border-l-2 border-black/10 dark:border-white/10 pointer-events-none hidden lg:block" />
+                    <div className="absolute -top-4 -right-4 w-4 h-4 border-t-2 border-r-2 border-black/10 dark:border-white/10 pointer-events-none hidden lg:block" />
 
                     {/* Brand Section */}
                     <div className="lg:col-span-2 space-y-6">
                         <Link href="/" className="flex items-center gap-3 group w-fit">
-                            <div className="relative w-12 h-12 flex items-center justify-center overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm group-hover:border-indigo-300 group-hover:shadow-[0_0_15px_rgba(79,70,229,0.15)] transition-all duration-300">
+                            <div className="relative w-12 h-12 flex items-center justify-center overflow-hidden rounded-xl border border-black/10 dark:border-white/10 bg-white/10 dark:bg-white/5 shadow-sm group-hover:border-indigo-500/50 group-hover:shadow-[0_0_15px_rgba(79,70,229,0.15)] transition-all duration-300">
                                 <Image
                                     src="/apple-icon.png"
                                     alt="Reflextry Logo"
@@ -70,11 +70,11 @@ export function Footer() {
                                 />
                             </div>
                             <div className="flex flex-col">
-                                <span className="text-2xl font-mono font-black text-slate-800 tracking-tighter group-hover:text-indigo-600 transition-colors">REFLEXTRY</span>
-                                <span className="text-[10px] font-mono font-bold text-slate-400 tracking-[0.2em] uppercase">Cognitive Lab</span>
+                                <span className="text-2xl font-mono font-black text-foreground tracking-tighter group-hover:text-indigo-500 transition-colors">REFLEXTRY</span>
+                                <span className="text-[10px] font-mono font-bold text-muted-foreground tracking-[0.2em] uppercase">Cognitive Lab</span>
                             </div>
                         </Link>
-                        <p className="text-slate-500 text-sm max-w-sm leading-relaxed font-sans">
+                        <p className="text-muted-foreground text-sm max-w-sm leading-relaxed font-sans">
                             Advanced cognitive telemetry tools designed for gamers, students, and professionals. Train your brain, measure latency, and establish your baselines.
                         </p>
                         <div className="flex gap-3 pt-2">
@@ -85,7 +85,7 @@ export function Footer() {
                                 <Link
                                     key={social.label}
                                     href={social.href}
-                                    className={`p-2.5 bg-white border border-slate-200 shadow-[0_2px_8px_rgba(15,23,42,0.02)] rounded-xl text-slate-400 transition-all duration-300 ${social.color}`}
+                                    className={`p-2.5 bg-white/10 dark:bg-white/5 border border-black/10 dark:border-white/10 shadow-[0_2px_8px_rgba(0,0,0,0.02)] rounded-xl text-muted-foreground transition-all duration-300 ${social.color}`}
                                     aria-label={social.label}
                                 >
                                     <social.icon className="w-5 h-5" />
@@ -96,7 +96,7 @@ export function Footer() {
 
                     {/* Links Column 1: Tools / Quests */}
                     <div>
-                        <h4 className="flex items-center gap-2 text-xs font-mono font-bold text-slate-800 uppercase tracking-widest mb-6">
+                        <h4 className="flex items-center gap-2 text-xs font-mono font-bold text-foreground uppercase tracking-widest mb-6">
                             <Swords className="w-4 h-4 text-indigo-500" />
                             Arenas
                         </h4>
@@ -108,7 +108,7 @@ export function Footer() {
                                 { name: "Memory Games", href: "/memory", color: "text-purple-500" },
                             ].map(link => (
                                 <li key={link.name}>
-                                    <Link href={link.href} className="group flex items-center gap-2 text-sm text-slate-500 hover:text-slate-800 transition-colors">
+                                    <Link href={link.href} className="group flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
                                         <ArrowRight className={`w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 ${link.color}`} />
                                         <span className="relative">
                                             {link.name}
@@ -122,7 +122,7 @@ export function Footer() {
 
                     {/* Links Column 2: Features / Stats */}
                     <div>
-                        <h4 className="flex items-center gap-2 text-xs font-mono font-bold text-slate-800 uppercase tracking-widest mb-6">
+                        <h4 className="flex items-center gap-2 text-xs font-mono font-bold text-foreground uppercase tracking-widest mb-6">
                             <Trophy className="w-4 h-4 text-amber-500" />
                             Features
                         </h4>
@@ -134,7 +134,7 @@ export function Footer() {
                                 { name: "Daily Challenges", href: "/challenges" },
                             ].map(link => (
                                 <li key={link.name}>
-                                    <Link href={link.href} className="group flex items-center gap-2 text-sm text-slate-500 hover:text-slate-800 transition-colors">
+                                    <Link href={link.href} className="group flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
                                         <ArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-amber-500" />
                                         <span>{link.name}</span>
                                     </Link>
@@ -145,8 +145,8 @@ export function Footer() {
 
                     {/* Links Column 3: Legal / Guild Info */}
                     <div>
-                        <h4 className="flex items-center gap-2 text-xs font-mono font-bold text-slate-800 uppercase tracking-widest mb-6">
-                            <Shield className="w-4 h-4 text-slate-400" />
+                        <h4 className="flex items-center gap-2 text-xs font-mono font-bold text-foreground uppercase tracking-widest mb-6">
+                            <Shield className="w-4 h-4 text-muted-foreground" />
                             Legal
                         </h4>
                         <ul className="space-y-3">
@@ -158,8 +158,8 @@ export function Footer() {
                                 { name: "Contact Us", href: "/contact" },
                             ].map(link => (
                                 <li key={link.name}>
-                                    <Link href={link.href} className="group flex items-center gap-2 text-sm text-slate-500 hover:text-slate-800 transition-colors">
-                                        <ArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-slate-400" />
+                                    <Link href={link.href} className="group flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                                        <ArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-muted-foreground" />
                                         <span>{link.name}</span>
                                     </Link>
                                 </li>
@@ -169,20 +169,20 @@ export function Footer() {
                 </div>
 
                 {/* SEO/AEO Global Context */}
-                <div className="py-6 border-t border-slate-200/60 text-xs font-mono uppercase tracking-widest text-slate-400 text-center">
+                <div className="py-6 border-t border-black/10 dark:border-white/10 text-xs font-mono uppercase tracking-widest text-muted-foreground text-center">
                     <p className="leading-relaxed">
-                        <span className="text-slate-500 font-bold">Clinical Ref:</span> Consistent cognitive exercises are designed to leverage neuroplasticity. Read more about <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6128435/" target="_blank" rel="noopener noreferrer" className="text-indigo-400 hover:text-indigo-600 underline underline-offset-2 transition-colors">brain training research</a>.
+                        <span className="text-foreground font-bold">Clinical Ref:</span> Consistent cognitive exercises are designed to leverage neuroplasticity. Read more about <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6128435/" target="_blank" rel="noopener noreferrer" className="text-indigo-400 hover:text-indigo-600 underline underline-offset-2 transition-colors">brain training research</a>.
                     </p>
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="pt-6 border-t border-slate-200 flex flex-col md:flex-row justify-between items-center gap-4">
-                    <div className="text-xs font-mono uppercase tracking-widest text-slate-400 flex items-center flex-wrap gap-2 justify-center">
+                <div className="pt-6 border-t border-black/10 dark:border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+                    <div className="text-xs font-mono uppercase tracking-widest text-muted-foreground flex items-center flex-wrap gap-2 justify-center">
                         <span>&copy; {mounted ? currentYear : 2024} REFLEXTRY. ALL RIGHTS RESERVED.</span>
-                        <span className="hidden md:inline border-l border-slate-300 h-3 mx-1"></span>
+                        <span className="hidden md:inline border-l border-black/10 dark:border-white/10 h-3 mx-1"></span>
                         <time dateTime="2026-07-09">LST UPDATE: JUL 2026</time>
                     </div>
-                    <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-slate-400">
+                    <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-muted-foreground">
                         <span>BUILT WITH</span>
                         <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500 animate-pulse" />
                         <span>FOR GAMERS</span>

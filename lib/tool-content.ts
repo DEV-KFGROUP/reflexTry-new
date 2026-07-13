@@ -8,6 +8,91 @@
  */
 
 export const toolContent = {
+    "chimp-test": {
+        description: [
+            { title: "About Chimp Test", content: "The Chimp Test is a working memory test inspired by studies on chimpanzees. It evaluates your ability to remember a sequence of numbers in their spatial locations." },
+            { title: "How It Works", content: "A grid of squares is presented with numbers inside. Once you click the number 1, all other numbers are hidden. You must click the remaining blank squares in numerical order." },
+            { title: "Working Memory Capacity", content: "This game measures visuospatial working memory. Human average is typically around 5-7 numbers, while some chimpanzees can easily remember 9 or more." },
+            { title: "Difficulty Levels", content: "Beginner mode offers a smaller grid with forgiveness. Professional mode introduces larger grids and fast vanishing numbers, heavily taxing your short-term spatial memory." }
+        ],
+        howToUse: [
+            { title: "Getting Started", steps: ["Select your difficulty.", "Click Start Test."] },
+            { title: "Playing", steps: ["Locate the numbers.", "Click number 1.", "Click the remaining hidden numbers in ascending order."] }
+        ],
+        howToImprove: [
+            { title: "Chunking", content: "Try to group the numbers into geometric shapes (e.g., triangle, square) instead of memorizing individual coordinates." },
+            { title: "Practice", content: "Visuospatial memory improves with repetitive challenge. Play daily for 10 minutes." }
+        ],
+        faqs: [
+            { question: "What is the average score?", answer: "Most humans score between 5 and 7 on standard difficulty." },
+            { question: "Can I take my time?", answer: "On lower difficulties, yes. On hard/professional, numbers will disappear quickly." },
+            { question: "Are chimpanzees really better at this?", answer: "Yes, specifically young chimpanzees have demonstrated extraordinary working memory capacity in similar tests compared to human adults." },
+            { question: "How does grid size affect difficulty?", answer: "A larger grid means numbers are spread further apart, increasing the cognitive load required to map their spatial relationships." },
+            { question: "Is this test accurate?", answer: "It is a reliable measure of visuospatial working memory span, frequently used in cognitive psychology." },
+            { question: "How many lives do I get?", answer: "You get 3 lives on standard difficulties, and only 1 on Hard/Professional." },
+            { question: "Why do the numbers hide?", answer: "To force you to rely entirely on your working memory rather than visual search." },
+            { question: "Can I improve my score?", answer: "Yes, neuroplasticity allows working memory capacity to improve with focused training." },
+            { question: "What is chunking?", answer: "Chunking is a memory strategy where you group items together to reduce the total number of items to remember." },
+            { question: "Is this good for brain health?", answer: "Working memory exercises are linked to better focus and cognitive resilience." }
+        ]
+    },
+    "verbal-memory": {
+        description: [
+            { title: "About Verbal Memory", content: "Verbal Memory evaluates your ability to retain and recognize words you have recently encountered." },
+            { title: "How It Works", content: "Words will appear one by one. You must decide if you have seen the word already during the current test, or if it is a new word." },
+            { title: "Why It Matters", content: "Short-term verbal memory is crucial for reading comprehension, following conversations, and learning new vocabulary." },
+            { title: "Difficulty Levels", content: "Higher difficulties introduce massive word banks, visually similar words, and strict time limits per word to challenge your cognitive processing speed." }
+        ],
+        howToUse: [
+            { title: "Getting Started", steps: ["Select your difficulty.", "Click Start Test."] },
+            { title: "Making Choices", steps: ["Read the word on the screen.", "Click SEEN if it appeared previously.", "Click NEW if it is the first time you are seeing it."] }
+        ],
+        howToImprove: [
+            { title: "Vocalization", content: "Say the words aloud or mouth them silently. Engaging your phonetic loop strengthens memory encoding." },
+            { title: "Association", content: "Try to link words together in a quick mental story as they appear." }
+        ],
+        faqs: [
+            { question: "What is a good score?", answer: "An average score on Normal difficulty is around 40-50 words." },
+            { question: "Does difficulty change the words?", answer: "Yes, Hard and Pro difficulties use much larger dictionaries, making repetition less frequent and harder to track." },
+            { question: "Is there a time limit?", answer: "Only on Professional difficulty, where you have a few seconds per word." },
+            { question: "Why do I get confused later in the game?", answer: "Proactive interference occurs when previously memorized words interfere with your ability to remember new ones." },
+            { question: "Is this related to IQ?", answer: "Verbal memory is a component of general cognitive ability and working memory, which correlate with IQ." },
+            { question: "Can reading books help?", answer: "Yes, extensive reading improves vocabulary and verbal retention." },
+            { question: "How many mistakes can I make?", answer: "You have 3 strikes on normal, and 1 on Hard/Pro." },
+            { question: "What if I accidentally click the wrong button?", answer: "Unfortunately, motor errors count. Keep a steady pace." },
+            { question: "Do the same words appear every game?", answer: "The dictionary is large and words are randomized, so every game is unique." },
+            { question: "How does this test differ from sequence memory?", answer: "This tests linguistic/semantic memory rather than visuospatial memory." }
+        ]
+    },
+    "time-perception": {
+        description: [
+            { title: "About Time Perception", content: "Time Perception measures the accuracy of your internal biological clock without external visual or auditory cues." },
+            { title: "How It Works", content: "You will be given a target time (e.g., 5 seconds). You must click and hold a button, releasing it exactly when you feel the target time has elapsed." },
+            { title: "The Internal Clock", content: "Human time perception is influenced by heart rate, attention, dopamine levels, and cognitive load." },
+            { title: "Difficulty Levels", content: "Professional mode demands extreme millisecond accuracy and introduces visual distractions to warp your sense of time." }
+        ],
+        howToUse: [
+            { title: "Getting Started", steps: ["Select your difficulty.", "Click Start Test."] },
+            { title: "The Action", steps: ["Read the target time.", "Click and HOLD the button.", "Release exactly when the time has passed."] }
+        ],
+        howToImprove: [
+            { title: "Counting Strategy", content: "Use the classic 1-Mississippi, 2-Mississippi method to pace your seconds." },
+            { title: "Rhythm", content: "Tap your foot or nod your head at a 1Hz (1 beat per second) tempo." }
+        ],
+        faqs: [
+            { question: "Why is it so hard to guess 10 seconds?", answer: "Without external cues, our internal clock naturally drifts. Most people tend to speed up over time." },
+            { question: "How accurate is the average person?", answer: "Most people are off by about 10-20% of the target time." },
+            { question: "Does adrenaline affect time perception?", answer: "Yes, high stress or adrenaline can make time feel like it is moving slower." },
+            { question: "What is Professional difficulty?", answer: "It introduces visual distractions and demands sub-100ms accuracy." },
+            { question: "Can I use a stopwatch?", answer: "That defeats the purpose of the test! Rely only on your mind." },
+            { question: "Is this test used in psychology?", answer: "Yes, time production and estimation tasks are standard in cognitive neuroscience." },
+            { question: "Why do I always release too early?", answer: "Impatience or high arousal levels often cause people to underestimate time intervals." },
+            { question: "How is the score calculated?", answer: "It is the absolute difference in milliseconds between your release time and the target time." },
+            { question: "Are there penalties?", answer: "If you miss the accuracy margin for your difficulty, you fail the round." },
+            { question: "How many rounds are there?", answer: "There are 3 rounds, and your final score is the average error." }
+        ]
+    },
+
     "sequence-memory": {
         description: [
             {
@@ -3909,6 +3994,99 @@ export const toolContent = {
                 answer: "Focus on accuracy over speed. Take a moment to aim before clicking. With practice, you'll develop better hand-eye coordination and reduce misses naturally."
             }
         ]
+    },
+    "object-tracking": {
+        description: [
+            {
+                title: "About Multiple Object Tracking",
+                content: "Multiple Object Tracking (MOT) is a premier cognitive exercise designed to test and improve your dynamic visual attention. By tracking a subset of moving objects among identical distractors, you challenge your brain's ability to maintain focus across a wide visual field."
+            }
+        ],
+        howToUse: [
+            {
+                title: "How to Play",
+                steps: [
+                    "A set of identical dots will appear on screen.",
+                    "A few dots will flash yellow to indicate they are your targets.",
+                    "Keep your eyes on those specific dots as they all begin to move rapidly.",
+                    "Once they stop moving, click on all the dots that were originally highlighted."
+                ]
+            }
+        ],
+        howToImprove: [
+            {
+                title: "Soft Focus",
+                content: "Instead of darting your eyes between individual dots, try to maintain a 'soft focus' on the center of the group. This utilizes your peripheral vision, which is highly sensitive to motion."
+            }
+        ],
+        faqs: [
+            {
+                question: "How does this help me?",
+                answer: "MOT training directly translates to real-world skills like driving, sports, and any activity requiring situational awareness in a dynamic environment."
+            }
+        ]
+    },
+    "color-blindness": {
+        description: [
+            {
+                title: "About Color Blindness Testing",
+                content: "This tool uses Ishihara-style plates to test your color vision. By identifying numbers hidden in a pattern of colored dots, you can assess your ability to distinguish between subtle hues."
+            }
+        ],
+        howToUse: [
+            {
+                title: "How to Take the Test",
+                steps: [
+                    "A circle filled with colored dots will appear on screen.",
+                    "Look for a number formed by dots of a different color.",
+                    "Type the number you see using your keyboard or the on-screen numpad.",
+                    "If you don't see a number, you can skip to the next plate."
+                ]
+            }
+        ],
+        howToImprove: [
+            {
+                title: "Screen Settings",
+                content: "Ensure your monitor's color settings are calibrated properly, night light (blue light filter) is turned off, and brightness is adequately high for accurate results."
+            }
+        ],
+        faqs: [
+            {
+                question: "Is this a medical diagnosis?",
+                answer: "No. While this tool mimics standard clinical tests, it is for educational and entertainment purposes. If you suspect you have a color vision deficiency, consult an optometrist."
+            }
+        ]
+    },
+    "mental-rotation": {
+        description: [
+            {
+                title: "About Mental Rotation",
+                content: "Mental Rotation tests your spatial intelligence by asking you to manipulate 3D shapes in your mind. This is a classic cognitive psychology task that measures spatial working memory."
+            }
+        ],
+        howToUse: [
+            {
+                title: "How to Play",
+                steps: [
+                    "You will be shown two 3D block structures.",
+                    "The second structure may be the exact same object rotated, or a mirrored (different) object.",
+                    "Mentally rotate the objects to see if they can align perfectly.",
+                    "Select 'Same' if they match, or 'Different' if they are mirrored."
+                ]
+            }
+        ],
+        howToImprove: [
+            {
+                title: "Find an Anchor",
+                content: "Pick a specific defining feature or 'arm' of the block structure. Track how that specific piece would move if you rotated the object 90 degrees."
+            }
+        ],
+        faqs: [
+            {
+                question: "Can I improve my spatial intelligence?",
+                answer: "Yes! Spatial reasoning is highly malleable. Regular practice with mental rotation tasks physically strengthens the neural pathways in your parietal lobe."
+            }
+        ]
     }
 };
 
@@ -4013,6 +4191,18 @@ const relatedToolsMap: Record<string, Array<{ id: string; title: string; href: s
         { id: "typing-speed", title: "Typing Speed", href: "/speed/typing" },
         { id: "word-accuracy", title: "Word Accuracy", href: "/speed/words" },
         { id: "image-recognition", title: "Image Recognition", href: "/accuracy/image-recognition" },
+    ],
+    "object-tracking": [
+        { id: "visual-memory", title: "Visual Memory", href: "/memory/visual" },
+        { id: "peripheral-vision", title: "Peripheral Vision", href: "/reflex/peripheral" },
+    ],
+    "color-blindness": [
+        { id: "color-memory", title: "Color Memory", href: "/memory/color" },
+        { id: "color-match", title: "Color Match", href: "/accuracy/color-match" },
+    ],
+    "mental-rotation": [
+        { id: "pattern-matching", title: "Pattern Matching", href: "/accuracy/pattern-matching" },
+        { id: "visual-memory", title: "Visual Memory", href: "/memory/visual" },
     ],
 };
 

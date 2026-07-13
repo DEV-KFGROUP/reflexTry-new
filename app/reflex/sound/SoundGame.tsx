@@ -6,8 +6,6 @@ import {
   RotateCcw, Volume2, ShieldAlert, Shield, Star, Zap, Flame, Trophy,
   VolumeX, Brain, Play, Target
 } from "lucide-react";
-import { ToolContent } from "@/components/ToolContent";
-import { getToolContent } from "@/lib/tool-content";
 import { useGameSound } from "@/hooks/useGameSound";
 
 /* ─────────────────────────────────────────────
@@ -125,8 +123,7 @@ function DifficultyCard({
    MAIN COMPONENT
 ───────────────────────────────────────────── */
 export default function SoundReactionGame() {
-  const content = getToolContent("sound-reaction", "Audio Reaction Test");
-  const { play } = useGameSound();
+    const { play } = useGameSound();
 
   const [phase, setPhase] = useState<"select" | "idle" | "waiting" | "ready" | "early" | "result" | "summary">("select");
   const [diffId, setDiffId] = useState<DiffId>("normal");
@@ -314,9 +311,9 @@ export default function SoundReactionGame() {
   const bestScore = attempts.length > 0 ? Math.min(...attempts) : 0;
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] text-slate-800 font-sans relative overflow-hidden py-16 px-4">
+    <div className="w-full bg-[#f8fafc] dark:bg-slate-800 text-slate-800 dark:text-white font-sans relative overflow-hidden py-8 px-4 sm:px-6 lg:px-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm mb-8">
       {/* Background grids */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.04)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none z-0" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.04)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none z-0" />
       <div className="absolute top-[-5%] left-[5%] w-[600px] h-[600px] bg-violet-500/[0.03] blur-[140px] rounded-full pointer-events-none z-0" />
       <div className="absolute bottom-[-5%] right-[5%] w-[500px] h-[500px] bg-cyan-500/[0.03] blur-[120px] rounded-full pointer-events-none z-0" />
 
@@ -624,32 +621,7 @@ export default function SoundReactionGame() {
           </motion.div>
         </div>
 
-        {/* SEO Content */}
-        <div className="w-full max-w-5xl bg-white border border-slate-200 shadow-sm rounded-3xl p-6 md:p-8 relative z-10">
-          <ToolContent
-            title="Audio Reaction Test"
-            description={content.description}
-            howToUse={content.howToUse}
-            howToImprove={content.howToImprove}
-            faqs={content.faqs}
-            relatedTools={content.relatedTools}
-            benefits={[
-              "Calibrates motor reaction speeds strictly via auditory cues.",
-              "Improves selective auditory focus by tuning out false pitch frequencies.",
-              "Sharpens sensory coordination speed through dual-task pitch matching.",
-              "Compares visual reaction time to auditory reaction speeds side by side.",
-              "Saves historical latency charts to note progress milestones.",
-            ]}
-            howToPlay={[
-              "Select a difficulty level — Beginner (6000ms delay, no penalty) to Professional (Pitch matching task shifts).",
-              "Tap the console pad to trigger a synchronization timer.",
-              "Listen carefully: On Hard/Professional mode, low pitch tones (350Hz) are distractions.",
-              "On Professional mode, pay attention to the banner: Click only on the requested pitch (High or Low).",
-              "Click immediately when the correct tone plays. Early or incorrect pitch clicks incur penalties.",
-              "Calibrate all 5 attempts to calculate your average auditory latency.",
-            ]}
-          />
-        </div>
+        
       </div>
     </div>
   );

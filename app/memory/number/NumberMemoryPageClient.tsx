@@ -2,8 +2,6 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ToolContent } from "@/components/ToolContent";
-import { getToolContent } from "@/lib/tool-content";
 import { useGameSound } from "@/hooks/useGameSound";
 import {
   Play, RotateCcw, ArrowRight, Hash, AlertTriangle, Brain,
@@ -170,8 +168,7 @@ function DifficultyCard({
    MAIN COMPONENT
 ───────────────────────────────────────────── */
 export default function NumberMemoryPageClient() {
-  const content = getToolContent("number-memory", "Number Memory");
-  const { play } = useGameSound();
+    const { play } = useGameSound();
 
   const [phase, setPhase] = useState<"select" | "memorize" | "input" | "result" | "gameover">("select");
   const [diffId, setDiffId] = useState<DiffId>("normal");
@@ -337,9 +334,9 @@ export default function NumberMemoryPageClient() {
   const displayMs = diff.baseDisplayMs + (currentDigits * diff.msPerDigit);
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] text-slate-800 font-sans relative overflow-hidden py-16 px-4">
+    <div className="w-full bg-[#f8fafc] dark:bg-slate-800 text-slate-800 dark:text-white font-sans relative overflow-hidden py-8 px-4 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm mb-8">
       {/* Grid overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.04)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none z-0" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.04)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none z-0" />
       <div className="absolute top-[-5%] left-[5%] w-[600px] h-[600px] bg-violet-500/[0.03] blur-[140px] rounded-full pointer-events-none z-0" />
       <div className="absolute bottom-[-5%] right-[5%] w-[500px] h-[500px] bg-cyan-500/[0.03] blur-[120px] rounded-full pointer-events-none z-0" />
 
@@ -741,35 +738,7 @@ export default function NumberMemoryPageClient() {
           </motion.div>
         </div>
 
-        {/* SEO Content */}
-        <div className="w-full max-w-5xl bg-white border border-slate-200 shadow-sm rounded-3xl p-6 md:p-8 relative z-10">
-          <ToolContent
-            title="Number Memory"
-            description={content.description}
-            howToUse={content.howToUse}
-            howToImprove={content.howToImprove}
-            faqs={content.faqs}
-            relatedTools={content.relatedTools}
-            benefits={[
-              "Expands digit span capacity from 2 digits (Beginner) to 15+ (Professional).",
-              "Hard & Professional modes include decimals and negative numbers for real challenge.",
-              "Digit-group display on Beginner/Easy trains chunking — a proven memory technique.",
-              "Lives system lets beginners retry the same level without losing all progress.",
-              "Streak counter rewards consecutive correct answers with 🔥 momentum.",
-              "Per-difficulty high scores in localStorage give clear, lasting progress milestones.",
-              "Input countdown timer on Hard/Pro builds recall speed under genuine pressure.",
-            ]}
-            howToPlay={[
-              "Pick a difficulty — Beginner (2 digits, 3 lives) to Professional (7+ digits, ultra-fast, timed).",
-              "A number flashes on screen — memorize it before the progress bar drains.",
-              "Beginner/Easy shows numbers in grouped chunks to help you apply chunking technique.",
-              "When the number disappears, type it exactly (including any decimal or minus sign on Hard+).",
-              "Correct → advance to the next level with more digits. Wrong → costs a life.",
-              "Hard & Professional modes start a countdown after the number hides — submit before time runs out.",
-              "Run out of lives and the game ends — beat your best digit count per difficulty!",
-            ]}
-          />
-        </div>
+        
       </div>
     </div>
   );

@@ -6,8 +6,6 @@ import {
   Trophy, Play, RotateCcw, AlertTriangle, Shield, Star, Zap, Flame,
   Volume2, VolumeX, ArrowRight, Brain, Calculator
 } from "lucide-react";
-import { ToolContent } from "@/components/ToolContent";
-import { getToolContent } from "@/lib/tool-content";
 import { useGameSound } from "@/hooks/useGameSound";
 
 /* ─────────────────────────────────────────────
@@ -117,8 +115,7 @@ function DifficultyCard({
    MAIN COMPONENT
 ───────────────────────────────────────────── */
 export default function MathGame() {
-  const content = getToolContent("speed-math", "Speed Math Test");
-  const { play } = useGameSound();
+    const { play } = useGameSound();
 
   const [gameState, setGameState] = useState<"idle" | "playing" | "gameover">("idle");
   const [diffId, setDiffId] = useState<DiffId>("normal");
@@ -353,9 +350,9 @@ export default function MathGame() {
   const accuracyPercent = totalAttempts > 0 ? Math.round((hitsCount / totalAttempts) * 100) : 100;
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] text-slate-800 font-sans relative overflow-hidden py-16 px-4">
+    <div className="w-full bg-[#f8fafc] dark:bg-slate-800 text-slate-800 dark:text-white font-sans relative overflow-hidden py-8 px-4 sm:px-6 lg:px-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm mb-8">
       {/* Background Grids */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.04)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none z-0" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.04)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none z-0" />
       <div className="absolute top-[-5%] left-[5%] w-[600px] h-[600px] bg-violet-500/[0.03] blur-[140px] rounded-full pointer-events-none z-0" />
       <div className="absolute bottom-[-5%] right-[5%] w-[500px] h-[500px] bg-cyan-500/[0.03] blur-[120px] rounded-full pointer-events-none z-0" />
 
@@ -609,32 +606,7 @@ export default function MathGame() {
           </motion.div>
         </div>
 
-        {/* SEO Content */}
-        <div className="w-full max-w-5xl bg-white border border-slate-200 shadow-sm rounded-3xl p-6 md:p-8 relative z-10">
-          <ToolContent
-            title="Speed Math Test"
-            description={content.description}
-            howToUse={content.howToUse}
-            howToImprove={content.howToImprove}
-            faqs={content.faqs}
-            relatedTools={content.relatedTools}
-            benefits={[
-              "Improves mental arithmetic calculations and response latency.",
-              "Sharpens short term logical memory tracking (Double operands).",
-              "Increases neural connections by solving algebraic equations.",
-              "Enforces extreme math precision through mistake life caps.",
-              "Saves historical scoring averages per difficulty configuration.",
-            ]}
-            howToPlay={[
-              "Choose a difficulty — Beginner (Add/Sub 1-10) to Professional (Algebra: Solve for X).",
-              "Click 'Initialize Math Deck' to start the timer countdown.",
-              "Read the arithmetic equation displayed inside the console screen.",
-              "Mental math calculate the solution and type it into the input box.",
-              "For Professional mode, calculate the value of x that makes the algebraic equation true.",
-              "Hit Enter or submit before the timer run outs. Watch your remaining lives limit.",
-            ]}
-          />
-        </div>
+        
       </div>
     </div>
   );

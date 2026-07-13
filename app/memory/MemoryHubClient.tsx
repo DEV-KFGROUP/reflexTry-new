@@ -20,6 +20,26 @@ interface ToolItem {
 
 const MEMORY_TOOLS: ToolItem[] = [
   {
+    title: "Chimp Test",
+    desc: "Test your working memory against a chimpanzee. Memorize the number sequence.",
+    icon: Sparkles,
+    color: "text-purple-600",
+    bg: "bg-purple-50",
+    border: "border-purple-200/60",
+    glow: "shadow-[0_0_12px_rgba(168,85,247,0.06)]",
+    href: "/memory/chimp-test",
+  },
+  {
+    title: "Verbal Memory",
+    desc: "Keep track of how many words you've seen and distinguish them from new ones.",
+    icon: BookOpen,
+    color: "text-purple-650",
+    bg: "bg-purple-50/80",
+    border: "border-purple-200/60",
+    glow: "shadow-[0_0_12px_rgba(168,85,247,0.06)]",
+    href: "/memory/verbal-memory",
+  },
+  {
     title: "Sequence Memory",
     desc: "Memorize and repeat an increasingly complex flashing button pattern.",
     icon: Activity,
@@ -28,6 +48,16 @@ const MEMORY_TOOLS: ToolItem[] = [
     border: "border-purple-200/60",
     glow: "shadow-[0_0_12px_rgba(168,85,247,0.06)]",
     href: "/memory/sequence",
+  },
+  {
+    title: "Object Tracking",
+    desc: "Track multiple moving targets among distractors and identify them when they stop.",
+    icon: Sparkles,
+    color: "text-purple-600",
+    bg: "bg-purple-50",
+    border: "border-purple-200/60",
+    glow: "shadow-[0_0_12px_rgba(168,85,247,0.06)]",
+    href: "/memory/object-tracking",
   },
   {
     title: "Number Memory",

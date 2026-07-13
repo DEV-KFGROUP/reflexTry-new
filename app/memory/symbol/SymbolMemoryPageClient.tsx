@@ -8,8 +8,6 @@ import {
   Moon, Music, Package, Pen, Phone, Star, Sun, Tag, Umbrella, Play, RotateCcw,
   Puzzle, AlertTriangle, Trophy, Shield, Zap, Volume2, VolumeX, ArrowRight, Eye
 } from "lucide-react";
-import { ToolContent } from "@/components/ToolContent";
-import { getToolContent } from "@/lib/tool-content";
 import { useGameSound } from "@/hooks/useGameSound";
 
 /* ─────────────────────────────────────────────
@@ -148,8 +146,7 @@ function DifficultyCard({
    MAIN COMPONENT
 ───────────────────────────────────────────── */
 export default function SymbolMemoryPageClient() {
-  const content = getToolContent("symbol-memory", "Symbol Pairs");
-  const { play } = useGameSound();
+    const { play } = useGameSound();
 
   const [phase, setPhase] = useState<"select" | "playing" | "gameover">("select");
   const [diffId, setDiffId] = useState<DiffId>("normal");
@@ -356,9 +353,9 @@ export default function SymbolMemoryPageClient() {
   const totalPairs = (diff.rows * diff.cols) / 2;
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] text-slate-800 font-sans relative overflow-hidden py-16 px-4">
+    <div className="w-full bg-[#f8fafc] dark:bg-slate-800 text-slate-800 dark:text-white font-sans relative overflow-hidden py-8 px-4 sm:px-6 lg:px-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm mb-8">
       {/* Background Grids */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.04)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none z-0" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.04)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none z-0" />
       <div className="absolute top-[-5%] left-[5%] w-[600px] h-[600px] bg-violet-500/[0.03] blur-[140px] rounded-full pointer-events-none z-0" />
       <div className="absolute bottom-[-5%] right-[5%] w-[500px] h-[500px] bg-cyan-500/[0.03] blur-[120px] rounded-full pointer-events-none z-0" />
 
@@ -673,32 +670,7 @@ export default function SymbolMemoryPageClient() {
           </motion.div>
         </div>
 
-        {/* SEO Content */}
-        <div className="w-full max-w-5xl bg-white border border-slate-200 shadow-sm rounded-3xl p-6 md:p-8 relative z-10">
-          <ToolContent
-            title="Symbol Pairs"
-            description={content.description}
-            howToUse={content.howToUse}
-            howToImprove={content.howToImprove}
-            faqs={content.faqs}
-            relatedTools={content.relatedTools}
-            benefits={[
-              "Improves spatial memory capacity by mapping symbol locations.",
-              "Enhances focus and attention span across board layouts up to 30 elements.",
-              "Teaches efficient memory chunking and organization strategies.",
-              "Adds mind-bending board shuffles to test extreme recall flexibility.",
-              "Tracks top speed and lowest move records dynamically per mode.",
-            ]}
-            howToPlay={[
-              "Pick a difficulty — Beginner (3×4 grid, hints allowed) to Professional (6×5 grid, shuffle distortion).",
-              "Click cards to flip and reveal their underlying symbol.",
-              "Flip two cards; if the symbols are identical, they stay face-up.",
-              "If they match, you've found a pair. If not, they flip back.",
-              "On Professional mode, unmatched cards will shuffle locations every 4 misses!",
-              "Clear the entire board before running out of moves or timer constraints.",
-            ]}
-          />
-        </div>
+        
       </div>
     </div>
   );

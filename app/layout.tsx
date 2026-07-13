@@ -30,7 +30,7 @@ export async function generateMetadata(): Promise<Metadata> {
       template: "%s | Reflextry"
     },
     description: "Test your accuracy and reflexes with our Gen Z tools. Free online brain training games, reaction time tests, typing speed tests, memory games, and more.",
-    keywords: ["reaction time test", "typing speed test", "brain training games", "memory games", "accuracy test", "reflex test"],
+    keywords: ["reaction time test", "typing speed test", "brain training games", "memory games", "accuracy test", "reflex test", "human benchmark", "reaction test", "aim trainer", "human benchmark reaction time", "test for reaction", "reaction speed test", "memory test"],
     authors: [{ name: "Reflextry" }],
     creator: "Reflextry",
     publisher: "Reflextry",

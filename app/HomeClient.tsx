@@ -40,6 +40,9 @@ export default function HomeClient() {
       tag: "COGNITION",
       tools: [
         { id: "sequence", href: "/memory/sequence", icon: Zap, difficulty: "Medium" },
+        { id: "chimp-test", href: "/memory/chimp-test", icon: Brain, difficulty: "Hard" },
+        { id: "verbal-memory", href: "/memory/verbal-memory", icon: Sparkles, difficulty: "Medium" },
+        { id: "object-tracking", href: "/memory/object-tracking", icon: Target, difficulty: "Hard" },
         { id: "number", href: "/memory/number", icon: Keyboard, difficulty: "Hard" },
         { id: "visual", href: "/memory/visual", icon: Target, difficulty: "Medium" },
         { id: "color", href: "/memory/color", icon: Activity, difficulty: "Easy" },
@@ -63,6 +66,7 @@ export default function HomeClient() {
       tag: "REACTION",
       tools: [
         { id: "reaction", href: "/reflex/reaction", icon: Zap, difficulty: "Easy" },
+        { id: "time-perception", href: "/reflex/time-perception", icon: Activity, difficulty: "Medium" },
         { id: "sound", href: "/reflex/sound", icon: Activity, difficulty: "Medium" },
         { id: "grid", href: "/reflex/grid", icon: Target, difficulty: "Medium" },
         { id: "peripheral", href: "/reflex/peripheral", icon: Keyboard, difficulty: "Hard" },
@@ -131,6 +135,8 @@ export default function HomeClient() {
       tag: "PRECISION",
       tools: [
         { id: "image", href: "/accuracy/image-recognition", icon: Target, difficulty: "Hard" },
+        { id: "color-blindness", href: "/accuracy/color-blindness", icon: Brain, difficulty: "Medium" },
+        { id: "mental-rotation", href: "/accuracy/mental-rotation", icon: Target, difficulty: "Hard" },
         { id: "data", href: "/accuracy/data", icon: Keyboard, difficulty: "Expert" },
         { id: "pattern-matching", href: "/accuracy/pattern-matching", icon: Target, difficulty: "Medium" },
         { id: "precision-click", href: "/accuracy/precision-click", icon: Target, difficulty: "Medium" },

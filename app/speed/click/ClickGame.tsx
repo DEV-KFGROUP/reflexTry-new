@@ -6,8 +6,6 @@ import {
   MousePointer, Play, RotateCcw, Trophy, AlertTriangle,
   Shield, Star, Zap, Flame, Volume2, VolumeX, ArrowRight, Brain
 } from "lucide-react";
-import { ToolContent } from "@/components/ToolContent";
-import { getToolContent } from "@/lib/tool-content";
 import { useGameSound } from "@/hooks/useGameSound";
 
 /* ─────────────────────────────────────────────
@@ -117,8 +115,7 @@ function DifficultyCard({
    MAIN COMPONENT
 ───────────────────────────────────────────── */
 export default function ClickGame() {
-  const content = getToolContent("click-speed", "CPS Test");
-  const { play } = useGameSound();
+    const { play } = useGameSound();
 
   const [phase, setPhase] = useState<"select" | "playing" | "result">("select");
   const [diffId, setDiffId] = useState<DiffId>("normal");
@@ -271,9 +268,9 @@ export default function ClickGame() {
   const finalCps = (score / diff.timeLimitSec).toFixed(1);
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] text-slate-800 font-sans relative overflow-hidden py-16 px-4">
+    <div className="w-full bg-[#f8fafc] dark:bg-slate-800 text-slate-800 dark:text-white font-sans relative overflow-hidden py-8 px-4 sm:px-6 lg:px-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm mb-8">
       {/* Background Grids */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.04)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none z-0" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.04)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none z-0" />
       <div className="absolute top-[-5%] left-[5%] w-[600px] h-[600px] bg-violet-500/[0.03] blur-[140px] rounded-full pointer-events-none z-0" />
       <div className="absolute bottom-[-5%] right-[5%] w-[500px] h-[500px] bg-cyan-500/[0.03] blur-[120px] rounded-full pointer-events-none z-0" />
 
@@ -591,32 +588,7 @@ export default function ClickGame() {
           </motion.div>
         </div>
 
-        {/* SEO Content */}
-        <div className="w-full max-w-5xl bg-white border border-slate-200 shadow-sm rounded-3xl p-6 md:p-8 relative z-10">
-          <ToolContent
-            title="Clicks Per Second (CPS) Test"
-            description={content.description}
-            howToUse={content.howToUse}
-            howToImprove={content.howToImprove}
-            faqs={content.faqs}
-            relatedTools={content.relatedTools}
-            benefits={[
-              "Accurately calibrates finger tapping speed and stamina metrics.",
-              "Improves split-finger hand coordination (Alternating click pads).",
-              "Develops clicking precision under movement stresses (Moving targets).",
-              "Sharpens numerical logic scanning and speed sequencing (Ascending pads).",
-              "Saves high score averages (CPS benchmarks) per difficulty level.",
-            ]}
-            howToPlay={[
-              "Select a difficulty level — Beginner (Standard, 10s) to Professional (Ascending 1 -> 2 -> 3 pads).",
-              "Click 'Initialize CPS Pad' to start.",
-              "Under Normal mode, click LEFT then RIGHT alternatingly as fast as possible.",
-              "Under Hard mode, follow and click the moving target dot inside the console area.",
-              "Under Professional mode, tap keypads sequentially in order: 1, then 2, then 3, then 1, and so forth.",
-              "Achieve maximum clicks within the 5s/10s timer limit to beat your best CPS rating.",
-            ]}
-          />
-        </div>
+        
       </div>
     </div>
   );

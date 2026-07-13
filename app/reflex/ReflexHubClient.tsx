@@ -19,6 +19,16 @@ interface ToolItem {
 
 const REFLEX_TOOLS: ToolItem[] = [
   {
+    title: "Time Perception",
+    desc: "Test your internal clock and time perception by holding a button for the exact requested time.",
+    icon: Timer,
+    color: "text-amber-500",
+    bg: "bg-amber-50",
+    border: "border-amber-200/60",
+    glow: "shadow-[0_0_12px_rgba(245,158,11,0.06)]",
+    href: "/reflex/time-perception",
+  },
+  {
     title: "Reaction Time",
     desc: "Test raw visual reflex click response speeds under classic light cues.",
     icon: Zap,

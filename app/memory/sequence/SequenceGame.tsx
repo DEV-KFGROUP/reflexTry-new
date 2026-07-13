@@ -2,8 +2,6 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ToolContent } from "@/components/ToolContent";
-import { getToolContent } from "@/lib/tool-content";
 import {
   Play,
   RotateCcw,
@@ -212,8 +210,7 @@ function DifficultyCard({
 }
 
 export default function SequenceGame() {
-  const content = getToolContent("sequence-memory", "Sequence Memory");
-
+  
   const [phase, setPhase] = useState<"select" | "playing" | "gameover">("select");
   const [diffId, setDiffId] = useState<DifficultyId>("normal");
   const [sequence, setSequence] = useState<number[]>([]);
@@ -398,8 +395,8 @@ export default function SequenceGame() {
   }, [phase, isShowingSequence, activateButton, diff, playSound, stopTimer, userSequence, sequence, livesLeft, score, diffId, combo, advanceSequence, playSequenceAnim, startInputTimer, addLog]);
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] text-slate-800 font-sans relative overflow-hidden py-16 px-4">
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.04)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none z-0" />
+    <div className="w-full bg-[#f8fafc] dark:bg-slate-800 text-slate-800 dark:text-white font-sans relative overflow-hidden py-8 px-4 sm:px-6 lg:px-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm mb-8">
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.04)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none z-0" />
       <div className="absolute top-[-5%] left-[5%] w-[600px] h-[600px] bg-violet-500/[0.03] blur-[140px] rounded-full pointer-events-none z-0" />
       <div className="absolute bottom-[-5%] right-[5%] w-[500px] h-[500px] bg-cyan-500/[0.03] blur-[120px] rounded-full pointer-events-none z-0" />
 
@@ -683,35 +680,7 @@ export default function SequenceGame() {
           </motion.div>
         </div>
 
-        {/* SEO Content */}
-        <div className="w-full max-w-5xl bg-white border border-slate-200 shadow-sm rounded-3xl p-6 md:p-8 relative z-10">
-          <ToolContent
-            title="Sequence Memory Calibration"
-            description={content.description}
-            howToUse={content.howToUse}
-            howToImprove={content.howToImprove}
-            faqs={content.faqs}
-            relatedTools={content.relatedTools}
-            benefits={[
-              "Trains working memory and sequential recall across 5 difficulty tiers.",
-              "Scales from 4-button Beginner grids up to 16-button Professional grids.",
-              "Builds pattern recognition speed under increasing cognitive load.",
-              "Develops mental discipline through timed pressure on Hard & Professional.",
-              "Lives system on Beginner/Easy lets beginners learn without frustration.",
-              "Combo streak rewards sustained accuracy and builds competitive motivation.",
-              "Per-difficulty high scores provide clear, trackable progress milestones.",
-            ]}
-            howToPlay={[
-              "Pick a difficulty — Beginner (4 buttons, 3 lives) to Professional (16 buttons, ultra-fast, timed).",
-              "Watch the sequence of flashing colored buttons carefully — each lights up one at a time.",
-              "Once the sequence stops, click each button in the exact same order from memory.",
-              "Complete the full sequence correctly to advance to the next stage (one more button added).",
-              "A wrong click costs a life on Beginner/Easy; on Normal+ it ends the round immediately.",
-              "Hard & Professional modes show a countdown timer — you must finish inputting before it expires.",
-              "Chain 3+ correct rounds in a row to trigger a 🔥 Combo streak bonus.",
-            ]}
-          />
-        </div>
+        
       </div>
     </div>
   );

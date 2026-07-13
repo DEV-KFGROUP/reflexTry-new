@@ -6,8 +6,6 @@ import {
   Trophy, Play, RotateCcw, Shield, Star, Zap, Flame,
   Volume2, VolumeX, ArrowRight, Brain, Keyboard, AlertTriangle
 } from "lucide-react";
-import { ToolContent } from "@/components/ToolContent";
-import { getToolContent } from "@/lib/tool-content";
 import { useGameSound } from "@/hooks/useGameSound";
 
 /* ─────────────────────────────────────────────
@@ -147,8 +145,7 @@ function DifficultyCard({
    MAIN COMPONENT
 ───────────────────────────────────────────── */
 export default function DataEntryClient() {
-  const content = getToolContent("data-entry", "Data Entry");
-  const { play } = useGameSound();
+    const { play } = useGameSound();
 
   const [phase, setPhase] = useState<"idle" | "playing" | "result" | "failed">("idle");
   const [diffId, setDiffId] = useState<DiffId>("normal");
@@ -294,9 +291,9 @@ export default function DataEntryClient() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] text-slate-800 font-sans relative overflow-hidden py-16 px-4">
+    <div className="w-full bg-[#f8fafc] dark:bg-slate-800 text-slate-800 dark:text-white font-sans relative overflow-hidden py-8 px-4 sm:px-6 lg:px-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm mb-8">
       {/* Background Grids */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.04)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none z-0" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.04)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none z-0" />
       <div className="absolute top-[-5%] left-[5%] w-[600px] h-[600px] bg-violet-500/[0.03] blur-[140px] rounded-full pointer-events-none z-0" />
       <div className="absolute bottom-[-5%] right-[5%] w-[500px] h-[500px] bg-cyan-500/[0.03] blur-[120px] rounded-full pointer-events-none z-0" />
 
@@ -571,31 +568,7 @@ export default function DataEntryClient() {
           </motion.div>
         </div>
 
-        {/* SEO Content */}
-        <div className="w-full max-w-5xl bg-white border border-slate-200 shadow-sm rounded-3xl p-6 md:p-8 relative z-10">
-          <ToolContent
-            title="Data Entry Accuracy Calibration"
-            description={content.description}
-            howToUse={content.howToUse}
-            howToImprove={content.howToImprove}
-            faqs={content.faqs}
-            relatedTools={content.relatedTools}
-            benefits={[
-              "Improves keystroke mapping speed (WPM) and accuracy.",
-              "Enhances finger muscle memory for brackets, semi-colons, and casing.",
-              "Prepares developer typing skills for complex CLI pipelines and configs.",
-              "Teaches sustained focus under time pressure constraints.",
-              "Saves optimal session performance records per preset level.",
-            ]}
-            howToPlay={[
-              "Select a level — Beginner (simple text) to Professional (cryptographic strings, max 4 errors, 20s timer).",
-              "Click 'Initialize Keystroke Deck' to reveal the target sequence.",
-              "Start typing immediately. Typographical errors will highlight red.",
-              "Complete the entire sequence before the time runs out.",
-              "Exceeding mistake thresholds halts calibration instantly.",
-            ]}
-          />
-        </div>
+        
       </div>
     </div>
   );

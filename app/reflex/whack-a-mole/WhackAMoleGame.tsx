@@ -6,8 +6,6 @@ import {
   Play, RotateCcw, Trophy, Zap, Target, AlertTriangle,
   Shield, Star, Flame, Volume2, VolumeX, ArrowRight, Brain
 } from "lucide-react";
-import { ToolContent } from "@/components/ToolContent";
-import { getToolContent } from "@/lib/tool-content";
 import { useGameSound } from "@/hooks/useGameSound";
 
 /* ─────────────────────────────────────────────
@@ -129,8 +127,7 @@ function DifficultyCard({
    MAIN GAME
 ───────────────────────────────────────────── */
 export default function WhackAMoleGame() {
-  const content = getToolContent("whack-a-mole", "Whack-a-Mole");
-  const { play } = useGameSound();
+    const { play } = useGameSound();
 
   const [phase, setPhase] = useState<"idle" | "playing" | "result">("idle");
   const [diffId, setDiffId] = useState<DiffId>("normal");
@@ -363,9 +360,9 @@ export default function WhackAMoleGame() {
   };
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] text-slate-800 font-sans relative overflow-hidden py-16 px-4">
+    <div className="w-full bg-[#f8fafc] dark:bg-slate-800 text-slate-800 dark:text-white font-sans relative overflow-hidden py-8 px-4 sm:px-6 lg:px-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm mb-8">
       {/* Background Grids */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.04)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none z-0" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.04)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none z-0" />
       <div className="absolute top-[-5%] left-[5%] w-[600px] h-[600px] bg-violet-500/[0.03] blur-[140px] rounded-full pointer-events-none z-0" />
       <div className="absolute bottom-[-5%] right-[5%] w-[500px] h-[500px] bg-cyan-500/[0.03] blur-[120px] rounded-full pointer-events-none z-0" />
 
@@ -623,32 +620,7 @@ export default function WhackAMoleGame() {
           </motion.div>
         </div>
 
-        {/* SEO Content */}
-        <div className="w-full max-w-5xl bg-white border border-slate-200 shadow-sm rounded-3xl p-6 md:p-8 relative z-10">
-          <ToolContent
-            title="Whack-a-Mole Game"
-            description={content.description}
-            howToUse={content.howToUse}
-            howToImprove={content.howToImprove}
-            faqs={content.faqs}
-            relatedTools={content.relatedTools}
-            benefits={[
-              "Improves spatial coordination and peripheral scanning speed.",
-              "Sharpens hand-eye motor reflex timing under high speed spawning ratios.",
-              "Trains cognitive inhibition checks by avoiding red decoy bomb targets.",
-              "Develops parallel focus parameters to spot special bonus targets.",
-              "Stores highest scoring record benchmarks per difficulty level.",
-            ]}
-            howToPlay={[
-              "Choose a difficulty — Beginner (2x2 grid, 3 lives) to Professional (5x5 grid, bomb decoys, slomo moles).",
-              "Click 'Initialize Gallery' to start the 30-second challenge.",
-              "Watch the holes and tap/click emerging color dots as quickly as possible.",
-              "Avoid Red bomb moles (-300 points, -1 life penalty).",
-              "Whack Yellow golden moles for a massive +300 points bonus.",
-              "Whack Green moles to temporarily slow down spawning rates and mole lifespans for 3 seconds.",
-            ]}
-          />
-        </div>
+        
       </div>
     </div>
   );

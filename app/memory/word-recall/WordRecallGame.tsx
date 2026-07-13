@@ -6,8 +6,6 @@ import {
   BookOpen, Play, RotateCcw, Trophy, Brain, Clock, AlertTriangle,
   Shield, Star, Zap, Flame, Heart, Volume2, VolumeX, ArrowRight, Eye
 } from "lucide-react";
-import { ToolContent } from "@/components/ToolContent";
-import { getToolContent } from "@/lib/tool-content";
 import { useGameSound } from "@/hooks/useGameSound";
 
 /* ─────────────────────────────────────────────
@@ -144,8 +142,7 @@ function DifficultyCard({
    MAIN COMPONENT
 ───────────────────────────────────────────── */
 export default function WordRecallGame() {
-  const content = getToolContent("word-recall", "Word Recall");
-  const { play } = useGameSound();
+    const { play } = useGameSound();
 
   const [phase, setPhase] = useState<"select" | "memorize" | "recall" | "result" | "gameover">("select");
   const [diffId, setDiffId] = useState<DiffId>("normal");
@@ -333,9 +330,9 @@ export default function WordRecallGame() {
   const wordCount = diff.startWordCount + (level - 1) * diff.wordsPerLevel;
 
   return (
-    <div className="min-h-screen bg-[#f8fafc] text-slate-800 font-sans relative overflow-hidden py-16 px-4">
+    <div className="w-full bg-[#f8fafc] dark:bg-slate-800 text-slate-800 dark:text-white font-sans relative overflow-hidden py-8 px-4 sm:px-6 lg:px-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm mb-8">
       {/* Grid Overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.04)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none z-0" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.04)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none z-0" />
       <div className="absolute top-[-5%] left-[5%] w-[600px] h-[600px] bg-violet-500/[0.03] blur-[140px] rounded-full pointer-events-none z-0" />
       <div className="absolute bottom-[-5%] right-[5%] w-[500px] h-[500px] bg-cyan-500/[0.03] blur-[120px] rounded-full pointer-events-none z-0" />
 
@@ -675,32 +672,7 @@ export default function WordRecallGame() {
           </motion.div>
         </div>
 
-        {/* SEO Content */}
-        <div className="w-full max-w-5xl bg-white border border-slate-200 shadow-sm rounded-3xl p-6 md:p-8 relative z-10">
-          <ToolContent
-            title="Word Recall Memory Test"
-            description={content.description}
-            howToUse={content.howToUse}
-            howToImprove={content.howToImprove}
-            faqs={content.faqs}
-            relatedTools={content.relatedTools}
-            benefits={[
-              "Strengthens verbal working memory capacity over 5 levels.",
-              "Improves cognitive recall speed under strict input deadlines.",
-              "Trains focus under visual distortions (varying word rotations & size scales).",
-              "Tests sequential order recall to evaluate chronological working memory.",
-              "Maintains persistent records across multiple difficulty modes.",
-            ]}
-            howToPlay={[
-              "Choose a difficulty — Beginner (2+ words, 2s display) to Professional (6+ words, 600ms display, sequential matching).",
-              "Watch the words flash in sequence in the console deck — memorize them.",
-              "Once all words have flashed, input them using the recall input field.",
-              "On Professional mode, you must type them in the exact order they appeared.",
-              "On other modes, order does not matter as long as all words are recalled.",
-              "Beat your peak level record across all difficulty modes!",
-            ]}
-          />
-        </div>
+        
       </div>
     </div>
   );
