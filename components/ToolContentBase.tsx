@@ -7,6 +7,8 @@ import Link from "next/link";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { SchemaInjector } from "@/components/SchemaInjector";
 import { generateFAQPageSchema, generateHowToSchema } from "@/lib/structured-data";
+import { SeoKeywordFooter } from "./SeoKeywordFooter";
+
 interface FAQItem {
     question: string;
     answer: string;
@@ -491,6 +493,9 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
                     </div>
                 </motion.section>
             )}
+
+            {/* Global Semantic SEO Component */}
+            <SeoKeywordFooter title={title} />
         </motion.div>
     );
 }

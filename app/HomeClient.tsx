@@ -336,7 +336,46 @@ export default function HomeClient() {
                 <p className="text-muted-foreground leading-relaxed">
                     The average human visual reaction time is approximately 250 milliseconds. However, elite esports professionals frequently average between 150ms and 180ms. According to the <a href="https://pubmed.ncbi.nlm.nih.gov/24718593/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">National Institutes of Health (NIH)</a>, repetitive cognitive and motor skill training can significantly reduce reaction times and improve working memory capacity.
                 </p>
+                <p className="text-muted-foreground leading-relaxed mt-4">
+                    Whether you are utilizing the <strong>Sequence Memory Test</strong> to build spatial retention or the <strong>Aim Trainer</strong> to reduce input lag, consistent measurement is the first step toward improvement. Our platform is completely free, does not require an account to access the core benchmarks, and operates entirely within your browser for maximum privacy.
+                </p>
             </div>
+
+            {/* Comprehensive SEO FAQ for the homepage */}
+            <div className="space-y-6 pt-8 border-t border-black/10 dark:border-white/10">
+                <div className="flex items-center gap-3">
+                    <Activity className="w-6 h-6 text-green-500" />
+                    <h2 className="text-2xl font-bold text-foreground">Frequently Asked Questions</h2>
+                </div>
+                
+                <div className="grid md:grid-cols-2 gap-6">
+                    <div className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-6">
+                        <h3 className="text-lg font-bold text-foreground mb-3">Does brain training actually work?</h3>
+                        <p className="text-muted-foreground leading-relaxed">
+                            Yes, regular engagement in cognitive tasks leverages neuroplasticity—the brain's ability to reorganize itself by forming new neural connections. Consistent practice with tools like our Sequence Memory or Reaction Time tests can lead to measurable improvements in those specific skills over time. Research consistently indicates that active, focused problem-solving delays cognitive decline.
+                        </p>
+                    </div>
+                    <div className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-6">
+                        <h3 className="text-lg font-bold text-foreground mb-3">How often should I use these cognitive training games?</h3>
+                        <p className="text-muted-foreground leading-relaxed">
+                            For optimal results, we suggest practicing for 10-15 minutes daily. Consistency is key in neuroplasticity. Rather than playing for hours once a week, daily short sessions allow your brain to consolidate the procedural memory during sleep. Use the Memory arena to improve retention, and the Speed arena to enhance quick decision-making.
+                        </p>
+                    </div>
+                    <div className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-6">
+                        <h3 className="text-lg font-bold text-foreground mb-3">Are these tools useful for esports and competitive gamers?</h3>
+                        <p className="text-muted-foreground leading-relaxed">
+                            Absolutely. Professional gamers frequently use our Aim Trainer, Grid Click, and Flick Shot tools to warm up their physical mechanics, hand-eye coordination, and peripheral vision before competitive matches. Tracking your millisecond reaction latency allows you to see exactly when you are peaking and when cognitive fatigue is setting in.
+                        </p>
+                    </div>
+                    <div className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-6">
+                        <h3 className="text-lg font-bold text-foreground mb-3">Is Reflextry free to use?</h3>
+                        <p className="text-muted-foreground leading-relaxed">
+                            Yes, the vast majority of our brain training tools, memory games, and reaction time tests are completely free to play directly in your browser. We believe that everyone should have access to cognitive benchmarks to track their mental fitness and reflexes without a paywall.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
         </motion.div>
       </div>
     </div>
