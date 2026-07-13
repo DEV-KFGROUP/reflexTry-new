@@ -1,8 +1,11 @@
-# Reflextry - Brain Training & Reflex Games
+# Reflextry
+
+> Reflextry - Brain Training & Reflex Games
 
 Welcome to Reflextry! We provide a variety of tools to test your accuracy and reflexes. Our free online brain training games are designed for Gen Z and anyone looking to improve their cognitive skills.
 
 ## Core Keywords and Topics
+
 We are optimized for and rank for the following key terms:
 - reaction time test
 - human benchmark
@@ -18,9 +21,10 @@ We are optimized for and rank for the following key terms:
 - reflex test
 
 ## Available Tests
-- **Reaction Time Test**: Measure how fast you can react to visual stimuli.
-- **Memory Game**: Test your short-term and long-term memory.
-- **Aim Trainer**: Improve your precision and accuracy.
-- **Typing Speed Test**: See how fast you can type.
+
+- [Reaction Time Test](/reflex/reaction): Measure how fast you can react to visual stimuli.
+- [Memory Game](/memory/sequence): Test your short-term and long-term memory.
+- [Aim Trainer](/gaming/aim): Improve your precision and accuracy.
+- [Typing Speed Test](/speed/typing): See how fast you can type.
 
 We strive to be the industry's best website for reaction and brain training benchmarks.
