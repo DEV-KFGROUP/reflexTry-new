@@ -106,6 +106,7 @@ export function Footer() {
                                 { name: "Speed Tests", href: "/speed", color: "text-cyan-500" },
                                 { name: "Accuracy Tools", href: "/accuracy", color: "text-emerald-500" },
                                 { name: "Memory Games", href: "/memory", color: "text-purple-500" },
+                                { name: "All Tools", href: "/tools", color: "text-indigo-500" },
                             ].map(link => (
                                 <li key={link.name}>
                                     <Link href={link.href} className="group flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
