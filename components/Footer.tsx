@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Twitter, Instagram, Trophy, Heart, Shield, Swords, ArrowRight } from "lucide-react";
+import { Twitter, Instagram, Trophy, Heart, Shield, Swords, ArrowRight, BookOpen } from "lucide-react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
@@ -51,7 +51,7 @@ export function Footer() {
             ))}
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8 mb-16 relative">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 lg:gap-8 mb-16 relative">
                     
                     {/* Decal Corner Borders for the Grid area */}
                     <div className="absolute -top-4 -left-4 w-4 h-4 border-t-2 border-l-2 border-black/10 dark:border-white/10 pointer-events-none hidden lg:block" />
@@ -143,7 +143,30 @@ export function Footer() {
                         </ul>
                     </div>
 
-                    {/* Links Column 3: Legal / Guild Info */}
+                    {/* Links Column 3: Resources */}
+                    <div>
+                        <h4 className="flex items-center gap-2 text-xs font-mono font-bold text-foreground uppercase tracking-widest mb-6">
+                            <BookOpen className="w-4 h-4 text-purple-500" />
+                            Resources
+                        </h4>
+                        <ul className="space-y-3">
+                            {[
+                                { name: "Blog", href: "/blog" },
+                                { name: "Science", href: "/science" },
+                                { name: "Training Programs", href: "/training-programs" },
+                                { name: "FAQ", href: "/faq" },
+                            ].map(link => (
+                                <li key={link.name}>
+                                    <Link href={link.href} className="group flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                                        <ArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-purple-500" />
+                                        <span>{link.name}</span>
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+                    {/* Links Column 4: Legal / Guild Info */}
                     <div>
                         <h4 className="flex items-center gap-2 text-xs font-mono font-bold text-foreground uppercase tracking-widest mb-6">
                             <Shield className="w-4 h-4 text-muted-foreground" />
