@@ -93,13 +93,7 @@ export default function VerbalMemoryGame() {
       if (timerRef.current) clearInterval(timerRef.current);
       setTimeLeft(diff.timeLimitMs);
       timerRef.current = setInterval(() => {
-        setTimeLeft(prev => {
-          if (prev <= 100) {
-            handleTimeout();
-            return 0;
-          }
-          return prev - 100;
-        });
+        setTimeLeft(prev => Math.max(0, prev - 100));
       }, 100);
     }
   };
@@ -111,6 +105,12 @@ export default function VerbalMemoryGame() {
   useEffect(() => {
     return () => stopTimer();
   }, []);
+
+  useEffect(() => {
+    if (gameState === "playing" && diff.timeLimitMs > 0 && timeLeft === 0) {
+      handleTimeout();
+    }
+  }, [timeLeft]);
 
   const handleTimeout = () => {
     stopTimer();

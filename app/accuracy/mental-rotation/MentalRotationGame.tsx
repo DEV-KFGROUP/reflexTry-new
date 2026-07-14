@@ -98,7 +98,15 @@ function generateBlocks(count: number): Vec3[] {
   const hasBlock = (x:number, y:number, z:number) => 
     blocks.some(b => b[0]===x && b[1]===y && b[2]===z);
 
+  let attempts = 0;
   while (blocks.length < count) {
+    attempts++;
+    if (attempts > 1000) {
+      blocks.length = 1; 
+      attempts = 0;
+      continue;
+    }
+    
     const parent = blocks[Math.floor(Math.random() * blocks.length)];
     const dir = dirs[Math.floor(Math.random() * dirs.length)];
     const nx = parent[0] + dir[0];
@@ -108,6 +116,7 @@ function generateBlocks(count: number): Vec3[] {
     if (Math.abs(nx) <= 3 && Math.abs(ny) <= 3 && Math.abs(nz) <= 3) {
       if (!hasBlock(nx, ny, nz)) {
         blocks.push([nx, ny, nz]);
+        attempts = 0;
       }
     }
   }

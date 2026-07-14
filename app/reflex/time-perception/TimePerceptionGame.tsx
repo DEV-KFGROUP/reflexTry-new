@@ -231,8 +231,9 @@ export default function TimePerceptionGame() {
               onMouseLeave={handlePointerUp}
               onTouchStart={handlePointerDown}
               onTouchEnd={handlePointerUp}
+              onTouchCancel={handlePointerUp}
               className={`
-                relative w-48 h-48 rounded-full flex items-center justify-center transition-all duration-300
+                relative w-48 h-48 rounded-full flex items-center justify-center transition-all duration-300 touch-none select-none
                 ${isHolding 
                   ? "bg-indigo-600 shadow-[0_0_40px_rgba(79,70,229,0.4)] scale-95" 
                   : "bg-indigo-500 shadow-[0_0_20px_rgba(99,102,241,0.2)] hover:bg-indigo-400 hover:scale-105"

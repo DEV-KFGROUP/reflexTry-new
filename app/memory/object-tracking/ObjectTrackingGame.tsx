@@ -78,8 +78,15 @@ export default function ObjectTrackingGame() {
   const diff = DIFFICULTIES[diffId];
   
   const requestRef = useRef<number | null>(null);
+  const timeoutRefs = useRef<ReturnType<typeof setTimeout>[]>([]);
   const dotsRef = useRef<Dot[]>([]);
   const speedRef = useRef(1);
+
+  const clearAllTimers = () => {
+    if (requestRef.current) cancelAnimationFrame(requestRef.current);
+    timeoutRefs.current.forEach(clearTimeout);
+    timeoutRefs.current = [];
+  };
 
   const initLevel = useCallback((lvl: number, difficulty: DiffConfig) => {
     const extraDots = Math.floor((lvl - 1) / 2);
@@ -112,16 +119,20 @@ export default function ObjectTrackingGame() {
     setGameState("memorize");
     play("tick");
     
-    setTimeout(() => {
+    clearAllTimers();
+    
+    const t1 = setTimeout(() => {
       setGameState("moving");
       startMoving();
       
-      setTimeout(() => {
+      const t2 = setTimeout(() => {
         stopMoving();
         setGameState("guess");
         play("tick");
-      }, difficulty.moveDuration + (lvl * 200)); 
+      }, difficulty.moveDuration + (lvl * 200));
+      timeoutRefs.current.push(t2);
     }, 2000); 
+    timeoutRefs.current.push(t1);
   }, [play]);
 
   const startMoving = () => {
@@ -156,15 +167,14 @@ export default function ObjectTrackingGame() {
   };
 
   useEffect(() => {
-    return () => {
-      if (requestRef.current) cancelAnimationFrame(requestRef.current);
-    };
+    return () => clearAllTimers();
   }, []);
 
   const startGame = () => {
     play("click");
     setLevel(1);
     setScore(0);
+    clearAllTimers();
     initLevel(1, diff);
   };
 

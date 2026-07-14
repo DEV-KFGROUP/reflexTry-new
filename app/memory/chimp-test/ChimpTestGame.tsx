@@ -81,8 +81,8 @@ export default function ChimpTestGame() {
   const hideTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const generateGrid = useCallback((currentLevel: number, d: DiffConfig) => {
-    const numTargets = d.startingNumbers + currentLevel - 1;
     const totalCells = d.rows * d.cols;
+    const numTargets = Math.min(d.startingNumbers + currentLevel - 1, totalCells);
     
     const newGrid: CellData[] = Array(totalCells).fill(null).map((_, i) => ({
       id: i,
@@ -142,7 +142,7 @@ export default function ChimpTestGame() {
       play("tick");
       
       const newGrid = [...grid];
-      newGrid[cellIndex].isClicked = true;
+      newGrid[cellIndex] = { ...newGrid[cellIndex], isClicked: true };
       
       if (currentStep >= diff.hideAfterClick) {
         setNumbersShown(false);
@@ -150,7 +150,7 @@ export default function ChimpTestGame() {
 
       setGrid(newGrid);
 
-      const targetCount = diff.startingNumbers + level - 1;
+      const targetCount = Math.min(diff.startingNumbers + level - 1, diff.rows * diff.cols);
       if (currentStep === targetCount) {
         if (hideTimerRef.current) clearTimeout(hideTimerRef.current);
         setGameState("level_complete");
@@ -162,10 +162,10 @@ export default function ChimpTestGame() {
       play("error");
       if (hideTimerRef.current) clearTimeout(hideTimerRef.current);
       
-      const newGrid = [...grid];
-      newGrid[cellIndex].isWrong = true;
-      
-      newGrid.forEach(c => c.isRevealed = true);
+      const newGrid = grid.map((c, idx) => {
+        if (idx === cellIndex) return { ...c, isWrong: true, isRevealed: true };
+        return { ...c, isRevealed: true };
+      });
       setNumbersShown(true);
       setGrid(newGrid);
 

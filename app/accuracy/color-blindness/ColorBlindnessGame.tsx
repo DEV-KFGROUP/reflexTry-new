@@ -109,7 +109,11 @@ export default function ColorBlindnessGame() {
     const centerY = size / 2;
     const plateRadius = size / 2 - 10;
     
-    for (let i = 0; i < 6000; i++) {
+    const cellSize = maxR * 2 + 2;
+    const gridCols = Math.ceil(size / cellSize);
+    const spatialGrid: {x: number, y: number, r: number}[][] = Array.from({ length: gridCols * gridCols }, () => []);
+    
+    for (let i = 0; i < 5000; i++) {
       const r = minR + Math.random() * (maxR - minR);
       const angle = Math.random() * Math.PI * 2;
       const dist = Math.random() * (plateRadius - r);
@@ -118,18 +122,29 @@ export default function ColorBlindnessGame() {
       const y = centerY + Math.sin(angle) * dist;
       
       let overlaps = false;
-      for (const c of circles) {
-        const dx = c.x - x;
-        const dy = c.y - y;
-        const distance = Math.sqrt(dx * dx + dy * dy);
-        if (distance < c.r + r + 1) { 
-          overlaps = true;
-          break;
+      const gx = Math.floor(x / cellSize);
+      const gy = Math.floor(y / cellSize);
+      
+      for (let nx = Math.max(0, gx - 1); nx <= Math.min(gridCols - 1, gx + 1); nx++) {
+        for (let ny = Math.max(0, gy - 1); ny <= Math.min(gridCols - 1, gy + 1); ny++) {
+          const cell = spatialGrid[ny * gridCols + nx];
+          for (const c of cell) {
+            const dx = c.x - x;
+            const dy = c.y - y;
+            if (dx * dx + dy * dy < (c.r + r + 1) * (c.r + r + 1)) {
+              overlaps = true;
+              break;
+            }
+          }
+          if (overlaps) break;
         }
+        if (overlaps) break;
       }
       
       if (!overlaps) {
-        circles.push({x, y, r});
+        const c = {x, y, r};
+        circles.push(c);
+        spatialGrid[gy * gridCols + gx].push(c);
       }
     }
     
