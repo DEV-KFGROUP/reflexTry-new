@@ -13,148 +13,83 @@ interface FAQItem {
 const faqs: FAQItem[] = [
     {
         category: "Getting Started",
-        question: "What is Reflextry and how does it work?",
-        answer: "Reflextry is a comprehensive brain training platform offering free tools to improve memory, reaction time, speed, accuracy, and gaming performance. Our tools are based on neuroscience research and provide immediate feedback to help you track and improve your cognitive abilities. Simply choose a tool, start training, and watch your skills improve over time."
+        question: "What exactly is Reflextry?",
+        answer: "It's a free platform built to measure and improve your raw mechanical skills—things like reaction time, working memory, and clicking accuracy. No downloads or sign-ups required. Just pick a tool and start testing your limits."
     },
     {
         category: "Getting Started",
-        question: "Do I need to create an account to use Reflextry?",
-        answer: "No! All our tools are completely free and accessible without registration. You can start training immediately. However, creating an account (coming soon) will allow you to save your progress, track improvements over time, and compete on leaderboards."
+        question: "Do I have to create an account?",
+        answer: "Nope. Everything is completely free and accessible right now. We'll be adding optional accounts later if you want to save your progress across devices or compete on global leaderboards, but the core tools will always be open."
     },
     {
         category: "Getting Started",
-        question: "Which tool should I start with?",
-        answer: "Start with tools that match your goals. If you want to improve memory, try our Sequence Memory or Number Memory games. For gaming performance, start with the Reaction Time Test or Aim Trainer. For general cognitive improvement, try a variety of tools to build comprehensive abilities. We recommend starting with 2-3 tools and practicing 10-15 minutes daily."
+        question: "Where should I start?",
+        answer: "If you play shooters, hit the Aim Trainer or Reaction Time Test. If you're here for cognitive training, try Sequence Memory or Number Memory. We recommend just trying a few out to see where your baseline is at."
     },
     {
         category: "Brain Training",
-        question: "Does brain training actually work?",
-        answer: "Yes! Scientific research shows that targeted brain training can improve specific cognitive abilities. While 'far transfer' (improvements in unrelated skills) is debated, 'near transfer' (improvements in similar skills) is well-documented. Regular practice with our tools can improve memory, reaction time, processing speed, and other trained abilities. The key is consistent practice over weeks and months."
+        question: "Does brain training actually do anything?",
+        answer: "Yes, it's called 'near transfer' in neuroscience. If you practice remembering number sequences daily, your brain physically adapts (neuroplasticity) and you get better at holding information in your short-term memory. It's like going to the gym, but for your central nervous system."
     },
     {
         category: "Brain Training",
-        question: "How long does it take to see improvements?",
-        answer: "Most people see measurable improvements within 2-4 weeks of consistent daily practice (10-20 minutes). However, significant improvements typically require 6-8 weeks or more. Remember that cognitive improvement is gradual—consistency is more important than intensity. Track your scores to see progress over time."
-    },
-    {
-        category: "Brain Training",
-        question: "How often should I practice?",
-        answer: "We recommend daily practice for 15-30 minutes. Consistent daily practice produces better results than occasional long sessions. Your brain benefits from regular stimulation and practice. If you can't practice daily, aim for at least 4-5 times per week. Quality and consistency matter more than duration."
-    },
-    {
-        category: "Brain Training",
-        question: "Can brain training prevent cognitive decline?",
-        answer: "Brain training can help build cognitive reserve, which may protect against age-related cognitive decline. Research shows that regular cognitive stimulation, combined with physical exercise, quality sleep, and healthy lifestyle choices, supports brain health throughout life. While brain training isn't a guarantee against decline, it's a valuable tool for maintaining cognitive function."
+        question: "How long until I see results?",
+        answer: "If you grind for 10-20 minutes a day, you'll start seeing your scores go up within 2 to 3 weeks. Consistency matters way more than doing a massive 2-hour session once a week."
     },
     {
         category: "Memory Training",
-        question: "How can I improve my memory quickly?",
-        answer: "While there's no instant solution, the fastest improvements come from: 1) Using spaced repetition (reviewing information at increasing intervals), 2) Creating vivid mental images and associations, 3) Chunking information into meaningful groups, 4) Practicing active recall (testing yourself), and 5) Getting adequate sleep for memory consolidation. Our memory games help you practice these techniques."
+        question: "How do I stop forgetting things immediately?",
+        answer: "The quickest hack is 'chunking'—grouping items together (like remembering a phone number in blocks rather than single digits). Also, your brain deletes things it thinks are useless, so you have to actively focus and force recall to make it stick."
     },
     {
         category: "Memory Training",
-        question: "What's the difference between working memory and long-term memory?",
-        answer: "Working memory is your brain's temporary workspace—it holds information briefly (seconds to minutes) while you use it. Long-term memory stores information permanently. Working memory is like your mental desktop, while long-term memory is like your hard drive. Our memory games primarily train working memory, which supports learning, problem-solving, and daily functioning."
-    },
-    {
-        category: "Memory Training",
-        question: "Why do I forget things I just learned?",
-        answer: "Forgetting is natural and occurs when information isn't properly encoded or consolidated. Common reasons include: lack of attention during encoding, insufficient repetition, poor sleep (which impairs consolidation), stress, or trying to learn too much at once. To improve retention: focus fully when learning, use spaced repetition, get quality sleep, and practice active recall."
+        question: "Working memory vs long-term memory?",
+        answer: "Working memory is your brain's RAM—it holds what you're thinking about right now. Long-term memory is the hard drive. Our tools strictly train your RAM, so you can process more things simultaneously without dropping the ball."
     },
     {
         category: "Reaction Time",
-        question: "What's a good reaction time?",
-        answer: "Average visual reaction time is 200-250 milliseconds. Under 200ms is considered good, under 180ms is excellent, and under 150ms is exceptional. Auditory reactions are faster, averaging 150-200ms. Remember that reaction time varies by age, fatigue, and practice. With training, most people can improve their reaction time by 10-20%."
+        question: "What is a 'good' reaction time?",
+        answer: "The human average is around 200-250ms. If you're consistently hitting under 200ms, you're solid. Under 170ms is elite. Note: this heavily depends on your hardware (monitor refresh rate, mouse polling rate, etc.)."
     },
     {
         category: "Reaction Time",
-        question: "Can I improve my reaction time?",
-        answer: "Absolutely! Reaction time is trainable through consistent practice. Improvements come from: 1) More efficient neural processing, 2) Better anticipation and pattern recognition, 3) Optimized motor responses, and 4) Improved focus and attention. Regular practice with our reaction tests can produce measurable improvements within 2-4 weeks."
-    },
-    {
-        category: "Reaction Time",
-        question: "Why is my reaction time slower sometimes?",
-        answer: "Reaction time varies based on several factors: fatigue (especially sleep deprivation), time of day (most people are faster in late morning/early afternoon), stress, distractions, caffeine intake, and physical fitness. For consistent measurements, test at the same time daily when you're well-rested and focused."
+        question: "Why is my reaction time so slow today?",
+        answer: "Usually it's sleep deprivation. Even losing 1-2 hours of sleep tanks your reaction speed. Other factors: caffeine crash, cold hands, or input lag from a wireless mouse dying."
     },
     {
         category: "Gaming Performance",
-        question: "Will these tools improve my gaming performance?",
-        answer: "Yes! Our gaming tools directly train skills essential for competitive gaming: aim precision, reaction time, decision-making speed, and hand-eye coordination. Many professional gamers use similar tools for warm-ups and training. Regular practice can improve your in-game performance, especially in FPS, MOBA, and action games. Use the Aim Trainer and Reaction Time Test as part of your daily gaming routine."
+        question: "Will this actually make me better at games?",
+        answer: "Yes. Pro players use tools exactly like this to warm up their fast-twitch muscle fibers before tournaments. It won't teach you game sense, but it will absolutely lower your physical latency when clicking heads."
     },
     {
         category: "Gaming Performance",
-        question: "How should gamers use these tools?",
-        answer: "We recommend: 1) Use the Aim Trainer and Grid Shot for 10-15 minutes before gaming sessions as a warm-up, 2) Practice reaction tests daily to improve response speed, 3) Use the Click Speed Test to improve clicking techniques, 4) Track your scores to monitor improvement. Consistency is key—daily practice produces the best results."
-    },
-    {
-        category: "Gaming Performance",
-        question: "What's the best clicking technique for gaming?",
-        answer: "The best technique depends on your needs. Regular clicking works for most situations. Jitter clicking (vibrating your finger) can achieve higher CPS but may reduce accuracy. Butterfly clicking (alternating two fingers) provides high speed with better control. Practice different techniques with our Click Speed Test to find what works best for you."
+        question: "What clicking technique is best?",
+        answer: "For pure speed (like our CPS test), players use jitter clicking or butterfly clicking. But for actual gaming where accuracy matters, stick to standard clicking. High CPS means nothing if you throw off your crosshair."
     },
     {
         category: "Progress & Results",
-        question: "How do I track my progress?",
-        answer: "Currently, you can manually track your scores after each session. We recommend keeping a simple log of your best scores for each tool. Note the date, tool name, and your score. Review your progress weekly to see improvements. We're working on automatic progress tracking features that will be available soon."
-    },
-    {
-        category: "Progress & Results",
-        question: "I'm not improving anymore. What should I do?",
-        answer: "Plateaus are normal in skill development. To break through: 1) Increase difficulty or try more challenging tools, 2) Take a short break (2-3 days) to avoid overtraining, 3) Vary your training with different tools, 4) Ensure you're getting adequate sleep and managing stress, 5) Review your technique and focus on quality over speed. Plateaus are often followed by sudden improvements."
-    },
-    {
-        category: "Progress & Results",
-        question: "Can I compare my scores with others?",
-        answer: "Our leaderboard feature allows you to see how your scores compare with other users. This provides motivation and helps you understand where you stand. Remember that everyone starts at different levels—focus on your personal improvement rather than comparing yourself to top performers."
+        question: "I'm stuck at a certain score. What now?",
+        answer: "You hit a plateau. To break it, you either need to take a 2-day break to let your nervous system recover, or you need to radically change your training method. Don't just bash your head against the wall—focus on accuracy over speed for a few days."
     },
     {
         category: "Technical",
-        question: "What devices and browsers are supported?",
-        answer: "Reflextry works on all modern devices: desktop computers, laptops, tablets, and smartphones. We support all major browsers: Chrome, Firefox, Safari, Edge, and Opera. For the best experience, we recommend using a desktop or laptop with a mouse for precision tools like the Aim Trainer."
+        question: "Why do my scores feel inconsistent?",
+        answer: "Check your hardware. Are you playing on a 60Hz monitor? Is your browser eating up RAM? Are you using Bluetooth headphones? (Audio latency is huge). For the purest results, use a wired mouse, a high refresh rate monitor, and close your background apps."
     },
     {
         category: "Technical",
-        question: "Why is my reaction time test showing inconsistent results?",
-        answer: "Inconsistent results can be caused by: 1) Input lag from your device or display, 2) Wireless mouse lag (use wired for best accuracy), 3) Browser performance issues (close other tabs), 4) Varying focus and attention, or 5) Physical fatigue. For most accurate results, use a wired mouse, close unnecessary programs, and test when you're well-rested."
-    },
-    {
-        category: "Technical",
-        question: "Are the tools mobile-friendly?",
-        answer: "Yes! All our tools work on mobile devices. However, some tools (like the Aim Trainer and Click Speed Test) are optimized for desktop use with a mouse. Memory games, reaction tests, and typing tests work well on mobile. Choose tools that match your device for the best experience."
-    },
-    {
-        category: "Science & Research",
-        question: "What's the science behind brain training?",
-        answer: "Brain training leverages neuroplasticity—your brain's ability to reorganize and form new neural connections throughout life. When you practice cognitive tasks, you strengthen neural pathways through a process called long-term potentiation. Regular practice increases neural efficiency, creates alternative processing pathways, and builds cognitive reserve. Research shows that targeted training can produce measurable improvements in trained abilities."
-    },
-    {
-        category: "Science & Research",
-        question: "Is there research supporting these tools?",
-        answer: "Yes! Our tools are based on established cognitive training paradigms used in research. For example, n-back training (similar to our memory games) has been extensively studied for working memory improvement. Reaction time training is well-documented in sports science and cognitive psychology. While individual tools may vary, the underlying principles are supported by scientific research."
-    },
-    {
-        category: "Science & Research",
-        question: "What is cognitive reserve?",
-        answer: "Cognitive reserve is your brain's resilience against age-related changes and damage. Higher cognitive reserve allows your brain to maintain function despite physical changes. It's built through: education, complex work, social engagement, physical exercise, and cognitive training. Think of it as your brain's backup systems—more reserve means better ability to compensate when primary systems decline."
+        question: "Do these work on mobile?",
+        answer: "Yes, the site is fully responsive. But realistically, tools like the Aim Trainer or CPS test are designed for a mouse. Memory and cognitive tools work great on phones, though."
     },
     {
         category: "General",
-        question: "Is Reflextry really free?",
-        answer: "Yes! All our core tools are completely free with no hidden costs. We believe cognitive training should be accessible to everyone. We may introduce optional premium features in the future, but our core training tools will always remain free."
+        question: "Is this actually free?",
+        answer: "100% free. No paywalls, no hidden subscriptions. We might add some premium cosmetic/tracking features way down the line, but the training tools themselves will always be free to use."
     },
     {
         category: "General",
-        question: "How is Reflextry different from other brain training apps?",
-        answer: "Reflextry offers: 1) Completely free access to all tools, 2) No registration required to start training, 3) Focus on practical skills (gaming, typing, memory) rather than just abstract games, 4) Modern, engaging interface, 5) Tools based on scientific research, and 6) Immediate feedback and progress tracking. We prioritize accessibility and real-world application."
-    },
-    {
-        category: "General",
-        question: "Can children use Reflextry?",
-        answer: "Yes! Our tools are suitable for ages 10 and up. Children can benefit from memory games, typing practice, and basic reaction tests. However, parental supervision is recommended for younger users. Some tools (like competitive gaming tools) are more appropriate for teenagers and adults."
-    },
-    {
-        category: "General",
-        question: "How can I contact support or provide feedback?",
-        answer: "We'd love to hear from you! Visit our Contact page to send us feedback, report issues, or ask questions. We read all messages and use your feedback to improve Reflextry. You can also follow us on social media for updates and tips."
+        question: "How do I report a bug or give feedback?",
+        answer: "Hit up our Contact page. We actually read all the messages. If a tool feels clunky or you have an idea for a new game mode, let us know and we'll probably build it."
     }
 ];
 
@@ -185,7 +120,7 @@ export default function FAQClient() {
                         Frequently Asked Questions
                     </h1>
                     <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-                        Find answers to common questions about brain training, our tools, and how to get the most out of Reflextry.
+                        Everything you need to know about the science, the grind, and how to actually get faster.
                     </p>
                 </div>
 
@@ -260,7 +195,7 @@ export default function FAQClient() {
                         Still Have Questions?
                     </h2>
                     <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-                        Can't find the answer you're looking for? We're here to help! Contact us and we'll get back to you as soon as possible.
+                        Didn't find what you're looking for? Shoot us a message. We actually read them all.
                     </p>
                     <div className="flex flex-wrap justify-center gap-4">
                         <Link

@@ -164,7 +164,7 @@ export default function HomeClient() {
                 <Sparkles className="w-5 h-5 text-blue-500" /> Key Takeaway
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Bottom Line:</strong> Reflextry is a comprehensive suite of cognitive and physical training games designed for competitive gamers, students, and athletes. It provides structured tests to measure and improve your reaction time, working memory, typing speed, and cursor precision. By practicing daily, you can track performance benchmarks and enhance your neuroplasticity.
+                <strong className="text-foreground">Bottom Line:</strong> Reflextry is your proving ground. Whether you're a competitive gamer looking to shave milliseconds off your flick shots, a student pushing your working memory, or an athlete tracking reaction times—this is where you test your limits. Measure your baseline, train daily, and watch your stats climb.
             </p>
         </section>
 
@@ -271,26 +271,26 @@ export default function HomeClient() {
             className="mt-20 space-y-12 bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 p-8 rounded-3xl"
         >
             <div className="space-y-4">
-                <h2 className="text-3xl font-bold text-foreground">What is Brain Training and Reflex Testing?</h2>
+                <h2 className="text-3xl font-bold text-foreground">Why Test Your Reflexes and Memory?</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                    Brain training involves engaging in structured mental and physical exercises to improve cognitive functions like memory, attention, and processing speed. Reflex testing measures your physical reaction time to visual or auditory stimuli. Regular engagement in these tasks leverages neuroplasticity—the brain's ability to form new neural connections.
+                    It's simple: you can't improve what you don't measure. Brain training and reflex testing give you hard data on your physical and cognitive speed. When you grind these tasks, you're literally forcing your brain to adapt and build new neural pathways (neuroplasticity). Faster processing, sharper focus, and quicker physical reactions.
                 </p>
             </div>
 
             <div className="space-y-4">
-                <h2 className="text-2xl font-bold text-foreground">How to Improve Your Scores?</h2>
+                <h2 className="text-2xl font-bold text-foreground">How to Actually Improve</h2>
                 <ol className="list-decimal list-inside space-y-2 text-muted-foreground">
-                    <li><strong>Warm up:</strong> Start with easy tasks like Click Speed Test or Color Match.</li>
-                    <li><strong>Focus on accuracy:</strong> Speed comes naturally once you are consistently accurate. Don't rush.</li>
-                    <li><strong>Practice daily:</strong> Aim for 10-15 minutes of varied exercises across different arenas.</li>
-                    <li><strong>Track your progress:</strong> Use our Statistics page to identify areas where your reaction time or memory limits you.</li>
+                    <li><strong>Warm up:</strong> Don't jump straight into Expert modes. Start with a basic Click Speed or Color Match test to get your hands warm.</li>
+                    <li><strong>Accuracy over speed:</strong> Speed is a byproduct of precision. If you're missing targets, slow down.</li>
+                    <li><strong>Consistency is everything:</strong> A 15-minute daily routine beats a 3-hour weekend marathon every single time.</li>
+                    <li><strong>Track the data:</strong> Check your Statistics page. Find out if your reaction time is dragging or if your memory is bottlenecking you.</li>
                 </ol>
             </div>
 
             <div className="space-y-4">
-                <h3 className="text-2xl font-bold text-foreground">Should I Practice Daily?</h3>
+                <h3 className="text-2xl font-bold text-foreground">Do I Need to Grind Every Day?</h3>
                 <p className="text-muted-foreground leading-relaxed">
-                    Yes. Consistent, daily practice is more effective for building procedural memory and fast-twitch muscle response than infrequent, long sessions. Aim for at least 15 minutes a day for optimal results.
+                    Yes. If you want to see real changes in your fast-twitch muscle response or memory recall, you need daily reps. Your brain consolidates these skills while you sleep, so frequent, short bursts of intense focus (like 15 minutes a day) are the secret to actually getting faster.
                 </p>
             </div>
 
@@ -332,12 +332,12 @@ export default function HomeClient() {
             </div>
 
             <div className="space-y-4">
-                <h2 className="text-2xl font-bold text-foreground">Benchmarks & Scientific Evidence</h2>
+                <h2 className="text-2xl font-bold text-foreground">The Data Behind the Grind</h2>
                 <p className="text-muted-foreground leading-relaxed">
-                    The average human visual reaction time is approximately 250 milliseconds. However, elite esports professionals frequently average between 150ms and 180ms. According to the <a href="https://pubmed.ncbi.nlm.nih.gov/24718593/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">National Institutes of Health (NIH)</a>, repetitive cognitive and motor skill training can significantly reduce reaction times and improve working memory capacity.
+                    Most people have a visual reaction time of around 250 milliseconds. But if you watch elite esports pros, they're consistently hitting the 150ms to 180ms range. It's not just genetics; the <a href="https://pubmed.ncbi.nlm.nih.gov/24718593/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">National Institutes of Health (NIH)</a> confirms that heavy repetition in motor skill and cognitive training straight-up drops your reaction times and expands your working memory.
                 </p>
                 <p className="text-muted-foreground leading-relaxed mt-4">
-                    Whether you are utilizing the <strong>Sequence Memory Test</strong> to build spatial retention or the <strong>Aim Trainer</strong> to reduce input lag, consistent measurement is the first step toward improvement. Our platform is completely free, does not require an account to access the core benchmarks, and operates entirely within your browser for maximum privacy.
+                    Whether you're using the <strong>Sequence Memory Test</strong> to lock in spatial awareness or the <strong>Aim Trainer</strong> to fix your input lag, tracking your stats is step one. Our tools are completely free, run entirely in your browser for maximum privacy, and don't force you to make an account just to test yourself.
                 </p>
             </div>
 
@@ -350,27 +350,27 @@ export default function HomeClient() {
                 
                 <div className="grid md:grid-cols-2 gap-6">
                     <div className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-6">
-                        <h3 className="text-lg font-bold text-foreground mb-3">Does brain training actually work?</h3>
+                        <h3 className="text-lg font-bold text-foreground mb-3">Does this actually work?</h3>
                         <p className="text-muted-foreground leading-relaxed">
-                            Yes, regular engagement in cognitive tasks leverages neuroplasticity—the brain's ability to reorganize itself by forming new neural connections. Consistent practice with tools like our Sequence Memory or Reaction Time tests can lead to measurable improvements in those specific skills over time. Research consistently indicates that active, focused problem-solving delays cognitive decline.
+                            Yeah, it does. Pushing your limits on memory or reaction tasks forces your brain to adapt—a process called neuroplasticity. If you consistently test yourself, your brain literally wires itself to process that specific information faster. It's exactly like lifting weights, but for your central nervous system.
                         </p>
                     </div>
                     <div className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-6">
-                        <h3 className="text-lg font-bold text-foreground mb-3">How often should I use these cognitive training games?</h3>
+                        <h3 className="text-lg font-bold text-foreground mb-3">How often should I be testing?</h3>
                         <p className="text-muted-foreground leading-relaxed">
-                            For optimal results, we suggest practicing for 10-15 minutes daily. Consistency is key in neuroplasticity. Rather than playing for hours once a week, daily short sessions allow your brain to consolidate the procedural memory during sleep. Use the Memory arena to improve retention, and the Speed arena to enhance quick decision-making.
+                            Keep it short but daily. 10 to 15 minutes of highly focused training is the sweet spot. If you play for three hours straight, fatigue sets in and you stop learning. Hit the Memory arena to stretch your brain, run the Speed arena to wake up your hands, and then get on with your day.
                         </p>
                     </div>
                     <div className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-6">
-                        <h3 className="text-lg font-bold text-foreground mb-3">Are these tools useful for esports and competitive gamers?</h3>
+                        <h3 className="text-lg font-bold text-foreground mb-3">Is this good for esports warmups?</h3>
                         <p className="text-muted-foreground leading-relaxed">
-                            Absolutely. Professional gamers frequently use our Aim Trainer, Grid Click, and Flick Shot tools to warm up their physical mechanics, hand-eye coordination, and peripheral vision before competitive matches. Tracking your millisecond reaction latency allows you to see exactly when you are peaking and when cognitive fatigue is setting in.
+                            100%. A massive chunk of our users are competitive players using the Aim Trainer, Grid Click, and Flick Shot tools to wake up their fast-twitch muscles before queuing ranked. Knowing your millisecond latency before you play tells you if you're peaking or if you're too tired to perform.
                         </p>
                     </div>
                     <div className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-6">
-                        <h3 className="text-lg font-bold text-foreground mb-3">Is Reflextry free to use?</h3>
+                        <h3 className="text-lg font-bold text-foreground mb-3">Is Reflextry free?</h3>
                         <p className="text-muted-foreground leading-relaxed">
-                            Yes, the vast majority of our brain training tools, memory games, and reaction time tests are completely free to play directly in your browser. We believe that everyone should have access to cognitive benchmarks to track their mental fitness and reflexes without a paywall.
+                            Yes. The core reaction time tests, memory tools, and aim trainers are completely free and run right in your browser. We built this because we were tired of paywalls blocking basic performance benchmarks.
                         </p>
                     </div>
                 </div>

@@ -29,7 +29,7 @@ export default function ScienceClient() {
                         The Science of Brain Training
                     </h1>
                     <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-                        Discover the neuroscience behind cognitive training, how your brain adapts and improves, and the research supporting our training methods.
+                        Here is the actual neuroscience behind why reflex and cognitive training works, and exactly what happens to your brain when you grind these modules.
                     </p>
                 </div>
 
@@ -42,29 +42,25 @@ export default function ScienceClient() {
                     <div className="flex items-start gap-4 mb-6">
                         <Sparkles className="w-8 h-8 text-amber-500 flex-shrink-0 mt-1" />
                         <div>
-                            <h2 className="text-3xl font-bold text-black mb-4">Neuroplasticity: Your Brain's Superpower</h2>
+                            <h2 className="text-3xl font-bold text-black mb-4">Neuroplasticity: How You Actually Get Faster</h2>
                             <p className="text-gray-800 leading-relaxed mb-4">
-                                Neuroplasticity is your brain's remarkable ability to reorganize itself by forming new neural connections throughout your entire life. Once thought to be limited to childhood, we now know that adult brains remain highly plastic and adaptable.
+                                Neuroplasticity isn't just a buzzword. It's the physical process of your brain literally rewiring itself to get better at something. Every time you push your limits on a reflex or memory test, you force your brain to adapt.
                             </p>
                             <p className="text-gray-800 leading-relaxed mb-4">
-                                When you engage in brain training, several powerful processes occur:
+                                When you grind on Reflextry, this is what's happening under the hood:
                             </p>
                             <ul className="space-y-3 text-gray-800">
                                 <li className="flex items-start gap-3">
                                     <span className="text-teal-500 mt-1">•</span>
-                                    <span><strong className="text-black">Myelination:</strong> Fatty sheaths around neurons thicken, allowing signals to travel up to 100 times faster</span>
+                                    <span><strong className="text-black">Myelination (The Hardware Upgrade):</strong> Fatty sheaths around your neurons thicken. This acts like insulation on a copper wire, letting electrical signals travel up to 100x faster.</span>
                                 </li>
                                 <li className="flex items-start gap-3">
                                     <span className="text-teal-500 mt-1">•</span>
-                                    <span><strong className="text-black">Synaptogenesis:</strong> New connections form between neurons, creating alternative pathways for information processing</span>
+                                    <span><strong className="text-black">Synaptogenesis (Building Bridges):</strong> Your brain builds completely new connections between neurons to handle the heavy cognitive load more efficiently next time.</span>
                                 </li>
                                 <li className="flex items-start gap-3">
                                     <span className="text-teal-500 mt-1">•</span>
-                                    <span><strong className="text-black">Long-Term Potentiation (LTP):</strong> Repeated activation strengthens synaptic connections, making pathways more efficient</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <span className="text-teal-500 mt-1">•</span>
-                                    <span><strong className="text-black">Neurogenesis:</strong> In certain brain regions, new neurons continue to form throughout life, especially with exercise and learning</span>
+                                    <span><strong className="text-black">Pruning (Clearing the Junk):</strong> Your brain actually deletes inefficient pathways. You stop overthinking *how* to track the target, and your hand just does it.</span>
                                 </li>
                             </ul>
                         </div>
@@ -81,35 +77,35 @@ export default function ScienceClient() {
                     <div className="flex items-start gap-4 mb-6">
                         <Activity className="w-8 h-8 text-purple-500 flex-shrink-0 mt-1" />
                         <div>
-                            <h2 className="text-3xl font-bold text-black mb-4">How Brain Training Improves Cognitive Function</h2>
+                            <h2 className="text-3xl font-bold text-black mb-4">The Mechanics of Improvement</h2>
                             <p className="text-gray-800 leading-relaxed mb-4">
-                                Brain training works through a process similar to physical exercise. Just as lifting weights strengthens muscles, cognitive exercises strengthen neural pathways. Here's the science:
+                                It's exactly like going to the gym, but for your central nervous system. If you want to drop your reaction time by 20ms, you have to force your brain to process visual information faster.
                             </p>
 
-                            <h3 className="text-xl font-bold text-black mb-3 mt-6">The Training Process</h3>
+                            <h3 className="text-xl font-bold text-black mb-3 mt-6">How It Works</h3>
                             <div className="space-y-4 mb-6">
                                 <div className="bg-white border border-gray-200 rounded-xl p-4">
-                                    <h4 className="text-lg font-semibold text-teal-500 mb-2">1. Challenge & Adaptation</h4>
+                                    <h4 className="text-lg font-semibold text-teal-500 mb-2">1. The Struggle Phase</h4>
                                     <p className="text-gray-800 text-sm leading-relaxed">
-                                        When you practice a cognitive task, you challenge your brain beyond its current capacity. This challenge triggers adaptive responses, prompting your brain to become more efficient at that task.
+                                        When you first try a memory or tracking task on Hard mode, you will fail. This failure signals your brain that it needs more resources allocated to visual processing.
                                     </p>
                                 </div>
                                 <div className="bg-white border border-gray-200 rounded-xl p-4">
-                                    <h4 className="text-lg font-semibold text-teal-500 mb-2">2. Neural Efficiency</h4>
+                                    <h4 className="text-lg font-semibold text-teal-500 mb-2">2. Myelination</h4>
                                     <p className="text-gray-800 text-sm leading-relaxed">
-                                        With repeated practice, your brain learns to process information more efficiently. Tasks that initially required significant mental effort become automatic, freeing cognitive resources for other activities.
+                                        As you repeat the task daily, the neural pathways used for that specific task get wrapped in myelin (a fatty layer). This allows electrical signals to travel up to 100x faster. This is why a flick shot becomes "muscle memory".
                                     </p>
                                 </div>
                                 <div className="bg-white border border-gray-200 rounded-xl p-4">
-                                    <h4 className="text-lg font-semibold text-teal-500 mb-2">3. Network Optimization</h4>
+                                    <h4 className="text-lg font-semibold text-teal-500 mb-2">3. Pruning</h4>
                                     <p className="text-gray-800 text-sm leading-relaxed">
-                                        Your brain optimizes neural networks by strengthening frequently-used connections and pruning rarely-used ones. This creates more efficient information processing pathways.
+                                        Your brain cuts out the "noise" and prunes inefficient pathways. You stop thinking about *how* to click the target, and your hand just does it automatically.
                                     </p>
                                 </div>
                                 <div className="bg-white border border-gray-200 rounded-xl p-4">
-                                    <h4 className="text-lg font-semibold text-teal-500 mb-2">4. Cognitive Reserve Building</h4>
+                                    <h4 className="text-lg font-semibold text-teal-500 mb-2">4. Baseline Shift</h4>
                                     <p className="text-gray-800 text-sm leading-relaxed">
-                                        Regular training builds cognitive reserve—your brain's resilience against age-related changes and damage. Higher reserve means better ability to maintain function despite brain changes.
+                                        Your new "normal" is now permanently faster. You've successfully lowered your biological latency.
                                     </p>
                                 </div>
                             </div>
@@ -127,67 +123,48 @@ export default function ScienceClient() {
                     <div className="flex items-start gap-4 mb-6">
                         <BookOpen className="w-8 h-8 text-amber-500 flex-shrink-0 mt-1" />
                         <div>
-                            <h2 className="text-3xl font-bold text-black mb-4">Research Evidence & Scientific Studies</h2>
+                            <h2 className="text-3xl font-bold text-black mb-4">The Data Behind It</h2>
                             <p className="text-gray-800 leading-relaxed mb-6">
-                                Brain training effectiveness is supported by extensive scientific research. Here are key findings from major studies:
+                                We didn't just make this up. These modules are based on decades of cognitive psychology tests and clinical research. Here is the actual data.
                             </p>
-
                             <div className="space-y-6">
                                 <div className="border-l-4 border-teal-500 pl-6">
-                                    <h3 className="text-xl font-bold text-black mb-2">ACTIVE Study (2002-2014)</h3>
+                                    <h3 className="text-xl font-bold text-black mb-2">The ACTIVE Study (10+ Years of Data)</h3>
                                     <p className="text-gray-800 text-sm leading-relaxed mb-2">
-                                        The Advanced Cognitive Training for Independent and Vital Elderly study, one of the largest cognitive training studies, followed 2,832 adults for over 10 years.
+                                        One of the largest cognitive training studies ever done followed nearly 3,000 adults for over a decade.
                                     </p>
-                                    <p className="text-teal-500 text-sm font-semibold mb-2">Key Findings:</p>
+                                    <p className="text-teal-500 text-sm font-semibold mb-2">The TL;DR:</p>
                                     <ul className="space-y-2 text-gray-800 text-sm">
-                                        <li>• Cognitive training produced improvements lasting up to 10 years</li>
-                                        <li>• Participants showed better performance in trained abilities</li>
-                                        <li>• Benefits transferred to real-world activities requiring those abilities</li>
-                                        <li>• Speed training reduced crash risk in older drivers by 40%</li>
+                                        <li>• Processing speed training works, and the benefits lasted for up to 10 years.</li>
+                                        <li>• People didn't just get better at the game; the skills transferred to real life.</li>
+                                        <li>• Speed training even reduced real-world driving crashes by 40%.</li>
                                     </ul>
                                 </div>
-
                                 <div className="border-l-4 border-purple-500 pl-6">
-                                    <h3 className="text-xl font-bold text-black mb-2">Working Memory Training Research</h3>
+                                    <h3 className="text-xl font-bold text-black mb-2">Working Memory Training</h3>
                                     <p className="text-gray-800 text-sm leading-relaxed mb-2">
-                                        Multiple studies have examined working memory training, particularly n-back tasks similar to our memory games.
+                                        Countless studies have tested "n-back" tasks (very similar to our sequence memory games) to see if you can actually upgrade your brain's RAM.
                                     </p>
-                                    <p className="text-purple-500 text-sm font-semibold mb-2">Key Findings:</p>
+                                    <p className="text-purple-500 text-sm font-semibold mb-2">The TL;DR:</p>
                                     <ul className="space-y-2 text-gray-800 text-sm">
-                                        <li>• Working memory capacity can be improved through training</li>
-                                        <li>• Improvements persist for months after training ends</li>
-                                        <li>• Benefits transfer to tasks requiring working memory</li>
-                                        <li>• Training increases activity in prefrontal cortex regions</li>
+                                        <li>• Yes, working memory capacity is highly trainable.</li>
+                                        <li>• Brain scans show increased activity and efficiency in the prefrontal cortex.</li>
+                                        <li>• If you stop training, you keep the benefits for months.</li>
                                     </ul>
                                 </div>
-
                                 <div className="border-l-4 border-amber-500 pl-6">
-                                    <h3 className="text-xl font-bold text-black mb-2">Reaction Time & Processing Speed</h3>
+                                    <h3 className="text-xl font-bold text-black mb-2">Reaction Time Drops</h3>
                                     <p className="text-gray-800 text-sm leading-relaxed mb-2">
-                                        Research in sports science and cognitive psychology has extensively studied reaction time training.
+                                        Sports science has been measuring physical reaction times for decades.
                                     </p>
-                                    <p className="text-amber-500 text-sm font-semibold mb-2">Key Findings:</p>
+                                    <p className="text-amber-500 text-sm font-semibold mb-2">The TL;DR:</p>
                                     <ul className="space-y-2 text-gray-800 text-sm">
-                                        <li>• Reaction time is trainable at any age</li>
-                                        <li>• Improvements of 10-20% are common with consistent practice</li>
-                                        <li>• Benefits transfer to sports, gaming, and driving performance</li>
-                                        <li>• Training improves both neural processing and motor execution</li>
+                                        <li>• Reaction time isn't purely genetic; it's heavily trainable at any age.</li>
+                                        <li>• Consistent practice typically drops latency by 10-20%.</li>
+                                        <li>• The gains transfer directly to FPS gaming, sports, and driving.</li>
                                     </ul>
                                 </div>
-
-                                <div className="border-l-4 border-red-400 pl-6">
-                                    <h3 className="text-xl font-bold text-black mb-2">Cognitive Reserve & Aging</h3>
-                                    <p className="text-gray-800 text-sm leading-relaxed mb-2">
-                                        Research on cognitive reserve shows how mental stimulation protects against cognitive decline.
-                                    </p>
-                                    <p className="text-red-400 text-sm font-semibold mb-2">Key Findings:</p>
-                                    <ul className="space-y-2 text-gray-800 text-sm">
-                                        <li>• Higher cognitive reserve delays onset of dementia symptoms</li>
-                                        <li>• Lifelong learning and mental stimulation build reserve</li>
-                                        <li>• Cognitive training contributes to reserve building</li>
-                                        <li>• Combined with exercise and social engagement, effects are stronger</li>
-                                    </ul>
-                                </div>
+                            </div>/div>
                             </div>
                         </div>
                     </div>
@@ -210,30 +187,29 @@ export default function ScienceClient() {
 
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div className="bg-gradient-to-br from-teal-500/20 to-teal-500/5 border border-teal-500/30 rounded-xl p-6">
-                                    <h3 className="text-xl font-bold text-black mb-3">Near Transfer</h3>
+                                    <h3 className="text-xl font-bold text-black mb-3">Direct Upgrades (Near Transfer)</h3>
                                     <p className="text-gray-800 text-sm leading-relaxed mb-3">
-                                        Improvements in tasks similar to those trained. Near transfer is well-documented and reliable.
+                                        This is when training one thing immediately makes you better at something very similar. This is highly reliable.
                                     </p>
                                     <p className="text-teal-500 text-sm font-semibold mb-2">Examples:</p>
                                     <ul className="space-y-2 text-gray-800 text-sm">
-                                        <li>• Memory training → Better recall in daily life</li>
-                                        <li>• Reaction training → Faster gaming responses</li>
-                                        <li>• Typing practice → Improved typing speed</li>
-                                        <li>• Aim training → Better FPS performance</li>
+                                        <li>• Sequence Memory → Actually remembering strings of numbers</li>
+                                        <li>• Reaction Time Test → Quicker trigger finger in shooters</li>
+                                        <li>• Typing Practice → Writing essays faster</li>
+                                        <li>• Aim Training → Better crosshair placement and tracking</li>
                                     </ul>
                                 </div>
 
                                 <div className="bg-gradient-to-br from-purple-500/20 to-purple-500/5 border border-purple-500/30 rounded-xl p-6">
-                                    <h3 className="text-xl font-bold text-black mb-3">Far Transfer</h3>
+                                    <h3 className="text-xl font-bold text-black mb-3">Passive Buffs (Far Transfer)</h3>
                                     <p className="text-gray-800 text-sm leading-relaxed mb-3">
-                                        Improvements in abilities different from those trained. Far transfer is more limited but can occur.
+                                        This is when getting better at a specific game secretly upgrades a completely different skill in your life.
                                     </p>
                                     <p className="text-purple-500 text-sm font-semibold mb-2">Examples:</p>
                                     <ul className="space-y-2 text-gray-800 text-sm">
-                                        <li>• Working memory training → Better focus</li>
-                                        <li>• Processing speed training → Improved driving</li>
-                                        <li>• Attention training → Enhanced productivity</li>
-                                        <li>• Executive function training → Better planning</li>
+                                        <li>• Working Memory Games → Better focus during boring lectures</li>
+                                        <li>• Pure Speed Training → Faster decision-making while driving</li>
+                                        <li>• Peripheral Vision Tests → Better situational awareness in sports</li>
                                     </ul>
                                 </div>
                             </div>
@@ -253,46 +229,34 @@ export default function ScienceClient() {
                         <div>
                             <h2 className="text-3xl font-bold text-black mb-4">Principles for Effective Brain Training</h2>
                             <p className="text-gray-800 leading-relaxed mb-6">
-                                Based on neuroscience research, these principles maximize training effectiveness:
+                                If you want to actually get faster, don't just mindlessly click targets. Follow these rules:
                             </p>
-
                             <div className="grid md:grid-cols-2 gap-4">
                                 <div className="bg-white border border-gray-200 rounded-xl p-4">
-                                    <h4 className="text-lg font-semibold text-teal-500 mb-2">Progressive Challenge</h4>
+                                    <h4 className="text-lg font-semibold text-teal-500 mb-2">The Struggle is the Point</h4>
                                     <p className="text-gray-800 text-sm leading-relaxed">
-                                        Training must be challenging but achievable. Too easy provides minimal benefit; too hard causes frustration. Gradually increase difficulty as you improve.
+                                        If it's too easy, your brain isn't adapting. You have to push the difficulty until you're failing, then stay there until it clicks. That failure is the signal your brain needs to build new pathways.
                                     </p>
                                 </div>
                                 <div className="bg-white border border-gray-200 rounded-xl p-4">
-                                    <h4 className="text-lg font-semibold text-teal-500 mb-2">Consistent Practice</h4>
+                                    <h4 className="text-lg font-semibold text-teal-500 mb-2">Daily Reps Beat Weekend Marathons</h4>
                                     <p className="text-gray-800 text-sm leading-relaxed">
-                                        Regular practice (daily or near-daily) produces better results than sporadic intensive sessions. Consistency maintains neural plasticity and ensures continuous adaptation.
+                                        Playing for 15 minutes a day is massively better than playing for 3 hours once a week. Consistency is what locks in neuroplasticity.
                                     </p>
                                 </div>
                                 <div className="bg-white border border-gray-200 rounded-xl p-4">
-                                    <h4 className="text-lg font-semibold text-teal-500 mb-2">Immediate Feedback</h4>
+                                    <h4 className="text-lg font-semibold text-teal-500 mb-2">Mix It Up</h4>
                                     <p className="text-gray-800 text-sm leading-relaxed">
-                                        Knowing your performance immediately helps your brain adjust and improve. Our tools provide instant feedback on every attempt.
+                                        Don't just play the Aim Trainer every single day. Rotate through memory, tracking, and pure speed tasks. Engaging different cognitive load types prevents burnout and plateauing.
                                     </p>
                                 </div>
                                 <div className="bg-white border border-gray-200 rounded-xl p-4">
-                                    <h4 className="text-lg font-semibold text-teal-500 mb-2">Variety & Novelty</h4>
+                                    <h4 className="text-lg font-semibold text-teal-500 mb-2">Sleep is Everything</h4>
                                     <p className="text-gray-800 text-sm leading-relaxed">
-                                        Engaging with diverse cognitive activities prevents over-specialization and builds broader cognitive abilities. Rotate through different tools.
+                                        You don't get faster while you're playing; you get faster while you sleep. Sleep is when your brain actually thickens the myelin sheaths and consolidates what you learned. If you're sleep-deprived, your reaction time will tank.
                                     </p>
                                 </div>
-                                <div className="bg-white border border-gray-200 rounded-xl p-4">
-                                    <h4 className="text-lg font-semibold text-teal-500 mb-2">Motivation & Engagement</h4>
-                                    <p className="text-gray-800 text-sm leading-relaxed">
-                                        Enjoyment and motivation enhance learning. Choose tools that interest you and set personal goals to maintain engagement.
-                                    </p>
-                                </div>
-                                <div className="bg-white border border-gray-200 rounded-xl p-4">
-                                    <h4 className="text-lg font-semibold text-teal-500 mb-2">Adequate Rest</h4>
-                                    <p className="text-gray-800 text-sm leading-relaxed">
-                                        Sleep consolidates learning and allows neural adaptation. Quality sleep is essential for maximizing training benefits.
-                                    </p>
-                                </div>
+                            </div>                               </div>
                             </div>
                         </div>
                     </div>

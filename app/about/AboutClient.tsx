@@ -10,7 +10,7 @@ export default function AboutClient() {
         {
             icon: Target,
             title: "Accuracy",
-            description: "We provide precise measurements and reliable testing methods to track your true performance capabilities.",
+            description: "No fluff, just precise measurements and reliable testing to track your true mechanical baseline.",
             color: "text-cyan-600",
             bg: "bg-cyan-50 border-cyan-200",
             glow: "hover:shadow-[0_0_20px_rgba(6,182,212,0.15)]",
@@ -20,7 +20,7 @@ export default function AboutClient() {
         {
             icon: Zap,
             title: "Innovation",
-            description: "Constantly developing new ways to challenge both cognitive and physical response times.",
+            description: "Constantly pushing new modules to test the absolute limits of human reaction time.",
             color: "text-amber-600",
             bg: "bg-amber-50 border-amber-200",
             glow: "hover:shadow-[0_0_20px_rgba(245,158,11,0.15)]",
@@ -30,7 +30,7 @@ export default function AboutClient() {
         {
             icon: Users,
             title: "Accessibility",
-            description: "Making professional-grade testing tools available to everyone globally, completely free of charge.",
+            description: "Professional-grade testing and performance tracking tools, completely free for everyone.",
             color: "text-violet-600",
             bg: "bg-violet-50 border-violet-200",
             glow: "hover:shadow-[0_0_20px_rgba(139,92,246,0.15)]",
@@ -40,7 +40,7 @@ export default function AboutClient() {
         {
             icon: Heart,
             title: "User First",
-            description: "Building community-driven features and listening carefully to player feedback.",
+            description: "We build what the community asks for. If a game mode sucks, we fix it.",
             color: "text-rose-600",
             bg: "bg-rose-50 border-rose-200",
             glow: "hover:shadow-[0_0_20px_rgba(244,63,94,0.15)]",
@@ -53,28 +53,28 @@ export default function AboutClient() {
         {
             icon: Brain,
             title: "Brain Training Games",
-            description: "Stimulate cognitive function with visual memory mapping, pattern recognition, and number sequence recalls.",
+            description: "Push your working memory and pattern recognition with cognitive loads designed to force neuroplasticity.",
             color: "text-violet-600",
             bg: "bg-violet-50 border-violet-200",
         },
         {
             icon: Zap,
             title: "Reaction & Speed Tests",
-            description: "Measure your raw physical limits down to the millisecond with our suite of aim, click, and reaction arenas.",
+            description: "Measure your raw physical latency down to the exact millisecond in our aim, click, and reaction arenas.",
             color: "text-cyan-600",
             bg: "bg-cyan-50 border-cyan-200",
         },
         {
             icon: BarChart3,
             title: "Progress Tracking",
-            description: "Save your scores and watch your performance curve climb as you consistently train and test your limits.",
+            description: "Automatically log your session data and watch your performance curve go up over time.",
             color: "text-emerald-600",
             bg: "bg-emerald-50 border-emerald-200",
         },
         {
             icon: Trophy,
-            title: "Achievements & Challenges",
-            description: "Unlock ranks, overcome daily objectives, and compete against the world for the number one spot.",
+            title: "Achievements & Leaderboards",
+            description: "Unlock ranks, grind daily challenges, and see where you stack up against players worldwide.",
             color: "text-amber-600",
             bg: "bg-amber-50 border-amber-200",
         },
@@ -142,7 +142,7 @@ export default function AboutClient() {
                     </h1>
 
                     <p className="text-sm md:text-base text-slate-500 max-w-xl leading-relaxed">
-                        The ultimate platform for testing and improving your physical reactions and cognitive speed. Built for gamers, athletes, and curious minds.
+                        A no-nonsense platform for measuring and pushing your mechanical limits. Built by competitive players for anyone who wants to get sharper.
                     </p>
                 </motion.div>
 
@@ -165,7 +165,7 @@ export default function AboutClient() {
                             <div className="text-xs font-mono text-slate-400 tracking-widest uppercase mb-1">Mission Statement</div>
                             <h2 className="text-2xl font-mono font-bold text-slate-900 mb-3">Our Mission</h2>
                             <p className="text-slate-600 leading-relaxed">
-                                Our mission is to democratize reflex training by offering high-quality, scientifically sound performance-tracking challenges for gamers, athletes, and anyone wanting to stay sharp. We believe improvement starts with measurement.
+                                Our mission is simple: democratize the exact same high-level reaction and cognitive testing tools used by pro esports teams. Improvement starts with raw, honest data. We built Reflextry so you can find your exact baseline, lock in, and beat it.
                             </p>
                         </div>
                     </div>
@@ -190,9 +190,9 @@ export default function AboutClient() {
                             <div className="text-xs font-mono text-slate-400 tracking-widest uppercase mb-1">Origin Log</div>
                             <h2 className="text-2xl font-mono font-bold text-slate-900 mb-4">Our Story</h2>
                             <div className="space-y-3 text-slate-600 leading-relaxed">
-                                <p>What started as a simple reaction time test rapidly grew into a comprehensive hub for cognitive evaluation.</p>
-                                <p>We realized there was a lack of unified platforms allowing users to compare their raw mechanical skill against others globally.</p>
-                                <p>Today, Reflextry serves thousands of players globally — helping them learn, compete, and improve.</p>
+                                <p>What started as a single script to measure mouse click latency quickly got out of hand.</p>
+                                <p>We realized there wasn't a clean, unified platform where you could just boot up a browser and test your raw mechanics—speed, memory, and accuracy—without downloading bulky game clients or getting bombarded by ads.</p>
+                                <p>So we built Reflextry. Today, we're serving thousands of players globally who use our tools to wake up their hands before queuing ranked, tracking their progress over time.</p>
                             </div>
                         </div>
                     </div>

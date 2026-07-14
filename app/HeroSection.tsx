@@ -61,7 +61,7 @@ export function HeroSection() {
               className="w-1.5 h-1.5 rounded-full bg-cyan-500 flex-shrink-0"
               style={{ animation: "hud-blink 1.6s ease-in-out infinite" }}
             />
-            Free Brain Training Tools
+            Free Mechanical Training
           </div>
 
           {/* Headline */}
@@ -75,18 +75,13 @@ export function HeroSection() {
                 backgroundClip: "text",
               }}
             >
-              Cognitive
-            </span>
-            <br />
-            <span className="text-slate-700 text-3xl sm:text-5xl font-bold normal-case tracking-normal">
-              &amp; Physical Limits
+              Mechanical Limits
             </span>
           </h1>
 
           {/* Sub */}
           <p className="max-w-2xl text-slate-500 text-base sm:text-lg leading-relaxed">
-            <strong className="text-slate-700">37+ free tools</strong> for memory, reaction time, speed, gaming, and accuracy — 
-            scientifically-inspired exercises to measure and improve your cognitive performance.
+            <strong className="text-slate-700">37+ free modules</strong> to measure and push your raw reaction time, working memory, and clicking accuracy. No fluff, just pure mechanics.
           </p>
 
           {/* Stats row */}
