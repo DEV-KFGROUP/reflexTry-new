@@ -164,7 +164,6 @@ export default function ScienceClient() {
                                         <li>• The gains transfer directly to FPS gaming, sports, and driving.</li>
                                     </ul>
                                 </div>
-                            </div>/div>
                             </div>
                         </div>
                     </div>
