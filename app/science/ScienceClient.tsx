@@ -255,7 +255,6 @@ export default function ScienceClient() {
                                         You don't get faster while you're playing; you get faster while you sleep. Sleep is when your brain actually thickens the myelin sheaths and consolidates what you learned. If you're sleep-deprived, your reaction time will tank.
                                     </p>
                                 </div>
-                            </div>                               </div>
                             </div>
                         </div>
                     </div>
