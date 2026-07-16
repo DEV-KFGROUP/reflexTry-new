@@ -1,30 +1,83 @@
 # Reflextry
 
-> Reflextry - Brain Training & Reflex Games
+> Free online brain training platform — reaction time tests, memory games, speed challenges, accuracy tools, and FPS aim trainers. The human benchmark alternative built for Gen Z.
 
-Welcome to Reflextry! We provide a variety of tools to test your accuracy and reflexes. Our free online brain training games are designed for Gen Z and anyone looking to improve their cognitive skills.
+Reflextry offers 45+ scientifically-inspired cognitive tests and games across five categories: Reflex, Memory, Speed, Accuracy, and Gaming. All tests are free, require no login, and run instantly in any browser.
 
-## Core Keywords and Topics
+## Reflex Tests
 
-We are optimized for and rank for the following key terms:
-- reaction time test
-- human benchmark
-- reaction test
-- memory game
-- aim trainer
-- human benchmark reaction time
-- test for reaction
-- reaction speed test
-- memory test
-- typing speed test
-- accuracy test
-- reflex test
+- [Reaction Time Test](https://www.reflextry.com/reflex/reaction): Measure visual reaction time in milliseconds. Click as fast as you can when the screen changes color.
+- [Audio Reaction Time Test](https://www.reflextry.com/reflex/sound): Measure auditory reaction speed. React to sound cues as fast as possible.
+- [Grid Shot Aim Trainer](https://www.reflextry.com/reflex/grid): Boost mouse accuracy and click precision with rapid grid target shooting.
+- [Peripheral Vision Test](https://www.reflextry.com/reflex/peripheral): Test wide-field visual awareness by spotting targets in your peripheral vision.
+- [Directional Reflex Test](https://www.reflextry.com/reflex/direction): Press the correct arrow key as fast as you can to train decision-making speed.
+- [Multi-Stimulus Reaction Test](https://www.reflextry.com/reflex/multi-stimulus): Process multiple stimuli and respond selectively to train cognitive reaction speed.
+- [Sequence Reaction Test](https://www.reflextry.com/reflex/sequence-reaction): Watch a sequence of lights and click them in order as fast as possible.
+- [Whack-a-Mole Reflex Game](https://www.reflextry.com/reflex/whack-a-mole): Tap moles as they pop up to train reflexes and hand-eye coordination.
+- [Color Switch Reflex Test](https://www.reflextry.com/reflex/color-switch): React to color flashes quickly to train selective attention and cognitive processing.
+- [Time Perception Test](https://www.reflextry.com/reflex/time-perception): Test your internal clock by holding a button for exactly the target duration.
 
-## Available Tests
+## Memory Tests
 
-- [Reaction Time Test](/reflex/reaction): Measure how fast you can react to visual stimuli.
-- [Memory Game](/memory/sequence): Test your short-term and long-term memory.
-- [Aim Trainer](/gaming/aim): Improve your precision and accuracy.
-- [Typing Speed Test](/speed/typing): See how fast you can type.
+- [Sequence Memory Test](https://www.reflextry.com/memory/sequence): Repeat increasingly long patterns to train working memory and sequence recall.
+- [Number Memory Test](https://www.reflextry.com/memory/number): Memorize and recall number sequences to measure digit span and working memory.
+- [Visual Memory Test](https://www.reflextry.com/memory/visual): Recall grid patterns to test spatial awareness and visual short-term memory.
+- [Stroop Effect Test](https://www.reflextry.com/memory/color): Test cognitive flexibility and attention with the classic Stroop color-word task.
+- [Shape Rush](https://www.reflextry.com/memory/shape): Find target shapes as fast as possible to train visual discrimination and processing speed.
+- [Symbol Pairs Memory Game](https://www.reflextry.com/memory/symbol): Match symbol pairs to improve concentration and visual spatial memory.
+- [Word Recall Memory Test](https://www.reflextry.com/memory/word-recall): Remember and recall word lists to train verbal memory and cognitive retention.
+- [Card Match Memory Game](https://www.reflextry.com/memory/card-match): Classic pairs-matching card game to train pattern recognition and spatial memory.
+- [Chimp Test](https://www.reflextry.com/memory/chimp-test): The famous chimpanzee memory test. Memorize numbers and click them in ascending order.
+- [Verbal Memory Test](https://www.reflextry.com/memory/verbal-memory): Identify whether words are new or previously seen to test verbal recognition memory.
+- [Multiple Object Tracking Test](https://www.reflextry.com/memory/object-tracking): Track moving targets among distractors to test visual attention and tracking ability.
 
-We strive to be the industry's best website for reaction and brain training benchmarks.
+## Speed Tests
+
+- [CPS Test — Clicks Per Second](https://www.reflextry.com/speed/click): Measure mouse clicking speed in clicks per second. Supports jitter, butterfly, and drag clicking.
+- [Typing Speed Test](https://www.reflextry.com/speed/typing): Measure typing speed in WPM and accuracy with real paragraphs.
+- [Speed Math Test](https://www.reflextry.com/speed/math): Solve arithmetic problems rapidly to improve mental math fluency and calculation speed.
+- [Word Accuracy Test](https://www.reflextry.com/speed/words): Type exact words quickly to boost keyboard precision and reduce typing errors.
+- [Grid Selection Speed Test](https://www.reflextry.com/speed/grid): Find and select highlighted cells to train visual search speed and mouse accuracy.
+- [Number Rush Speed Test](https://www.reflextry.com/speed/number-rush): Find and click numbers in ascending order as fast as possible to train visual scanning.
+- [Quick Sort Speed Game](https://www.reflextry.com/speed/quick-sort): Sort items into correct categories before time runs out to train decision-making speed.
+
+## Accuracy Tests
+
+- [Precision Clicking Test](https://www.reflextry.com/accuracy/precision-click): Click small targets accurately to train hand-eye coordination and mouse control.
+- [Pattern Matching Test](https://www.reflextry.com/accuracy/pattern-matching): Match complex visual patterns to train attention to detail and visual precision.
+- [Data Entry Accuracy Test](https://www.reflextry.com/accuracy/data): Type complex alphanumeric codes accurately to measure data entry precision.
+- [Image Recognition Test](https://www.reflextry.com/accuracy/image-recognition): Spot differences and identify matches to train observation and visual accuracy.
+- [Angle Estimation Test](https://www.reflextry.com/accuracy/angle-estimation): Estimate angles accurately to test spatial awareness and visual precision.
+- [Color Match Test](https://www.reflextry.com/accuracy/color-match): Match exact color shades to train visual discrimination and color accuracy.
+- [Color Blindness Test](https://www.reflextry.com/accuracy/color-blindness): Identify hidden numbers in Ishihara-style dot plates to check color vision.
+- [Mental Rotation Test](https://www.reflextry.com/accuracy/mental-rotation): Determine if rotated 3D objects are the same or mirrored to test spatial intelligence.
+
+## Gaming & Aim Training
+
+- [Aim Trainer Pro](https://www.reflextry.com/gaming/aim): Improve tracking, flicking, and mouse precision with moving-target aim training for FPS games.
+- [RPG Reaction — Block & Parry](https://www.reflextry.com/gaming/reaction): Block incoming RPG-style attacks to train timing and defensive reflexes.
+- [Endless Dodge](https://www.reflextry.com/gaming/endless-dodge): Dodge projectiles for as long as possible to test evasion reflexes and spatial awareness.
+- [Infinite Stroop Drop](https://www.reflextry.com/gaming/stroop-drop): Click the font color of falling text to train impulse control and cognitive reflection.
+- [Target Tracking](https://www.reflextry.com/gaming/target-tracking): Track an erratic moving target with your mouse to improve continuous aim accuracy.
+- [Flick Shot Aim Trainer](https://www.reflextry.com/gaming/flick-shot): Practice quick flick shots to improve muscle memory and flicking accuracy for FPS games.
+- [Rhythm Tap Game](https://www.reflextry.com/gaming/rhythm-tap): Tap to the beat to test rhythmic timing and audio-visual coordination.
+
+## Informational Pages
+
+- [All Tools Directory](https://www.reflextry.com/tools): Browse all 45+ tests organized by category.
+- [The Science of Brain Training](https://www.reflextry.com/science): Research-backed explanations of how cognitive training works.
+- [Training Programs](https://www.reflextry.com/training-programs): Structured brain training programs for different goals.
+- [Blog](https://www.reflextry.com/blog): Articles on reaction time, memory improvement, cognitive science, and brain training tips.
+- [FAQ](https://www.reflextry.com/faq): Frequently asked questions about Reflextry and brain training.
+- [Leaderboard](https://www.reflextry.com/leaderboard): Global leaderboard rankings across all tests.
+- [Challenges](https://www.reflextry.com/challenges): Daily and weekly cognitive challenges.
+- [Achievements](https://www.reflextry.com/achievements): Track your progress and unlock achievement badges.
+- [Statistics](https://www.reflextry.com/statistics): View your personal performance statistics and trends.
+- [About](https://www.reflextry.com/about): About Reflextry and the team behind it.
+
+## Optional
+
+- [Privacy Policy](https://www.reflextry.com/privacy)
+- [Terms of Service](https://www.reflextry.com/terms)
+- [Cookie Policy](https://www.reflextry.com/cookies)
+- [Contact](https://www.reflextry.com/contact)
