@@ -76,6 +76,7 @@ export function generateArticleStructuredData(meta: Article, slug: string) {
 }
 
 export function generateBreadcrumbStructuredData(items: { name: string; url: string }[]) {
+    const baseUrl = getBaseUrl();
     return {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
@@ -83,7 +84,7 @@ export function generateBreadcrumbStructuredData(items: { name: string; url: str
             "@type": "ListItem",
             position: index + 1,
             name: item.name,
-            item: item.url,
+            item: item.url.startsWith("http") ? item.url : `${baseUrl}${item.url}`,
         })),
     };
 }
