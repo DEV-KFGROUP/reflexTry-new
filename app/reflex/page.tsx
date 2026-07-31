@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import ReflexHubClient from './ReflexHubClient';
+import { CategorySEOContent } from '@/components/CategorySEOContent';
 import { getCategoryMetadata } from '@/lib/seo-utils';
 import { SchemaInjector } from "@/components/SchemaInjector";
 import { generateWebPageSchema, generateBreadcrumbStructuredData, generateFAQPageSchema } from "@/lib/structured-data";
@@ -39,6 +40,7 @@ export default function ReflexHub() {
         <>
             <SchemaInjector schemas={[breadcrumbSchema, webPageSchema, faqSchema]} />
             <ReflexHubClient />
+            <CategorySEOContent category="reflex" />
         </>
     );
 }

@@ -54,47 +54,48 @@ export function CookieBanner() {
                     transition={{ duration: 0.3 }}
                     className="fixed bottom-0 left-0 right-0 z-50 p-3 md:p-4"
                 >
-                    <div className="max-w-6xl mx-auto bg-gradient-to-br from-slate-900/98 via-slate-800/95 to-slate-900/98 backdrop-blur-md border border-slate-700/50 rounded-xl shadow-2xl p-5 md:p-6 relative ring-1 ring-teal-500/30">
+                    <div className="max-w-6xl mx-auto bg-card/80 backdrop-blur-xl border border-border rounded-2xl shadow-2xl p-5 md:p-6 relative">
                         <div className="flex flex-col lg:flex-row items-start lg:items-center gap-4 lg:gap-6">
                             {/* Cookie Icon */}
-                            <div className="flex-shrink-0">
-                                <div className="w-10 h-10 rounded-full bg-gradient-to-br from-teal-500/30 to-purple-500/30 flex items-center justify-center border-2 border-teal-500/40 shadow-lg shadow-teal-500/20">
-                                    <Cookie className="w-5 h-5 text-teal-500" />
+                            <div className="flex-shrink-0 hidden sm:block">
+                                <div className="w-12 h-12 rounded-full bg-teal-50 dark:bg-teal-500/10 flex items-center justify-center border border-teal-200 dark:border-teal-500/20 shadow-lg shadow-teal-500/10">
+                                    <Cookie className="w-6 h-6 text-teal-600 dark:text-teal-400" />
                                 </div>
                             </div>
 
                             {/* Content */}
                             <div className="flex-1 min-w-0">
-                                <h3 className="text-lg font-bold text-black mb-2">
+                                <h3 className="text-lg font-bold text-foreground mb-2 flex items-center gap-2">
+                                    <Cookie className="w-5 h-5 text-teal-600 dark:text-teal-400 sm:hidden" />
                                     We value your privacy
                                 </h3>
-                                <p className="text-sm text-slate-300 leading-relaxed mb-2">
+                                <p className="text-sm text-muted-foreground leading-relaxed mb-3">
                                     We use cookies to enhance your browsing experience, serve personalized ads or content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.
                                 </p>
-                                <div className="flex flex-wrap gap-2 text-xs text-slate-400">
-                                    <Link href="/cookies" className="text-teal-500 hover:text-cyan-300 transition-colors underline decoration-teal-500/50 hover:decoration-teal-500" aria-label="Learn more about our cookie policy">
+                                <div className="flex flex-wrap gap-3 text-xs">
+                                    <Link href="/cookies" className="text-teal-600 dark:text-teal-400 hover:underline font-medium transition-colors" aria-label="Learn more about our cookie policy">
                                         Learn more about our cookies
                                     </Link>
-                                    <span className="text-slate-600">•</span>
-                                    <Link href="/privacy" className="text-teal-500 hover:text-cyan-300 transition-colors underline decoration-teal-500/50 hover:decoration-teal-500">
+                                    <span className="text-border">•</span>
+                                    <Link href="/privacy" className="text-teal-600 dark:text-teal-400 hover:underline font-medium transition-colors">
                                         Privacy Policy
                                     </Link>
                                 </div>
                             </div>
 
                             {/* Actions - Customize and Accept All buttons */}
-                            <div className="flex flex-col sm:flex-row gap-2 w-full lg:w-auto lg:flex-shrink-0">
+                            <div className="flex flex-col sm:flex-row gap-3 w-full lg:w-auto lg:flex-shrink-0 mt-2 lg:mt-0">
                                 <Button
                                     variant="outline"
                                     onClick={handleCustomize}
-                                    className="text-sm whitespace-nowrap border-2 border-slate-600 text-slate-300 hover:text-black hover:border-teal-500/50 hover:bg-teal-500/10 transition px-4 py-2 flex items-center justify-center gap-2 order-2 sm:order-1"
+                                    className="text-sm whitespace-nowrap bg-transparent text-foreground hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors px-4 py-2 flex items-center justify-center gap-2 order-2 sm:order-1"
                                 >
                                     <Settings className="w-4 h-4" />
                                     Customize
                                 </Button>
                                 <Button
                                     onClick={handleAccept}
-                                    className="text-sm font-semibold whitespace-nowrap bg-gradient-to-r from-teal-500 to-purple-500 hover:from-teal-500/90 hover:to-purple-500/90 text-black shadow-lg shadow-teal-500/30 hover:shadow-teal-500/40 transition px-5 py-2 order-1 sm:order-2"
+                                    className="text-sm font-semibold whitespace-nowrap bg-teal-600 hover:bg-teal-700 text-white dark:bg-teal-500 dark:hover:bg-teal-600 shadow-md transition px-6 py-2 order-1 sm:order-2"
                                 >
                                     Accept All
                                 </Button>
@@ -107,50 +108,50 @@ export function CookieBanner() {
                                 initial={{ opacity: 0, height: 0 }}
                                 animate={{ opacity: 1, height: "auto" }}
                                 exit={{ opacity: 0, height: 0 }}
-                                className="mt-4 pt-4 border-t border-slate-700/50"
+                                className="mt-6 pt-6 border-t border-border overflow-hidden"
                             >
-                                <div className="space-y-3">
-                                    <h4 className="text-sm font-semibold text-black mb-3">Cookie Preferences</h4>
+                                <div className="space-y-4">
+                                    <h4 className="text-base font-semibold text-foreground mb-4">Cookie Preferences</h4>
                                     <div className="space-y-3">
-                                        <div className="flex items-center justify-between p-3 bg-slate-800/50 rounded-lg">
+                                        <div className="flex items-center justify-between p-4 bg-slate-50 dark:bg-slate-900 rounded-xl border border-border/50">
                                             <div>
-                                                <p className="text-sm font-medium text-black">Essential Cookies</p>
-                                                <p className="text-xs text-slate-400 mt-1">Required for the site to function properly</p>
+                                                <p className="text-sm font-semibold text-foreground">Essential Cookies</p>
+                                                <p className="text-xs text-muted-foreground mt-1">Required for the site to function properly</p>
                                             </div>
-                                            <div className="text-sm text-slate-400">Always Active</div>
+                                            <div className="text-sm font-medium text-teal-600 dark:text-teal-400 bg-teal-50 dark:bg-teal-500/10 px-3 py-1 rounded-full border border-teal-200 dark:border-teal-500/20">Always Active</div>
                                         </div>
-                                        <div className="flex items-center justify-between p-3 bg-slate-800/50 rounded-lg">
-                                            <div>
-                                                <p className="text-sm font-medium text-black">Analytics Cookies</p>
-                                                <p className="text-xs text-slate-400 mt-1">Help us understand how visitors interact with our site</p>
+                                        <div className="flex items-center justify-between p-4 bg-slate-50 dark:bg-slate-900 rounded-xl border border-border/50">
+                                            <div className="pr-4">
+                                                <p className="text-sm font-semibold text-foreground">Analytics Cookies</p>
+                                                <p className="text-xs text-muted-foreground mt-1">Help us understand how visitors interact with our site</p>
                                             </div>
-                                            <label className="relative inline-flex items-center cursor-pointer">
+                                            <label className="relative inline-flex items-center cursor-pointer flex-shrink-0">
                                                 <input type="checkbox" defaultChecked className="sr-only peer" />
-                                                <div className="w-11 h-6 bg-slate-700 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-teal-500/50 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition peer-checked:bg-teal-500"></div>
+                                                <div className="w-11 h-6 bg-slate-300 dark:bg-slate-700 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-teal-500/50 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition peer-checked:bg-teal-500"></div>
                                             </label>
                                         </div>
-                                        <div className="flex items-center justify-between p-3 bg-slate-800/50 rounded-lg">
-                                            <div>
-                                                <p className="text-sm font-medium text-black">Advertising Cookies</p>
-                                                <p className="text-xs text-slate-400 mt-1">Used to deliver personalized ads</p>
+                                        <div className="flex items-center justify-between p-4 bg-slate-50 dark:bg-slate-900 rounded-xl border border-border/50">
+                                            <div className="pr-4">
+                                                <p className="text-sm font-semibold text-foreground">Advertising Cookies</p>
+                                                <p className="text-xs text-muted-foreground mt-1">Used to deliver personalized ads</p>
                                             </div>
-                                            <label className="relative inline-flex items-center cursor-pointer">
+                                            <label className="relative inline-flex items-center cursor-pointer flex-shrink-0">
                                                 <input type="checkbox" defaultChecked className="sr-only peer" />
-                                                <div className="w-11 h-6 bg-slate-700 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-teal-500/50 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition peer-checked:bg-teal-500"></div>
+                                                <div className="w-11 h-6 bg-slate-300 dark:bg-slate-700 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-teal-500/50 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition peer-checked:bg-teal-500"></div>
                                             </label>
                                         </div>
                                     </div>
-                                    <div className="flex gap-3 pt-2">
+                                    <div className="flex gap-3 pt-4">
                                         <Button
                                             variant="outline"
                                             onClick={() => setShowCustomize(false)}
-                                            className="flex-1 border-slate-600 text-slate-300 hover:text-black hover:border-slate-500"
+                                            className="flex-1 bg-transparent border-border text-foreground hover:bg-slate-100 dark:hover:bg-slate-800"
                                         >
                                             Cancel
                                         </Button>
                                         <Button
                                             onClick={handleSaveCustomize}
-                                            className="flex-1 bg-gradient-to-r from-teal-500 to-purple-500 hover:from-teal-500/90 hover:to-purple-500/90 text-black"
+                                            className="flex-1 bg-teal-600 hover:bg-teal-700 text-white dark:bg-teal-500 dark:hover:bg-teal-600 shadow-md"
                                         >
                                             Save Preferences
                                         </Button>
@@ -172,4 +173,3 @@ declare global {
         dataLayer?: any[];
     }
 }
-

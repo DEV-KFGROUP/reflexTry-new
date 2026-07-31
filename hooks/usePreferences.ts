@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { toast } from "@/utils/toast";
+import { SoundManager } from "@/utils/soundManager";
 
 export interface UserPreferences {
     soundEnabled: boolean;
@@ -53,6 +54,10 @@ export function usePreferences() {
         
         if (typeof window !== "undefined") {
             localStorage.setItem("reflextry_preferences", JSON.stringify(newPreferences));
+        }
+
+        if (key === "soundEnabled") {
+            SoundManager.setEnabled(value as boolean);
         }
 
         const keyNames: Record<string, string> = {

@@ -1,6 +1,7 @@
 import { Metadata } from "next";
 import HomeClient from "./HomeClient";
 import { HeroSection } from "./HeroSection";
+import { HomeSEOContent } from "./HomeSEOContent";
 import { getHomeMetadata } from "@/lib/seo-utils";
 import { StructuredData } from "@/components/StructuredData";
 import { SchemaInjector } from "@/components/SchemaInjector";
@@ -44,6 +45,8 @@ export default function Home() {
             <HeroSection />
             {/* Client component for interactive tools grid */}
             <HomeClient />
+            {/* Server-rendered educational content - always in HTML for crawlers */}
+            <HomeSEOContent />
         </>
     );
 }

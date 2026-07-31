@@ -9,6 +9,7 @@ export async function generateMetadata(): Promise<Metadata> {
         keywords: ["achievements", "badges", "gamification", "rewards", "challenges"],
         url: `/achievements`,
         type: "website",
+        robots: { index: false, follow: true },
     });
 }
 

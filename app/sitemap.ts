@@ -19,9 +19,6 @@ const STATIC_ROUTES = [
     '/training-programs',
     '/tools',
     '/leaderboard',
-    '/challenges',
-    '/achievements',
-    '/statistics',
 ];
 
 const GAME_ROUTES = [

@@ -75,7 +75,7 @@ export interface StepSection {
     steps?: string[];
 }
 
-interface ToolContentProps {
+export interface ToolContentProps {
     title: string;
     description: string | ContentSection[];
     howToUse: string | StepSection[];
@@ -121,7 +121,7 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
 
         return (
             <div className="space-y-8">
-                {description.map((section, idx) => (
+                {description?.map((section, idx) => (
                     <div key={idx} className="space-y-3">
                         <h3 className="text-xl font-bold text-foreground flex items-center gap-2">
                             {idx === 0 && <Info className="w-5 h-5 text-info" />}
@@ -148,7 +148,7 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
 
         return (
             <div className="relative space-y-8 before:absolute before:inset-y-0 before:left-5 before:w-0.5 before:-translate-x-px before:bg-gradient-to-b before:from-transparent before:via-accuracy/50 before:to-transparent">
-                {howToUse.map((step, idx) => (
+                {howToUse?.map((step, idx) => (
                     <div key={idx} className="relative flex items-start gap-6 group">
                         <div className="relative flex-shrink-0 flex h-10 w-10 items-center justify-center rounded-full border border-accuracy/30 bg-card shadow-lg shadow-accuracy/20 group-hover:border-accuracy group-hover:scale-110 transition duration-200 z-10">
                             <span className="text-lg font-bold text-accuracy">{idx + 1}</span>
@@ -191,7 +191,7 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
 
         return (
             <div className="grid gap-4 sm:grid-cols-2">
-                {howToImprove.map((tip, idx) => (
+                {howToImprove?.map((tip, idx) => (
                     <div
                         key={idx}
                         className="group relative overflow-hidden rounded-xl bg-gradient-to-br from-card to-card/50 border border-border p-5 hover:border-wisdom/50 transition duration-200 hover:shadow-lg hover:shadow-wisdom/10"
@@ -344,7 +344,7 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
                                     Cognitive Benefits
                                 </h3>
                                 <div className="grid sm:grid-cols-2 gap-4">
-                                    {benefits.map((benefit, idx) => (
+                                    {benefits?.map((benefit, idx) => (
                                         <div key={idx} className="flex items-start gap-4 p-4 rounded-2xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 hover:bg-white/10 transition-colors">
                                             <span className="mt-1 w-2 h-2 rounded-full bg-pink-400 shadow-[0_0_10px_rgba(244,114,182,0.8)] flex-shrink-0" />
                                             <span className="text-foreground/90 text-base font-medium">{benefit}</span>
@@ -391,7 +391,7 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
                                         <h3 className="text-xl font-bold text-foreground">Rules</h3>
                                     </div>
                                     <ul className="space-y-4">
-                                        {howToPlay.map((step, idx) => (
+                                        {howToPlay?.map((step, idx) => (
                                             <li key={idx} className="flex gap-4 items-start text-base font-medium text-foreground/90">
                                                 <CheckCircle2 className="w-5 h-5 mt-0.5 text-emerald-400 drop-shadow-[0_0_5px_rgba(52,211,153,0.5)] flex-shrink-0" />
                                                 {step}
@@ -419,7 +419,7 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
                     {/* FAQ Content */}
                     <TabsContent value="faq" className="mt-0 focus-visible:outline-none">
                         <div className="grid md:grid-cols-2 gap-6">
-                            {faqs.map((faq, idx) => (
+                            {faqs?.map((faq, idx) => (
                                 <motion.div
                                     key={idx}
                                     initial={{ opacity: 0, y: 10 }}

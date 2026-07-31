@@ -8,6 +8,7 @@ interface SEOProps {
     url?: string;
     image?: string;
     type?: "website" | "article";
+    robots?: { index?: boolean; follow?: boolean };
 }
 
 export function generateSEOMetadata({
@@ -17,6 +18,7 @@ export function generateSEOMetadata({
     url = "",
     image = "/opengraph-image",
     type = "website",
+    robots,
 }: SEOProps): Metadata {
     const baseUrl = getBaseUrl();
 
@@ -44,7 +46,7 @@ export function generateSEOMetadata({
         authors: [{ name: "Reflextry" }],
         creator: "Reflextry",
         publisher: "Reflextry",
-        robots: {
+        robots: robots || {
             index: true,
             follow: true,
             googleBot: {

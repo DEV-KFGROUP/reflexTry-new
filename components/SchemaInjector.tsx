@@ -9,7 +9,7 @@ export function SchemaInjector({ schemas }: SchemaInjectorProps) {
 
     return (
         <>
-            {schemas.map((schema, index) => (
+            {schemas.filter(Boolean).map((schema, index) => (
                 <script
                     key={`schema-${index}`}
                     type="application/ld+json"

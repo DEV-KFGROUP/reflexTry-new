@@ -9,6 +9,7 @@ import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { LazyLoadedComponents } from "@/components/LazyLoadedComponents";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { ThemeProvider } from "@/components/ThemeProvider";
+import { CookieBanner } from "@/components/CookieBanner";
 import { StructuredData, generateOrganizationSchema } from "@/components/StructuredData";
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -403,6 +404,7 @@ export default async function RootLayout({
             </main>
             <Footer />
             <LazyLoadedComponents />
+            <CookieBanner />
           </ErrorBoundary>
         </ThemeProvider>
       </body>

@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import MemoryHubClient from './MemoryHubClient';
+import { CategorySEOContent } from '@/components/CategorySEOContent';
 import { getCategoryMetadata } from '@/lib/seo-utils';
 import { SchemaInjector } from "@/components/SchemaInjector";
 import { generateWebPageSchema, generateBreadcrumbStructuredData, generateFAQPageSchema } from "@/lib/structured-data";
@@ -39,6 +40,7 @@ export default function MemoryHub() {
         <>
             <SchemaInjector schemas={[breadcrumbSchema, webPageSchema, faqSchema]} />
             <MemoryHubClient />
+            <CategorySEOContent category="memory" />
         </>
     );
 }

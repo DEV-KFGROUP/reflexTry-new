@@ -123,6 +123,7 @@ export function generateWebPageSchema(title: string, description: string, urlPat
 }
 
 export function generateFAQPageSchema(faqs: { question: string; answer: string }[]) {
+    if (!faqs || faqs.length === 0) return null;
     return {
         "@context": "https://schema.org",
         "@type": "FAQPage",
@@ -186,6 +187,7 @@ export function generateBlogPostingSchema(title: string, description: string, ur
 }
 
 export function generateHowToSchema(title: string, steps: string[]) {
+    if (!steps || steps.length === 0) return null;
     return {
         "@context": "https://schema.org",
         "@type": "HowTo",

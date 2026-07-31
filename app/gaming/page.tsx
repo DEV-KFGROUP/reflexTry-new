@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import GamingHubClient from './GamingHubClient';
+import { CategorySEOContent } from '@/components/CategorySEOContent';
 import { getCategoryMetadata } from '@/lib/seo-utils';
 import { SchemaInjector } from "@/components/SchemaInjector";
 import { generateWebPageSchema, generateBreadcrumbStructuredData, generateFAQPageSchema } from "@/lib/structured-data";
@@ -39,6 +40,7 @@ export default function GamingHub() {
         <>
             <SchemaInjector schemas={[breadcrumbSchema, webPageSchema, faqSchema]} />
             <GamingHubClient />
+            <CategorySEOContent category="gaming" />
         </>
     );
 }

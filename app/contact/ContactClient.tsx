@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, Send, Loader2, MessageSquare, Headphones, Twitter, Instagram, Sparkles, Shield, SendHorizontal } from "lucide-react";
+import { Mail, Send, Loader2, MessageSquare, Headphones, Twitter, Instagram, Sparkles, Shield, SendHorizontal, Building2, MapPin } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { toast } from "@/utils/toast";
 
@@ -64,6 +64,17 @@ export default function ContactClient() {
             iconColor: "text-violet-600",
             shadowColor: "hover:shadow-[0_0_20px_rgba(139,92,246,0.15)]",
             accentBg: "bg-violet-50 border-violet-200"
+        },
+        {
+            icon: Building2,
+            title: "Head Office",
+            address: "346, Gujarat State Highway 167, Shanti Niketan Society, Mota Varachha, Surat, Gujarat 394101",
+            description: "Visit us at our headquarters for business meetings and collaborations.",
+            color: "from-emerald-500/20 to-emerald-500/5",
+            borderColor: "border-emerald-200 hover:border-emerald-400/60",
+            iconColor: "text-emerald-600",
+            shadowColor: "hover:shadow-[0_0_20px_rgba(16,185,129,0.15)]",
+            accentBg: "bg-emerald-50 border-emerald-200"
         }
     ];
 
@@ -97,10 +108,10 @@ export default function ContactClient() {
 
     return (
         <div className="w-full bg-[#f8fafc] dark:bg-slate-800 text-slate-800 dark:text-white font-sans relative overflow-hidden py-8 px-4 sm:px-6 lg:px-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm mb-8">
-            
+
             {/* Technical Grid Overlay */}
             <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.03)_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_at_center,black_50%,transparent_100%)] pointer-events-none z-0" />
-            
+
             {/* Floating 3D parallax elements */}
             {FLOATING_SHAPES.map((item, idx) => (
                 <motion.div
@@ -121,7 +132,7 @@ export default function ContactClient() {
                         delay: item.delay
                     }}
                 >
-                    <div 
+                    <div
                         className={`${item.size} font-mono font-black text-cyan-600`}
                         style={{
                             transform: `perspective(800px) rotateX(25deg) rotateY(-20deg) rotateZ(${item.rotate}deg)`,
@@ -138,7 +149,7 @@ export default function ContactClient() {
             <div className="absolute bottom-[-5%] right-[10%] w-[600px] h-[600px] bg-violet-500/[0.02] blur-[130px] rounded-full pointer-events-none z-0" />
 
             <div className="relative z-10 max-w-7xl mx-auto flex flex-col items-start space-y-12">
-                
+
                 {/* Header HUD panel */}
                 <motion.div
                     initial={{ opacity: 0, y: -20 }}
@@ -161,10 +172,10 @@ export default function ContactClient() {
 
                 {/* Main Content Grid */}
                 <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-                    
+
                     {/* Left Column - Contact Channels */}
                     <div className="lg:col-span-5 space-y-6">
-                        
+
                         <div className="flex flex-col space-y-4">
                             <h2 className="text-xs font-mono font-bold tracking-widest text-slate-400 uppercase flex items-center gap-2">
                                 <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 shadow-[0_0_8px_rgba(6,182,212,0.6)]" />
@@ -190,13 +201,25 @@ export default function ContactClient() {
                                             <h3 className="text-base font-mono font-bold text-slate-800">{method.title}</h3>
                                             <p className="text-xs text-slate-400 leading-relaxed pr-2">{method.description}</p>
                                             <div className="pt-2">
-                                                <a
-                                                    href={`mailto:${method.email}`}
-                                                    className={`inline-flex items-center gap-1.5 text-xs font-mono font-semibold ${method.iconColor} hover:underline`}
-                                                >
-                                                    <Mail className="w-3.5 h-3.5" />
-                                                    {method.email}
-                                                </a>
+                                                {method.email ? (
+                                                    <a
+                                                        href={`mailto:${method.email}`}
+                                                        className={`inline-flex items-center gap-1.5 text-xs font-mono font-semibold ${method.iconColor} hover:underline`}
+                                                    >
+                                                        <Mail className="w-3.5 h-3.5" />
+                                                        {method.email}
+                                                    </a>
+                                                ) : (
+                                                    <a
+                                                        href={`https://maps.google.com/?q=${encodeURIComponent(method.address as string)}`}
+                                                        target="_blank"
+                                                        rel="noopener noreferrer"
+                                                        className={`inline-flex items-start gap-1.5 text-xs font-mono font-semibold ${method.iconColor} hover:underline text-left`}
+                                                    >
+                                                        <MapPin className="w-3.5 h-3.5 mt-0.5 shrink-0" />
+                                                        <span className="leading-relaxed">{method.address}</span>
+                                                    </a>
+                                                )}
                                             </div>
                                         </div>
                                     </div>
@@ -250,7 +273,7 @@ export default function ContactClient() {
                     {/* Right Column - Transmission Form Deck */}
                     <div className="lg:col-span-7 bg-white border border-slate-200/80 shadow-sm rounded-3xl p-6 md:p-8 backdrop-blur-md relative">
                         <div className="absolute top-0 left-10 w-20 h-[1px] bg-gradient-to-r from-transparent via-cyan-500/20 to-transparent" />
-                        
+
                         <div className="space-y-6">
                             <div className="space-y-1">
                                 <h2 className="text-xl font-mono font-bold text-slate-800 uppercase tracking-wide">
@@ -358,18 +381,18 @@ export default function ContactClient() {
                         <p>
                             Welcome to the Reflextry contact portal. We value community input above all else. Whether you're reporting a bug on our visual memory test, requesting a brand new typing speed variation, or inquiring about commercial licensing for cognitive research, our team is ready to assist.
                         </p>
-                        
+
                         <div className="space-y-4 mt-8">
                             <div>
                                 <h4 className="font-bold text-slate-800">How do I report a bug or glitch?</h4>
                                 <p>If a specific brain training tool isn't loading or scoring correctly, please use the contact form above. Include your browser (Chrome, Safari, Firefox), your device type (Mobile/Desktop), and a brief description of the issue. This helps our engineers patch the problem rapidly.</p>
                             </div>
-                            
+
                             <div>
                                 <h4 className="font-bold text-slate-800">Can I request a new benchmark tool?</h4>
                                 <p>Absolutely! Many of our most popular games—like the Chimp Test and Sequence Memory—were heavily inspired by user suggestions. If you have an idea for a new reflex, accuracy, or speed test, drop us a message with the subject "New Tool Request".</p>
                             </div>
-                            
+
                             <div>
                                 <h4 className="font-bold text-slate-800">Do you offer API access or data exports?</h4>
                                 <p>We are currently exploring options for educational institutions, researchers, and professional esports teams who wish to export raw cognitive latency data or integrate our reaction tools via API. Please reach out to our business email for enterprise inquiries.</p>

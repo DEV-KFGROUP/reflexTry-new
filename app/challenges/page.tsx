@@ -9,6 +9,7 @@ export async function generateMetadata(): Promise<Metadata> {
         keywords: ["daily challenges", "streak", "rewards", "daily goals", "challenges"],
         url: `/challenges`,
         type: "website",
+        robots: { index: false, follow: true },
     });
 }
 
