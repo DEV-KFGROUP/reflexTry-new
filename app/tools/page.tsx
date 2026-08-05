@@ -1,21 +1,11 @@
 import { Metadata } from "next";
 import AllToolsClient from "./AllToolsClient";
-import { generateSEOMetadata } from "@/components/SEO";
+import { getCategoryMetadata } from "@/lib/seo-utils";
 import { SchemaInjector } from "@/components/SchemaInjector";
 import { generateWebPageSchema, generateBreadcrumbStructuredData, generateFAQPageSchema } from "@/lib/structured-data";
 
 export async function generateMetadata(): Promise<Metadata> {
-    return generateSEOMetadata({
-        title: "All Brain Training Tools & Games",
-        description: "Explore our complete collection of reaction, memory, speed, and accuracy tools.",
-        keywords: [
-            "all tools", "brain training games", "memory games", "reflex tests",
-            "speed tests", "accuracy tests", "gaming tools", "cognitive training",
-            "reaction time test", "typing speed test", "click speed test"
-        ],
-        url: "/tools",
-        type: "website",
-    });
+    return getCategoryMetadata('tools');
 }
 
 export default function AllToolsPage() {
