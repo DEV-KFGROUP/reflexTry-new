@@ -42,6 +42,7 @@ export default function HomeClient() {
         { id: "sequence", href: "/memory/sequence", icon: Zap, difficulty: "Medium" , desc: "Memorize and repeat the expanding pattern of flashes." },
         { id: "chimp-test", href: "/memory/chimp-test", icon: Brain, difficulty: "Hard" , desc: "Recall numbers in exact order after they are hidden." },
         { id: "verbal-memory", href: "/memory/verbal-memory", icon: Sparkles, difficulty: "Medium" , desc: "Identify if you've seen the current word before." },
+        { id: "n-back", href: "/memory/n-back", icon: Brain, difficulty: "Hard" , desc: "Match letters that appeared N steps earlier in the stream." },
         { id: "object-tracking", href: "/memory/object-tracking", icon: Target, difficulty: "Hard" , desc: "Keep your eyes locked on the moving targets." },
         { id: "number", href: "/memory/number", icon: Keyboard, difficulty: "Hard" , desc: "How many digits can you hold before your memory drops them?" },
         { id: "visual", href: "/memory/visual", icon: Target, difficulty: "Medium" , desc: "Remember the exact layout of the highlighted tiles." },
@@ -67,6 +68,9 @@ export default function HomeClient() {
       tools: [
         { id: "reaction", href: "/reflex/reaction", icon: Zap, difficulty: "Easy" , desc: "Click the exact millisecond the screen turns green." },
         { id: "time-perception", href: "/reflex/time-perception", icon: Activity, difficulty: "Medium" , desc: "Estimate the exact duration of a hidden timer." },
+        { id: "go-no-go", href: "/reflex/go-no-go", icon: Target, difficulty: "Medium" , desc: "Press on green Go trials — withhold on red No-Go." },
+        { id: "flanker", href: "/reflex/flanker", icon: ArrowRight, difficulty: "Hard" , desc: "Respond to the center arrow; ignore flanking distractors." },
+        { id: "choice-reaction", href: "/reflex/choice-reaction", icon: Zap, difficulty: "Medium" , desc: "Click the lit colored box as fast as you can." },
         { id: "sound", href: "/reflex/sound", icon: Activity, difficulty: "Medium" , desc: "React as fast as possible to a sudden audio cue." },
         { id: "grid", href: "/reflex/grid", icon: Target, difficulty: "Medium" , desc: "Click the randomly appearing targets instantly." },
         { id: "peripheral", href: "/reflex/peripheral", icon: Keyboard, difficulty: "Hard" , desc: "Spot and react to targets outside your direct focus." },
@@ -91,6 +95,7 @@ export default function HomeClient() {
       tag: "VELOCITY",
       tools: [
         { id: "cps", href: "/speed/click", icon: Activity, difficulty: "Easy" , desc: "Test your raw clicks-per-second velocity." },
+        { id: "schulte-table", href: "/speed/schulte-table", icon: Target, difficulty: "Medium" , desc: "Click shuffled numbers in order on a Schulte grid." },
         { id: "math", href: "/speed/math", icon: Keyboard, difficulty: "Hard" , desc: "Solve basic arithmetic equations rapidly." },
         { id: "typing", href: "/speed/typing", icon: Keyboard, difficulty: "Medium" , desc: "Type the provided text as fast as possible." },
         { id: "word", href: "/speed/words", icon: Target, difficulty: "Medium" , desc: "Unscramble words with extreme speed." },
@@ -158,13 +163,13 @@ export default function HomeClient() {
       <FloatingBackground />
       {/* ── Game Arenas ── */}
       <div className="relative z-10 w-full max-w-7xl mx-auto space-y-16 pt-12 pb-20 px-4 sm:px-6 lg:px-8">
-        {/* AI Summary / Bottom Line for SEO/AEO */}
+        {/* Category overview */}
         <section className="bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 p-6 rounded-3xl mb-8">
             <h2 className="text-xl font-bold text-foreground mb-2 flex items-center gap-2">
-                <Sparkles className="w-5 h-5 text-blue-500" /> Key Takeaway
+                <Sparkles className="w-5 h-5 text-blue-500" /> What Reflextry Measures
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-                <strong className="text-foreground">Bottom Line:</strong> Reflextry is your proving ground. Whether you're a competitive gamer looking to shave milliseconds off your flick shots, a student pushing your working memory, or an athlete tracking reaction times—this is where you test your limits. Measure your baseline, train daily, and watch your stats climb.
+                Free browser tests for reaction time, working memory, click speed, aim, and accuracy. Measure a baseline, practice in short sessions, and track progress on the statistics page—no account required for core tools.
             </p>
         </section>
 

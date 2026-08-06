@@ -254,6 +254,26 @@ export const SEO_CONFIGS = {
       "visual attention tracking test"
     ],
   },
+  "n-back": {
+    title: "N-Back Test - Working Memory & Continuous Matching Benchmark | Reflextry",
+    description:
+      "Train working memory with the classic N-Back task. Match letters that appeared N steps ago, track hits and accuracy, and push from 1-back to 3-back.",
+    keywords: [
+      "n-back test",
+      "n back working memory",
+      "2-back test online",
+      "3-back cognitive test",
+      "dual n-back free",
+      "working memory n-back game",
+      "n-back brain training",
+      "continuous performance n-back",
+      "letter matching memory test",
+      "n-back accuracy test",
+      "cognitive n-back benchmark",
+      "human benchmark n-back",
+      "improve working memory n-back"
+    ],
+  },
 
   // --- REFLEX TOOLS ---
   "reaction-time": {
@@ -463,6 +483,58 @@ export const SEO_CONFIGS = {
       "internal pacemaker benchmark"
     ],
   },
+  "go-no-go": {
+    title: "Go / No-Go Test - Inhibitory Control & Response Inhibition | Reflextry",
+    description:
+      "Measure response inhibition with a Go/No-Go task. Press on green Go trials, withhold on red No-Go trials, and track accuracy plus reaction time.",
+    keywords: [
+      "go no go test",
+      "go nogo task online",
+      "inhibitory control test",
+      "response inhibition game",
+      "go no-go reaction test",
+      "impulse control cognitive test",
+      "green red go stop test",
+      "executive function go nogo",
+      "false alarm inhibition test",
+      "continuous performance go nogo",
+      "brain training inhibition"
+    ],
+  },
+  "flanker": {
+    title: "Flanker Task - Selective Attention & Conflict Resolution | Reflextry",
+    description:
+      "Take the Eriksen Flanker task online. Respond to the center arrow while ignoring congruent or incongruent flankers to measure attention control.",
+    keywords: [
+      "flanker task online",
+      "eriksen flanker test",
+      "selective attention test",
+      "arrow flanker game",
+      "incongruent flanker task",
+      "attention conflict test",
+      "cognitive control flanker",
+      "center arrow reaction test",
+      "executive attention benchmark",
+      "flanker effect test free"
+    ],
+  },
+  "choice-reaction": {
+    title: "Choice Reaction Time Test - Multi-Choice RT Benchmark (ms) | Reflextry",
+    description:
+      "Measure choice reaction time across 2–4 colored targets. Click the lit box as fast as possible and beat your average RT in milliseconds.",
+    keywords: [
+      "choice reaction time test",
+      "multi choice RT test",
+      "4 choice reaction time",
+      "colored box reaction test",
+      "disjunctive reaction time",
+      "choice RT benchmark ms",
+      "complex reaction time online",
+      "multiple stimulus reaction test",
+      "cognitive choice reaction",
+      "human benchmark choice reaction"
+    ],
+  },
 
   // --- SPEED TOOLS ---
   "cps-test": {
@@ -621,6 +693,24 @@ export const SEO_CONFIGS = {
       "matrix visual scanning test",
       "peripheral vision schulte table",
       "touch numbers in order test"
+    ],
+  },
+  "schulte-table": {
+    title: "Schulte Table Test - Visual Scanning & Peripheral Vision Speed | Reflextry",
+    description:
+      "Classic Schulte Table challenge. Click shuffled numbers in order on 3×3 to 7×7 grids. Train peripheral vision, visual search speed, and focus under the clock.",
+    keywords: [
+      "schulte table online free",
+      "schulte table test",
+      "schulte grid 5x5",
+      "schulte table 7x7",
+      "visual scanning speed test",
+      "peripheral vision training schulte",
+      "find numbers in order game",
+      "speed reading schulte table",
+      "number grid attention test",
+      "schulte table brain training",
+      "ascending number grid challenge"
     ],
   },
   "number-rush": {

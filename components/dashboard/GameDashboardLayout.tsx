@@ -93,8 +93,11 @@ export function GameDashboardLayout({
 
           {/* Right Panel: Game Console */}
           <div className="flex flex-col gap-4 w-full h-full">
-            <div className="relative bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden shadow-[0_8px_40px_rgba(15,23,42,0.07)] dark:shadow-none h-full min-h-[480px] flex flex-col">
+            <div className="relative bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden shadow-[0_8px_40px_rgba(15,23,42,0.07)] dark:shadow-none h-full min-h-[520px] flex flex-col">
               
+              {/* Soft top accent */}
+              <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-indigo-400/40 to-transparent" />
+
               {/* Corner decals */}
               <div className="absolute top-4 left-4 w-4 h-4 border-t-2 border-l-2 border-slate-200 dark:border-slate-700" />
               <div className="absolute top-4 right-4 w-4 h-4 border-t-2 border-r-2 border-slate-200 dark:border-slate-700" />
@@ -111,7 +114,7 @@ export function GameDashboardLayout({
               {/* Scanline effect */}
               <div className="absolute inset-0 pointer-events-none opacity-[0.02] bg-[linear-gradient(rgba(148,163,184,0)_50%,rgba(148,163,184,0.15)_50%)] bg-[size:100%_4px]" />
 
-              <div className="flex-1 p-6 md:p-8 flex flex-col items-center justify-center relative z-10 w-full h-full">
+              <div className="flex-1 p-6 md:p-10 flex flex-col items-center justify-center relative z-10 w-full h-full">
                 {children}
               </div>
 

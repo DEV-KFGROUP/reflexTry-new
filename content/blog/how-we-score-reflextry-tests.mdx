@@ -1,0 +1,61 @@
+---
+title: 'How We Score Reflextry Tests (And What the Numbers Mean)'
+description: 'A clear guide to Reflextry scoring: milliseconds, spans, accuracy, and completion times—plus what we do not claim about percentiles or clinical diagnosis.'
+publishedAt: '2026-08-01'
+author:
+  name: 'Kaushik Rabadiya'
+category: 'Methodology'
+tags: ['scoring', 'methodology', 'benchmarks', 'transparency']
+readingTime: '8 min read'
+---
+
+If a training site publishes a score without explaining the rule, the number is marketing, not measurement. This article documents how Reflextry scores its main test families, how difficulty changes the task, and which claims we refuse to make without controlled data.
+
+## One principle: same device, same difficulty
+
+Browser tests inherit hardware noise: refresh rate, mouse polling, touch latency, thermal throttling, and background tabs. That does not make scores useless—it means **comparisons should be within your setup**. A 220 ms reaction time on a 60 Hz laptop is not the same experiment as 180 ms on a 240 Hz esport display. Always note difficulty mode beside personal bests.
+
+## Reaction and choice reaction (milliseconds)
+
+**Simple reaction** scores are usually the average latency from stimulus onset to a valid response, in milliseconds. Lower is better. Early clicks (before the cue) are errors, not heroic anticipation.
+
+**Choice reaction** adds alternatives. Average RT is still the primary metric, but only correct hits should feed the average. Wrong-box clicks and premature clicks are error counts. Because more choices generally slow decisions (Hick’s-law intuition), do not compare a 2-box average to a 4-box average as if they were identical tests.
+
+## Memory spans and recognition runs
+
+**Chimp / sequence / digit-style** tools typically score the longest clean span or stage reached under the mode’s lives and vanish rules. Higher is better.
+
+**Verbal memory** usually scores how far you get before strike-out on SEEN/NEW judgments. Interference rises late in a run; that is expected, not a broken test.
+
+When lives differ by difficulty, a “high score” on Beginner is not interchangeable with Professional. Treat each difficulty as its own leaderboard in your notes.
+
+## Accuracy, inhibition, and conflict tasks
+
+**Go/No-Go** rewards correct Go hits **and** correct withholds. A flashy Go RT with many false alarms is not mastery.
+
+**Flanker** scores correct center-arrow responses; incongruent trials are slower and more error-prone by design. Track accuracy first, then average RT on corrects.
+
+**Pattern matching / precision click** prioritize correctness (and hit quality) over reckless speed. CPS or completion speed without accuracy is a vanity metric.
+
+## Time-based clears (Schulte and similar)
+
+Schulte-style grids score **completion time**—lower is better. Wrong clicks should not silently “succeed”; they waste time. Reverse-count modes are a different task than ascending clears.
+
+## What we do not claim
+
+We do not invent site-wide “average user improves X% in 14 days” statistics without a published, controlled sample. We do not present Ishihara-style plates as a medical diagnosis. We do not equate a game high score with IQ, clinical ADHD assessment, or esports contract readiness.
+
+When we cite external research (NIH, NCBI, classic psychology papers), that research describes **general phenomena**. Your personal curve on Reflextry is still an n=1 experiment—useful for practice, not a clinic report.
+
+## How to keep an honest log
+
+1. Record date, difficulty, device, and sleep/caffeine notes if you care about trends.  
+2. Prefer rolling weekly medians over one lucky session.  
+3. Change one variable at a time when testing “did this help?”  
+4. Stop sessions when fatigue spikes errors; tired scores teach the wrong lesson.
+
+## Why this transparency matters
+
+AdSense-era websites sometimes paste identical “12–15% improvement” copy under every tool. That hurts trust and teaches users to ignore numbers. Reflextry’s goal is the opposite: **one clear rule per tool**, honest limits, and scores you can defend when you share them with a teammate or coach.
+
+If a scoring description on a tool page ever disagrees with this article, treat the live tool UI as source of truth and email support@reflextry.com so we can fix the docs.

@@ -19,6 +19,9 @@ const STATIC_ROUTES = [
     '/training-programs',
     '/tools',
     '/leaderboard',
+    '/achievements',
+    '/challenges',
+    '/statistics',
 ];
 
 const GAME_ROUTES = [
@@ -30,6 +33,12 @@ const GAME_ROUTES = [
     '/memory/color',
     '/memory/shape',
     '/memory/symbol',
+    '/memory/word-recall',
+    '/memory/card-match',
+    '/memory/chimp-test',
+    '/memory/verbal-memory',
+    '/memory/object-tracking',
+    '/memory/n-back',
     // Reflex
     '/reflex',
     '/reflex/reaction',
@@ -39,6 +48,12 @@ const GAME_ROUTES = [
     '/reflex/direction',
     '/reflex/multi-stimulus',
     '/reflex/sequence-reaction',
+    '/reflex/whack-a-mole',
+    '/reflex/color-switch',
+    '/reflex/time-perception',
+    '/reflex/go-no-go',
+    '/reflex/flanker',
+    '/reflex/choice-reaction',
     // Speed
     '/speed',
     '/speed/click',
@@ -46,12 +61,19 @@ const GAME_ROUTES = [
     '/speed/math',
     '/speed/words',
     '/speed/grid',
+    '/speed/number-rush',
+    '/speed/quick-sort',
+    '/speed/schulte-table',
     // Accuracy
     '/accuracy',
     '/accuracy/pattern-matching',
     '/accuracy/precision-click',
     '/accuracy/data',
     '/accuracy/image-recognition',
+    '/accuracy/angle-estimation',
+    '/accuracy/color-match',
+    '/accuracy/color-blindness',
+    '/accuracy/mental-rotation',
     // Gaming
     '/gaming',
     '/gaming/aim',
@@ -61,15 +83,6 @@ const GAME_ROUTES = [
     '/gaming/target-tracking',
     '/gaming/flick-shot',
     '/gaming/rhythm-tap',
-    // New games
-    '/memory/word-recall',
-    '/memory/card-match',
-    '/reflex/whack-a-mole',
-    '/reflex/color-switch',
-    '/speed/number-rush',
-    '/speed/quick-sort',
-    '/accuracy/angle-estimation',
-    '/accuracy/color-match',
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {

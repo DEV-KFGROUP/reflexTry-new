@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { Clock, Play, RotateCcw, Shield, Star, Zap, Flame, Brain, Trophy } from "lucide-react";
 import { useGameSound } from "@/hooks/useGameSound";
 import { GameDashboardLayout } from "@/components/dashboard/GameDashboardLayout";
@@ -67,10 +67,35 @@ export default function TimePerceptionGame() {
   const [lastResult, setLastResult] = useState<number | null>(null);
   const [isHolding, setIsHolding] = useState(false);
   const [failed, setFailed] = useState(false);
+  const [highScores, setHighScores] = useState<Record<DiffId, number>>({
+    beginner: 0, easy: 0, normal: 0, hard: 0, professional: 0,
+  });
   
   const startTimeRef = useRef<number>(0);
   const { play, isMuted, toggleMute } = useGameSound();
   const diff = DIFFICULTIES[diffId];
+
+  useEffect(() => {
+    const saved: Record<DiffId, number> = { beginner: 0, easy: 0, normal: 0, hard: 0, professional: 0 };
+    DIFF_ORDER.forEach(k => {
+      const v = localStorage.getItem(`timeperception-hs-${k}`);
+      if (v) saved[k] = parseInt(v, 10);
+    });
+    setHighScores(saved);
+  }, []);
+
+  useEffect(() => {
+    if (gameState !== "gameover" || scores.length === 0) return;
+    const avg = Math.round(scores.reduce((a, b) => a + b, 0) / scores.length);
+    setHighScores(prev => {
+      // Lower average error is better; 0 means unset
+      if (prev[diffId] === 0 || avg < prev[diffId]) {
+        localStorage.setItem(`timeperception-hs-${diffId}`, avg.toString());
+        return { ...prev, [diffId]: avg };
+      }
+      return prev;
+    });
+  }, [gameState, scores, diffId]);
 
   const getNewTarget = () => {
     return Math.floor(Math.random() * (diff.maxTarget - diff.minTarget + 1)) + diff.minTarget;
@@ -168,8 +193,8 @@ export default function TimePerceptionGame() {
     <>
       <StatBox label="Round" value={gameState === "select" ? "-" : `${round}/${ROUNDS}`} />
       <StatBox label="Average Err" value={gameState === "select" || scores.length === 0 ? "-" : `${avgScore}ms`} highlight={scores.length > 0 && avgScore <= diff.marginMs} />
+      <StatBox label="Best Err" value={highScores[diffId] > 0 ? `${highScores[diffId]}ms` : "-"} highlight={highScores[diffId] > 0} />
       <StatBox label="Target Margin" value={`±${diff.marginMs}ms`} />
-      <StatBox label="Status" value={gameState === "select" ? "IDLE" : gameState === "gameover" ? "ENDED" : "ACTIVE"} />
     </>
   );
 
@@ -303,11 +328,16 @@ export default function TimePerceptionGame() {
             </h2>
             
             {failed ? (
-              <div className="text-rose-500 mb-8 font-bold uppercase tracking-widest text-sm">Calibration Failed</div>
+              <div className="text-rose-500 mb-2 font-bold uppercase tracking-widest text-sm">Calibration Failed</div>
             ) : (
-              <div className="text-slate-500 mb-8 uppercase tracking-widest text-sm">
+              <div className="text-slate-500 mb-2 uppercase tracking-widest text-sm">
                 Average Error: <span className="text-2xl font-black text-emerald-500 ml-2">{avgScore}ms</span>
               </div>
+            )}
+            {scores.length > 0 && avgScore === highScores[diffId] ? (
+              <p className="text-amber-500 font-bold text-xs uppercase tracking-widest mb-6">New Record!</p>
+            ) : (
+              <div className="mb-6" />
             )}
             
             <div className="flex gap-4">

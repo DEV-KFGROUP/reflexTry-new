@@ -1,13 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { HelpCircle, Info, Sparkles, TrendingUp, Zap, ArrowRight, CheckCircle2, Target, Trophy, Brain, List, Activity, Gamepad2, MousePointer2 } from "lucide-react";
+import { HelpCircle, Info, Sparkles, TrendingUp, Zap, ArrowRight, CheckCircle2, Target, Trophy, Brain, List, Gamepad2, MousePointer2 } from "lucide-react";
 import { useState } from "react";
 import Link from "next/link";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { SchemaInjector } from "@/components/SchemaInjector";
 import { generateFAQPageSchema, generateHowToSchema } from "@/lib/structured-data";
-import { SeoKeywordFooter } from "./SeoKeywordFooter";
 
 interface FAQItem {
     question: string;
@@ -263,111 +262,29 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
                         </TabsTrigger>
                     </TabsList>
 
-                    {/* About Content */}
+                    {/* About Content — tool-specific description + benefits only */}
                     <TabsContent value="about" className="mt-0 focus-visible:outline-none">
                         <div className="bg-black/5 dark:bg-white/5 dark:bg-black/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 rounded-3xl p-6 lg:p-10 shadow-xl">
-                            {/* SEO: Top summary answer */}
-                            <div className="mb-10 bg-gradient-to-r from-indigo-500/20 to-purple-500/20 border-l-4 border-indigo-400 p-6 rounded-r-2xl shadow-inner space-y-4">
-                                <h3 className="text-indigo-300 font-black text-lg mb-2 flex items-center gap-2">
-                                    <Sparkles className="w-5 h-5" /> Key Takeaway
-                                </h3>
-                                <p className="text-foreground/90 text-base leading-relaxed">
-                                    <strong className="text-foreground font-bold">Definition:</strong> This tool is defined as an interactive cognitive application designed to measure and improve your baseline mental and physical performance.
-                                </p>
-                                <p className="text-foreground/90 text-base leading-relaxed">
-                                    <strong className="text-foreground font-bold">The bottom line:</strong> Regular practice can enhance neural pathways, reaction speed, and accuracy over time.
-                                </p>
-                                <p className="text-foreground/90 text-base leading-relaxed">
-                                    <strong className="text-foreground font-bold">Who is this for?</strong> Ideal for competitive gamers, students, athletes, and anyone wanting to track or improve their mental sharpness and fine motor coordination.
-                                </p>
-                            </div>
-
                             <div className="prose dark:prose-invert prose-lg max-w-none prose-headings:text-foreground prose-p:text-muted-foreground">
                                 {renderDescription()}
                             </div>
 
-                            {/* Comparison Table */}
-                            <div className="mt-12 mb-8 pt-8 border-t border-black/10 dark:border-white/10">
-                                <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-3">
-                                    <Activity className="w-6 h-6 text-purple-400" /> Use Cases & Training Modes
-                                </h3>
-                                <div className="bg-black/5 dark:bg-black/20 rounded-2xl overflow-x-auto border border-white/5">
-                                    <table className="w-full text-base text-left border-collapse min-w-[600px]">
-                                        <thead className="bg-black/5 dark:bg-white/5">
-                                            <tr className="border-b border-black/10 dark:border-white/10 text-foreground">
-                                                <th className="py-4 px-6 font-bold tracking-wide">Primary Use Case</th>
-                                                <th className="py-4 px-6 font-bold tracking-wide">Target Audience</th>
-                                                <th className="py-4 px-6 font-bold tracking-wide">Expected Outcome</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody className="text-muted-foreground">
-                                            <tr className="border-b border-white/5 hover:bg-black/5 dark:bg-white/5 transition-colors">
-                                                <td className="py-4 px-6 font-bold text-purple-300">Esports Warm-up</td>
-                                                <td className="py-4 px-6">Gamers & Athletes</td>
-                                                <td className="py-4 px-6">Faster physical reaction times & flick precision</td>
-                                            </tr>
-                                            <tr className="border-b border-white/5 hover:bg-black/5 dark:bg-white/5 transition-colors">
-                                                <td className="py-4 px-6 font-bold text-blue-300">Cognitive Training</td>
-                                                <td className="py-4 px-6">Students & Professionals</td>
-                                                <td className="py-4 px-6">Improved spatial memory and sustained focus</td>
-                                            </tr>
-                                            <tr className="hover:bg-black/5 dark:bg-white/5 transition-colors">
-                                                <td className="py-4 px-6 font-bold text-emerald-300">Baseline Testing</td>
-                                                <td className="py-4 px-6">Everyone</td>
-                                                <td className="py-4 px-6">Trackable performance metrics over time</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
+                            {benefits && benefits.length > 0 ? (
+                                <div className="mt-12 pt-8 border-t border-black/10 dark:border-white/10">
+                                    <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-3">
+                                        <Brain className="w-6 h-6 text-pink-400 drop-shadow-[0_0_10px_rgba(244,114,182,0.8)]" />
+                                        What This Test Trains
+                                    </h3>
+                                    <div className="grid sm:grid-cols-2 gap-4">
+                                        {benefits.map((benefit, idx) => (
+                                            <div key={idx} className="flex items-start gap-4 p-4 rounded-2xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 hover:bg-white/10 transition-colors">
+                                                <span className="mt-1 w-2 h-2 rounded-full bg-pink-400 shadow-[0_0_10px_rgba(244,114,182,0.8)] flex-shrink-0" />
+                                                <span className="text-foreground/90 text-base font-medium">{benefit}</span>
+                                            </div>
+                                        ))}
+                                    </div>
                                 </div>
-                            </div>
-
-                            {/* Original Experience & Proof */}
-                            <div className="mt-12 pt-8 border-t border-black/10 dark:border-white/10">
-                                <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-3">
-                                    <Zap className="w-6 h-6 text-blue-400 drop-shadow-[0_0_10px_rgba(96,165,250,0.8)]" />
-                                    First-Hand Testing & Benchmarks
-                                </h3>
-                                <div className="space-y-4 bg-blue-500/10 border border-blue-500/20 p-6 rounded-2xl">
-                                    <p className="text-foreground/90 text-base leading-relaxed">
-                                        <strong className="text-blue-300">Based on our first-hand testing:</strong> We actively test and calibrate all our tools using rigorous internal benchmarks. According to real data from our preliminary case studies, players who practice for just 15 minutes daily see a measurable 12-15% improvement in their baseline scores over a two-week period.
-                                    </p>
-                                    <p className="text-foreground/90 text-base leading-relaxed">
-                                        <strong className="text-blue-300">Example Benchmark:</strong> An average beginner might score around the 50th percentile initially. However, after consistent application of the techniques outlined in our pro tips section, our internal testing data shows rapid progression toward the 80th percentile. This serves as concrete proof that structured cognitive and reflex training yields tangible results.
-                                    </p>
-                                </div>
-                            </div>
-
-                            {/* Key Benefits */}
-                            <div className="mt-12 pt-8 border-t border-black/10 dark:border-white/10">
-                                <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-3">
-                                    <Brain className="w-6 h-6 text-pink-400 drop-shadow-[0_0_10px_rgba(244,114,182,0.8)]" />
-                                    Cognitive Benefits
-                                </h3>
-                                <div className="grid sm:grid-cols-2 gap-4">
-                                    {benefits?.map((benefit, idx) => (
-                                        <div key={idx} className="flex items-start gap-4 p-4 rounded-2xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 hover:bg-white/10 transition-colors">
-                                            <span className="mt-1 w-2 h-2 rounded-full bg-pink-400 shadow-[0_0_10px_rgba(244,114,182,0.8)] flex-shrink-0" />
-                                            <span className="text-foreground/90 text-base font-medium">{benefit}</span>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-
-                            {/* Scientific Context & Resources */}
-                            <div className="mt-12 pt-8 border-t border-black/10 dark:border-white/10">
-                                <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-3">
-                                    <HelpCircle className="w-6 h-6 text-emerald-400" />
-                                    Further Learning
-                                </h3>
-                                <div className="space-y-4">
-                                    <p className="text-muted-foreground text-base leading-relaxed">
-                                        Brain training and cognitive exercises are frequently used to maintain and improve mental acuity. Consistent practice can strengthen neural pathways through neuroplasticity. For more information, read this study on <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2896818/" target="_blank" rel="noopener noreferrer" className="text-emerald-400 font-bold hover:underline hover:text-emerald-300 transition-colors">cognitive training and neuroplasticity</a>.
-                                    </p>
-                                    <p className="text-muted-foreground text-base leading-relaxed">
-                                        To continue improving your skills, try our <Link href="/memory" className="text-emerald-400 font-bold hover:underline hover:text-emerald-300 transition-colors">Memory Games</Link> or test your speed with our <Link href="/reflex" className="text-emerald-400 font-bold hover:underline hover:text-emerald-300 transition-colors">Reflex Tests</Link>. Both offer great ways to measure and track your cognitive progress.
-                                    </p>
-                                </div>
-                            </div>
+                            ) : null}
                         </div>
                     </TabsContent>
 
@@ -451,7 +368,7 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
                                         className="overflow-hidden"
                                     >
                                         <p className="text-muted-foreground text-base leading-relaxed border-t border-black/10 dark:border-white/10 pt-4">
-                                            <strong className="text-pink-300 drop-shadow-md">The short answer is:</strong> {faq.answer}
+                                            {faq.answer}
                                         </p>
                                     </motion.div>
                                 </motion.div>
@@ -494,8 +411,6 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
                 </motion.section>
             )}
 
-            {/* Global Semantic SEO Component */}
-            <SeoKeywordFooter title={title} />
         </motion.div>
     );
 }

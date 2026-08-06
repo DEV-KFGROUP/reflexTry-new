@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useCallback, useRef } from "react";
+import { useState, useCallback, useRef, useEffect } from "react";
 import { Brain, Play, RotateCcw, Heart, Trophy, Shield, Star, Zap, Flame } from "lucide-react";
 import { useGameSound } from "@/hooks/useGameSound";
 import { GameDashboardLayout } from "@/components/dashboard/GameDashboardLayout";
@@ -75,10 +75,33 @@ export default function ChimpTestGame() {
   const [numbersShown, setNumbersShown] = useState(true);
   const [currentStep, setCurrentStep] = useState(1);
   const [score, setScore] = useState(0);
+  const [highScores, setHighScores] = useState<Record<DiffId, number>>({
+    beginner: 0, easy: 0, normal: 0, hard: 0, professional: 0,
+  });
   
   const { play, isMuted, toggleMute } = useGameSound();
   const diff = DIFFICULTIES[diffId];
   const hideTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    const saved: Record<DiffId, number> = { beginner: 0, easy: 0, normal: 0, hard: 0, professional: 0 };
+    DIFF_ORDER.forEach(k => {
+      const v = localStorage.getItem(`chimp-hs-${k}`);
+      if (v) saved[k] = parseInt(v, 10);
+    });
+    setHighScores(saved);
+  }, []);
+
+  useEffect(() => {
+    if (gameState !== "gameover") return;
+    setHighScores(prev => {
+      if (score > prev[diffId]) {
+        localStorage.setItem(`chimp-hs-${diffId}`, score.toString());
+        return { ...prev, [diffId]: score };
+      }
+      return prev;
+    });
+  }, [gameState, score, diffId]);
 
   const generateGrid = useCallback((currentLevel: number, d: DiffConfig) => {
     const totalCells = d.rows * d.cols;
@@ -206,9 +229,9 @@ export default function ChimpTestGame() {
   const stats = (
     <>
       <StatBox label="Score" value={score} highlight={score > 0} />
+      <StatBox label="Best" value={highScores[diffId] > 0 ? highScores[diffId] : "-"} highlight={highScores[diffId] > 0} />
       <StatBox label="Level" value={gameState === "select" ? "-" : level} />
       <StatBox label="Lives" value={gameState === "select" ? diff.lives : lives} />
-      <StatBox label="Status" value={gameState === "select" ? "IDLE" : gameState === "playing" ? "ACTIVE" : "ENDED"} />
     </>
   );
 
@@ -307,9 +330,13 @@ export default function ChimpTestGame() {
             <h2 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-widest mb-2">
               Calibration Complete
             </h2>
-            <div className="text-slate-500 mb-8 text-sm uppercase tracking-widest">
+            <div className="text-slate-500 mb-2 text-sm uppercase tracking-widest">
               Final Score: <span className="text-xl font-black text-slate-900 dark:text-white ml-2">{score}</span>
             </div>
+            {score > 0 && score >= highScores[diffId] && (
+              <p className="text-amber-500 font-bold text-xs uppercase tracking-widest mb-6">New Record!</p>
+            )}
+            {!(score > 0 && score >= highScores[diffId]) && <div className="mb-6" />}
             
             <div className="flex gap-4">
               <button

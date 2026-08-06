@@ -190,9 +190,9 @@ export default function AboutClient() {
                             <div className="text-xs font-mono text-slate-400 tracking-widest uppercase mb-1">Origin Log</div>
                             <h2 className="text-2xl font-mono font-bold text-slate-900 mb-4">Our Story</h2>
                             <div className="space-y-3 text-slate-600 leading-relaxed">
-                                <p>What started as a single script to measure mouse click latency quickly got out of hand.</p>
-                                <p>We realized there wasn't a clean, unified platform where you could just boot up a browser and test your raw mechanics—speed, memory, and accuracy—without downloading bulky game clients or getting bombarded by ads.</p>
-                                <p>So we built Reflextry. Today, we're serving thousands of players globally who use our tools to wake up their hands before queuing ranked, tracking their progress over time.</p>
+                                <p>Reflextry began as a small side project: a browser script to measure click latency without installing another desktop trainer. That one tool turned into a question we kept hearing—can we put memory, reflex, speed, accuracy, and aim drills in one place, free to try, with scores you can track yourself?</p>
+                                <p>We built the site in Surat, India, as a small two-person team. Every module ships as a real interactive test in the browser—not a download wall, not a paywalled “premium battery.” Progress lives in your session and statistics tools so you can see trends without creating an account for core practice.</p>
+                                <p>Today Reflextry is used by gamers warming up before ranked, students drilling working memory, and curious visitors checking reaction time or color vision. We keep expanding the suite carefully: new tests only ship when scoring rules are clear and the UI explains what the number means.</p>
                             </div>
                         </div>
                     </div>
@@ -315,7 +315,8 @@ export default function AboutClient() {
                                         <Image src="/images/team/rabadiya-kaushik.webp" alt="Rabadiya Kaushik" fill className="object-cover" />
                                     </div>
                                     <h3 className="text-lg font-mono font-bold text-slate-900 mb-0.5 group-hover:text-cyan-600 transition-colors">Rabadiya Kaushik</h3>
-                                    <p className="text-sm text-slate-500 font-mono">Founder & Developer</p>
+                                    <p className="text-sm text-slate-500 font-mono mb-2">Founder &amp; Full-Stack Developer</p>
+                                    <p className="text-xs text-slate-500 leading-relaxed max-w-xs">Builds the games, scoring logic, and site infrastructure. Focuses on fair timing, clear difficulty rules, and keeping core tests free in the browser.</p>
                                 </motion.div>
 
                                 {/* Harshil Miyani */}
@@ -331,15 +332,56 @@ export default function AboutClient() {
                                         <Image src="/images/team/harshil-miyani.webp" alt="Harshil Miyani" fill className="object-cover" />
                                     </div>
                                     <h3 className="text-lg font-mono font-bold text-slate-900 mb-0.5 group-hover:text-violet-600 transition-colors">Harshil Miyani</h3>
-                                    <p className="text-sm text-slate-500 font-mono">SEO Expert</p>
+                                    <p className="text-sm text-slate-500 font-mono mb-2">Growth &amp; Content</p>
+                                    <p className="text-xs text-slate-500 leading-relaxed max-w-xs">Works on discoverability, guides, and making sure each tool page explains what the score means—not just how to click through the UI.</p>
                                 </motion.div>
                             </div>
 
                             <div className="border-t border-slate-100 pt-6 space-y-3 text-slate-600 leading-relaxed text-sm">
-                                <p>We are a passionate team dedicated to pushing the boundaries of web experiences. Combining technical expertise with a keen understanding of digital presence.</p>
-                                <p>Together, we strive to deliver an exceptional platform that not only performs flawlessly but reaches the right audience effectively.</p>
+                                <p>We are a small independent team. That means we ship carefully, answer support mail ourselves, and prefer honest score interpretation over marketing claims we cannot verify.</p>
+                                <p>Questions, bug reports, or partnership notes: <a href="mailto:support@reflextry.com" className="text-cyan-600 font-semibold hover:underline">support@reflextry.com</a> · Based in Surat, Gujarat, India.</p>
                             </div>
                         </div>
+                    </div>
+                </motion.div>
+
+                {/* ── How we build tests ── */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.45 }}
+                    className="relative bg-white/80 backdrop-blur-md border border-slate-200 rounded-3xl p-8 shadow-sm overflow-hidden"
+                >
+                    <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-400/60 to-transparent" />
+                    <div className="relative">
+                        <div className="text-xs font-mono text-slate-400 tracking-widest uppercase mb-1">Methodology</div>
+                        <h2 className="text-2xl font-mono font-bold text-slate-900 mb-4">How We Build &amp; Score Tests</h2>
+                        <div className="space-y-3 text-slate-600 leading-relaxed text-sm">
+                            <p>Each tool has an explicit scoring rule (for example reaction time in milliseconds, span length, accuracy %, or completion time). We document difficulty changes in the on-page guide so Beginner and Professional are not the same task wearing a different label.</p>
+                            <p>Timing uses the browser clock available to the page. Display refresh rate, input devices, and background tabs can add noise—so we tell people to compare scores on the same device and difficulty. We do not invent “population percentile” marketing numbers we have not measured in a controlled study.</p>
+                            <p>Some modules (like Ishihara-style plates) are educational demos, not clinical diagnoses. Where that matters, the tool page says so. For deeper reading, see our <Link href="/blog/how-we-score-reflextry-tests" className="text-cyan-600 font-semibold hover:underline">scoring methodology article</Link> and the <Link href="/science" className="text-cyan-600 font-semibold hover:underline">science overview</Link>.</p>
+                        </div>
+                    </div>
+                </motion.div>
+
+                {/* ── Contact ── */}
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.48 }}
+                    className="relative bg-white/80 backdrop-blur-md border border-slate-200 rounded-3xl p-8 shadow-sm overflow-hidden"
+                >
+                    <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-400/60 to-transparent" />
+                    <div className="relative">
+                        <div className="text-xs font-mono text-slate-400 tracking-widest uppercase mb-1">Contact</div>
+                        <h2 className="text-2xl font-mono font-bold text-slate-900 mb-4">Reach the Team</h2>
+                        <ul className="space-y-2 text-slate-600 text-sm leading-relaxed">
+                            <li><span className="font-semibold text-slate-800">Email:</span>{" "}
+                                <a href="mailto:support@reflextry.com" className="text-cyan-600 font-semibold hover:underline">support@reflextry.com</a>
+                            </li>
+                            <li><span className="font-semibold text-slate-800">Office:</span> 346, Gujarat State Highway 167, Shanti Niketan Society, Mota Varachha, Surat, Gujarat 394101, India</li>
+                            <li><Link href="/contact" className="text-cyan-600 font-semibold hover:underline inline-flex items-center gap-1">Contact form <ArrowRight className="w-3.5 h-3.5" /></Link></li>
+                        </ul>
                     </div>
                 </motion.div>
 

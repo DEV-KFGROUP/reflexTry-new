@@ -124,17 +124,19 @@ export function ToolContentServer({
                     )}
                 </section>
 
-                <section>
-                    <h2>Key Cognitive Benefits & Neuroplasticity Impact</h2>
-                    <ul>
-                        {benefits?.map((benefit, idx) => (
-                            <li key={idx}>{benefit}</li>
-                        ))}
-                    </ul>
-                </section>
+                {benefits && benefits.length > 0 ? (
+                    <section>
+                        <h2>What This Test Trains</h2>
+                        <ul>
+                            {benefits.map((benefit, idx) => (
+                                <li key={idx}>{benefit}</li>
+                            ))}
+                        </ul>
+                    </section>
+                ) : null}
 
                 <section>
-                    <h2>Scientific Strategies & Tips to Improve Your Score</h2>
+                    <h2>Tips to Improve Your Score</h2>
                     {typeof howToImprove === 'string' ? (
                         <div dangerouslySetInnerHTML={{ __html: howToImprove }} />
                     ) : (

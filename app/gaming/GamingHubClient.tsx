@@ -136,13 +136,12 @@ export default function GamingHubClient() {
                     </p>
                 </motion.div>
 
-                {/* AI Summary / Bottom Line for SEO/AEO */}
                 <motion.section variants={itemVariants} className="bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 p-6 rounded-3xl mb-8 relative z-10 max-w-4xl mx-auto">
                     <h2 className="text-xl font-bold text-foreground mb-2 flex items-center gap-2">
-                        <Sparkles className="w-5 h-5 text-purple-500" /> Key Takeaway
+                        <Sparkles className="w-5 h-5 text-purple-500" /> What This Arena Covers
                     </h2>
                     <p className="text-muted-foreground leading-relaxed">
-                        <strong className="text-foreground">Bottom Line:</strong> The Pro Gaming Lab is designed for competitive esports players and aspiring gamers. It provides structured interactive tests to measure and improve your mouse tracking, aiming precision, and click timing. By practicing these isolated mechanics daily, you can build raw muscle memory faster than playing standard matches.
+                        Esports-focused mechanics: aim tracking, flick shots, target tracking, rhythm timing, and dodge drills. Practice mouse control and click timing in isolation before ranked matches.
                     </p>
                 </motion.section>
 
@@ -256,7 +255,7 @@ export default function GamingHubClient() {
                         <div className="space-y-4">
                             <h2 className="text-2xl font-bold text-foreground">Benchmarks & Scientific Proof</h2>
                             <p className="text-muted-foreground leading-relaxed">
-                                Pro esports athletes exhibit significantly faster motor responses and superior hand-eye coordination compared to average individuals. Studies, such as those cataloged by the <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7323281/" target="_blank" rel="noopener noreferrer" className="text-purple-500 hover:underline">National Center for Biotechnology Information (NCBI)</a>, show that action video game training enhances visual attention and sensorimotor control. In our internal benchmarks, users who engage with our Flick Shot and Target Tracking tools for 14 days report an average 15% reduction in time-to-target.
+                                Competitive players often show faster sensorimotor responses than casual users, and research cataloged by the <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7323281/" target="_blank" rel="noopener noreferrer" className="text-purple-500 hover:underline">National Center for Biotechnology Information (NCBI)</a> links action-game practice with gains in visual attention and motor control. On Reflextry, treat Flick Shot and Target Tracking as isolated mechanics drills: log your own baselines on the same mouse and difficulty, then look for steadier accuracy and cleaner time-to-target over weeks—not a promised percentage improvement.
                             </p>
                         </div>
                         

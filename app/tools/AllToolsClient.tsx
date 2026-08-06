@@ -38,6 +38,10 @@ const CATEGORIES: CategoryConfig[] = [
     hoverBorder: "hover:border-purple-400",
     glow: "shadow-[0_0_15px_rgba(168,85,247,0.06)]",
     tools: [
+      { id: "chimp-test", href: "/memory/chimp-test", icon: Brain, title: "Chimp Test", desc: "Recall number positions after they vanish — classic working memory challenge." },
+      { id: "verbal-memory", href: "/memory/verbal-memory", icon: Type, title: "Verbal Memory", desc: "Identify seen vs new words to measure linguistic retention." },
+      { id: "n-back", href: "/memory/n-back", icon: Sparkles, title: "N-Back", desc: "Match letters that appeared N steps earlier in a continuous stream." },
+      { id: "object-tracking", href: "/memory/object-tracking", icon: Eye, title: "Object Tracking", desc: "Track multiple moving targets among distractors." },
       { id: "sequence", href: "/memory/sequence", icon: Zap, title: "Sequence Memory", desc: "Memorize and repeat an increasingly complex flashing button pattern." },
       { id: "number", href: "/memory/number", icon: Hash, title: "Number Memory", desc: "Test working retention limits with incremental digit sequences." },
       { id: "visual", href: "/memory/visual", icon: Grid3X3, title: "Visual Memory", desc: "Retain spatial layouts of highlighted matrix grids." },
@@ -59,6 +63,10 @@ const CATEGORIES: CategoryConfig[] = [
     glow: "shadow-[0_0_15px_rgba(245,158,11,0.06)]",
     tools: [
       { id: "reaction", href: "/reflex/reaction", icon: Zap, title: "Reaction Time", desc: "Test visual reflex triggers and physical click response speeds." },
+      { id: "time-perception", href: "/reflex/time-perception", icon: Activity, title: "Time Perception", desc: "Estimate target durations using only your internal clock." },
+      { id: "go-no-go", href: "/reflex/go-no-go", icon: Target, title: "Go / No-Go", desc: "Press on green Go trials; withhold responses on red No-Go." },
+      { id: "flanker", href: "/reflex/flanker", icon: Move, title: "Flanker Task", desc: "Respond to the center arrow while ignoring flanking distractors." },
+      { id: "choice-reaction", href: "/reflex/choice-reaction", icon: LayoutGrid, title: "Choice Reaction", desc: "Click the lit colored box as fast as possible across choices." },
       { id: "sound", href: "/reflex/sound", icon: Volume2, title: "Sound Reaction", desc: "Measure auditory reflex triggers using sound cues." },
       { id: "grid", href: "/reflex/grid", icon: Grid3X3, title: "Grid Click", desc: "Click transient squares scattered in a rapid-fire matrix." },
       { id: "peripheral", href: "/reflex/peripheral", icon: Eye, title: "Peripheral Vision", desc: "React to visual shapes spawning on far screen edges." },
@@ -80,6 +88,7 @@ const CATEGORIES: CategoryConfig[] = [
     glow: "shadow-[0_0_15px_rgba(6,182,212,0.06)]",
     tools: [
       { id: "cps", href: "/speed/click", icon: MousePointer2, title: "Click Speed", desc: "Calibrate your clicks-per-second (CPS) efficiency limits." },
+      { id: "schulte-table", href: "/speed/schulte-table", icon: Grid3X3, title: "Schulte Table", desc: "Click shuffled numbers in order to train visual scanning speed." },
       { id: "math", href: "/speed/math", icon: Calculator, title: "Math Speed", desc: "Solve modular arithmetic challenges before your time buffer expires." },
       { id: "typing", href: "/speed/typing", icon: Keyboard, title: "Typing Test", desc: "Test characters-per-minute (CPM) speed on paragraphs." },
       { id: "word", href: "/speed/words", icon: Type, title: "Word Reading", desc: "Test reading speeds (WPM) under high-speed display settings." },

@@ -10,86 +10,113 @@
 export const toolContent = {
     "chimp-test": {
         description: [
-            { title: "About Chimp Test", content: "The Chimp Test is a working memory test inspired by studies on chimpanzees. It evaluates your ability to remember a sequence of numbers in their spatial locations." },
-            { title: "How It Works", content: "A grid of squares is presented with numbers inside. Once you click the number 1, all other numbers are hidden. You must click the remaining blank squares in numerical order." },
-            { title: "Working Memory Capacity", content: "This game measures visuospatial working memory. Human average is typically around 5-7 numbers, while some chimpanzees can easily remember 9 or more." },
-            { title: "Difficulty Levels", content: "Beginner mode offers a smaller grid with forgiveness. Professional mode introduces larger grids and fast vanishing numbers, heavily taxing your short-term spatial memory." }
+            { title: "About the Chimp Test", content: "The Chimp Test is a visuospatial working-memory challenge inspired by ape cognition studies. Numbers appear on a grid; after you tap 1, the rest hide and you must tap the blank cells in ascending order from memory." },
+            { title: "What It Measures", content: "Success depends on encoding spatial positions quickly, holding them after numbers vanish, and retrieving them without relying on leftover visual cues. Typical comfortable spans for adults often sit around 5–7 items; larger spans need strong chunking." },
+            { title: "How a Round Works", content: "A set of numbered cells appears. Memorize locations. Tap 1 to begin recall—remaining digits hide. Tap the empty cells in order 2, 3, 4… A wrong cell costs a life (depending on difficulty)." },
+            { title: "Difficulty Modes", content: "Easier modes use fewer numbers, slower vanish timing, and more lives. Harder modes enlarge the grid, hide numbers faster, and leave less forgiveness. Professional play is about encoding under time pressure, not casual browsing." },
+            { title: "Strategies That Help", content: "Group numbers into shapes (triangle, L, diagonal). Rehearse a short path aloud. Do not stare at one cell—scan the whole set once, then lock a spatial story." },
+            { title: "Score Meaning", content: "Higher completed span (how many numbers you cleared) is better. Compare yourself across the same difficulty only—grid size changes the task." },
+        
+            { title: "Why Spatial Working Memory Matters", content: "Visuospatial working memory supports navigation, diagram reading, and keeping track of several locations at once. When the numbers vanish, you experience the same pressure athletes and operators feel when a brief glance must become an action plan." },
+            { title: "Training Without Overclaiming", content: "Raising your chimp-test span shows you can encode and retrieve more spatial items under this exact rule set. That is valuable practice. It does not by itself prove higher general intelligence. Treat personal bests as skill metrics, not labels." },
+            { title: "Common Failure Modes", content: "People often encode only the first three numbers carefully and guess the rest, or they tap 1 before finishing a full scan. Another trap is staring at the center and ignoring edge cells. A deliberate perimeter-to-center scan usually captures more of the set." },
         ],
         howToUse: [
-            { title: "Getting Started", steps: ["Select your difficulty.", "Click Start Test."] },
-            { title: "Playing", steps: ["Locate the numbers.", "Click number 1.", "Click the remaining hidden numbers in ascending order."] }
+            { title: "Setup", steps: ["Choose difficulty.", "Click Start / Initialize.", "Scan all numbered cells before tapping 1."] },
+            { title: "Recall", steps: ["Tap 1 to hide the remaining numbers.", "Tap blank cells in ascending order.", "Recover calmly after a miss if lives remain."] },
+            { title: "Session Habits", steps: ["Stop after 10–15 focused minutes.", "Note your best span per difficulty in Statistics."] },
         ],
         howToImprove: [
-            { title: "Chunking", content: "Try to group the numbers into geometric shapes (e.g., triangle, square) instead of memorizing individual coordinates." },
-            { title: "Practice", content: "Visuospatial memory improves with repetitive challenge. Play daily for 10 minutes." }
+            { title: "Chunk Into Shapes", content: "Treat 4–5 positions as one geometric figure instead of isolated coordinates." },
+            { title: "One Clean Encoding Pass", content: "A single deliberate scan beats frantic re-looking while the clock eats your window." },
+            { title: "Expand Span Gradually", content: "Stay on a difficulty until you clear it consistently, then step up." },
+            { title: "Protect Sleep and Focus", content: "Working memory collapses when you are tired or multitasking." },
         ],
         faqs: [
-            { question: "What is the average score?", answer: "Most humans score between 5 and 7 on standard difficulty." },
-            { question: "Can I take my time?", answer: "On lower difficulties, yes. On hard/professional, numbers will disappear quickly." },
-            { question: "Are chimpanzees really better at this?", answer: "Yes, specifically young chimpanzees have demonstrated extraordinary working memory capacity in similar tests compared to human adults." },
-            { question: "How does grid size affect difficulty?", answer: "A larger grid means numbers are spread further apart, increasing the cognitive load required to map their spatial relationships." },
-            { question: "Is this test accurate?", answer: "It is a reliable measure of visuospatial working memory span, frequently used in cognitive psychology." },
-            { question: "How many lives do I get?", answer: "You get 3 lives on standard difficulties, and only 1 on Hard/Professional." },
-            { question: "Why do the numbers hide?", answer: "To force you to rely entirely on your working memory rather than visual search." },
-            { question: "Can I improve my score?", answer: "Yes, neuroplasticity allows working memory capacity to improve with focused training." },
-            { question: "What is chunking?", answer: "Chunking is a memory strategy where you group items together to reduce the total number of items to remember." },
-            { question: "Is this good for brain health?", answer: "Working memory exercises are linked to better focus and cognitive resilience." }
+            { question: "What is a typical score?", answer: "Many adults clear about 5–7 on moderate settings; higher needs practice and chunking." },
+            { question: "Why do numbers hide?", answer: "So you cannot search visually and must use working memory." },
+            { question: "Are chimpanzees better at this?", answer: "In famous lab demos, young chimps often outperformed humans on similar rapid spatial recall tasks." },
+            { question: "How many lives do I get?", answer: "Easier modes usually allow more mistakes; Hard/Professional often allow one." },
+            { question: "Does grid size matter?", answer: "Yes—larger grids increase distance and load on spatial mapping." },
+            { question: "Can I improve?", answer: "Yes. Strategy plus short daily practice reliably raises span for most people." },
+            { question: "Is this an IQ test?", answer: "No. It samples visuospatial working memory under game rules." },
+            { question: "Should I go fast or accurate?", answer: "Accurate encoding first; rushing causes early miss cascades." },
+            { question: "What is chunking?", answer: "Grouping items so you remember fewer higher-level units." },
+            { question: "When should I stop a session?", answer: "When errors spike from fatigue—quality beats grinding." },
         ]
     },
     "verbal-memory": {
         description: [
-            { title: "About Verbal Memory", content: "Verbal Memory evaluates your ability to retain and recognize words you have recently encountered." },
-            { title: "How It Works", content: "Words will appear one by one. You must decide if you have seen the word already during the current test, or if it is a new word." },
-            { title: "Why It Matters", content: "Short-term verbal memory is crucial for reading comprehension, following conversations, and learning new vocabulary." },
-            { title: "Difficulty Levels", content: "Higher difficulties introduce massive word banks, visually similar words, and strict time limits per word to challenge your cognitive processing speed." }
+            { title: "About Verbal Memory", content: "Verbal Memory tests recognition of words across a continuous stream. Each word is either new in the session or a repeat. You must judge SEEN vs NEW without a word list to review." },
+            { title: "Cognitive Demand", content: "You update a growing set of encountered words, resist proactive interference, and decide under time pressure on harder modes. That stresses verbal working memory and familiarity monitoring." },
+            { title: "How Gameplay Works", content: "Words appear one at a time. Tap SEEN if it already appeared this run; tap NEW otherwise. Strikes accumulate on mistakes until the run ends." },
+            { title: "Difficulty Changes", content: "Harder modes enlarge the word bank (repeats are rarer and easier to miss), tighten timing, and reduce allowed strikes. Visually similar words increase false familiarity." },
+            { title: "What Scores Mean", content: "Higher words survived before strike-out is better. Compare runs on the same difficulty. Late-game confusion is normal as interference builds." },
+            { title: "Real-World Link", content: "Similar skills support reading comprehension, following conversations, and noticing when information is truly new versus repeated." },
+        
+            { title: "Familiarity vs Recollection", content: "Late in a run you may feel a word is familiar without remembering the moment you saw it. That fuzzy familiarity drives false SEEN responses. Slowing half a second to ask when you saw it cuts those errors." },
+            { title: "Interference Is the Real Boss", content: "As the encountered set grows, older words compete with new ones. That is proactive interference—the same reason long study lists feel muddy. Short breaks between runs help more than forcing another exhausted attempt." },
+            { title: "Practical Study Link", content: "The same monitoring skill helps when rereading notes: noticing what is genuinely new versus repeated. Pair this game with real retrieval practice (flashcards, closed-book recall) for academic goals." },
         ],
         howToUse: [
-            { title: "Getting Started", steps: ["Select your difficulty.", "Click Start Test."] },
-            { title: "Making Choices", steps: ["Read the word on the screen.", "Click SEEN if it appeared previously.", "Click NEW if it is the first time you are seeing it."] }
+            { title: "Start", steps: ["Pick difficulty.", "Initialize the test.", "Read each word fully before deciding."] },
+            { title: "Decide", steps: ["Tap NEW on first encounter.", "Tap SEEN on repeats.", "Keep a steady rhythm—panic taps cause motor errors."] },
+            { title: "End of Run", steps: ["Review how far you got.", "Retry after a short break if interference fried your set."] },
         ],
         howToImprove: [
-            { title: "Vocalization", content: "Say the words aloud or mouth them silently. Engaging your phonetic loop strengthens memory encoding." },
-            { title: "Association", content: "Try to link words together in a quick mental story as they appear." }
+            { title: "Phonological Rehearsal", content: "Mouth or whisper words to strengthen encoding." },
+            { title: "Quick Story Links", content: "Attach new words to a tiny ongoing story so repeats feel familiar." },
+            { title: "Watch Lookalikes", content: "On hard banks, distinguish similar spellings deliberately." },
+            { title: "Pace Over Panic", content: "Accuracy early prevents strike-outs that wipe long runs." },
         ],
         faqs: [
-            { question: "What is a good score?", answer: "An average score on Normal difficulty is around 40-50 words." },
-            { question: "Does difficulty change the words?", answer: "Yes, Hard and Pro difficulties use much larger dictionaries, making repetition less frequent and harder to track." },
-            { question: "Is there a time limit?", answer: "Only on Professional difficulty, where you have a few seconds per word." },
-            { question: "Why do I get confused later in the game?", answer: "Proactive interference occurs when previously memorized words interfere with your ability to remember new ones." },
-            { question: "Is this related to IQ?", answer: "Verbal memory is a component of general cognitive ability and working memory, which correlate with IQ." },
-            { question: "Can reading books help?", answer: "Yes, extensive reading improves vocabulary and verbal retention." },
-            { question: "How many mistakes can I make?", answer: "You have 3 strikes on normal, and 1 on Hard/Pro." },
-            { question: "What if I accidentally click the wrong button?", answer: "Unfortunately, motor errors count. Keep a steady pace." },
-            { question: "Do the same words appear every game?", answer: "The dictionary is large and words are randomized, so every game is unique." },
-            { question: "How does this test differ from sequence memory?", answer: "This tests linguistic/semantic memory rather than visuospatial memory." }
+            { question: "What is a good score?", answer: "Around 40–50 words on Normal is a common comfortable range; elite runs go higher." },
+            { question: "Do harder modes change the dictionary?", answer: "Yes—larger banks and tougher timing." },
+            { question: "Is there a time limit per word?", answer: "On Professional, yes—hesitation can cost you." },
+            { question: "Why do I fail late even when focused?", answer: "Proactive interference: old words crowd new decisions." },
+            { question: "How many strikes?", answer: "Often 3 on easier modes and 1 on Hard/Pro—check the live UI." },
+            { question: "Does reading help long-term?", answer: "Broad reading grows vocabulary and verbal familiarity skills." },
+            { question: "Is this the same as sequence memory?", answer: "No—this is linguistic recognition, not spatial sequence recall." },
+            { question: "Do word lists repeat across days?", answer: "Pools are large and shuffled; identical full runs are unlikely." },
+            { question: "Should I say words aloud?", answer: "Quiet rehearsal helps; avoid disturbing others." },
+            { question: "What if I mis-tap?", answer: "Motor errors count—slow the decision loop slightly." },
         ]
     },
     "time-perception": {
         description: [
-            { title: "About Time Perception", content: "Time Perception measures the accuracy of your internal biological clock without external visual or auditory cues." },
-            { title: "How It Works", content: "You will be given a target time (e.g., 5 seconds). You must click and hold a button, releasing it exactly when you feel the target time has elapsed." },
-            { title: "The Internal Clock", content: "Human time perception is influenced by heart rate, attention, dopamine levels, and cognitive load." },
-            { title: "Difficulty Levels", content: "Professional mode demands extreme millisecond accuracy and introduces visual distractions to warp your sense of time." }
+            { title: "About Time Perception", content: "This test measures how accurately you can produce a target interval (for example 5 seconds) using only your internal sense of time—no on-screen countdown while you hold." },
+            { title: "What It Measures", content: "Time production depends on attention, arousal, and your internal clock. Stress and distraction commonly make people release early; boredom can stretch subjective time." },
+            { title: "How a Trial Works", content: "Read the target duration. Press and hold. Release when you believe the interval has elapsed. Score is absolute error in milliseconds—lower is better." },
+            { title: "Difficulty", content: "Harder modes demand tighter error margins and may add visual distractors that warp attention away from timing." },
+            { title: "Interpreting Results", content: "Average people often miss by roughly 10–20% on uncued intervals. Track average error across rounds, not a single lucky trial." },
+            { title: "Training Use", content: "Useful for musicians, athletes, streamers, and anyone who needs better interval feel—pair it with real metronome practice for music." },
+        
+            { title: "Attention Gates the Clock", content: "When attention drifts to a distraction, subjective time often compresses and you release early. When you hyper-focus on the hold itself, you may overshoot. Aim for a steady secondary task like silent counting, not empty waiting." },
+            { title: "Environment Controls", content: "Compare sessions only when caffeine, sleep, and noise are similar. Arousal changes timing more than people expect. Keep the same hand posture and do not watch other clocks in the room." },
+            { title: "Building Interval Sense", content: "Alternate uncued production trials with occasional checked practice using a metronome offline. The game measures uncued skill; the metronome teaches a stable beat you can later reproduce without looking." },
         ],
         howToUse: [
-            { title: "Getting Started", steps: ["Select your difficulty.", "Click Start Test."] },
-            { title: "The Action", steps: ["Read the target time.", "Click and HOLD the button.", "Release exactly when the time has passed."] }
+            { title: "Begin", steps: ["Select difficulty.", "Start the test.", "Note the target time carefully."] },
+            { title: "Produce the Interval", steps: ["Press and hold.", "Release at the felt target time.", "Do not watch a phone stopwatch."] },
+            { title: "Review", steps: ["Check error in ms.", "Average across rounds for your session score."] },
         ],
         howToImprove: [
-            { title: "Counting Strategy", content: "Use the classic 1-Mississippi, 2-Mississippi method to pace your seconds." },
-            { title: "Rhythm", content: "Tap your foot or nod your head at a 1Hz (1 beat per second) tempo." }
+            { title: "Count a Steady Cadence", content: "Use a consistent 1-and-2-and mental beat rather than rushing the last second." },
+            { title: "Body Metronome", content: "A light foot tap at ~1 Hz stabilizes longer intervals." },
+            { title: "Lower Arousal", content: "Breathing down reduces early releases from impatience." },
+            { title: "Ignore Flashy Distractors", content: "On hard modes, treat visuals as noise; protect the count." },
         ],
         faqs: [
-            { question: "Why is it so hard to guess 10 seconds?", answer: "Without external cues, our internal clock naturally drifts. Most people tend to speed up over time." },
-            { question: "How accurate is the average person?", answer: "Most people are off by about 10-20% of the target time." },
-            { question: "Does adrenaline affect time perception?", answer: "Yes, high stress or adrenaline can make time feel like it is moving slower." },
-            { question: "What is Professional difficulty?", answer: "It introduces visual distractions and demands sub-100ms accuracy." },
-            { question: "Can I use a stopwatch?", answer: "That defeats the purpose of the test! Rely only on your mind." },
-            { question: "Is this test used in psychology?", answer: "Yes, time production and estimation tasks are standard in cognitive neuroscience." },
-            { question: "Why do I always release too early?", answer: "Impatience or high arousal levels often cause people to underestimate time intervals." },
-            { question: "How is the score calculated?", answer: "It is the absolute difference in milliseconds between your release time and the target time." },
-            { question: "Are there penalties?", answer: "If you miss the accuracy margin for your difficulty, you fail the round." },
-            { question: "How many rounds are there?", answer: "There are 3 rounds, and your final score is the average error." }
+            { question: "Is lower score better?", answer: "Yes—score is timing error in milliseconds." },
+            { question: "Why do I always finish early?", answer: "High arousal and impatience compress subjective time." },
+            { question: "Can adrenaline change results?", answer: "Yes—stress alters time felt versus clock time." },
+            { question: "Is this used in research?", answer: "Time production/estimation tasks are standard in cognitive neuroscience." },
+            { question: "May I use an external timer?", answer: "No—that defeats the measurement." },
+            { question: "How many rounds?", answer: "Typically a short set averaged together—see the live UI." },
+            { question: "What is Professional mode?", answer: "Tighter tolerance plus distractions." },
+            { question: "Does caffeine affect timing?", answer: "It can, via arousal—keep conditions consistent when comparing days." },
+            { question: "Should I train daily?", answer: "Brief daily runs beat occasional long sessions." },
+            { question: "What is a solid beginner goal?", answer: "Stay within about 10% of the target on Normal." },
         ]
     },
 
@@ -3648,446 +3675,453 @@ export const toolContent = {
     },
     "multi-stimulus": {
         description: [
-            {
-                title: "About Multi-Stimulus Reaction Test",
-                content: "The Multi-Stimulus Reaction Test challenges your selective attention and decision-making speed. Unlike simple reaction tests, this tool presents multiple stimuli simultaneously and requires you to quickly identify and respond to the correct target based on changing instructions."
-            },
-            {
-                title: "What is Selective Attention?",
-                content: "Selective attention is your ability to focus on specific information while ignoring distractions. In this test, you must quickly process instructions, identify the correct target among multiple options, and respond accurately. This skill is crucial for many real-world activities."
-            },
-            {
-                title: "How It Works",
-                content: "The test presents four colored boxes and gives you an instruction like 'Click the GREEN one' or 'Click the one that's DIFFERENT.' You must quickly identify the correct target and click it. The test measures both your reaction time and decision-making accuracy."
-            },
-            {
-                title: "Benefits of Multi-Stimulus Training",
-                content: "Regular training improves your ability to process multiple pieces of information immediately, make accurate decisions under pressure, filter irrelevant info, and maintain focus in distracting environments."
-            },
-            {
-                title: "Real-World Applications",
-                content: "Selective attention skills are essential for driving safely in traffic, gaming performance, professional decision-making, academic performance, and everyday multitasking."
-            }
+            { title: "About Multi-Stimulus Reaction", content: "Four options appear with a changing rule (color, uniqueness, or position). You must parse the instruction, pick the correct target, and click fast—selective attention plus decision RT." },
+            { title: "Vs Simple Reaction", content: "Simple RT is one stimulus, one response. Here you filter distractors and apply a rule under time pressure." },
+            { title: "Instruction Types", content: "Examples include click a named color, click the odd one out, or click a positional target. Rules change across rounds." },
+            { title: "Scoring", content: "Accuracy first, then average RT on corrects. Fast wrong clicks are poor training." },
+            { title: "Difficulty Feel", content: "Shorter reading time and more similar distractors raise load." },
+            { title: "Applications", content: "Driving glances, UI work, and games that need rule-flexible attention." },
+        
+            { title: "Rule Switching Cost", content: "When the instruction changes every round, residual attention to the old rule causes errors. Explicitly clear the previous rule: say the new rule once before looking at boxes." },
+            { title: "Visual Search Inside a Deadline", content: "You are not only reacting—you are searching under a categorical filter. That is closer to dashboard monitoring than to a simple green-light click." },
+            { title: "Error Taxonomy", content: "Separate wrong-color errors from oddity errors from position errors. Each points to a different fix (color naming, difference scanning, spatial labels)." },
         ],
         howToUse: [
-            {
-                title: "Getting Started",
-                steps: [
-                    "Click 'Start Game' to begin",
-                    "You'll see four colored boxes appear on screen",
-                    "An instruction will appear above them"
-                ]
-            },
-            {
-                title: "Understanding Instructions",
-                steps: [
-                    "Instructions vary each round",
-                    "Click a specific color (e.g., 'Click the GREEN one')",
-                    "Click the unique one (e.g., 'Click the one that's DIFFERENT')",
-                    "Click based on position (e.g., 'Click the one on the LEFT')"
-                ]
-            },
-            {
-                title: "Responding Quickly",
-                steps: [
-                    "Read the instruction immediately",
-                    "Identify the correct target box",
-                    "Click it as fast as you can",
-                    "Complete 10 rounds successfully to finish"
-                ]
-            },
-            {
-                title: "Scoring",
-                steps: [
-                    "You earn points for correct responses",
-                    "The test tracks your average reaction time",
-                    "Making fewer than 3 errors allows you to complete all rounds"
-                ]
-            }
+            { title: "Start", steps: ["Begin the run.", "Read the instruction before moving."] },
+            { title: "Decide", steps: ["Map the rule to a box.", "Click once with intent.", "Prepare for the next rule change."] },
+            { title: "Finish", steps: ["Review accuracy and average RT.", "Retry focusing on instruction reading if errors dominate."] },
         ],
         howToImprove: [
-            {
-                title: "Improving Performance",
-                content: "To improve your selective attention and decision-making speed, practice regularly and focus on accuracy."
-            },
-            {
-                title: "Practice Regularly",
-                content: "Consistent practice is key. Aim for 10-15 minutes daily. Regular practice strengthens your ability to quickly process instructions and identify targets."
-            },
-            {
-                title: "Focus on Accuracy First",
-                content: "Initially, prioritize accuracy over speed. Making correct decisions is more important than fast but incorrect responses. As accuracy improves, speed will naturally increase."
-            },
-            {
-                title: "Reduce Distractions",
-                content: "Practice in a quiet environment free from distractions. This helps you develop focused attention skills that transfer to more challenging situations."
-            },
-            {
-                title: "Read Instructions Carefully",
-                content: "Take a moment to fully understand each instruction before responding. Rushing to read can lead to mistakes. With practice, you'll process instructions faster."
-            }
+            { title: "Read Fully", content: "Half-read rules cause confident wrong clicks." },
+            { title: "Accuracy Before Speed", content: "Speed follows clean decisions." },
+            { title: "Quiet Setup", content: "External distraction destroys rule switching." },
+            { title: "Name the Rule Aloud", content: "A one-word label (GREEN / ODD / LEFT) stabilizes the mapping." },
         ],
         faqs: [
-            {
-                question: "What is a good reaction time for multi-stimulus tests?",
-                answer: "Average reaction times for multi-stimulus tests range from 400-600ms. Excellent performance is under 350ms. However, accuracy is more important than raw speed - focus on correct responses first."
-            },
-            {
-                question: "How does this differ from simple reaction tests?",
-                answer: "Multi-stimulus tests require decision-making and selective attention, not just simple reactions. You must process instructions, identify the correct target, and respond accurately - making it more complex than simple reaction tests."
-            },
-            {
-                question: "Can this improve my gaming performance?",
-                answer: "Yes, multi-stimulus training improves selective attention, decision-making speed, and the ability to process multiple visual elements quickly - all crucial skills for gaming performance."
-            }
-        ],
+            { question: "Good RT range?", answer: "Often ~400–600ms with solid accuracy; sub-350ms is strong if accurate." },
+            { question: "Vs simple RT?", answer: "Adds decision and filtering cost." },
+            { question: "Gaming benefit?", answer: "Helps rule-flexible attention under clutter." },
+            { question: "Priority metric?", answer: "Accuracy, then RT." },
+            { question: "Why instructions change?", answer: "To train flexible control, not one memorized mapping." },
+            { question: "Miss budget?", answer: "Limited errors may end a run early—see UI." },
+            { question: "Touch vs mouse?", answer: "Use whatever you play on; compare within device." },
+            { question: "Practice length?", answer: "10–15 minutes daily." },
+            { question: "Colorblind players?", answer: "Positional/oddity rounds still work; color rounds may be harder." },
+            { question: "Improve stuck RT?", answer: "Cut errors first—noise inflates averages." },
+        ]
     },
     "sequence-reaction": {
         description: [
-            {
-                title: "About Sequence Reaction Test",
-                content: "The Sequence Reaction Test combines memory and reaction speed in a challenging cognitive exercise. You must remember a sequence of colored lights and then click them in the correct order as quickly as possible."
-            },
-            {
-                title: "What is Sequence Reaction?",
-                content: "Sequence reaction involves both working memory (remembering the sequence) and reaction speed (clicking quickly). This dual challenge makes it more complex than simple memory or reaction tests alone."
-            },
-            {
-                title: "How It Works",
-                content: "The test shows you a sequence of colored lights. After the sequence finishes, you must click the colors in the same order. Sequences get longer as you progress, increasing the challenge."
-            },
-            {
-                title: "Benefits of Sequence Reaction Training",
-                content: "Regular practice improves working memory capacity, reaction speed, hand-eye coordination, sequential processing, and multitasking abilities."
-            },
-            {
-                title: "Real-World Applications",
-                content: "Sequence reaction skills help with following multi-step instructions, learning new procedures, gaming performance, musical instrument practice, and sports performance."
-            }
+            { title: "About Sequence Reaction", content: "Watch a sequence of lit colors, then reproduce it quickly in order. It combines working-memory encoding with speeded motor output." },
+            { title: "Dual Demand", content: "Remembering order is not enough—you must also execute the chain rapidly without transposition errors." },
+            { title: "Progression", content: "Sequences lengthen across rounds. Early accuracy compounds; one swap can end a streak." },
+            { title: "Scoring", content: "Longer correct sequences and clean execution speed matter. Do not sacrifice order for reckless clicking." },
+            { title: "Skill Transfer", content: "Helps with multi-step procedures, music-like serial order, and game combos—still practice the real skill separately." },
+            { title: "Common Failures", content: "Transpositions (swapping two colors) and rushing the first taps after encoding." },
+        
+            { title: "Serial Order Memory", content: "Order errors differ from item errors. You may know the colors yet swap two mid-sequence. Chunking and rhythmic replay specifically target order." },
+            { title: "Output Buffering", content: "Some players encode well then choke on execution. Pause a beat after the sequence ends, then replay in a measured tempo." },
+            { title: "Length Progression", content: "Add length only after three clean reps at the current length. Ego lengthening creates noisy learning." },
         ],
         howToUse: [
-            {
-                title: "How to Play",
-                steps: [
-                    "Click 'Start Game' to begin",
-                    "Watch carefully as colored lights appear in sequence",
-                    "Pay close attention as each light appears",
-                    "The sequence will play automatically - remember the order"
-                ]
-            },
-            {
-                title: "Repeating the Sequence",
-                steps: [
-                    "After the sequence finishes, click the colored boxes in the correct order",
-                    "Click as quickly as possible while maintaining accuracy"
-                ]
-            },
-            {
-                title: "Progression",
-                steps: [
-                    "Sequences get longer each round",
-                    "Complete 10 rounds to finish the test"
-                ]
-            }
+            { title: "Watch", steps: ["Start the round.", "Attend to each light in order.", "Rehearse the chain silently."] },
+            { title: "Replay", steps: ["Click colors in the same order.", "Prefer correct order over smash speed."] },
+            { title: "Advance", steps: ["Longer sequences appear after successes.", "Reset composure after a miss."] },
         ],
         howToImprove: [
-            {
-                title: "Improving Your Sequence Reaction",
-                content: "To improve both memory and reaction speed, focus on specific techniques."
-            },
-            {
-                title: "Practice Memory Techniques",
-                content: "Use chunking to remember sequences. Group colors together mentally (e.g., 'red-red-blue' becomes one chunk). This makes longer sequences easier to remember."
-            },
-            {
-                title: "Build Speed Gradually",
-                content: "Start by focusing on accuracy. Once you can consistently remember sequences correctly, work on increasing your clicking speed."
-            },
-            {
-                title: "Regular Practice",
-                content: "Practice daily for 10-15 minutes. Consistent practice strengthens both memory and reaction pathways in your brain."
-            }
+            { title: "Chunk Colors", content: "Group as red-red-blue rather than six isolated steps." },
+            { title: "Encode Then Fire", content: "Do not start clicking while still unsure of item 1." },
+            { title: "Rhythm Replay", content: "A steady tap rhythm reduces swaps." },
+            { title: "Daily Short Drills", content: "Serial memory consolidates with repetition." },
         ],
         faqs: [
-            {
-                question: "What's a good sequence length to remember?",
-                answer: "Most people can remember 5-7 items. With practice, you can improve to 8-10 items. The key is consistent practice and using memory techniques like chunking."
-            },
-            {
-                question: "Should I focus on memory or speed?",
-                answer: "Start with memory accuracy. Once you can consistently remember sequences, then work on speed. Accuracy is more important than speed initially."
-            }
+            { question: "Good length?", answer: "Many people hold 5–7; practice can push higher." },
+            { question: "Memory or speed first?", answer: "Memory accuracy first." },
+            { question: "Why swaps happen?", answer: "Weak encoding or rushed motor output." },
+            { question: "Chunking help?", answer: "Yes—fewer units to store." },
+            { question: "Same as sequence memory?", answer: "Related, but emphasizes speeded reproduction." },
+            { question: "Session length?", answer: "10–15 minutes." },
+            { question: "After a miss?", answer: "Rebuild with a clean shorter chain mindset." },
+            { question: "Audio cues?", answer: "If present, use them; otherwise rely on vision + rehearsal." },
+            { question: "Compare scores how?", answer: "Same difficulty and input device." },
+            { question: "Plateau fix?", answer: "Slow the replay by 10% to cut transpositions." },
         ]
     },
     "pattern-matching": {
         description: [
-            {
-                title: "About Pattern Matching Accuracy Test",
-                content: "The Pattern Matching Accuracy Test evaluates your visual accuracy and pattern recognition abilities. You must briefly view a pattern, then identify the exact match from multiple similar options."
-            },
-            {
-                title: "What is Pattern Matching?",
-                content: "Pattern matching is your ability to recognize and remember visual patterns accurately. This skill requires attention to detail, visual memory, and precise observation."
-            },
-            {
-                title: "How It Works",
-                content: "A pattern flashes on screen for a brief moment. After it disappears, you must select the exact match from four similar options. Patterns become more complex, and display times decrease as you progress."
-            },
-            {
-                title: "Benefits of Pattern Matching Training",
-                content: "Regular practice improves visual accuracy, attention to detail, visual memory, pattern recognition, and observation skills."
-            },
-            {
-                title: "Real-World Applications",
-                content: "Pattern matching skills are valuable for quality control work, design and art, security and surveillance, scientific research, and technical troubleshooting."
-            }
+            { title: "About Pattern Matching", content: "A pattern flashes briefly; you must pick the identical match among similar foils. It trains visual encoding speed and fine discrimination." },
+            { title: "What Is Hard", content: "Foils differ by small shifts. Brief display times punish lazy global glances." },
+            { title: "Flow", content: "Study flash → options appear → select the exact match → patterns grow more complex / shorter displays." },
+            { title: "Metrics", content: "Accuracy percentage is primary; speed is secondary. Guessing tanks learning." },
+            { title: "Applications", content: "QA visual checks, design critique, security image review, and detail-oriented study." },
+            { title: "Limitation", content: "This is a game drill, not a clinical vision exam." },
+        
+            { title: "Encoding Windows", content: "The flash is an encoding deadline. Train yourself to extract two anchors immediately (count of elements + one asymmetric feature)." },
+            { title: "Foil Psychology", content: "Designers of hard trials change one local detail. If you only remember the global silhouette, you will pick a foil. Force a local check." },
+            { title: "Visual Hygiene", content: "Clean the screen, raise contrast, and sit at a stable distance. Tiny glare differences become decisive when flashes are short." },
         ],
         howToUse: [
-            {
-                title: "How to Play",
-                steps: [
-                    "Click 'Start Game' to begin",
-                    "A pattern will flash on screen briefly"
-                ]
-            },
-            {
-                title: "Memorizing the Pattern",
-                steps: [
-                    "Pay close attention to the pattern while it's displayed",
-                    "Note the exact arrangement of elements",
-                    "The pattern will disappear after a few seconds"
-                ]
-            },
-            {
-                title: "Selecting the Match",
-                steps: [
-                    "After the pattern disappears, four options appear",
-                    "Carefully compare each option to find the exact match",
-                    "Look for subtle differences - they may look similar but only one is identical"
-                ]
-            },
-            {
-                title: "Progression",
-                steps: [
-                    "Patterns become more complex as you advance",
-                    "Display times decrease as you progress",
-                    "Complete 10 rounds successfully to finish"
-                ]
-            }
+            { title: "Encode", steps: ["Start.", "Study the flash carefully.", "Note distinctive local features."] },
+            { title: "Choose", steps: ["Compare options systematically.", "Reject near-miss foils.", "Confirm before tapping."] },
+            { title: "Progress", steps: ["Expect shorter flashes later.", "Keep accuracy above ego speed."] },
         ],
         howToImprove: [
-            {
-                title: "Improving Pattern Matching Accuracy",
-                content: "To improve your visual accuracy, focus on specific observation strategies."
-            },
-            {
-                title: "Focus on Details",
-                content: "Pay attention to small details. Patterns may look similar but have subtle differences. Train your eye to notice these distinctions."
-            },
-            {
-                title: "Use Systematic Comparison",
-                content: "Compare patterns systematically. Check each element position by position rather than trying to recognize the whole pattern at once."
-            },
-            {
-                title: "Practice Regularly",
-                content: "Daily practice improves visual memory and pattern recognition. Even 10 minutes daily produces noticeable improvements."
-            }
+            { title: "Feature Checklist", content: "Corners, gaps, counts—pick 2–3 anchors during the flash." },
+            { title: "Systematic Compare", content: "Scan options position-by-position, not by vibe." },
+            { title: "Protect Encoding Time", content: "Blink after the flash, not during." },
+            { title: "Daily Precision Work", content: "Short accurate sessions beat long sloppy ones." },
         ],
         faqs: [
-            {
-                question: "What's a good accuracy percentage?",
-                answer: "Good accuracy is 80-90%. Excellent accuracy is 90-95%. Focus on accuracy over speed - precision matters more than quick responses."
-            },
-            {
-                question: "Why do patterns get harder?",
-                answer: "Increasing difficulty ensures continuous improvement. As your skills develop, more challenging patterns maintain engagement and promote further skill development."
-            }
+            { question: "Good accuracy?", answer: "Aim 80–90%+; chase speed only after that." },
+            { question: "Why harder later?", answer: "To keep discrimination challenging as you improve." },
+            { question: "Speed vs precision?", answer: "Precision first." },
+            { question: "All options look alike?", answer: "Find one differing cell/edge." },
+            { question: "Vision issues?", answer: "Increase display brightness; see an eye doctor for real concerns." },
+            { question: "Session length?", answer: "~10 minutes." },
+            { question: "Touch precision?", answer: "Zoom browser if taps feel clumsy." },
+            { question: "Improve encoding?", answer: "Name a tiny feature aloud during the flash." },
+            { question: "Foils purpose?", answer: "Force detail checks, not silhouette matching." },
+            { question: "Compare runs?", answer: "Same difficulty and screen size." },
         ]
     },
     "precision-click": {
         description: [
-            {
-                title: "About Precision Clicking Test",
-                content: "The Precision Clicking Test measures your hand-eye coordination and precision clicking accuracy. You must click small targets that appear briefly on screen, testing both speed and accuracy."
-            },
-            {
-                title: "What is Precision Clicking?",
-                content: "Precision clicking combines visual tracking, motor control, and reaction speed. You must quickly locate targets and click them accurately before they disappear."
-            },
-            {
-                title: "How It Works",
-                content: "Targets appear randomly on screen for a limited time. You must click them before they disappear. Targets get smaller as you progress, increasing difficulty. The test measures clicks per second, accuracy, and misses."
-            },
-            {
-                title: "Benefits of Precision Clicking Training",
-                content: "Regular practice improves hand-eye coordination, mouse control and precision, visual tracking, reaction speed, and gaming performance."
-            },
-            {
-                title: "Real-World Applications",
-                content: "Precision clicking skills benefit gaming performance, computer navigation, design work, data entry, and general computer use."
-            }
+            { title: "About Precision Click", content: "Small targets appear briefly; you must click them accurately. It measures pointer control, visual acquisition, and click discipline." },
+            { title: "Speed–Accuracy Tradeoff", content: "Raw CPS means little if misses explode. High accuracy with solid pace is the training goal." },
+            { title: "Flow", content: "Targets spawn → click before timeout → targets shrink as you score → session clock ends the run." },
+            { title: "Metrics", content: "Hits, accuracy (hits vs misses), and clicks/sec. Track all three." },
+            { title: "Setup Matters", content: "Mouse DPI, polling, and surface friction change results—compare on one setup." },
+            { title: "Who Benefits", content: "Gamers, designers, and anyone refining fine cursor control." },
+        
+            { title: "Micro-corrections", content: "Elite precision is mostly last-moment corrections, not raw flicks. Approach fast, decelerate, then micro-adjust onto the center." },
+            { title: "Tension Management", content: "Death-gripping the mouse increases overshoot. Shake out your hand between runs." },
+            { title: "Metric Triad", content: "Watch hits, accuracy, and CPS together. CPS up with accuracy down is not progress." },
         ],
         howToUse: [
-            {
-                title: "How to Play",
-                steps: [
-                    "Click 'Start Game' to begin",
-                    "Targets will appear randomly on screen"
-                ]
-            },
-            {
-                title: "Clicking Targets",
-                steps: [
-                    "Click each target as quickly and accurately as possible",
-                    "Targets appear for a limited time, so you must react quickly",
-                    "Missing a target or clicking outside counts as a miss"
-                ]
-            },
-            {
-                title: "Progression",
-                steps: [
-                    "Targets get smaller as your score increases",
-                    "You have 30 seconds to click as many targets as possible"
-                ]
-            },
-            {
-                title: "Scoring",
-                steps: [
-                    "Your score is the number of targets clicked",
-                    "The test also tracks accuracy (correct clicks vs misses) and clicks per second"
-                ]
-            }
+            { title: "Start", steps: ["Begin the timed run.", "Keep the cursor moving smoothly."] },
+            { title: "Click", steps: ["Acquire target center.", "Click once cleanly.", "Do not spray clicks around the target."] },
+            { title: "Adapt", steps: ["As targets shrink, slow the final approach.", "Reset grip if tension rises."] },
         ],
         howToImprove: [
-            {
-                title: "Improving Precision Clicking",
-                content: "To improve your hand-eye coordination and precision, focus on specific practice strategies."
-            },
-            {
-                title: "Practice Regularly",
-                content: "Daily practice improves mouse control and hand-eye coordination. Even 10-15 minutes daily produces noticeable improvements."
-            },
-            {
-                title: "Focus on Accuracy",
-                content: "Prioritize accurate clicks over speed. High accuracy with moderate speed is better than fast but inaccurate clicking. Accuracy improves naturally with practice."
-            },
-            {
-                title: "Optimize Your Setup",
-                content: "Use a comfortable mouse and mousepad. Adjust your mouse sensitivity to a comfortable level. Good equipment and setup improve performance."
-            },
-            {
-                title: "Warm Up",
-                content: "Start with a few practice rounds to warm up your hand and eye coordination before attempting your best score."
-            }
+            { title: "Accuracy Bias", content: "A clean hit streak beats frantic whiffs." },
+            { title: "Warm Up", content: "30 seconds of easy clicks before a scored run." },
+            { title: "DPI Comfort", content: "Use a sensitivity you can micro-adjust, not only flick." },
+            { title: "Arm vs Wrist", content: "Larger moves from arm; fine corrections from fingers/wrist." },
         ],
         faqs: [
-            {
-                question: "What's a good clicks per second rate?",
-                answer: "Good performance is 2-3 clicks per second with high accuracy. Excellent performance is 3-4 clicks per second. However, accuracy matters more than raw speed."
-            },
-            {
-                question: "Does mouse type affect performance?",
-                answer: "A comfortable, responsive mouse helps, but skill and practice matter more than equipment. Use whatever mouse you're most comfortable with."
-            },
-            {
-                question: "How can I reduce misses?",
-                answer: "Focus on accuracy over speed. Take a moment to aim before clicking. With practice, you'll develop better hand-eye coordination and reduce misses naturally."
-            }
+            { question: "Good CPS?", answer: "About 2–3 accurate CPS is solid; 3–4 with high accuracy is strong." },
+            { question: "Mouse type?", answer: "Comfort matters more than brand myths." },
+            { question: "Reduce misses?", answer: "Aim small, click once—stop panic spraying." },
+            { question: "Target shrink reason?", answer: "Keeps precision challenging as you improve." },
+            { question: "Session time?", answer: "Often ~30 seconds scored—check UI." },
+            { question: "Touchscreens?", answer: "Different motor skill; keep separate records." },
+            { question: "Fatigue signs?", answer: "Rising misses and grip tension—stop." },
+            { question: "Compare scores?", answer: "Same DPI and mouse." },
+            { question: "Does pad matter?", answer: "Consistent surface helps repeatability." },
+            { question: "Best drill?", answer: "Alternate accuracy-focused and pace-focused days." },
         ]
     },
     "object-tracking": {
         description: [
-            {
-                title: "About Multiple Object Tracking",
-                content: "Multiple Object Tracking (MOT) is a premier cognitive exercise designed to test and improve your dynamic visual attention. By tracking a subset of moving objects among identical distractors, you challenge your brain's ability to maintain focus across a wide visual field."
-            }
+            { title: "About Multiple Object Tracking", content: "Multiple Object Tracking (MOT) asks you to follow several target dots among identical distractors while they move, then select the targets when motion stops." },
+            { title: "Attentional Demand", content: "You maintain an attentional set, survive path crossings without identity swaps, and resist distractors that pass nearby." },
+            { title: "Round Structure", content: "Targets flash, all dots move, then you click the original targets. Crowding and crossings create most errors." },
+            { title: "Difficulty", content: "More targets, higher speed, shorter mark time, and denser fields increase load." },
+            { title: "Use Cases", content: "Sports vision, driving awareness drills, and esports situational attention—transfer still needs real-task practice." },
+            { title: "Scoring Mindset", content: "Prioritize percent of targets recovered before raising set size." },
+        
+            { title: "Identity Over Location Snapshots", content: "Beginners remember a screenshot of positions at one moment, then fail when objects move. Experts maintain continuous trajectories. Narrate silently: top-left target drifting down, etc." },
+            { title: "Crowding and Capacity", content: "Attention capacity for MOT is limited. Adding targets is not linear difficulty—it often collapses abruptly. Respect that cliff; train just below it." },
+            { title: "Sports Parallel", content: "Keeping tabs on teammates and opponents resembles MOT, but sport also adds meaning and prediction. Use MOT as a attention gym, then apply scanning in the real activity." },
         ],
         howToUse: [
-            {
-                title: "How to Play",
-                steps: [
-                    "A set of identical dots will appear on screen.",
-                    "A few dots will flash yellow to indicate they are your targets.",
-                    "Keep your eyes on those specific dots as they all begin to move rapidly.",
-                    "Once they stop moving, click on all the dots that were originally highlighted."
-                ]
-            }
+            { title: "Mark", steps: ["Memorize flashing targets.", "Do not look away during highlights."] },
+            { title: "Track", steps: ["Soft-focus the group centroid.", "Re-acquire after crossings."] },
+            { title: "Select", steps: ["Click each remembered target.", "Avoid nearby distractors."] },
         ],
         howToImprove: [
-            {
-                title: "Soft Focus",
-                content: "Instead of darting your eyes between individual dots, try to maintain a 'soft focus' on the center of the group. This utilizes your peripheral vision, which is highly sensitive to motion."
-            }
+            { title: "Soft Focus", content: "Peripheral motion sensing beats darting gaze." },
+            { title: "Crossing Protocol", content: "Expect swaps; re-lock using continuity of motion." },
+            { title: "Small Sets First", content: "Win at 2–3 targets before adding more." },
+            { title: "Stop When Guessing", content: "Fatigue destroys MOT accuracy." },
         ],
         faqs: [
-            {
-                question: "How does this help me?",
-                answer: "MOT training directly translates to real-world skills like driving, sports, and any activity requiring situational awareness in a dynamic environment."
-            }
+            { question: "Beginner target count?", answer: "Start with 2–3." },
+            { question: "Why crossings hurt?", answer: "Identity swaps between target and distractor." },
+            { question: "Stare at one dot?", answer: "No—you will lose the set." },
+            { question: "Driving transfer?", answer: "Related attention skill; not a substitute for driving practice." },
+            { question: "Session length?", answer: "5–12 quality minutes." },
+            { question: "Why identical dots?", answer: "Forces attention tracking, not feature shortcuts." },
+            { question: "Faster always better?", answer: "Only with maintained accuracy." },
+            { question: "Aim trainer vs MOT?", answer: "Aim is motor pursuit; MOT is attentional set." },
+            { question: "Improvement signal?", answer: "Same accuracy at harder settings, or higher recovery at same settings." },
+            { question: "Pause mid-motion?", answer: "Treat trials as continuous." },
         ]
     },
     "color-blindness": {
         description: [
-            {
-                title: "About Color Blindness Testing",
-                content: "This tool uses Ishihara-style plates to test your color vision. By identifying numbers hidden in a pattern of colored dots, you can assess your ability to distinguish between subtle hues."
-            }
+            { title: "About This Color Vision Check", content: "Ishihara-style plates hide a number inside a field of colored dots. Typical red-green vision usually reads the number; red-green deficiency may see another figure or none." },
+            { title: "What It Screens", content: "Primarily red-green (protan/deutan) patterns. It is weaker for blue-yellow (tritan) issues and is not a full clinic battery." },
+            { title: "Difficulty", content: "Easier modes raise contrast; Hard/Professional shrink hue differences. Harder is not automatically a diagnosis." },
+            { title: "Critical Limits", content: "Not medical advice. Night Light, brightness, panel type, and room lighting change results. Occupational needs require certified testing." },
+            { title: "Who Uses It", content: "Curiosity, accessibility empathy for designers, and informal self-checks before seeking professional testing." },
+            { title: "Reading Results", content: "Look for consistent misses on red-green style plates across good lighting—not a single Professional miss." },
+        
+            { title: "Protan vs Deutan Patterns", content: "Different red-green deficiencies alter which plates fail. This tool will not cleanly label the subtype. A clinic can. Use our results as a prompt to get tested if plates consistently fail." },
+            { title: "Design Empathy", content: "If you struggle here, audit your own product screenshots with grayscale and colorblind simulators. Replace color-only status dots with icons or text." },
+            { title: "Retesting Protocol", content: "Same device, filters off, brightness fixed, morning lighting. Change one variable at a time if you are debugging a surprising result." },
         ],
         howToUse: [
-            {
-                title: "How to Take the Test",
-                steps: [
-                    "A circle filled with colored dots will appear on screen.",
-                    "Look for a number formed by dots of a different color.",
-                    "Type the number you see using your keyboard or the on-screen numpad.",
-                    "If you don't see a number, you can skip to the next plate."
-                ]
-            }
+            { title: "Prepare", steps: ["Disable blue-light filters.", "Raise brightness.", "Avoid tinted lenses."] },
+            { title: "Test", steps: ["Pick difficulty.", "Initialize.", "Enter the number you see."] },
+            { title: "If Blank", steps: ["Skip rather than random-guess if you want meaningful accuracy.", "Retest on another calibrated display if surprised."] },
         ],
         howToImprove: [
-            {
-                title: "Screen Settings",
-                content: "Ensure your monitor's color settings are calibrated properly, night light (blue light filter) is turned off, and brightness is adequately high for accurate results."
-            }
+            { title: "Same Device Comparisons", content: "Only compare sessions with matched display settings." },
+            { title: "Daylight Retest", content: "Warm night themes distort hues." },
+            { title: "Accessibility Takeaway", content: "If red-green is hard, prefer UI that is not color-only." },
+            { title: "See a Professional When Needed", content: "Jobs and licenses may require clinic tests." },
         ],
         faqs: [
-            {
-                question: "Is this a medical diagnosis?",
-                answer: "No. While this tool mimics standard clinical tests, it is for educational and entertainment purposes. If you suspect you have a color vision deficiency, consult an optometrist."
-            }
+            { question: "Medical diagnosis?", answer: "No—educational screening only." },
+            { question: "Deficiency type?", answer: "Mainly red-green patterns." },
+            { question: "Phone vs laptop mismatch?", answer: "Different panels/color management." },
+            { question: "Blue-light filter impact?", answer: "Yes—turn off for testing." },
+            { question: "Mild deficiency still sees some plates?", answer: "Common on high-contrast plates." },
+            { question: "Kids?", answer: "OK for learning; confirm clinically if concerned." },
+            { question: "Can practice cure colorblindness?", answer: "No." },
+            { question: "Designers rely on this alone?", answer: "No—use contrast tools and simulations too." },
+            { question: "Worried about results?", answer: "Book a professional color vision exam." },
+            { question: "Skip allowed?", answer: "Yes when no figure is visible." },
         ]
     },
     "mental-rotation": {
         description: [
-            {
-                title: "About Mental Rotation",
-                content: "Mental Rotation tests your spatial intelligence by asking you to manipulate 3D shapes in your mind. This is a classic cognitive psychology task that measures spatial working memory."
-            }
+            { title: "About Mental Rotation", content: "Decide whether two 3D block figures are the same object at different angles or mirror images that cannot match by rotation." },
+            { title: "What It Measures", content: "Spatial visualization and the cost of mentally transforming 3D structure—classic Shepard–Metzler style cognition." },
+            { title: "Trial Logic", content: "Choose Same if a rigid rotation aligns them; Different if one is a mirror (enantiomorph)." },
+            { title: "Difficulty", content: "Larger angles, complex shapes, and tighter timers increase load—especially depth rotations." },
+            { title: "Improvement Pattern", content: "Fewer mirror confusions and more stable RTs, not overnight IQ jumps." },
+            { title: "Where It Helps", content: "Geometry, engineering sketching, design, and games that need imagined layouts." },
+        
+            { title: "Angular Disparity", content: "Larger rotation angles typically slow responses and raise errors—a classic finding. When you improve, you often shrink that angle cost through better strategies, not magic." },
+            { title: "Mirror Traps", content: "The hardest trials look almost right until one arm flips handedness. Build a habit of checking a second landmark before confirming Same." },
+            { title: "STEM Practice Link", content: "Sketching orthographic views on paper complements this game. Digital mental rotation plus physical sketching covers more of the skill than either alone." },
         ],
         howToUse: [
-            {
-                title: "How to Play",
-                steps: [
-                    "You will be shown two 3D block structures.",
-                    "The second structure may be the exact same object rotated, or a mirrored (different) object.",
-                    "Mentally rotate the objects to see if they can align perfectly.",
-                    "Select 'Same' if they match, or 'Different' if they are mirrored."
-                ]
-            }
+            { title: "Start", steps: ["Select difficulty.", "Initialize.", "Compare both figures before answering."] },
+            { title: "Judge", steps: ["Pick a landmark arm.", "Imagine rotating it into place.", "If only a mirror works, choose Different."] },
+            { title: "Under Time", steps: ["Avoid panic Same taps.", "Re-check one joint correspondence when unsure."] },
         ],
         howToImprove: [
-            {
-                title: "Find an Anchor",
-                content: "Pick a specific defining feature or 'arm' of the block structure. Track how that specific piece would move if you rotated the object 90 degrees."
-            }
+            { title: "Landmark Tracking", content: "Rotate one feature, not the whole cloud at once." },
+            { title: "Chirality Check", content: "Rotations preserve handedness; mirrors do not." },
+            { title: "Depth Practice", content: "Spend sessions on into-depth turns—they are harder than picture-plane spins." },
+            { title: "Quiet Environment", content: "Spatial working memory hates dual-task chatter." },
         ],
         faqs: [
-            {
-                question: "Can I improve my spatial intelligence?",
-                answer: "Yes! Spatial reasoning is highly malleable. Regular practice with mental rotation tasks physically strengthens the neural pathways in your parietal lobe."
-            }
+            { question: "Same means?", answer: "Identical up to 3D rotation." },
+            { question: "Different means?", answer: "Mirror or otherwise non-rotatable match." },
+            { question: "IQ test?", answer: "No—spatial skill sample." },
+            { question: "Practice helps?", answer: "Yes, especially mirror-error reduction." },
+            { question: "Why depth is harder?", answer: "Hidden structure and foreshortening load memory." },
+            { question: "Speed or accuracy?", answer: "Accuracy first." },
+            { question: "Shepard–Metzler family?", answer: "Yes." },
+            { question: "Training dose?", answer: "10–15 minutes, a few times weekly." },
+            { question: "Glance identical?", answer: "Force a landmark check anyway." },
+            { question: "Handedness effects?", answer: "Mixed in research; strategy matters more." },
         ]
-    }
+    },
+    "n-back": {
+        description: [
+            { title: "About N-Back", content: "N-Back is a continuous working-memory updating task. Letters appear in a stream; you respond when the current letter matches the one from N steps earlier." },
+            { title: "What N Means", content: "1-back: match the previous letter. 2-back: match the letter two trials ago. 3-back: three ago. Higher N forces a longer rolling buffer under time pressure." },
+            { title: "Errors That Matter", content: "Misses (no response on a true match) and false alarms (responding on a non-match) both hurt. Lives or accuracy metrics track both." },
+            { title: "Difficulty Mapping", content: "Beginner/Easy typically use 1-back. Normal/Hard use 2-back. Professional uses 3-back with faster timing and fewer lives." },
+            { title: "Why People Train It", content: "It stresses monitoring, updating, and interference control—core working-memory operations studied for decades." },
+            { title: "Honest Transfer", content: "Expect better N-Back performance with practice. Broad IQ claims are debated; treat this as targeted working-memory exercise." },
+        
+            { title: "Updating Under Load", content: "Each new letter must enter the buffer while an older one drops off. That updating operation—not raw storage alone—is why N-Back feels uniquely taxing compared with static digit span." },
+            { title: "Signal Detection Mindset", content: "Think in hits, misses, and false alarms. A high hit count with many false alarms is not mastery. Aim for balanced sensitivity: catch real matches without triggering on lookalikes." },
+            { title: "Program Design Tips", content: "Climb N only after accuracy is stable. Jumping to 3-back while still chaotic on 2-back trains guessing. Log accuracy % beside hit count so progress is honest." },
+        ],
+        howToUse: [
+            { title: "Start", steps: ["Select difficulty (this sets N).", "Initialize.", "Note whether you are on 1-, 2-, or 3-back."] },
+            { title: "Play", steps: ["Watch each letter.", "Press Match / Space only on true N-back matches.", "Withhold on non-matches."] },
+            { title: "Recover", steps: ["After a false alarm, reset your mental buffer.", "Do not mash Match out of panic."] },
+        ],
+        howToImprove: [
+            { title: "Rehearse the Buffer", content: "Silently repeat the last N letters as a sliding window." },
+            { title: "Decide Late, Not Early", content: "Wait until identity is clear to cut false alarms." },
+            { title: "Stability Over Speed", content: "Smooth accuracy beats spiky high-hit / high-false-alarm play." },
+            { title: "Short Sessions", content: "12 focused minutes beats an hour of depleted guessing." },
+        ],
+        faqs: [
+            { question: "What is a good score?", answer: "Higher correct hits with strong accuracy %. Hits alone can hide reckless false alarms." },
+            { question: "What does 2-back mean?", answer: "Respond when the current letter equals the one from two trials ago." },
+            { question: "Keyboard support?", answer: "Spacebar typically triggers Match during the stimulus window." },
+            { question: "What costs a life?", answer: "Missed matches and false alarms." },
+            { question: "How fast are stimuli?", answer: "Roughly ~1.5s on easier modes and ~1s on Hard/Pro." },
+            { question: "Letter set size?", answer: "A small set (e.g., A–H) keeps match rates trainable." },
+            { question: "Is this dual n-back?", answer: "No—this build is single-stream letters." },
+            { question: "Does practice help?", answer: "Yes for task performance; keep claims about far transfer modest." },
+            { question: "When does a run end?", answer: "After the trial budget or when lives hit zero." },
+            { question: "Why do I false-alarm late?", answer: "Fatigue and over-eager matching—slow the trigger finger." },
+        ]
+    },
+
+    "go-no-go": {
+        description: [
+            { title: "About Go/No-Go", content: "Go/No-Go measures response inhibition: press quickly on Go cues and withhold on No-Go cues. An ~80% Go rate builds a press habit so No-Go trials become the real challenge." },
+            { title: "What It Measures", content: "Speeded motor readiness plus inhibitory control—the ability to cancel a prepared action when the cue says stop." },
+            { title: "Trial Anatomy", content: "Green (Go): press Space/tap ASAP. Red (No-Go): do nothing. Misses and false alarms both reduce score." },
+            { title: "Difficulty", content: "Harder modes add trials and shorten stimulus windows / gaps so decisions stack rapidly." },
+            { title: "Score Reading", content: "Count correct trials (Go hits + successful withholds). Also watch Go reaction time—fast but reckless play spikes false alarms." },
+            { title: "Where It Shows Up", content: "Impulse control under speed pressure matters in driving, sports, and fast UI work—this is a lab-style drill, not a full clinical battery." },
+        
+            { title: "Prepotent Responses", content: "When most trials say Go, your motor system prepares to press by default. No-Go trials measure whether you can cancel that preparation in time—the essence of response inhibition." },
+            { title: "Speed Accuracy Tradeoff", content: "Chasing the lowest Go RT usually raises false alarms. Set a personal rule: never press unless the green is clearly confirmed. Slightly slower Go hits with clean withholds produce better overall scores." },
+            { title: "Transfer Expectations", content: "Improved inhibition on this task can support better stop-signal habits in games and driving drills, but real-world impulse control also depends on sleep, stress, and context." },
+        ],
+        howToUse: [
+            { title: "Setup", steps: ["Choose difficulty.", "Initialize.", "Rest a finger near Space without pressing."] },
+            { title: "Respond", steps: ["Press on green.", "Freeze on red.", "Prefer a clean withhold over a risky mash."] },
+            { title: "Review", steps: ["Check false-alarm count.", "If high, bias slightly more cautious on the next run."] },
+        ],
+        howToImprove: [
+            { title: "Ready, Not Tense", content: "Pre-position the finger; tension causes premature presses." },
+            { title: "Value Withholds", content: "On ambiguous color flashes, not pressing is often safer." },
+            { title: "Rhythm Awareness", content: "After long Go streaks, expect a No-Go—reset urgency." },
+            { title: "Short Quality Sets", content: "Inhibition fatigues; stop when false alarms climb." },
+        ],
+        faqs: [
+            { question: "How is score calculated?", answer: "Correct Go hits plus correct No-Go withholds." },
+            { question: "What is a false alarm?", answer: "Pressing on a No-Go (red) trial." },
+            { question: "What is a miss?", answer: "Failing to press during a Go window." },
+            { question: "Why mostly Go trials?", answer: "To build a prepotent response so inhibition is tested." },
+            { question: "Is RT shown?", answer: "Yes for successful Go hits." },
+            { question: "Keyboard?", answer: "Spacebar is supported." },
+            { question: "Trial counts?", answer: "About 20 on Beginner up to ~40 on Professional." },
+            { question: "Used in research?", answer: "Yes—classic executive-function paradigm." },
+            { question: "What hurts most?", answer: "False alarms on No-Go and misses on Go." },
+            { question: "Hard mode tip?", answer: "Commit to color fast; hesitation and impulsivity both rise when windows shrink." },
+        ]
+    },
+
+    "flanker": {
+        description: [
+            { title: "About the Flanker Task", content: "The Eriksen Flanker task measures selective attention under conflict. You respond to a center arrow while ignoring flanking arrows that may point the other way." },
+            { title: "Congruent vs Incongruent", content: "Congruent: all arrows agree. Incongruent: flankers oppose the center, creating response competition you must inhibit." },
+            { title: "How to Respond", content: "Read only the center arrow. Press Left/Right (arrows or A/D). Timeouts and wrong directions cost lives." },
+            { title: "Difficulty", content: "Harder modes raise incongruent rate, shorten deadlines, and reduce lives." },
+            { title: "Metrics", content: "Track correct responses and average RT on corrects. Fast incongruent RTs with high accuracy indicate strong conflict control." },
+            { title: "Not Stroop", content: "Flanker is arrow/spatial conflict. Stroop is color-word conflict. Related family, different conflict type." },
+        
+            { title: "Conflict Monitoring", content: "Incongruent trials activate two response plans. Your prefrontal/attentional systems must suppress the flanker plan and express the center plan. That conflict cost shows up as slower RT and more errors." },
+            { title: "Gaze Discipline", content: "If your eyes jump to the leftmost arrow, you have already let the flanker into the decision. Soften peripheral awareness but keep conscious decision locked on the middle character." },
+            { title: "Training Progression", content: "First drive incongruent accuracy up. Then trim RT. Reversing that order often entrenches guessing on conflict trials." },
+        ],
+        howToUse: [
+            { title: "Start", steps: ["Select difficulty.", "Initialize.", "Place fingers on Left/Right controls."] },
+            { title: "Respond", steps: ["Fixate the center character.", "Ignore flankers.", "Press the center direction only."] },
+            { title: "After Errors", steps: ["Reset fixation to center.", "Do not let the previous flanker direction bias the next trial."] },
+        ],
+        howToImprove: [
+            { title: "Tunnel on Center", content: "Decide before peripheral arrows dominate." },
+            { title: "Do Not Vote With the Majority", content: "On incongruent trials the crowd of flankers is the trap." },
+            { title: "Stable Gaze", content: "Micro-scanning the whole string slows you and invites flanker capture." },
+            { title: "Accuracy First", content: "Clean center decisions beat reckless speed." },
+        ],
+        faqs: [
+            { question: "What is congruent?", answer: "All arrows point the same way." },
+            { question: "What is incongruent?", answer: "Flankers point opposite the center." },
+            { question: "How is score counted?", answer: "Number of correct center responses." },
+            { question: "Average RT?", answer: "Shown for correct responses." },
+            { question: "A/D keys?", answer: "Yes, along with arrow keys." },
+            { question: "Timeouts?", answer: "Count as misses and cost a life." },
+            { question: "Why incongruent feels harder?", answer: "Competing response activation must be inhibited." },
+            { question: "Is this Stroop?", answer: "No—different conflict dimension." },
+            { question: "Trial count?", answer: "About 20–40 depending on difficulty." },
+            { question: "Best tactic?", answer: "Fixate center, decide, then move." },
+        ]
+    },
+
+    "choice-reaction": {
+        description: [
+            { title: "About Choice Reaction Time", content: "Choice RT measures how quickly you select the correct option among multiple alternatives after a stimulus appears—closer to multi-button real life than simple one-button RT." },
+            { title: "Task Flow", content: "Several boxes wait. After a random delay, one lights. Click only that box. Early clicks and wrong boxes are errors." },
+            { title: "Why Random Delays", content: "Random foreperiods stop pure anticipation so you measure decision-plus-motor latency, not prediction." },
+            { title: "Difficulty", content: "Beginner uses fewer choices; harder modes add boxes, tighten timing, and may show decoy highlights on Professional." },
+            { title: "Score Meaning", content: "Average RT in ms on correct hits—lower is better. Best RT stores your best average for that difficulty." },
+            { title: "Training Tip", content: "Hover readiness without twitching. Choice errors explode when you guess early." },
+        
+            { title: "Hick's Law Intuition", content: "More alternatives generally slow choice RT. That is why 4-box averages should not be compared naively to 2-box averages. Log difficulty beside every personal best." },
+            { title: "Information Before Motion", content: "The winning pattern is perceive → select → move. Starting the mouse motion before the light appears creates early-click faults and messy averages." },
+            { title: "Hardware Notes", content: "Display refresh and input lag add milliseconds. Keep the same monitor and mouse when tracking progress over weeks." },
+        ],
+        howToUse: [
+            { title: "Start", steps: ["Pick difficulty.", "Initialize.", "Eyes on the full set of boxes."] },
+            { title: "Respond", steps: ["Wait for a true light.", "Click only the lit target.", "Never click during the wait phase."] },
+            { title: "Pro Mode", steps: ["Ignore faint decoy colors.", "Only the bright target counts."] },
+        ],
+        howToImprove: [
+            { title: "Hands Ready", content: "Keep the pointer near the grid without pressing." },
+            { title: "Suppress Anticipation", content: "If you feel a countdown in your head, reset—waits are random." },
+            { title: "Decoy Discipline", content: "On Professional, dim lights are traps." },
+            { title: "Compare Like-for-Like", content: "Only compare averages within the same number of choices." },
+        ],
+        faqs: [
+            { question: "Is lower better?", answer: "Yes—average RT in milliseconds." },
+            { question: "What is Best RT?", answer: "Your best (lowest) average for that difficulty." },
+            { question: "What is an error?", answer: "Clicking early or clicking the wrong box." },
+            { question: "Do errors enter the average?", answer: "Usually only correct hits contribute RT samples." },
+            { question: "Attempts per run?", answer: "About 8 on Beginner up to ~20 on Professional." },
+            { question: "Box counts?", answer: "2 on Beginner/Easy, 3 on Normal, 4 on Hard/Pro." },
+            { question: "Keyboard?", answer: "This mode is primarily click/tap on boxes." },
+            { question: "Why random waits?", answer: "To block anticipation cheating." },
+            { question: "New Record meaning?", answer: "Your average beat the stored best (or first score)." },
+            { question: "What are decoys?", answer: "Faint non-target lights on Professional." },
+        ]
+    },
+
+    "schulte-table": {
+        description: [
+            { title: "About Schulte Tables", content: "Schulte Tables are shuffled number grids you clear in order as fast as possible. They train visual search, peripheral awareness, and attention shifting used historically in speed-reading practice." },
+            { title: "How It Works", content: "Click numbers in ascending order (or descending on Hard). The timer runs until the grid is finished. Wrong clicks flash; keep going for the correct target." },
+            { title: "Grid Sizes", content: "Beginner 3×3, Easy 4×4, Normal 5×5, Hard 5×5 reverse, Professional 7×7 (1–49)." },
+            { title: "What Improves", content: "Faster clears usually mean wider useful field of view and less tunnel scanning. Soft focus on the center beats row-by-row reading." },
+            { title: "Score", content: "Completion time in ms—lower is better. Store bests per difficulty." },
+            { title: "Training Advice", content: "Prefer several clean clears over one panicked Professional attempt." },
+        
+            { title: "Visual Span Concept", content: "The goal is to widen the area from which you can pick out a digit without moving your eyes to every cell. Soft focus is a skill; it feels vague at first and then suddenly clicks." },
+            { title: "Search Pathology", content: "Row-by-row reading feels safe but is slow. Random jumping without a plan is also slow. A useful compromise: keep gaze near center and let attention probe quadrants in a repeating order." },
+            { title: "Reverse Counting", content: "Hard mode (descending) breaks the habit of always seeking the next higher digit. It is a good probe of whether your method is flexible or brittle." },
+        ],
+        howToUse: [
+            { title: "Start", steps: ["Select difficulty.", "Initialize.", "Note whether you count up or down."] },
+            { title: "Clear the Grid", steps: ["Use the on-screen Target hint.", "Click the next required number.", "Ignore wrong-click flashes and continue."] },
+            { title: "Finish", steps: ["Timer stops when the last number is hit.", "Compare to your best time."] },
+        ],
+        howToImprove: [
+            { title: "Soft Center Focus", content: "Look near the middle; let periphery locate the next digit." },
+            { title: "Avoid Line Scanning", content: "Do not read like a book—jump attention across the table." },
+            { title: "Breathe Between Finds", content: "Micro-pauses reduce frantic misses that waste time." },
+            { title: "Master 5×5 Before 7×7", content: "Professional grids punish poor search habits." },
+        ],
+        faqs: [
+            { question: "Is lower time better?", answer: "Yes." },
+            { question: "What is Hard mode?", answer: "5×5 counted downward." },
+            { question: "Professional size?", answer: "7×7 (1–49)." },
+            { question: "Do wrong clicks end the run?", answer: "No—flash and continue." },
+            { question: "When does the timer start?", answer: "When the grid appears after start." },
+            { question: "How is Best saved?", answer: "When finish time beats the stored best." },
+            { question: "Speed-reading link?", answer: "Traditionally used to widen visual span." },
+            { question: "Can I pause?", answer: "No mid-run pause." },
+            { question: "Why reshuffle?", answer: "Stops memorizing positions across attempts." },
+            { question: "What is Target?", answer: "The next number you must click." },
+        ]
+    },
+
 };
 
 // Related tools mapping for internal linking
@@ -4204,6 +4238,36 @@ const relatedToolsMap: Record<string, Array<{ id: string; title: string; href: s
         { id: "pattern-matching", title: "Pattern Matching", href: "/accuracy/pattern-matching" },
         { id: "visual-memory", title: "Visual Memory", href: "/memory/visual" },
     ],
+    "n-back": [
+        { id: "verbal-memory", title: "Verbal Memory", href: "/memory/verbal-memory" },
+        { id: "chimp-test", title: "Chimp Test", href: "/memory/chimp-test" },
+        { id: "sequence-memory", title: "Sequence Memory", href: "/memory/sequence" },
+    ],
+
+    "go-no-go": [
+        { id: "flanker", title: "Flanker Task", href: "/reflex/flanker" },
+        { id: "choice-reaction", title: "Choice Reaction", href: "/reflex/choice-reaction" },
+        { id: "reaction-time", title: "Reaction Time", href: "/reflex/reaction" },
+    ],
+
+    "flanker": [
+        { id: "go-no-go", title: "Go / No-Go", href: "/reflex/go-no-go" },
+        { id: "multi-stimulus", title: "Multi Stimulus", href: "/reflex/multi-stimulus" },
+        { id: "choice-reaction", title: "Choice Reaction", href: "/reflex/choice-reaction" },
+    ],
+
+    "choice-reaction": [
+        { id: "reaction-time", title: "Reaction Time", href: "/reflex/reaction" },
+        { id: "go-no-go", title: "Go / No-Go", href: "/reflex/go-no-go" },
+        { id: "flanker", title: "Flanker Task", href: "/reflex/flanker" },
+    ],
+
+    "schulte-table": [
+        { id: "number-rush", title: "Number Rush", href: "/speed/number-rush" },
+        { id: "grid-shot", title: "Grid Shot", href: "/reflex/grid" },
+        { id: "visual-memory", title: "Visual Memory", href: "/memory/visual" },
+    ],
+
 };
 
 // Helper function to get content for any tool with unique fallback

@@ -66,9 +66,32 @@ export default function VerbalMemoryGame() {
   
   const [timeLeft, setTimeLeft] = useState(0);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const [highScores, setHighScores] = useState<Record<DiffId, number>>({
+    beginner: 0, easy: 0, normal: 0, hard: 0, professional: 0,
+  });
   
   const { play, isMuted, toggleMute } = useGameSound();
   const diff = DIFFICULTIES[diffId];
+
+  useEffect(() => {
+    const saved: Record<DiffId, number> = { beginner: 0, easy: 0, normal: 0, hard: 0, professional: 0 };
+    DIFF_ORDER.forEach(k => {
+      const v = localStorage.getItem(`verbal-hs-${k}`);
+      if (v) saved[k] = parseInt(v, 10);
+    });
+    setHighScores(saved);
+  }, []);
+
+  useEffect(() => {
+    if (gameState !== "gameover") return;
+    setHighScores(prev => {
+      if (score > prev[diffId]) {
+        localStorage.setItem(`verbal-hs-${diffId}`, score.toString());
+        return { ...prev, [diffId]: score };
+      }
+      return prev;
+    });
+  }, [gameState, score, diffId]);
 
   const getNextWord = (currentSeen: Set<string>) => {
     const workingDictSize = Math.min(diff.wordBankSize, WORD_DICTIONARY.length);
@@ -197,7 +220,7 @@ export default function VerbalMemoryGame() {
   const stats = (
     <>
       <StatBox label="Score" value={score} highlight={score > 0} />
-      <StatBox label="Seen Words" value={gameState === "select" ? "-" : seenWords.size} />
+      <StatBox label="Best" value={highScores[diffId] > 0 ? highScores[diffId] : "-"} highlight={highScores[diffId] > 0} />
       <StatBox label="Lives" value={gameState === "select" ? diff.lives : lives} />
       <StatBox label="Time Left" value={diff.timeLimitMs > 0 ? (gameState === "playing" ? `${(timeLeft / 1000).toFixed(1)}s` : "-") : "∞"} />
     </>
@@ -286,9 +309,14 @@ export default function VerbalMemoryGame() {
             <h2 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-widest mb-2">
               Calibration Complete
             </h2>
-            <div className="text-slate-500 mb-8 text-sm uppercase tracking-widest">
+            <div className="text-slate-500 mb-2 text-sm uppercase tracking-widest">
               Final Score: <span className="text-xl font-black text-slate-900 dark:text-white ml-2">{score}</span>
             </div>
+            {score > 0 && score >= highScores[diffId] ? (
+              <p className="text-amber-500 font-bold text-xs uppercase tracking-widest mb-6">New Record!</p>
+            ) : (
+              <div className="mb-6" />
+            )}
             
             <div className="flex gap-4">
               <button

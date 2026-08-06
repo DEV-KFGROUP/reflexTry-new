@@ -181,13 +181,12 @@ export default function AccuracyPageClient() {
                     </p>
                 </motion.div>
 
-                {/* AI Summary / Bottom Line for SEO/AEO */}
                 <motion.section variants={itemVariants} className="bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 p-6 rounded-3xl mb-8 relative z-10 max-w-4xl mx-auto">
                     <h2 className="text-xl font-bold text-foreground mb-2 flex items-center gap-2">
-                        <Sparkles className="w-5 h-5 text-emerald-500" /> Key Takeaway
+                        <Sparkles className="w-5 h-5 text-emerald-500" /> What This Arena Covers
                     </h2>
                     <p className="text-muted-foreground leading-relaxed">
-                        <strong className="text-foreground">Bottom Line:</strong> The Accuracy Arena focuses entirely on fine motor control and visual discernment. By removing the pressure of time, these tools help coders, designers, and gamers eliminate errors and build flawless muscle memory before gradually introducing speed.
+                        Precision over pace: color matching, angle estimation, pattern matching, mental rotation, and pixel-level clicking. Slow down to remove errors, then add speed once the motion is clean.
                     </p>
                 </motion.section>
 

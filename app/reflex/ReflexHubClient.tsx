@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import {
-  Zap, Timer, Activity, Move, Volume2, Eye, Palette, Sparkles
+  Zap, Timer, Activity, Move, Volume2, Eye, Palette, Sparkles, LayoutGrid, CircleDot
 } from "lucide-react";
 
 interface ToolItem {
@@ -27,6 +27,36 @@ const REFLEX_TOOLS: ToolItem[] = [
     border: "border-amber-200/60",
     glow: "shadow-[0_0_12px_rgba(245,158,11,0.06)]",
     href: "/reflex/time-perception",
+  },
+  {
+    title: "Go / No-Go",
+    desc: "Press on green Go trials and withhold on red No-Go to measure inhibitory control.",
+    icon: CircleDot,
+    color: "text-amber-500",
+    bg: "bg-amber-50",
+    border: "border-amber-200/60",
+    glow: "shadow-[0_0_12px_rgba(245,158,11,0.06)]",
+    href: "/reflex/go-no-go",
+  },
+  {
+    title: "Flanker Task",
+    desc: "Respond to the center arrow only while ignoring congruent or incongruent flankers.",
+    icon: Move,
+    color: "text-amber-650",
+    bg: "bg-amber-50/80",
+    border: "border-amber-200/60",
+    glow: "shadow-[0_0_12px_rgba(245,158,11,0.06)]",
+    href: "/reflex/flanker",
+  },
+  {
+    title: "Choice Reaction",
+    desc: "Click the lit colored box as fast as possible across multiple choice targets.",
+    icon: LayoutGrid,
+    color: "text-amber-500",
+    bg: "bg-amber-50",
+    border: "border-amber-200/60",
+    glow: "shadow-[0_0_12px_rgba(245,158,11,0.06)]",
+    href: "/reflex/choice-reaction",
   },
   {
     title: "Reaction Time",
@@ -200,13 +230,12 @@ export default function ReflexHubClient() {
                     </p>
                 </motion.div>
 
-                {/* AI Summary / Bottom Line for SEO/AEO */}
                 <motion.section variants={itemVariants} className="bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 p-6 rounded-3xl mb-8 relative z-10 max-w-4xl mx-auto">
                     <h2 className="text-xl font-bold text-foreground mb-2 flex items-center gap-2">
-                        <Sparkles className="w-5 h-5 text-amber-500" /> Key Takeaway
+                        <Sparkles className="w-5 h-5 text-amber-500" /> What This Arena Covers
                     </h2>
                     <p className="text-muted-foreground leading-relaxed">
-                        <strong className="text-foreground">Bottom Line:</strong> The Reflex Arena measures your visual and auditory reaction times down to the millisecond. Aimed at athletes, drivers, and gamers, it isolates sensory pathways to help you identify and reduce latency between stimulus perception and physical response.
+                        Visual and auditory reaction tests timed in milliseconds—simple reaction, sound cues, grid clicks, peripheral targets, and multi-stimulus choices. Built to isolate stimulus-to-response latency for practice and warm-ups.
                     </p>
                 </motion.section>
 

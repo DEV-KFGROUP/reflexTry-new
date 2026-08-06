@@ -30,6 +30,16 @@ const SPEED_TOOLS: ToolItem[] = [
     href: "/speed/click",
   },
   {
+    title: "Schulte Table",
+    desc: "Click shuffled numbers in order on a grid to train visual scanning speed.",
+    icon: Grid3X3,
+    color: "text-cyan-600",
+    bg: "bg-cyan-50",
+    border: "border-cyan-200/60",
+    glow: "shadow-[0_0_12px_rgba(6,182,212,0.06)]",
+    href: "/speed/schulte-table",
+  },
+  {
     title: "Speed Math",
     desc: "Calculate arithmetic equations against a shrinking timer.",
     icon: Calculator,
@@ -171,13 +181,12 @@ export default function SpeedHubClient() {
                     </p>
                 </motion.div>
 
-                {/* AI Summary / Bottom Line for SEO/AEO */}
                 <motion.section variants={itemVariants} className="bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 p-6 rounded-3xl mb-8 relative z-10 max-w-4xl mx-auto">
                     <h2 className="text-xl font-bold text-foreground mb-2 flex items-center gap-2">
-                        <Sparkles className="w-5 h-5 text-red-500" /> Key Takeaway
+                        <Sparkles className="w-5 h-5 text-red-500" /> What This Arena Covers
                     </h2>
                     <p className="text-muted-foreground leading-relaxed">
-                        <strong className="text-foreground">Bottom Line:</strong> The Speed Arena focuses on testing and enhancing your raw physical execution speed. Built for competitive typists, data entry professionals, and gamers, it features Click Speed (CPS) tests and Typing (WPM) evaluations designed to minimize input latency and maximize motor neuron efficiency.
+                        Raw execution speed: clicks per second, typing WPM, mental math under time pressure, and fast grid clear tasks. Score what you can do per second—not just how quickly you notice a signal.
                     </p>
                 </motion.section>
 

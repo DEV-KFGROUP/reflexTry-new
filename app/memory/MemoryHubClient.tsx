@@ -40,6 +40,16 @@ const MEMORY_TOOLS: ToolItem[] = [
     href: "/memory/verbal-memory",
   },
   {
+    title: "N-Back",
+    desc: "Match letters that appeared N steps earlier. Classic working memory continuous task.",
+    icon: Layers,
+    color: "text-purple-600",
+    bg: "bg-purple-50",
+    border: "border-purple-200/60",
+    glow: "shadow-[0_0_12px_rgba(168,85,247,0.06)]",
+    href: "/memory/n-back",
+  },
+  {
     title: "Sequence Memory",
     desc: "Memorize and repeat an increasingly complex flashing button pattern.",
     icon: Activity,
@@ -211,13 +221,12 @@ export default function MemoryHubClient() {
                     </p>
                 </motion.div>
 
-                {/* AI Summary / Bottom Line for SEO/AEO */}
                 <motion.section variants={itemVariants} className="bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 p-6 rounded-3xl mb-8 relative z-10 max-w-4xl mx-auto">
                     <h2 className="text-xl font-bold text-foreground mb-2 flex items-center gap-2">
-                        <Sparkles className="w-5 h-5 text-blue-500" /> Key Takeaway
+                        <Sparkles className="w-5 h-5 text-blue-500" /> What This Arena Covers
                     </h2>
                     <p className="text-muted-foreground leading-relaxed">
-                        <strong className="text-foreground">Bottom Line:</strong> The Memory Arena provides a suite of cognitive tests designed for students, older adults, and lifelong learners. It offers interactive tools to measure and enhance your working memory, spatial recall, and visual recognition. Regular practice leverages neuroplasticity to improve your ability to hold and process information simultaneously.
+                        Working memory, spatial recall, and verbal recognition tests—including sequence patterns, digit span, visual grids, and the chimp test. Use them to measure how many items you can hold and update under time pressure.
                     </p>
                 </motion.section>
 
@@ -331,7 +340,7 @@ export default function MemoryHubClient() {
                         <div className="space-y-4">
                             <h2 className="text-2xl font-bold text-foreground">Benchmarks & Scientific Proof</h2>
                             <p className="text-muted-foreground leading-relaxed">
-                                The average human can hold about 7 (plus or minus 2) items in their working memory at once, a concept famously described by cognitive psychologist George A. Miller. However, through techniques like chunking, this limit can be effectively bypassed. According to research cited by the <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2629068/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">National Institutes of Health (NIH)</a>, working memory training can lead to significant improvements in fluid intelligence. In our platform, the average user reaches a digit span of 9 after 2 weeks of training.
+                                Classic work by George A. Miller popularized the idea that people often hold roughly 7±2 chunks in immediate memory—though modern views emphasize strategy and task design as much as a fixed capacity. Techniques like chunking reduce how many independent items you must store. Research discussed via the <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2629068/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">National Institutes of Health (NIH)</a> explores when working-memory training transfers and when it does not. On Reflextry, track your own digit-span and recall trends under the same difficulty; we do not claim a universal “average user reaches X after two weeks” outcome.
                             </p>
                         </div>
                         
