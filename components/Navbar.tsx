@@ -30,7 +30,7 @@ export function Navbar() {
     return (
         <nav className="fixed top-0 left-0 right-0 z-50">
             {/* Glassmorphism Background */}
-            <div className="absolute inset-0 bg-white/40 dark:bg-black/40 backdrop-blur-3xl border-b border-black/10 dark:border-white/10 shadow-sm" />
+            <div className="absolute inset-0 bg-white/95 dark:bg-black/90 backdrop-blur-md border-b border-black/10 dark:border-white/10 shadow-sm" />
 
             <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex items-center justify-between min-h-[72px]">

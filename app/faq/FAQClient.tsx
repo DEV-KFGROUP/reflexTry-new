@@ -123,7 +123,9 @@ function categoryId(category: string) {
 function scrollToCategory(id: string) {
     const el = document.getElementById(id);
     if (!el) return;
-    el.scrollIntoView({ behavior: "smooth", block: "start" });
+    const headerOffset = 88; // fixed navbar (~72px) + breathing room
+    const top = el.getBoundingClientRect().top + window.scrollY - headerOffset;
+    window.scrollTo({ top, behavior: "smooth" });
     window.history.replaceState(null, "", `#${id}`);
 }
 
