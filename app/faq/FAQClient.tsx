@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { HelpCircle, ChevronDown, ArrowRight, Sparkles } from "lucide-react";
 import Link from "next/link";
@@ -112,13 +113,27 @@ const faqs: FAQItem[] = [
 const categories = Array.from(new Set(faqs.map((faq) => faq.category)));
 
 function categoryId(category: string) {
-    return category.toLowerCase().replace(/\s+/g, "-");
+    return category
+        .toLowerCase()
+        .replace(/&/g, "and")
+        .replace(/[^a-z0-9]+/g, "-")
+        .replace(/^-|-$/g, "");
 }
 
-function FAQItemRow({ faq, defaultOpen }: { faq: FAQItem; defaultOpen?: boolean }) {
+function scrollToCategory(id: string) {
+    const el = document.getElementById(id);
+    if (!el) return;
+    el.scrollIntoView({ behavior: "smooth", block: "start" });
+    window.history.replaceState(null, "", `#${id}`);
+}
+
+function FAQItemRow({ faq, defaultOpen = false }: { faq: FAQItem; defaultOpen?: boolean }) {
+    const [open, setOpen] = useState(defaultOpen);
+
     return (
         <details
-            defaultOpen={defaultOpen}
+            open={open}
+            onToggle={(e) => setOpen((e.currentTarget as HTMLDetailsElement).open)}
             className="group rounded-2xl border border-slate-200 bg-white shadow-sm open:border-cyan-200 open:shadow-[0_0_0_1px_rgba(6,182,212,0.12)] transition-colors duration-150"
         >
             <summary className="flex cursor-pointer list-none items-start gap-3 p-5 sm:p-6 [&::-webkit-details-marker]:hidden">
@@ -141,14 +156,21 @@ function FAQItemRow({ faq, defaultOpen }: { faq: FAQItem; defaultOpen?: boolean 
 }
 
 export default function FAQClient() {
+    useEffect(() => {
+        const hash = window.location.hash.replace(/^#/, "");
+        if (!hash) return;
+        // Wait a tick so layout/sticky header settle
+        const t = window.setTimeout(() => scrollToCategory(hash), 50);
+        return () => window.clearTimeout(t);
+    }, []);
+
     return (
-        <div className="w-full bg-[#f8fafc] dark:bg-slate-800 text-slate-800 dark:text-white font-sans relative overflow-hidden py-8 px-4 sm:px-6 lg:px-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm mb-8">
+        <div className="w-full bg-[#f8fafc] dark:bg-slate-800 text-slate-800 dark:text-white font-sans relative overflow-x-hidden py-8 px-4 sm:px-6 lg:px-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm mb-8">
             <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.03)_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_at_center,black_50%,transparent_100%)] pointer-events-none z-0" />
             <div className="absolute top-[-5%] left-[10%] w-[500px] h-[500px] bg-cyan-500/[0.03] blur-[120px] rounded-full pointer-events-none z-0" />
             <div className="absolute bottom-[-5%] right-[10%] w-[500px] h-[500px] bg-violet-500/[0.03] blur-[120px] rounded-full pointer-events-none z-0" />
 
             <div className="relative z-10 max-w-5xl mx-auto space-y-12">
-                {/* Header */}
                 <motion.div
                     initial={{ opacity: 0, y: -12 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -181,7 +203,6 @@ export default function FAQClient() {
                     </div>
                 </motion.div>
 
-                {/* Jump links */}
                 <motion.nav
                     initial={{ opacity: 0, y: 12 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -194,48 +215,54 @@ export default function FAQClient() {
                         Jump to Category
                     </h2>
                     <div className="flex flex-wrap gap-2">
-                        {categories.map((category) => (
-                            <a
-                                key={category}
-                                href={`#${categoryId(category)}`}
-                                className="px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200 text-sm font-medium text-slate-700 hover:bg-cyan-50 hover:border-cyan-200 hover:text-cyan-700 transition-colors duration-150"
-                            >
-                                {category}
-                            </a>
-                        ))}
+                        {categories.map((category) => {
+                            const id = categoryId(category);
+                            return (
+                                <a
+                                    key={category}
+                                    href={`#${id}`}
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        scrollToCategory(id);
+                                    }}
+                                    className="px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200 text-sm font-medium text-slate-700 hover:bg-cyan-50 hover:border-cyan-200 hover:text-cyan-700 transition-colors duration-150"
+                                >
+                                    {category}
+                                </a>
+                            );
+                        })}
                     </div>
                 </motion.nav>
 
-                {/* Categories */}
                 {categories.map((category, categoryIndex) => {
                     const items = faqs.filter((faq) => faq.category === category);
+                    const id = categoryId(category);
                     return (
-                        <motion.section
-                            key={category}
-                            id={categoryId(category)}
-                            initial={{ opacity: 0, y: 16 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.08 + categoryIndex * 0.04, duration: 0.35, ease: "easeOut" }}
-                            className="scroll-mt-28 space-y-4"
-                        >
-                            <h2 className="text-xl sm:text-2xl font-mono font-bold text-slate-900 flex items-center gap-3">
-                                <span className="w-1.5 h-7 rounded-full bg-gradient-to-b from-cyan-500 to-violet-500" />
-                                {category}
-                            </h2>
-                            <div className="space-y-3">
-                                {items.map((faq, index) => (
-                                    <FAQItemRow
-                                        key={faq.question}
-                                        faq={faq}
-                                        defaultOpen={categoryIndex === 0 && index === 0}
-                                    />
-                                ))}
-                            </div>
-                        </motion.section>
+                        <div key={category} id={id} className="scroll-mt-28 space-y-4">
+                            <motion.div
+                                initial={{ opacity: 0, y: 16 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: 0.08 + categoryIndex * 0.04, duration: 0.35, ease: "easeOut" }}
+                                className="space-y-4"
+                            >
+                                <h2 className="text-xl sm:text-2xl font-mono font-bold text-slate-900 flex items-center gap-3">
+                                    <span className="w-1.5 h-7 rounded-full bg-gradient-to-b from-cyan-500 to-violet-500" />
+                                    {category}
+                                </h2>
+                                <div className="space-y-3">
+                                    {items.map((faq, index) => (
+                                        <FAQItemRow
+                                            key={faq.question}
+                                            faq={faq}
+                                            defaultOpen={categoryIndex === 0 && index === 0}
+                                        />
+                                    ))}
+                                </div>
+                            </motion.div>
+                        </div>
                     );
                 })}
 
-                {/* CTA */}
                 <motion.div
                     initial={{ opacity: 0, y: 12 }}
                     animate={{ opacity: 1, y: 0 }}
