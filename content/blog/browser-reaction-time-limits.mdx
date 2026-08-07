@@ -1,0 +1,72 @@
+---
+title: 'What Browser Reaction Tests Can and Cannot Measure'
+description: 'A practical guide to display refresh, input lag, and why Reflextry browser scores are useful for personal tracking—but not lab-grade clinical instruments.'
+publishedAt: '2026-08-04'
+author:
+  name: 'Kaushik Rabadiya'
+category: 'Methodology'
+tags: ['reaction-time', 'browsers', 'hardware', 'limits']
+readingTime: '11 min read'
+---
+
+People open a reaction test, get a number, and ask: *Is this my true neurological speed?* In a browser, the honest answer is: it is your speed **through this stack**—eyes, brain, hand, device, OS, browser, and page code—on this day.
+
+That stack is still valuable. It is not a sealed laboratory chronoscope. This article draws the line clearly so you can use Reflextry without superstition.
+
+## What a browser trial actually times
+
+In a typical visual simple-reaction trial:
+
+1. The page schedules a stimulus (color change, shape, sound).
+2. Your display eventually lights the new pixels (refresh-bound).
+3. You detect the change and initiate a motor response.
+4. The input device reports the click or key.
+5. The browser timestamps the event and computes latency.
+
+Any stage can add milliseconds. A 60 Hz panel updates roughly every 16.7 ms; a 240 Hz panel much faster. Touchscreens and Bluetooth mice often add more latency than a wired gaming mouse. Thermal throttling and background tabs add variance.
+
+## What browser tests are good for
+
+- **Personal baselines** on the same machine and difficulty.
+- **Warmup feedback** before ranked games or practice.
+- **Habit building:** short daily blocks beat rare marathon sessions.
+- **Comparing task types** on the same device (simple vs choice, Go vs No-Go).
+- **Learning clean technique:** fewer early clicks, steadier averages.
+
+If your average simple RT drops from 280 ms to 230 ms over three weeks on the same laptop, that is a real practice signal for *you*, even if a lab might print a slightly different absolute number.
+
+## What they are not
+
+- **Not a medical diagnosis.** Fatigue, caffeine, mood, sleep, and illness move scores. Tools do not replace clinicians.
+- **Not certified occupational screens** (aviation color vision, clinical neuropsychology batteries, etc.).
+- **Not population IQ claims.** We refuse invented percentiles from uncontrolled web traffic.
+- **Not cross-device leaderboard truth.** Phone vs desktop is a different experiment.
+
+## How to make your numbers more trustworthy
+
+1. Use one primary device for tracking.
+2. Close heavy tabs; disable night filters if color/timing matters.
+3. Prefer wired mice for reaction and aim tools when possible.
+4. Warm up 1–2 throwaway blocks before logging a “real” average.
+5. Record difficulty mode beside every personal best.
+6. Prefer multi-trial averages over a single lucky click.
+
+## Sound and peripheral caveats
+
+Auditory cues depend on audio stack latency and output device. Peripheral-vision tasks depend on viewing distance and screen size. Treat those scores as within-setup metrics, not universal physiology.
+
+## How Reflextry designs for honesty
+
+We show transparent units (ms, spans, accuracy, completion time). Difficulty changes the task—so Beginner and Professional are not the same test. Methodology write-ups live in the [Cognitive Journal](/blog), including [How We Score Reflextry Tests](/blog/how-we-score-reflextry-tests).
+
+If something looks broken (impossible sub-100 ms averages on a 60 Hz panel with early-click spam), trust the error counters and your setup notes before trusting the ego number.
+
+## A sensible weekly use pattern
+
+- **2–4 days/week:** 10–15 minutes across reaction + one memory or accuracy tool.
+- **Before competitive play:** 5-minute simple + aim or grid warmup.
+- **Monthly:** reread your notes; change only one variable at a time (sleep, device, difficulty).
+
+## Bottom line
+
+Browser reaction tests measure a real skill loop under real-world noise. Use them to train and track. Do not treat them as courtroom evidence about your nervous system. For ranges people usually discuss, read [What Is a Good Reaction Time?](/blog/what-is-a-good-reaction-time). To practice, start at [Reaction Time](/reflex/reaction).

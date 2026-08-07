@@ -12,9 +12,7 @@ const ToolContentClient = dynamic(
 export function ToolContent(props: ToolContentProps) {
     return (
         <>
-            {/* The visually-hidden server component that provides full raw HTML for Googlebot */}
             <ToolContentServer {...props} />
-            {/* The interactive client component that users see (with tabs, animations) */}
             <ToolContentClient {...props} />
         </>
     );

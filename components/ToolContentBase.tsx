@@ -2,9 +2,7 @@
 
 import { motion } from "framer-motion";
 import { HelpCircle, Info, Sparkles, TrendingUp, Zap, ArrowRight, CheckCircle2, Target, Trophy, Brain, List, Gamepad2, MousePointer2 } from "lucide-react";
-import { useState } from "react";
 import Link from "next/link";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { SchemaInjector } from "@/components/SchemaInjector";
 import { generateFAQPageSchema, generateHowToSchema } from "@/lib/structured-data";
 
@@ -86,7 +84,6 @@ export interface ToolContentProps {
 }
 
 export function ToolContent({ title, description, howToUse, howToImprove, howToPlay, benefits, faqs, relatedTools = [] }: ToolContentProps) {
-    const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
 
     const faqSchema = generateFAQPageSchema(faqs);
     const howToSchema = generateHowToSchema(title, howToPlay);
@@ -239,32 +236,41 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
                 </p>
             </motion.div>
 
-            {/* Main Glassmorphic Container */}
-            <motion.div 
+            {/* All sections visible in the DOM for users and crawlers (no hidden tabs) */}
+            <motion.div
                 variants={itemVariants}
-                className="relative bg-black/5 dark:bg-white/5 dark:bg-white/40 dark:bg-black/40 backdrop-blur-3xl border border-black/10 dark:border-white/10 dark:border-white/5 rounded-3xl p-4 md:p-8 shadow-[0_0_50px_rgba(139,92,246,0.15)] z-10"
+                className="relative bg-black/5 dark:bg-white/5 backdrop-blur-3xl border border-black/10 dark:border-white/10 rounded-3xl p-4 md:p-8 shadow-[0_0_50px_rgba(139,92,246,0.15)] z-10"
             >
                 <FloatingBackground />
 
-                <Tabs defaultValue="about" className="w-full relative z-10">
-                    <TabsList className="w-full h-auto flex-wrap justify-start sm:justify-center bg-black/5 dark:bg-black/20 dark:bg-black/50 backdrop-blur-md border border-black/10 dark:border-white/10 rounded-2xl p-2 mb-8 gap-2">
-                        <TabsTrigger value="about" className="flex-1 min-w-[120px] data-[state=active]:bg-gradient-to-r data-[state=active]:from-indigo-500 data-[state=active]:to-purple-500 data-[state=active]:text-foreground data-[state=active]:shadow-[0_0_20px_rgba(139,92,246,0.5)] text-foreground/70 transition-all duration-300 rounded-xl py-3 font-bold text-sm md:text-base">
-                            <Info className="w-4 h-4 mr-2 inline" /> About
-                        </TabsTrigger>
-                        <TabsTrigger value="how-to-play" className="flex-1 min-w-[120px] data-[state=active]:bg-gradient-to-r data-[state=active]:from-emerald-500 data-[state=active]:to-teal-500 data-[state=active]:text-foreground data-[state=active]:shadow-[0_0_20px_rgba(16,185,129,0.5)] text-foreground/70 transition-all duration-300 rounded-xl py-3 font-bold text-sm md:text-base">
-                            <Gamepad2 className="w-4 h-4 mr-2 inline" /> How to Play
-                        </TabsTrigger>
-                        <TabsTrigger value="tips" className="flex-1 min-w-[120px] data-[state=active]:bg-gradient-to-r data-[state=active]:from-amber-500 data-[state=active]:to-orange-500 data-[state=active]:text-foreground data-[state=active]:shadow-[0_0_20px_rgba(245,158,11,0.5)] text-foreground/70 transition-all duration-300 rounded-xl py-3 font-bold text-sm md:text-base">
-                            <TrendingUp className="w-4 h-4 mr-2 inline" /> Pro Tips
-                        </TabsTrigger>
-                        <TabsTrigger value="faq" className="flex-1 min-w-[120px] data-[state=active]:bg-gradient-to-r data-[state=active]:from-pink-500 data-[state=active]:to-rose-500 data-[state=active]:text-foreground data-[state=active]:shadow-[0_0_20px_rgba(236,72,153,0.5)] text-foreground/70 transition-all duration-300 rounded-xl py-3 font-bold text-sm md:text-base">
-                            <HelpCircle className="w-4 h-4 mr-2 inline" /> FAQ
-                        </TabsTrigger>
-                    </TabsList>
+                <nav
+                    aria-label="Guide sections"
+                    className="relative z-10 flex flex-wrap gap-2 mb-10 p-2 rounded-2xl bg-black/5 dark:bg-black/20 border border-black/10 dark:border-white/10"
+                >
+                    {[
+                        { href: "#guide-about", label: "About", icon: Info },
+                        { href: "#guide-how-to-play", label: "How to Play", icon: Gamepad2 },
+                        { href: "#guide-tips", label: "Pro Tips", icon: TrendingUp },
+                        { href: "#guide-faq", label: "FAQ", icon: HelpCircle },
+                    ].map(({ href, label, icon: Icon }) => (
+                        <a
+                            key={href}
+                            href={href}
+                            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-bold text-foreground/70 hover:text-foreground hover:bg-white/10 transition-colors"
+                        >
+                            <Icon className="w-4 h-4" />
+                            {label}
+                        </a>
+                    ))}
+                </nav>
 
-                    {/* About Content — tool-specific description + benefits only */}
-                    <TabsContent value="about" className="mt-0 focus-visible:outline-none">
-                        <div className="bg-black/5 dark:bg-white/5 dark:bg-black/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 rounded-3xl p-6 lg:p-10 shadow-xl">
+                <div className="relative z-10 space-y-16">
+                    <section id="guide-about" className="scroll-mt-28">
+                        <div className="bg-black/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 rounded-3xl p-6 lg:p-10 shadow-xl">
+                            <h3 className="text-2xl font-black text-foreground mb-6 flex items-center gap-3">
+                                <Info className="w-6 h-6 text-indigo-400" />
+                                About This Test
+                            </h3>
                             <div className="prose dark:prose-invert prose-lg max-w-none prose-headings:text-foreground prose-p:text-muted-foreground">
                                 {renderDescription()}
                             </div>
@@ -277,8 +283,8 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
                                     </h3>
                                     <div className="grid sm:grid-cols-2 gap-4">
                                         {benefits.map((benefit, idx) => (
-                                            <div key={idx} className="flex items-start gap-4 p-4 rounded-2xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 hover:bg-white/10 transition-colors">
-                                                <span className="mt-1 w-2 h-2 rounded-full bg-pink-400 shadow-[0_0_10px_rgba(244,114,182,0.8)] flex-shrink-0" />
+                                            <div key={idx} className="flex items-start gap-4 p-4 rounded-2xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10">
+                                                <span className="mt-1 w-2 h-2 rounded-full bg-pink-400 flex-shrink-0" />
                                                 <span className="text-foreground/90 text-base font-medium">{benefit}</span>
                                             </div>
                                         ))}
@@ -286,12 +292,11 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
                                 </div>
                             ) : null}
                         </div>
-                    </TabsContent>
+                    </section>
 
-                    {/* How to Play Content */}
-                    <TabsContent value="how-to-play" className="mt-0 focus-visible:outline-none">
+                    <section id="guide-how-to-play" className="scroll-mt-28">
                         <div className="grid lg:grid-cols-3 gap-8">
-                            <div className="lg:col-span-2 bg-black/5 dark:bg-white/5 dark:bg-black/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 rounded-3xl p-6 lg:p-10 shadow-xl">
+                            <div className="lg:col-span-2 bg-black/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 rounded-3xl p-6 lg:p-10 shadow-xl">
                                 <h3 className="text-2xl font-black text-foreground mb-8 flex items-center gap-3">
                                     <List className="w-6 h-6 text-emerald-400 drop-shadow-[0_0_10px_rgba(52,211,153,0.8)]" />
                                     Step-by-Step Guide
@@ -310,7 +315,7 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
                                     <ul className="space-y-4">
                                         {howToPlay?.map((step, idx) => (
                                             <li key={idx} className="flex gap-4 items-start text-base font-medium text-foreground/90">
-                                                <CheckCircle2 className="w-5 h-5 mt-0.5 text-emerald-400 drop-shadow-[0_0_5px_rgba(52,211,153,0.5)] flex-shrink-0" />
+                                                <CheckCircle2 className="w-5 h-5 mt-0.5 text-emerald-400 flex-shrink-0" />
                                                 {step}
                                             </li>
                                         ))}
@@ -318,11 +323,10 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
                                 </div>
                             </div>
                         </div>
-                    </TabsContent>
+                    </section>
 
-                    {/* Pro Tips Content */}
-                    <TabsContent value="tips" className="mt-0 focus-visible:outline-none">
-                        <div className="bg-black/5 dark:bg-white/5 dark:bg-black/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 rounded-3xl p-6 lg:p-10 shadow-xl">
+                    <section id="guide-tips" className="scroll-mt-28">
+                        <div className="bg-black/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 rounded-3xl p-6 lg:p-10 shadow-xl">
                             <h3 className="text-2xl font-black text-foreground mb-8 flex items-center gap-3">
                                 <TrendingUp className="w-6 h-6 text-amber-400 drop-shadow-[0_0_10px_rgba(251,191,36,0.8)]" />
                                 Expert Strategies
@@ -331,51 +335,30 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
                                 {renderHowToImprove()}
                             </div>
                         </div>
-                    </TabsContent>
+                    </section>
 
-                    {/* FAQ Content */}
-                    <TabsContent value="faq" className="mt-0 focus-visible:outline-none">
+                    <section id="guide-faq" className="scroll-mt-28">
+                        <h3 className="text-2xl font-black text-foreground mb-8 flex items-center gap-3">
+                            <HelpCircle className="w-6 h-6 text-pink-400" />
+                            Frequently Asked Questions
+                        </h3>
                         <div className="grid md:grid-cols-2 gap-6">
                             {faqs?.map((faq, idx) => (
-                                <motion.div
+                                <div
                                     key={idx}
-                                    initial={{ opacity: 0, y: 10 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    transition={{ delay: idx * 0.05 }}
-                                    className="group relative bg-black/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 rounded-2xl p-8 hover:bg-white/10 hover:border-pink-500/50 hover:shadow-[0_0_30px_rgba(236,72,153,0.2)] transition-all duration-300 cursor-pointer"
-                                    onClick={() => setExpandedFaq(expandedFaq === idx ? null : idx)}
+                                    className="bg-black/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 rounded-2xl p-8"
                                 >
-                                    <div className="flex items-start justify-between gap-4">
-                                        <h3 className="text-lg font-bold text-foreground group-hover:text-pink-300 transition-colors pr-8">
-                                            {faq.question}
-                                        </h3>
-                                        <motion.div
-                                            animate={{ rotate: expandedFaq === idx ? 180 : 0 }}
-                                            transition={{ duration: 0.3 }}
-                                            className="flex-shrink-0 absolute right-8 top-8"
-                                        >
-                                            <Zap className={`w-5 h-5 ${expandedFaq === idx ? 'text-pink-400 drop-shadow-[0_0_8px_rgba(236,72,153,0.8)]' : 'text-muted-foreground'}`} />
-                                        </motion.div>
-                                    </div>
-                                    <motion.div
-                                        initial={false}
-                                        animate={{
-                                            height: expandedFaq === idx ? "auto" : 0,
-                                            opacity: expandedFaq === idx ? 1 : 0,
-                                            marginTop: expandedFaq === idx ? 16 : 0,
-                                        }}
-                                        transition={{ duration: 0.3 }}
-                                        className="overflow-hidden"
-                                    >
-                                        <p className="text-muted-foreground text-base leading-relaxed border-t border-black/10 dark:border-white/10 pt-4">
-                                            {faq.answer}
-                                        </p>
-                                    </motion.div>
-                                </motion.div>
+                                    <h4 className="text-lg font-bold text-foreground pr-4 mb-4">
+                                        {faq.question}
+                                    </h4>
+                                    <p className="text-muted-foreground text-base leading-relaxed border-t border-black/10 dark:border-white/10 pt-4">
+                                        {faq.answer}
+                                    </p>
+                                </div>
                             ))}
                         </div>
-                    </TabsContent>
-                </Tabs>
+                    </section>
+                </div>
             </motion.div>
 
             {/* Related Tools - Always Visible */}

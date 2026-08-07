@@ -161,10 +161,72 @@ export default function HomeClient() {
   return (
     <div className="bg-background min-h-screen overflow-hidden relative">
       <FloatingBackground />
-      {/* ── Game Arenas ── */}
       <div className="relative z-10 w-full max-w-7xl mx-auto space-y-16 pt-12 pb-20 px-4 sm:px-6 lg:px-8">
-        {/* Category overview */}
-        <section className="bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 p-6 rounded-3xl mb-8">
+        {/* Editorial lead — value before the full tool directory */}
+        <section className="rounded-3xl border border-black/10 dark:border-white/10 bg-white/5 backdrop-blur-md p-6 sm:p-8 space-y-6">
+          <div className="space-y-3 max-w-3xl">
+            <p className="text-xs font-mono font-bold tracking-widest uppercase text-blue-500">
+              Cognitive Lab Journal
+            </p>
+            <h2 className="text-2xl sm:text-3xl font-bold text-foreground leading-tight">
+              Measure first. Practice short. Read the method.
+            </h2>
+            <p className="text-muted-foreground leading-relaxed">
+              Reflextry is a free browser lab for reaction time, working memory, speed, and
+              accuracy. Scores are transparent (milliseconds, spans, accuracy)—not clinical
+              diagnoses or invented percentiles. Start with a baseline, train in 10–15 minute
+              sessions, and use our guides when you want the science behind the number.
+            </p>
+          </div>
+
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {[
+              {
+                href: "/blog/how-we-score-reflextry-tests",
+                title: "How we score tests",
+                desc: "What milliseconds, spans, and accuracy mean—and what we refuse to claim.",
+              },
+              {
+                href: "/blog/what-is-a-good-reaction-time",
+                title: "What is a good reaction time?",
+                desc: "Realistic ranges, hardware noise, and how to read your own scores.",
+              },
+              {
+                href: "/blog/choice-reaction-vs-simple-reaction",
+                title: "Choice vs simple reaction",
+                desc: "Why more options slow you down, and how to train each separately.",
+              },
+              {
+                href: "/about",
+                title: "About the lab",
+                desc: "Who builds Reflextry, our methodology, and how to contact us.",
+              },
+              {
+                href: "/blog",
+                title: "All guides",
+                desc: "Memory, reflex, speed, and accuracy articles from the Cognitive Journal.",
+              },
+              {
+                href: "/faq",
+                title: "FAQ",
+                desc: "Training frequency, privacy, scoring, and common product questions.",
+              },
+            ].map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="group rounded-2xl border border-black/10 dark:border-white/10 bg-background/40 p-5 hover:border-blue-500/40 transition-colors"
+              >
+                <h3 className="font-bold text-foreground group-hover:text-blue-500 transition-colors mb-1">
+                  {item.title}
+                </h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+              </Link>
+            ))}
+          </div>
+        </section>
+
+        <section className="bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 p-6 rounded-3xl">
             <h2 className="text-xl font-bold text-foreground mb-2 flex items-center gap-2">
                 <Sparkles className="w-5 h-5 text-blue-500" /> What Reflextry Measures
             </h2>
