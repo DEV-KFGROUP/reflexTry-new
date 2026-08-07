@@ -68,17 +68,17 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
         if (typeof description === 'string') {
             return (
                 <div
-                    className="text-muted-foreground leading-relaxed text-base prose prose-invert max-w-none prose-headings:text-foreground prose-headings:font-bold prose-headings:mt-6 prose-headings:mb-4 prose-p:mb-4 prose-ul:my-4 prose-li:my-2"
+                    className="text-muted-foreground leading-relaxed text-base prose prose-invert max-w-none prose-headings:text-foreground prose-headings:font-bold prose-headings:mt-4 prose-headings:mb-2 prose-p:mb-3 prose-ul:my-3 prose-li:my-1.5"
                     dangerouslySetInnerHTML={{ __html: description }}
                 />
             );
         }
 
         return (
-            <div className="space-y-8">
+            <div className="space-y-4">
                 {description?.map((section, idx) => (
-                    <div key={idx} className="space-y-3">
-                        <h3 className="text-xl font-bold text-foreground flex items-center gap-2">
+                    <div key={idx} className="space-y-1.5">
+                        <h3 className="text-lg font-bold text-foreground flex items-center gap-2">
                             {idx === 0 && <Info className="w-5 h-5 text-info" />}
                             {section.title}
                         </h3>
@@ -95,7 +95,7 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
         if (typeof howToUse === 'string') {
             return (
                 <div
-                    className="text-muted-foreground leading-relaxed text-sm prose prose-invert max-w-none prose-headings:text-foreground prose-headings:text-sm prose-headings:font-semibold prose-headings:mt-3 prose-headings:mb-2 prose-p:text-sm prose-p:mb-2"
+                    className="text-muted-foreground leading-relaxed text-base prose prose-invert max-w-none prose-headings:text-foreground prose-headings:text-lg prose-headings:font-bold prose-headings:mt-4 prose-headings:mb-2 prose-p:text-base prose-p:mb-3 prose-li:text-base"
                     dangerouslySetInnerHTML={{ __html: howToUse }}
                 />
             );
@@ -108,20 +108,20 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
                         <div className="relative flex-shrink-0 flex h-10 w-10 items-center justify-center rounded-full border border-accuracy/30 bg-card shadow-lg shadow-accuracy/20 group-hover:border-accuracy group-hover:scale-110 transition duration-200 z-10">
                             <span className="text-lg font-bold text-accuracy">{idx + 1}</span>
                         </div>
-                        <div className="flex-1 min-w-0 space-y-2 pt-1">
-                            <h3 className="text-lg font-bold text-foreground group-hover:text-accuracy transition-colors">
+                        <div className="flex-1 min-w-0 space-y-3 pt-1">
+                            <h3 className="text-xl font-bold text-foreground group-hover:text-accuracy transition-colors">
                                 {step.title}
                             </h3>
                             {step.description && (
-                                <p className="text-muted-foreground text-sm leading-relaxed">
+                                <p className="text-muted-foreground text-base leading-relaxed">
                                     {step.description}
                                 </p>
                             )}
                             {(step.subSteps || step.steps) && (
-                                <ul className="mt-2 space-y-1">
+                                <ul className="mt-1 space-y-2.5">
                                     {(step.subSteps || step.steps)?.map((sub, sIdx) => (
-                                        <li key={sIdx} className="flex items-start gap-2 text-xs text-muted-foreground">
-                                            <CheckCircle2 className="w-3 h-3 mt-0.5 text-accuracy/70" />
+                                        <li key={sIdx} className="flex items-start gap-2.5 text-base text-foreground/90 leading-relaxed">
+                                            <CheckCircle2 className="w-5 h-5 mt-0.5 text-accuracy/70 flex-shrink-0" />
                                             <span>{sub}</span>
                                         </li>
                                     ))}
@@ -228,25 +228,25 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
 
                 <div className="space-y-12">
                     <section id="guide-about" className="scroll-mt-28">
-                        <div className="rounded-3xl border border-black/10 dark:border-white/10 bg-background p-6 lg:p-10 shadow-sm">
-                            <h3 className="text-2xl font-black text-foreground mb-6 flex items-center gap-3">
+                        <div className="rounded-3xl border border-black/10 dark:border-white/10 bg-background p-5 lg:p-7 shadow-sm">
+                            <h3 className="text-2xl font-black text-foreground mb-4 flex items-center gap-3">
                                 <Info className="w-6 h-6 text-indigo-500" />
                                 About This Test
                             </h3>
-                            <div className="prose dark:prose-invert prose-lg max-w-none prose-headings:text-foreground prose-p:text-muted-foreground">
+                            <div className="max-w-none">
                                 {renderDescription()}
                             </div>
 
                             {benefits && benefits.length > 0 ? (
-                                <div className="mt-12 pt-8 border-t border-black/10 dark:border-white/10">
-                                    <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-3">
+                                <div className="mt-6 pt-5 border-t border-black/10 dark:border-white/10">
+                                    <h3 className="text-xl font-bold text-foreground mb-4 flex items-center gap-3">
                                         <Brain className="w-6 h-6 text-pink-500" />
                                         What This Test Trains
                                     </h3>
-                                    <div className="grid sm:grid-cols-2 gap-4">
+                                    <div className="grid sm:grid-cols-2 gap-3">
                                         {benefits.map((benefit, idx) => (
-                                            <div key={idx} className="flex items-start gap-4 p-4 rounded-2xl border border-black/10 dark:border-white/10 bg-muted/30">
-                                                <span className="mt-1 w-2 h-2 rounded-full bg-pink-500 flex-shrink-0" />
+                                            <div key={idx} className="flex items-start gap-3 p-3 rounded-xl border border-black/10 dark:border-white/10 bg-muted/30">
+                                                <span className="mt-1.5 w-2 h-2 rounded-full bg-pink-500 flex-shrink-0" />
                                                 <span className="text-foreground/90 text-base font-medium">{benefit}</span>
                                             </div>
                                         ))}
