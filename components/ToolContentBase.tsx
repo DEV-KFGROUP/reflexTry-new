@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { HelpCircle, Info, Sparkles, TrendingUp, Zap, ArrowRight, CheckCircle2, Target, Trophy, Brain, List, Gamepad2, MousePointer2 } from "lucide-react";
+import { HelpCircle, Info, Sparkles, TrendingUp, ArrowRight, CheckCircle2, Target, Trophy, Brain, List, Gamepad2, MousePointer2 } from "lucide-react";
 import Link from "next/link";
 import { SchemaInjector } from "@/components/SchemaInjector";
 import { generateFAQPageSchema, generateHowToSchema } from "@/lib/structured-data";
@@ -16,47 +16,6 @@ interface RelatedTool {
     title: string;
     href: string;
 }
-
-const FloatingBackground = () => {
-    return (
-        <div className="absolute inset-0 overflow-hidden pointer-events-none z-[-1] rounded-3xl">
-            <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-purple-500/20 rounded-full blur-[100px] animate-pulse" />
-            <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-500/20 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '2s' }} />
-            
-            <motion.div
-                animate={{ y: [0, -20, 0], rotate: [0, 10, 0] }}
-                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-[15%] left-[5%] opacity-20"
-            >
-                <Brain className="w-32 h-32 text-purple-400 drop-shadow-[0_0_15px_rgba(168,85,247,0.8)]" />
-            </motion.div>
-
-            <motion.div
-                animate={{ y: [0, 30, 0], rotate: [0, -15, 0] }}
-                transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute bottom-[20%] right-[5%] opacity-20"
-            >
-                <Zap className="w-40 h-40 text-blue-400 drop-shadow-[0_0_15px_rgba(59,130,246,0.8)]" />
-            </motion.div>
-
-            <motion.div
-                animate={{ y: [0, -15, 0], x: [0, 15, 0], rotate: [0, 45, 0] }}
-                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-[40%] right-[15%] opacity-15"
-            >
-                <Target className="w-24 h-24 text-pink-400 drop-shadow-[0_0_15px_rgba(236,72,153,0.8)]" />
-            </motion.div>
-
-            <motion.div
-                animate={{ y: [0, 25, 0], x: [0, -20, 0] }}
-                transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute bottom-[30%] left-[10%] opacity-15"
-            >
-                <Gamepad2 className="w-28 h-28 text-cyan-400 drop-shadow-[0_0_15px_rgba(34,211,238,0.8)]" />
-            </motion.div>
-        </div>
-    );
-};
 
 export interface ContentSection {
     title: string;
@@ -239,36 +198,39 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
             {/* All sections visible in the DOM for users and crawlers (no hidden tabs) */}
             <motion.div
                 variants={itemVariants}
-                className="relative bg-black/5 dark:bg-white/5 backdrop-blur-3xl border border-black/10 dark:border-white/10 rounded-3xl p-4 md:p-8 shadow-[0_0_50px_rgba(139,92,246,0.15)] z-10"
+                className="relative z-10 space-y-10"
             >
-                <FloatingBackground />
-
                 <nav
-                    aria-label="Guide sections"
-                    className="relative z-10 flex flex-wrap gap-2 mb-10 p-2 rounded-2xl bg-black/5 dark:bg-black/20 border border-black/10 dark:border-white/10"
+                    aria-label="Jump to guide sections"
+                    className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center rounded-2xl border border-black/10 dark:border-white/10 bg-background/80 backdrop-blur-md p-3 sm:p-4"
                 >
-                    {[
-                        { href: "#guide-about", label: "About", icon: Info },
-                        { href: "#guide-how-to-play", label: "How to Play", icon: Gamepad2 },
-                        { href: "#guide-tips", label: "Pro Tips", icon: TrendingUp },
-                        { href: "#guide-faq", label: "FAQ", icon: HelpCircle },
-                    ].map(({ href, label, icon: Icon }) => (
-                        <a
-                            key={href}
-                            href={href}
-                            className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-sm font-bold text-foreground/70 hover:text-foreground hover:bg-white/10 transition-colors"
-                        >
-                            <Icon className="w-4 h-4" />
-                            {label}
-                        </a>
-                    ))}
+                    <span className="text-xs font-mono font-bold tracking-widest uppercase text-muted-foreground px-2">
+                        Jump to
+                    </span>
+                    <div className="flex flex-wrap gap-2">
+                        {[
+                            { href: "#guide-about", label: "About", icon: Info },
+                            { href: "#guide-how-to-play", label: "How to Play", icon: Gamepad2 },
+                            { href: "#guide-tips", label: "Pro Tips", icon: TrendingUp },
+                            { href: "#guide-faq", label: "FAQ", icon: HelpCircle },
+                        ].map(({ href, label, icon: Icon }) => (
+                            <a
+                                key={href}
+                                href={href}
+                                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-xl text-sm font-semibold border border-black/10 dark:border-white/10 bg-white/50 dark:bg-white/5 text-foreground hover:border-indigo-400/50 hover:bg-indigo-500/10 transition-colors"
+                            >
+                                <Icon className="w-4 h-4 text-indigo-400" />
+                                {label}
+                            </a>
+                        ))}
+                    </div>
                 </nav>
 
-                <div className="relative z-10 space-y-16">
+                <div className="space-y-12">
                     <section id="guide-about" className="scroll-mt-28">
-                        <div className="bg-black/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 rounded-3xl p-6 lg:p-10 shadow-xl">
+                        <div className="rounded-3xl border border-black/10 dark:border-white/10 bg-background p-6 lg:p-10 shadow-sm">
                             <h3 className="text-2xl font-black text-foreground mb-6 flex items-center gap-3">
-                                <Info className="w-6 h-6 text-indigo-400" />
+                                <Info className="w-6 h-6 text-indigo-500" />
                                 About This Test
                             </h3>
                             <div className="prose dark:prose-invert prose-lg max-w-none prose-headings:text-foreground prose-p:text-muted-foreground">
@@ -278,13 +240,13 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
                             {benefits && benefits.length > 0 ? (
                                 <div className="mt-12 pt-8 border-t border-black/10 dark:border-white/10">
                                     <h3 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-3">
-                                        <Brain className="w-6 h-6 text-pink-400 drop-shadow-[0_0_10px_rgba(244,114,182,0.8)]" />
+                                        <Brain className="w-6 h-6 text-pink-500" />
                                         What This Test Trains
                                     </h3>
                                     <div className="grid sm:grid-cols-2 gap-4">
                                         {benefits.map((benefit, idx) => (
-                                            <div key={idx} className="flex items-start gap-4 p-4 rounded-2xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10">
-                                                <span className="mt-1 w-2 h-2 rounded-full bg-pink-400 flex-shrink-0" />
+                                            <div key={idx} className="flex items-start gap-4 p-4 rounded-2xl border border-black/10 dark:border-white/10 bg-muted/30">
+                                                <span className="mt-1 w-2 h-2 rounded-full bg-pink-500 flex-shrink-0" />
                                                 <span className="text-foreground/90 text-base font-medium">{benefit}</span>
                                             </div>
                                         ))}
@@ -296,9 +258,9 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
 
                     <section id="guide-how-to-play" className="scroll-mt-28">
                         <div className="grid lg:grid-cols-3 gap-8">
-                            <div className="lg:col-span-2 bg-black/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 rounded-3xl p-6 lg:p-10 shadow-xl">
+                            <div className="lg:col-span-2 rounded-3xl border border-black/10 dark:border-white/10 bg-background p-6 lg:p-10 shadow-sm">
                                 <h3 className="text-2xl font-black text-foreground mb-8 flex items-center gap-3">
-                                    <List className="w-6 h-6 text-emerald-400 drop-shadow-[0_0_10px_rgba(52,211,153,0.8)]" />
+                                    <List className="w-6 h-6 text-emerald-500" />
                                     Step-by-Step Guide
                                 </h3>
                                 <div className="prose dark:prose-invert prose-lg max-w-none prose-headings:text-foreground prose-p:text-muted-foreground">
@@ -307,15 +269,15 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
                             </div>
 
                             <div className="space-y-6">
-                                <div className="bg-emerald-500/10 backdrop-blur-md border border-emerald-500/20 rounded-3xl p-8 shadow-xl">
+                                <div className="rounded-3xl border border-emerald-500/20 bg-emerald-500/5 p-8 shadow-sm">
                                     <div className="flex items-center gap-3 mb-6">
-                                        <Trophy className="w-6 h-6 text-emerald-400 drop-shadow-[0_0_10px_rgba(52,211,153,0.8)]" />
+                                        <Trophy className="w-6 h-6 text-emerald-500" />
                                         <h3 className="text-xl font-bold text-foreground">Rules</h3>
                                     </div>
                                     <ul className="space-y-4">
                                         {howToPlay?.map((step, idx) => (
                                             <li key={idx} className="flex gap-4 items-start text-base font-medium text-foreground/90">
-                                                <CheckCircle2 className="w-5 h-5 mt-0.5 text-emerald-400 flex-shrink-0" />
+                                                <CheckCircle2 className="w-5 h-5 mt-0.5 text-emerald-500 flex-shrink-0" />
                                                 {step}
                                             </li>
                                         ))}
@@ -326,9 +288,9 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
                     </section>
 
                     <section id="guide-tips" className="scroll-mt-28">
-                        <div className="bg-black/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 rounded-3xl p-6 lg:p-10 shadow-xl">
+                        <div className="rounded-3xl border border-black/10 dark:border-white/10 bg-background p-6 lg:p-10 shadow-sm">
                             <h3 className="text-2xl font-black text-foreground mb-8 flex items-center gap-3">
-                                <TrendingUp className="w-6 h-6 text-amber-400 drop-shadow-[0_0_10px_rgba(251,191,36,0.8)]" />
+                                <TrendingUp className="w-6 h-6 text-amber-500" />
                                 Expert Strategies
                             </h3>
                             <div className="prose dark:prose-invert prose-lg max-w-none prose-headings:text-foreground prose-p:text-muted-foreground">
@@ -339,14 +301,14 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
 
                     <section id="guide-faq" className="scroll-mt-28">
                         <h3 className="text-2xl font-black text-foreground mb-8 flex items-center gap-3">
-                            <HelpCircle className="w-6 h-6 text-pink-400" />
+                            <HelpCircle className="w-6 h-6 text-pink-500" />
                             Frequently Asked Questions
                         </h3>
                         <div className="grid md:grid-cols-2 gap-6">
                             {faqs?.map((faq, idx) => (
                                 <div
                                     key={idx}
-                                    className="bg-black/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 rounded-2xl p-8"
+                                    className="rounded-2xl border border-black/10 dark:border-white/10 bg-background p-8 shadow-sm"
                                 >
                                     <h4 className="text-lg font-bold text-foreground pr-4 mb-4">
                                         {faq.question}
