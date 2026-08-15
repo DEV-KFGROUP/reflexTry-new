@@ -60,12 +60,12 @@ export function Footer() {
                     {/* Brand Section */}
                     <div className="lg:col-span-2 space-y-6">
                         <Link href="/" className="flex items-center gap-3 group w-fit">
-                            <div className="relative w-12 h-12 flex items-center justify-center overflow-hidden rounded-xl border border-black/10 dark:border-white/10 bg-white/10 dark:bg-white/5 shadow-sm group-hover:border-indigo-500/50 group-hover:shadow-[0_0_15px_rgba(79,70,229,0.15)] transition-all duration-300">
+                            <div className="relative w-12 h-12 flex items-center justify-center overflow-hidden rounded-xl border border-black/10 dark:border-white/10 bg-slate-900 shadow-sm group-hover:border-indigo-500/50 group-hover:shadow-[0_0_15px_rgba(79,70,229,0.15)] transition-all duration-300">
                                 <Image
-                                    src="/apple-icon.png"
+                                    src="/logo-80x80.png"
                                     alt="Reflextry Logo"
-                                    width={48}
-                                    height={48}
+                                    width={40}
+                                    height={40}
                                     className="object-contain group-hover:scale-105 transition-transform duration-300"
                                 />
                             </div>

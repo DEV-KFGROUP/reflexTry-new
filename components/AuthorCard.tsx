@@ -14,7 +14,7 @@ export function AuthorCard({
     name = "Reflextry Editorial",
     role = "Cognitive Assessment & Benchmark Research Team",
     bio = "Written and reviewed by Reflextry's cognitive science research team. Grounded in peer-reviewed neuroscience, human-computer interaction, and psychomotor literature.",
-    avatarUrl = "/apple-icon.png",
+    avatarUrl = "/logo-80x80.png",
     expertise = ["Reaction Time Benchmarks", "Working Memory Capacity", "Sensorimotor Calibration", "Esports Warmup Mechanics"]
 }: AuthorCardProps) {
     return (
@@ -23,13 +23,13 @@ export function AuthorCard({
             itemScope 
             itemType="https://schema.org/Person"
         >
-            <div className="relative w-14 h-14 rounded-full overflow-hidden shrink-0 border-2 border-cyan-500/30 bg-white dark:bg-slate-950 flex items-center justify-center shadow-sm">
+            <div className="w-14 h-14 rounded-full overflow-hidden shrink-0 border-2 border-cyan-500/30 bg-slate-900 flex items-center justify-center shadow-sm">
                 <Image 
                     src={avatarUrl} 
                     alt={name} 
-                    fill 
-                    className="object-contain p-2" 
-                    sizes="56px"
+                    width={44}
+                    height={44}
+                    className="object-contain rounded-full" 
                     itemProp="image"
                 />
             </div>

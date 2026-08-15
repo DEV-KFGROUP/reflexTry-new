@@ -37,13 +37,12 @@ export function Navbar() {
                     
                     {/* Logo Area */}
                     <Link href="/" className="flex items-center gap-3 group">
-                        <div className="relative w-10 h-10 rounded-xl overflow-hidden bg-white/5 dark:bg-white/5 border border-black/10 dark:border-white/10 shadow-sm flex items-center justify-center group-hover:border-indigo-500/50 group-hover:shadow-[0_0_15px_rgba(79,70,229,0.15)] transition-all duration-300">
+                        <div className="relative w-10 h-10 rounded-xl overflow-hidden bg-slate-900 border border-black/10 dark:border-white/10 shadow-sm flex items-center justify-center group-hover:border-indigo-500/50 group-hover:shadow-[0_0_15px_rgba(79,70,229,0.15)] transition-all duration-300">
                             <Image
-                                src="/apple-icon.png"
+                                src="/logo-80x80.png"
                                 alt="Reflextry Logo"
-                                width={40}
-                                height={40}
-                                sizes="40px"
+                                width={34}
+                                height={34}
                                 className="object-contain relative z-10 rounded-md group-hover:scale-105 transition-transform duration-300"
                                 priority={true}
                             />
