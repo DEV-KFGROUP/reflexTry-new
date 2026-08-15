@@ -95,33 +95,38 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
         if (typeof howToUse === 'string') {
             return (
                 <div
-                    className="text-muted-foreground leading-relaxed text-base prose prose-invert max-w-none prose-headings:text-foreground prose-headings:text-lg prose-headings:font-bold prose-headings:mt-4 prose-headings:mb-2 prose-p:text-base prose-p:mb-3 prose-li:text-base"
+                    className="text-muted-foreground leading-relaxed text-sm prose prose-invert max-w-none prose-headings:text-foreground prose-headings:text-base prose-headings:font-bold prose-headings:mt-3 prose-headings:mb-1 prose-p:text-sm prose-p:mb-2 prose-li:text-sm"
                     dangerouslySetInnerHTML={{ __html: howToUse }}
                 />
             );
         }
 
         return (
-            <div className="relative space-y-8 before:absolute before:inset-y-0 before:left-5 before:w-0.5 before:-translate-x-px before:bg-gradient-to-b before:from-transparent before:via-accuracy/50 before:to-transparent">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {howToUse?.map((step, idx) => (
-                    <div key={idx} className="relative flex items-start gap-6 group">
-                        <div className="relative flex-shrink-0 flex h-10 w-10 items-center justify-center rounded-full border border-accuracy/30 bg-card shadow-lg shadow-accuracy/20 group-hover:border-accuracy group-hover:scale-110 transition duration-200 z-10">
-                            <span className="text-lg font-bold text-accuracy">{idx + 1}</span>
-                        </div>
-                        <div className="flex-1 min-w-0 space-y-3 pt-1">
-                            <h3 className="text-xl font-bold text-foreground group-hover:text-accuracy transition-colors">
-                                {step.title}
-                            </h3>
+                    <div 
+                        key={idx} 
+                        className="p-5 rounded-2xl bg-muted/20 border border-black/10 dark:border-white/10 flex flex-col justify-between space-y-3 hover:border-cyan-500/30 transition-colors"
+                    >
+                        <div className="space-y-2">
+                            <div className="flex items-center gap-2.5">
+                                <span className="flex items-center justify-center w-7 h-7 rounded-xl bg-cyan-500/10 text-cyan-600 dark:text-cyan-400 font-mono font-bold text-xs border border-cyan-500/20">
+                                    {idx + 1}
+                                </span>
+                                <h4 className="font-mono font-bold text-foreground text-sm">
+                                    {step.title}
+                                </h4>
+                            </div>
                             {step.description && (
-                                <p className="text-muted-foreground text-base leading-relaxed">
+                                <p className="text-muted-foreground text-xs leading-relaxed">
                                     {step.description}
                                 </p>
                             )}
                             {(step.subSteps || step.steps) && (
-                                <ul className="mt-1 space-y-2.5">
+                                <ul className="mt-2 space-y-1.5 text-xs text-foreground/80">
                                     {(step.subSteps || step.steps)?.map((sub, sIdx) => (
-                                        <li key={sIdx} className="flex items-start gap-2.5 text-base text-foreground/90 leading-relaxed">
-                                            <CheckCircle2 className="w-5 h-5 mt-0.5 text-accuracy/70 flex-shrink-0" />
+                                        <li key={sIdx} className="flex items-start gap-2">
+                                            <CheckCircle2 className="w-3.5 h-3.5 mt-0.5 text-cyan-500 flex-shrink-0" />
                                             <span>{sub}</span>
                                         </li>
                                     ))}
@@ -257,33 +262,37 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
                     </section>
 
                     <section id="guide-how-to-play" className="scroll-mt-28">
-                        <div className="grid lg:grid-cols-3 gap-8">
-                            <div className="lg:col-span-2 rounded-3xl border border-black/10 dark:border-white/10 bg-background p-6 lg:p-10 shadow-sm">
-                                <h3 className="text-2xl font-black text-foreground mb-8 flex items-center gap-3">
-                                    <List className="w-6 h-6 text-emerald-500" />
-                                    Step-by-Step Guide
+                        <div className="rounded-3xl border border-black/10 dark:border-white/10 bg-background p-6 lg:p-8 shadow-sm space-y-6">
+                            <div className="flex flex-wrap items-center justify-between gap-3 border-b border-black/5 dark:border-white/5 pb-4">
+                                <h3 className="text-xl font-mono font-bold text-foreground flex items-center gap-2.5">
+                                    <Gamepad2 className="w-5 h-5 text-cyan-500" />
+                                    Instructions &amp; Mechanics
                                 </h3>
-                                <div className="prose dark:prose-invert prose-lg max-w-none prose-headings:text-foreground prose-p:text-muted-foreground">
-                                    {renderHowToUse()}
-                                </div>
+                                <span className="text-xs font-mono text-muted-foreground uppercase tracking-widest">
+                                    Quick Setup
+                                </span>
                             </div>
 
-                            <div className="space-y-6">
-                                <div className="rounded-3xl border border-emerald-500/20 bg-emerald-500/5 p-8 shadow-sm">
-                                    <div className="flex items-center gap-3 mb-6">
-                                        <Trophy className="w-6 h-6 text-emerald-500" />
-                                        <h3 className="text-xl font-bold text-foreground">Rules</h3>
-                                    </div>
-                                    <ul className="space-y-4">
-                                        {howToPlay?.map((step, idx) => (
-                                            <li key={idx} className="flex gap-4 items-start text-base font-medium text-foreground/90">
-                                                <CheckCircle2 className="w-5 h-5 mt-0.5 text-emerald-500 flex-shrink-0" />
-                                                {step}
-                                            </li>
+                            {/* Step Cards Grid */}
+                            {renderHowToUse()}
+
+                            {/* Rules Bar if howToPlay is present */}
+                            {howToPlay && howToPlay.length > 0 && (
+                                <div className="p-4 rounded-2xl bg-cyan-500/5 border border-cyan-500/20 flex flex-col md:flex-row md:items-center gap-3 text-xs">
+                                    <span className="font-mono font-bold text-cyan-600 dark:text-cyan-400 flex items-center gap-1.5 flex-shrink-0">
+                                        <Trophy className="w-4 h-4 text-cyan-500" />
+                                        Key Rules:
+                                    </span>
+                                    <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-muted-foreground">
+                                        {howToPlay.map((step, idx) => (
+                                            <span key={idx} className="flex items-center gap-1.5">
+                                                <span className="text-cyan-500 font-bold">✓</span>
+                                                <span>{step}</span>
+                                            </span>
                                         ))}
-                                    </ul>
+                                    </div>
                                 </div>
-                            </div>
+                            )}
                         </div>
                     </section>
 
