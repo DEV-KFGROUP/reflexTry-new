@@ -15,8 +15,10 @@ export function StructuredData({ type, data }: StructuredDataProps) {
 
     return (
         <script
+            id={`structured-data-${type.toLowerCase()}`}
             type="application/ld+json"
             dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+            suppressHydrationWarning
         />
     );
 }
@@ -29,6 +31,8 @@ export {
     generateOrganizationSchema,
     generateWebPageSchema,
     generateFAQPageSchema,
-    generateSoftwareApplicationSchema
+    generateSoftwareApplicationSchema,
+    generateDatasetSchema,
+    generateItemListSchema
 } from "@/lib/structured-data";
 

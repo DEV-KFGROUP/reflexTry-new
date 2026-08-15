@@ -18,9 +18,9 @@ export function Navbar() {
     // Pre-compute nav links with game-themed icons and specific highlight colors
     const navLinks = [
         { name: "Home", href: "/", icon: Gamepad2, color: "group-hover:text-indigo-600" },
-        { name: "Memory", href: "/memory", icon: Brain, color: "group-hover:text-purple-600" },
         { name: "Reflex", href: "/reflex", icon: Zap, color: "group-hover:text-amber-500" },
         { name: "Speed", href: "/speed", icon: Gauge, color: "group-hover:text-cyan-600" },
+        { name: "Memory", href: "/memory", icon: Brain, color: "group-hover:text-purple-600" },
         { name: "Accuracy", href: "/accuracy", icon: Target, color: "group-hover:text-emerald-500" },
         { name: "Tools", href: "/tools", icon: null, color: "group-hover:text-slate-800" },
         { name: "Leaderboard", href: "/leaderboard", icon: Trophy, color: "group-hover:text-amber-600" },

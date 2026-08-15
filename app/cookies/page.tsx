@@ -11,14 +11,12 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function CookiesPolicy() {
     const breadcrumbSchema = generateBreadcrumbStructuredData([
         { name: "Home", url: "/" },
-        { name: "Cookies", url: "/cookies" },
+        { name: "Cookie Policy", url: "/cookies" },
     ]);
     
-    // For these static pages, we don't have the config object imported, 
-    // but we can generate a basic WebPage schema with the title.
     const webPageSchema = generateWebPageSchema(
-        "Cookies",
-        "Learn more about Reflextry and our brain training tools.",
+        "Cookies Policy - Cookie Usage & Management | Reflextry",
+        "Learn about how Reflextry uses cookies, including Google AdSense cookies. Manage your cookie preferences and understand our cookie policy.",
         "/cookies"
     );
 

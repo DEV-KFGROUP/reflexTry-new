@@ -6,7 +6,7 @@ export function HomeSEOContent() {
             <div className="space-y-12 bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 p-8 rounded-3xl">
                 <div className="space-y-4">
                     <h2 className="text-3xl font-bold text-foreground">Why Test Your Reflexes and Memory?</h2>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="aeo-answer text-muted-foreground leading-relaxed" data-speakable="true">
                         It&apos;s simple: you can&apos;t improve what you don&apos;t measure. Brain training and reflex testing give you hard data on your physical and cognitive speed. When you grind these tasks, you&apos;re literally forcing your brain to adapt and build new neural pathways (neuroplasticity). Faster processing, sharper focus, and quicker physical reactions.
                     </p>
                 </div>
@@ -76,7 +76,7 @@ export function HomeSEOContent() {
                 </div>
 
                 {/* Comprehensive SEO FAQ for the homepage */}
-                <div className="space-y-6 pt-8 border-t border-black/10 dark:border-white/10">
+                <div className="space-y-6 pt-8 border-t border-black/10 dark:border-white/10" data-speakable="true">
                     <div className="flex items-center gap-3">
                         <Activity className="w-6 h-6 text-green-500" />
                         <h2 className="text-2xl font-bold text-foreground">Frequently Asked Questions</h2>
@@ -85,25 +85,25 @@ export function HomeSEOContent() {
                     <div className="grid md:grid-cols-2 gap-6">
                         <div className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-6">
                             <h3 className="text-lg font-bold text-foreground mb-3">Does this actually work?</h3>
-                            <p className="text-muted-foreground leading-relaxed">
+                            <p className="aeo-answer text-muted-foreground leading-relaxed">
                                 Yeah, it does. Pushing your limits on memory or reaction tasks forces your brain to adapt—a process called neuroplasticity. If you consistently test yourself, your brain literally wires itself to process that specific information faster. It&apos;s exactly like lifting weights, but for your central nervous system.
                             </p>
                         </div>
                         <div className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-6">
                             <h3 className="text-lg font-bold text-foreground mb-3">How often should I be testing?</h3>
-                            <p className="text-muted-foreground leading-relaxed">
+                            <p className="aeo-answer text-muted-foreground leading-relaxed">
                                 Keep it short but daily. 10 to 15 minutes of highly focused training is the sweet spot. If you play for three hours straight, fatigue sets in and you stop learning. Hit the Memory arena to stretch your brain, run the Speed arena to wake up your hands, and then get on with your day.
                             </p>
                         </div>
                         <div className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-6">
                             <h3 className="text-lg font-bold text-foreground mb-3">Is this good for esports warmups?</h3>
-                            <p className="text-muted-foreground leading-relaxed">
+                            <p className="aeo-answer text-muted-foreground leading-relaxed">
                                 100%. A massive chunk of our users are competitive players using the Aim Trainer, Grid Click, and Flick Shot tools to wake up their fast-twitch muscles before queuing ranked. Knowing your millisecond latency before you play tells you if you&apos;re peaking or if you&apos;re too tired to perform.
                             </p>
                         </div>
                         <div className="bg-black/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-2xl p-6">
                             <h3 className="text-lg font-bold text-foreground mb-3">Is Reflextry free?</h3>
-                            <p className="text-muted-foreground leading-relaxed">
+                            <p className="aeo-answer text-muted-foreground leading-relaxed">
                                 Yes. The core reaction time tests, memory tools, and aim trainers are completely free and run right in your browser. We built this because we were tired of paywalls blocking basic performance benchmarks.
                             </p>
                         </div>

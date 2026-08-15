@@ -11,14 +11,12 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function Contact() {
     const breadcrumbSchema = generateBreadcrumbStructuredData([
         { name: "Home", url: "/" },
-        { name: "Contact", url: "/contact" },
+        { name: "Contact Us", url: "/contact" },
     ]);
     
-    // For these static pages, we don't have the config object imported, 
-    // but we can generate a basic WebPage schema with the title.
     const webPageSchema = generateWebPageSchema(
-        "Contact",
-        "Learn more about Reflextry and our brain training tools.",
+        "Contact Us - Get in Touch | Reflextry",
+        "Contact Reflextry for questions, support, or feedback. We're here to help with your brain training and cognitive testing needs.",
         "/contact"
     );
 

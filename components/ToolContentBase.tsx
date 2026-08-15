@@ -299,7 +299,7 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
                         </div>
                     </section>
 
-                    <section id="guide-faq" className="scroll-mt-28">
+                    <section id="guide-faq" className="scroll-mt-28" data-speakable="true">
                         <h3 className="text-2xl font-black text-foreground mb-8 flex items-center gap-3">
                             <HelpCircle className="w-6 h-6 text-pink-500" />
                             Frequently Asked Questions
@@ -309,13 +309,17 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
                                 <div
                                     key={idx}
                                     className="rounded-2xl border border-black/10 dark:border-white/10 bg-background p-8 shadow-sm"
+                                    itemScope
+                                    itemType="https://schema.org/Question"
                                 >
-                                    <h4 className="text-lg font-bold text-foreground pr-4 mb-4">
+                                    <h4 className="text-lg font-bold text-foreground pr-4 mb-4" itemProp="name">
                                         {faq.question}
                                     </h4>
-                                    <p className="text-muted-foreground text-base leading-relaxed border-t border-black/10 dark:border-white/10 pt-4">
-                                        {faq.answer}
-                                    </p>
+                                    <div itemProp="acceptedAnswer" itemScope itemType="https://schema.org/Answer">
+                                        <p className="aeo-answer text-muted-foreground text-base leading-relaxed border-t border-black/10 dark:border-white/10 pt-4" itemProp="text">
+                                            {faq.answer}
+                                        </p>
+                                    </div>
                                 </div>
                             ))}
                         </div>

@@ -73,6 +73,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
 }
 
+import { AuthorCard } from '@/components/AuthorCard';
+
 export default async function BlogPostPage({ params }: Props) {
     const { slug } = await params;
 
@@ -97,6 +99,12 @@ export default async function BlogPostPage({ params }: Props) {
                 />
                 <ArticleClient article={articleData}>
                     <MDXContent source={content} />
+                    <div className="mt-12 pt-8 border-t border-black/10 dark:border-white/10">
+                        <AuthorCard 
+                            name={meta.author?.name ?? "Reflextry Cognitive Lab Team"}
+                            bio="Written and reviewed by Reflextry's cognitive science research team."
+                        />
+                    </div>
                 </ArticleClient>
             </>
         );

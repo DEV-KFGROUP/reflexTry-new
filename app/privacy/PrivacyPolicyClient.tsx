@@ -68,8 +68,19 @@ export default function PrivacyPolicyClient() {
                         Security & Trust Protocol
                     </div>
 
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-mono font-extrabold tracking-tight text-slate-900 uppercase">
-                        Privacy <span className="bg-gradient-to-r from-cyan-500 via-blue-600 to-violet-600 bg-clip-text text-transparent">Policy</span>
+                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-mono font-extrabold tracking-tight text-slate-900 dark:text-white uppercase">
+                        Privacy{" "}
+                        <span
+                            className="inline-block text-cyan-600"
+                            style={{
+                                background: "linear-gradient(110deg, #0891b2 0%, #2563eb 50%, #7c3aed 100%)",
+                                WebkitBackgroundClip: "text",
+                                WebkitTextFillColor: "transparent",
+                                backgroundClip: "text",
+                            }}
+                        >
+                            Policy
+                        </span>
                     </h1>
 
                     <p className="text-xs font-mono text-slate-400 max-w-xl mx-auto leading-relaxed">

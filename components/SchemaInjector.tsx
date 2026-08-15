@@ -9,13 +9,18 @@ export function SchemaInjector({ schemas }: SchemaInjectorProps) {
 
     return (
         <>
-            {schemas.filter(Boolean).map((schema, index) => (
-                <script
-                    key={`schema-${index}`}
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-                />
-            ))}
+            {schemas.filter(Boolean).map((schema, index) => {
+                const schemaType = (schema && schema["@type"]) ? String(schema["@type"]).toLowerCase() : `item-${index}`;
+                return (
+                    <script
+                        id={`schema-injector-${schemaType}-${index}`}
+                        key={`schema-${index}`}
+                        type="application/ld+json"
+                        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+                        suppressHydrationWarning
+                    />
+                );
+            })}
         </>
     );
 }

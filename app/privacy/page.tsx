@@ -11,14 +11,12 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function PrivacyPolicy() {
     const breadcrumbSchema = generateBreadcrumbStructuredData([
         { name: "Home", url: "/" },
-        { name: "Privacy", url: "/privacy" },
+        { name: "Privacy Policy", url: "/privacy" },
     ]);
     
-    // For these static pages, we don't have the config object imported, 
-    // but we can generate a basic WebPage schema with the title.
     const webPageSchema = generateWebPageSchema(
-        "Privacy",
-        "Learn more about Reflextry and our brain training tools.",
+        "Privacy Policy - Data Protection & Privacy | Reflextry",
+        "Read our privacy policy to understand how Reflextry collects, uses, and protects your data. We use Google AdSense and respect your privacy.",
         "/privacy"
     );
 

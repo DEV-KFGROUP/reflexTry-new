@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import { getBaseUrl, getBaseUrlObject } from "@/lib/base-url";
+import { getHreflangAlternates, PRIMARY_OG_LOCALE, CONTENT_LANGUAGE_HEADER } from "@/lib/international-seo";
 
 interface SEOProps {
     title: string;
@@ -38,9 +39,18 @@ export function generateSEOMetadata({
     const canonicalUrl = `${baseUrl}${cleanPath === '/' ? '' : cleanPath}`;
     const fullImageUrl = image.startsWith("http") ? image : `${baseUrl}${image}`;
 
+    // Format full title cleanly — ensure Reflextry suffix is present once
+    const fullTitle = title.includes("Reflextry") ? title : `${title} | Reflextry`;
+
+    // Generate hreflang alternates for all target locales
+    // All point to the same URL (single-language site serving global audience)
+    const hreflangAlternates = getHreflangAlternates(canonicalUrl);
+
     return {
         metadataBase: getBaseUrlObject(),
-        title,
+        title: {
+            absolute: fullTitle,
+        },
         description,
         keywords: keywords.join(", "),
         authors: [{ name: "Reflextry" }],
@@ -59,9 +69,9 @@ export function generateSEOMetadata({
         },
         openGraph: {
             type,
-            locale: "en",
+            locale: PRIMARY_OG_LOCALE,
             url: canonicalUrl,
-            title,
+            title: fullTitle,
             description,
             siteName: "Reflextry",
             images: [
@@ -69,19 +79,23 @@ export function generateSEOMetadata({
                     url: fullImageUrl,
                     width: 1200,
                     height: 630,
-                    alt: title,
+                    alt: fullTitle,
                 },
             ],
         },
         twitter: {
             card: "summary_large_image",
-            title,
+            title: fullTitle,
             description,
             images: [fullImageUrl],
             creator: "@reflextry",
         },
         alternates: {
             canonical: cleanPath || '/',
+            languages: hreflangAlternates,
+        },
+        other: {
+            'content-language': CONTENT_LANGUAGE_HEADER,
         },
     };
 }

@@ -192,10 +192,18 @@ export default function FAQClient() {
                             <HelpCircle className="w-7 h-7 text-cyan-600" />
                         </div>
                         <div>
-                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-mono font-extrabold tracking-tight text-slate-900 uppercase leading-none">
-                                Frequently{" "}
-                                <span className="bg-gradient-to-r from-cyan-500 via-blue-600 to-violet-600 bg-clip-text text-transparent">
-                                    Asked
+                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-mono font-extrabold tracking-tight text-slate-900 dark:text-white uppercase leading-none">
+                                Frequently Asked{" "}
+                                <span
+                                    className="inline-block text-cyan-600"
+                                    style={{
+                                        background: "linear-gradient(110deg, #0891b2 0%, #2563eb 50%, #7c3aed 100%)",
+                                        WebkitBackgroundClip: "text",
+                                        WebkitTextFillColor: "transparent",
+                                        backgroundClip: "text",
+                                    }}
+                                >
+                                    Questions
                                 </span>
                             </h1>
                             <p className="mt-4 text-sm md:text-base text-slate-500 max-w-2xl leading-relaxed">

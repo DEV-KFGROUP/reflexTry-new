@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import { getContentSlugs, getContentBySlug, getLatestBlogModifiedDate } from '@/lib/content/loader';
 import { getBaseUrl } from '@/lib/base-url';
+import { getHreflangAlternates } from '@/lib/international-seo';
 import type { Article } from '@/lib/content/types';
 
 export const dynamic = 'force-static';
@@ -95,36 +96,48 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     for (const route of allRoutes) {
         const isHome = route === '';
         const priority = isHome ? 1.0 : route.split('/').length === 2 ? 0.9 : 0.8;
+        const pageUrl = `${siteUrl}${route}`;
 
         entries.push({
-            url: `${siteUrl}${route}`,
+            url: pageUrl,
             lastModified: staticLastMod,
             changeFrequency: isHome ? 'daily' : 'weekly',
             priority,
+            alternates: {
+                languages: getHreflangAlternates(pageUrl),
+            },
         });
     }
 
     const blogSlugs = await getContentSlugs('blog');
     for (const file of blogSlugs) {
         const cleanSlug = file.replace(/\.mdx?$/, '');
+        const blogUrl = `${siteUrl}/blog/${cleanSlug}`;
         try {
             const { meta } = await getContentBySlug<Article>('blog', cleanSlug);
             const lastModified = new Date(meta.updatedAt ?? meta.publishedAt);
             entries.push({
-                url: `${siteUrl}/blog/${cleanSlug}`,
+                url: blogUrl,
                 lastModified,
                 changeFrequency: 'weekly',
                 priority: 0.7,
+                alternates: {
+                    languages: getHreflangAlternates(blogUrl),
+                },
             });
         } catch {
             entries.push({
-                url: `${siteUrl}/blog/${cleanSlug}`,
+                url: blogUrl,
                 lastModified: staticLastMod,
                 changeFrequency: 'weekly',
                 priority: 0.7,
+                alternates: {
+                    languages: getHreflangAlternates(blogUrl),
+                },
             });
         }
     }
 
     return entries;
 }
+

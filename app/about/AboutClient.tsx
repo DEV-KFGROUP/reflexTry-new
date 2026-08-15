@@ -134,10 +134,18 @@ export default function AboutClient() {
                         Identity Profile
                     </div>
 
-                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-mono font-extrabold tracking-tight text-slate-900 uppercase leading-none">
+                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-mono font-extrabold tracking-tight text-slate-900 dark:text-white uppercase leading-none">
                         About{" "}
-                        <span className="bg-gradient-to-r from-cyan-500 via-blue-600 to-violet-600 bg-clip-text text-transparent">
-                            Reflextry
+                        <span
+                            className="inline-block text-cyan-600"
+                            style={{
+                                background: "linear-gradient(110deg, #0891b2 0%, #2563eb 50%, #7c3aed 100%)",
+                                WebkitBackgroundClip: "text",
+                                WebkitTextFillColor: "transparent",
+                                backgroundClip: "text",
+                            }}
+                        >
+                            Us
                         </span>
                     </h1>
 
@@ -312,7 +320,7 @@ export default function AboutClient() {
                                         className="relative w-40 h-40 mb-4 rounded-2xl overflow-hidden border-2 border-cyan-200 group-hover:border-cyan-400 transition-colors duration-300"
                                         style={{ boxShadow: "0 8px 24px rgba(6,182,212,0.12), 0 2px 6px rgba(15,23,42,0.06)", transform: "perspective(600px) rotateX(4deg) rotateY(-4deg)" }}
                                     >
-                                        <Image src="/images/team/rabadiya-kaushik.webp" alt="Rabadiya Kaushik" fill className="object-cover" />
+                                        <Image src="/images/team/rabadiya-kaushik.webp" alt="Rabadiya Kaushik" fill sizes="160px" className="object-cover" />
                                     </div>
                                     <h3 className="text-lg font-mono font-bold text-slate-900 mb-0.5 group-hover:text-cyan-600 transition-colors">Rabadiya Kaushik</h3>
                                     <p className="text-sm text-slate-500 font-mono mb-2">Founder &amp; Full-Stack Developer</p>
@@ -329,7 +337,7 @@ export default function AboutClient() {
                                         className="relative w-40 h-40 mb-4 rounded-2xl overflow-hidden border-2 border-violet-200 group-hover:border-violet-400 transition-colors duration-300"
                                         style={{ boxShadow: "0 8px 24px rgba(139,92,246,0.12), 0 2px 6px rgba(15,23,42,0.06)", transform: "perspective(600px) rotateX(4deg) rotateY(-4deg)" }}
                                     >
-                                        <Image src="/images/team/harshil-miyani.webp" alt="Harshil Miyani" fill className="object-cover" />
+                                        <Image src="/images/team/harshil-miyani.webp" alt="Harshil Miyani" fill sizes="160px" className="object-cover" />
                                     </div>
                                     <h3 className="text-lg font-mono font-bold text-slate-900 mb-0.5 group-hover:text-violet-600 transition-colors">Harshil Miyani</h3>
                                     <p className="text-sm text-slate-500 font-mono mb-2">Growth &amp; Content</p>

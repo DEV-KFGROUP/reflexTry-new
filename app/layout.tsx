@@ -4,13 +4,13 @@ import { Outfit } from "next/font/google";
 import "./globals.css";
 import { NavbarDynamic } from "@/components/NavbarDynamic";
 import { Footer } from "@/components/Footer";
-import { AdSense } from "@/components/AdSense";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { LazyLoadedComponents } from "@/components/LazyLoadedComponents";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { CookieBanner } from "@/components/CookieBanner";
 import { StructuredData, generateOrganizationSchema } from "@/components/StructuredData";
+import { getOGLocaleAlternates } from "@/lib/international-seo";
 const outfit = Outfit({
   variable: "--font-outfit",
   subsets: ["latin"],
@@ -51,7 +51,7 @@ export async function generateMetadata(): Promise<Metadata> {
     },
     openGraph: {
       type: "website",
-      locale: "en",
+      locale: "en_US",
       siteName: "Reflextry",
       title: "Reflextry - Test Your Accuracy & Reflexes",
       description: "Test your accuracy and reflexes with our Gen Z tools. Free online brain training games.",
@@ -379,16 +379,31 @@ export default async function RootLayout({
         />
 
 
-        {/* Non-critical scripts - Loaded asynchronously after page is interactive */}
-        {/* These are client components that load scripts lazily */}
+        {/* Google AdSense official script - Rendered directly in head for verification crawlers */}
+        <script
+          id="google-adsense"
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3064655546051154"
+          crossOrigin="anonymous"
+          suppressHydrationWarning
+        />
+
+        {/* Non-critical analytics */}
         <GoogleAnalytics />
-        <AdSense pId="ca-pub-3064655546051154" />
 
         {/* Essential favicons only - Reduce requests */}
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
         <link rel="apple-touch-icon" href="/apple-icon.png" />
         <link rel="manifest" href="/manifest.json" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.reflextry.com" />
+        <link rel="alternate" hrefLang="en" href="https://www.reflextry.com" />
+        <meta httpEquiv="content-language" content="en" />
+        {/* OpenGraph locale alternates — signals global relevance to social/AI crawlers */}
+        <meta property="og:locale" content="en_US" />
+        {getOGLocaleAlternates().map(locale => (
+          <meta key={locale} property="og:locale:alternate" content={locale} />
+        ))}
         <meta name="theme-color" content="#f8fafc" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />

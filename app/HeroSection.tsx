@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Gamepad2, Trophy } from "lucide-react";
+import { ArrowRight, Gamepad2, Trophy, Zap } from "lucide-react";
 
 export function HeroSection() {
   const FLOATING_SHAPES = [
@@ -56,12 +56,12 @@ export function HeroSection() {
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-14 flex flex-col items-center text-center gap-6">
 
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-cyan-400/25 bg-white/80 backdrop-blur-sm shadow-sm text-cyan-700 text-xs font-mono tracking-widest uppercase">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-amber-400/25 bg-white/80 backdrop-blur-sm shadow-sm text-amber-700 dark:text-amber-400 text-xs font-mono tracking-widest uppercase">
             <span
-              className="w-1.5 h-1.5 rounded-full bg-cyan-500 flex-shrink-0"
+              className="w-1.5 h-1.5 rounded-full bg-amber-500 flex-shrink-0"
               style={{ animation: "hud-blink 1.6s ease-in-out infinite" }}
             />
-            Free Mechanical Training
+            ⚡ Millisecond Reaction &amp; Reflex Benchmarks
           </div>
 
           {/* Headline */}
@@ -75,21 +75,22 @@ export function HeroSection() {
                 backgroundClip: "text",
               }}
             >
-              Mechanical Limits
-            </span>
+              Reaction Time
+            </span>{" "}
+            &amp; Reflexes
           </h1>
 
           {/* Sub */}
           <p className="max-w-2xl text-slate-500 text-base sm:text-lg leading-relaxed">
-            <strong className="text-slate-700">37+ free modules</strong> to measure and push your raw reaction time, working memory, and clicking accuracy. No fluff, just pure mechanics.
+            <strong className="text-slate-700">37+ free tools</strong> to measure your raw biological reaction latency down to the millisecond. Benchmark your reflexes, memory, and aim precision against global averages.
           </p>
 
           {/* Stats row */}
           <div className="flex flex-wrap items-center justify-center gap-3">
             {[
-              { val: "37+", label: "Tools" },
-              { val: "5", label: "Categories" },
-              { val: "100%", label: "Free" },
+              { val: "200ms", label: "Avg Human Reaction" },
+              { val: "37+", label: "Interactive Tools" },
+              { val: "100%", label: "Free & In-Browser" },
             ].map((s) => (
               <div
                 key={s.label}
@@ -104,7 +105,7 @@ export function HeroSection() {
           {/* CTAs */}
           <div className="flex flex-wrap justify-center gap-3 pt-1">
             <Link
-              href="/tools"
+              href="/reflex/reaction"
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm font-mono font-bold transition-all duration-150 active:translate-y-0.5"
               style={{
                 background: "linear-gradient(135deg,#0891b2 0%,#7c3aed 100%)",
@@ -112,16 +113,16 @@ export function HeroSection() {
                 boxShadow: "0 4px 20px rgba(6,182,212,0.30), inset 0 1px 0 rgba(255,255,255,0.18)",
               }}
             >
-              <Gamepad2 className="w-4 h-4" />
-              Start Testing
+              <Zap className="w-4 h-4 text-amber-300" />
+              Test Reaction Time
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
-              href="/leaderboard"
+              href="/tools"
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm font-mono font-bold border border-slate-200 bg-white/80 backdrop-blur-sm text-slate-700 hover:border-cyan-300 hover:text-cyan-600 shadow-sm transition-all duration-150"
             >
-              <Trophy className="w-4 h-4" />
-              Leaderboard
+              <Gamepad2 className="w-4 h-4" />
+              Explore All Tools
             </Link>
           </div>
 

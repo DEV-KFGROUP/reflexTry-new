@@ -8,15 +8,38 @@ export default function robots(): MetadataRoute.Robots {
         rules: [
             {
                 userAgent: '*',
-                // Allow all pages and static assets (JS, CSS needed for rendering)
+                // Allow all pages and static assets
                 allow: '/',
-                // Only block private routes - NOT /_next/ as Google needs those to render
                 disallow: [
                     '/api/',      // API endpoints (private)
                     '/admin/',    // Admin routes (if any)
                 ],
             },
+            {
+                // AI / LLM crawlers — explicit allow for maximum discoverability
+                userAgent: [
+                    'GPTBot',
+                    'ChatGPT-User',
+                    'Google-Extended',
+                    'PerplexityBot',
+                    'anthropic-ai',
+                    'ClaudeBot',
+                    'Cohere-AI',
+                    'Applebot-Extended',
+                    'YouBot',
+                    'CCBot',
+                ],
+                allow: [
+                    '/',
+                    '/llms.txt',
+                    '/llms-full.txt',
+                    '/ai.txt',
+                    '/.well-known/ai-plugin.json',
+                ],
+                disallow: ['/api/'],
+            },
         ],
         sitemap: `${BASE_URL}/sitemap.xml`,
     };
 }
+

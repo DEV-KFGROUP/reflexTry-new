@@ -7,6 +7,9 @@ import { SEO_CONFIGS } from '@/config/seo-config';
 import { ToolContent } from '@/components/ToolContent';
 import { getToolContent } from '@/lib/tool-content';
 
+import { AEOAnswerBlock } from '@/components/AEOAnswerBlock';
+import { AEO_DEFINITIONS } from '@/lib/aeo-definitions';
+
 export async function generateMetadata(): Promise<Metadata> {
     return getToolMetadata('typing-speed', '/speed/typing');
 }
@@ -14,6 +17,8 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function Page() {
     const config = SEO_CONFIGS['typing-speed'];
     const content = getToolContent('typing-speed', config.title);
+    const typingDef = AEO_DEFINITIONS['typing-wpm'];
+
     const structuredData = generateToolStructuredData(
         'typing-speed',
         config.title,
@@ -38,6 +43,19 @@ export default function Page() {
             <div className="max-w-7xl mx-auto space-y-8 flex flex-col items-center">
                 <SchemaInjector schemas={[structuredData, breadcrumbSchema, webPageSchema]} />
                 <TypingGame />
+
+                <div className="w-full max-w-5xl">
+                    <AEOAnswerBlock 
+                        question="What is a good typing speed in Words Per Minute (WPM)?"
+                        answer={typingDef.quickAnswer}
+                        keyPoints={[
+                            "Average typing speed: 40 WPM with ~92% accuracy",
+                            "Good typing speed for office/programming: 65 - 85 WPM",
+                            "Competitive/expert typist speed: 100+ WPM with >97% accuracy"
+                        ]}
+                        benchmark={typingDef.benchmarkData}
+                    />
+                </div>
                 
                 <div className="w-full max-w-5xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm rounded-3xl p-6 md:p-8 relative z-10 mt-8">
                     <ToolContent

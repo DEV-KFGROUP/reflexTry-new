@@ -8,14 +8,14 @@ export async function generateMetadata(): Promise<Metadata> {
     const baseUrl = getBaseUrl();
 
     return {
-        title: 'The Science of Brain Training | Neuroplasticity, Research & Cognitive Enhancement - Reflextry',
+        title: 'The Science of Brain Training | Neuroplasticity & Cognitive Research - Reflextry',
         description: 'Explore the neuroscience behind brain training. Learn about neuroplasticity, cognitive reserve, research evidence, and how brain training improves memory, reaction time, and cognitive performance.',
         keywords: ['brain training science', 'neuroplasticity', 'cognitive neuroscience', 'brain research', 'cognitive reserve', 'memory science', 'brain plasticity'],
         alternates: {
             canonical: `${baseUrl}/science`,
         },
         openGraph: {
-            title: 'The Science of Brain Training',
+            title: 'The Science of Brain Training | Reflextry',
             description: 'Discover the neuroscience behind cognitive training and how your brain adapts and improves.',
             url: `${baseUrl}/science`,
             type: 'website',
@@ -29,11 +29,9 @@ export default function Science() {
         { name: "Science", url: "/science" },
     ]);
     
-    // For these static pages, we don't have the config object imported, 
-    // but we can generate a basic WebPage schema with the title.
     const webPageSchema = generateWebPageSchema(
-        "Science",
-        "Learn more about Reflextry and our brain training tools.",
+        "The Science of Brain Training | Neuroplasticity & Cognitive Research",
+        "Explore the neuroscience behind brain training, neuroplasticity, and cognitive enhancement.",
         "/science"
     );
 

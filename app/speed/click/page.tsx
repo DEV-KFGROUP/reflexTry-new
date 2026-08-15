@@ -7,6 +7,9 @@ import { SEO_CONFIGS } from '@/config/seo-config';
 import { ToolContent } from '@/components/ToolContent';
 import { getToolContent } from '@/lib/tool-content';
 
+import { AEOAnswerBlock } from '@/components/AEOAnswerBlock';
+import { AEO_DEFINITIONS } from '@/lib/aeo-definitions';
+
 export async function generateMetadata(): Promise<Metadata> {
     return getToolMetadata('cps-test', '/speed/click');
 }
@@ -14,6 +17,8 @@ export async function generateMetadata(): Promise<Metadata> {
 export default function Page() {
     const config = SEO_CONFIGS['cps-test'];
     const content = getToolContent('cps-test', config.title);
+    const cpsDef = AEO_DEFINITIONS['cps-speed'];
+
     const structuredData = generateToolStructuredData(
         'cps-test',
         config.title,
@@ -38,6 +43,19 @@ export default function Page() {
             <div className="max-w-7xl mx-auto space-y-8 flex flex-col items-center">
                 <SchemaInjector schemas={[structuredData, breadcrumbSchema, webPageSchema]} />
                 <ClickGame />
+
+                <div className="w-full max-w-5xl">
+                    <AEOAnswerBlock 
+                        question="What is a good Clicks Per Second (CPS) score?"
+                        answer={cpsDef.quickAnswer}
+                        keyPoints={[
+                            "Standard clicking average: 6 to 7 CPS",
+                            "Jitter clicking technique: 10 to 14 CPS",
+                            "Butterfly clicking technique: 12 to 20 CPS"
+                        ]}
+                        benchmark={cpsDef.benchmarkData}
+                    />
+                </div>
                 
                 <div className="w-full max-w-5xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm rounded-3xl p-6 md:p-8 relative z-10 mt-8">
                     <ToolContent

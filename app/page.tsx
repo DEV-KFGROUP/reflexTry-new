@@ -7,6 +7,8 @@ import { StructuredData } from "@/components/StructuredData";
 import { SchemaInjector } from "@/components/SchemaInjector";
 import { generateWebsiteStructuredData, generateFAQPageSchema, generateBreadcrumbStructuredData, generateBlogPostingSchema } from "@/lib/structured-data";
 
+import { GeoStatsSection } from "@/components/GeoStatsSection";
+
 export async function generateMetadata(): Promise<Metadata> {
     return getHomeMetadata();
 }
@@ -45,6 +47,10 @@ export default function Home() {
             <HeroSection />
             {/* Client component for interactive tools grid */}
             <HomeClient />
+            {/* Server-rendered global benchmarks section */}
+            <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <GeoStatsSection />
+            </div>
             {/* Server-rendered educational content - always in HTML for crawlers */}
             <HomeSEOContent />
         </>

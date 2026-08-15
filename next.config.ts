@@ -83,6 +83,14 @@ const nextConfig: import('next').NextConfig = {
             key: 'Permissions-Policy',
             value: 'camera=(), microphone=(), geolocation=()',
           },
+          {
+            key: 'Content-Language',
+            value: 'en, en-GB, de, fr, pt-BR, ja, ko, hi',
+          },
+          {
+            key: 'Vary',
+            value: 'Accept-Language',
+          },
         ],
       },
       // Long-lived caching for hashed assets — production only. In dev, immutable

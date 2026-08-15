@@ -86,6 +86,13 @@
     border-color: var(--color-gray-800, currentColor);
     /* Darker default border */
   }
+
+  /* Ensure gradient text renders with WebKit background-clip across all browsers */
+  .bg-clip-text {
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 @utility container {
