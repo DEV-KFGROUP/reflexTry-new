@@ -148,13 +148,14 @@ export function Footer() {
                     <div>
                         <h4 className="flex items-center gap-2 text-xs font-mono font-bold text-foreground uppercase tracking-widest mb-6">
                             <BookOpen className="w-4 h-4 text-purple-500" />
-                            Resources
+                            Research &amp; Standards
                         </h4>
                         <ul className="space-y-3">
                             {[
-                                { name: "Blog", href: "/blog" },
-                                { name: "Science", href: "/science" },
+                                { name: "Methodology", href: "/methodology" },
+                                { name: "Science & Citations", href: "/science" },
                                 { name: "Training Programs", href: "/training-programs" },
+                                { name: "Research Blog", href: "/blog" },
                                 { name: "FAQ", href: "/faq" },
                             ].map(link => (
                                 <li key={link.name}>

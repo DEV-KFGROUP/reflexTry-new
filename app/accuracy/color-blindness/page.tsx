@@ -39,10 +39,17 @@ export default function Page() {
                 <SchemaInjector schemas={[structuredData, breadcrumbSchema, webPageSchema]} />
                 <ColorBlindnessGame />
                 
-                <div className="w-full max-w-5xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm rounded-3xl p-6 md:p-8 relative z-10 mt-8">
+                <div className="w-full max-w-5xl bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-900/50 rounded-2xl p-4 md:p-5 flex items-start gap-3 text-amber-900 dark:text-amber-200 text-xs md:text-sm leading-relaxed">
+                    <span className="font-bold text-base flex-shrink-0">⚠️</span>
+                    <div>
+                        <strong>Medical &amp; Screening Notice:</strong> This online color vision test is designed strictly for educational demonstration and recreational screening. Digital computer monitors vary widely in color calibration, gamma curves, and brightness. This test does <em>not</em> constitute a medical diagnosis. If you suspect you have a color vision deficiency, consult a licensed optometrist or ophthalmologist for clinical Ishihara plate testing.
+                    </div>
+                </div>
+
+                <div className="w-full max-w-5xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm rounded-3xl p-6 md:p-8 relative z-10 mt-2">
                     <ToolContent
                         title="Color Blindness Test"
-                        description={content.description}
+                        description="An interactive visual screening tool inspired by classic pseudoisochromatic Ishihara plates. Test your ability to perceive hidden numbers across varying red-green color contrasts."
                         howToUse={content.howToUse}
                         howToImprove={content.howToImprove}
                         faqs={content.faqs}

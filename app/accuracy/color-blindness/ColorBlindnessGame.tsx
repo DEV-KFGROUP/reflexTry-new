@@ -345,18 +345,26 @@ export default function ColorBlindnessGame() {
             <div className="w-20 h-20 bg-rose-50 dark:bg-rose-900/20 rounded-full flex items-center justify-center mb-6">
               <Eye className="w-10 h-10 text-rose-500" />
             </div>
-            <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-wider mb-4">
+            <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-wider mb-2">
               Color Perception
             </h2>
-            <p className="text-sm text-slate-500 dark:text-slate-400 mb-8 leading-relaxed">
-              Test your color vision by identifying the numbers hidden within the procedural Ishihara plates.
+            <p className="text-sm text-slate-500 dark:text-slate-400 mb-4 leading-relaxed">
+              Screen your red-green color contrast perception by identifying the numbers hidden within procedural dot plates.
             </p>
+            
+            <div className="p-3 rounded-xl bg-amber-500/10 border border-amber-500/20 text-xs text-amber-700 dark:text-amber-300 flex items-start gap-2 text-left mb-6">
+              <Shield className="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5" />
+              <p className="leading-relaxed">
+                <strong>Educational Screening Only:</strong> This test is for personal screening and does not replace a formal clinical examination by an eye care professional.
+              </p>
+            </div>
+
             <button
               onClick={startGame}
               className="w-full sm:w-auto px-12 py-4 bg-rose-600 hover:bg-rose-700 text-white rounded-xl font-bold uppercase tracking-widest text-sm transition-all shadow-lg hover:shadow-rose-500/20 flex items-center justify-center gap-3"
             >
               <Play className="w-4 h-4 fill-current" />
-              Initialize Test
+              Initialize Screening
             </button>
           </motion.div>
         )}

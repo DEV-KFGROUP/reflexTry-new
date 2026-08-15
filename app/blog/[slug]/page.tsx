@@ -74,6 +74,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 import { AuthorCard } from '@/components/AuthorCard';
+import { BlogRelatedTools } from '@/components/BlogRelatedTools';
 
 export default async function BlogPostPage({ params }: Props) {
     const { slug } = await params;
@@ -99,10 +100,14 @@ export default async function BlogPostPage({ params }: Props) {
                 />
                 <ArticleClient article={articleData}>
                     <MDXContent source={content} />
-                    <div className="mt-12 pt-8 border-t border-black/10 dark:border-white/10">
+                    
+                    {/* Related Interactive Tests / Tools */}
+                    <BlogRelatedTools slug={slug} category={meta.category} />
+
+                    <div className="mt-10 pt-8 border-t border-slate-200 dark:border-slate-800">
                         <AuthorCard 
-                            name={meta.author?.name ?? "Reflextry Cognitive Lab Team"}
-                            bio="Written and reviewed by Reflextry's cognitive science research team."
+                            name={meta.author?.name ?? "Reflextry Editorial"}
+                            bio="Written and reviewed by Reflextry's cognitive science research team. Every article is grounded in peer-reviewed neuroscience and motor learning literature."
                         />
                     </div>
                 </ArticleClient>

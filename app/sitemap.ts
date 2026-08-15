@@ -17,6 +17,7 @@ const STATIC_ROUTES = [
     '/blog',
     '/faq',
     '/science',
+    '/methodology',
     '/training-programs',
     '/tools',
     '/leaderboard',

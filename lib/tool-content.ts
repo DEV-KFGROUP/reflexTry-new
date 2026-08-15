@@ -8,6 +8,39 @@
  */
 
 export const toolContent = {
+    "card-match": {
+        description: [
+            { title: "About Card Match", content: "Card Match is a spatial working memory and visual pattern recall test. Face-down cards are arranged in a grid; you flip two cards at a time to find matching symbol pairs while minimizing total moves and elapsed time." },
+            { title: "What Card Match Measures", content: "This module measures immediate visual-spatial buffer capacity, spatial coordinate retention, and memory decay under interference. As more cards are revealed, earlier card locations compete with newer visual inputs in working memory." },
+            { title: "How Scoring Works", content: "Scores are calculated based on: (1) Total moves taken to clear the board, (2) Total completion time in seconds, and (3) Move efficiency (ideal moves / actual moves × 100%). Lower moves and faster times yield higher percentile rankings." },
+            { title: "Difficulty Configurations", content: "Beginner uses a 4×2 grid (4 pairs), Normal uses a 4×4 grid (8 pairs), and Hard/Expert uses up to a 6×6 grid (18 pairs) with tighter card flip timeouts and visual distractors." },
+            { title: "Optimal Memory Strategies", content: "Use a systematic spatial grid indexing strategy (e.g. scanning row-by-row) rather than random exploratory flips. Associate card symbols with spatial anchor landmarks (top-left, center, bottom-right) to reinforce recall." },
+            { title: "Empirical Baseline Targets", content: "On an 8-pair (4×4) grid, an average adult typically finishes within 14–18 moves in 20–30 seconds. Elite performers with strong spatial chunking clear 8 pairs in 10–12 moves in under 15 seconds." }
+        ],
+        howToUse: [
+            { title: "Setup", steps: ["Select your grid difficulty.", "Click Initialize to deal the face-down cards.", "Click any card to reveal its symbol."] },
+            { title: "Matching", steps: ["Click a second card to test for a match.", "If symbols match, both cards remain face-up.", "If symbols differ, both flip back down after a brief viewing window."] },
+            { title: "Completion", steps: ["Clear all pairs on the board.", "Review your final move count and elapsed time.", "Aim for an efficiency rating above 80%."] }
+        ],
+        howToImprove: [
+            { title: "Spatial Anchoring", content: "Mentally attach card identities to grid corners and edges rather than trying to hold abstract coordinates." },
+            { title: "Avoid Blind Double-Flips", content: "Always flip one unrevealed card first. If it matches a previously seen card, use your second flip deliberately on that known location." },
+            { title: "Vocal Sub-Rehearsal", content: "Quietly name the card and its quadrant (e.g. 'Star top-right') to engage phonological and visuospatial working memory simultaneously." },
+            { title: "Session Limits", content: "Working memory fatigues quickly. Practice 3–5 boards per session to maintain peak encoding precision." }
+        ],
+        faqs: [
+            { question: "What is a good score on a 4×4 board (8 pairs)?", answer: "A move count between 12 and 16 moves is considered strong performance. The mathematical minimum is 8 moves (if you get lucky or have perfect memory)." },
+            { question: "What does Card Match actually measure?", answer: "It measures visuospatial working memory capacity, spatial indexing, and resistance to proactive visual interference." },
+            { question: "How does the card flip timeout work?", answer: "Unmatched cards stay visible for approximately 800ms before flipping back down to allow brief perceptual encoding." },
+            { question: "Does grid size affect the cognitive load?", answer: "Yes, moving from 8 pairs to 18 pairs exponentially increases spatial memory interference and search space." },
+            { question: "Is Card Match suitable for children and seniors?", answer: "Yes, visual pair matching is a classic, accessible cognitive exercise across all age demographics." },
+            { question: "Why do I forget cards I just saw 10 seconds ago?", answer: "This is standard working memory decay and retroactive interference caused by looking at new cards in between." },
+            { question: "Can I play Card Match on a phone or tablet?", answer: "Yes, the touch-friendly card grid is fully responsive on mobile devices and touchscreens." },
+            { question: "How is efficiency calculated?", answer: "Efficiency = (Total Pairs / Total Moves Made) × 100%. A score of 100% means zero redundant exploratory flips." },
+            { question: "Does card matching help with real-world tasks?", answer: "It exercises immediate visual-spatial recall used in navigation, finding misplaced items, and diagram analysis." },
+            { question: "How often should I practice?", answer: "A 5-10 minute session daily provides optimal practice without mental fatigue." }
+        ]
+    },
     "chimp-test": {
         description: [
             { title: "About the Chimp Test", content: "The Chimp Test is a visuospatial working-memory challenge inspired by ape cognition studies. Numbers appear on a grid; after you tap 1, the rest hide and you must tap the blank cells in ascending order from memory." },
@@ -4322,62 +4355,62 @@ export function getToolContent(toolId: string, toolName: string) {
         description: [
             {
                 title: `About ${toolName}`,
-                content: `${toolName} is a specialized training tool designed to improve your ${info.focus} capabilities. This comprehensive tool provides targeted exercises that challenge and develop your ${info.skills}.`
+                content: `${toolName} is an interactive testing module designed to evaluate your ${info.focus}. The test provides standardized metric capture and immediate feedback on your ${info.skills}.`
             },
             {
-                title: `Understanding ${toolName}`,
-                content: `${toolName} focuses on developing specific cognitive skills through structured practice and progressive difficulty. Regular use of this tool can lead to measurable improvements in your mental performance and cognitive abilities.`
+                title: `What ${toolName} Measures`,
+                content: `${toolName} isolates specific sensorimotor and cognitive parameters. By measuring your baseline performance under controlled visual conditions, you can track changes in speed, accuracy, and consistency across sessions.`
             },
             {
-                title: `The Benefits of ${toolName} Training`,
-                content: `Training with ${toolName} offers numerous advantages for cognitive development. The exercises are designed to challenge your brain in specific ways, promoting neural plasticity and skill acquisition. Consistent practice leads to improved performance in related real-world tasks.`
+                title: "How Scoring Works",
+                content: `Scores are recorded based on accuracy, response latency, and task completion time. Higher difficulty levels tighten timing tolerances and introduce visual distractors to test performance limits.`
             },
             {
-                title: `How ${toolName} Works`,
-                content: `The tool presents challenges that require ${info.practice}. Each session adapts to your skill level, ensuring continuous improvement and preventing plateaus in your development.`
+                title: "How to Perform the Test",
+                content: `The module requires ${info.practice}. Ensure your testing environment has minimal distraction and consistent lighting to establish reliable benchmark data.`
             },
             {
-                title: "Key Features",
-                content: `${toolName} includes multiple difficulty levels, progress tracking, and detailed performance metrics. These features help you monitor your improvement and maintain motivation throughout your training journey.`
+                title: "Interpreting Your Results",
+                content: `Your scores should be compared against personal baselines on the same difficulty level. Track your performance trends on the Statistics Dashboard to evaluate progress over time.`
             },
             {
-                title: "Real-World Applications",
-                content: `The skills developed through ${toolName} practice transfer to various aspects of daily life, professional work, and academic performance. The cognitive improvements gained are practical and applicable across multiple domains.`
+                title: "Practical Applications",
+                content: `The perceptual and motor coordination skills exercised in ${toolName} are relevant to esports, athletic visual processing, rapid data entry, and everyday human-computer interaction.`
             }
         ],
         howToUse: [
             {
                 title: `Getting Started with ${toolName}`,
-                content: `To begin using ${toolName}, navigate to the tool page and familiarize yourself with the interface. The tool is designed to be intuitive, allowing you to focus on the cognitive challenge rather than complex controls.`
+                content: `Navigate to the test arena, select your preferred difficulty mode, and review the on-screen instructions before initializing the session.`
             },
             {
-                title: "Initial Setup",
-                content: "Before starting, ensure you're in a comfortable environment free from distractions. Position yourself properly and adjust your device settings for optimal visibility. These environmental factors significantly impact your performance."
+                title: "Testing Environment",
+                content: "Use a wired input device and a stable display. Minimize background applications to eliminate software-induced input latency."
             },
             {
-                title: "Understanding the Interface",
-                content: "Take a moment to review the on-screen elements and controls. Understanding the interface layout helps you respond more quickly and accurately during practice sessions."
+                title: "Executing Trials",
+                content: "Follow the visual cues precisely. Focus on clean input execution rather than rushing, as penalty strikes or inaccurate inputs will disproportionately lower your final score."
             },
             {
-                title: "Starting Your First Session",
-                content: "Begin with the default difficulty level to establish a baseline. Focus on accuracy and understanding the mechanics before attempting more challenging levels. Each session provides valuable learning opportunities."
-            },
-            {
-                title: "Progress Tracking",
-                content: "Monitor your scores and performance metrics to track improvement over time. Set personal goals and celebrate milestones as you advance. Consistent tracking maintains motivation and demonstrates progress."
+                title: "Reviewing Metrics",
+                content: "Upon completion, your raw score, percentile estimation, and completion time are displayed. Save your result to update your personal progress history."
             }
         ],
         howToImprove: [
             {
-                title: `Strategies to Enhance Your ${toolName} Performance`,
-                content: `Improving your ${toolName} skills requires consistent practice, proper technique, and understanding of cognitive principles. Here are comprehensive strategies to accelerate your progress and maximize your accuracy and reflex capabilities.`
+                title: `Strategies for ${toolName}`,
+                content: `Improving on ${toolName} requires structured practice, error analysis, and environmental consistency. Follow these practical recommendations:`
             },
             {
-                title: "Consistent Practice Schedule",
-                content: "Establish a regular practice routine. Research shows that 10-15 minutes of daily focused practice produces better results than longer, less frequent sessions. Consistency builds neural pathways more effectively than sporadic intensive practice."
+                title: "Consistency Over Volume",
+                content: "Engage in 5-10 minutes of focused testing daily. Short, high-focus sessions prevent mental fatigue and build reliable motor execution."
             },
             {
-                title: "Focus on Fundamentals",
+                title: "Prioritize Accuracy",
+                content: "Master the input mechanics at lower speeds before attempting maximum velocity. Speed develops naturally once precision is automated."
+            },
+            {
+                title: "Master Fundamentals",
                 content: "Master the basic mechanics before advancing to complex challenges. Strong fundamentals create a solid foundation for advanced performance. Don't rush progression; quality practice is more valuable than quick advancement."
             },
             {

@@ -11,25 +11,25 @@ interface AuthorCardProps {
 }
 
 export function AuthorCard({
-    name = "Reflextry Cognitive Lab Team",
-    role = "Cognitive Assessment & Neuropsychology Benchmark Team",
-    bio = "Our interdisciplinary team designs standardized sensory-motor and working memory benchmarks grounded in peer-reviewed cognitive science literature.",
+    name = "Reflextry Editorial",
+    role = "Cognitive Assessment & Benchmark Research Team",
+    bio = "Written and reviewed by Reflextry's cognitive science research team. Grounded in peer-reviewed neuroscience, human-computer interaction, and psychomotor literature.",
     avatarUrl = "/apple-icon.png",
-    expertise = ["Neuroplasticity", "Reaction Time Metrics", "Working Memory Assessment", "Esports Warmup Mechanics"]
+    expertise = ["Reaction Time Benchmarks", "Working Memory Capacity", "Sensorimotor Calibration", "Esports Warmup Mechanics"]
 }: AuthorCardProps) {
     return (
         <div 
-            className="my-8 p-6 rounded-2xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 flex flex-col sm:flex-row items-start gap-5"
+            className="my-8 p-6 rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex flex-col sm:flex-row items-start gap-5 shadow-sm"
             itemScope 
             itemType="https://schema.org/Person"
         >
-            <div className="relative w-16 h-16 rounded-full overflow-hidden shrink-0 border-2 border-blue-500/30">
+            <div className="relative w-14 h-14 rounded-full overflow-hidden shrink-0 border-2 border-cyan-500/30 bg-white dark:bg-slate-950 flex items-center justify-center shadow-sm">
                 <Image 
                     src={avatarUrl} 
                     alt={name} 
                     fill 
-                    className="object-cover" 
-                    sizes="64px"
+                    className="object-contain p-2" 
+                    sizes="56px"
                     itemProp="image"
                 />
             </div>

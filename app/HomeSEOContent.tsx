@@ -4,20 +4,31 @@ export function HomeSEOContent() {
     return (
         <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
             <div className="space-y-12 bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 p-8 rounded-3xl">
-                <div className="space-y-4">
-                    <h2 className="text-3xl font-bold text-foreground">Why Test Your Reflexes and Memory?</h2>
-                    <p className="aeo-answer text-muted-foreground leading-relaxed" data-speakable="true">
-                        It&apos;s simple: you can&apos;t improve what you don&apos;t measure. Brain training and reflex testing give you hard data on your physical and cognitive speed. When you grind these tasks, you&apos;re literally forcing your brain to adapt and build new neural pathways (neuroplasticity). Faster processing, sharper focus, and quicker physical reactions.
+                
+                {/* ── Entity Definition Block (AEO / GEO Gold) ── */}
+                <div className="p-6 rounded-2xl bg-cyan-500/5 border border-cyan-500/20 space-y-3">
+                    <h2 className="text-xl md:text-2xl font-mono font-bold text-slate-900 dark:text-white">
+                        What is Reflextry?
+                    </h2>
+                    <p className="aeo-answer text-slate-600 dark:text-slate-300 text-sm md:text-base leading-relaxed" data-speakable="true">
+                        <strong>Reflextry</strong> is an open browser-based performance testing platform for measuring visual reaction time, working memory capacity, clicking speed, typing speed, and aiming precision down to the millisecond. Offering <strong>40+ free interactive tests across 5 performance categories</strong>, Reflextry provides standardized benchmarks so users can establish personal baselines and measure their mechanical performance over time.
                     </p>
                 </div>
 
                 <div className="space-y-4">
-                    <h2 className="text-2xl font-bold text-foreground">How to Actually Improve</h2>
+                    <h2 className="text-2xl md:text-3xl font-bold text-foreground">Why Benchmark Your Reflexes and Cognitive Speed?</h2>
+                    <p className="aeo-answer text-muted-foreground leading-relaxed" data-speakable="true">
+                        You cannot optimize what you do not measure. Standardized reflex testing and cognitive assessments give you objective data on your perceptual latency and motor coordination. Targeted practice reduces decision latency, improves visual search efficiency, and sharpens hand-eye calibration across gaming, athletics, and everyday computer work.
+                    </p>
+                </div>
+
+                <div className="space-y-4">
+                    <h2 className="text-2xl font-bold text-foreground">How to Systematically Improve Your Scores</h2>
                     <ol className="list-decimal list-inside space-y-2 text-muted-foreground">
-                        <li><strong>Warm up:</strong> Don&apos;t jump straight into Expert modes. Start with a basic Click Speed or Color Match test to get your hands warm.</li>
-                        <li><strong>Accuracy over speed:</strong> Speed is a byproduct of precision. If you&apos;re missing targets, slow down.</li>
-                        <li><strong>Consistency is everything:</strong> A 15-minute daily routine beats a 3-hour weekend marathon every single time.</li>
-                        <li><strong>Track the data:</strong> Check your Statistics page. Find out if your reaction time is dragging or if your memory is bottlenecking you.</li>
+                        <li><strong>Standardize your testing environment:</strong> Ensure consistent lighting, a wired input device, and close background applications for accurate timing.</li>
+                        <li><strong>Accuracy before velocity:</strong> In motor tasks like typing or aim training, speed is a natural byproduct of clean spatial precision.</li>
+                        <li><strong>Consistent short sessions:</strong> A 15-minute daily routine yields higher motor retention than infrequent marathon sessions.</li>
+                        <li><strong>Analyze empirical baselines:</strong> Use our <a href="/statistics" className="text-cyan-600 underline">Statistics Dashboard</a> and <a href="/methodology" className="text-cyan-600 underline">Testing Methodology</a> to track real millisecond improvements.</li>
                     </ol>
                 </div>
 
