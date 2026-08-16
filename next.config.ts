@@ -125,7 +125,7 @@ const nextConfig: import('next').NextConfig = {
               ],
             },
             {
-              source: '/:path*(manifest.json|robots.txt|sitemap.xml|ads.txt)',
+              source: '/:path*(manifest.json|robots.txt|sitemap.xml|ads.txt|llms.txt|llms-full.txt|ai.txt)',
               headers: [
                 {
                   key: 'Cache-Control',

@@ -278,17 +278,17 @@ export default function SpeedHubClient() {
                                     </thead>
                                     <tbody className="text-muted-foreground">
                                         <tr className="border-b border-black/5 dark:border-white/5">
-                                            <td className="p-3 font-semibold text-red-500">Click Speed (CPS)</td>
+                                            <td className="p-3 font-bold text-red-700 dark:text-red-400">Click Speed (CPS)</td>
                                             <td className="p-3">Minecraft PvP, MOBA Gamers</td>
                                             <td className="p-3">Increases raw finger clicking stamina and speed.</td>
                                         </tr>
                                         <tr className="border-b border-black/5 dark:border-white/5">
-                                            <td className="p-3 font-semibold text-red-500">Typing Test (WPM)</td>
+                                            <td className="p-3 font-bold text-red-700 dark:text-red-400">Typing Test (WPM)</td>
                                             <td className="p-3">Writers, Coders, Data Entry</td>
                                             <td className="p-3">Measures and boosts words-per-minute rate and keystroke accuracy.</td>
                                         </tr>
                                         <tr className="border-b border-black/5 dark:border-white/5">
-                                            <td className="p-3 font-semibold text-red-500">Speed Math</td>
+                                            <td className="p-3 font-bold text-red-700 dark:text-red-400">Speed Math</td>
                                             <td className="p-3">Students, Financial Analysts</td>
                                             <td className="p-3">Trains rapid arithmetic processing under time pressure.</td>
                                         </tr>
@@ -300,7 +300,7 @@ export default function SpeedHubClient() {
                         <div className="space-y-4">
                             <h2 className="text-2xl font-bold text-foreground">Benchmarks & Scientific Proof</h2>
                             <p className="text-muted-foreground leading-relaxed">
-                                The average internet user types at roughly 40 Words Per Minute (WPM), whereas professional typists and coders regularly exceed 90 WPM. Similarly, average clicking speeds hover around 6 CPS, while competitive gamers achieve 10-14 CPS. According to studies on human motor performance published on <a href="https://pubmed.ncbi.nlm.nih.gov/20485641/" target="_blank" rel="noopener noreferrer" className="text-red-500 hover:underline">PubMed</a>, targeted repetition combined with immediate feedback is the most effective way to permanently increase motor action speeds.
+                                The average internet user types at roughly 40 Words Per Minute (WPM), whereas professional typists and coders regularly exceed 90 WPM. Similarly, average clicking speeds hover around 6 CPS, while competitive gamers achieve 10-14 CPS. According to studies on human motor performance published on <a href="https://pubmed.ncbi.nlm.nih.gov/20485641/" target="_blank" rel="noopener noreferrer" className="text-red-700 dark:text-red-400 font-semibold hover:underline underline-offset-2">PubMed</a>, targeted repetition combined with immediate feedback is the most effective way to permanently increase motor action speeds.
                             </p>
                         </div>
                         

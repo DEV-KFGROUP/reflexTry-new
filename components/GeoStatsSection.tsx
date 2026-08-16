@@ -76,9 +76,9 @@ export function GeoStatsSection() {
                                     <span className="text-lg">{region.flag}</span>
                                     <span>{region.country}</span>
                                 </td>
-                                <td className="p-3 font-mono font-medium text-blue-600 dark:text-blue-400">{region.avgReactionMs} ms</td>
-                                <td className="p-3 font-mono font-medium text-emerald-600 dark:text-emerald-400">{region.avgTypingWpm} WPM</td>
-                                <td className="p-3 font-mono font-medium text-amber-600 dark:text-amber-400">{region.avgCps} CPS</td>
+                                <td className="p-3 font-mono font-medium text-blue-700 dark:text-blue-400">{region.avgReactionMs} ms</td>
+                                <td className="p-3 font-mono font-medium text-emerald-700 dark:text-emerald-400">{region.avgTypingWpm} WPM</td>
+                                <td className="p-3 font-mono font-medium text-amber-700 dark:text-amber-400">{region.avgCps} CPS</td>
                                 <td className="p-3 text-muted-foreground">{region.topGamePreference}</td>
                             </tr>
                         ))}

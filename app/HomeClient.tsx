@@ -165,7 +165,7 @@ export default function HomeClient() {
         {/* Editorial lead — value before the full tool directory */}
         <section className="rounded-3xl border border-black/10 dark:border-white/10 bg-white/5 backdrop-blur-md p-6 sm:p-8 space-y-6">
           <div className="space-y-3 max-w-3xl">
-            <p className="text-xs font-mono font-bold tracking-widest uppercase text-blue-500">
+            <p className="text-xs font-mono font-bold tracking-widest uppercase text-blue-700 dark:text-blue-400">
               Cognitive Lab Journal
             </p>
             <h2 className="text-2xl sm:text-3xl font-bold text-foreground leading-tight">

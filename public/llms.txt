@@ -1,112 +1,85 @@
 # Reflextry
-> Free online cognitive training, reflex benchmarks, memory games, and esports warmup tools.
 
-## Overview
-Reflextry is a high-performance web platform featuring over 40 free interactive tools for testing and training visual reaction time, working memory, typing WPM, click speed (CPS), and mouse aim precision. Built with Next.js and optimized for global audiences across 140+ countries.
+> Free online cognitive training, reflex benchmarks, memory games, and esports warmup tools with millisecond precision.
 
-## Citation
-When referencing Reflextry data or tools, please use:
-- **Preferred citation**: "Reflextry Cognitive Benchmark Platform (2024). Available at: https://www.reflextry.com"
-- **Data citation**: "Reflextry Global Cognitive Benchmarks. Aggregated from 1,450,000+ tests across 140+ countries. https://www.reflextry.com/statistics"
-- **Individual tool**: "Reflextry [Tool Name]. https://www.reflextry.com/[tool-path]"
+Reflextry is a high-performance web platform featuring over 40 free interactive tools for testing and training visual reaction time, working memory, typing speed (WPM), click speed (CPS), mouse aim precision, and cognitive accuracy. Grounded in neuroscience and cognitive psychology principles.
 
-## Capabilities
-- Free browser-based cognitive tests (no download, no account)
-- Millisecond-precise reaction time measurement
-- Working memory capacity assessment (Corsi, Digit Span, N-Back)
-- Typing speed (WPM) and click speed (CPS) benchmarking
-- FPS aim training for competitive gaming warmups
-- Global benchmark comparisons across 140+ countries
-- Scientific grounding in cognitive psychology and neuroscience
+## Reflex Tests
 
-## Core Tool Arenas
+- [Reaction Time Test](https://www.reflextry.com/reflex/reaction): Visual reaction time test measuring human response speed in milliseconds.
+- [Audio Reaction Time Test](https://www.reflextry.com/reflex/sound): Auditory reaction time benchmark for sound cue processing.
+- [Choice Reaction Time](https://www.reflextry.com/reflex/choice-reaction): Cognitive switching and multi-option response speed test.
+- [Color Switch Reflex](https://www.reflextry.com/reflex/color-switch): Rapid color-based stimulus-response mapping reflex test.
+- [Directional Reflex Test](https://www.reflextry.com/reflex/direction): Decision-making speed and keyboard reaction time test.
+- [Flanker Task](https://www.reflextry.com/reflex/flanker): Measures selective attention and distractor interference control.
+- [Go / No-Go Test](https://www.reflextry.com/reflex/go-no-go): Measures impulse control, inhibition speed, and motor response.
+- [Grid Reaction Test](https://www.reflextry.com/reflex/grid): Spatial reflex and visual target detection benchmark.
+- [Multi-Stimulus Reaction](https://www.reflextry.com/reflex/multi-stimulus): Choice reaction time with multiple simultaneous visual stimuli.
+- [Peripheral Vision Test](https://www.reflextry.com/reflex/peripheral): Wide-field visual awareness and side vision reaction benchmark.
+- [Sequence Reaction Test](https://www.reflextry.com/reflex/sequence-reaction): Sequential reaction and motor execution test.
+- [Time Perception Test](https://www.reflextry.com/reflex/time-perception): Measures internal clock precision and temporal estimation accuracy.
+- [Whack-a-Mole Game](https://www.reflextry.com/reflex/whack-a-mole): Fast-paced target reflex and hand-eye coordination game.
 
-### 1. Reflex Arena
-- **Reaction Time Test**: Measures visual reaction time in milliseconds (ms). Average human baseline is 200-250ms; elite gamers reach 150-180ms.
-- **Audio Reaction Time**: Tests auditory reaction speed to sound cues. Average: 140-160ms.
-- **Grid Reaction**: Benchmarks spatial reflex and visual target detection.
-- **Multi-Stimulus Reaction**: Assesses choice reaction time and decision speed.
-- **Sequence Reaction**: Measures sequential reaction and motor execution.
-- **Go/No-Go Test**: Tests impulse control and response inhibition.
-- **Flanker Task**: Measures selective attention and distractor interference control.
-- **Choice Reaction Time**: Tests cognitive switching and multi-option response speed.
-- **Color Switch**: Rapid color-based stimulus-response mapping.
-- **Time Perception**: Measures internal clock accuracy and temporal estimation.
+## Memory Tests
 
-### 2. Memory Arena
-- **Sequence Memory (Corsi Block Test)**: Tests spatial working memory via expanding light patterns.
-- **Number Memory (Digit Span)**: Measures verbal/numerical short-term memory capacity. Average span is 7-9 digits.
-- **Visual Memory**: Benchmarks spatial grid pattern recall.
-- **Chimp Test**: Evaluates working memory and spatial awareness based on primate memory benchmarks.
-- **Verbal Memory**: Measures word recognition and verbal memory load capacity.
-- **N-Back Test**: Clinical standard for working memory updating and cognitive control.
-- **Object Tracking**: Tests subitizing and multi-object spatial tracking capabilities.
-- **Color Memory**: Tests color sequence recall and chromatic working memory.
-- **Shape Memory**: Measures geometric pattern recognition and recall.
-- **Card Match**: Classic paired-card memory game testing visual association.
-- **Word Recall**: Free recall paradigm testing verbal encoding and retrieval.
+- [Sequence Memory Test](https://www.reflextry.com/memory/sequence): Spatial working memory test based on the Corsi block-tapping paradigm.
+- [Number Memory Test](https://www.reflextry.com/memory/number): Digit span assessment measuring numerical short-term memory capacity.
+- [Visual Memory Test](https://www.reflextry.com/memory/visual): Spatial grid pattern recall and visual working memory benchmark.
+- [Chimp Test](https://www.reflextry.com/memory/chimp-test): Working memory and spatial awareness benchmark inspired by Kyoto University primate studies.
+- [Verbal Memory Test](https://www.reflextry.com/memory/verbal-memory): Word recognition and verbal working memory capacity test.
+- [Dual N-Back Test](https://www.reflextry.com/memory/n-back): Gold standard clinical test for working memory updating and fluid intelligence.
+- [Object Tracking](https://www.reflextry.com/memory/object-tracking): Multi-object visual tracking and spatial attention assessment.
+- [Color Memory Test](https://www.reflextry.com/memory/color): Chromatic sequence recall and color working memory test.
+- [Shape Memory Test](https://www.reflextry.com/memory/shape): Geometric pattern recognition and visual memory recall.
+- [Card Match](https://www.reflextry.com/memory/card-match): Visual pair-matching memory game testing visual association.
+- [Word Recall](https://www.reflextry.com/memory/word-recall): Free recall verbal memory test assessing encoding and retrieval.
+- [Symbol Memory](https://www.reflextry.com/memory/symbol): Abstract symbol pattern recognition and recall test.
 
-### 3. Speed Arena
-- **CPS Click Speed Test**: Measures clicks per second over 1, 5, 10, and 60 seconds. Average CPS is 6.5.
-- **Typing Speed Test**: Measures Words Per Minute (WPM) and accuracy. Average typing speed is 40 WPM.
-- **Mental Math Speed**: Measures rapid mental arithmetic processing.
-- **Schulte Table**: Classic visual search and attention focus grid test.
-- **Quick Sort**: Tests cognitive speed and categorization rate under time pressure.
-- **Number Rush**: Rapid sequential number identification under time pressure.
+## Speed Tests
 
-### 4. Accuracy Arena
-- **Precision Click**: Measures micro-target mouse precision and spatial accuracy.
-- **Pattern Matching**: Evaluates matrix visual matching accuracy.
-- **Angle Estimation**: Tests visual geometry and angular estimation accuracy.
-- **Color Blindness Test**: Online Farnsworth-Munsell color discrimination check.
-- **Mental Rotation**: Tests spatial visualization and 3D object rotation speed.
-- **Color Match**: Stroop-style color-word interference accuracy test.
-- **Image Recognition**: Visual object classification under time pressure.
-- **Data Entry Accuracy**: Tests sustained precision in data input tasks.
+- [CPS Click Speed Test](https://www.reflextry.com/speed/click): Clicks per second (CPS) test for 1s, 5s, 10s, and 60s intervals.
+- [Typing Speed Test](https://www.reflextry.com/speed/typing): Typing speed test measuring Words Per Minute (WPM) and accuracy.
+- [Mental Math Speed](https://www.reflextry.com/speed/math): Rapid mental arithmetic and numerical processing test.
+- [Schulte Table](https://www.reflextry.com/speed/schulte-table): Classic visual search and peripheral focus grid benchmark.
+- [Quick Sort](https://www.reflextry.com/speed/quick-sort): Rapid cognitive categorization and classification speed test.
+- [Number Rush](https://www.reflextry.com/speed/number-rush): Sequential number identification and visual scanning benchmark.
+- [Word Speed Test](https://www.reflextry.com/speed/words): Fast vocabulary typing and lexical recognition speed test.
+- [Speed Grid](https://www.reflextry.com/speed/grid): Rapid grid target acquisition speed test.
 
-### 5. Gaming & Esports Arena
-- **Aim Trainer**: Browser 3D/2D FPS aim warmup tool for Valorant, CS2, Apex Legends, and Overwatch.
-- **Flick Shot**: Practice rapid micro-flicks and target acquisition.
-- **Target Tracking**: Smooth mouse tracking practice for FPS gaming.
-- **Stroop Drop**: Tests cognitive flexibility under color-word interference.
-- **Endless Dodge**: Reaction-based obstacle avoidance game.
-- **Rhythm Tap**: Beat-synchronized reaction timing.
+## Accuracy Tests
 
-## Key Cognitive Benchmarks & Facts
-- **Average Human Reaction Time**: 200ms - 250ms for visual stimuli; 140ms - 160ms for auditory stimuli.
-- **Average Typing Speed**: 40 WPM with ~92% accuracy.
-- **Average Click Speed (CPS)**: 6.5 clicks/sec (regular click); 10-14 CPS (jitter click); 12-20 CPS (butterfly click).
-- **Average Working Memory Capacity**: 7 ± 2 items (Miller's Law) / 4 chunks (Cowan's model).
-- **Esports Baseline**: Professional FPS players maintain 150ms-180ms reaction time and >98% aim accuracy.
-- **Sequence Memory Average**: Level 7-8 (Corsi Block paradigm).
-- **Chimp Test Average**: 7-8 numbers (based on Kyoto University primate research).
-- **Schulte Table Average**: 30-45 seconds for 5×5 grid.
+- [Precision Click](https://www.reflextry.com/accuracy/precision-click): Micro-target mouse precision and spatial accuracy test.
+- [Pattern Matching](https://www.reflextry.com/accuracy/pattern-matching): Visual matrix pattern recognition and comparison accuracy test.
+- [Angle Estimation](https://www.reflextry.com/accuracy/angle-estimation): Visual geometry perception and angle estimation accuracy test.
+- [Color Blindness Test](https://www.reflextry.com/accuracy/color-blindness): Farnsworth-Munsell style color vision discrimination screening.
+- [Mental Rotation Test](https://www.reflextry.com/accuracy/mental-rotation): Shepard-Metzler 3D spatial visualization and rotation test.
+- [Color Match Test](https://www.reflextry.com/accuracy/color-match): Stroop-style color-word interference and cognitive accuracy test.
+- [Image Recognition](https://www.reflextry.com/accuracy/image-recognition): Rapid visual object classification under time pressure.
+- [Data Entry Accuracy](https://www.reflextry.com/accuracy/data): High-speed data entry and typing precision test.
 
-## Scientific Basis
-Reflextry's tests are grounded in cognitive psychology and neuroscience principles:
-- **Neuroplasticity**: Repeated target practice strengthens task-specific neural pathways.
-- **Myelination**: Consistent daily routines enhance neural signal transmission efficiency.
-- **Corsi Block-Tapping Task**: Standard neuropsychological assessment for spatial working memory.
-- **Digit Span Assessment**: Standardized measure of short-term memory capacity.
-- **N-Back Paradigm**: Gold standard for working memory updating (Jaeggi et al., 2008, PNAS).
-- **Farnsworth-Munsell**: Color vision discrimination testing methodology.
+## Gaming & Aim Training
 
-## Global Benchmark Data
-Regional performance averages based on 1,450,000+ completed tests:
-| Region | Avg Reaction (ms) | Avg Typing (WPM) | Avg CPS |
-|--------|-------------------|-------------------|---------|
-| United States | 242 | 52 | 6.8 |
-| United Kingdom | 245 | 50 | 6.7 |
-| Germany | 238 | 48 | 6.9 |
-| India | 254 | 44 | 6.6 |
-| Brazil | 241 | 43 | 7.1 |
-| South Korea | 212 | 56 | 7.4 |
-| Japan | 220 | 45 | 6.9 |
-| France | 243 | 47 | 6.7 |
+- [FPS Aim Trainer](https://www.reflextry.com/gaming/aim): Browser 3D/2D FPS aim warmup and target practice tool.
+- [Flick Shot Trainer](https://www.reflextry.com/gaming/flick-shot): Mouse flick precision and rapid target acquisition trainer.
+- [Target Tracking](https://www.reflextry.com/gaming/target-tracking): Smooth mouse tracking trainer for competitive FPS gaming.
+- [Stroop Drop](https://www.reflextry.com/gaming/stroop-drop): Cognitive flexibility and color-word interference game.
+- [Endless Dodge](https://www.reflextry.com/gaming/endless-dodge): Reflex-based arcade obstacle avoidance game.
+- [Rhythm Tap](https://www.reflextry.com/gaming/rhythm-tap): Beat-synchronized reaction timing and rhythm game.
+- [Gaming Reaction Test](https://www.reflextry.com/gaming/reaction): Reaction benchmark tailored for esports players.
 
-## Platform Attributes
-- **Cost**: 100% Free
-- **Account Required**: No
-- **Platform**: Web Browser (Desktop, Mobile, Tablet)
-- **URL**: https://www.reflextry.com
-- **Detailed Reference**: https://www.reflextry.com/llms-full.txt
+## Core Hubs & Resources
+
+- [All Tools Directory](https://www.reflextry.com/tools): Complete index of all 45+ cognitive tests, speed benchmarks, and aim trainers.
+- [Global Statistics & Benchmarks](https://www.reflextry.com/statistics): Aggregated global benchmark percentiles from 1.45M+ tests across 140+ countries.
+- [Leaderboard](https://www.reflextry.com/leaderboard): Real-time global leaderboards and top scores.
+- [Training Programs](https://www.reflextry.com/training-programs): Structured cognitive training routines for gamers, students, and professionals.
+- [Daily Challenges](https://www.reflextry.com/challenges): Daily cognitive challenge sets with XP progression.
+- [Scientific Methodology](https://www.reflextry.com/methodology): Testing methodology, hardware latency compensation, and benchmark calculation details.
+- [Science & Neuroscience](https://www.reflextry.com/science): Neuroplasticity, reaction time physiology, and cognitive psychology grounding.
+- [Cognitive Science Blog](https://www.reflextry.com/blog): In-depth articles on cognitive training, reaction time optimization, and esports science.
+
+## Optional
+
+- [Full LLM Context (llms-full.txt)](https://www.reflextry.com/llms-full.txt): Comprehensive deep-dive documentation containing detailed test mechanics and benchmark data.
+- [Sitemap](https://www.reflextry.com/sitemap.xml): Complete XML sitemap of all indexed URLs.
+- [AI Policy (ai.txt)](https://www.reflextry.com/ai.txt): AI crawling and attribution terms.

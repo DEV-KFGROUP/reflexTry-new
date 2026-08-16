@@ -327,17 +327,17 @@ export default function ReflexHubClient() {
                                     </thead>
                                     <tbody className="text-muted-foreground">
                                         <tr className="border-b border-black/5 dark:border-white/5">
-                                            <td className="p-3 font-semibold text-amber-500">Reaction Time</td>
+                                            <td className="p-3 font-bold text-amber-700 dark:text-amber-400">Reaction Time</td>
                                             <td className="p-3">Gamers, General Population</td>
                                             <td className="p-3">Measures baseline visual reflex speed in milliseconds.</td>
                                         </tr>
                                         <tr className="border-b border-black/5 dark:border-white/5">
-                                            <td className="p-3 font-semibold text-amber-500">Sound Reflex</td>
+                                            <td className="p-3 font-bold text-amber-700 dark:text-amber-400">Sound Reflex</td>
                                             <td className="p-3">Athletes (Track/Swimming)</td>
                                             <td className="p-3">Isolates auditory pathways, which process faster than visual ones.</td>
                                         </tr>
                                         <tr className="border-b border-black/5 dark:border-white/5">
-                                            <td className="p-3 font-semibold text-amber-500">Directional Reflex</td>
+                                            <td className="p-3 font-bold text-amber-700 dark:text-amber-400">Directional Reflex</td>
                                             <td className="p-3">Drivers, Goalkeepers</td>
                                             <td className="p-3">Trains cognitive translation of a directional cue into a physical swipe.</td>
                                         </tr>
@@ -349,7 +349,7 @@ export default function ReflexHubClient() {
                         <div className="space-y-4">
                             <h2 className="text-2xl font-bold text-foreground">Benchmarks & Scientific Proof</h2>
                             <p className="text-muted-foreground leading-relaxed">
-                                According to human factor studies, average human reaction time is around 250 milliseconds for visual cues and 170 milliseconds for audio cues. Through active repetition and neurological adaptation, elite athletes and gamers can bring their visual reaction times below 150 milliseconds. A study by the <a href="https://pubmed.ncbi.nlm.nih.gov/22026829/" target="_blank" rel="noopener noreferrer" className="text-amber-500 hover:underline">Journal of Sports Sciences</a> concluded that specialized visual-motor training can significantly reduce reaction latency in competitive environments.
+                                According to human factor studies, average human reaction time is around 250 milliseconds for visual cues and 170 milliseconds for audio cues. Through active repetition and neurological adaptation, elite athletes and gamers can bring their visual reaction times below 150 milliseconds. A study by the <a href="https://pubmed.ncbi.nlm.nih.gov/22026829/" target="_blank" rel="noopener noreferrer" className="text-amber-700 dark:text-amber-400 font-semibold hover:underline underline-offset-2">Journal of Sports Sciences</a> concluded that specialized visual-motor training can significantly reduce reaction latency in competitive environments.
                             </p>
                         </div>
                         

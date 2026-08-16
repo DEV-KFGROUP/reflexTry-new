@@ -233,17 +233,17 @@ export default function GamingHubClient() {
                                     </thead>
                                     <tbody className="text-muted-foreground">
                                         <tr className="border-b border-black/5 dark:border-white/5">
-                                            <td className="p-3 font-semibold text-purple-500">Aim Trainer</td>
+                                            <td className="p-3 font-bold text-purple-700 dark:text-purple-400">Aim Trainer</td>
                                             <td className="p-3">FPS Gamers (Valorant, CS2)</td>
                                             <td className="p-3">Improves static target clicking and overall mouse control.</td>
                                         </tr>
                                         <tr className="border-b border-black/5 dark:border-white/5">
-                                            <td className="p-3 font-semibold text-purple-500">Flick Shot</td>
+                                            <td className="p-3 font-bold text-purple-700 dark:text-purple-400">Flick Shot</td>
                                             <td className="p-3">Sniper roles, fast-paced shooters</td>
                                             <td className="p-3">Builds fast-twitch muscle memory for sudden crosshair snaps.</td>
                                         </tr>
                                         <tr className="border-b border-black/5 dark:border-white/5">
-                                            <td className="p-3 font-semibold text-purple-500">Target Tracking</td>
+                                            <td className="p-3 font-bold text-purple-700 dark:text-purple-400">Target Tracking</td>
                                             <td className="p-3">Apex Legends, Overwatch players</td>
                                             <td className="p-3">Enhances smooth pursuit eye movements and continuous mouse tracking.</td>
                                         </tr>
@@ -255,7 +255,7 @@ export default function GamingHubClient() {
                         <div className="space-y-4">
                             <h2 className="text-2xl font-bold text-foreground">Benchmarks & Scientific Proof</h2>
                             <p className="text-muted-foreground leading-relaxed">
-                                Competitive players often show faster sensorimotor responses than casual users, and research cataloged by the <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7323281/" target="_blank" rel="noopener noreferrer" className="text-purple-500 hover:underline">National Center for Biotechnology Information (NCBI)</a> links action-game practice with gains in visual attention and motor control. On Reflextry, treat Flick Shot and Target Tracking as isolated mechanics drills: log your own baselines on the same mouse and difficulty, then look for steadier accuracy and cleaner time-to-target over weeks—not a promised percentage improvement.
+                                Competitive players often show faster sensorimotor responses than casual users, and research cataloged by the <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7323281/" target="_blank" rel="noopener noreferrer" className="text-purple-700 dark:text-purple-400 font-semibold hover:underline underline-offset-2">National Center for Biotechnology Information (NCBI)</a> links action-game practice with gains in visual attention and motor control. On Reflextry, treat Flick Shot and Target Tracking as isolated mechanics drills: log your own baselines on the same mouse and difficulty, then look for steadier accuracy and cleaner time-to-target over weeks—not a promised percentage improvement.
                             </p>
                         </div>
                         

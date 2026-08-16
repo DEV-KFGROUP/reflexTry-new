@@ -96,10 +96,10 @@ export function Footer() {
 
                     {/* Links Column 1: Tools / Quests */}
                     <div>
-                        <h4 className="flex items-center gap-2 text-xs font-mono font-bold text-foreground uppercase tracking-widest mb-6">
+                        <p className="flex items-center gap-2 text-xs font-mono font-bold text-foreground uppercase tracking-widest mb-6">
                             <Swords className="w-4 h-4 text-indigo-500" />
                             Arenas
-                        </h4>
+                        </p>
                         <ul className="space-y-3">
                             {[
                                 { name: "Reflex Tests", href: "/reflex", color: "text-amber-500" },
@@ -123,10 +123,10 @@ export function Footer() {
 
                     {/* Links Column 2: Features / Stats */}
                     <div>
-                        <h4 className="flex items-center gap-2 text-xs font-mono font-bold text-foreground uppercase tracking-widest mb-6">
+                        <p className="flex items-center gap-2 text-xs font-mono font-bold text-foreground uppercase tracking-widest mb-6">
                             <Trophy className="w-4 h-4 text-amber-500" />
                             Features
-                        </h4>
+                        </p>
                         <ul className="space-y-3">
                             {[
                                 { name: "Leaderboard", href: "/leaderboard" },
@@ -146,10 +146,10 @@ export function Footer() {
 
                     {/* Links Column 3: Resources */}
                     <div>
-                        <h4 className="flex items-center gap-2 text-xs font-mono font-bold text-foreground uppercase tracking-widest mb-6">
+                        <p className="flex items-center gap-2 text-xs font-mono font-bold text-foreground uppercase tracking-widest mb-6">
                             <BookOpen className="w-4 h-4 text-purple-500" />
                             Research &amp; Standards
-                        </h4>
+                        </p>
                         <ul className="space-y-3">
                             {[
                                 { name: "Methodology", href: "/methodology" },
@@ -170,10 +170,10 @@ export function Footer() {
 
                     {/* Links Column 4: Legal / Guild Info */}
                     <div>
-                        <h4 className="flex items-center gap-2 text-xs font-mono font-bold text-foreground uppercase tracking-widest mb-6">
+                        <p className="flex items-center gap-2 text-xs font-mono font-bold text-foreground uppercase tracking-widest mb-6">
                             <Shield className="w-4 h-4 text-muted-foreground" />
                             Legal
-                        </h4>
+                        </p>
                         <ul className="space-y-3">
                             {[
                                 { name: "About Us", href: "/about" },
@@ -211,7 +211,7 @@ export function Footer() {
                                 <strong className="text-foreground font-mono uppercase tracking-wide">Accuracy:</strong> Speed means nothing if you miss. The Accuracy Hub forces you to lock in and prioritize precision over raw velocity. Through spatial grids, angle estimation, and color matching, you refine your fine motor control. Training speed and accuracy simultaneously teaches your central nervous system to hit complex mechanical movements efficiently. We save all your session data so you can actually see your performance curve go up over time. 10 minutes of focused practice here beats 5 hours of mindless grinding.
                             </p>
                             <p className="text-center mt-4">
-                                <span className="font-bold text-foreground">Clinical Ref:</span> Consistent cognitive exercises are designed to leverage neuroplasticity. Read more about <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6128435/" target="_blank" rel="noopener noreferrer" className="text-indigo-400 hover:text-indigo-600 underline underline-offset-2 transition-colors">brain training research</a>.
+                                <span className="font-bold text-foreground">Clinical Ref:</span> Consistent cognitive exercises are designed to leverage neuroplasticity. Read more about <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6128435/" target="_blank" rel="noopener noreferrer" className="text-indigo-700 dark:text-indigo-400 hover:text-indigo-900 dark:hover:text-indigo-300 font-semibold underline underline-offset-2 transition-colors">brain training research</a>.
                             </p>
                         </div>
                     </details>

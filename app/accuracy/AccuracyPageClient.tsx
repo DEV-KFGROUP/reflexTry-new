@@ -278,17 +278,17 @@ export default function AccuracyPageClient() {
                                     </thead>
                                     <tbody className="text-muted-foreground">
                                         <tr className="border-b border-black/5 dark:border-white/5">
-                                            <td className="p-3 font-semibold text-emerald-500">Precision Clicking</td>
+                                            <td className="p-3 font-bold text-emerald-700 dark:text-emerald-400">Precision Clicking</td>
                                             <td className="p-3">Graphic Designers, Gamers</td>
                                             <td className="p-3">Enhances fine motor control for clicking tiny, sub-pixel targets.</td>
                                         </tr>
                                         <tr className="border-b border-black/5 dark:border-white/5">
-                                            <td className="p-3 font-semibold text-emerald-500">Data Entry Accuracy</td>
+                                            <td className="p-3 font-bold text-emerald-700 dark:text-emerald-400">Data Entry Accuracy</td>
                                             <td className="p-3">Programmers, Typists</td>
                                             <td className="p-3">Reduces keystroke errors when typing complex syntax or alphanumeric strings.</td>
                                         </tr>
                                         <tr className="border-b border-black/5 dark:border-white/5">
-                                            <td className="p-3 font-semibold text-emerald-500">Angle Estimation</td>
+                                            <td className="p-3 font-bold text-emerald-700 dark:text-emerald-400">Angle Estimation</td>
                                             <td className="p-3">Architects, Artists</td>
                                             <td className="p-3">Develops cognitive visual-spatial intelligence and geometric perception.</td>
                                         </tr>
@@ -300,7 +300,7 @@ export default function AccuracyPageClient() {
                         <div className="space-y-4">
                             <h2 className="text-2xl font-bold text-foreground">Benchmarks & Scientific Proof</h2>
                             <p className="text-muted-foreground leading-relaxed">
-                                The concept of prioritizing accuracy over speed is a fundamental principle of motor learning, often summarized in the military maxim "slow is smooth, smooth is fast." According to the <a href="https://www.apa.org/pubs/journals/xhp" target="_blank" rel="noopener noreferrer" className="text-emerald-500 hover:underline">Journal of Experimental Psychology</a>, focusing purely on precision initially allows the brain to myelinate the exact neural pathways required, preventing error correction delays from surfacing at higher speeds.
+                                The concept of prioritizing accuracy over speed is a fundamental principle of motor learning, often summarized in the military maxim "slow is smooth, smooth is fast." According to the <a href="https://www.apa.org/pubs/journals/xhp" target="_blank" rel="noopener noreferrer" className="text-emerald-700 dark:text-emerald-400 font-semibold hover:underline underline-offset-2">Journal of Experimental Psychology</a>, focusing purely on precision initially allows the brain to myelinate the exact neural pathways required, preventing error correction delays from surfacing at higher speeds.
                             </p>
                         </div>
                         

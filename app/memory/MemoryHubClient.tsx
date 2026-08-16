@@ -318,17 +318,17 @@ export default function MemoryHubClient() {
                                     </thead>
                                     <tbody className="text-muted-foreground">
                                         <tr className="border-b border-black/5 dark:border-white/5">
-                                            <td className="p-3 font-semibold text-blue-500">Number Memory</td>
+                                            <td className="p-3 font-bold text-blue-700 dark:text-blue-400">Number Memory</td>
                                             <td className="p-3">Math students, programmers</td>
                                             <td className="p-3">Trains the brain's phonological loop to hold long numeric strings.</td>
                                         </tr>
                                         <tr className="border-b border-black/5 dark:border-white/5">
-                                            <td className="p-3 font-semibold text-blue-500">Visual Memory</td>
+                                            <td className="p-3 font-bold text-blue-700 dark:text-blue-400">Visual Memory</td>
                                             <td className="p-3">Designers, architects</td>
                                             <td className="p-3">Improves the visuospatial sketchpad for spatial coordination.</td>
                                         </tr>
                                         <tr className="border-b border-black/5 dark:border-white/5">
-                                            <td className="p-3 font-semibold text-blue-500">Sequence Memory</td>
+                                            <td className="p-3 font-bold text-blue-700 dark:text-blue-400">Sequence Memory</td>
                                             <td className="p-3">Musicians, general cognition</td>
                                             <td className="p-3">Enhances sequential pattern recognition and focus endurance.</td>
                                         </tr>
@@ -340,7 +340,7 @@ export default function MemoryHubClient() {
                         <div className="space-y-4">
                             <h2 className="text-2xl font-bold text-foreground">Benchmarks & Scientific Proof</h2>
                             <p className="text-muted-foreground leading-relaxed">
-                                Classic work by George A. Miller popularized the idea that people often hold roughly 7±2 chunks in immediate memory—though modern views emphasize strategy and task design as much as a fixed capacity. Techniques like chunking reduce how many independent items you must store. Research discussed via the <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2629068/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">National Institutes of Health (NIH)</a> explores when working-memory training transfers and when it does not. On Reflextry, track your own digit-span and recall trends under the same difficulty; we do not claim a universal “average user reaches X after two weeks” outcome.
+                                Classic work by George A. Miller popularized the idea that people often hold roughly 7±2 chunks in immediate memory—though modern views emphasize strategy and task design as much as a fixed capacity. Techniques like chunking reduce how many independent items you must store. Research discussed via the <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2629068/" target="_blank" rel="noopener noreferrer" className="text-blue-700 dark:text-blue-400 font-semibold hover:underline underline-offset-2">National Institutes of Health (NIH)</a> explores when working-memory training transfers and when it does not. On Reflextry, track your own digit-span and recall trends under the same difficulty; we do not claim a universal “average user reaches X after two weeks” outcome.
                             </p>
                         </div>
                         

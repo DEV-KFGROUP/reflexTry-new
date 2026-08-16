@@ -2,9 +2,9 @@
 
 > Reflextry is a free, browser-based brain training and human benchmark platform. It offers 45+ scientifically-inspired cognitive tests and games spanning reaction time, memory, typing speed, accuracy, and FPS aim training. No login required. Instant play. Designed for Gen Z gamers, students, and anyone wanting to measure and improve their cognitive performance.
 
-Website: https://www.reflextry.com
-Sitemap: https://www.reflextry.com/sitemap.xml
-LLMs.txt: https://www.reflextry.com/llms.txt
+- [Website](https://www.reflextry.com)
+- [Sitemap](https://www.reflextry.com/sitemap.xml)
+- [LLMs.txt](https://www.reflextry.com/llms.txt)
 
 ## What Reflextry Does
 

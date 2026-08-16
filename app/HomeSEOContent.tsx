@@ -28,7 +28,7 @@ export function HomeSEOContent() {
                         <li><strong>Standardize your testing environment:</strong> Ensure consistent lighting, a wired input device, and close background applications for accurate timing.</li>
                         <li><strong>Accuracy before velocity:</strong> In motor tasks like typing or aim training, speed is a natural byproduct of clean spatial precision.</li>
                         <li><strong>Consistent short sessions:</strong> A 15-minute daily routine yields higher motor retention than infrequent marathon sessions.</li>
-                        <li><strong>Analyze empirical baselines:</strong> Use our <a href="/statistics" className="text-cyan-600 underline">Statistics Dashboard</a> and <a href="/methodology" className="text-cyan-600 underline">Testing Methodology</a> to track real millisecond improvements.</li>
+                        <li><strong>Analyze empirical baselines:</strong> Use our <a href="/statistics" className="text-cyan-700 dark:text-cyan-400 font-semibold underline underline-offset-2 hover:text-cyan-800 dark:hover:text-cyan-300">Statistics Dashboard</a> and <a href="/methodology" className="text-cyan-700 dark:text-cyan-400 font-semibold underline underline-offset-2 hover:text-cyan-800 dark:hover:text-cyan-300">Testing Methodology</a> to track real millisecond improvements.</li>
                     </ol>
                 </div>
 
@@ -51,23 +51,23 @@ export function HomeSEOContent() {
                                 </tr>
                             </thead>
                             <tbody className="text-muted-foreground">
-                                <tr className="border-b border-black/5 dark:border-white/5">
-                                    <td className="p-3 font-semibold text-blue-500">Memory Arena</td>
+                                <tr className="border-b border-black/5 dark:divide-white/5">
+                                    <td className="p-3 font-bold text-blue-700 dark:text-blue-400">Memory Arena</td>
                                     <td className="p-3">Students, lifelong learners</td>
                                     <td className="p-3">Enhances working memory &amp; recall capacity.</td>
                                 </tr>
-                                <tr className="border-b border-black/5 dark:border-white/5">
-                                    <td className="p-3 font-semibold text-amber-500">Reflex Arena</td>
+                                <tr className="border-b border-black/5 dark:divide-white/5">
+                                    <td className="p-3 font-bold text-amber-700 dark:text-amber-400">Reflex Arena</td>
                                     <td className="p-3">FPS Gamers, Drivers, Athletes</td>
                                     <td className="p-3">Decreases reaction time to sudden stimuli.</td>
                                 </tr>
-                                <tr className="border-b border-black/5 dark:border-white/5">
-                                    <td className="p-3 font-semibold text-orange-500">Speed Arena</td>
+                                <tr className="border-b border-black/5 dark:divide-white/5">
+                                    <td className="p-3 font-bold text-orange-700 dark:text-orange-400">Speed Arena</td>
                                     <td className="p-3">Typists, Data Entry, MOBA Gamers</td>
                                     <td className="p-3">Increases raw physical speed (CPS, WPM).</td>
                                 </tr>
-                                <tr className="border-b border-black/5 dark:border-white/5">
-                                    <td className="p-3 font-semibold text-purple-500">Gaming Arena</td>
+                                <tr className="border-b border-black/5 dark:divide-white/5">
+                                    <td className="p-3 font-bold text-purple-700 dark:text-purple-400">Gaming Arena</td>
                                     <td className="p-3">Competitive eSports Players</td>
                                     <td className="p-3">Improves mouse tracking, flick accuracy, and multi-tasking.</td>
                                 </tr>
@@ -79,7 +79,7 @@ export function HomeSEOContent() {
                 <div className="space-y-4">
                     <h2 className="text-2xl font-bold text-foreground">The Data Behind the Grind</h2>
                     <p className="text-muted-foreground leading-relaxed">
-                        Most people have a visual reaction time of around 250 milliseconds. But if you watch elite esports pros, they&apos;re consistently hitting the 150ms to 180ms range. It&apos;s not just genetics; the <a href="https://pubmed.ncbi.nlm.nih.gov/24718593/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">National Institutes of Health (NIH)</a> confirms that heavy repetition in motor skill and cognitive training straight-up drops your reaction times and expands your working memory.
+                        Most people have a visual reaction time of around 250 milliseconds. But if you watch elite esports pros, they&apos;re consistently hitting the 150ms to 180ms range. It&apos;s not just genetics; the <a href="https://pubmed.ncbi.nlm.nih.gov/24718593/" target="_blank" rel="noopener noreferrer" className="text-blue-700 dark:text-blue-400 font-semibold hover:underline underline-offset-2">National Institutes of Health (NIH)</a> confirms that heavy repetition in motor skill and cognitive training straight-up drops your reaction times and expands your working memory.
                     </p>
                     <p className="text-muted-foreground leading-relaxed mt-4">
                         Whether you&apos;re using the <strong>Sequence Memory Test</strong> to lock in spatial awareness or the <strong>Aim Trainer</strong> to fix your input lag, tracking your stats is step one. Our tools are completely free, run entirely in your browser for maximum privacy, and don&apos;t force you to make an account just to test yourself.
