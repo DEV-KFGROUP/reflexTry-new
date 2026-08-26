@@ -3,7 +3,8 @@ import { notFound } from 'next/navigation';
 import { getContentBySlug, getContentSlugs } from '@/lib/content/loader';
 import { MDXContent } from '@/components/content/mdx-components';
 import { Article } from '@/lib/content/types';
-import { getBaseUrl } from '@/lib/base-url';
+import { getBaseUrl, getBaseUrlObject } from '@/lib/base-url';
+import { getHreflangAlternates, PRIMARY_OG_LOCALE } from '@/lib/international-seo';
 import { generateArticleStructuredData } from '@/lib/structured-data';
 import ArticleClient from './ArticleClient';
 
@@ -33,19 +34,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             : `${baseUrl}/opengraph-image`;
 
         return {
-            title: meta.title,
+            metadataBase: getBaseUrlObject(),
+            title: `${meta.title} | Reflextry`,
             description: meta.description,
             authors: [{ name: meta.author?.name ?? 'Reflextry' }],
-            alternates: { canonical: pageUrl },
+            alternates: {
+                canonical: `/blog/${slug}`,
+                languages: getHreflangAlternates(pageUrl),
+            },
             openGraph: {
                 url: pageUrl,
-                title: meta.title,
+                title: `${meta.title} | Reflextry`,
                 description: meta.description,
                 type: 'article',
                 publishedTime: meta.publishedAt,
                 modifiedTime: meta.updatedAt ?? meta.publishedAt,
                 siteName: 'Reflextry',
-                locale: 'en',
+                locale: PRIMARY_OG_LOCALE,
                 images: [
                     {
                         url: ogImage,
@@ -57,9 +62,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             },
             twitter: {
                 card: 'summary_large_image',
-                title: meta.title,
+                title: `${meta.title} | Reflextry`,
                 description: meta.description,
                 images: [ogImage],
+                creator: '@reflextry',
             },
             robots: {
                 index: true,
@@ -68,7 +74,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         };
     } catch {
         return {
-            title: 'Guide Not Found',
+            title: 'Guide Not Found | Reflextry',
         };
     }
 }

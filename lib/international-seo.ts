@@ -10,14 +10,17 @@
  */
 
 export const TARGET_LOCALES = [
-    { lang: 'en', hreflang: 'en', region: 'US', ogLocale: 'en_US', label: 'English (US)', isPrimary: true },
-    { lang: 'en', hreflang: 'en-GB', region: 'GB', ogLocale: 'en_GB', label: 'English (UK)', isPrimary: false },
-    { lang: 'de', hreflang: 'de', region: 'DE', ogLocale: 'de_DE', label: 'Deutsch', isPrimary: false },
-    { lang: 'fr', hreflang: 'fr', region: 'FR', ogLocale: 'fr_FR', label: 'Français', isPrimary: false },
-    { lang: 'pt', hreflang: 'pt-BR', region: 'BR', ogLocale: 'pt_BR', label: 'Português (Brasil)', isPrimary: false },
-    { lang: 'ja', hreflang: 'ja', region: 'JP', ogLocale: 'ja_JP', label: '日本語', isPrimary: false },
-    { lang: 'ko', hreflang: 'ko', region: 'KR', ogLocale: 'ko_KR', label: '한국어', isPrimary: false },
-    { lang: 'hi', hreflang: 'hi', region: 'IN', ogLocale: 'hi_IN', label: 'हिन्दी', isPrimary: false },
+    { lang: 'en', hreflang: 'en', region: 'Global', ogLocale: 'en_US', label: 'English (Global)', isPrimary: true },
+    { lang: 'en', hreflang: 'en-US', region: 'US', ogLocale: 'en_US', label: 'English (United States)', isPrimary: false },
+    { lang: 'en', hreflang: 'en-GB', region: 'GB', ogLocale: 'en_GB', label: 'English (United Kingdom)', isPrimary: false },
+    { lang: 'en', hreflang: 'en-CA', region: 'CA', ogLocale: 'en_CA', label: 'English (Canada)', isPrimary: false },
+    { lang: 'en', hreflang: 'en-AU', region: 'AU', ogLocale: 'en_AU', label: 'English (Australia)', isPrimary: false },
+    { lang: 'en', hreflang: 'en-IN', region: 'IN', ogLocale: 'en_IN', label: 'English (India)', isPrimary: false },
+    { lang: 'en', hreflang: 'en-IE', region: 'IE', ogLocale: 'en_IE', label: 'English (Ireland)', isPrimary: false },
+    { lang: 'en', hreflang: 'en-NZ', region: 'NZ', ogLocale: 'en_NZ', label: 'English (New Zealand)', isPrimary: false },
+    { lang: 'en', hreflang: 'en-SG', region: 'SG', ogLocale: 'en_SG', label: 'English (Singapore)', isPrimary: false },
+    { lang: 'en', hreflang: 'en-ZA', region: 'ZA', ogLocale: 'en_ZA', label: 'English (South Africa)', isPrimary: false },
+    { lang: 'en', hreflang: 'en-PH', region: 'PH', ogLocale: 'en_PH', label: 'English (Philippines)', isPrimary: false },
 ] as const;
 
 export type TargetLocale = typeof TARGET_LOCALES[number];
@@ -63,7 +66,7 @@ export const CONTENT_LANGUAGE_HEADER = TARGET_LOCALES
 /**
  * Available language codes for Organization/WebSite structured data.
  */
-export const AVAILABLE_LANGUAGES = ['en'];
+export const AVAILABLE_LANGUAGES = ['en', 'en-US', 'en-GB', 'en-CA', 'en-AU', 'en-IN'];
 
 /**
  * Geo target countries for structured data areaServed.
@@ -72,6 +75,8 @@ export const AVAILABLE_LANGUAGES = ['en'];
 export const GEO_TARGET_COUNTRIES = [
     { "@type": "Country" as const, "name": "United States", "identifier": "US" },
     { "@type": "Country" as const, "name": "United Kingdom", "identifier": "GB" },
+    { "@type": "Country" as const, "name": "Canada", "identifier": "CA" },
+    { "@type": "Country" as const, "name": "Australia", "identifier": "AU" },
     { "@type": "Country" as const, "name": "Germany", "identifier": "DE" },
     { "@type": "Country" as const, "name": "India", "identifier": "IN" },
     { "@type": "Country" as const, "name": "Brazil", "identifier": "BR" },

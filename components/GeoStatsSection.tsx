@@ -10,13 +10,9 @@ export function GeoStatsSection() {
     return (
         <section
             className="w-full my-12 p-8 rounded-3xl bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 backdrop-blur-md"
-            itemScope
-            itemType="https://schema.org/Dataset"
             data-speakable="true"
         >
             <SchemaInjector schemas={[datasetSchema]} />
-            <meta itemProp="name" content="Reflextry Global Cognitive Benchmarks" />
-            <meta itemProp="description" content="Aggregated reaction time, typing speed, and click speed benchmarks across 140+ countries." />
 
             <div className="flex items-center gap-3 mb-6">
                 <div className="p-3 rounded-2xl bg-blue-500/10 text-blue-500">

@@ -85,11 +85,11 @@ const nextConfig: import('next').NextConfig = {
           },
           {
             key: 'Content-Language',
-            value: 'en, en-GB, de, fr, pt-BR, ja, ko, hi',
+            value: 'en, en-US, en-GB',
           },
           {
             key: 'Vary',
-            value: 'Accept-Language',
+            value: 'Accept-Encoding',
           },
         ],
       },

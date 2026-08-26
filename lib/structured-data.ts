@@ -8,17 +8,6 @@ import type { Article } from '@/lib/content/types';
 /** Standardized SpeakableSpecification CSS selectors used across all schemas */
 const SPEAKABLE_SELECTORS = ["h1", ".hero-subtitle", ".aeo-answer", "article p:first-of-type"];
 
-export const TARGET_GEO_LOCATIONS = [
-    { "@type": "Country", "name": "United States", "identifier": "US" },
-    { "@type": "Country", "name": "United Kingdom", "identifier": "GB" },
-    { "@type": "Country", "name": "Germany", "identifier": "DE" },
-    { "@type": "Country", "name": "India", "identifier": "IN" },
-    { "@type": "Country", "name": "Brazil", "identifier": "BR" },
-    { "@type": "Country", "name": "South Korea", "identifier": "KR" },
-    { "@type": "Country", "name": "Japan", "identifier": "JP" },
-    { "@type": "Country", "name": "France", "identifier": "FR" }
-];
-
 export function generateToolStructuredData(_toolId: string, title: string, description: string, url: string) {
     const baseUrl = getBaseUrl();
 
@@ -31,7 +20,7 @@ export function generateToolStructuredData(_toolId: string, title: string, descr
         applicationCategory: "Game",
         operatingSystem: "Web Browser",
         inLanguage: "en",
-        areaServed: TARGET_GEO_LOCATIONS,
+        areaServed: GEO_TARGET_COUNTRIES,
         offers: {
             "@type": "Offer",
             price: "0",
@@ -248,7 +237,7 @@ export function generateSoftwareApplicationSchema(title: string, description: st
         applicationCategory: category,
         operatingSystem: "Web Browser",
         inLanguage: "en",
-        areaServed: TARGET_GEO_LOCATIONS,
+        areaServed: GEO_TARGET_COUNTRIES,
         offers: {
             "@type": "Offer",
             price: "0",
@@ -317,13 +306,31 @@ export function generateDatasetSchema() {
         name: "Reflextry Global Cognitive Benchmarks",
         description: "Aggregated reaction time, typing speed, and click speed benchmarks across 140+ countries based on 1,450,000+ completed tests.",
         url: `${baseUrl}/statistics`,
+        sameAs: baseUrl,
         creator: {
             "@type": "Organization",
             name: "Reflextry",
-            url: baseUrl
+            url: baseUrl,
+            logo: `${baseUrl}/icon.png`
+        },
+        publisher: {
+            "@type": "Organization",
+            name: "Reflextry",
+            url: baseUrl,
+            logo: `${baseUrl}/icon.png`
         },
         temporalCoverage: "2024/..",
-        spatialCoverage: GEO_TARGET_COUNTRIES,
+        spatialCoverage: {
+            "@type": "Place",
+            name: "Global"
+        },
+        keywords: [
+            "Cognitive Benchmarks",
+            "Reaction Time Statistics",
+            "Typing Speed Benchmarks",
+            "Click Speed Test Data",
+            "Global Brain Performance"
+        ],
         variableMeasured: [
             { "@type": "PropertyValue", name: "Visual Reaction Time", unitCode: "ms", description: "Time in milliseconds from visual stimulus to motor response" },
             { "@type": "PropertyValue", name: "Typing Speed", unitCode: "WPM", description: "Words per minute adjusted for errors" },
