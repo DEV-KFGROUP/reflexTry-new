@@ -76,6 +76,8 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
+import { I18nProvider } from "@/lib/i18n/context";
+
 export default async function RootLayout({
   children,
 }: {
@@ -158,7 +160,7 @@ export default async function RootLayout({
         <link rel="manifest" href="/manifest.json" />
         <link rel="alternate" hrefLang="x-default" href="https://www.reflextry.com" />
         <link rel="alternate" hrefLang="en" href="https://www.reflextry.com" />
-        <meta httpEquiv="content-language" content="en" />
+        <meta httpEquiv="content-language" content="en, es, de, fr, pt, ja" />
         {/* OpenGraph locale alternates */}
         <meta property="og:locale" content="en_US" />
         {getOGLocaleAlternates().map(locale => (
@@ -172,16 +174,18 @@ export default async function RootLayout({
         className={`${outfit.variable} antialiased bg-background text-foreground flex flex-col min-h-screen`}
       >
         <ThemeProvider>
-          <ErrorBoundary>
-            <NavbarDynamic />
-            <main className="flex-1 pt-20">
-              {children}
-            </main>
-            <Footer />
-            <LazyLoadedComponents />
-            <CookieBanner />
-            <GoogleAnalytics />
-          </ErrorBoundary>
+          <I18nProvider>
+            <ErrorBoundary>
+              <NavbarDynamic />
+              <main className="flex-1 pt-20">
+                {children}
+              </main>
+              <Footer />
+              <LazyLoadedComponents />
+              <CookieBanner />
+              <GoogleAnalytics />
+            </ErrorBoundary>
+          </I18nProvider>
         </ThemeProvider>
       </body>
     </html>

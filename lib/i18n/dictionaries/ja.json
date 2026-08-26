@@ -1,0 +1,86 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "reflex": "反射神経",
+    "memory": "記憶力",
+    "speed": "スピード",
+    "accuracy": "正確さ",
+    "gaming": "ゲーム",
+    "tools": "全ツール",
+    "leaderboard": "ランキング",
+    "challenges": "デイリー挑戦",
+    "statistics": "統計",
+    "science": "科学的根拠",
+    "blog": "ブログ"
+  },
+  "common": {
+    "start": "テスト開始",
+    "restart": "もう一度挑戦",
+    "next": "次へ",
+    "finish": "完了",
+    "score": "スコア",
+    "time": "タイム",
+    "bestScore": "自己ベスト",
+    "average": "平均",
+    "ms": "ms",
+    "wpm": "WPM",
+    "cps": "CPS",
+    "percentile": "パーセンタイル",
+    "saveScore": "スコア保存",
+    "share": "結果をシェア",
+    "instructions": "テストの手順",
+    "difficulty": "難易度",
+    "easy": "かんたん",
+    "medium": "ふつう",
+    "hard": "むずかしい",
+    "expert": "エキスパート",
+    "globalBenchmarks": "世界ベンチマーク",
+    "howToPlay": "遊び方",
+    "faq": "よくある質問",
+    "switchLanguage": "言語"
+  },
+  "home": {
+    "heroBadge": "認知機能パフォーマンステスト",
+    "heroTitle": "測定して鍛える",
+    "heroTitleHighlight": "脳の反応速度",
+    "heroSubtitle": "ミリ秒単位の反射神経テスト、ワーキングメモリゲーム、タイピング速度計測、eスポーツ向けエイム調整ツールをすべて無料で提供。",
+    "startTesting": "最初のテストを開始",
+    "exploreTools": "40以上のツールを見る",
+    "popularTests": "人気のテスト",
+    "categories": "カテゴリー"
+  },
+  "categories": {
+    "reflex": {
+      "title": "反射神経・反応速度",
+      "description": "視覚と聴覚の反応時間をミリ秒単位の高精度でベンチマーク。"
+    },
+    "memory": {
+      "title": "ワーキングメモリ",
+      "description": "短期記憶、シーケンスパターン、視覚空間記憶容量をトレーニング。"
+    },
+    "speed": {
+      "title": "連打・タイピング速度",
+      "description": "秒間クリック数（CPS）、タイピング速度（WPM）、暗算スピードをテスト。"
+    },
+    "accuracy": {
+      "title": "エイム精度・正確性",
+      "description": "微細ターゲットへのクリック精度、パターン認識、手と目の協調を向上。"
+    },
+    "gaming": {
+      "title": "eスポーツウォーミングアップ",
+      "description": "競技タイトルの前にフリックショット、ターゲット追従、反射反応を調整。"
+    }
+  },
+  "footer": {
+    "tagline": "視覚反応時間、作業記憶、タイピングWPM、エイム精度を計測する無料オンライン脳トレプラットフォーム。",
+    "quickLinks": "クイックリンク",
+    "tools": "カテゴリー",
+    "legal": "規約・プライバシー",
+    "privacy": "プライバシーポリシー",
+    "terms": "利用規約",
+    "cookies": "クッキーポリシー",
+    "contact": "お問い合わせ",
+    "about": "運営者情報",
+    "rights": "All rights reserved."
+  }
+}

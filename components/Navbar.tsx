@@ -6,9 +6,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Gamepad2, Zap, Brain, Target, Gauge, Trophy, BarChart3, Flame, Award, BookOpen } from "lucide-react";
 import Image from "next/image";
 
+import { useTranslation } from "@/lib/i18n/context";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+
 export function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [mounted, setMounted] = useState(false);
+    const { t, getLocalizedHref } = useTranslation();
 
     // Ensure component is mounted before rendering interactive elements
     useEffect(() => {
@@ -17,14 +21,14 @@ export function Navbar() {
 
     // Pre-compute nav links with game-themed icons and specific highlight colors
     const navLinks = [
-        { name: "Home", href: "/", icon: Gamepad2, color: "group-hover:text-indigo-600" },
-        { name: "Reflex", href: "/reflex", icon: Zap, color: "group-hover:text-amber-500" },
-        { name: "Speed", href: "/speed", icon: Gauge, color: "group-hover:text-cyan-600" },
-        { name: "Memory", href: "/memory", icon: Brain, color: "group-hover:text-purple-600" },
-        { name: "Accuracy", href: "/accuracy", icon: Target, color: "group-hover:text-emerald-500" },
-        { name: "Tools", href: "/tools", icon: null, color: "group-hover:text-slate-800" },
-        { name: "Leaderboard", href: "/leaderboard", icon: Trophy, color: "group-hover:text-amber-600" },
-        { name: "Blog", href: "/blog", icon: BookOpen, color: "group-hover:text-rose-500" },
+        { name: t("nav.home", "Home"), href: "/", icon: Gamepad2, color: "group-hover:text-indigo-600" },
+        { name: t("nav.reflex", "Reflex"), href: "/reflex", icon: Zap, color: "group-hover:text-amber-500" },
+        { name: t("nav.speed", "Speed"), href: "/speed", icon: Gauge, color: "group-hover:text-cyan-600" },
+        { name: t("nav.memory", "Memory"), href: "/memory", icon: Brain, color: "group-hover:text-purple-600" },
+        { name: t("nav.accuracy", "Accuracy"), href: "/accuracy", icon: Target, color: "group-hover:text-emerald-500" },
+        { name: t("nav.tools", "Tools"), href: "/tools", icon: null, color: "group-hover:text-slate-800" },
+        { name: t("nav.leaderboard", "Leaderboard"), href: "/leaderboard", icon: Trophy, color: "group-hover:text-amber-600" },
+        { name: t("nav.blog", "Blog"), href: "/blog", icon: BookOpen, color: "group-hover:text-rose-500" },
     ];
 
     return (
@@ -36,7 +40,7 @@ export function Navbar() {
                 <div className="flex items-center justify-between min-h-[72px]">
                     
                     {/* Logo Area */}
-                    <Link href="/" className="flex items-center gap-3 group">
+                    <Link href={getLocalizedHref("/")} className="flex items-center gap-3 group">
                         <div className="relative w-10 h-10 rounded-xl overflow-hidden bg-slate-900 border border-black/10 dark:border-white/10 shadow-sm flex items-center justify-center group-hover:border-indigo-500/50 group-hover:shadow-[0_0_15px_rgba(79,70,229,0.15)] transition-all duration-300">
                             <Image
                                 src="/logo-80x80.png"
@@ -61,8 +65,8 @@ export function Navbar() {
                     <div className="hidden lg:flex items-center gap-1.5">
                         {navLinks.map((link) => (
                             <Link
-                                key={link.name}
-                                href={link.href}
+                                key={link.href}
+                                href={getLocalizedHref(link.href)}
                                 className="relative px-3.5 py-2 rounded-full text-sm font-mono font-bold text-muted-foreground transition-all duration-300 group hover:bg-white/10 border border-transparent hover:border-black/10 dark:hover:border-white/10 hover:shadow-sm flex items-center gap-2 overflow-hidden"
                             >
                                 {/* Hover background effect */}
@@ -76,11 +80,16 @@ export function Navbar() {
                                 </span>
                             </Link>
                         ))}
+
+                        <div className="ml-2 pl-2 border-l border-black/10 dark:border-white/10">
+                            <LanguageSwitcher />
+                        </div>
                     </div>
 
                     {/* Mobile menu button */}
                     {mounted && (
-                        <div className="lg:hidden flex items-center gap-3">
+                        <div className="lg:hidden flex items-center gap-2">
+                            <LanguageSwitcher />
                             <button
                                 onClick={() => setIsOpen(!isOpen)}
                                 className="relative p-2.5 text-muted-foreground hover:text-foreground transition-colors rounded-xl border border-black/10 dark:border-white/10 bg-white/5 dark:bg-white/5 hover:bg-white/10 hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/20"
@@ -123,7 +132,7 @@ export function Navbar() {
                                             transition={{ delay: index * 0.04 }}
                                         >
                                             <Link
-                                                href={link.href}
+                                                href={getLocalizedHref(link.href)}
                                                 onClick={() => setIsOpen(false)}
                                                 className="group flex items-center gap-3 py-3 px-5 text-sm font-mono font-bold uppercase tracking-wider text-muted-foreground hover:text-foreground hover:bg-white/10 hover:shadow-inner transition-all rounded-2xl border border-transparent hover:border-black/5 dark:hover:border-white/5"
                                             >

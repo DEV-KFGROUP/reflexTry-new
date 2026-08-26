@@ -1,0 +1,86 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "reflex": "Réflexes",
+    "memory": "Mémoire",
+    "speed": "Vitesse",
+    "accuracy": "Précision",
+    "gaming": "Gaming",
+    "tools": "Tous les Outils",
+    "leaderboard": "Classement",
+    "challenges": "Défis",
+    "statistics": "Statistiques",
+    "science": "Science",
+    "blog": "Blog"
+  },
+  "common": {
+    "start": "Commencer le Test",
+    "restart": "Réessayer",
+    "next": "Suivant",
+    "finish": "Terminer",
+    "score": "Score",
+    "time": "Temps",
+    "bestScore": "Meilleur Score",
+    "average": "Moyenne",
+    "ms": "ms",
+    "wpm": "MPM",
+    "cps": "CPS",
+    "percentile": "Percentile",
+    "saveScore": "Enregistrer le Score",
+    "share": "Partager le Résultat",
+    "instructions": "Instructions",
+    "difficulty": "Difficulté",
+    "easy": "Facile",
+    "medium": "Moyen",
+    "hard": "Difficile",
+    "expert": "Expert",
+    "globalBenchmarks": "Statistiques Mondiales",
+    "howToPlay": "Comment Jouer",
+    "faq": "Foire Aux Questions",
+    "switchLanguage": "Langue"
+  },
+  "home": {
+    "heroBadge": "Évaluation de la Performance Cognitive",
+    "heroTitle": "Mesurez et Entraînez Votre",
+    "heroTitleHighlight": "Vitesse Cérébrale",
+    "heroSubtitle": "Tests gratuits de temps de réaction à la milliseconde près, jeux de mémoire de travail, tests de dactylographie et échauffement pour l'esport.",
+    "startTesting": "Lancer le Premier Test",
+    "exploreTools": "Explorer 40+ Outils",
+    "popularTests": "Tests Populaires",
+    "categories": "Catégories"
+  },
+  "categories": {
+    "reflex": {
+      "title": "Réflexes & Réaction",
+      "description": "Mesurez vos temps de réaction visuels et auditifs avec une précision de milliseconde."
+    },
+    "memory": {
+      "title": "Mémoire de Travail",
+      "description": "Entraînez la mémorisation, les séquences et la capacité visuo-spatiale."
+    },
+    "speed": {
+      "title": "Vitesse Motrice & CPS",
+      "description": "Testez les clics par seconde (CPS), la vitesse de frappe (MPM) et le calcul mental."
+    },
+    "accuracy": {
+      "title": "Visée & Précision",
+      "description": "Affinez la précision sur micro-cibles, la reconnaissance visuelle et la coordination œil-main."
+    },
+    "gaming": {
+      "title": "Échauffement Esport",
+      "description": "Calibrez vos tirs réflexes, le suivi de cible et vos réflexes de combat pour les jeux compétitifs."
+    }
+  },
+  "footer": {
+    "tagline": "Plateforme gratuite d'entraînement cognitif en ligne : temps de réaction visuel, mémoire de travail, frappe au clavier et précision de visée.",
+    "quickLinks": "Liens Rapides",
+    "tools": "Catégories",
+    "legal": "Mentions Légales",
+    "privacy": "Politique de Confidentialité",
+    "terms": "Conditions d'Utilisation",
+    "cookies": "Politique de Cookies",
+    "contact": "Contact",
+    "about": "À Propos",
+    "rights": "Tous droits réservés."
+  }
+}

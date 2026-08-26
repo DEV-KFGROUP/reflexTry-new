@@ -6,9 +6,13 @@ import { Twitter, Instagram, Trophy, Heart, Shield, Swords, ArrowRight, BookOpen
 import Image from "next/image";
 import { motion } from "framer-motion";
 
+import { useTranslation } from "@/lib/i18n/context";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+
 export function Footer() {
     const [mounted, setMounted] = useState(false);
     const [currentYear, setCurrentYear] = useState(2024);
+    const { t, getLocalizedHref } = useTranslation();
 
     useEffect(() => {
         setMounted(true);
@@ -51,7 +55,7 @@ export function Footer() {
             ))}
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 relative z-10">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 lg:gap-8 mb-16 relative">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 lg:gap-8 mb-12 relative">
                     
                     {/* Decal Corner Borders for the Grid area */}
                     <div className="absolute -top-4 -left-4 w-4 h-4 border-t-2 border-l-2 border-black/10 dark:border-white/10 pointer-events-none hidden lg:block" />
@@ -59,7 +63,7 @@ export function Footer() {
 
                     {/* Brand Section */}
                     <div className="lg:col-span-2 space-y-6">
-                        <Link href="/" className="flex items-center gap-3 group w-fit">
+                        <Link href={getLocalizedHref("/")} className="flex items-center gap-3 group w-fit">
                             <div className="relative w-12 h-12 flex items-center justify-center overflow-hidden rounded-xl border border-black/10 dark:border-white/10 bg-slate-900 shadow-sm group-hover:border-indigo-500/50 group-hover:shadow-[0_0_15px_rgba(79,70,229,0.15)] transition-all duration-300">
                                 <Image
                                     src="/logo-80x80.png"
@@ -75,7 +79,7 @@ export function Footer() {
                             </div>
                         </Link>
                         <p className="text-muted-foreground text-sm max-w-sm leading-relaxed font-sans">
-                            Advanced cognitive telemetry tools designed for gamers, students, and professionals. Train your brain, measure latency, and establish your baselines.
+                            {t("footer.tagline", "Advanced cognitive telemetry tools designed for gamers, students, and professionals. Train your brain, measure latency, and establish your baselines.")}
                         </p>
                         <div className="flex gap-3 pt-2">
                             {[
@@ -98,18 +102,18 @@ export function Footer() {
                     <div>
                         <p className="flex items-center gap-2 text-xs font-mono font-bold text-foreground uppercase tracking-widest mb-6">
                             <Swords className="w-4 h-4 text-indigo-500" />
-                            Arenas
+                            {t("footer.tools", "Arenas")}
                         </p>
                         <ul className="space-y-3">
                             {[
-                                { name: "Reflex Tests", href: "/reflex", color: "text-amber-500" },
-                                { name: "Speed Tests", href: "/speed", color: "text-cyan-500" },
-                                { name: "Accuracy Tools", href: "/accuracy", color: "text-emerald-500" },
-                                { name: "Memory Games", href: "/memory", color: "text-purple-500" },
-                                { name: "All Tools", href: "/tools", color: "text-indigo-500" },
+                                { name: t("nav.reflex", "Reflex Tests"), href: "/reflex", color: "text-amber-500" },
+                                { name: t("nav.speed", "Speed Tests"), href: "/speed", color: "text-cyan-500" },
+                                { name: t("nav.accuracy", "Accuracy Tools"), href: "/accuracy", color: "text-emerald-500" },
+                                { name: t("nav.memory", "Memory Games"), href: "/memory", color: "text-purple-500" },
+                                { name: t("nav.tools", "All Tools"), href: "/tools", color: "text-indigo-500" },
                             ].map(link => (
-                                <li key={link.name}>
-                                    <Link href={link.href} className="group flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                                <li key={link.href}>
+                                    <Link href={getLocalizedHref(link.href)} className="group flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
                                         <ArrowRight className={`w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 ${link.color}`} />
                                         <span className="relative">
                                             {link.name}
@@ -129,13 +133,13 @@ export function Footer() {
                         </p>
                         <ul className="space-y-3">
                             {[
-                                { name: "Leaderboard", href: "/leaderboard" },
-                                { name: "Statistics", href: "/statistics" },
+                                { name: t("nav.leaderboard", "Leaderboard"), href: "/leaderboard" },
+                                { name: t("nav.statistics", "Statistics"), href: "/statistics" },
                                 { name: "Achievements", href: "/achievements" },
-                                { name: "Daily Challenges", href: "/challenges" },
+                                { name: t("nav.challenges", "Daily Challenges"), href: "/challenges" },
                             ].map(link => (
-                                <li key={link.name}>
-                                    <Link href={link.href} className="group flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                                <li key={link.href}>
+                                    <Link href={getLocalizedHref(link.href)} className="group flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
                                         <ArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-amber-500" />
                                         <span>{link.name}</span>
                                     </Link>
@@ -148,18 +152,18 @@ export function Footer() {
                     <div>
                         <p className="flex items-center gap-2 text-xs font-mono font-bold text-foreground uppercase tracking-widest mb-6">
                             <BookOpen className="w-4 h-4 text-purple-500" />
-                            Research &amp; Standards
+                            Research
                         </p>
                         <ul className="space-y-3">
                             {[
                                 { name: "Methodology", href: "/methodology" },
-                                { name: "Science & Citations", href: "/science" },
+                                { name: t("nav.science", "Science & Citations"), href: "/science" },
                                 { name: "Training Programs", href: "/training-programs" },
-                                { name: "Research Blog", href: "/blog" },
+                                { name: t("nav.blog", "Research Blog"), href: "/blog" },
                                 { name: "FAQ", href: "/faq" },
                             ].map(link => (
-                                <li key={link.name}>
-                                    <Link href={link.href} className="group flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                                <li key={link.href}>
+                                    <Link href={getLocalizedHref(link.href)} className="group flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
                                         <ArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-purple-500" />
                                         <span>{link.name}</span>
                                     </Link>
@@ -172,18 +176,18 @@ export function Footer() {
                     <div>
                         <p className="flex items-center gap-2 text-xs font-mono font-bold text-foreground uppercase tracking-widest mb-6">
                             <Shield className="w-4 h-4 text-muted-foreground" />
-                            Legal
+                            {t("footer.legal", "Legal")}
                         </p>
                         <ul className="space-y-3">
                             {[
-                                { name: "About Us", href: "/about" },
-                                { name: "Privacy Policy", href: "/privacy" },
-                                { name: "Cookie Policy", href: "/cookies" },
-                                { name: "Terms of Service", href: "/terms" },
-                                { name: "Contact Us", href: "/contact" },
+                                { name: t("footer.about", "About Us"), href: "/about" },
+                                { name: t("footer.privacy", "Privacy Policy"), href: "/privacy" },
+                                { name: t("footer.cookies", "Cookie Policy"), href: "/cookies" },
+                                { name: t("footer.terms", "Terms of Service"), href: "/terms" },
+                                { name: t("footer.contact", "Contact Us"), href: "/contact" },
                             ].map(link => (
-                                <li key={link.name}>
-                                    <Link href={link.href} className="group flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                                <li key={link.href}>
+                                    <Link href={getLocalizedHref(link.href)} className="group flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
                                         <ArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-muted-foreground" />
                                         <span>{link.name}</span>
                                     </Link>
@@ -191,6 +195,11 @@ export function Footer() {
                             ))}
                         </ul>
                     </div>
+                </div>
+
+                {/* Footer Language Selection Bar */}
+                <div className="py-4 border-t border-black/10 dark:border-white/10 flex justify-center sm:justify-start">
+                    <LanguageSwitcher variant="footer" />
                 </div>
 
                 {/* SEO/AEO Global Context */}

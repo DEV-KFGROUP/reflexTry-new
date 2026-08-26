@@ -1,0 +1,86 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "reflex": "Reflexe",
+    "memory": "Gedächtnis",
+    "speed": "Geschwindigkeit",
+    "accuracy": "Präzision",
+    "gaming": "Gaming",
+    "tools": "Alle Tests",
+    "leaderboard": "Bestenliste",
+    "challenges": "Herausforderungen",
+    "statistics": "Statistiken",
+    "science": "Wissenschaft",
+    "blog": "Blog"
+  },
+  "common": {
+    "start": "Test starten",
+    "restart": "Erneut versuchen",
+    "next": "Weiter",
+    "finish": "Beenden",
+    "score": "Ergebnis",
+    "time": "Zeit",
+    "bestScore": "Bestleistung",
+    "average": "Durchschnitt",
+    "ms": "ms",
+    "wpm": "WPM",
+    "cps": "CPS",
+    "percentile": "Perzentil",
+    "saveScore": "Ergebnis speichern",
+    "share": "Ergebnis teilen",
+    "instructions": "Anleitung",
+    "difficulty": "Schwierigkeit",
+    "easy": "Einfach",
+    "medium": "Mittel",
+    "hard": "Schwer",
+    "expert": "Experte",
+    "globalBenchmarks": "Globale Benchmarks",
+    "howToPlay": "Spielanleitung",
+    "faq": "Häufig gestellte Fragen",
+    "switchLanguage": "Sprache"
+  },
+  "home": {
+    "heroBadge": "Kognitiver Leistungs-Benchmark",
+    "heroTitle": "Messen & Trainieren Sie Ihre",
+    "heroTitleHighlight": "Reaktionsgeschwindigkeit",
+    "heroSubtitle": "Kostenlose Reaktionszeittests mit Millisekunden-Präzision, Arbeitsgedächtnis-Spiele, Tippgeschwindigkeit-Benchmarks und FPS-Zielaufwärmung.",
+    "startTesting": "Ersten Test starten",
+    "exploreTools": "40+ Tests entdecken",
+    "popularTests": "Beliebte Tests",
+    "categories": "Kategorien"
+  },
+  "categories": {
+    "reflex": {
+      "title": "Reflexe & Reaktion",
+      "description": "Messen Sie Ihre visuelle und auditive Reaktionszeit mit Millisekunden-Genauigkeit."
+    },
+    "memory": {
+      "title": "Arbeitsgedächtnis",
+      "description": "Trainieren Sie Merkfähigkeit, Mustersequenzen und visuelle Gedächtniskapazität."
+    },
+    "speed": {
+      "title": "Motorik & Klickgeschwindigkeit",
+      "description": "Testen Sie Klicks pro Sekunde (CPS), Tippgeschwindigkeit (WPM) und Kopfrechengeschwindigkeit."
+    },
+    "accuracy": {
+      "title": "Zielgenauigkeit & Präzision",
+      "description": "Verbessern Sie Zielgenauigkeit, Mustererkennung und Hand-Auge-Koordination."
+    },
+    "gaming": {
+      "title": "Esports Warmup",
+      "description": "Kalibrieren Sie Flickshots, Zielverfolgung und Kampfreaktion für kompetitives Gaming."
+    }
+  },
+  "footer": {
+    "tagline": "Kostenlose Online-Plattform für kognitives Training mit visuellen Reaktionszeit-, Arbeitsgedächtnis-, WPM- und Zielgenauigkeits-Benchmarks.",
+    "quickLinks": "Schnellzugriff",
+    "tools": "Kategorien",
+    "legal": "Rechtliches & Datenschutz",
+    "privacy": "Datenschutzerklärung",
+    "terms": "Nutzungsbedingungen",
+    "cookies": "Cookie-Richtlinie",
+    "contact": "Kontakt",
+    "about": "Über Uns",
+    "rights": "Alle Rechte vorbehalten."
+  }
+}

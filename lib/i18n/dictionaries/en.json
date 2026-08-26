@@ -1,0 +1,86 @@
+{
+  "nav": {
+    "home": "Home",
+    "reflex": "Reflex",
+    "memory": "Memory",
+    "speed": "Speed",
+    "accuracy": "Accuracy",
+    "gaming": "Gaming",
+    "tools": "All Tools",
+    "leaderboard": "Leaderboard",
+    "challenges": "Challenges",
+    "statistics": "Statistics",
+    "science": "Science",
+    "blog": "Blog"
+  },
+  "common": {
+    "start": "Start Test",
+    "restart": "Try Again",
+    "next": "Next",
+    "finish": "Finish",
+    "score": "Score",
+    "time": "Time",
+    "bestScore": "Best Score",
+    "average": "Average",
+    "ms": "ms",
+    "wpm": "WPM",
+    "cps": "CPS",
+    "percentile": "Percentile",
+    "saveScore": "Save Score",
+    "share": "Share Result",
+    "instructions": "Instructions",
+    "difficulty": "Difficulty",
+    "easy": "Easy",
+    "medium": "Medium",
+    "hard": "Hard",
+    "expert": "Expert",
+    "globalBenchmarks": "Global Benchmarks",
+    "howToPlay": "How to Play",
+    "faq": "Frequently Asked Questions",
+    "switchLanguage": "Language"
+  },
+  "home": {
+    "heroBadge": "Cognitive Performance Benchmark",
+    "heroTitle": "Measure & Train Your",
+    "heroTitleHighlight": "Brain Speed",
+    "heroSubtitle": "Free millisecond-precision reaction time tests, working memory games, typing speed benchmarks, and FPS aim warmup tools.",
+    "startTesting": "Start First Test",
+    "exploreTools": "Explore 40+ Tools",
+    "popularTests": "Popular Tests",
+    "categories": "Categories"
+  },
+  "categories": {
+    "reflex": {
+      "title": "Reflex & Reaction",
+      "description": "Benchmark your visual and auditory reaction times with millisecond accuracy."
+    },
+    "memory": {
+      "title": "Working Memory",
+      "description": "Train memory retention, sequence patterns, and visual span capacity."
+    },
+    "speed": {
+      "title": "Motor Speed & CPS",
+      "description": "Test mouse clicks per second (CPS), typing speed (WPM), and calculation agility."
+    },
+    "accuracy": {
+      "title": "Aim & Accuracy",
+      "description": "Refine micro-target precision, pattern recognition, and hand-eye coordination."
+    },
+    "gaming": {
+      "title": "Esports Warmup",
+      "description": "Calibrate mouse flick shots, target tracking, and combat reflexes for competitive games."
+    }
+  },
+  "footer": {
+    "tagline": "Free online cognitive training platform providing visual reaction time, working memory, typing WPM, and aim precision benchmarks.",
+    "quickLinks": "Quick Links",
+    "tools": "Categories",
+    "legal": "Legal & Privacy",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookie Policy",
+    "contact": "Contact Us",
+    "about": "About Us",
+    "rights": "All rights reserved."
+  }
+}

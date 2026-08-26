@@ -1,0 +1,86 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "reflex": "Reflejos",
+    "memory": "Memoria",
+    "speed": "Velocidad",
+    "accuracy": "Precisión",
+    "gaming": "Juegos",
+    "tools": "Todas las Herramientas",
+    "leaderboard": "Clasificación",
+    "challenges": "Desafíos",
+    "statistics": "Estadísticas",
+    "science": "Ciencia",
+    "blog": "Blog"
+  },
+  "common": {
+    "start": "Comenzar Prueba",
+    "restart": "Intentar de Nuevo",
+    "next": "Siguiente",
+    "finish": "Terminar",
+    "score": "Puntuación",
+    "time": "Tiempo",
+    "bestScore": "Mejor Puntuación",
+    "average": "Promedio",
+    "ms": "ms",
+    "wpm": "PPM",
+    "cps": "CPS",
+    "percentile": "Percentil",
+    "saveScore": "Guardar Puntuación",
+    "share": "Compartir Resultado",
+    "instructions": "Instrucciones",
+    "difficulty": "Dificultad",
+    "easy": "Fácil",
+    "medium": "Medio",
+    "hard": "Difícil",
+    "expert": "Experto",
+    "globalBenchmarks": "Estadísticas Globales",
+    "howToPlay": "Cómo Jugar",
+    "faq": "Preguntas Frecuentes",
+    "switchLanguage": "Idioma"
+  },
+  "home": {
+    "heroBadge": "Evaluación del Rendimiento Cognitivo",
+    "heroTitle": "Mide y Entrena la",
+    "heroTitleHighlight": "Velocidad de tu Cerebro",
+    "heroSubtitle": "Pruebas gratuitas de tiempo de reacción con precisión de milisegundos, juegos de memoria de trabajo, pruebas de mecanografía y calentamiento para eSports.",
+    "startTesting": "Iniciar Primera Prueba",
+    "exploreTools": "Explorar 40+ Herramientas",
+    "popularTests": "Pruebas Populares",
+    "categories": "Categorías"
+  },
+  "categories": {
+    "reflex": {
+      "title": "Reflejos y Reacción",
+      "description": "Evalúa tus tiempos de reacción visuales y auditivos con precisión de milisegundos."
+    },
+    "memory": {
+      "title": "Memoria de Trabajo",
+      "description": "Entrena la retención de memoria, patrones de secuencia y capacidad visual."
+    },
+    "speed": {
+      "title": "Velocidad Motora y CPS",
+      "description": "Prueba clics por segundo (CPS), velocidad de escritura (PPM) y agilidad de cálculo."
+    },
+    "accuracy": {
+      "title": "Puntería y Precisión",
+      "description": "Perfecciona la precisión con micro-objetivos, reconocimiento de patrones y coordinación ojo-mano."
+    },
+    "gaming": {
+      "title": "Calentamiento eSports",
+      "description": "Calibra disparos rápidos, seguimiento de objetivos y reflejos de combate para juegos competitivos."
+    }
+  },
+  "footer": {
+    "tagline": "Plataforma gratuita de entrenamiento cognitivo en línea con pruebas de tiempo de reacción visual, memoria de trabajo, PPM y precisión de puntería.",
+    "quickLinks": "Enlaces Rápidos",
+    "tools": "Categorías",
+    "legal": "Legal y Privacidad",
+    "privacy": "Política de Privacidad",
+    "terms": "Términos de Servicio",
+    "cookies": "Política de Cookies",
+    "contact": "Contáctenos",
+    "about": "Sobre Nosotros",
+    "rights": "Todos los derechos reservados."
+  }
+}
