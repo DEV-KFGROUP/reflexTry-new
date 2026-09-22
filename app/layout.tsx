@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Outfit } from "next/font/google";
 import "./globals.css";
 import { NavbarDynamic } from "@/components/NavbarDynamic";
@@ -9,7 +9,10 @@ import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { CookieBanner } from "@/components/CookieBanner";
 import { StructuredData, generateOrganizationSchema } from "@/components/StructuredData";
-import { getOGLocaleAlternates } from "@/lib/international-seo";
+
+export const viewport: Viewport = {
+  themeColor: "#f8fafc",
+};
 
 const outfit = Outfit({
   variable: "--font-outfit",
@@ -152,23 +155,6 @@ export default async function RootLayout({
             `,
           }}
         />
-
-        {/* Essential favicons & icons */}
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
-        <link rel="apple-touch-icon" href="/apple-icon.png" />
-        <link rel="manifest" href="/manifest.json" />
-        <link rel="alternate" hrefLang="x-default" href="https://www.reflextry.com" />
-        <link rel="alternate" hrefLang="en" href="https://www.reflextry.com" />
-        <meta httpEquiv="content-language" content="en, es, de, fr, pt, ja" />
-        {/* OpenGraph locale alternates */}
-        <meta property="og:locale" content="en_US" />
-        {getOGLocaleAlternates().map(locale => (
-          <meta key={locale} property="og:locale:alternate" content={locale} />
-        ))}
-        <meta name="theme-color" content="#f8fafc" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
       </head>
       <body
         className={`${outfit.variable} antialiased bg-background text-foreground flex flex-col min-h-screen`}

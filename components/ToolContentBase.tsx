@@ -3,8 +3,6 @@
 import { motion } from "framer-motion";
 import { HelpCircle, Info, Sparkles, TrendingUp, ArrowRight, CheckCircle2, Target, Trophy, Brain, List, Gamepad2, MousePointer2 } from "lucide-react";
 import Link from "next/link";
-import { SchemaInjector } from "@/components/SchemaInjector";
-import { generateFAQPageSchema, generateHowToSchema } from "@/lib/structured-data";
 
 interface FAQItem {
     question: string;
@@ -43,9 +41,6 @@ export interface ToolContentProps {
 }
 
 export function ToolContent({ title, description, howToUse, howToImprove, howToPlay, benefits, faqs, relatedTools = [] }: ToolContentProps) {
-
-    const faqSchema = generateFAQPageSchema(faqs);
-    const howToSchema = generateHowToSchema(title, howToPlay);
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -184,8 +179,6 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
             variants={containerVariants}
             className="w-full max-w-6xl mx-auto mt-20 mb-20 space-y-12 relative"
         >
-            <SchemaInjector schemas={[faqSchema, howToSchema]} />
-
             {/* Header Section */}
             <motion.div variants={itemVariants} className="text-center space-y-4 mb-12 relative z-10">
                 <div className="inline-block relative">

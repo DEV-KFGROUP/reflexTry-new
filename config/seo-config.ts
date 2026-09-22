@@ -1,9 +1,9 @@
 export const SEO_CONFIGS = {
   // --- MEMORY TOOLS ---
   "sequence-memory": {
-    title: "Sequence Memory Test - Online Pattern Recall & Simon Benchmark | Reflextry",
+    title: "Sequence Memory Test - Pattern Recall Benchmark | Reflextry",
     description:
-      "Test and improve your working memory with our free Sequence Memory Test. Memorize expanding spatial light patterns, challenge your brain, and compare scores globally.",
+      "Test and improve your working memory with our free Sequence Memory Test. Memorize expanding spatial light patterns and compare your score against global percentiles.",
     keywords: [
       "sequence memory test",
       "sequence memory game",
@@ -27,9 +27,9 @@ export const SEO_CONFIGS = {
     ],
   },
   "number-memory": {
-    title: "Number Memory Test - Online Digit Span Test & Memory Benchmark | Reflextry",
+    title: "Number Memory Test - Digit Span Memory Benchmark | Reflextry",
     description:
-      "Measure working memory and digit span capacity with our free Number Memory Test. Memorize expanding numeric sequences and benchmark your recall against world averages.",
+      "Measure working memory and digit span capacity with our free Number Memory Test. Memorize expanding numeric sequences and benchmark your recall score.",
     keywords: [
       "number memory test",
       "digit span test online",
@@ -53,7 +53,7 @@ export const SEO_CONFIGS = {
     ],
   },
   "visual-memory": {
-    title: "Visual Memory Test - Spatial Grid Recall & Photographic Memory Test | Reflextry",
+    title: "Visual Memory Test - Spatial Grid Recall Game | Reflextry",
     description:
       "Enhance visual retention and spatial pattern recognition. Test your visual memory by recalling flash grid patterns on an expanding matrix. Free human benchmark tool.",
     keywords: [
@@ -78,7 +78,7 @@ export const SEO_CONFIGS = {
     ],
   },
   "color-memory": {
-    title: "Color Memory Test - Visual Hue Recall & Stroop Memory Challenge | Reflextry",
+    title: "Color Memory Test - Visual Sequence Recall Game | Reflextry",
     description:
       "Challenge your chromatic memory and visual attention. Memorize fast-shifting color sequences and train cognitive flexibility with our free Color Memory Test.",
     keywords: [
@@ -102,7 +102,7 @@ export const SEO_CONFIGS = {
     ],
   },
   "shape-memory": {
-    title: "Shape Memory Test - Geometric Pattern & Visual Shape Recall | Reflextry",
+    title: "Shape Memory Test - Geometric Pattern Recall | Reflextry",
     description:
       "Train geometric shape discrimination and spatial memory. Memorize abstract shapes and symbols to enhance non-verbal visual reasoning and focus.",
     keywords: [
@@ -124,7 +124,7 @@ export const SEO_CONFIGS = {
     ],
   },
   "symbol-memory": {
-    title: "Symbol Memory Test - Associative Symbol Match & Icon Recall | Reflextry",
+    title: "Symbol Memory Test - Associative Icon Recall | Reflextry",
     description:
       "Improve abstract pattern recognition and associative memory. Match cryptic symbols and icons to sharpen mental focus and visual processing speed.",
     keywords: [
@@ -146,7 +146,7 @@ export const SEO_CONFIGS = {
     ],
   },
   "word-recall": {
-    title: "Word Recall Memory Test - Verbal Memory Test & Word Retention Benchmark | Reflextry",
+    title: "Word Recall Memory Test - Verbal Retention Game | Reflextry",
     description:
       "Evaluate your verbal memory retention and vocabulary recognition. Test whether words are new or previously seen to measure short-term linguistic memory.",
     keywords: [
@@ -170,7 +170,7 @@ export const SEO_CONFIGS = {
     ],
   },
   "card-match": {
-    title: "Card Match Memory Game - Classic Concentration & Pairs Memory Test | Reflextry",
+    title: "Card Match Memory Game - Concentration Pairs | Reflextry",
     description:
       "Train spatial memory and visual pattern recall with our free online Card Match Memory Game. Flip cards, match pairs with fewest moves, and beat the clock.",
     keywords: [
@@ -191,7 +191,7 @@ export const SEO_CONFIGS = {
     ],
   },
   "chimp-test": {
-    title: "Chimp Test - Working Memory Game & Primate Spatial Benchmark | Reflextry",
+    title: "Chimp Test - Working Memory Benchmark Game | Reflextry",
     description:
       "Are you smarter than a chimpanzee? Take the famous Chimp Test to measure your visuospatial working memory. Memorize the number grid before it disappears.",
     keywords: [
@@ -213,7 +213,7 @@ export const SEO_CONFIGS = {
     ],
   },
   "verbal-memory": {
-    title: "Verbal Memory Test - Word Recognition & Semantic Memory Span | Reflextry",
+    title: "Verbal Memory Test - Word Recognition Benchmark | Reflextry",
     description:
       "Test verbal working memory with our free Verbal Memory Test. Identify seen words vs new words to measure linguistic retention and cognitive processing speed.",
     keywords: [
@@ -235,7 +235,7 @@ export const SEO_CONFIGS = {
     ],
   },
   "object-tracking": {
-    title: "Multiple Object Tracking Test - Visual Attention & Focus Benchmark | Reflextry",
+    title: "Multiple Object Tracking - Visual Focus Test | Reflextry",
     description:
       "Test dynamic visual attention and spatial tracking. Follow multiple moving target spheres among distractors in this science-backed cognitive test.",
     keywords: [
@@ -255,7 +255,7 @@ export const SEO_CONFIGS = {
     ],
   },
   "n-back": {
-    title: "N-Back Test - Working Memory & Continuous Matching Benchmark | Reflextry",
+    title: "N-Back Test - Working Memory Capacity Benchmark | Reflextry",
     description:
       "Train working memory with the classic N-Back task. Match letters that appeared N steps ago, track hits and accuracy, and push from 1-back to 3-back.",
     keywords: [
@@ -277,7 +277,7 @@ export const SEO_CONFIGS = {
 
   // --- REFLEX TOOLS ---
   "reaction-time": {
-    title: "Reaction Time Test - Free Online Millisecond Benchmark (ms) | Reflextry",
+    title: "Reaction Time Test - Millisecond Benchmark (ms) | Reflextry",
     description:
       "Test and improve your visual reaction time in milliseconds. Take our free millisecond reaction test, benchmark against pro gamers, and track your reflex progress.",
     keywords: [
@@ -302,7 +302,7 @@ export const SEO_CONFIGS = {
     ],
   },
   "sound-reaction": {
-    title: "Audio Reaction Time Test - Sound Reflex & Hearing Reaction Test (ms) | Reflextry",
+    title: "Audio Reaction Time Test - Sound Reflex (ms) | Reflextry",
     description:
       "Measure your auditory reaction speed in milliseconds. Test hearing reflexes with instant audio cues and compare your sound reaction vs visual reaction times.",
     keywords: [
@@ -324,7 +324,7 @@ export const SEO_CONFIGS = {
     ],
   },
   "grid-shot": {
-    title: "Grid Shot - FPS Aim Trainer & Mouse Precision Reaction Test | Reflextry",
+    title: "Grid Shot Aim Trainer - Mouse Precision Reflex | Reflextry",
     description:
       "Warm up your aim and mouse speed with Grid Shot. Click rapidly appearing targets across the grid to boost hand-eye coordination for FPS games like Valorant and CS2.",
     keywords: [
@@ -346,7 +346,7 @@ export const SEO_CONFIGS = {
     ],
   },
   "peripheral-vision": {
-    title: "Peripheral Vision Test - Visual Field Awareness & Reaction Speed | Reflextry",
+    title: "Peripheral Vision Test - Visual Field Awareness | Reflextry",
     description:
       "Train peripheral vision awareness and side reaction speed. Spot and click off-center stimuli to expand visual focus for driving, sports, and competitive gaming.",
     keywords: [
@@ -367,7 +367,7 @@ export const SEO_CONFIGS = {
     ],
   },
   "directional-reflex": {
-    title: "Directional Reflex Test - Arrow Key Speed & Spatial Reaction Game | Reflextry",
+    title: "Directional Reflex Test - Arrow Key Speed Game | Reflextry",
     description:
       "Test keyboard response speed and spatial decision-making. Press arrow keys matching rapid directional prompts to improve cognitive processing and reflex agility.",
     keywords: [
@@ -387,7 +387,7 @@ export const SEO_CONFIGS = {
     ],
   },
   "multi-stimulus": {
-    title: "Multi-Stimulus Reaction Test - Choice Reaction Time & Hick's Law Test | Reflextry",
+    title: "Multi-Stimulus Reaction Test - Choice RT Game | Reflextry",
     description:
       "Test choice reaction time and selective attention. Process multiple visual and audio stimuli simultaneously to measure split-second decision-making speed.",
     keywords: [
@@ -406,7 +406,7 @@ export const SEO_CONFIGS = {
     ],
   },
   "sequence-reaction": {
-    title: "Sequence Reaction Test - Rapid Combo Reflex & Pattern Reaction Test | Reflextry",
+    title: "Sequence Reaction Test - Rapid Combo Reflexes | Reflextry",
     description:
       "Combine memory recall with rapid motor reflexes. Follow fast-paced light sequences and execute rapid combos to train rhythmic response times and speed.",
     keywords: [
@@ -425,7 +425,7 @@ export const SEO_CONFIGS = {
     ],
   },
   "whack-a-mole": {
-    title: "Whack-a-Mole Game - Online Reaction Speed & Hand-Eye Coordination | Reflextry",
+    title: "Whack-a-Mole Online - Hand-Eye Reaction Game | Reflextry",
     description:
       "Play classic Whack-a-Mole online for free. Tap popping moles as fast as possible to measure reaction speed, precision clicking, and motor agility.",
     keywords: [
@@ -445,7 +445,7 @@ export const SEO_CONFIGS = {
     ],
   },
   "color-switch": {
-    title: "Color Switch Reflex Test - Screen Color Change Reaction Test | Reflextry",
+    title: "Color Switch Reflex Test - Visual Reaction Time | Reflextry",
     description:
       "Train color reaction time and selective response speed. React immediately to screen color shifts and flash signals with zero hesitation.",
     keywords: [
@@ -464,7 +464,7 @@ export const SEO_CONFIGS = {
     ],
   },
   "time-perception": {
-    title: "Time Perception Test - Internal Clock & Time Estimation Benchmark | Reflextry",
+    title: "Time Perception Test - Internal Clock Benchmark | Reflextry",
     description:
       "Test your internal clock and temporal estimation. Hold and release the button to accurately produce target time intervals down to the millisecond.",
     keywords: [
@@ -484,7 +484,7 @@ export const SEO_CONFIGS = {
     ],
   },
   "go-no-go": {
-    title: "Go / No-Go Test - Inhibitory Control & Response Inhibition | Reflextry",
+    title: "Go / No-Go Test - Impulse & Reaction Control | Reflextry",
     description:
       "Measure response inhibition with a Go/No-Go task. Press on green Go trials, withhold on red No-Go trials, and track accuracy plus reaction time.",
     keywords: [
@@ -502,7 +502,7 @@ export const SEO_CONFIGS = {
     ],
   },
   "flanker": {
-    title: "Flanker Task - Selective Attention & Conflict Resolution | Reflextry",
+    title: "Flanker Test - Selective Attention Benchmark | Reflextry",
     description:
       "Take the Eriksen Flanker task online. Respond to the center arrow while ignoring congruent or incongruent flankers to measure attention control.",
     keywords: [
@@ -519,7 +519,7 @@ export const SEO_CONFIGS = {
     ],
   },
   "choice-reaction": {
-    title: "Choice Reaction Time Test - Multi-Choice RT Benchmark (ms) | Reflextry",
+    title: "Choice Reaction Time Test - Multi-Choice RT (ms) | Reflextry",
     description:
       "Measure choice reaction time across 2–4 colored targets. Click the lit box as fast as possible and beat your average RT in milliseconds.",
     keywords: [
@@ -538,7 +538,7 @@ export const SEO_CONFIGS = {
 
   // --- SPEED TOOLS ---
   "cps-test": {
-    title: "CPS Test - Click Speed Test (Clicks Per Second Benchmark) | Reflextry",
+    title: "CPS Test - Clicks Per Second Speed Benchmark | Reflextry",
     description:
       "Measure your clicking speed with our free CPS Test. Test 1s, 5s, 10s, 30s, and 60s modes for normal clicking, jitter clicking, butterfly clicking, and drag clicking.",
     keywords: [
@@ -562,7 +562,7 @@ export const SEO_CONFIGS = {
     ],
   },
   "speed-math": {
-    title: "Mental Math Speed Test - Rapid Arithmetic & Calculation Challenge | Reflextry",
+    title: "Mental Math Speed Test - Rapid Calculation Quiz | Reflextry",
     description:
       "Sharpen mental arithmetic and calculation speed. Solve rapid addition, subtraction, multiplication, and division under the timer to boost math fluency.",
     keywords: [
@@ -583,7 +583,7 @@ export const SEO_CONFIGS = {
     ],
   },
   "math-speed": {
-    title: "Mental Math Speed Test - Rapid Arithmetic & Calculation Challenge | Reflextry",
+    title: "Mental Math Speed Test - Rapid Calculation Quiz | Reflextry",
     description:
       "Sharpen mental arithmetic and calculation speed. Solve rapid addition, subtraction, multiplication, and division under the timer to boost math fluency.",
     keywords: [
@@ -604,7 +604,7 @@ export const SEO_CONFIGS = {
     ],
   },
   "typing-speed": {
-    title: "Typing Speed Test - Free Online WPM & Typing Accuracy Benchmark | Reflextry",
+    title: "Typing Speed Test - Free Online WPM Benchmark | Reflextry",
     description:
       "Test words per minute (WPM) and accuracy with our free 1-minute Typing Speed Test. Benchmark your keyboarding speed, track error rates, and improve touch typing.",
     keywords: [
@@ -626,7 +626,7 @@ export const SEO_CONFIGS = {
     ],
   },
   "word-accuracy": {
-    title: "Word Speed & Accuracy Test - Rapid Word Typing & Spelling Precision | Reflextry",
+    title: "Word Accuracy Test - Rapid Typing Precision | Reflextry",
     description:
       "Improve typing precision and eliminate keystroke errors. Type high-speed prompt words with 100% accuracy to master error-free typing under time pressure.",
     keywords: [
@@ -644,7 +644,7 @@ export const SEO_CONFIGS = {
     ],
   },
   "word-speed": {
-    title: "Speed Reading Test - Rapid Word Recognition & WPM Benchmark | Reflextry",
+    title: "Speed Reading Test - Word Recognition WPM | Reflextry",
     description:
       "Test reading speed and word recognition. Measure words per minute reading fluency and rapid visual identification with our interactive Speed Words tool.",
     keywords: [
@@ -660,7 +660,7 @@ export const SEO_CONFIGS = {
     ],
   },
   "grid-selection": {
-    title: "Schulte Table & Grid Speed Test - 5x5 Number Search & Visual Scanning | Reflextry",
+    title: "Grid Speed Test - 5x5 Number Search Game | Reflextry",
     description:
       "Train visual scanning and peripheral reading speed with Schulte Tables. Find numbers in ascending order on a 5x5 grid to expand visual search speed.",
     keywords: [
@@ -678,7 +678,7 @@ export const SEO_CONFIGS = {
     ],
   },
   "grid-speed": {
-    title: "Schulte Table & Grid Speed Test - 5x5 Number Search & Visual Scanning | Reflextry",
+    title: "Grid Speed Test - 5x5 Number Search Game | Reflextry",
     description:
       "Train visual scanning and peripheral reading speed with Schulte Tables. Find numbers in ascending order on a 5x5 grid to expand visual search speed.",
     keywords: [
@@ -696,7 +696,7 @@ export const SEO_CONFIGS = {
     ],
   },
   "schulte-table": {
-    title: "Schulte Table Test - Visual Scanning & Peripheral Vision Speed | Reflextry",
+    title: "Schulte Table Test - Visual Scanning Speed | Reflextry",
     description:
       "Classic Schulte Table challenge. Click shuffled numbers in order on 3×3 to 7×7 grids. Train peripheral vision, visual search speed, and focus under the clock.",
     keywords: [
@@ -714,7 +714,7 @@ export const SEO_CONFIGS = {
     ],
   },
   "number-rush": {
-    title: "Number Rush Speed Test - Ascending Number Tap & Digits Blitz | Reflextry",
+    title: "Number Rush Speed Test - Ascending Tap Blitz | Reflextry",
     description:
       "Test rapid number recognition and tap speed. Hunt and click ascending numbers as fast as humanly possible to benchmark your cognitive processing rate.",
     keywords: [
@@ -731,7 +731,7 @@ export const SEO_CONFIGS = {
     ],
   },
   "quick-sort": {
-    title: "Quick Sort Speed Game - Rapid Categorization & Classification Test | Reflextry",
+    title: "Quick Sort Speed Game - Rapid Sorting Test | Reflextry",
     description:
       "Challenge cognitive categorization and rapid decision speed. Sort incoming items into corresponding categories under strict time constraints.",
     keywords: [
@@ -750,7 +750,7 @@ export const SEO_CONFIGS = {
 
   // --- ACCURACY TOOLS ---
   "pattern-matching": {
-    title: "Pattern Matching Accuracy Test - Matrix Reasoning & Visual Precision | Reflextry",
+    title: "Pattern Matching Test - Visual Matrix Accuracy | Reflextry",
     description:
       "Improve visual pattern recognition and non-verbal reasoning. Match complex matrix patterns and geometric sequences to test visual acuity and analytical thinking.",
     keywords: [
@@ -767,7 +767,7 @@ export const SEO_CONFIGS = {
     ],
   },
   "precision-click": {
-    title: "Precision Clicking Test - Micro Target Accuracy & Mouse Control | Reflextry",
+    title: "Precision Clicking Test - Mouse Target Accuracy | Reflextry",
     description:
       "Sharpen mouse precision and micro-target accuracy. Click small, pinpoint targets without missing to refine fine motor control and cursor accuracy for gaming.",
     keywords: [
@@ -784,7 +784,7 @@ export const SEO_CONFIGS = {
     ],
   },
   "data-entry": {
-    title: "Data Entry Accuracy Test - Alphanumeric Keystroke & Precision Benchmark | Reflextry",
+    title: "Data Entry Accuracy Test - Keystroke Benchmark | Reflextry",
     description:
       "Measure data entry speed, alphanumeric typing precision, and error rates. Test clerical keystrokes per hour (KPH) with realistic numeric and code benchmarks.",
     keywords: [
@@ -801,7 +801,7 @@ export const SEO_CONFIGS = {
     ],
   },
   "image-recognition": {
-    title: "Image Recognition Accuracy Test - Visual Discrimination & Detail Spotting | Reflextry",
+    title: "Image Recognition Test - Visual Detail Accuracy | Reflextry",
     description:
       "Test visual perception and fast image discrimination. Identify subtle visual differences and match target objects at high speed to train observation skills.",
     keywords: [
@@ -817,7 +817,7 @@ export const SEO_CONFIGS = {
     ],
   },
   "angle-estimation": {
-    title: "Angle Estimation Test - Spatial Acuity & Geometry Angle Guessing | Reflextry",
+    title: "Angle Estimation Test - Spatial Geometry Acuity | Reflextry",
     description:
       "Test your eye for geometry and spatial estimation. Guess degrees of given angles accurately to benchmark visual angle acuity and spatial judgment.",
     keywords: [
@@ -833,59 +833,68 @@ export const SEO_CONFIGS = {
     ],
   },
   "color-match": {
-    title: "Color Match Accuracy Test - RGB Shade Discrimination & Hue Matching | Reflextry",
+    title: "Color Match Test - RGB Hue Discrimination | Reflextry",
     description:
-      "Test color perception and hue discrimination. Adjust RGB sliders to match exact color swatches and measure your color vision accuracy.",
+      "Test color perception and subtle shade discrimination with our Color Match Test. Match target RGB hues under time pressure and benchmark visual precision.",
     keywords: [
-      "color match test online",
-      "color shade test",
-      "farnsworth munsell 100 hue test online free",
-      "exact color matching game",
+      "color match test",
+      "color discrimination test",
       "hue matching test",
-      "kuku kube color test online",
-      "color vision accuracy test",
-      "spot the different color tile",
-      "designer color match test",
-      "human benchmark color match"
+      "color acuity test",
+      "color perception test",
+      "shade match test online",
+      "rgb color test",
+      "visual color discrimination",
+      "color matching game online",
+      "subtle color difference test",
+      "farnsworth munsell alternative",
+      "color sensitivity test",
+      "chromatic acuity test"
     ],
   },
   "color-blindness": {
-    title: "Color Blindness Test - Ishihara Plates & Red-Green Color Vision Check | Reflextry",
+    title: "Color Blindness Test - Ishihara Plates Screener | Reflextry",
     description:
-      "Check your color vision with our online Ishihara Color Blindness Test. Identify hidden numbers in dot plates to screen for Protanopia, Deuteranopia, and Tritanopia.",
+      "Screen color vision with our online Color Blindness Test based on Ishihara plate principles. Check red-green color deficiency with dynamic dot patterns.",
     keywords: [
-      "color blindness test online",
-      "ishihara color test free",
-      "free color blind test",
-      "am i color blind test",
+      "color blindness test",
       "color vision test online",
-      "red green color blind test",
-      "protanopia test online",
+      "ishihara test online free",
+      "red green color blindness test",
+      "color blind test plates",
+      "protanopia test",
       "deuteranopia test",
-      "tritanopia test",
-      "human benchmark color blindness"
+      "online ishihara plates",
+      "color vision deficiency test",
+      "free color blind check",
+      "color deficiency screening",
+      "ishihara chart test",
+      "color blindness assessment"
     ],
   },
   "mental-rotation": {
-    title: "Mental Rotation Test - 3D Spatial Reasoning & Visualization Benchmark | Reflextry",
+    title: "Mental Rotation Test - 3D Spatial Reasoning | Reflextry",
     description:
-      "Evaluate 3D spatial intelligence and mental rotation skills. Determine if rotated geometric shapes are identical or mirror images in this Shepard-Metzler test.",
+      "Benchmark 3D spatial visualization and cognitive rotation speed. Determine whether complex geometric shapes are identical or mirror-reversed in real time.",
     keywords: [
-      "mental rotation test online",
-      "shepard metzler mental rotation test",
-      "3d shape rotation test",
-      "spatial reasoning test online free",
+      "mental rotation test",
+      "shepard metzler test online",
+      "spatial reasoning test free",
+      "3d spatial visualization test",
       "spatial intelligence test",
-      "visual spatial rotation benchmark",
-      "spatial awareness test online",
-      "3d object rotation game",
-      "spatial orientation cognitive test"
+      "cognitive rotation test",
+      "spatial ability benchmark",
+      "3d object rotation test",
+      "spatial relations test",
+      "vandenberg mental rotation",
+      "spatial cognition test",
+      "mental rotation practice"
     ],
   },
 
   // --- GAMING & ESPORTS TOOLS ---
   "aim-trainer": {
-    title: "FPS Aim Trainer Online - Free Mouse Aim, Flick & Tracking Warmup | Reflextry",
+    title: "FPS Aim Trainer - Mouse Aim & Flick Warmup | Reflextry",
     description:
       "Improve your mouse accuracy, target tracking, and flick speed for FPS games like Valorant, CS2, and Apex. Free 3D aim trainer directly in your web browser.",
     keywords: [
@@ -904,7 +913,7 @@ export const SEO_CONFIGS = {
     ],
   },
   "rpg-reaction": {
-    title: "Esports Gamer Reaction Time Test - QTE Parry & Combat Reflex Benchmark | Reflextry",
+    title: "Esports Gamer Reaction Test - Combat Reflexes | Reflextry",
     description:
       "Test competitive combat reflexes, quick-time event (QTE) parry timing, and esports reaction speeds in millisecond-accurate simulated combat scenarios.",
     keywords: [
@@ -921,7 +930,7 @@ export const SEO_CONFIGS = {
     ],
   },
   "endless-dodge": {
-    title: "Endless Dodge Game - Bullet Evasion & Agility Reflex Challenge | Reflextry",
+    title: "Endless Dodge Game - Bullet Evasion Agility | Reflextry",
     description:
       "Test dodging reflexes and spatial evasion agility. Navigate your cursor through infinite swarms of moving obstacles in this high-intensity reflex survival game.",
     keywords: [
@@ -937,9 +946,9 @@ export const SEO_CONFIGS = {
     ],
   },
   "stroop-drop": {
-    title: "Stroop Effect Test - Cognitive Interference & Impulse Control Game | Reflextry",
+    title: "Stroop Effect Test - Impulse & Attention Game | Reflextry",
     description:
-      "Challenge your inhibitory control with the interactive Stroop Drop Test. Identify the font color while suppressing conflicting word text to measure cognitive conflict resolution.",
+      "Challenge your inhibitory control with the interactive Stroop Drop game. Resolve cognitive interference between falling color words and their ink hues.",
     keywords: [
       "stroop effect test online free",
       "stroop color word test game",
@@ -953,9 +962,9 @@ export const SEO_CONFIGS = {
     ],
   },
   "target-tracking": {
-    title: "Target Tracking Aim Trainer - Smooth Mouse Tracking & Apex Aim Warmup | Reflextry",
+    title: "Target Tracking Aim Trainer - Mouse Aim Warmup | Reflextry",
     description:
-      "Master smooth mouse tracking for competitive FPS games. Track erratic, moving targets continuously with your crosshair to maximize weapon accuracy and tracking score.",
+      "Master smooth mouse tracking for competitive FPS games. Practice continuous precision aim against evasive moving targets with zero mouse smoothing.",
     keywords: [
       "smooth tracking aim trainer",
       "target tracking aim test online",
@@ -969,9 +978,9 @@ export const SEO_CONFIGS = {
     ],
   },
   "flick-shot": {
-    title: "Flick Shot Aim Trainer - CS2 & Valorant Fast Flick Mouse Accuracy | Reflextry",
+    title: "Flick Shot Aim Trainer - Fast Flick Mouse Aim | Reflextry",
     description:
-      "Train muscle memory and snap aiming with our Flick Shot Aim Trainer. Practice micro-flicks and one-tap target acquisition for tactical shooters like CS2 and Valorant.",
+      "Train muscle memory and snap aiming with our Flick Shot trainer. Calibrate rapid micro-adjustments and target acquisition for tactical shooters.",
     keywords: [
       "flick shot aim trainer online",
       "flick aim test free",
@@ -986,9 +995,9 @@ export const SEO_CONFIGS = {
     ],
   },
   "rhythm-tap": {
-    title: "Rhythm Tap Game - Audio-Visual Beat Timing & Musical Reflex Test | Reflextry",
+    title: "Rhythm Tap Game - Audio-Visual Beat Timing Test | Reflextry",
     description:
-      "Benchmark your musical timing accuracy and millisecond sync. Tap to the rhythm with precise audio-visual coordination to evaluate rhythmic precision and tempo stability.",
+      "Benchmark your musical timing accuracy and millisecond rhythm perception. Tap in sync with increasing BPM tempos and track off-beat latency errors.",
     keywords: [
       "rhythm timing test online",
       "beat tap reaction test",

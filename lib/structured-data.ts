@@ -26,13 +26,6 @@ export function generateToolStructuredData(_toolId: string, title: string, descr
             price: "0",
             priceCurrency: "USD",
         },
-        aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.8",
-            ratingCount: "3420",
-            bestRating: "5",
-            worstRating: "1"
-        }
     };
 }
 
@@ -243,13 +236,6 @@ export function generateSoftwareApplicationSchema(title: string, description: st
             price: "0",
             priceCurrency: "USD"
         },
-        aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: "4.8",
-            ratingCount: "2150",
-            bestRating: "5",
-            worstRating: "1"
-        }
     };
 }
 

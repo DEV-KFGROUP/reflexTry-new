@@ -345,9 +345,9 @@ export default function ColorBlindnessGame() {
             <div className="w-20 h-20 bg-rose-50 dark:bg-rose-900/20 rounded-full flex items-center justify-center mb-6">
               <Eye className="w-10 h-10 text-rose-500" />
             </div>
-            <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-wider mb-2">
-              Color Perception
-            </h2>
+            <h1 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-wider mb-2">
+              Color Blindness Test
+            </h1>
             <p className="text-sm text-slate-500 dark:text-slate-400 mb-4 leading-relaxed">
               Screen your red-green color contrast perception by identifying the numbers hidden within procedural dot plates.
             </p>

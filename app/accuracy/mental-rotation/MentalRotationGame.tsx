@@ -354,9 +354,9 @@ export default function MentalRotationGame() {
             <div className="w-20 h-20 bg-indigo-50 dark:bg-indigo-900/20 rounded-full flex items-center justify-center mb-6">
               <Box className="w-10 h-10 text-indigo-500" />
             </div>
-            <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-wider mb-4">
-              Spatial Reasoning
-            </h2>
+            <h1 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-wider mb-4">
+              Mental Rotation Test
+            </h1>
             <p className="text-sm text-slate-500 dark:text-slate-400 mb-8 leading-relaxed">
               Test your spatial intelligence by determining if two 3D structures are the same object rotated, or if they are mirrored differently.
             </p>

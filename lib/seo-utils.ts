@@ -23,8 +23,8 @@ export function getToolMetadata(toolId: string, url: string): Metadata {
 
 export function getHomeMetadata(): Metadata {
     return generateSEOMetadata({
-        title: "Brain Training Games, Reaction Time Tests & Cognitive Benchmarks | Reflextry",
-        description: "Improve your cognitive performance with free online brain training games. Test reaction time (ms), working memory, CPS click speed, typing WPM, and FPS aim precision.",
+        title: "Brain Training Games & Reaction Time Benchmark | Reflextry",
+        description: "Train cognitive skills with free brain training games. Test reaction time (ms), working memory, CPS click speed, typing WPM, and FPS aim precision online.",
         keywords: [
             "reaction time test",
             "cps test",
@@ -60,7 +60,7 @@ export function getHomeMetadata(): Metadata {
 export function getCategoryMetadata(category: string): Metadata {
     const categoryConfigs: Record<string, { title: string; description: string; keywords: string[] }> = {
         memory: {
-            title: "Working Memory Tests & Cognitive Retention Games | Reflextry",
+            title: "Working Memory Tests & Cognitive Games | Reflextry",
             description: "Boost working memory capacity with free online memory games. Test visual patterns, number span, spatial sequences, verbal recall, and the primate Chimp Test.",
             keywords: [
                 "memory test online free",
@@ -80,7 +80,7 @@ export function getCategoryMetadata(category: string): Metadata {
             ],
         },
         reflex: {
-            title: "Reflex Tests & Millisecond Reaction Time Games | Reflextry",
+            title: "Reflex Tests & Reaction Time Games | Reflextry",
             description: "Test and train your visual and auditory reflexes with millisecond precision. Benchmark reaction times for driving, esports, and sports agility.",
             keywords: [
                 "reflex test online",
@@ -99,7 +99,7 @@ export function getCategoryMetadata(category: string): Metadata {
             ],
         },
         speed: {
-            title: "Speed Tests: CPS Click Speed, Typing WPM & Math Speed | Reflextry",
+            title: "Speed Tests: CPS, Typing WPM & Math Speed | Reflextry",
             description: "Measure motor speed and mental processing efficiency. Test your clicks per second (CPS), 1-minute typing WPM, rapid mental math, and Schulte table grids.",
             keywords: [
                 "speed test games online",
@@ -118,7 +118,7 @@ export function getCategoryMetadata(category: string): Metadata {
             ],
         },
         accuracy: {
-            title: "Accuracy Tests: Mouse Precision & Visual Acuity Benchmarks | Reflextry",
+            title: "Accuracy Tests: Mouse Precision & Vision | Reflextry",
             description: "Refine hand-eye coordination and attention to detail. Test micro-target precision clicking, matrix pattern matching, color discrimination, and angle estimation.",
             keywords: [
                 "accuracy test online",
@@ -136,7 +136,7 @@ export function getCategoryMetadata(category: string): Metadata {
             ],
         },
         gaming: {
-            title: "Esports Warmup & FPS Aim Trainer: Valorant, CS2 & Apex | Reflextry",
+            title: "Esports FPS Aim Trainer & Warmup Tools | Reflextry",
             description: "Warm up your hands and calibrate aim mechanics before competitive matches. Practice 3D flick shots, target tracking, combat reaction time, and dodging.",
             keywords: [
                 "aim trainer online free",
@@ -154,7 +154,7 @@ export function getCategoryMetadata(category: string): Metadata {
             ],
         },
         tools: {
-            title: "Cognitive Benchmark Tools Directory (40+ Tests) | Reflextry",
+            title: "Cognitive Benchmark Tools Directory | Reflextry",
             description: "Explore our complete suite of 40+ free cognitive benchmarks, reflex tests, memory games, and esports warmup tools. Test your mind today.",
             keywords: [
                 "online cognitive benchmark tools",
@@ -168,7 +168,7 @@ export function getCategoryMetadata(category: string): Metadata {
             ],
         },
         science: {
-            title: "The Science of Neuroplasticity & Cognitive Training | Reflextry",
+            title: "The Science of Cognitive Training | Reflextry",
             description: "Discover the neuroscience behind brain training, synaptic plasticity, reaction speed physiology, and working memory capacity enhancement.",
             keywords: [
                 "science of brain training",
@@ -181,7 +181,7 @@ export function getCategoryMetadata(category: string): Metadata {
             ],
         },
         "training-programs": {
-            title: "Daily Brain Training Programs & Cognitive Routines | Reflextry",
+            title: "Daily Brain Training Programs & Routines | Reflextry",
             description: "Follow structured 10-15 minute daily cognitive routines designed to sharpen focus, memory retention, processing speed, and reflexes.",
             keywords: [
                 "daily brain training routine",
@@ -193,7 +193,7 @@ export function getCategoryMetadata(category: string): Metadata {
             ],
         },
         leaderboard: {
-            title: "Global Cognitive Leaderboard & High Score Rankings | Reflextry",
+            title: "Global Cognitive Leaderboard & Rankings | Reflextry",
             description: "Compare your reaction time, CPS, typing speed, and memory scores against global percentiles and top players worldwide.",
             keywords: [
                 "human benchmark leaderboard",
@@ -206,7 +206,7 @@ export function getCategoryMetadata(category: string): Metadata {
             ],
         },
         faq: {
-            title: "Frequently Asked Questions About Brain & Reflex Training | Reflextry",
+            title: "Brain & Reflex Training FAQ | Reflextry",
             description: "Get scientific answers to common questions about human reaction times, working memory improvement, CPS click techniques, and typing speed.",
             keywords: [
                 "what is a good reaction time in ms",
