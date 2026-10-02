@@ -17,7 +17,7 @@ export const viewport: Viewport = {
 const outfit = Outfit({
   variable: "--font-outfit",
   subsets: ["latin"],
-  display: "swap", // Use system font immediately, swap when font loads (prevents render blocking)
+  display: "optional", // Keep the fallback on slow connections rather than repainting text late.
   preload: true, // Preload font for LCP - critical for hero text rendering
   adjustFontFallback: true, // Use system font fallback for faster rendering
   fallback: ['system-ui', '-apple-system', 'sans-serif'], // Immediate fallback
@@ -93,21 +93,6 @@ export default async function RootLayout({
       <head>
         <StructuredData type="Organization" data={organizationSchema} />
 
-        {/* Resource Hints: Preconnect to 3rd-party origins to reduce latency */}
-        <link rel="preconnect" href="https://pagead2.googlesyndication.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com" />
-        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
-
-        {/* Google AdSense Official Script */}
-        <script
-          id="google-adsense"
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3064655546051154"
-          crossOrigin="anonymous"
-          suppressHydrationWarning
-        />
-
         {/* AdSense Publisher Meta Tag */}
         <meta name="google-adsense-account" content="ca-pub-3064655546051154" />
 
@@ -127,7 +112,7 @@ export default async function RootLayout({
                 --secondary: 210 24% 96%;
                 --secondary-foreground: 222 47% 11%;
                 --muted: 210 24% 96%;
-                --muted-foreground: 215 16% 47%;
+                --muted-foreground: 215 20% 38%;
                 --accent: 214 32% 91%;
                 --accent-foreground: 222 47% 11%;
                 --border: 214 24% 88%;

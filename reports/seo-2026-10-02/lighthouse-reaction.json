@@ -1,0 +1,972 @@
+{
+  "url": "https://www.reflextry.com/reflex/reaction",
+  "fetchTime": "2026-10-02T05:43:54.826Z",
+  "scores": {
+    "performance": 76,
+    "accessibility": 96,
+    "bestPractices": 79,
+    "seo": 100,
+    "pwa": 0
+  },
+  "webVitals": {
+    "FCP": 1222.704,
+    "LCP": 7356.174999999999,
+    "TBT": 26,
+    "CLS": 0,
+    "SI": 1996.3697511094388
+  },
+  "issues": {
+    "critical": [
+      {
+        "id": "third-party-cookies",
+        "title": "Uses third-party cookies",
+        "description": "Third-party cookies may be blocked in some contexts. [Learn more about preparing for third-party cookie restrictions](https://privacysandbox.google.com/cookies/prepare/overview).",
+        "score": 0,
+        "displayValue": "1 cookie found",
+        "category": "best-practices",
+        "items": [
+          {
+            "name": "test_cookie",
+            "url": "https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-3064655546051154&output=html&adk=1812271804&adf=3025194257&abgtt=6&lmt=1790919835&plat=2%3A16777216%2C3%3A65536%2C4%3A65536%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C32%3A32%2C41%3A32%2C42%3A32%2C43%3A32%2C44%3A32&format=0x0&url=https%3A%2F%2Fwww.reflextry.com%2Freflex%2Freaction&pra=5&asro=0&aimartd=4&aieuf=1&aicrs=1&uach=WyJBbmRyb2lkIiwiMTEuMCIsIiIsIm1vdG8gZyBwb3dlciAoMjAyMikiLCIxMzYuMC4wLjAiLG51bGwsMSxudWxsLCI2NCIsW1siQ2hyb21pdW0iLCIxNTQuMC44MDM3Ljk1Il0sWyJHb29nbGUgQ2hyb21lIiwiMTU0LjAuODAzNy45NSJdLFsiTm90IEEoQnJhbmQiLCI5OS4wLjAuMCJdXSwwXQ..&dt=1790919835281&bpp=1&bdt=213&idt=124&shv=r20261001&mjsv=m202609300101&ptt=9&saldr=aa&abxe=1&cookie_enabled=1&eoidce=1&nras=1&correlator=5435722252662&frm=20&pv=2&u_tz=330&u_his=2&u_h=823&u_w=412&u_ah=823&u_aw=412&u_cd=24&u_sd=1.75&dmc=16&adx=-12245933&ady=-12245933&biw=412&bih=823&scr_x=0&scr_y=0&eid=95403356%2C122881334&oid=2&pvsid=5533678158454598&tmod=566190700&uas=0&nvt=1&fsapi=1&fc=1920&brdim=0%2C0%2C0%2C0%2C412%2C0%2C412%2C823%2C412%2C823&vis=1&rsz=%7C%7Cs%7C&abl=NS&fu=32768&bc=31&bz=1&pgls=CAk.&ifi=1&uci=a!1&fsb=1&dtd=134"
+          }
+        ]
+      },
+      {
+        "id": "largest-contentful-paint-element",
+        "title": "Largest Contentful Paint element",
+        "description": "This is the largest contentful element painted within the viewport. [Learn more about the Largest Contentful Paint element](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+        "score": 0,
+        "displayValue": "7,360 ms",
+        "category": "performance",
+        "items": [
+          {
+            "type": "table",
+            "headings": [
+              {
+                "key": "node",
+                "valueType": "node",
+                "label": "Element"
+              }
+            ],
+            "items": [
+              {
+                "node": {
+                  "type": "node",
+                  "lhId": "page-0-P",
+                  "path": "1,HTML,1,BODY,36,DIV,0,DIV,0,DIV,1,DIV,1,P",
+                  "selector": "div.max-w-6xl > div.flex > div.flex-1 > p.text-sm",
+                  "boundingRect": {
+                    "top": 559,
+                    "bottom": 650,
+                    "left": 33,
+                    "right": 379,
+                    "width": 346,
+                    "height": 91
+                  },
+                  "snippet": "<p class=\"text-sm text-muted-foreground leading-relaxed mb-3\">",
+                  "nodeLabel": "We use cookies to enhance your browsing experience, serve personalized ads or c…"
+                }
+              }
+            ]
+          },
+          {
+            "type": "table",
+            "headings": [
+              {
+                "key": "phase",
+                "valueType": "text",
+                "label": "Phase"
+              },
+              {
+                "key": "percent",
+                "valueType": "text",
+                "label": "% of LCP"
+              },
+              {
+                "key": "timing",
+                "valueType": "ms",
+                "label": "Timing"
+              }
+            ],
+            "items": [
+              {
+                "phase": "TTFB",
+                "timing": 622.704,
+                "percent": "8%"
+              },
+              {
+                "phase": "Load Delay",
+                "timing": 0,
+                "percent": "0%"
+              },
+              {
+                "phase": "Load Time",
+                "timing": 0,
+                "percent": "0%"
+              },
+              {
+                "phase": "Render Delay",
+                "timing": 6733.471,
+                "percent": "92%"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "color-contrast",
+        "title": "Background and foreground colors do not have a sufficient contrast ratio.",
+        "description": "Low-contrast text is difficult or impossible for many users to read. [Learn how to provide sufficient color contrast](https://dequeuniversity.com/rules/axe/4.10/color-contrast).",
+        "score": 0,
+        "displayValue": null,
+        "category": "accessibility",
+        "items": [
+          {
+            "node": {
+              "selector": "div.w-full > div.flex > div.bg-white > div.text-[10px]",
+              "snippet": "<div class=\"text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-3\">"
+            },
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "relatedNode": {
+                    "type": "node",
+                    "lhId": "1-1-DIV",
+                    "path": "1,HTML,1,BODY,4,MAIN,0,DIV,0,DIV,3,DIV,3,DIV,1,DIV,0,DIV,0,DIV",
+                    "selector": "div.relative > div.w-full > div.flex > div.bg-white",
+                    "boundingRect": {
+                      "top": 328,
+                      "bottom": 741,
+                      "left": 33,
+                      "right": 379,
+                      "width": 346,
+                      "height": 413
+                    },
+                    "snippet": "<div class=\"bg-white border border-slate-200 rounded-2xl p-4 shadow-sm\">",
+                    "nodeLabel": "DIFFICULTY LEVEL\nBeginner\n\nAnywhere tap · Long delay · 5 attempts · No penaltie…"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "selector": "button.relative > div.relative > div.flex-1 > p.text-[9px]",
+              "snippet": "<p class=\"text-[9px] text-slate-400 mt-0.5 leading-tight\">"
+            },
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "relatedNode": {
+                    "type": "node",
+                    "lhId": "1-3-BUTTON",
+                    "path": "1,HTML,1,BODY,4,MAIN,0,DIV,0,DIV,3,DIV,3,DIV,1,DIV,0,DIV,0,DIV,1,DIV,0,BUTTON",
+                    "selector": "div.flex > div.bg-white > div.flex > button.relative",
+                    "boundingRect": {
+                      "top": 372,
+                      "bottom": 436,
+                      "left": 50,
+                      "right": 362,
+                      "width": 312,
+                      "height": 64
+                    },
+                    "snippet": "<button class=\"relative w-full text-left rounded-2xl border-2 p-3 transition-all focus:ou…\" tabindex=\"0\">",
+                    "nodeLabel": "Beginner\n\nAnywhere tap · Long delay · 5 attempts · No penalties"
+                  }
+                },
+                {
+                  "relatedNode": {
+                    "type": "node",
+                    "lhId": "1-1-DIV",
+                    "path": "1,HTML,1,BODY,4,MAIN,0,DIV,0,DIV,3,DIV,3,DIV,1,DIV,0,DIV,0,DIV",
+                    "selector": "div.relative > div.w-full > div.flex > div.bg-white",
+                    "boundingRect": {
+                      "top": 328,
+                      "bottom": 741,
+                      "left": 33,
+                      "right": 379,
+                      "width": 346,
+                      "height": 413
+                    },
+                    "snippet": "<div class=\"bg-white border border-slate-200 rounded-2xl p-4 shadow-sm\">",
+                    "nodeLabel": "DIFFICULTY LEVEL\nBeginner\n\nAnywhere tap · Long delay · 5 attempts · No penaltie…"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "selector": "button.relative > div.relative > div.flex-1 > p.text-[9px]",
+              "snippet": "<p class=\"text-[9px] text-slate-400 mt-0.5 leading-tight\">"
+            },
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "relatedNode": {
+                    "type": "node",
+                    "lhId": "1-5-BUTTON",
+                    "path": "1,HTML,1,BODY,4,MAIN,0,DIV,0,DIV,3,DIV,3,DIV,1,DIV,0,DIV,0,DIV,1,DIV,1,BUTTON",
+                    "selector": "div.flex > div.bg-white > div.flex > button.relative",
+                    "boundingRect": {
+                      "top": 444,
+                      "bottom": 508,
+                      "left": 50,
+                      "right": 362,
+                      "width": 312,
+                      "height": 64
+                    },
+                    "snippet": "<button class=\"relative w-full text-left rounded-2xl border-2 p-3 transition-all focus:ou…\" tabindex=\"0\">",
+                    "nodeLabel": "Easy\n\nAnywhere tap · Standard delay · 5 attempts · Minor warning"
+                  }
+                },
+                {
+                  "relatedNode": {
+                    "type": "node",
+                    "lhId": "1-1-DIV",
+                    "path": "1,HTML,1,BODY,4,MAIN,0,DIV,0,DIV,3,DIV,3,DIV,1,DIV,0,DIV,0,DIV",
+                    "selector": "div.relative > div.w-full > div.flex > div.bg-white",
+                    "boundingRect": {
+                      "top": 328,
+                      "bottom": 741,
+                      "left": 33,
+                      "right": 379,
+                      "width": 346,
+                      "height": 413
+                    },
+                    "snippet": "<div class=\"bg-white border border-slate-200 rounded-2xl p-4 shadow-sm\">",
+                    "nodeLabel": "DIFFICULTY LEVEL\nBeginner\n\nAnywhere tap · Long delay · 5 attempts · No penaltie…"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "selector": "button.relative > div.relative > div.flex-1 > p.text-[9px]",
+              "snippet": "<p class=\"text-[9px] text-slate-400 mt-0.5 leading-tight\">"
+            },
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "relatedNode": {
+                    "type": "node",
+                    "lhId": "1-7-BUTTON",
+                    "path": "1,HTML,1,BODY,4,MAIN,0,DIV,0,DIV,3,DIV,3,DIV,1,DIV,0,DIV,0,DIV,1,DIV,3,BUTTON",
+                    "selector": "div.flex > div.bg-white > div.flex > button.relative",
+                    "boundingRect": {
+                      "top": 588,
+                      "bottom": 652,
+                      "left": 50,
+                      "right": 362,
+                      "width": 312,
+                      "height": 64
+                    },
+                    "snippet": "<button class=\"relative w-full text-left rounded-2xl border-2 p-3 transition-all focus:ou…\" tabindex=\"0\">",
+                    "nodeLabel": "Hard\n\nFaux signal distractions · Short delay · Misfires count"
+                  }
+                },
+                {
+                  "relatedNode": {
+                    "type": "node",
+                    "lhId": "1-1-DIV",
+                    "path": "1,HTML,1,BODY,4,MAIN,0,DIV,0,DIV,3,DIV,3,DIV,1,DIV,0,DIV,0,DIV",
+                    "selector": "div.relative > div.w-full > div.flex > div.bg-white",
+                    "boundingRect": {
+                      "top": 328,
+                      "bottom": 741,
+                      "left": 33,
+                      "right": 379,
+                      "width": 346,
+                      "height": 413
+                    },
+                    "snippet": "<div class=\"bg-white border border-slate-200 rounded-2xl p-4 shadow-sm\">",
+                    "nodeLabel": "DIFFICULTY LEVEL\nBeginner\n\nAnywhere tap · Long delay · 5 attempts · No penaltie…"
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "node": {
+              "selector": "button.relative > div.relative > div.flex-1 > p.text-[9px]",
+              "snippet": "<p class=\"text-[9px] text-slate-400 mt-0.5 leading-tight\">"
+            },
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "relatedNode": {
+                    "type": "node",
+                    "lhId": "1-9-BUTTON",
+                    "path": "1,HTML,1,BODY,4,MAIN,0,DIV,0,DIV,3,DIV,3,DIV,1,DIV,0,DIV,0,DIV,1,DIV,4,BUTTON",
+                    "selector": "div.flex > div.bg-white > div.flex > button.relative",
+                    "boundingRect": {
+                      "top": 660,
+                      "bottom": 724,
+                      "left": 50,
+                      "right": 362,
+                      "width": 312,
+                      "height": 64
+                    },
+                    "snippet": "<button class=\"relative w-full text-left rounded-2xl border-2 p-3 transition-all focus:ou…\" tabindex=\"0\">",
+                    "nodeLabel": "Professional\n\nMust tap dynamic Target Dot · Faux signals · Fast delay"
+                  }
+                },
+                {
+                  "relatedNode": {
+                    "type": "node",
+                    "lhId": "1-1-DIV",
+                    "path": "1,HTML,1,BODY,4,MAIN,0,DIV,0,DIV,3,DIV,3,DIV,1,DIV,0,DIV,0,DIV",
+                    "selector": "div.relative > div.w-full > div.flex > div.bg-white",
+                    "boundingRect": {
+                      "top": 328,
+                      "bottom": 741,
+                      "left": 33,
+                      "right": 379,
+                      "width": 346,
+                      "height": 413
+                    },
+                    "snippet": "<div class=\"bg-white border border-slate-200 rounded-2xl p-4 shadow-sm\">",
+                    "nodeLabel": "DIFFICULTY LEVEL\nBeginner\n\nAnywhere tap · Long delay · 5 attempts · No penaltie…"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "label-content-name-mismatch",
+        "title": "Elements with visible text labels do not have matching accessible names.",
+        "description": "Visible text labels that do not match the accessible name can result in a confusing experience for screen reader users. [Learn more about accessible names](https://dequeuniversity.com/rules/axe/4.10/label-content-name-mismatch).",
+        "score": 0,
+        "displayValue": null,
+        "category": "accessibility",
+        "items": [
+          {
+            "node": {
+              "selector": "div.flex > div.lg:hidden > div.relative > button.flex",
+              "snippet": "<button type=\"button\" class=\"flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold rounded-full b…\" aria-expanded=\"false\" aria-haspopup=\"true\" aria-label=\"Language\">"
+            }
+          },
+          {
+            "node": {
+              "selector": "div.flex > div.flex-1 > div.flex > a.text-teal-600",
+              "snippet": "<a class=\"text-teal-600 dark:text-teal-400 hover:underline font-medium transition-co…\" aria-label=\"Learn more about our cookie policy\" href=\"/cookies\">"
+            }
+          }
+        ]
+      },
+      {
+        "id": "unused-javascript",
+        "title": "Reduce unused JavaScript",
+        "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).",
+        "score": 0,
+        "displayValue": "Est savings of 266 KiB",
+        "category": "performance",
+        "items": [
+          {
+            "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202609300101/show_ads_impl_fy2021.js?bust=122881334",
+            "totalBytes": 167511,
+            "wastedBytes": 120941,
+            "wastedPercent": 72.19893830568014
+          },
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-Y88CPQZ0HG",
+            "totalBytes": 178238,
+            "wastedBytes": 75335,
+            "wastedPercent": 42.266462480857584
+          },
+          {
+            "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3064655546051154",
+            "totalBytes": 57126,
+            "wastedBytes": 30572,
+            "wastedPercent": 53.51666777643932
+          },
+          {
+            "url": "https://www.reflextry.com/_next/static/chunks/0ez2khs3cmm5p.js?dpl=dpl_5xnq1xXwamQWzuhpbL4hGTNu61fM",
+            "totalBytes": 41695,
+            "wastedBytes": 23084,
+            "wastedPercent": 55.36392457316469
+          },
+          {
+            "url": "https://www.reflextry.com/_next/static/chunks/0n5ppwnlf4oin.js?dpl=dpl_5xnq1xXwamQWzuhpbL4hGTNu61fM",
+            "totalBytes": 72144,
+            "wastedBytes": 22331,
+            "wastedPercent": 30.953422309401684
+          }
+        ]
+      },
+      {
+        "id": "legacy-javascript",
+        "title": "Avoid serving legacy JavaScript to modern browsers",
+        "description": "Polyfills and transforms enable legacy browsers to use new JavaScript features. However, many aren't necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/baseline) features, unless you know you must support legacy browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://philipwalton.com/articles/the-state-of-es5-on-the-web/)",
+        "score": 0,
+        "displayValue": "Est savings of 14 KiB",
+        "category": "performance",
+        "items": [
+          {
+            "url": "https://www.reflextry.com/_next/static/chunks/0n5ppwnlf4oin.js?dpl=dpl_5xnq1xXwamQWzuhpbL4hGTNu61fM",
+            "wastedBytes": 13955,
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "signal": "Array.prototype.at",
+                  "location": {
+                    "type": "source-location",
+                    "url": "https://www.reflextry.com/_next/static/chunks/0n5ppwnlf4oin.js?dpl=dpl_5xnq1xXwamQWzuhpbL4hGTNu61fM",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 5472
+                  }
+                },
+                {
+                  "signal": "Array.prototype.flat",
+                  "location": {
+                    "type": "source-location",
+                    "url": "https://www.reflextry.com/_next/static/chunks/0n5ppwnlf4oin.js?dpl=dpl_5xnq1xXwamQWzuhpbL4hGTNu61fM",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 4860
+                  }
+                },
+                {
+                  "signal": "Array.prototype.flatMap",
+                  "location": {
+                    "type": "source-location",
+                    "url": "https://www.reflextry.com/_next/static/chunks/0n5ppwnlf4oin.js?dpl=dpl_5xnq1xXwamQWzuhpbL4hGTNu61fM",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 4973
+                  }
+                },
+                {
+                  "signal": "Object.fromEntries",
+                  "location": {
+                    "type": "source-location",
+                    "url": "https://www.reflextry.com/_next/static/chunks/0n5ppwnlf4oin.js?dpl=dpl_5xnq1xXwamQWzuhpbL4hGTNu61fM",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 5349
+                  }
+                },
+                {
+                  "signal": "Object.hasOwn",
+                  "location": {
+                    "type": "source-location",
+                    "url": "https://www.reflextry.com/_next/static/chunks/0n5ppwnlf4oin.js?dpl=dpl_5xnq1xXwamQWzuhpbL4hGTNu61fM",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 5607
+                  }
+                },
+                {
+                  "signal": "String.prototype.trimEnd",
+                  "location": {
+                    "type": "source-location",
+                    "url": "https://www.reflextry.com/_next/static/chunks/0n5ppwnlf4oin.js?dpl=dpl_5xnq1xXwamQWzuhpbL4hGTNu61fM",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 4602
+                  }
+                },
+                {
+                  "signal": "String.prototype.trimStart",
+                  "location": {
+                    "type": "source-location",
+                    "url": "https://www.reflextry.com/_next/static/chunks/0n5ppwnlf4oin.js?dpl=dpl_5xnq1xXwamQWzuhpbL4hGTNu61fM",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 4517
+                  }
+                }
+              ]
+            },
+            "totalBytes": 0
+          },
+          {
+            "url": "https://ep2.adtrafficquality.google/sodar/sodar2.js",
+            "wastedBytes": 0,
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "signal": "@babel/plugin-transform-regenerator",
+                  "location": {
+                    "type": "source-location",
+                    "url": "https://ep2.adtrafficquality.google/sodar/sodar2.js",
+                    "urlProvider": "network",
+                    "line": 7,
+                    "column": 135
+                  }
+                }
+              ]
+            },
+            "totalBytes": 0
+          },
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-Y88CPQZ0HG",
+            "wastedBytes": 0,
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "signal": "@babel/plugin-transform-regenerator",
+                  "location": {
+                    "type": "source-location",
+                    "url": "https://www.googletagmanager.com/gtag/js?id=G-Y88CPQZ0HG",
+                    "urlProvider": "network",
+                    "line": 221,
+                    "column": 389
+                  }
+                }
+              ]
+            },
+            "totalBytes": 0
+          }
+        ]
+      },
+      {
+        "id": "inspector-issues",
+        "title": "Issues were logged in the `Issues` panel in Chrome Devtools",
+        "description": "Issues logged to the `Issues` panel in Chrome Devtools indicate unresolved problems. They can come from network request failures, insufficient security controls, and other browser concerns. Open up the Issues panel in Chrome DevTools for more details on each issue.",
+        "score": 0,
+        "displayValue": null,
+        "category": "best-practices",
+        "items": [
+          {
+            "issueType": "Cookie",
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "url": "https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-3064655546051154&output=html&adk=1812271804&adf=3025194257&abgtt=6&lmt=1790919835&plat=2%3A16777216%2C3%3A65536%2C4%3A65536%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C32%3A32%2C41%3A32%2C42%3A32%2C43%3A32%2C44%3A32&format=0x0&url=https%3A%2F%2Fwww.reflextry.com%2Freflex%2Freaction&pra=5&asro=0&aimartd=4&aieuf=1&aicrs=1&uach=WyJBbmRyb2lkIiwiMTEuMCIsIiIsIm1vdG8gZyBwb3dlciAoMjAyMikiLCIxMzYuMC4wLjAiLG51bGwsMSxudWxsLCI2NCIsW1siQ2hyb21pdW0iLCIxNTQuMC44MDM3Ljk1Il0sWyJHb29nbGUgQ2hyb21lIiwiMTU0LjAuODAzNy45NSJdLFsiTm90IEEoQnJhbmQiLCI5OS4wLjAuMCJdXSwwXQ..&dt=1790919835281&bpp=1&bdt=213&idt=124&shv=r20261001&mjsv=m202609300101&ptt=9&saldr=aa&abxe=1&cookie_enabled=1&eoidce=1&nras=1&correlator=5435722252662&frm=20&pv=2&u_tz=330&u_his=2&u_h=823&u_w=412&u_ah=823&u_aw=412&u_cd=24&u_sd=1.75&dmc=16&adx=-12245933&ady=-12245933&biw=412&bih=823&scr_x=0&scr_y=0&eid=95403356%2C122881334&oid=2&pvsid=5533678158454598&tmod=566190700&uas=0&nvt=1&fsapi=1&fc=1920&brdim=0%2C0%2C0%2C0%2C412%2C0%2C412%2C823%2C412%2C823&vis=1&rsz=%7C%7Cs%7C&abl=NS&fu=32768&bc=31&bz=1&pgls=CAk.&ifi=1&uci=a!1&fsb=1&dtd=134"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "cache-insight",
+        "title": "Use efficient cache lifetimes",
+        "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more](https://web.dev/uses-long-cache-ttl/).",
+        "score": 0,
+        "displayValue": "Est savings of 16 KiB",
+        "category": "performance",
+        "items": [
+          {
+            "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202609300101/show_ads_impl_fy2021.js?bust=122881334",
+            "cacheLifetimeMs": 1209600000,
+            "totalBytes": 167539,
+            "wastedBytes": 16426.3097765363
+          }
+        ]
+      },
+      {
+        "id": "network-dependency-tree-insight",
+        "title": "Network dependency tree",
+        "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/lighthouse/performance/critical-request-chains) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load.",
+        "score": 0,
+        "displayValue": null,
+        "category": "performance",
+        "items": [
+          {
+            "type": "list-section",
+            "value": {
+              "type": "network-tree",
+              "chains": {
+                "B6609EF3C1F5504C3872AEF768C843CB": {
+                  "url": "https://www.reflextry.com/reflex/reaction",
+                  "navStartToEndTime": 183,
+                  "transferSize": 26587,
+                  "isLongest": true,
+                  "children": {
+                    "85793.44": {
+                      "url": "https://www.reflextry.com/manifest.json",
+                      "navStartToEndTime": 318,
+                      "transferSize": 1030,
+                      "isLongest": true,
+                      "children": {}
+                    },
+                    "85793.5": {
+                      "url": "https://www.reflextry.com/_next/static/chunks/0iept~l1~0se_.css?dpl=dpl_5xnq1xXwamQWzuhpbL4hGTNu61fM",
+                      "navStartToEndTime": 270,
+                      "transferSize": 35474,
+                      "children": {}
+                    },
+                    "85793.4": {
+                      "url": "https://www.reflextry.com/_next/static/chunks/0xzhmoul5ptlx.css?dpl=dpl_5xnq1xXwamQWzuhpbL4hGTNu61fM",
+                      "navStartToEndTime": 234,
+                      "transferSize": 1122,
+                      "children": {}
+                    }
+                  }
+                }
+              },
+              "longestChain": {
+                "duration": 318
+              }
+            }
+          },
+          {
+            "type": "list-section",
+            "title": "Preconnected origins",
+            "description": "[preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints help the browser establish a connection earlier in the page load, saving time when the first request for that origin is made. The following are the origins that the page preconnected to.",
+            "value": {
+              "type": "table",
+              "headings": [
+                {
+                  "key": "origin",
+                  "valueType": "text",
+                  "subItemsHeading": {
+                    "key": "warning"
+                  },
+                  "label": "Origin"
+                },
+                {
+                  "key": "source",
+                  "valueType": "node",
+                  "label": "Source"
+                }
+              ],
+              "items": [
+                {
+                  "origin": "https://pagead2.googlesyndication.com/",
+                  "source": {
+                    "type": "node",
+                    "lhId": "page-2-LINK",
+                    "path": "1,HTML,0,HEAD,22,LINK",
+                    "selector": "head > link",
+                    "boundingRect": {
+                      "top": 0,
+                      "bottom": 0,
+                      "left": 0,
+                      "right": 0,
+                      "width": 0,
+                      "height": 0
+                    },
+                    "snippet": "<link rel=\"preconnect\" href=\"https://pagead2.googlesyndication.com\" crossorigin=\"anonymous\">",
+                    "nodeLabel": "head > link"
+                  },
+                  "subItems": {
+                    "type": "subitems",
+                    "items": []
+                  }
+                },
+                {
+                  "origin": "https://www.googletagmanager.com/",
+                  "source": {
+                    "type": "node",
+                    "lhId": "page-3-LINK",
+                    "path": "1,HTML,0,HEAD,24,LINK",
+                    "selector": "head > link",
+                    "boundingRect": {
+                      "top": 0,
+                      "bottom": 0,
+                      "left": 0,
+                      "right": 0,
+                      "width": 0,
+                      "height": 0
+                    },
+                    "snippet": "<link rel=\"preconnect\" href=\"https://www.googletagmanager.com\" crossorigin=\"anonymous\">",
+                    "nodeLabel": "head > link"
+                  },
+                  "subItems": {
+                    "type": "subitems",
+                    "items": []
+                  }
+                }
+              ]
+            }
+          },
+          {
+            "type": "list-section",
+            "title": "Preconnect candidates",
+            "description": "Add [preconnect](https://developer.chrome.com/docs/lighthouse/performance/uses-rel-preconnect/) hints to your most important origins, but try to use no more than 4.",
+            "value": {
+              "type": "table",
+              "headings": [
+                {
+                  "key": "origin",
+                  "valueType": "text",
+                  "label": "Origin"
+                },
+                {
+                  "key": "wastedMs",
+                  "valueType": "ms",
+                  "label": "Est LCP savings"
+                }
+              ],
+              "items": [
+                {
+                  "origin": "https://googleads.g.doubleclick.net",
+                  "wastedMs": 316.438
+                },
+                {
+                  "origin": "https://ep2.adtrafficquality.google",
+                  "wastedMs": 312.8
+                },
+                {
+                  "origin": "https://ep1.adtrafficquality.google",
+                  "wastedMs": 311.682
+                },
+                {
+                  "origin": "https://www.google.com",
+                  "wastedMs": 306.168
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "id": "render-blocking-insight",
+        "title": "Render blocking requests",
+        "description": "Requests are blocking the page's initial render, which may delay LCP. [Deferring or inlining](https://web.dev/learn/performance/understanding-the-critical-path#render-blocking_resources) can move these network requests out of the critical path.",
+        "score": 0,
+        "displayValue": "Est savings of 190 ms",
+        "category": "performance",
+        "items": [
+          {
+            "url": "https://www.reflextry.com/_next/static/chunks/0iept~l1~0se_.css?dpl=dpl_5xnq1xXwamQWzuhpbL4hGTNu61fM",
+            "totalBytes": 35474,
+            "wastedMs": 300
+          },
+          {
+            "url": "https://www.reflextry.com/_next/static/chunks/0xzhmoul5ptlx.css?dpl=dpl_5xnq1xXwamQWzuhpbL4hGTNu61fM",
+            "totalBytes": 1122
+          }
+        ]
+      }
+    ],
+    "serious": [
+      {
+        "id": "largest-contentful-paint",
+        "title": "Largest Contentful Paint",
+        "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)",
+        "score": 0.04,
+        "displayValue": "7.4 s",
+        "category": "performance"
+      },
+      {
+        "id": "interactive",
+        "title": "Time to Interactive",
+        "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/).",
+        "score": 0.44,
+        "displayValue": "7.8 s",
+        "category": "performance"
+      }
+    ],
+    "moderate": [
+      {
+        "id": "uses-long-cache-ttl",
+        "title": "Serve static assets with an efficient cache policy",
+        "description": "A long cache lifetime can speed up repeat visits to your page. [Learn more about efficient cache policies](https://developer.chrome.com/docs/lighthouse/performance/uses-long-cache-ttl/).",
+        "score": 0.5,
+        "displayValue": "1 resource found",
+        "category": "performance",
+        "items": [
+          {
+            "url": "https://pagead2.googlesyndication.com/pagead/managed/js/adsense/m202609300101/show_ads_impl_fy2021.js?bust=122881334",
+            "debugData": {
+              "type": "debugdata",
+              "public": true,
+              "immutable": true,
+              "max-age": 1209600
+            },
+            "cacheLifetimeMs": 1209600000,
+            "cacheHitProbability": 0.9019553072625699,
+            "totalBytes": 167539,
+            "wastedBytes": 16426.3097765363
+          }
+        ]
+      },
+      {
+        "id": "render-blocking-resources",
+        "title": "Eliminate render-blocking resources",
+        "description": "Resources are blocking the first paint of your page. Consider delivering critical JS/CSS inline and deferring all non-critical JS/styles. [Learn how to eliminate render-blocking resources](https://developer.chrome.com/docs/lighthouse/performance/render-blocking-resources/).",
+        "score": 0.5,
+        "displayValue": "Est savings of 0 ms",
+        "category": "performance",
+        "items": [
+          {
+            "url": "https://www.reflextry.com/_next/static/chunks/0iept~l1~0se_.css?dpl=dpl_5xnq1xXwamQWzuhpbL4hGTNu61fM",
+            "totalBytes": 35474,
+            "wastedMs": 300
+          }
+        ]
+      },
+      {
+        "id": "dom-size",
+        "title": "Avoid an excessive DOM size",
+        "description": "A large DOM will increase memory usage, cause longer [style calculations](https://developers.google.com/web/fundamentals/performance/rendering/reduce-the-scope-and-complexity-of-style-calculations), and produce costly [layout reflows](https://developers.google.com/speed/articles/reflow). [Learn how to avoid an excessive DOM size](https://developer.chrome.com/docs/lighthouse/performance/dom-size/).",
+        "score": 0.5,
+        "displayValue": "947 elements",
+        "category": "performance",
+        "items": [
+          {
+            "statistic": "Total DOM Elements",
+            "value": {
+              "type": "numeric",
+              "granularity": 1,
+              "value": 947
+            }
+          },
+          {
+            "node": {
+              "selector": "div.space-y-1.5 > h3.text-lg > svg.lucide > circle",
+              "snippet": "<circle cx=\"12\" cy=\"12\" r=\"10\">"
+            },
+            "statistic": "Maximum DOM Depth",
+            "value": {
+              "type": "numeric",
+              "granularity": 1,
+              "value": 16
+            }
+          },
+          {
+            "node": {
+              "selector": "body.outfit_85cb3b0f-module__ywSh3W__variable",
+              "snippet": "<body class=\"outfit_85cb3b0f-module__ywSh3W__variable antialiased bg-background text-fo…\">"
+            },
+            "statistic": "Maximum Child Elements",
+            "value": {
+              "type": "numeric",
+              "granularity": 1,
+              "value": 37
+            }
+          }
+        ]
+      },
+      {
+        "id": "legacy-javascript-insight",
+        "title": "Legacy JavaScript",
+        "description": "Polyfills and transforms enable older browsers to use new JavaScript features. However, many aren't necessary for modern browsers. Consider modifying your JavaScript build process to not transpile [Baseline](https://web.dev/articles/baseline-and-polyfills) features, unless you know you must support older browsers. [Learn why most sites can deploy ES6+ code without transpiling](https://philipwalton.com/articles/the-state-of-es5-on-the-web/)",
+        "score": 0.5,
+        "displayValue": "Est savings of 14 KiB",
+        "category": "performance",
+        "items": [
+          {
+            "url": "https://www.reflextry.com/_next/static/chunks/0n5ppwnlf4oin.js?dpl=dpl_5xnq1xXwamQWzuhpbL4hGTNu61fM",
+            "wastedBytes": 13990,
+            "subItems": {
+              "type": "subitems",
+              "items": [
+                {
+                  "signal": "Array.prototype.at",
+                  "location": {
+                    "type": "source-location",
+                    "url": "https://www.reflextry.com/_next/static/chunks/0n5ppwnlf4oin.js?dpl=dpl_5xnq1xXwamQWzuhpbL4hGTNu61fM",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 5472
+                  }
+                },
+                {
+                  "signal": "Array.prototype.flat",
+                  "location": {
+                    "type": "source-location",
+                    "url": "https://www.reflextry.com/_next/static/chunks/0n5ppwnlf4oin.js?dpl=dpl_5xnq1xXwamQWzuhpbL4hGTNu61fM",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 4860
+                  }
+                },
+                {
+                  "signal": "Array.prototype.flatMap",
+                  "location": {
+                    "type": "source-location",
+                    "url": "https://www.reflextry.com/_next/static/chunks/0n5ppwnlf4oin.js?dpl=dpl_5xnq1xXwamQWzuhpbL4hGTNu61fM",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 4973
+                  }
+                },
+                {
+                  "signal": "Object.fromEntries",
+                  "location": {
+                    "type": "source-location",
+                    "url": "https://www.reflextry.com/_next/static/chunks/0n5ppwnlf4oin.js?dpl=dpl_5xnq1xXwamQWzuhpbL4hGTNu61fM",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 5349
+                  }
+                },
+                {
+                  "signal": "Object.hasOwn",
+                  "location": {
+                    "type": "source-location",
+                    "url": "https://www.reflextry.com/_next/static/chunks/0n5ppwnlf4oin.js?dpl=dpl_5xnq1xXwamQWzuhpbL4hGTNu61fM",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 5607
+                  }
+                },
+                {
+                  "signal": "String.prototype.trimEnd",
+                  "location": {
+                    "type": "source-location",
+                    "url": "https://www.reflextry.com/_next/static/chunks/0n5ppwnlf4oin.js?dpl=dpl_5xnq1xXwamQWzuhpbL4hGTNu61fM",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 4602
+                  }
+                },
+                {
+                  "signal": "String.prototype.trimStart",
+                  "location": {
+                    "type": "source-location",
+                    "url": "https://www.reflextry.com/_next/static/chunks/0n5ppwnlf4oin.js?dpl=dpl_5xnq1xXwamQWzuhpbL4hGTNu61fM",
+                    "urlProvider": "network",
+                    "line": 0,
+                    "column": 4517
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "minor": [
+      {
+        "id": "first-contentful-paint",
+        "title": "First Contentful Paint",
+        "description": "First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/).",
+        "score": 0.99,
+        "displayValue": "1.2 s",
+        "category": "performance"
+      },
+      {
+        "id": "speed-index",
+        "title": "Speed Index",
+        "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/).",
+        "score": 0.99,
+        "displayValue": "2.0 s",
+        "category": "performance"
+      },
+      {
+        "id": "max-potential-fid",
+        "title": "Max Potential First Input Delay",
+        "description": "The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/).",
+        "score": 0.97,
+        "displayValue": "90 ms",
+        "category": "performance"
+      }
+    ]
+  },
+  "summary": {
+    "totalIssues": 19,
+    "critical": 10,
+    "serious": 2,
+    "moderate": 4,
+    "minor": 3
+  }
+}

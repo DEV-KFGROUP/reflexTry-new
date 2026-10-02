@@ -292,9 +292,9 @@ export default function ObjectTrackingGame() {
             <div className="w-20 h-20 bg-indigo-50 dark:bg-indigo-900/20 rounded-full flex items-center justify-center mb-6">
               <Target className="w-10 h-10 text-indigo-500" />
             </div>
-            <h1 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-wider mb-4">
+            <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-wider mb-4">
               Multiple Object Tracking
-            </h1>
+            </h2>
             <p className="text-sm text-slate-500 dark:text-slate-400 mb-8 leading-relaxed">
               Multiple objects will appear. A few will flash as targets. Keep your eyes on the targets as they move rapidly, and identify them when they stop.
             </p>

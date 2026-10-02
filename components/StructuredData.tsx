@@ -32,7 +32,6 @@ export {
     generateWebPageSchema,
     generateFAQPageSchema,
     generateSoftwareApplicationSchema,
-    generateDatasetSchema,
     generateItemListSchema
 } from "@/lib/structured-data";
 

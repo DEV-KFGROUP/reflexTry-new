@@ -3,7 +3,7 @@ export const SEO_CONFIGS = {
   "sequence-memory": {
     title: "Sequence Memory Test - Pattern Recall Benchmark | Reflextry",
     description:
-      "Test and improve your working memory with our free Sequence Memory Test. Memorize expanding spatial light patterns and compare your score against global percentiles.",
+      "Practice recalling expanding spatial light patterns with our free Sequence Memory Test. Read the scoring rules and compare your own sessions.",
     keywords: [
       "sequence memory test",
       "sequence memory game",
@@ -855,7 +855,7 @@ export const SEO_CONFIGS = {
   "color-blindness": {
     title: "Color Blindness Test - Ishihara Plates Screener | Reflextry",
     description:
-      "Screen color vision with our online Color Blindness Test based on Ishihara plate principles. Check red-green color deficiency with dynamic dot patterns.",
+      "Explore Ishihara-style procedural dot plates in a free educational color-vision game. Screen settings affect results; this is not a diagnostic assessment.",
     keywords: [
       "color blindness test",
       "color vision test online",

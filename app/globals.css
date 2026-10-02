@@ -1,4 +1,13 @@
-@import "tailwindcss";
+@import "tailwindcss" source(none);
+
+/* Scan shipped UI, not agent skills, audit HTML, or architecture examples. */
+@source "./**/*.{ts,tsx}";
+@source "../components/**/*.{ts,tsx}";
+@source "../lib/**/*.{ts,tsx}";
+@source "../hooks/**/*.{ts,tsx}";
+@source "../config/**/*.{ts,tsx}";
+@source "../content/**/*.mdx";
+
 
 @plugin "tailwindcss-animate";
 @plugin "@tailwindcss/typography";
@@ -121,7 +130,7 @@
   --secondary: 210 24% 96%;
   --secondary-foreground: 222 47% 11%;
   --muted: 210 24% 96%;
-  --muted-foreground: 215 16% 47%;
+  --muted-foreground: 215 20% 38%;
 
   --accent: 214 32% 91%;
   --accent-foreground: 222 47% 11%;
@@ -165,7 +174,7 @@
   --secondary: 210 24% 96%;
   --secondary-foreground: 222 47% 11%;
   --muted: 210 24% 96%;
-  --muted-foreground: 215 16% 47%;
+  --muted-foreground: 215 20% 38%;
   --accent: 214 32% 91%;
   --accent-foreground: 222 47% 11%;
   --destructive: 0 84.2% 60.2%;

@@ -48,12 +48,7 @@ export default function Page() {
                     <AEOAnswerBlock 
                         question="What is a good typing speed in Words Per Minute (WPM)?"
                         answer={typingDef.quickAnswer}
-                        keyPoints={[
-                            "Average typing speed: 40 WPM with ~92% accuracy",
-                            "Good typing speed for office/programming: 65 - 85 WPM",
-                            "Competitive/expert typist speed: 100+ WPM with >97% accuracy"
-                        ]}
-                        benchmark={typingDef.benchmarkData}
+                        keyPoints={["Read speed together with accuracy", "Compare passages of similar difficulty", "Keep the test duration and keyboard consistent"]}
                     />
                 </div>
                 

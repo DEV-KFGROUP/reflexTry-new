@@ -48,12 +48,7 @@ export default function Page() {
                     <AEOAnswerBlock 
                         question="What is a good Clicks Per Second (CPS) score?"
                         answer={cpsDef.quickAnswer}
-                        keyPoints={[
-                            "Standard clicking average: 6 to 7 CPS",
-                            "Jitter clicking technique: 10 to 14 CPS",
-                            "Butterfly clicking technique: 12 to 20 CPS"
-                        ]}
-                        benchmark={cpsDef.benchmarkData}
+                        keyPoints={["Use the same test duration", "Keep your input device and technique consistent", "Stop if your hand feels uncomfortable"]}
                     />
                 </div>
                 

@@ -34,7 +34,6 @@ export default function robots(): MetadataRoute.Robots {
                     '/llms.txt',
                     '/llms-full.txt',
                     '/ai.txt',
-                    '/.well-known/ai-plugin.json',
                 ],
                 disallow: ['/api/'],
             },

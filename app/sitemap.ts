@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next';
-import { getContentSlugs, getContentBySlug, getLatestBlogModifiedDate } from '@/lib/content/loader';
+import { getContentSlugs, getContentBySlug } from '@/lib/content/loader';
 import { getBaseUrl } from '@/lib/base-url';
 import { getHreflangAlternates } from '@/lib/international-seo';
 import type { Article } from '@/lib/content/types';
@@ -89,7 +89,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const allRoutes = [...STATIC_ROUTES, ...GAME_ROUTES];
 
     const entries: MetadataRoute.Sitemap = [];
-    const staticLastMod = await getLatestBlogModifiedDate();
 
     for (const route of allRoutes) {
         const isHome = route === '';
@@ -98,7 +97,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
         entries.push({
             url: pageUrl,
-            lastModified: staticLastMod,
             changeFrequency: isHome ? 'daily' : 'weekly',
             priority,
             alternates: {
@@ -126,7 +124,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         } catch {
             entries.push({
                 url: blogUrl,
-                lastModified: staticLastMod,
                 changeFrequency: 'weekly',
                 priority: 0.7,
                 alternates: {

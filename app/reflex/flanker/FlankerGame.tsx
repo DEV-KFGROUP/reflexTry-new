@@ -298,9 +298,9 @@ export default function FlankerGame() {
             <div className="w-20 h-20 bg-indigo-50 dark:bg-indigo-900/20 rounded-full flex items-center justify-center mb-6">
               <ArrowLeftRight className="w-10 h-10 text-indigo-500" />
             </div>
-            <h1 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-wider mb-4">
+            <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-wider mb-4">
               Flanker Test
-            </h1>
+            </h2>
             <p className="text-sm text-slate-500 dark:text-slate-400 mb-8 leading-relaxed">
               Respond to the center arrow only. Ignore flanking arrows — congruent or incongruent. Use ← → keys or buttons.
             </p>

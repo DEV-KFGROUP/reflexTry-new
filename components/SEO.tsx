@@ -42,8 +42,7 @@ export function generateSEOMetadata({
     // Format full title cleanly — ensure Reflextry suffix is present once
     const fullTitle = title.includes("Reflextry") ? title : `${title} | Reflextry`;
 
-    // Generate hreflang alternates for all target locales
-    // All point to the same URL (single-language site serving global audience)
+    // Advertise only the published English page and its default fallback.
     const hreflangAlternates = getHreflangAlternates(canonicalUrl);
 
     return {

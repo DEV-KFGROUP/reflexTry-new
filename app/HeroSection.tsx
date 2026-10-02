@@ -1,3 +1,4 @@
+import { TOOL_COUNT } from "@/config/tool-mapping";
 import Link from "next/link";
 import { ArrowRight, Gamepad2, Trophy, Zap } from "lucide-react";
 
@@ -82,14 +83,14 @@ export function HeroSection() {
 
           {/* Sub */}
           <p className="max-w-2xl text-slate-500 text-base sm:text-lg leading-relaxed">
-            <strong className="text-slate-700">37+ free tools</strong> to measure your raw biological reaction latency down to the millisecond. Benchmark your reflexes, memory, and aim precision against global averages.
+            <strong className="text-slate-700">{TOOL_COUNT} free tools</strong> to practice reaction time, memory, speed, and aim. Compare your scores across sessions on the same device.
           </p>
 
           {/* Stats row */}
           <div className="flex flex-wrap items-center justify-center gap-3">
             {[
-              { val: "200ms", label: "Avg Human Reaction" },
-              { val: "37+", label: "Interactive Tools" },
+              { val: "ms", label: "Reaction Time Scores" },
+              { val: String(TOOL_COUNT), label: "Interactive Tools" },
               { val: "100%", label: "Free & In-Browser" },
             ].map((s) => (
               <div

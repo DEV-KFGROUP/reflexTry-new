@@ -61,3 +61,6 @@ export const TOOL_MAPPING: Record<string, string> = {
     "color-blindness": "/accuracy/color-blindness",
     "mental-rotation": "/accuracy/mental-rotation",
 };
+
+/** Aliases map to the same game; count published paths only. */
+export const TOOL_COUNT = new Set(Object.values(TOOL_MAPPING)).size;

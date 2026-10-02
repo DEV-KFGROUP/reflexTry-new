@@ -209,7 +209,7 @@ export function BlogRelatedTools({ slug, category }: BlogRelatedToolsProps) {
                     href="/tools"
                     className="text-xs font-mono font-bold text-cyan-600 dark:text-cyan-400 hover:underline flex items-center gap-1"
                 >
-                    View All 40+ Tools →
+                    View All Tools →
                 </Link>
             </div>
 

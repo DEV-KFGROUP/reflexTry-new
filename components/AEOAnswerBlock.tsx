@@ -5,11 +5,6 @@ interface AEOAnswerBlockProps {
     question: string;
     answer: string;
     keyPoints?: string[];
-    benchmark?: {
-        average: string;
-        good: string;
-        elite: string;
-    };
     sourceName?: string;
     sourceUrl?: string;
     className?: string;
@@ -19,12 +14,10 @@ export function AEOAnswerBlock({
     question,
     answer,
     keyPoints,
-    benchmark,
-    sourceName = "Reflextry Global Cognitive Benchmarks",
-    sourceUrl = "https://www.reflextry.com/statistics",
+    sourceName = "Testing methodology",
+    sourceUrl = "/methodology",
     className = ""
 }: AEOAnswerBlockProps) {
-    const today = new Date().toISOString().split('T')[0];
 
     return (
         <section 
@@ -48,7 +41,6 @@ export function AEOAnswerBlock({
                     <p className="aeo-answer text-base text-muted-foreground leading-relaxed" itemProp="text">
                         {answer}
                     </p>
-                    <meta itemProp="dateModified" content={today} />
 
                     {keyPoints && keyPoints.length > 0 && (
                         <ul className="space-y-2 mt-3">
@@ -61,26 +53,9 @@ export function AEOAnswerBlock({
                         </ul>
                     )}
 
-                    {benchmark && (
-                        <div className="grid grid-cols-3 gap-3 pt-3 border-t border-black/10 dark:border-white/10 text-center">
-                            <div className="p-2.5 rounded-xl bg-black/5 dark:bg-white/5">
-                                <span className="block text-xs text-muted-foreground uppercase font-semibold">Average</span>
-                                <span className="text-sm font-bold text-foreground">{benchmark.average}</span>
-                            </div>
-                            <div className="p-2.5 rounded-xl bg-blue-500/10">
-                                <span className="block text-xs text-blue-600 dark:text-blue-400 uppercase font-semibold">Good</span>
-                                <span className="text-sm font-bold text-blue-600 dark:text-blue-400">{benchmark.good}</span>
-                            </div>
-                            <div className="p-2.5 rounded-xl bg-purple-500/10">
-                                <span className="block text-xs text-purple-600 dark:text-purple-400 uppercase font-semibold">Elite</span>
-                                <span className="text-sm font-bold text-purple-600 dark:text-purple-400">{benchmark.elite}</span>
-                            </div>
-                        </div>
-                    )}
-
                     <div className="pt-2 text-xs text-muted-foreground flex items-center gap-1.5">
-                        <span>Verified by:</span>
-                        <a href={sourceUrl} className="font-semibold text-blue-500 hover:underline">
+                        <span>Read:</span>
+                        <a href={sourceUrl} className="font-semibold text-blue-800 underline">
                             {sourceName}
                         </a>
                     </div>

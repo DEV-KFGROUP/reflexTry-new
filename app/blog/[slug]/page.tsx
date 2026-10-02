@@ -1,3 +1,4 @@
+import { getArticleSources } from "@/lib/research-sources";
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { getContentBySlug, getContentSlugs } from '@/lib/content/loader';
@@ -35,7 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
         return {
             metadataBase: getBaseUrlObject(),
-            title: `${meta.title} | Reflextry`,
+            title: meta.title,
             description: meta.description,
             authors: [{ name: meta.author?.name ?? 'Reflextry' }],
             alternates: {
@@ -44,7 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             },
             openGraph: {
                 url: pageUrl,
-                title: `${meta.title} | Reflextry`,
+                title: meta.title,
                 description: meta.description,
                 type: 'article',
                 publishedTime: meta.publishedAt,
@@ -62,7 +63,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
             },
             twitter: {
                 card: 'summary_large_image',
-                title: `${meta.title} | Reflextry`,
+                title: meta.title,
                 description: meta.description,
                 images: [ogImage],
                 creator: '@reflextry',
@@ -106,6 +107,14 @@ export default async function BlogPostPage({ params }: Props) {
                 />
                 <ArticleClient article={articleData}>
                     <MDXContent source={content} />
+                    <section aria-labelledby="research-background" className="mt-8 space-y-3 text-slate-700">
+                        <h2 id="research-background" className="text-2xl font-semibold text-slate-900">Research background and limits</h2>
+                        <p>These references discuss memory or training research; they did not evaluate Reflextry. A higher score on a practice task does not establish a clinical benefit or improvement in everyday cognitive ability.</p>
+                        <ul className="list-disc pl-5 space-y-2">
+                            {getArticleSources(slug).map(source => <li key={source.url}><a className="text-blue-800 underline" href={source.url}>{source.title}</a></li>)}
+                        </ul>
+                        <p>For this product’s scoring rules and device limitations, read the <a className="text-blue-800 underline" href="/methodology">Reflextry methodology</a>.</p>
+                    </section>
                     
                     {/* Related Interactive Tests / Tools */}
                     <BlogRelatedTools slug={slug} category={meta.category} />
@@ -113,7 +122,7 @@ export default async function BlogPostPage({ params }: Props) {
                     <div className="mt-10 pt-8 border-t border-slate-200 dark:border-slate-800">
                         <AuthorCard 
                             name={meta.author?.name ?? "Reflextry Editorial"}
-                            bio="Written and reviewed by Reflextry's cognitive science research team. Every article is grounded in peer-reviewed neuroscience and motor learning literature."
+                            bio="Product guides from the Reflextry team. These articles explain browser tests and their limitations; they are not clinical assessments."
                         />
                     </div>
                 </ArticleClient>

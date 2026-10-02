@@ -46,14 +46,7 @@ export function generateWebsiteStructuredData() {
             name: "Reflextry",
             url: baseUrl
         },
-        potentialAction: {
-            "@type": "SearchAction",
-            target: {
-                "@type": "EntryPoint",
-                urlTemplate: `${baseUrl}/tools?q={search_term_string}`
-            },
-            "query-input": "required name=search_term_string"
-        }
+
     };
 }
 
@@ -66,11 +59,11 @@ export function generateArticleStructuredData(meta: Article, slug: string) {
         ? [resolveUrl(meta.image)]
         : [`${baseUrl}/opengraph-image`];
 
-    const authorName = meta.author?.name ?? "Reflextry Cognitive Lab Team";
+    const authorName = meta.author?.name ?? "Reflextry Editorial";
     const author: Record<string, unknown> = {
-        "@type": "Person",
+        "@type": authorName.startsWith("Reflextry") ? "Organization" : "Person",
         name: authorName,
-        jobTitle: "Cognitive Assessment Specialist"
+        url: `${baseUrl}/about`
     };
     if (meta.author?.image) {
         author.image = resolveUrl(meta.author.image);
@@ -239,36 +232,6 @@ export function generateSoftwareApplicationSchema(title: string, description: st
     };
 }
 
-export function generateBlogPostingSchema(title: string, description: string, urlPath: string) {
-    const baseUrl = getBaseUrl();
-    return {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        headline: title,
-        description: description,
-        url: `${baseUrl}${urlPath}`,
-        inLanguage: "en",
-        author: {
-            "@type": "Organization",
-            name: "Reflextry Cognitive Lab Team"
-        },
-        publisher: {
-            "@type": "Organization",
-            name: "Reflextry",
-            logo: {
-                "@type": "ImageObject",
-                url: `${baseUrl}/icon.png`
-            }
-        },
-        datePublished: new Date().toISOString().split('T')[0],
-        dateModified: new Date().toISOString().split('T')[0],
-        speakable: {
-            "@type": "SpeakableSpecification",
-            cssSelector: SPEAKABLE_SELECTORS
-        }
-    };
-}
-
 export function generateHowToSchema(title: string, steps: string[]) {
     if (!steps || steps.length === 0) return null;
     return {
@@ -279,51 +242,6 @@ export function generateHowToSchema(title: string, steps: string[]) {
             "@type": "HowToStep",
             text: step
         }))
-    };
-}
-
-// ── Phase 4: Dataset & ItemList schemas for GEO/AEO ──
-
-export function generateDatasetSchema() {
-    const baseUrl = getBaseUrl();
-    return {
-        "@context": "https://schema.org",
-        "@type": "Dataset",
-        name: "Reflextry Global Cognitive Benchmarks",
-        description: "Aggregated reaction time, typing speed, and click speed benchmarks across 140+ countries based on 1,450,000+ completed tests.",
-        url: `${baseUrl}/statistics`,
-        sameAs: baseUrl,
-        creator: {
-            "@type": "Organization",
-            name: "Reflextry",
-            url: baseUrl,
-            logo: `${baseUrl}/icon.png`
-        },
-        publisher: {
-            "@type": "Organization",
-            name: "Reflextry",
-            url: baseUrl,
-            logo: `${baseUrl}/icon.png`
-        },
-        temporalCoverage: "2024/..",
-        spatialCoverage: {
-            "@type": "Place",
-            name: "Global"
-        },
-        keywords: [
-            "Cognitive Benchmarks",
-            "Reaction Time Statistics",
-            "Typing Speed Benchmarks",
-            "Click Speed Test Data",
-            "Global Brain Performance"
-        ],
-        variableMeasured: [
-            { "@type": "PropertyValue", name: "Visual Reaction Time", unitCode: "ms", description: "Time in milliseconds from visual stimulus to motor response" },
-            { "@type": "PropertyValue", name: "Typing Speed", unitCode: "WPM", description: "Words per minute adjusted for errors" },
-            { "@type": "PropertyValue", name: "Click Speed", unitCode: "CPS", description: "Mouse clicks per second" }
-        ],
-        license: "https://creativecommons.org/licenses/by/4.0/",
-        isAccessibleForFree: true
     };
 }
 

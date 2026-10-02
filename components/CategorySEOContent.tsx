@@ -145,7 +145,7 @@ export function CategorySEOContent({ category }: CategoryContentProps) {
         <article className="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm rounded-3xl p-6 md:p-8 space-y-8">
                 <header>
-                    <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{data.title}</h1>
+                    <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{data.title}</h2>
                     <p className="text-muted-foreground leading-relaxed text-base">{data.intro}</p>
                 </header>
 

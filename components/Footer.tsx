@@ -7,6 +7,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 import { useTranslation } from "@/lib/i18n/context";
+import { PREFERENCES_EVENT } from "@/lib/cookie-consent";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 export function Footer() {
@@ -199,7 +200,8 @@ export function Footer() {
 
                 {/* Footer Language Selection Bar */}
                 <div className="py-4 border-t border-black/10 dark:border-white/10 flex justify-center sm:justify-start">
-                    <LanguageSwitcher variant="footer" />
+                    <button type="button" className="text-sm text-slate-700 underline hover:text-slate-900" onClick={() => window.dispatchEvent(new Event(PREFERENCES_EVENT))}>Cookie preferences</button>
+                        <LanguageSwitcher variant="footer" />
                 </div>
 
                 {/* SEO/AEO Global Context */}

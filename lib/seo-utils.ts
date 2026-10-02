@@ -1,3 +1,4 @@
+import { TOOL_COUNT } from "@/config/tool-mapping";
 import { Metadata } from "next";
 import { generateSEOMetadata } from "@/components/SEO";
 import { SEO_CONFIGS } from "@/config/seo-config";
@@ -155,7 +156,7 @@ export function getCategoryMetadata(category: string): Metadata {
         },
         tools: {
             title: "Cognitive Benchmark Tools Directory | Reflextry",
-            description: "Explore our complete suite of 40+ free cognitive benchmarks, reflex tests, memory games, and esports warmup tools. Test your mind today.",
+            description: `Explore ${TOOL_COUNT} free browser games for reaction time, memory, speed, accuracy, and aim. Read scoring instructions and compare your practice sessions.`,
             keywords: [
                 "online cognitive benchmark tools",
                 "free brain test suite",

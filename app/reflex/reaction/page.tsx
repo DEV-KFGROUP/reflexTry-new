@@ -48,12 +48,7 @@ export default function Page() {
                     <AEOAnswerBlock 
                         question="What is a good reaction time in milliseconds?"
                         answer={reactionDef.quickAnswer}
-                        keyPoints={[
-                            "Human visual reaction baseline: 200ms - 250ms",
-                            "Competitive & esports benchmark: 150ms - 180ms",
-                            "Auditory reaction times are typically 30ms-50ms faster than visual"
-                        ]}
-                        benchmark={reactionDef.benchmarkData}
+                        keyPoints={["Compare the same device and difficulty", "Repeat trials rather than judging one result", "Browser timing includes screen and input delays"]}
                     />
                 </div>
                 
