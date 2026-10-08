@@ -215,6 +215,7 @@ export default function HomeClient() {
               <Link
                 key={item.href}
                 href={item.href}
+                prefetch={false}
                 className="group rounded-2xl border border-black/10 dark:border-white/10 bg-background/40 p-5 hover:border-blue-500/40 transition-colors"
               >
                 <h3 className="font-bold text-foreground group-hover:text-blue-500 transition-colors mb-1">
@@ -282,7 +283,7 @@ export default function HomeClient() {
                 >
                   <div className={`absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
 
-                  <Link href={tool.href} className="absolute inset-0 z-10" aria-label={`${tool.id} challenge`}>
+                  <Link href={tool.href} prefetch={false} className="absolute inset-0 z-10" aria-label={`${tool.id} challenge`}>
                     <span className="sr-only">Start {tool.id} challenge</span>
                   </Link>
 
@@ -323,6 +324,7 @@ export default function HomeClient() {
             {/* Mobile Link */}
             <Link 
                 href={`/${category.id}`}
+                prefetch={false}
                 className={`sm:hidden flex justify-center items-center gap-2 mt-4 px-4 py-3 rounded-xl border ${category.accentBorder} ${category.accentBg} font-bold text-sm ${category.accentText}`}
             >
                 Enter {category.arenaName} <ArrowRight className="w-4 h-4" />

@@ -13,6 +13,7 @@ export default function robots(): MetadataRoute.Robots {
                 disallow: [
                     '/api/',      // API endpoints (private)
                     '/admin/',    // Admin routes (if any)
+                    '/*?_rsc=*',  // Prevent search bots from wasting crawl budget on Next.js RSC flight payloads
                 ],
             },
             {
@@ -35,7 +36,10 @@ export default function robots(): MetadataRoute.Robots {
                     '/llms-full.txt',
                     '/ai.txt',
                 ],
-                disallow: ['/api/'],
+                disallow: [
+                    '/api/',
+                    '/*?_rsc=*',
+                ],
             },
         ],
         sitemap: `${BASE_URL}/sitemap.xml`,

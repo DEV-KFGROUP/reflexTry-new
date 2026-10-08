@@ -114,7 +114,7 @@ export function Footer() {
                                 { name: t("nav.tools", "All Tools"), href: "/tools", color: "text-indigo-500" },
                             ].map(link => (
                                 <li key={link.href}>
-                                    <Link href={getLocalizedHref(link.href)} className="group flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                                    <Link href={getLocalizedHref(link.href)} prefetch={false} className="group flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
                                         <ArrowRight className={`w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 ${link.color}`} />
                                         <span className="relative">
                                             {link.name}
@@ -140,7 +140,7 @@ export function Footer() {
                                 { name: t("nav.challenges", "Daily Challenges"), href: "/challenges" },
                             ].map(link => (
                                 <li key={link.href}>
-                                    <Link href={getLocalizedHref(link.href)} className="group flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                                    <Link href={getLocalizedHref(link.href)} prefetch={false} className="group flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
                                         <ArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-amber-500" />
                                         <span>{link.name}</span>
                                     </Link>
@@ -164,7 +164,7 @@ export function Footer() {
                                 { name: "FAQ", href: "/faq" },
                             ].map(link => (
                                 <li key={link.href}>
-                                    <Link href={getLocalizedHref(link.href)} className="group flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                                    <Link href={getLocalizedHref(link.href)} prefetch={false} className="group flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
                                         <ArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-purple-500" />
                                         <span>{link.name}</span>
                                     </Link>
@@ -188,7 +188,7 @@ export function Footer() {
                                 { name: t("footer.contact", "Contact Us"), href: "/contact" },
                             ].map(link => (
                                 <li key={link.href}>
-                                    <Link href={getLocalizedHref(link.href)} className="group flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
+                                    <Link href={getLocalizedHref(link.href)} prefetch={false} className="group flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
                                         <ArrowRight className="w-3 h-3 opacity-0 -ml-5 group-hover:opacity-100 group-hover:ml-0 transition-all duration-300 text-muted-foreground" />
                                         <span>{link.name}</span>
                                     </Link>

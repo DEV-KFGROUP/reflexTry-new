@@ -163,6 +163,7 @@ export function CategorySEOContent({ category }: CategoryContentProps) {
                             <Link
                                 key={tool.href}
                                 href={tool.href}
+                                prefetch={false}
                                 className="group p-4 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-600 transition-colors"
                             >
                                 <h3 className="font-bold text-foreground group-hover:text-blue-600 transition-colors">{tool.name}</h3>

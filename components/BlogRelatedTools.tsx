@@ -207,6 +207,7 @@ export function BlogRelatedTools({ slug, category }: BlogRelatedToolsProps) {
 
                 <Link
                     href="/tools"
+                    prefetch={false}
                     className="text-xs font-mono font-bold text-cyan-600 dark:text-cyan-400 hover:underline flex items-center gap-1"
                 >
                     View All Tools →
@@ -220,6 +221,7 @@ export function BlogRelatedTools({ slug, category }: BlogRelatedToolsProps) {
                         <Link
                             key={tool.id}
                             href={tool.href}
+                            prefetch={false}
                             className="group p-4 rounded-2xl bg-white dark:bg-slate-950 border border-slate-200 dark:border-slate-800/80 hover:border-cyan-400 dark:hover:border-cyan-500/50 hover:shadow-md transition-all duration-200 flex flex-col justify-between"
                         >
                             <div className="space-y-2">

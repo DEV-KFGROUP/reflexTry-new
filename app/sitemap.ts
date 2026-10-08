@@ -88,6 +88,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const siteUrl = getBaseUrl();
     const allRoutes = [...STATIC_ROUTES, ...GAME_ROUTES];
 
+    // Core tools and category pages audited and updated in the recent release
+    const CORE_PAGES_LASTMOD = new Date('2026-10-02T19:04:49.000Z');
+
     const entries: MetadataRoute.Sitemap = [];
 
     for (const route of allRoutes) {
@@ -97,6 +100,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
         entries.push({
             url: pageUrl,
+            lastModified: CORE_PAGES_LASTMOD,
             changeFrequency: isHome ? 'daily' : 'weekly',
             priority,
             alternates: {
@@ -124,6 +128,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         } catch {
             entries.push({
                 url: blogUrl,
+                lastModified: CORE_PAGES_LASTMOD,
                 changeFrequency: 'weekly',
                 priority: 0.7,
                 alternates: {
