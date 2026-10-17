@@ -5,6 +5,8 @@ import Link from "next/link";
 import {
   Zap, Timer, Activity, Move, Volume2, Eye, Palette, Sparkles, LayoutGrid, CircleDot
 } from "lucide-react";
+import { useTranslation } from "@/lib/i18n/context";
+import { CategoryGuideSection } from "@/components/CategoryGuideSection";
 
 interface ToolItem {
   title: string;
@@ -176,6 +178,8 @@ const FloatingBackground = () => {
 };
 
 export default function ReflexHubClient() {
+    const { t, getLocalizedHref } = useTranslation();
+
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -219,23 +223,23 @@ export default function ReflexHubClient() {
                             suppressHydrationWarning
                         >
                             <Sparkles className="w-10 h-10 text-amber-400" />
-                            Reflex Training & Reaction Games
+                            {t("categoryHub.reflex.heroTitle", "Reflex Training & Reaction Games")}
                         </h1>
                     </div>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-medium">
-                        Measure your visual and auditory reaction times down to the millisecond.
+                        {t("categoryHub.reflex.heroSubtitle", "Measure your visual and auditory reaction times down to the millisecond.")}
                     </p>
                     <p className="text-md text-muted-foreground/80 max-w-3xl mx-auto">
-                        In professional sports, esports, and driving, reflex time is critical. Our reflex suite isolates different sensory pathways—visual, auditory, and directional—so you can pinpoint your fastest response times and train to lower your latency.
+                        {t("categoryHub.reflex.heroDesc", "In professional sports, esports, and driving, reflex time is critical. Our reflex suite isolates different sensory pathways—visual, auditory, and directional—so you can pinpoint your fastest response times and train to lower your latency.")}
                     </p>
                 </motion.div>
 
                 <motion.section variants={itemVariants} className="bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 p-6 rounded-3xl mb-8 relative z-10 max-w-4xl mx-auto">
                     <h2 className="text-xl font-bold text-foreground mb-2 flex items-center gap-2">
-                        <Sparkles className="w-5 h-5 text-amber-500" /> What This Arena Covers
+                        <Sparkles className="w-5 h-5 text-amber-500" /> {t("categoryHub.reflex.whatItCovers", "What This Arena Covers")}
                     </h2>
                     <p className="text-muted-foreground leading-relaxed">
-                        Visual and auditory reaction tests timed in milliseconds—simple reaction, sound cues, grid clicks, peripheral targets, and multi-stimulus choices. Built to isolate stimulus-to-response latency for practice and warm-ups.
+                        {t("categoryHub.reflex.whatItCoversDesc", "Visual and auditory reaction tests timed in milliseconds—simple reaction, sound cues, grid clicks, peripheral targets, and multi-stimulus choices. Built to isolate stimulus-to-response latency for practice and warm-ups.")}
                     </p>
                 </motion.section>
 
@@ -250,145 +254,62 @@ export default function ReflexHubClient() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12 relative z-10">
                         <div className="p-6 rounded-2xl bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 text-center hover:bg-white/10 transition-colors">
                             <Zap className="w-8 h-8 text-amber-400 mx-auto mb-3 drop-shadow-[0_0_10px_rgba(245,158,11,0.8)]" />
-                            <h3 className="text-base font-bold text-foreground mb-1">Visual Reflex</h3>
-                            <p className="text-sm text-muted-foreground">React to colors</p>
+                            <h3 className="text-base font-bold text-foreground mb-1">
+                                {t("categoryHub.reflex.benefit1Title", "Visual Reflex")}
+                            </h3>
+                            <p className="text-sm text-muted-foreground">
+                                {t("categoryHub.reflex.benefit1Desc", "React to colors")}
+                            </p>
                         </div>
                         <div className="p-6 rounded-2xl bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 text-center hover:bg-white/10 transition-colors">
                             <Volume2 className="w-8 h-8 text-yellow-400 mx-auto mb-3 drop-shadow-[0_0_10px_rgba(234,179,8,0.8)]" />
-                            <h3 className="text-base font-bold text-foreground mb-1">Audio Reflex</h3>
-                            <p className="text-sm text-muted-foreground">React to sounds</p>
+                            <h3 className="text-base font-bold text-foreground mb-1">
+                                {t("categoryHub.reflex.benefit2Title", "Audio Reflex")}
+                            </h3>
+                            <p className="text-sm text-muted-foreground">
+                                {t("categoryHub.reflex.benefit2Desc", "React to sounds")}
+                            </p>
                         </div>
                         <div className="p-6 rounded-2xl bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 text-center hover:bg-white/10 transition-colors">
                             <div className="text-2xl mb-2 drop-shadow-md">🏎️</div>
-                            <h3 className="text-base font-bold text-foreground mb-1">Stay Sharp</h3>
-                            <p className="text-sm text-muted-foreground">Improve focus</p>
+                            <h3 className="text-base font-bold text-foreground mb-1">
+                                {t("categoryHub.reflex.benefit3Title", "Spatial Reflex")}
+                            </h3>
+                            <p className="text-sm text-muted-foreground">
+                                {t("categoryHub.reflex.benefit3Desc", "React across screen")}
+                            </p>
                         </div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
-                        {REFLEX_TOOLS.map((tool, index) => (
-                            <motion.div
-                                key={tool.title}
-                                variants={itemVariants}
-                                className="group relative p-6 rounded-3xl bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 hover:border-amber-500/50 hover:bg-amber-500/5 transition-all duration-300 shadow-lg hover:shadow-[0_0_30px_rgba(245,158,11,0.2)] overflow-hidden"
-                            >
-                                <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                                <Link
-                                    href={tool.href}
-                                    className="absolute inset-0 z-10"
-                                    aria-label={`${tool.title} - ${tool.desc}`}
+                        {REFLEX_TOOLS.map((tool, index) => {
+                            const shortSlug = tool.href.replace("/reflex/", "");
+                            const localizedTitle = t(`tools.${shortSlug}.title`, tool.title);
+                            const localizedDesc = t(`tools.${shortSlug}.desc`, tool.desc);
+
+                            return (
+                                <motion.div
+                                    key={tool.title}
+                                    variants={itemVariants}
+                                    className="group relative p-6 rounded-3xl bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 hover:border-amber-500/50 hover:bg-amber-500/5 transition-all duration-300 shadow-lg hover:shadow-[0_0_30px_rgba(245,158,11,0.2)] overflow-hidden"
                                 >
-                                    <span className="sr-only">{tool.title} - {tool.desc}</span>
-                                </Link>
-                                <tool.icon className={`w-12 h-12 text-amber-500 dark:text-amber-400 mb-4 group-hover:scale-110 transition-transform drop-shadow-[0_0_8px_currentColor]`} />
-                                <h3 className="text-xl font-bold text-foreground mb-2 drop-shadow-sm">{tool.title}</h3>
-                                <p className="text-muted-foreground leading-relaxed">{tool.desc}</p>
-                            </motion.div>
-                        ))}
+                                    <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                    <Link
+                                        href={getLocalizedHref(tool.href)}
+                                        className="absolute inset-0 z-10"
+                                        aria-label={`${localizedTitle} - ${localizedDesc}`}
+                                    >
+                                        <span className="sr-only">{localizedTitle} - {localizedDesc}</span>
+                                    </Link>
+                                    <tool.icon className={`w-12 h-12 text-amber-500 dark:text-amber-400 mb-4 group-hover:scale-110 transition-transform drop-shadow-[0_0_8px_currentColor]`} />
+                                    <h3 className="text-xl font-bold text-foreground mb-2 drop-shadow-sm">{localizedTitle}</h3>
+                                    <p className="text-muted-foreground leading-relaxed">{localizedDesc}</p>
+                                </motion.div>
+                            );
+                        })}
                     </div>
 
-                    {/* Detailed SEO / AEO / GEO Section */}
-                    <div className="max-w-4xl mx-auto mt-16 space-y-12 text-left pt-6 border-t border-black/10 dark:border-white/10 relative z-10">
-                        
-                        <div className="space-y-4">
-                            <h2 className="text-3xl font-bold text-foreground">What is Reflex and Reaction Training?</h2>
-                            <p className="text-muted-foreground leading-relaxed">
-                                Reflex training measures the total elapsed time between the presentation of a sensory stimulus and the subsequent motor response. While innate physiological factors play a role, regular training helps strip away hesitation and decision-fatigue, training your central nervous system to fire motor neurons instantly upon receiving a specific cue.
-                            </p>
-                        </div>
-
-                        <div className="space-y-4">
-                            <h2 className="text-2xl font-bold text-foreground">How to Improve Your Reaction Time?</h2>
-                            <ol className="list-decimal list-inside space-y-2 text-muted-foreground">
-                                <li><strong>Eliminate Distractions:</strong> Focus entirely on the center anchor point of your screen.</li>
-                                <li><strong>Use Optimal Hardware:</strong> Ensure you are using a high refresh rate monitor (144Hz+) and a low-latency wired mouse.</li>
-                                <li><strong>Stay Hydrated and Rested:</strong> Sleep deprivation can increase reaction times by over 50 milliseconds.</li>
-                                <li><strong>Practice Daily:</strong> Just 5 minutes of Reaction Time and Sound Reflex tests daily can sharpen your baseline.</li>
-                            </ol>
-                        </div>
-
-                        <div className="space-y-4">
-                            <h3 className="text-2xl font-bold text-foreground">Should I Practice Daily?</h3>
-                            <p className="text-muted-foreground leading-relaxed">
-                                Yes. Frequent, brief training sessions condition your brain to bypass complex cognitive processing for simple tasks, relying instead on faster, automated motor pathways.
-                            </p>
-                        </div>
-
-                        <div className="space-y-4">
-                            <h2 className="text-2xl font-bold text-foreground">Reflex Tools Comparison</h2>
-                            <div className="overflow-x-auto">
-                                <table className="w-full text-left border-collapse min-w-[600px]">
-                                    <thead>
-                                        <tr className="border-b border-black/10 dark:border-white/10">
-                                            <th className="p-3 text-foreground font-bold">Tool Name</th>
-                                            <th className="p-3 text-foreground font-bold">Best For (Use Case)</th>
-                                            <th className="p-3 text-foreground font-bold">Core Benefit</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody className="text-muted-foreground">
-                                        <tr className="border-b border-black/5 dark:border-white/5">
-                                            <td className="p-3 font-bold text-amber-700 dark:text-amber-400">Reaction Time</td>
-                                            <td className="p-3">Gamers, General Population</td>
-                                            <td className="p-3">Measures baseline visual reflex speed in milliseconds.</td>
-                                        </tr>
-                                        <tr className="border-b border-black/5 dark:border-white/5">
-                                            <td className="p-3 font-bold text-amber-700 dark:text-amber-400">Sound Reflex</td>
-                                            <td className="p-3">Athletes (Track/Swimming)</td>
-                                            <td className="p-3">Isolates auditory pathways, which process faster than visual ones.</td>
-                                        </tr>
-                                        <tr className="border-b border-black/5 dark:border-white/5">
-                                            <td className="p-3 font-bold text-amber-700 dark:text-amber-400">Directional Reflex</td>
-                                            <td className="p-3">Drivers, Goalkeepers</td>
-                                            <td className="p-3">Trains cognitive translation of a directional cue into a physical swipe.</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-
-                        <div className="space-y-4">
-                            <h2 className="text-2xl font-bold text-foreground">Benchmarks & Scientific Proof</h2>
-                            <p className="text-muted-foreground leading-relaxed">
-                                According to human factor studies, average human reaction time is around 250 milliseconds for visual cues and 170 milliseconds for audio cues. Through active repetition and neurological adaptation, elite athletes and gamers can bring their visual reaction times below 150 milliseconds. A study by the <a href="https://pubmed.ncbi.nlm.nih.gov/22026829/" target="_blank" rel="noopener noreferrer" className="text-amber-700 dark:text-amber-400 font-semibold hover:underline underline-offset-2">Journal of Sports Sciences</a> concluded that specialized visual-motor training can significantly reduce reaction latency in competitive environments.
-                            </p>
-                        </div>
-                        
-                        <div className="space-y-4">
-                            <h2 className="text-2xl font-bold text-foreground">Frequently Asked Questions</h2>
-                            <div className="bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 p-6 rounded-3xl">
-                                <h3 className="text-xl font-bold text-foreground mb-3">Can you actually train your reaction time?</h3>
-                                <p className="text-muted-foreground mb-3">While your raw genetic reaction time has a hard limit, you can definitely train your brain to approach that limit consistently. Our tools help strip away hesitation and decision-fatigue, training your nervous system to fire instantly upon receiving a specific cue.</p>
-                            </div>
-                            
-                            <div className="bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 p-6 rounded-3xl">
-                                <h3 className="text-xl font-bold text-foreground mb-3">Why is audio reaction time faster than visual?</h3>
-                                <p className="text-muted-foreground mb-3">It takes less time for an auditory stimulus to reach the brain than a visual one. The auditory cortex processes sound significantly faster than the visual cortex processes complex visual information. This is why a runner reacts to a starting pistol rather than a flashing light.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Related Categories */}
-                    <div className="mt-16 pt-8 border-t border-black/10 dark:border-white/10 relative z-10">
-                        <h3 className="text-2xl font-bold text-foreground mb-6 text-center">Explore Other Categories</h3>
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                            <Link href="/gaming" className="p-4 rounded-2xl bg-white/5 border border-black/10 dark:border-white/10 hover:border-purple-500/50 hover:bg-purple-500/5 transition-all text-center">
-                                <div className="text-purple-500 text-2xl mb-2 drop-shadow-sm">🎮</div>
-                                <div className="text-sm font-bold text-foreground">Gaming Lab</div>
-                            </Link>
-                            <Link href="/memory" className="p-4 rounded-2xl bg-white/5 border border-black/10 dark:border-white/10 hover:border-blue-500/50 hover:bg-blue-500/5 transition-all text-center">
-                                <div className="text-blue-500 text-2xl mb-2 drop-shadow-sm">🧠</div>
-                                <div className="text-sm font-bold text-foreground">Memory Games</div>
-                            </Link>
-                            <Link href="/speed" className="p-4 rounded-2xl bg-white/5 border border-black/10 dark:border-white/10 hover:border-red-500/50 hover:bg-red-500/5 transition-all text-center">
-                                <div className="text-red-500 text-2xl mb-2 drop-shadow-sm">⌨️</div>
-                                <div className="text-sm font-bold text-foreground">Speed Tests</div>
-                            </Link>
-                            <Link href="/accuracy" className="p-4 rounded-2xl bg-white/5 border border-black/10 dark:border-white/10 hover:border-teal-500/50 hover:bg-teal-500/5 transition-all text-center">
-                                <div className="text-teal-500 text-2xl mb-2 drop-shadow-sm">🎯</div>
-                                <div className="text-sm font-bold text-foreground">Accuracy Tools</div>
-                            </Link>
-                        </div>
-                    </div>
+                    <CategoryGuideSection category="reflex" />
                 </motion.div>
             </motion.div>
         </div>

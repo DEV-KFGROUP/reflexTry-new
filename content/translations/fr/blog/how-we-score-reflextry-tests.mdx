@@ -1,0 +1,84 @@
+---
+title: Comment nous notons les tests Reflextry (et ce que signifient les chiffres)
+description: >-
+  Un guide clair sur le système de notation de Reflextry : millisecondes, empan,
+  précision et temps de complétion — ainsi que ce que nous ne prétendons pas
+  affirmer concernant les percentiles ou les diagnostics cliniques.
+publishedAt: '2026-08-01'
+author:
+  name: Kaushik Rabadiya
+category: Methodology
+tags:
+  - scoring
+  - methodology
+  - benchmarks
+  - transparency
+readingTime: 8 min read
+---
+Si un site d'entraînement publie un score sans en expliquer la règle, le chiffre relève du marketing, pas de la mesure. Cet article documente la manière dont Reflextry note ses principales familles de tests, comment la difficulté modifie la tâche, et quelles affirmations nous refusons de faire sans données contrôlées.
+
+## Un principe : même appareil, même difficulté
+
+Les tests par navigateur héritent du bruit matériel : taux de rafraîchissement, taux d'interrogation de la souris (polling rate), latence tactile, ralentissement thermique et onglets en arrière-plan. Cela ne rend pas les scores inutiles — cela signifie simplement que **les comparaisons doivent être faites au sein de votre propre configuration**. Un temps de réaction de 220 ms sur un ordinateur portable à 60 Hz n'est pas la même expérience que 180 ms sur un écran e-sport à 240 Hz. Notez toujours le mode de difficulté à côté de vos records personnels (PB).
+
+## Réaction et choix réaction (millisecondes)
+
+Les scores de **réaction simple** correspondent généralement à la latence moyenne entre l'apparition du stimulus et une réponse valide, en millisecondes. Plus c'est bas, mieux c'est. Les clics précoces (avant le signal) sont des erreurs, et non une anticipation héroïque.
+
+Le **choix réaction** ajoute des alternatives. Le TR (temps de réaction) moyen reste la métrique principale, mais seuls les bons coups doivent alimenter cette moyenne. Les clics dans la mauvaise case et les clics prématurés constituent le nombre d'erreurs. Étant donné que plus de choix ralentissent généralement les décisions (intuition de la loi de Hick), ne comparez pas une moyenne à 2 cases à une moyenne à 4 cases comme s'il s'agissait de tests identiques.
+
+## Empans mnésiques et séries de reconnaissance
+
+Les outils de **style Chimp / séquence / chiffres** mesurent généralement le plus long empan ou niveau atteint sans erreur, selon les règles de vies et de disparition du mode. Plus c'est haut, mieux c'est.
+
+La **mémoire verbale** évalue généralement jusqu'où vous pouvez aller avant d'accumuler trop d'erreurs sur des jugements VU/NOUVEAU (SEEN/NEW). L'interférence augmente vers la fin d'une série ; c'est tout à fait normal, et non le signe d'un test défectueux.
+
+Lorsque le nombre de vies varie selon la difficulté, un « score élevé » en mode Débutant n'est pas interchangeable avec le mode Professionnel. Traitez chaque difficulté comme son propre classement dans vos notes.
+
+## Précision, inhibition et tâches de conflit
+
+Le test **Go/No-Go** récompense les bonnes réponses sur les cibles Go **ainsi que** les inhibitions correctes. Un TR Go impressionnant accompagné de nombreuses fausses alarmes ne témoigne pas d'une maîtrise.
+
+Le test **Flanker** note les réponses correctes sur la flèche centrale ; les essais incongruents sont par conception plus lents et sujets à davantage d'erreurs. Suivez d'abord la précision, puis le TR moyen sur les réponses correctes.
+
+La **correspondance de motifs / clics de précision** privilégie l'exactitude (et la qualité des coups) à une vitesse inconsidérée. Le CPS (clics par seconde) ou la vitesse de fin sans précision relèvent de la vanne.
+
+## Exercices chronométrés (grilles de Schulte et similaires)
+
+Les grilles de style Schulte mesurent le **temps de complétion** — plus c'est bas, mieux c'est. Les mauvais clics ne doivent pas « réussir » en silence ; ils font perdre du temps. Les modes de comptage inversé constituent une tâche différente des grilles ascendantes.
+
+## Ce que nous ne prétendons pas affirmer
+
+Nous n'inventons pas de statistiques globales du type « l'utilisateur moyen s'améliore de X % en 14 jours » sans ��chantillon publié et contrôlé. Nous ne présentons pas de planches de style Ishihara comme un diagnostic médical. Nous n'assimilons pas un score élevé à un jeu vidéo à un QI, à une évaluation clinique du TDAH ou à une aptitude à signer un contrat e-sport.
+
+Lorsque nous citons des recherches externes (NIH, NCBI, articles de psychologie classiques), ces recherches décrivent des **phénomènes généraux**. Votre courbe personnelle sur Reflextry reste une expérience avec un échantillon n=1 — utile pour s'entraîner, pas pour un rapport clinique.
+
+## Comment tenir un journal honnête
+
+1. Enregistrez la date, la difficulté, l'appareil et des notes sur votre sommeil ou votre consommation de caféine si vous suivez vos tendances.
+2. Préférez les médianes mobiles hebdomadaires à une session chanceuse.
+3. Ne changez qu'une seule variable à la fois lorsque vous testez « est-ce que cela a aidé ? ».
+4. Arrêtez les sessions lorsque la fatigue fait grimper les erreurs ; les scores obtenus en étant fatigué enseignent de mauvaises leçons.
+
+## Pourquoi cette transparence est importante
+
+Les sites de l'ère AdSense copient parfois la même mention « amélioration de 12 à 15 % » sous chaque outil. Cela nuit à la confiance et apprend aux utilisateurs à ignorer les chiffres. L'objectif de Reflextry est tout autre : **une règle claire par outil**, des limites honnêtes et des scores que vous pouvez défendre lorsque vous les partagez avec un coéquipier ou un coach.
+
+Si la description du système de notation sur la page d'un outil contredit cet article, considérez l'interface en direct de l'outil comme la source de vérité et envoyez un e-mail à support@reflextry.com afin que nous puissions corriger la documentation.
+
+## Notre vision des « données originales » sur un laboratoire gratuit
+
+Nous ne publions pas de faux pourcentages de classement récupérés à partir de sessions anonymes et déguisés en science. Si nous publions un jour des distributions agrégées (par exemple, des histogrammes des moyennes de réaction simple sur une classe d'appareils déclarée), nous préciserons :
+
+- les règles d'inclusion (essais minimums, difficulté, exclusion du spam de clics précoces)
+- la taille approximative de l'échantillon et la période
+- les mises en garde concernant l'appareil
+- ce que le graphique n'est *pas* (normes cliniques)
+
+En attendant qu'un tel rapport existe, considérez votre propre journal comme le jeu de données principal. Il n'en reste pas moins précieux : les expériences personnelles sont le fondement même de l'entraînement.
+
+## Guides associés
+
+- [Ce que les tests de réaction sur navigateur peuvent et ne peuvent pas mesurer](/blog/browser-reaction-time-limits)
+- [Choix réaction vs Réaction simple](/blog/choice-reaction-vs-simple-reaction)
+- [Qu'est-ce qu'un bon temps de réaction ?](/blog/what-is-a-good-reaction-time)

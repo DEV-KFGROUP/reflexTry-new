@@ -1,0 +1,84 @@
+---
+title: Come valutiamo i test di Reflextry (e cosa significano i numeri)
+description: >-
+  Una guida chiara ai punteggi di Reflextry: millisecondi, span, precisione e
+  tempi di completamento, oltre a ciò che non rivendichiamo riguardo a
+  percentili o diagnosi cliniche.
+publishedAt: '2026-08-01'
+author:
+  name: Kaushik Rabadiya
+category: Methodology
+tags:
+  - scoring
+  - methodology
+  - benchmarks
+  - transparency
+readingTime: 8 min read
+---
+Se un sito di allenamento pubblica un punteggio senza spiegarne la regola, quel numero è marketing, non misurazione. Questo articolo documenta come Reflextry valuta le sue principali famiglie di test, come la difficoltà cambia il compito e quali affermazioni ci rifiutiamo di fare senza dati controllati.
+
+## Un principio: stesso dispositivo, stessa difficoltà
+
+I test via browser ereditano il rumore dell'hardware: frequenza di aggiornamento, polling del mouse, latenza del touch, thermal throttling e schede in background. Questo non rende i punteggi inutili, significa che **i confronti dovrebbero essere fatti all'interno della tua configurazione**. Un tempo di reazione di 220 ms su un laptop a 60 Hz non è lo stesso esperimento di 180 ms su un display da esport a 240 Hz. Prendi sempre nota della modalità di difficoltà accanto ai record personali.
+
+## Reazione semplice e di scelta (millisecondi)
+
+I punteggi di **reazione semplice** sono solitamente la latenza media dall'inizio dello stimolo a una risposta valida, in millisecondi. Più basso è meglio è. I clic anticipati (prima del segnale) sono errori, non eroiche anticipazioni.
+
+La **reazione di scelta** aggiunge alternative. Il tempo di reazione medio rimane la metrica principale, ma solo i colpi corretti dovrebbero alimentare la media. I clic nella casella sbagliata e i clic prematuri sono conteggi di errori. Poiché un numero maggiore di scelte generalmente rallenta le decisioni (intuizione della legge di Hick), non confrontare una media a 2 caselle con una media a 4 caselle come se fossero test identici.
+
+## Span di memoria e sessioni di riconoscimento
+
+Gli strumenti in stile **Chimp / sequenza / cifre** in genere valutano lo span pulito più lungo o lo stadio raggiunto secondo le regole di vite e sparizione della modalità. Più alto è meglio è.
+
+La **memoria verbale** di solito valuta quanta strada fai prima di esaurire i tentativi sui giudizi VISTO/NUOVO. L'interferenza aumenta verso la fine di una sessione; questo è previsto, non un test difettoso.
+
+Quando le vite differiscono in base alla difficoltà, un "punteggio alto" a livello Principiante non è intercambiabile con Professionale. Tratta ogni difficoltà come una classifica a sé stante nei tuoi appunti.
+
+## Precisione, inibizione e compiti di conflitto
+
+Il test **Go/No-Go** premia i colpi Go corretti **e** le inibizioni corrette. Un tempo di reazione Go appariscente con molti falsi allarmi non è padronanza.
+
+Il test **Flanker** valuta le risposte corrette alla freccia centrale; le prove incongruenti sono più lente e inclini agli errori per loro natura. Tieni traccia prima della precisione, poi del tempo di reazione medio sui tentativi corretti.
+
+Il **pattern matching / precision click** danno priorità alla correttezza (e alla qualità del colpo) rispetto alla velocità spericolata. I CPS o la velocità di completamento senza precisione sono una metrica di vanità.
+
+## Completamenti basati sul tempo (Schulte e simili)
+
+Le griglie in stile Schulte valutano il **tempo di completamento**: più basso è meglio è. I clic errati non dovrebbero "riuscire" silenziosamente; fanno perdere tempo. Le modalità di conteggio alla rovescia sono un compito diverso rispetto ai completamenti in ordine crescente.
+
+## Cosa non dichiariamo
+
+Non inventiamo statistiche a livello di sito del tipo "l'utente medio migliora del X% in 14 giorni" senza un campione pubblicato e controllato. Non presentiamo le tavole in stile Ishihara come una diagnosi medica. Non equipariamo il punteggio alto di un gioco al QI, a una valutazione clinica dell'ADHD o all'idoneità per un contratto negli esport.
+
+Quando citiamo ricerche esterne (NIH, NCBI, classici documenti di psicologia), quella ricerca descrive **fenomeni generali**. La tua curva personale su Reflextry rimane comunque un esperimento n=1: utile per la pratica, non un referto clinico.
+
+## Come mantenere un registro onesto
+
+1. Registra data, difficoltà, dispositivo e note su sonno/caffè se ti interessano i trend.
+2. Preferisci le mediane settimanali mobili a una singola sessione fortunata.
+3. Cambia una variabile alla volta quando testi "questo ha aiutato?".
+4. Interrompi le sessioni quando l'affaticamento fa impennare gli errori; i punteggi da stanco insegnano la lezione sbagliata.
+
+## Perché questa trasparenza è importante
+
+I siti web dell'era AdSense a volte incollano copie identiche con scritto "miglioramento del 12–15%" sotto ogni strumento. Questo danneggia la fiducia e insegna agli utenti a ignorare i numeri. L'obiettivo di Reflextry è l'opposto: **una regola chiara per ogni strumento**, limiti onesti e punteggi che puoi difendere quando li condividi con un compagno di squadra o un allenatore.
+
+Se la descrizione del punteggio su una pagina di uno strumento dovesse mai entrare in conflitto con questo articolo, considera l'interfaccia utente in tempo reale dello strumento come la fonte di verità e invia un'email a support@reflextry.com in modo che possiamo correggere la documentazione.
+
+## Come consideriamo i "dati originali" su un laboratorio gratuito
+
+Non pubblichiamo percentili di classifica falsi ricavati da sessioni anonime e spacciati per scienza. Se mai rilasceremo distribuzioni aggregate (ad esempio, istogrammi delle medie di reazione semplice su una classe di dispositivi dichiarata), specificheremo:
+
+- regole di inclusione (prove minime, difficoltà, esclusione dello spam di clic anticipati)
+- dimensioni approssimative del campione e intervallo di date
+- avvertenze sul dispositivo
+- ciò che il grafico *non* è (norme cliniche)
+
+Fino a quando non esisterà quel tipo di rapporto, tratta il tuo registro personale come il set di dati principale. Rimane comunque prezioso: gli esperimenti personali sono il modo in cui funziona la pratica.
+
+## Guide correlate
+
+- [Cosa possono e non possono misurare i test di reazione del browser](/blog/browser-reaction-time-limits)
+- [Reazione di scelta vs Reazione semplice](/blog/choice-reaction-vs-simple-reaction)
+- [Cos'è un buon tempo di reazione?](/blog/what-is-a-good-reaction-time)

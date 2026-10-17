@@ -3,6 +3,8 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Crosshair, Zap, Gamepad2, Music, Sparkles } from "lucide-react";
+import { useTranslation } from "@/lib/i18n/context";
+import { CategoryGuideSection } from "@/components/CategoryGuideSection";
 
 const GAMING_TOOLS = [
     {
@@ -82,6 +84,8 @@ const FloatingBackground = () => {
 };
 
 export default function GamingHubClient() {
+    const { t, getLocalizedHref } = useTranslation();
+
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -125,23 +129,23 @@ export default function GamingHubClient() {
                             suppressHydrationWarning
                         >
                             <Sparkles className="w-10 h-10 text-purple-400" />
-                            Esports Training & Aim Lab
+                            {t("categoryHub.gaming.heroTitle", "Esports Warmup & Aim Arena")}
                         </h1>
                     </div>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-medium">
-                        Warm up your hands and sharpen your senses for your next ranked match.
+                        {t("categoryHub.gaming.heroSubtitle", "Calibrate mouse flick shots, target tracking, and combat reflexes for competitive games.")}
                     </p>
                     <p className="text-md text-muted-foreground/80 max-w-3xl mx-auto">
-                        Professional esports players don't just play—they train. Our free gaming tools are designed to help you develop the core mechanics that separate casual players from competitive ones. Improve your flick shots, aiming precision, and reaction timing.
+                        {t("categoryHub.gaming.heroDesc", "Built specifically for gamers in Counter-Strike, Valorant, Apex Legends, and Overwatch to warm up mechanical muscle memory before jumping into ranked games.")}
                     </p>
                 </motion.div>
 
                 <motion.section variants={itemVariants} className="bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 p-6 rounded-3xl mb-8 relative z-10 max-w-4xl mx-auto">
                     <h2 className="text-xl font-bold text-foreground mb-2 flex items-center gap-2">
-                        <Sparkles className="w-5 h-5 text-purple-500" /> What This Arena Covers
+                        <Sparkles className="w-5 h-5 text-purple-500" /> {t("categoryHub.gaming.whatItCovers", "What This Arena Covers")}
                     </h2>
                     <p className="text-muted-foreground leading-relaxed">
-                        Esports-focused mechanics: aim tracking, flick shots, target tracking, rhythm timing, and dodge drills. Practice mouse control and click timing in isolation before ranked matches.
+                        {t("categoryHub.gaming.whatItCoversDesc", "Flick shot aim, continuous target tracking, split-second combat reflexes, and dodging obstacle streams.")}
                     </p>
                 </motion.section>
 
@@ -156,150 +160,62 @@ export default function GamingHubClient() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12 relative z-10">
                         <div className="p-6 rounded-2xl bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 text-center hover:bg-white/10 transition-colors">
                             <Crosshair className="w-8 h-8 text-pink-400 mx-auto mb-3 drop-shadow-[0_0_10px_rgba(236,72,153,0.8)]" />
-                            <h3 className="text-base font-bold text-foreground mb-1">Better Aim</h3>
-                            <p className="text-sm text-muted-foreground">Improve precision</p>
+                            <h3 className="text-base font-bold text-foreground mb-1">
+                                {t("categoryHub.gaming.benefit1Title", "Flick Shots")}
+                            </h3>
+                            <p className="text-sm text-muted-foreground">
+                                {t("categoryHub.gaming.benefit1Desc", "Target acquisition")}
+                            </p>
                         </div>
                         <div className="p-6 rounded-2xl bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 text-center hover:bg-white/10 transition-colors">
                             <Zap className="w-8 h-8 text-purple-400 mx-auto mb-3 drop-shadow-[0_0_10px_rgba(168,85,247,0.8)]" />
-                            <h3 className="text-base font-bold text-foreground mb-1">Faster Reactions</h3>
-                            <p className="text-sm text-muted-foreground">Quick responses</p>
+                            <h3 className="text-base font-bold text-foreground mb-1">
+                                {t("categoryHub.gaming.benefit2Title", "Tracking")}
+                            </h3>
+                            <p className="text-sm text-muted-foreground">
+                                {t("categoryHub.gaming.benefit2Desc", "Smooth target follow")}
+                            </p>
                         </div>
                         <div className="p-6 rounded-2xl bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 text-center hover:bg-white/10 transition-colors">
                             <div className="text-2xl mb-2 drop-shadow-md">🏆</div>
-                            <h3 className="text-base font-bold text-foreground mb-1">Win More</h3>
-                            <p className="text-sm text-muted-foreground">Better performance</p>
+                            <h3 className="text-base font-bold text-foreground mb-1">
+                                {t("categoryHub.gaming.benefit3Title", "Combat Reflex")}
+                            </h3>
+                            <p className="text-sm text-muted-foreground">
+                                {t("categoryHub.gaming.benefit3Desc", "Rapid decision making")}
+                            </p>
                         </div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
-                        {GAMING_TOOLS.map((tool, index) => (
-                            <motion.div
-                                key={tool.title}
-                                variants={itemVariants}
-                                className="group relative p-6 rounded-3xl bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 hover:border-purple-500/50 hover:bg-purple-500/5 transition-all duration-300 shadow-lg hover:shadow-[0_0_30px_rgba(168,85,247,0.2)] overflow-hidden"
-                            >
-                                <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                                <Link
-                                    href={tool.href}
-                                    className="absolute inset-0 z-10"
-                                    aria-label={`${tool.title} - ${tool.desc}`}
+                        {GAMING_TOOLS.map((tool, index) => {
+                            const shortSlug = tool.href.replace("/gaming/", "");
+                            const localizedTitle = t(`tools.${shortSlug}.title`, tool.title);
+                            const localizedDesc = t(`tools.${shortSlug}.desc`, tool.desc);
+
+                            return (
+                                <motion.div
+                                    key={tool.title}
+                                    variants={itemVariants}
+                                    className="group relative p-6 rounded-3xl bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 hover:border-purple-500/50 hover:bg-purple-500/5 transition-all duration-300 shadow-lg hover:shadow-[0_0_30px_rgba(168,85,247,0.2)] overflow-hidden"
                                 >
-                                    <span className="sr-only">{tool.title} - {tool.desc}</span>
-                                </Link>
-                                <tool.icon className={`w-12 h-12 ${tool.color} mb-4 group-hover:scale-110 transition-transform drop-shadow-[0_0_8px_currentColor]`} />
-                                <h3 className="text-xl font-bold text-foreground mb-2 drop-shadow-sm">{tool.title}</h3>
-                                <p className="text-muted-foreground leading-relaxed">{tool.desc}</p>
-                            </motion.div>
-                        ))}
+                                    <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                    <Link
+                                        href={getLocalizedHref(tool.href)}
+                                        className="absolute inset-0 z-10"
+                                        aria-label={`${localizedTitle} - ${localizedDesc}`}
+                                    >
+                                        <span className="sr-only">{localizedTitle} - {localizedDesc}</span>
+                                    </Link>
+                                    <tool.icon className={`w-12 h-12 ${tool.color} mb-4 group-hover:scale-110 transition-transform drop-shadow-[0_0_8px_currentColor]`} />
+                                    <h3 className="text-xl font-bold text-foreground mb-2 drop-shadow-sm">{localizedTitle}</h3>
+                                    <p className="text-muted-foreground leading-relaxed">{localizedDesc}</p>
+                                </motion.div>
+                            );
+                        })}
                     </div>
 
-                    {/* Detailed SEO / AEO / GEO Section */}
-                    <div className="max-w-4xl mx-auto mt-16 space-y-12 text-left pt-6 border-t border-black/10 dark:border-white/10 relative z-10">
-                        
-                        <div className="space-y-4">
-                            <h2 className="text-3xl font-bold text-foreground">What is Aim Training?</h2>
-                            <p className="text-muted-foreground leading-relaxed">
-                                Aim training involves using specialized, isolated minigames to practice mouse control, crosshair placement, and reaction timing outside of a traditional game environment. This allows players to get hundreds of repetitive mechanical repetitions per minute, significantly accelerating muscle memory development compared to standard gameplay.
-                            </p>
-                        </div>
-
-                        <div className="space-y-4">
-                            <h2 className="text-2xl font-bold text-foreground">How to Improve Your Aim and Gaming Mechanics?</h2>
-                            <ol className="list-decimal list-inside space-y-2 text-muted-foreground">
-                                <li><strong>Start slow:</strong> Focus on 100% accuracy before trying to increase your speed.</li>
-                                <li><strong>Use the right tools:</strong> Use Target Tracking for smooth aim, and Flick Shot for fast flick reflexes.</li>
-                                <li><strong>Maintain posture:</strong> Ensure your arm and wrist are properly supported to prevent fatigue and injury.</li>
-                                <li><strong>Warm up daily:</strong> A 10-minute routine before jumping into ranked matchmaking makes a huge difference.</li>
-                            </ol>
-                        </div>
-
-                        <div className="space-y-4">
-                            <h3 className="text-2xl font-bold text-foreground">Should I Practice Daily?</h3>
-                            <p className="text-muted-foreground leading-relaxed">
-                                Yes. Consistent daily practice of 15-20 minutes yields better results for neuroplasticity and muscle memory than a single 2-hour session once a week.
-                            </p>
-                        </div>
-
-                        <div className="space-y-4">
-                            <h2 className="text-2xl font-bold text-foreground">Gaming Tools Comparison</h2>
-                            <div className="overflow-x-auto">
-                                <table className="w-full text-left border-collapse min-w-[600px]">
-                                    <thead>
-                                        <tr className="border-b border-black/10 dark:border-white/10">
-                                            <th className="p-3 text-foreground font-bold">Tool Name</th>
-                                            <th className="p-3 text-foreground font-bold">Best For (Use Case)</th>
-                                            <th className="p-3 text-foreground font-bold">Core Benefit</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody className="text-muted-foreground">
-                                        <tr className="border-b border-black/5 dark:border-white/5">
-                                            <td className="p-3 font-bold text-purple-700 dark:text-purple-400">Aim Trainer</td>
-                                            <td className="p-3">FPS Gamers (Valorant, CS2)</td>
-                                            <td className="p-3">Improves static target clicking and overall mouse control.</td>
-                                        </tr>
-                                        <tr className="border-b border-black/5 dark:border-white/5">
-                                            <td className="p-3 font-bold text-purple-700 dark:text-purple-400">Flick Shot</td>
-                                            <td className="p-3">Sniper roles, fast-paced shooters</td>
-                                            <td className="p-3">Builds fast-twitch muscle memory for sudden crosshair snaps.</td>
-                                        </tr>
-                                        <tr className="border-b border-black/5 dark:border-white/5">
-                                            <td className="p-3 font-bold text-purple-700 dark:text-purple-400">Target Tracking</td>
-                                            <td className="p-3">Apex Legends, Overwatch players</td>
-                                            <td className="p-3">Enhances smooth pursuit eye movements and continuous mouse tracking.</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-
-                        <div className="space-y-4">
-                            <h2 className="text-2xl font-bold text-foreground">Benchmarks & Scientific Proof</h2>
-                            <p className="text-muted-foreground leading-relaxed">
-                                Competitive players often show faster sensorimotor responses than casual users, and research cataloged by the <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7323281/" target="_blank" rel="noopener noreferrer" className="text-purple-700 dark:text-purple-400 font-semibold hover:underline underline-offset-2">National Center for Biotechnology Information (NCBI)</a> links action-game practice with gains in visual attention and motor control. On Reflextry, treat Flick Shot and Target Tracking as isolated mechanics drills: log your own baselines on the same mouse and difficulty, then look for steadier accuracy and cleaner time-to-target over weeks—not a promised percentage improvement.
-                            </p>
-                        </div>
-                        
-                        <div className="space-y-4">
-                            <h2 className="text-2xl font-bold text-foreground">Frequently Asked Questions</h2>
-                            <div className="bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 p-6 rounded-3xl">
-                                <h3 className="text-xl font-bold text-foreground mb-3">Does aim training actually improve my game?</h3>
-                                <p className="text-muted-foreground mb-3">Yes. Aim trainers isolate the physical mechanics of using a mouse, such as tracking and flicking. By separating these from game sense, map awareness, and strategy, you can build raw mechanical muscle memory much faster than just playing the game alone.</p>
-                            </div>
-                            
-                            <div className="bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 p-6 rounded-3xl">
-                                <h3 className="text-xl font-bold text-foreground mb-3">What is the best way to warm up before a ranked match?</h3>
-                                <p className="text-muted-foreground mb-3">A solid pre-game warmup should last 5-10 minutes and involve progressively faster movements. We recommend this sequence:</p>
-                                <ul className="list-disc pl-6 text-muted-foreground space-y-2">
-                                    <li>2 minutes of Aim Trainer to establish base accuracy.</li>
-                                    <li>3 minutes of Target Tracking for smooth movements.</li>
-                                    <li>2 minutes of Flick Shot to push your speed limits.</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Related Categories */}
-                    <div className="mt-16 pt-8 border-t border-black/10 dark:border-white/10 relative z-10">
-                        <h3 className="text-2xl font-bold text-foreground mb-6 text-center">Explore Other Categories</h3>
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                            <Link href="/memory" className="p-4 rounded-2xl bg-white/5 border border-black/10 dark:border-white/10 hover:border-purple-500/50 hover:bg-purple-500/5 transition-all text-center">
-                                <div className="text-purple-500 text-2xl mb-2 drop-shadow-sm">🧠</div>
-                                <div className="text-sm font-bold text-foreground">Memory Games</div>
-                            </Link>
-                            <Link href="/reflex" className="p-4 rounded-2xl bg-white/5 border border-black/10 dark:border-white/10 hover:border-pink-500/50 hover:bg-pink-500/5 transition-all text-center">
-                                <div className="text-pink-500 text-2xl mb-2 drop-shadow-sm">⚡</div>
-                                <div className="text-sm font-bold text-foreground">Reflex Tests</div>
-                            </Link>
-                            <Link href="/speed" className="p-4 rounded-2xl bg-white/5 border border-black/10 dark:border-white/10 hover:border-purple-500/50 hover:bg-purple-500/5 transition-all text-center">
-                                <div className="text-purple-500 text-2xl mb-2 drop-shadow-sm">⌨️</div>
-                                <div className="text-sm font-bold text-foreground">Speed Tests</div>
-                            </Link>
-                            <Link href="/accuracy" className="p-4 rounded-2xl bg-white/5 border border-black/10 dark:border-white/10 hover:border-pink-500/50 hover:bg-pink-500/5 transition-all text-center">
-                                <div className="text-pink-500 text-2xl mb-2 drop-shadow-sm">🎯</div>
-                                <div className="text-sm font-bold text-foreground">Accuracy Tools</div>
-                            </Link>
-                        </div>
-                    </div>
+                    <CategoryGuideSection category="gaming" />
                 </motion.div>
             </motion.div>
         </div>

@@ -1,0 +1,84 @@
+---
+title: Wie wir Reflextry-Tests bewerten (Und was die Zahlen bedeuten)
+description: >-
+  Ein klarer Leitfaden zur Bewertung bei Reflextry: Millisekunden, Spannen,
+  Genauigkeit und Abschlusszeiten – plus das, was wir nicht über Perzentile oder
+  klinische Diagnosen behaupten.
+publishedAt: '2026-08-01'
+author:
+  name: Kaushik Rabadiya
+category: Methodology
+tags:
+  - scoring
+  - methodology
+  - benchmarks
+  - transparency
+readingTime: 8 min read
+---
+Wenn eine Trainings-Website einen Score veröffentlicht, ohne die Regel zu erklären, ist die Zahl Marketing, nicht Messung. Dieser Artikel dokumentiert, wie Reflextry seine wichtigsten Testfamilien bewertet, wie Schwierigkeitsgrade die Aufgabe verändern und welche Behauptungen wir ohne kontrollierte Daten strikt ablehnen.
+
+## Ein Prinzip: gleiches Gerät, gleicher Schwierigkeitsgrad
+
+Browser-Tests erben Hardware-Rauschen: Bildwiederholfrequenz, Maus-Abfragerate (Polling), Latenz bei Berührungen (Touch), thermische Drosselung (Thermal Throttling) und Hintergrund-Tabs. Das macht Scores nicht nutzlos – es bedeutet lediglich, dass **Vergleiche innerhalb deines Setups stattfinden sollten**. Eine Reaktionszeit von 220 ms auf einem 60-Hz-Laptop ist nicht dasselbe Experiment wie 180 ms auf einem 240-Hz-Esports-Display. Notiere dir den Schwierigkeitsgrad immer neben deinen persönlichen Bestleistungen.
+
+## Reaktionszeit und Wahlreaktionszeit (Millisekunden)
+
+**Einfache Reaktionszeiten** sind in der Regel die durchschnittliche Latenz vom Einsetzen des Reizes bis zu einer gültigen Antwort, gemessen in Millisekunden. Je niedriger, desto besser. Zu frühe Klicks (vor dem Signal) sind Fehler, keine heldenhafte Antizipation.
+
+**Wahlreaktionszeiten** fügen Alternativen hinzu. Die durchschnittliche Reaktionszeit bleibt die Hauptmetrik, aber nur korrekte Treffer sollten in den Durchschnitt einfließen. Klicks auf falsche Felder und verfrühte Klicks zählen als Fehler. Da mehr Auswahlmöglichkeiten Entscheidungen im Allgemeinen verlangsamen (die Intuition hinter dem Hick'schen Gesetz), darfst du den Durchschnitt von 2 Feldern nicht mit dem von 4 Feldern vergleichen, als wären es identische Tests.
+
+## Gedächtnisspannen und Erkennungsdurchläufe
+
+**Tools im Chimp- / Sequenz- / Ziffern-Stil** bewerten typischerweise die längste saubere Spanne oder Stufe, die unter den Leben- und Verschwinden-Regeln des Modus erreicht wurde. Höher ist besser.
+
+**Gedächtnis für Wörter (Verbal Memory)** bewertet meist, wie weit du kommst, bevor du bei SEEN/NEW-Entscheidungen (Gesehen/Neu) drei Fehler machst. Gegen Ende eines Durchlaufs nimmt die Interferenz zu; das ist so erwartet und kein kaputter Test.
+
+Wenn sich die Anzahl der Leben je nach Schwierigkeitsgrad unterscheidet, ist ein „Highscore“ auf Anfänger nicht mit dem auf Profi austauschbar. Betrachte jeden Schwierigkeitsgrad in deinen Notizen als eigene Bestenliste.
+
+## Genauigkeit, Inhibition und Konfliktaufgaben
+
+**Go/No-Go** belohnt korrekte Go-Treffer **sowie** korrekte Unterlassungen. Eine protzige Go-Reaktionszeit mit vielen Fehlalarmen ist keine Meisterschaft.
+
+**Flanker** bewertet korrekte Reaktionen auf den mittleren Pfeil; inkongruente Durchläufe sind von Natur aus langsamer und fehleranfälliger. Achte zuerst auf die Genauigkeit, dann auf die durchschnittliche Reaktionszeit bei korrekten Antworten.
+
+**Mustervergleich / Präzisionsklicks** priorisieren Korrektheit (und Trefferqualität) vor rücksichtsloser Geschwindigkeit. CPS (Klicks pro Sekunde) oder Abschlussgeschwindigkeit ohne Genauigkeit sind reine Eitelkeitsmetriken.
+
+## Zeitbasierte Durchläufe (Schulte und ähnliche)
+
+Gitter im Schulte-Stil bewerten die **Abschlusszeit** – je schneller, desto besser. Falsche Klicks sollten nicht unbemerkt „erfolgreich“ sein; sie kosten Zeit. Modi mit rückwärts zählen sind eine andere Aufgabe als aufsteigende Durchläufe.
+
+## Was wir nicht behaupten
+
+Wir erfinden keine seitenweiten Statistiken wie „der durchschnittliche Nutzer verbessert sich in 14 Tagen um X %“, wenn keine veröffentlichte, kontrollierte Stichprobe vorliegt. Wir präsentieren Tafeln im Ishihara-Stil nicht als medizinische Diagnose. Wir setzen einen Highscore in einem Spiel nicht mit einem IQ, einer klinischen ADHS-Bewertung oder der Einsatzbereitschaft für einen Esport-Vertrag gleich.
+
+Wenn wir externe Forschung zitieren (NIH, NCBI, klassische Psychologie-Arbeiten), beschreibt diese Forschung **allgemeine Phänomene**. Deine persönliche Leistungskurve auf Reflextry bleibt ein n=1-Experiment – nützlich zum Üben, aber kein Klinikbericht.
+
+## Wie du ein ehrliches Protokoll führst
+
+1. Notiere Datum, Schwierigkeitsgrad, Gerät und Hinweise zu Schlaf und Koffein, wenn du Trends verfolgen willst.
+2. Bevorzuge gleitende wöchentliche Mediane gegenüber einer einzigen glücklichen Sitzung.
+3. Ändere immer nur eine Variable, wenn du testest, ob „das hier geholfen hat“.
+4. Beende Sitzungen, wenn Ermüdung zu Fehlern führt; müde Scores lehren die falsche Lektion.
+
+## Warum diese Transparenz wichtig ist
+
+Websites aus der AdSense-Ära kopieren manchmal identische Texte mit „12–15 % Verbesserung“ unter jedes Tool. Das schadet dem Vertrauen und bringt Nutzern bei, Zahlen zu ignorieren. Reflextry verfolgt das genaue Gegenteil: **eine klare Regel pro Tool**, ehrliche Grenzen und Scores, die du verteidigen kannst, wenn du sie mit einem Teamkollegen oder Coach teilst.
+
+Sollte eine Bewertungsbeschreibung auf einer Tool-Seite jemals von diesem Artikel abweichen, betrachte die Benutzeroberfläche des Live-Tools als einzige Wahrheit (Source of Truth) und schreibe eine E-Mail an support@reflextry.com, damit wir die Dokumentation korrigieren können.
+
+## Wie wir über „Originaldaten“ in einem kostenlosen Labor denken
+
+Wir veröffentlichen keine gefälschten Bestlisten-Perzentile, die von anonymen Sitzungen zusammengekratzt und als Wissenschaft ausgegeben wurden. Sollten wir jemals aggregierte Verteilungen veröffentlichen (zum Beispiel Histogramme einfacher Reaktionssitzungen auf einer angegebenen Geräteklasse), werden wir Folgendes angeben:
+
+- Einschlussregeln (Mindestanzahl an Durchläufen, Schwierigkeitsgrad, Ausschluss von Spam durch zu frühe Klicks)
+- ungefähre Stichprobengröße und Datumsbereich
+- Einschränkungen bezüglich der Hardware
+- was das Diagramm *nicht* ist (klinische Normen)
+
+Solange ein solcher Bericht nicht existiert, betrachte dein eigenes Protokoll als primären Datensatz. Das ist dennoch wertvoll: Persönliche Experimente sind die Grundlage, wie Training funktioniert.
+
+## Verwandte Leitfäden
+
+- [Was Browser-Reaktionstests messen können und was nicht](/blog/browser-reaction-time-limits)
+- [Wahlreaktion vs. einfache Reaktion](/blog/choice-reaction-vs-simple-reaction)
+- [Was ist eine gute Reaktionszeit?](/blog/what-is-a-good-reaction-time)

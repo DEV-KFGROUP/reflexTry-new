@@ -1,6 +1,7 @@
+import { headers } from 'next/headers';
 import { Metadata } from 'next';
 import DirectionGame from './DirectionGame';
-import { getToolMetadata } from '@/lib/seo-utils';
+import { getToolMetadata, getToolSEOConfig } from '@/lib/seo-utils';
 import { SchemaInjector } from '@/components/SchemaInjector';
 import { generateToolStructuredData, generateBreadcrumbStructuredData, generateWebPageSchema } from '@/lib/structured-data';
 import { SEO_CONFIGS } from '@/config/seo-config';
@@ -8,12 +9,16 @@ import { ToolContent } from '@/components/ToolContent';
 import { getToolContent } from '@/lib/tool-content';
 
 export async function generateMetadata(): Promise<Metadata> {
-    return getToolMetadata('directional-reflex', '/reflex/direction');
+    const headersList = await headers();
+    const locale = headersList.get('x-locale') || 'en';
+    return getToolMetadata('directional-reflex', '/reflex/direction', locale);
 }
 
-export default function Page() {
-    const config = SEO_CONFIGS['directional-reflex'];
-    const content = getToolContent('directional-reflex', config.title);
+export default async function Page() {
+    const headersList = await headers();
+    const locale = headersList.get('x-locale') || 'en';
+    const config = getToolSEOConfig('directional-reflex', locale);
+    const content = getToolContent('directional-reflex', config.title, locale);
     const structuredData = generateToolStructuredData(
         'directional-reflex',
         config.title,

@@ -1,4 +1,7 @@
+"use client";
+
 import React from "react";
+import { useTranslation } from "@/lib/i18n/context";
 
 interface DashboardDifficultyCardProps {
   id: string;
@@ -15,6 +18,10 @@ interface DashboardDifficultyCardProps {
 export function DashboardDifficultyCard({
   id, label, description, selected, onSelect, disabled = false, icon: Icon, iconColorClass, iconBgClass
 }: DashboardDifficultyCardProps) {
+  const { t } = useTranslation();
+  const diffKey = `game.diff${id.charAt(0).toUpperCase() + id.slice(1)}`;
+  const displayLabel = t(diffKey, label);
+
   return (
     <button
       onClick={disabled ? undefined : onSelect}
@@ -36,11 +43,11 @@ export function DashboardDifficultyCard({
       <div className="flex-1 min-w-0 flex flex-col justify-center pt-0.5">
         <div className="flex items-center gap-2">
           <span className="font-bold text-xs tracking-wide text-slate-800 dark:text-slate-200">
-            {label}
+            {displayLabel}
           </span>
           {selected && (
             <span className="text-[7px] font-black uppercase tracking-wider px-1.5 py-0.5 rounded-full bg-indigo-500 text-white leading-none">
-              Active
+              {t("game.active", "Active")}
             </span>
           )}
         </div>

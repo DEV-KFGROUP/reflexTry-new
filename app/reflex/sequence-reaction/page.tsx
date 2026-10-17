@@ -1,6 +1,7 @@
+import { headers } from 'next/headers';
 import { Metadata } from 'next';
 import SequenceReactionGame from './SequenceReactionGame';
-import { getToolMetadata } from '@/lib/seo-utils';
+import { getToolMetadata, getToolSEOConfig } from '@/lib/seo-utils';
 import { SchemaInjector } from '@/components/SchemaInjector';
 import { generateToolStructuredData, generateBreadcrumbStructuredData, generateWebPageSchema } from '@/lib/structured-data';
 import { SEO_CONFIGS } from '@/config/seo-config';
@@ -8,7 +9,9 @@ import { ToolContent } from '@/components/ToolContent';
 import { getToolContent } from '@/lib/tool-content';
 
 export async function generateMetadata(): Promise<Metadata> {
-    return getToolMetadata('sequence-reaction', '/reflex/sequence-reaction');
+    const headersList = await headers();
+    const locale = headersList.get('x-locale') || 'en';
+    return getToolMetadata('sequence-reaction', '/reflex/sequence-reaction', locale);
 }
 
 export default function Page() {

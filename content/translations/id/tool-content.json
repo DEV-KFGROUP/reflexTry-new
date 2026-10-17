@@ -1,0 +1,3095 @@
+{
+  "card-match": {
+    "description": [
+      {
+        "title": "Tentang Card Match",
+        "content": "Card Match adalah tes memori kerja spasial dan pengingatan pola visual. Kartu yang menghadap ke bawah disusun dalam sebuah kisi; Anda membalik dua kartu sekaligus untuk menemukan pasangan simbol yang cocok sambil meminimalkan total gerakan dan waktu yang dihabiskan."
+      },
+      {
+        "title": "Apa yang Diukur oleh Card Match",
+        "content": "Modul ini mengukur kapasitas buffer visual-spasial langsung, retensi koordinat spasial, dan peluruhan memori di bawah interferensi. Saat lebih banyak kartu dibuka, lokasi kartu sebelumnya bersaing dengan input visual baru dalam memori kerja."
+      },
+      {
+        "title": "Cara Kerja Skor",
+        "content": "Skor dihitung berdasarkan: (1) Total gerakan yang dilakukan untuk membersihkan papan, (2) Total waktu penyelesaian dalam detik, dan (3) Efisiensi gerakan (gerakan ideal / gerakan aktual × 100%). Gerakan yang lebih sedikit dan waktu yang lebih cepat menghasilkan peringkat persentil yang lebih tinggi."
+      },
+      {
+        "title": "Konfigurasi Tingkat Kesulitan",
+        "content": "Mode Pemula menggunakan kisi 4×2 (4 pasang), Normal menggunakan kisi 4×4 (8 pasang), dan Sulit/Ahli menggunakan hingga kisi 6×6 (18 pasang) dengan waktu tunggu balik kartu yang lebih cepat dan gangguan visual."
+      },
+      {
+        "title": "Strategi Memori Optimal",
+        "content": "Gunakan strategi pengindeksan kisi spasial yang sistematis (misalnya memindai baris demi baris) alih-alih melakukan balik kartu eksploratif secara acak. Hubungkan simbol kartu dengan tengara jangkar spasial (kiri atas, tengah, kanan bawah) untuk memperkuat pengingatan."
+      },
+      {
+        "title": "Target Dasar Empiris",
+        "content": "Pada kisi 8 pasang (4×4), rata-rata orang dewasa biasanya selesai dalam 14–18 gerakan dalam waktu 20–30 detik. Pemain elit dengan chunking spasial yang kuat dapat menyelesaikan 8 pasang dalam 10–12 gerakan dalam waktu di bawah 15 detik."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Pengaturan",
+        "steps": [
+          "Pilih tingkat kesulitan kisi Anda.",
+          "Klik Inisialisasi untuk membagikan kartu yang menghadap ke bawah.",
+          "Klik kartu apa saja untuk melihat simbolnya."
+        ]
+      },
+      {
+        "title": "Pencocokan",
+        "steps": [
+          "Klik kartu kedua untuk menguji kecocokan.",
+          "Jika simbolnya cocok, kedua kartu tetap menghadap ke atas.",
+          "Jika simbolnya berbeda, keduanya akan kembali menghadap ke bawah setelah jendela tampilan singkat."
+        ]
+      },
+      {
+        "title": "Penyelesaian",
+        "steps": [
+          "Bersihkan semua pasangan di papan.",
+          "Tinjau jumlah gerakan akhir dan waktu yang dihabiskan.",
+          "Targetkan peringkat efisiensi di atas 80%."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Penggarihan Spasial (Spatial Anchoring)",
+        "content": "Secara mental, kaitkan identitas kartu dengan sudut dan tepi kisi daripada mencoba mengingat koordinat abstrak."
+      },
+      {
+        "title": "Hindari Balik Ganda Buta",
+        "content": "Selalu balikkan satu kartu yang belum terungkap terlebih dahulu. Jika cocok dengan kartu yang terlihat sebelumnya, gunakan balikkan kedua Anda secara sengaja pada lokasi yang sudah diketahui tersebut."
+      },
+      {
+        "title": "Sub-Rehearsal Vokal",
+        "content": "Sebutkan kartu dan kuadrannya dengan pelan (misalnya 'Bintang kanan atas') untuk mengaktifkan memori kerja fonologis dan visuospatial secara bersamaan."
+      },
+      {
+        "title": "Batas Sesi",
+        "content": "Memori kerja cepat lelah. Latih 3–5 papan per sesi untuk mempertahankan presisi pengkodean puncak."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Berapa skor yang bagus pada papan 4×4 (8 pasang)?",
+        "answer": "Jumlah gerakan antara 12 dan 16 gerakan dianggap sebagai performa yang kuat. Minimum matematisnya adalah 8 gerakan (jika Anda beruntung atau memiliki memori yang sempurna)."
+      },
+      {
+        "question": "Apa yang sebenarnya diukur oleh Card Match?",
+        "answer": "Ini mengukur kapasitas memori kerja visuospatial, pengindeksan spasial, dan ketahanan terhadap interferensi visual proaktif."
+      },
+      {
+        "question": "Bagaimana cara kerja waktu tunggu balik kartu?",
+        "answer": "Kartu yang tidak cocok tetap terlihat selama sekitar 800ms sebelum berbalik kembali untuk memungkinkan pengkodean perseptual yang singkat."
+      },
+      {
+        "question": "Apakah ukuran kisi memengaruhi beban kognitif?",
+        "answer": "Ya, beralih dari 8 pasang ke 18 pasang secara eksponensial meningkatkan interferensi memori spasial dan ruang pencarian."
+      },
+      {
+        "question": "Apakah Card Match cocok untuk anak-anak dan lansia?",
+        "answer": "Ya, pencocokan pasangan visual adalah latihan kognitif klasik yang mudah diakses oleh semua demografi usia."
+      },
+      {
+        "question": "Mengapa saya melupakan kartu yang baru saja saya lihat 10 detik lalu?",
+        "answer": "Ini adalah peluruhan memori kerja standar dan interferensi retroaktif yang disebabkan oleh melihat kartu baru di antaranya."
+      },
+      {
+        "question": "Bisakah saya memainkan Card Match di ponsel atau tablet?",
+        "answer": "Ya, kisi kartu yang ramah sentuhan sepenuhnya responsif di perangkat seluler dan layar sentuh."
+      },
+      {
+        "question": "Bagaimana cara menghitung efisiensi?",
+        "answer": "Efisiensi = (Total Pasangan / Total Gerakan yang Dibuat) × 100%. Skor 100% berarti nol gerakan eksplorasi yang berulang."
+      },
+      {
+        "question": "Apakah pencocokan kartu membantu tugas di dunia nyata?",
+        "answer": "Ini melatih pengingatan visual-spasial langsung yang digunakan dalam navigasi, menemukan barang yang salah letak, dan analisis diagram."
+      },
+      {
+        "question": "Seberapa sering saya harus berlatih?",
+        "answer": "Sesi 5-10 menit setiap hari memberikan latihan yang optimal tanpa kelelahan mental."
+      }
+    ]
+  },
+  "chimp-test": {
+    "description": [
+      {
+        "title": "Tentang Chimp Test",
+        "content": "Chimp Test adalah tantangan memori kerja visuospatial yang terinspirasi dari studi kognisi kera. Angka-angka muncul di atas grid; setelah Anda mengetuk angka 1, sisanya akan tersembunyi dan Anda harus mengetuk sel kosong secara berurutan dari memori."
+      },
+      {
+        "title": "Apa yang Diukur",
+        "content": "Keberhasilan bergantung pada kemampuan mengenkode posisi spasial dengan cepat, mempertahankannya setelah angka menghilang, dan mengambilnya kembali tanpa mengandalkan petunjuk visual yang tersisa. Jangkauan normal yang nyaman bagi orang dewasa biasanya berada di sekitar 5–7 item; jangkauan yang lebih besar membutuhkan chunking (pengelompokan) yang kuat."
+      },
+      {
+        "title": "Cara Kerja Permainan",
+        "content": "Sekumpulan sel bernomor akan muncul. Hafalkan lokasinya. Ketuk angka 1 untuk memulai proses mengingat—digit yang tersisa akan disembunyikan. Ketuk sel kosong secara berurutan 2, 3, 4… Sel yang salah akan mengurangi nyawa (tergantung pada tingkat kesulitan)."
+      },
+      {
+        "title": "Mode Kesulitan",
+        "content": "Mode yang lebih mudah menggunakan lebih sedikit angka, waktu menghilang yang lebih lambat, dan lebih banyak nyawa. Mode yang lebih sulit memperbesar grid, menyembunyikan angka lebih cepat, dan memberikan toleransi kesalahan yang lebih sedikit. Permainan tingkat profesional berkaitan dengan pengkodean di bawah tekanan waktu, bukan sekadar bermain santai."
+      },
+      {
+        "title": "Strategi yang Membantu",
+        "content": "Kelompokkan angka menjadi bentuk-bentuk tertentu (segitiga, huruf L, diagonal). Ucapkan jalur pendek dengan suara pelan. Jangan menatap hanya pada satu sel—indrai seluruh set satu kali, lalu kunci sebagai cerita spasial."
+      },
+      {
+        "title": "Arti Skor",
+        "content": "Jangkauan yang diselesaikan lebih tinggi (berapa banyak angka yang berhasil Anda bersihkan) adalah yang terbaik. Bandingkan diri Anda hanya pada tingkat kesulitan yang sama—ukuran grid mengubah tugas."
+      },
+      {
+        "title": "Mengapa Memori Kerja Spasial Itu Penting",
+        "content": "Memori kerja visuospatial mendukung navigasi, pembacaan diagram, dan melacak beberapa lokasi sekaligus. Saat angka-angka tersebut menghilang, Anda akan merasakan tekanan yang sama seperti yang dirasakan oleh atlet dan operator ketika sekilas pandang harus diubah menjadi rencana tindakan."
+      },
+      {
+        "title": "Latihan Tanpa Klaim Berlebihan",
+        "content": "Meningkatkan jangkauan chimp-test Anda menunjukkan bahwa Anda dapat mengenkode dan mengambil lebih banyak item spasial di bawah aturan yang persis sama. Itu adalah latihan yang berharga. Hal itu tidak serta-merta membuktikan kecerdasan umum yang lebih tinggi. Perlakukan skor tertinggi pribadi sebagai metrik keterampilan, bukan label."
+      },
+      {
+        "title": "Mode Kegagalan Umum",
+        "content": "Orang sering kali hanya mengenkode tiga angka pertama dengan cermat lalu menebak sisanya, atau mereka mengetuk angka 1 sebelum menyelesaikan pemindaian penuh. Jebakan lainnya adalah menatap bagian tengah dan mengabaikan sel-sel di tepi. Pemindaian yang disengaja dari tepi ke tengah biasanya menangkap lebih banyak angka dalam set tersebut."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Persiapan",
+        "steps": [
+          "Pilih tingkat kesulitan.",
+          "Klik Mulai / Inisialisasi.",
+          "Pindai semua sel bernomor sebelum mengetuk angka 1."
+        ]
+      },
+      {
+        "title": "Mengingat",
+        "steps": [
+          "Ketuk angka 1 untuk menyembunyikan angka yang tersisa.",
+          "Ketuk sel kosong secara menaik.",
+          "Pulihkan fokus dengan tenang setelah salah jika nyawa masih tersisa."
+        ]
+      },
+      {
+        "title": "Kebiasaan Sesi",
+        "steps": [
+          "Berhenti setelah 10–15 menit yang fokus.",
+          "Catat jangkauan terbaik Anda per tingkat kesulitan di Statistik."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Kelompokkan Menjadi Bentuk (Chunking)",
+        "content": "Perlakukan 4–5 posisi sebagai satu figur geometris alih-alih koordinat terisolasi."
+      },
+      {
+        "title": "Satu Kali Pengkodean yang Bersih",
+        "content": "Satu pemindaian yang disengaja jauh lebih baik daripada melihat kembali secara panik sementara waktu terus berjalan."
+      },
+      {
+        "title": "Perluas Jangkauan Secara Bertahap",
+        "content": "Tetaplah pada suatu tingkat kesulitan sampai Anda bisa menyelesaikannya secara konsisten, baru kemudian naikkan."
+      },
+      {
+        "title": "Lindungi Waktu Tidur dan Fokus",
+        "content": "Memori kerja akan menurun drastis saat Anda lelah atau melakukan banyak tugas sekaligus (multitasking)."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Berapa skor yang normal?",
+        "answer": "Banyak orang dewasa menyelesaikan sekitar 5–7 pada pengaturan sedang; skor yang lebih tinggi membutuhkan latihan dan teknik chunking."
+      },
+      {
+        "question": "Mengapa angka-angka menghilang?",
+        "answer": "Agar Anda tidak dapat mencarinya secara visual dan harus menggunakan memori kerja."
+      },
+      {
+        "question": "Apakah simpanse lebih baik dalam hal ini?",
+        "answer": "Dalam demo laboratorium yang terkenal, simpanse muda sering kali mengungguli manusia dalam tugas pengingatan spasial cepat yang serupa."
+      },
+      {
+        "question": "Berapa banyak nyawa yang saya miliki?",
+        "answer": "Mode yang lebih mudah biasanya memberikan lebih banyak toleransi kesalahan; Mode Sulit/Profesional sering kali hanya memberikan satu nyawa."
+      },
+      {
+        "question": "Apakah ukuran grid berpengaruh?",
+        "answer": "Ya—grid yang lebih besar meningkatkan jarak dan beban pada pemetaan spasial."
+      },
+      {
+        "question": "Bisakah saya meningkatkan kemampuan ini?",
+        "answer": "Ya. Strategi ditambah latihan harian singkat terbukti secara andal meningkatkan jangkauan bagi kebanyakan orang."
+      },
+      {
+        "question": "Apakah ini tes IQ?",
+        "answer": "Bukan. Ini menguji memori kerja visuospatial di bawah aturan permainan."
+      },
+      {
+        "question": "Haruskah saya bermain cepat atau akurat?",
+        "answer": "Pengkodean yang akurat adalah yang utama; terburu-buru justru menyebabkan rentetan kesalahan dini."
+      },
+      {
+        "question": "Apa itu chunking?",
+        "answer": "Mengelompokkan item sehingga Anda mengingat lebih sedikit unit tingkat tinggi."
+      },
+      {
+        "question": "Kapan saya harus mengakhiri sesi?",
+        "answer": "Saat kesalahan meningkat akibat kelelahan—kualitas jauh lebih baik daripada sekadar memaksakan diri."
+      }
+    ]
+  },
+  "speed-math": {
+    "description": [
+      {
+        "title": "Tentang Speed Math",
+        "content": "Speed Math adalah alat pelatihan kognitif canggih yang dirancang untuk menantang dan meningkatkan kemampuan aritmatika mental, kecepatan perhitungan, dan pemrosesan numerik Anda. Permainan yang menarik ini menguji kemampuan Anda untuk memecahkan masalah matematika dengan cepat dan akurat, melatih otak Anda untuk memproses angka lebih cepat dan melakukan perhitungan secara mental tanpa mengandalkan kalkulator atau pekerjaan tertulis."
+      },
+      {
+        "title": "Memahami Aritmatika Mental",
+        "content": "Aritmatika mental adalah kemampuan untuk melakukan perhitungan matematika di kepala Anda tanpa menggunakan alat bantu eksternal. Saat Anda berlatih Speed Math, Anda melatih berbagai sistem kognitif termasuk memori kerja untuk mengingat angka, pemrosesan numerik untuk memanipulasi nilai, dan fungsi eksekutif untuk strategi pemecahan masalah. Pelatihan komprehensif ini meningkatkan kecepatan dan keakuratan perhitungan."
+      },
+      {
+        "title": "Ilmu di Balik Speed Math",
+        "content": "Penelitian menunjukkan bahwa latihan rutin dengan aritmatika mental memperkuat jalur saraf di lobus parietalis (yang bertanggung jawab atas pemrosesan numerik) dan korteks prefrontal (yang terlibat dalam memori kerja dan pemecahan masalah). Latihan yang konsisten meningkatkan kepekaan angka, memperluas kapasitas memori kerja, dan mengembangkan strategi perhitungan yang efisien. Kemampuan otak untuk memproses dan memanipulasi angka meningkat secara signifikan dengan pelatihan rutin."
+      },
+      {
+        "title": "Mengapa Speed Math Penting",
+        "content": "Di dunia yang didorong oleh data ini, aritmatika mental yang cepat sangat berharga untuk kehidupan sehari-hari, kesuksesan akademis, dan kinerja profesional. Mulai dari menghitung tip dan diskon hingga menyelesaikan masalah dengan cepat dan membuat keputusan secara kilat, keterampilan matematika cepat memainkan peran penting dalam efisiensi dan kepercayaan diri. Pelajar, profesional, dan siapa saja yang berurusan dengan angka akan mendapat manfaat dari peningkatan kemampuan perhitungan mental."
+      },
+      {
+        "title": "Manfaat bagi Pelajar",
+        "content": "Pelajar dapat meningkatkan prestasi akademik mereka secara drastis dengan mengasah keterampilan matematika cepat. Baik saat menyelesaikan soal aljabar, menghitung statistik, atau mengerjakan persamaan fisika, aritmatika mental yang lebih cepat memungkinkan pemecahan masalah yang lebih cepat dan hasil ujian yang lebih baik. Keterampilan ini ditransfer langsung ke mata pelajaran matematika, sains, dan mata pelajaran kuantitatif lainnya."
+      },
+      {
+        "title": "Manfaat bagi Profesional",
+        "content": "Profesional di berbagai industri mendapat manfaat dari peningkatan kecepatan matematika. Akuntan menghitung angka dengan lebih cepat, insinyur memperkirakan nilai dengan lebih efisien, dan profesional bisnis membuat perhitungan keuangan secara cepat. Keuntungan kognitif yang diperoleh dari latihan Speed Math diterjemahkan langsung ke dalam produktivitas kerja dan kompetensi profesional."
+      },
+      {
+        "title": "Cara Kerja Speed Math",
+        "content": "Permainan ini menyajikan masalah matematika yang harus Anda pecahkan secepat mungkin. Masalah dapat berupa penambahan, pengurangan, perkalian, pembagian, atau kombinasi operasi. Tugas Anda adalah menghitung jawabannya secara mental dan memasukkannya dalam batas waktu. Tingkat kesulitan akan meningkat seiring kemajuan Anda, memastikan tantangan dan pengembangan keterampilan yang berkelanjutan."
+      },
+      {
+        "title": "Jenis Soal",
+        "content": "Speed Math mencakup berbagai jenis soal mulai dari aritmatika dasar hingga perhitungan yang lebih kompleks. Soal dapat melibatkan operasi tunggal atau beberapa langkah, yang mengharuskan Anda menerapkan strategi perhitungan yang berbeda. Ragam ini memastikan pelatihan yang komprehensif di berbagai keterampilan matematika."
+      },
+      {
+        "title": "Aplikasi di Dunia Nyata",
+        "content": "Keterampilan yang dikembangkan melalui latihan Speed Math melampaui permainan itu sendiri. Peningkatan aritmatika mental meningkatkan kemampuan Anda untuk menghitung tip, memperkirakan biaya, menyelesaikan masalah dengan cepat, mengambil keputusan cepat, dan bekerja dengan angka secara percaya diri. Penerapan praktis ini membuat pelatihan matematika cepat menjadi berharga bagi semua orang, terlepas dari usia atau profesi."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Memulai",
+        "steps": [
+          "Pilih Speed Math dari bagian alat kecepatan",
+          "Temukan lingkungan yang tenang dan bebas dari gangguan",
+          "Biasakan diri Anda dengan tombol angka/metode input",
+          "Kosongkan pikiran Anda untuk melakukan perhitungan mental"
+        ]
+      },
+      {
+        "title": "Memulai Permainan",
+        "steps": [
+          "Klik 'Start Game' untuk memulai",
+          "Baca soal yang ditampilkan dengan cermat",
+          "Hitung jawabannya secara mental",
+          "Masukkan jawaban Anda dengan cepat menggunakan keyboard"
+        ]
+      },
+      {
+        "title": "Strategi Perhitungan",
+        "steps": [
+          "Pecah masalah yang rumit menjadi langkah-langkah yang lebih sederhana",
+          "Gunakan sifat-sifat angka (pembulatan, pengelompokan)",
+          "Kembangkan strategi terpisah untuk operasi yang berbeda",
+          "Fokus pada keakuratan terlebih dahulu, kecepatan menyusul"
+        ]
+      },
+      {
+        "title": "Rutinitas Latihan",
+        "steps": [
+          "Berlatihlah selama 15-20 menit setiap hari",
+          "Mulailah dengan soal yang lebih mudah untuk membangun kepercayaan diri",
+          "Secara bertahap atasi operasi yang lebih kompleks",
+          "Lacak skor Anda untuk memantau perkembangan"
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Kembangkan Kepekaan Angka",
+        "content": "Perkuat pemahaman Anda tentang hubungan dan sifat angka. Mengenali pola dan jalan pintas (seperti pelengkap 10 atau 100) memungkinkan perhitungan mental yang jauh lebih cepat."
+      },
+      {
+        "title": "Pelajari Strategi Mental",
+        "content": "Kuasai teknik matematika mental tertentu seperti memecah angka, kompensasi (pembulatan lalu penyesuaian), dan bekerja dari kiri ke kanan. Miliki seperangkat strategi untuk berbagai jenis soal."
+      },
+      {
+        "title": "Targetkan Jenis Soal",
+        "content": "Identifikasi operasi yang memperlambat Anda (misalnya, pembagian atau persentase) dan latih secara khusus. Latihan yang ditargetkan pada area yang lemah menghasilkan peningkatan keseluruhan yang tercepat."
+      },
+      {
+        "title": "Seimbangkan Kecepatan dan Keakuratan",
+        "content": "Prioritaskan keakuratan di awal. Terburu-buru akan menyebabkan kesalahan dan memperkuat kebiasaan buruk. Seiring jalur mental Anda menjadi lebih efisien, kecepatan akan meningkat secara alami tanpa mengorbankan keakuratan."
+      },
+      {
+        "title": "Latihan Konsisten",
+        "content": "Berlatihlah setiap hari dalam sesi singkat (15-20 menit). Frekuensi lebih penting daripada durasi untuk membangun dan memelihara jalur saraf yang diperlukan untuk aritmatika mental cepat."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Berapa skor speed math yang bagus?",
+        "answer": "Skor yang bagus bervariasi berdasarkan tingkat kesulitan soal dan batasan waktu. Fokuslah untuk mempertahankan keakuratan yang tinggi (di atas 90%) sekaligus meningkatkan kecepatan. Pemain yang luar biasa menyelesaikan soal dengan cepat dengan tingkat keakuratan 95%+. Lacak peningkatan pribadi Anda alih-alih membandingkannya dengan orang lain."
+      },
+      {
+        "question": "Seberapa sering saya harus berlatih Speed Math?",
+        "answer": "Untuk hasil yang optimal, berlatihlah 15-20 menit setiap hari. Konsistensi lebih berharga daripada satu sesi yang panjang. Latihan harian yang rutin menciptakan jalur perhitungan yang lebih kuat daripada latihan intensif yang jarang."
+      },
+      {
+        "question": "Haruskah saya menggunakan strategi mental atau menghafal jawaban?",
+        "answer": "Fokuslah mengembangkan strategi perhitungan mental alih-alih menghafal jawaban tertentu. Strategi dapat diterapkan pada soal-soal baru, sementara penghafalan hanya membantu pada soal-soal tertentu. Memahami hubungan antar angka memungkinkan pemecahan masalah yang lebih cepat."
+      },
+      {
+        "question": "Bisakah Speed Math meningkatkan performa tes matematika saya?",
+        "answer": "Ya, peningkatan aritmatika mental akan menunjang performa ujian dengan memungkinkan pemecahan masalah yang lebih cepat, manajemen waktu yang lebih baik, dan peningkatan kepercayaan diri. Keterampilan ini langsung ditransfer ke ujian matematika dan penilaian kuantitatif."
+      },
+      {
+        "question": "Mengapa saya membuat kesalahan perhitungan?",
+        "answer": "Kesalahan dapat terjadi karena terburu-buru, strategi yang buruk, kelebihan beban memori kerja, atau kurang latihan. Perlambat tempo, fokus pada keakuratan, kembangkan strategi yang efisien, dan berlatihlah secara teratur untuk mengurangi kesalahan."
+      },
+      {
+        "question": "Apakah anak-anak dapat mengambil manfaat dari pelatihan Speed Math?",
+        "answer": "Tentu saja. Speed Math sangat bagus untuk perkembangan matematika anak-anak. Permainan ini meningkatkan kepekaan angka, kelancaran perhitungan, dan membangun kepercayaan diri dalam matematika. Mulailah dengan tingkat kesulitan yang sesuai usia."
+      },
+      {
+        "question": "Apakah Speed Math membantu dalam perhitungan sehari-hari?",
+        "answer": "Ya, peningkatan aritmatika mental memperkaya kehidupan sehari-hari dengan memungkinkan perhitungan tip yang lebih cepat, estimasi biaya kilat, perhitungan diskon cepat, dan pekerjaan angka yang penuh percaya diri. Keterampilan ini langsung diterapkan pada aktivitas sehari-hari yang memerlukan pemikiran matematis."
+      },
+      {
+        "question": "Apa yang harus saya lakukan jika saya terjebak pada jenis soal tertentu?",
+        "answer": "Jika jenis soal tertentu menantang Anda, latih soal tersebut secara khusus. Pelajari strategi untuk jenis soal tersebut, mulailah dengan versi yang lebih mudah, dan tingkatkan kesulitan secara bertahap. Jangan menghindari soal yang sulit; berlatihlah lebih sering."
+      },
+      {
+        "question": "Bisakah Speed Math membantu dalam pekerjaan profesional?",
+        "answer": "Ya, peningkatan aritmatika mental meningkatkan kinerja profesional di bidang yang memerlukan pekerjaan numerik. Akuntan, insinyur, analis, dan profesional bisnis mendapat manfaat dari perhitungan yang lebih cepat dan kepekaan angka yang lebih baik."
+      },
+      {
+        "question": "Apakah lebih baik berlatih pada waktu yang sama setiap hari?",
+        "answer": "Meskipun konsistensi itu berharga, berlatih saat Anda waspada dan fokus mungkin lebih penting. Beberapa orang tampil lebih baik di pagi hari saat masih segar, sementara yang lain mencapai puncaknya di sore hari. Bereksperimenlah untuk menemukan waktu latihan yang optimal."
+      },
+      {
+        "question": "Berapa lama waktu yang dibutuhkan untuk melihat kemajuan?",
+        "answer": "Kebanyakan orang melihat kemajuan dalam waktu 1-2 minggu dari latihan yang konsisten. Peningkatan yang signifikan biasanya terjadi selama 4-8 minggu. Peningkatan jangka panjang berlanjut selama berbulan-bulan dengan latihan teratur. Lacak skor Anda untuk memvisualisasikan progres."
+      },
+      {
+        "question": "Haruskah saya fokus pada kecepatan atau keakuratan?",
+        "answer": "Awalnya, prioritaskan keakuratan daripada kecepatan. Keakuratan tinggi dengan kecepatan sedang lebih baik daripada kecepatan tinggi dengan banyak kesalahan. Seiring peningkatan keakuratan (di atas 90%), tingkatkan kecepatan secara bertahap sambil tetap mempertahankan standar keakuratan."
+      }
+    ]
+  },
+  "word-accuracy": {
+    "description": "\n            <h2>Tentang Tes Akurasi Kata</h2>\n            <p>Tes Akurasi Kata adalah alat pelatihan komprehensif yang dirancang untuk menantang dan meningkatkan akurasi ejaan, kemampuan pengenalan kata, dan kemahiran berbahasa Anda. Tes menarik ini mengukur kemampuan Anda untuk mengidentifikasi kata-kata yang dieja dengan benar dan mengenali kesalahan ejaan, serta melatih otak Anda untuk memproses bahasa tertulis dengan lebih akurat dan mengembangkan keterampilan ejaan yang lebih kuat.</p>\n            \n            <h2>Memahami Akurasi Kata</h2>\n            <p>Akurasi kata melibatkan kemampuan untuk mengenali ejaan yang benar, mengidentifikasi kesalahan, dan memahami pola kata. Saat Anda berlatih Tes Akurasi Kata, Anda sedang melatih berbagai sistem kognitif termasuk pengenalan kata secara visual, pemrosesan ortografis (pola ejaan), dan pengetahuan bahasa. Pelatihan komprehensif ini meningkatkan akurasi ejaan sekaligus kemahiran berbahasa secara keseluruhan.</p>\n            \n            <h3>Ilmu di Balik Akurasi Kata</h3>\n            <p>Penelitian menunjukkan bahwa akurasi ejaan melibatkan jalur saraf kompleks yang menghubungkan pemrosesan visual, pusat bahasa, dan sistem memori. Latihan teratur dengan pengenalan kata memperkuat jalur-jalur ini, meningkatkan kesadaran ortografis, dan memperkaya kosakata. Kemampuan otak untuk mengenali pola ejaan dan mendeteksi kesalahan meningkat secara signifikan dengan latihan yang konsisten.</p>\n            \n            <h3>Mengapa Akurasi Kata Itu Penting</h3>\n            <p>Di dunia yang kaya akan komunikasi ini, ejaan yang akurat sangat penting untuk komunikasi tertulis yang efektif, kesuksesan akademik, dan kredibilitas profesional. Dari menulis email dan dokumen hingga makalah akademik dan komunikasi profesional, akurasi ejaan memainkan peran penting dalam kejelasan dan profesionalisme. Pelajar, profesional, dan siapa pun yang menulis akan mendapatkan manfaat dari peningkatan keterampilan ejaan.</p>\n            \n            <h4>Manfaat bagi Pelajar</h4>\n            <p>Pelajar dapat meningkatkan performa akademik mereka secara drastis dengan meningkatkan akurasi kata. Baik menulis esai, mengikuti tes ejaan, atau menyelesaikan tugas, ejaan yang akurat memungkinkan komunikasi yang lebih jelas dan nilai yang lebih baik. Keterampilan ini ditransfer langsung ke seni bahasa, bahasa Inggris, dan semua tugas tertulis.</p>\n            \n            <h4>Manfaat bagi Profesional</h4>\n            <p>Para profesional mendapatkan manfaat yang signifikan dari peningkatan akurasi kata. Ejaan yang akurat dalam email, laporan, dan dokumen meningkatkan kredibilitas dan profesionalisme. Penulis, editor, dan siapa pun yang menghasilkan konten tertulis sangat bergantung pada keterampilan ejaan yang kuat untuk komunikasi yang efektif.</p>\n            \n            <h2>Cara Kerja Tes Akurasi Kata</h2>\n            <p>Tes ini menyajikan kata-kata yang mungkin dieja dengan benar atau salah. Tugas Anda adalah mengidentifikasi kata mana yang dieja dengan benar dan mana yang mengandung kesalahan. Tes dapat menyajikan kata-kata secara individual atau dalam kelompok, yang mengharuskan Anda mengenali pola ejaan dan mendeteksi kesalahan. Persentase akurasi Anda dihitung berdasarkan identifikasi yang benar.</p>\n            \n            <h3>Pola Ejaan</h3>\n            <p>Tes Akurasi Kata mencakup berbagai jenis kata dan pola ejaan. Kata-kata umum, kata-kata sulit, homofon, dan kata-kata dengan ejaan yang menjebak akan menguji pengetahuan ejaan Anda. Variasi ini memastikan pelatihan yang komprehensif di berbagai keterampilan ejaan.</p>\n            \n            <h2>Aplikasi di Dunia Nyata</h2>\n            <p>Keterampilan yang dikembangkan melalui latihan Tes Akurasi Kata meluas jauh melampaui tes itu sendiri. Peningkatan akurasi ejaan meningkatkan kemampuan Anda untuk menulis dengan jelas, berkomunikasi secara efektif, dan menampilkan diri secara profesional. Penerapan praktis inilah yang membuat pelatihan akurasi kata berharga bagi semua orang.</p>\n        ",
+    "howToUse": [
+      {
+        "title": "Memulai",
+        "steps": [
+          "Pilih Tes Akurasi Kata dari bagian alat akurasi",
+          "Pilih lingkungan yang tenang untuk fokus",
+          "Bersiaplah untuk membaca kata-kata dengan cermat",
+          "Pahami bahwa tes ini berkaitan dengan ejaan yang benar"
+        ]
+      },
+      {
+        "title": "Mengikuti Tes",
+        "steps": [
+          "Klik 'Mulai Tes' untuk memulai",
+          "Baca setiap kata atau kelompok kata yang ditampilkan",
+          "Identifikasi apakah ejaannya benar atau salah",
+          "Pilih jawaban Anda sebelum kata berikutnya muncul"
+        ]
+      },
+      {
+        "title": "Strategi Evaluasi",
+        "steps": [
+          "Pindai kesalahan umum (transposisi huruf, huruf yang hilang)",
+          "Ingat kembali aturan dan pola ejaan",
+          "Lihat kata secara keseluruhan, lalu periksa detailnya",
+          "Utamakan akurasi daripada kecepatan"
+        ]
+      },
+      {
+        "title": "Rutinitas Latihan",
+        "steps": [
+          "Berlatihlah selama 15-20 menit setiap hari",
+          "Tinjau kata-kata yang salah Anda eja",
+          "Lacak persentase akurasi Anda",
+          "Tingkatkan kecepatan secara bertahap hanya ketika akurasi Anda sudah tinggi"
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Pelajari Pola Ejaan",
+        "content": "Pelajari aturan ejaan umum, awalan, dan akhiran. Memahami pola seperti 'i sebelum e' (dan pengecualiannya) membantu Anda mengenali kesalahan dengan cepat."
+      },
+      {
+        "title": "Bangun Kosakata",
+        "content": "Baca secara luas untuk menemukan lebih banyak kata dalam konteksnya. Keakraban visual dengan ejaan yang benar adalah salah satu alat terkuat untuk mendeteksi kesalahan."
+      },
+      {
+        "title": "Analisis Kesalahan",
+        "content": "Simpan daftar kata-kata yang sering salah Anda eja. Berlatihlah menulisnya dengan benar untuk menimpa pola mental yang salah."
+      },
+      {
+        "title": "Pengenalan Kata Visual",
+        "content": "Latih otak Anda untuk mengenali bentuk kata. Verifikasi apakah suatu kata 'tampak benar' secara visual, lalu periksa kembali huruf-hurufnya jika Anda ragu."
+      },
+      {
+        "title": "Latihan Konsisten",
+        "content": "Dedikasikan waktu setiap hari untuk permainan ejaan atau membaca. Konsistensi memperkuat pola bahasa dan meningkatkan retensi jangka panjang."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Berapa persentase akurasi yang baik?",
+        "answer": "Persentase akurasi yang baik berkisar antara 85-90%. Akurasi yang sangat baik adalah 90-95%, dan akurasi luar biasa melebihi 95%. Fokuslah pada peningkatan rekor pribadi Anda alih-alih membandingkannya dengan orang lain. Lacak akurasi Anda dari waktu ke waktu untuk mengukur kemajuan."
+      },
+      {
+        "question": "Seberapa sering saya harus berlatih Tes Akurasi Kata?",
+        "answer": "Untuk hasil optimal, berlatihlah 15-20 menit setiap hari. Konsistensi lebih berharga daripada sesi tunggal yang diperpanjang. Latihan harian yang rutin menciptakan pengetahuan ejaan yang lebih kuat daripada latihan intensif yang sporadis."
+      },
+      {
+        "question": "Bisakah Tes Akurasi Kata meningkatkan tulisan saya?",
+        "answer": "Ya, peningkatan akurasi ejaan menyempurnakan tulisan dengan memungkinkan komunikasi yang lebih jelas, keterbacaan yang lebih baik, and peningkatan profesionalisme. Ejaan yang akurat sangat penting untuk komunikasi tertulis yang efektif."
+      },
+      {
+        "question": "Mengapa saya melewatkan beberapa kesalahan ejaan?",
+        "answer": "Kesalahan yang terlewat dapat terjadi karena terburu-buru, kurangnya pengetahuan ejaan, kata-kata yang tidak dikenal, atau kemiripan visual dengan ejaan yang benar. Perlambat tempo, pereluas kosakata, dan berlatihlah secara teratur untuk meningkatkan deteksi kesalahan."
+      },
+      {
+        "question": "Bisakah anak-anak mendapat manfaat dari pelatihan Tes Akurasi Kata?",
+        "answer": "Tentu saja. Tes Akurasi Kata sangat bagus untuk perkembangan bahasa anak-anak. Ini meningkatkan keterampilan ejaan, memperkaya kosakata, dan membangun kepercayaan diri dalam komunikasi tertulis. Mulailah dengan tingkat kesulitan yang sesuai dengan usia."
+      },
+      {
+        "question": "Apakah membaca membantu akurasi kata?",
+        "answer": "Ya, membaca secara teratur secara signifikan meningkatkan akurasi ejaan dengan membiasakan Anda pada kata-kata yang dieja dengan benar. Memori visual dari bentuk dan pola kata membantu pengenalan ejaan. Praktik membaca dan mengeja saling melengkapi."
+      },
+      {
+        "question": "Apa yang harus saya lakukan jika saya terus-menerus melewatkan jenis kata tertentu?",
+        "answer": "Jika jenis kata tertentu menjadi tantangan bagi Anda, latihlah secara khusus. Pelajari aturan ejaan untuk jenis kata tersebut, pelajari pola umum, dan berlatihlah mengenali ejaan yang benar. Latihan yang ditargetkan meningkatkan kinerja di area tertentu."
+      },
+      {
+        "question": "Bisakah Tes Akurasi Kata membantu dalam penulisan profesional?",
+        "answer": "Ya, peningkatan akurasi ejaan menyempurnakan penulisan profesional dengan memungkinkan komunikasi yang lebih jelas, kredibilitas yang lebih baik, dan peningkatan profesionalisme. Ejaan yang akurat sangat penting untuk dokumen dan komunikasi profesional."
+      },
+      {
+        "question": "Apakah lebih baik berlatih pada waktu yang sama setiap hari?",
+        "answer": "Meskipun konsistensi itu berharga, berlatih saat Anda waspada dan fokus mungkin lebih penting. Beberapa orang tampil lebih baik di pagi hari saat masih segar, sementara yang lain mencapai puncaknya di sore hari. Bereksperimenlah untuk menemukan waktu latihan yang optimal bagi Anda."
+      },
+      {
+        "question": "Berapa lama waktu yang dibutuhkan untuk melihat kemajuan?",
+        "answer": "Kebanyakan orang melihat peningkatan dalam waktu 1-2 minggu setelah latihan yang konsisten. Peningkatan yang signifikan biasanya terjadi dalam waktu 4-8 minggu. Peningkatan jangka panjang berlanjut selama berbulan-bulan dengan latihan teratur. Lacak persentase akurasi Anda untuk memvisualisasikan kemajuan."
+      },
+      {
+        "question": "Haruskah saya fokus pada kecepatan atau akurasi?",
+        "answer": "Awalnya, utamakan akurasi daripada kecepatan. Akurasi tinggi dengan kecepatan sedang lebih baik daripada kecepatan tinggi dengan banyak kesalahan. Seiring meningkatnya akurasi (di atas 90%), Anda dapat secara bertahap meningkatkan kecepatan sambil tetap mempertahankan standar akurasi."
+      },
+      {
+        "question": "Bisakah Tes Akurasi Kata membantu dalam tes terstandarisasi?",
+        "answer": "Ya, peningkatan akurasi ejaan meningkatkan kinerja pada tes terstandarisasi yang mencakup bagian ejaan atau bahasa. Keterampilan tersebut ditransfer secara langsung ke penilaian seni bahasa dan evaluasi penulisan."
+      }
+    ]
+  },
+  "grid-selection": {
+    "description": "\n            <h2>Tentang Pemilihan Grid (Grid Selection)</h2>\n            <p>Pemilihan Grid adalah alat pelatihan kognitif tingkat lanjut yang dirancang untuk menantang dan meningkatkan kemampuan Anda dalam mengidentifikasi dan memilih pola atau target tertentu secara cepat dalam tata letak grid. Permainan yang menarik ini menguji kecepatan pemrosesan visual, kemampuan pengenalan pola, dan keterampilan pengambilan keputusan cepat, serta melatih otak Anda untuk memproses informasi spasial dengan cepat dan melakukan pemilihan secara akurat.</p>\n            \n            <h2>Memahami Pemilihan Grid</h2>\n            <p>Pemilihan Grid beroperasi berdasarkan prinsip dasar pencarian visual cepat dan pelatihan pengenalan pola. Saat Anda memainkan Pemilihan Grid, Anda sedang melatih berbagai sistem kognitif termasuk pemrosesan visual untuk mengidentifikasi target, kesadaran spasial untuk memahami tata letak grid, dan fungsi eksekutif untuk membuat keputusan dengan cepat. Pelatihan komprehensif ini meningkatkan kecepatan dan keakuratan pemilihan.</p>\n            \n            <h3>Ilmu di Balik Pemilihan Grid</h3>\n            <p>Penelitian menunjukkan bahwa latihan rutin dengan tugas pencarian visual memperkuat jalur saraf di lobus oksipital (pemrosesan visual) dan lobus parietal (kesadaran spasial). Latihan yang konsisten meningkatkan kecepatan pemrosesan visual, memperkuat pengenalan pola, dan mengembangkan strategi pencarian yang efisien. Kemampuan otak untuk menemukan dan memilih target dengan cepat meningkat secara signifikan seiring dengan pelatihan.</p>\n            \n            <h3>Mengapa Pemilihan Grid Itu Penting</h3>\n            <p>Di dunia kita yang secara visual sangat kompleks, pengenalan pola yang cepat dan pengambilan keputusan spasial adalah keterampilan yang berharga. Mulai dari menavigasi antarmuka dan memilih item hingga mengidentifikasi target dalam visualisasi data dan membuat pilihan spasial yang cepat, keterampilan pemilihan grid memainkan peran penting dalam efisiensi dan performa. Profesional di bidang seperti analisis data, desain, dan gaming akan mendapatkan keuntungan dari peningkatan kemampuan pencarian visual.</p>\n            \n            <h4>Manfaat untuk Analisis Data</h4>\n            <p>Analis data dapat meningkatkan efisiensi mereka dengan mengasah keterampilan pemilihan grid. Pengenalan pola yang lebih cepat memungkinkan identifikasi data yang lebih cepat, navigasi spreadsheet yang lebih efisien, and analisis data visual yang lebih baik. Keterampilan ini ditransfer secara langsung ke pekerjaan data profesional.</p>\n            \n            <h4>Manfaat untuk Gaming</h4>\n            <p>Gamer mendapatkan manfaat yang signifikan dari peningkatan pemilihan grid. Identifikasi dan pemilihan target yang lebih cepat memungkinkan performa yang lebih baik dalam game strategi, game teka-teki, dan game apa pun yang memerlukan keputusan visual cepat. Keterampilan yang dikembangkan melalui latihan Pemilihan Grid secara langsung diterjemahkan ke dalam performa gaming.</p>\n            \n            <h2>Cara Kerja Pemilihan Grid</h2>\n            <p>Permainan ini menyajikan grid yang berisi berbagai elemen, dengan target spesifik yang harus Anda identifikasi dan pilih. Tugas Anda adalah dengan cepat menemukan dan mengklik target yang benar di dalam grid. Target dapat ditentukan berdasarkan warna, bentuk, pola, atau karakteristik visual lainnya. Tantangan akan semakin meningkat dengan grid yang lebih besar, lebih banyak pengecoh, dan batasan waktu yang lebih cepat.</p>\n            \n            <h3>Pelatihan Pencarian Visual</h3>\n            <p>Pemilihan Grid melatih kemampuan Anda untuk mencari ruang visual secara efisien dan mengidentifikasi target di antara para pengecoh. Keterampilan pencarian visual ini sangat krusial untuk berbagai aktivitas yang memerlukan pengenalan pola cepat dan pengambilan keputusan spasial.</p>\n            \n            <h2>Aplikasi di Dunia Nyata</h2>\n            <p>Keterampilan yang dikembangkan melalui latihan Pemilihan Grid meluas jauh melampaui permainan itu sendiri. Peningkatan pencarian visual dan pengenalan pola meningkatkan kemampuan Anda untuk menavigasi antarmuka secara efisien, menganalisis data visual dengan cepat, dan membuat keputusan spasial yang cepat. Aplikasi praktis ini menjadikan latihan pemilihan grid sangat berharga bagi semua orang.</p>\n        ",
+    "howToUse": [
+      {
+        "title": "Memulai",
+        "steps": [
+          "Pilih Pemilihan Grid dari alat kecepatan",
+          "Pahami karakteristik target (warna, bentuk)",
+          "Pastikan pencahayaan dan visibilitas layar baik",
+          "Hilangkan gangguan untuk fokus yang lebih baik"
+        ]
+      },
+      {
+        "title": "Melakukan Tes",
+        "steps": [
+          "Klik 'Mulai Game' untuk menampilkan grid",
+          "Pindai grid untuk mencari target yang ditentukan",
+          "Klik target yang benar secepat mungkin",
+          "Hindari mengklik item yang salah (pengecoh)"
+        ]
+      },
+      {
+        "title": "Strategi Pencarian",
+        "steps": [
+          "Gunakan pola yang sistematis (misalnya, dari kiri ke kanan, atas ke bawah)",
+          "Hindari pemindaian acak yang menyebabkan target terlewat",
+          "Identifikasi fitur target dengan cepat",
+          "Pertahankan ritme yang stabil"
+        ]
+      },
+      {
+        "title": "Rutinitas Latihan",
+        "steps": [
+          "Latih selama 10-15 menit setiap hari",
+          "Lacak kecepatan dan keakuratan Anda",
+          "Tantang diri Anda dengan grid yang lebih besar seiring peningkatan kemampuan",
+          "Fokuslah untuk menemukan semua target"
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Pencarian Sistematis",
+        "content": "Gunakan pola pemindaian yang konsisten (misalnya, urutan membaca). Ini memastikan Anda mencakup 100% grid tanpa harus mundur, sehingga menghemat banyak waktu."
+      },
+      {
+        "title": "Gunakan Penglihatan Perifer",
+        "content": "Latih diri Anda untuk melihat target di area penglihatan perifer (samping) saat fokus pada area tertentu. Ini memperluas jangkauan pencarian efektif Anda."
+      },
+      {
+        "title": "Kurangi Hambatan Mental",
+        "content": "Hafalkan bentuk target secara persis dan seketika. Keraguan dalam mengingat fitur target akan memperlambat pencarian Anda secara signifikan."
+      },
+      {
+        "title": "Tingkatkan Fokus",
+        "content": "Pencarian visual berintensitas tinggi membutuhkan konsentrasi tingkat tinggi. Berlatihlah dalam durasi pendek untuk mempertahankan tingkat fokus yang tinggi tanpa kelelahan."
+      },
+      {
+        "title": "Tingkat Kesulitan Progresif",
+        "content": "Mulailah dengan grid yang lebih kecil/lebih sedikit pengecoh. Setelah Anda menguasai suatu level dengan akurasi tinggi, beralihlah ke grid yang lebih kompleks untuk terus menantang otak Anda."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Berapa skor yang bagus dalam Pemilihan Grid?",
+        "answer": "Skor yang bagus bervariasi berdasarkan kompleksitas grid, jumlah target, dan batasan waktu. Fokuslah untuk mempertahankan akurasi tinggi (di atas 90%) sembari meningkatkan kecepatan. Pemain yang luar biasa mencapai akurasi tinggi bahkan dengan grid yang kompleks dan batas waktu yang ketat."
+      },
+      {
+        "question": "Seberapa sering saya harus berlatih Pemilihan Grid?",
+        "answer": "Untuk hasil optimal, berlatihlah 10-15 menit setiap hari. Konsistensi lebih berharga daripada sesi tunggal yang terlalu lama. Latihan harian yang rutin menciptakan jalur pencarian visual yang lebih kuat daripada latihan intensif yang sporadis."
+      },
+      {
+        "question": "Bisakah Pemilihan Grid meningkatkan keterampilan analisis data saya?",
+        "answer": "Ya, peningkatan pencarian visual dan pengenalan pola akan mempertajam analisis data dengan memungkinkan identifikasi data yang lebih cepat, navigasi spreadsheet yang lebih efisien, dan analisis data visual yang lebih baik. Keterampilan ini dapat langsung diterapkan pada pekerjaan data profesional."
+      },
+      {
+        "question": "Mengapa saya melewatkan beberapa target?",
+        "answer": "Target yang terlewat dapat terjadi karena terburu-buru, pola pencarian yang buruk, gangguan, atau kelebihan beban visual. Perlambat tempo, kembangkan pola pencarian yang sistematis, hilangkan gangguan, dan berlatihlah secara rutin untuk meningkatkan deteksi target."
+      },
+      {
+        "question": "Haruskah saya menggunakan pola pencarian tertentu?",
+        "answer": "Pola pencarian sistematis (baris per baris, kolom per kolom) umumnya lebih efisien daripada pencarian acak. Namun, temukan pola yang paling cocok untuk Anda. Konsistensi dalam pola pencarian akan meningkatkan efisiensi dan mengurangi target yang terlewat."
+      },
+      {
+        "question": "Bisakah anak-anak mendapatkan manfaat dari latihan Pemilihan Grid?",
+        "answer": "Tentu saja. Pemilihan Grid sangat bagus untuk perkembangan kognitif anak-anak. Ini meningkatkan pemrosesan visual, pengenalan pola, and pengambilan keputusan—keterampilan yang krusial untuk akademis dan aktivitas sehari-hari."
+      },
+      {
+        "question": "Apakah ukuran layar memengaruhi performa?",
+        "answer": "Ukuran layar dapat memengaruhi visibilitas dan efisiensi pencarian. Layar yang lebih besar mungkin memberikan tes penglihatan perifer yang lebih realistis, tetapi tes ini dirancang untuk berfungsi di berbagai ukuran layar. Pastikan visibilitas layar yang baik dan jarak pandang yang sesuai."
+      },
+      {
+        "question": "Apa yang harus saya lakukan jika akurasi saya tidak kunjung meningkat?",
+        "answer": "Jika progres terhenti, perlambat tempo dan fokuslah pada akurasi alih-alih kecepatan. Pastikan Anda menggunakan pola pencarian yang sistematis, menghilangkan gangguan, and berlatih secara teratur. Terkadang istirahat sejenak memungkinkan sistem visual Anda untuk mengonsolidasikan pembelajaran."
+      },
+      {
+        "question": "Bisakah Pemilihan Grid membantu pekerjaan profesional?",
+        "answer": "Ya, peningkatan pencarian visual dan pengenalan pola meningkatkan performa profesional di bidang yang memerlukan analisis data visual, navigasi antarmuka, dan keputusan spasial yang cepat. Keterampilan ini ditransfer secara langsung ke produktivitas tempat kerja."
+      },
+      {
+        "question": "Apakah lebih baik berlatih pada waktu yang sama setiap hari?",
+        "answer": "Meskipun konsistensi itu berharga, berlatih saat Anda merasa waspada dan fokus mungkin lebih penting. Beberapa orang tampil lebih baik di pagi hari saat masih segar, sementara yang lain mencapai puncaknya di sore hari. Bereksperimenlah untuk menemukan waktu latihan yang optimal."
+      },
+      {
+        "question": "Berapa lama waktu yang dibutuhkan untuk melihat peningkatan?",
+        "answer": "Kebanyakan orang melihat peningkatan dalam waktu 1-2 minggu setelah latihan yang konsisten. Peningkatan yang signifikan biasanya terjadi dalam 4-8 minggu. Peningkatan jangka panjang berlanjut selama berbulan-bulan dengan latihan teratur. Lacak skor Anda untuk memvisualisasikan progres."
+      },
+      {
+        "question": "Haruskah saya fokus pada kecepatan atau akurasi?",
+        "answer": "Awalnya, prioritaskan akurasi di atas kecepatan. Akurasi tinggi dengan kecepatan sedang jauh lebih baik daripada kecepatan tinggi dengan banyak kesalahan. Seiring meningkatnya akurasi (di atas 90%), tingkatkan kecepatan secara bertahap sambil tetap mempertahankan standar akurasi."
+      }
+    ]
+  },
+  "aim-trainer": {
+    "description": [
+      {
+        "title": "Tentang Aim Trainer",
+        "content": "Aim Trainer adalah alat pelatihan tingkat lanjut yang dirancang untuk menantang dan meningkatkan kemampuan penargetan presisi, koordinasi mata-tangan, dan akurasi kontrol mouse Anda. Game yang menarik ini menguji kemampuan Anda untuk mengeklik target yang muncul di layar dengan cepat dan akurat, melatih otak Anda untuk memproses informasi visual secara cepat dan mengeksekusi respons motorik yang presisi dengan keakuratan luar biasa."
+      },
+      {
+        "title": "Memahami Pelatihan Aim",
+        "content": "Pelatihan aim melibatkan pengembangan koordinasi mata-tangan yang presisi untuk memposisikan dan mengeklik target secara akurat. Saat Anda berlatih Aim Trainer, Anda sedang melatih berbagai sistem termasuk pemrosesan visual untuk identifikasi target, kesadaran spasial untuk pemosisian, dan kontrol motorik untuk pergerakan mouse yang presisi. Pelatihan komprehensif ini meningkatkan kecepatan dan akurasi penargetan."
+      },
+      {
+        "title": "Sains di Balik Pelatihan Aim",
+        "content": "Penelitian menunjukkan bahwa latihan rutin dengan tugas penargetan presisi memperkuat jalur saraf yang menghubungkan pemrosesan visual, kesadaran spasial, dan kontrol motorik. Latihan yang konsisten meningkatkan koordinasi mata-tangan, memperkuat memori otot untuk pergerakan mouse, dan mengembangkan strategi penargetan yang efisien. Kemampuan otak untuk menemukan target dengan cepat dan mengeksekusi klik presisi meningkat secara signifikan dengan latihan."
+      },
+      {
+        "title": "Mengapa Pelatihan Aim Itu Penting",
+        "content": "Dalam dunia game dan komputasi profesional, penargetan presisi sangat penting untuk performa dan efisiensi. Dari game kompetitif yang memerlukan bidikan akurat hingga tugas profesional yang membutuhkan kontrol mouse presisi, keterampilan pelatihan aim memegang peran krusial dalam kesuksesan. Gamer, desainer, dan siapa pun yang menggunakan komputer akan diuntungkan oleh peningkatan kemampuan penargetan."
+      },
+      {
+        "title": "Manfaat untuk Gamer",
+        "content": "Gamer dapat meningkatkan performa mereka secara dramatis dengan mengasah keterampilan aim. Baik saat bermain game penembak sudut pandang pertama (FPS), game strategi, atau game apa pun yang memerlukan penargetan presisi, aim yang lebih baik memungkinkan performa yang lebih optimal dan keunggulan kompetitif. Keterampilan yang dikembangkan melalui latihan Aim Trainer dapat langsung diterapkan untuk kesuksesan bermain game."
+      },
+      {
+        "title": "Manfaat untuk Profesional",
+        "content": "Para profesional mendapatkan manfaat yang signifikan dari peningkatan penargetan. Desainer grafis dapat bekerja dengan lebih efisien, spesialis entri data meningkatkan akurasi, dan siapa pun yang menggunakan komputer diuntungkan oleh kontrol mouse yang lebih cepat dan presisi. Keterampilan ini ditransfer langsung ke produktivitas tempat kerja."
+      },
+      {
+        "title": "Cara Kerja Aim Trainer",
+        "content": "Game ini menyajikan target yang muncul secara acak di layar. Tugas Anda adalah mengidentifikasi setiap target dengan cepat dan mengekliknya secara akurat sebelum target tersebut menghilang. Target dapat bervariasi dalam ukuran, muncul dengan kecepatan berbeda, dan memerlukan klik yang presisi. Akurasi dan kecepatan Anda akan diukur, dan tantangannya akan meningkat seiring dengan kemajuan Anda."
+      },
+      {
+        "title": "Kesulitan Progresif",
+        "content": "Aim Trainer beradaptasi dengan tingkat keahlian Anda, dimulai dengan target yang lebih besar dan lambat, lalu secara bertahap memperkenalkan target yang lebih kecil dan cepat. Pemain tingkat lanjut mungkin akan menghadapi target tembakan cepat (rapid-fire) yang memerlukan presisi dan kecepatan luar biasa. Kesulitan yang progresif ini memastikan perkembangan keterampilan yang berkelanjutan."
+      },
+      {
+        "title": "Aplikasi di Dunia Nyata",
+        "content": "Keterampilan yang dikembangkan melalui latihan Aim Trainer melampaui batas game itu sendiri. Penargetan yang ditingkatkan akan meningkatkan kemampuan Anda menggunakan komputer secara efisien, bermain game secara efektif, and melakukan tugas yang memerlukan kontrol mouse presisi. Berbagai aplikasi praktis ini membuat pelatihan aim bermanfaat bagi semua orang."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Memulai",
+        "steps": [
+          "Pilih Aim Trainer dari alat permainan",
+          "Pastikan Anda memiliki ruang meja yang luas untuk pergerakan mouse",
+          "Sesuaikan kursi dan postur tubuh Anda agar nyaman",
+          "Periksa pengaturan sensitivitas mouse Anda"
+        ]
+      },
+      {
+        "title": "Memainkan Game",
+        "steps": [
+          "Klik 'Mulai Game' (Start Game) untuk mengaktifkan target",
+          "Gerakkan kursor Anda dengan cepat ke setiap target",
+          "Klik secara presisi saat kursor berada di atas target",
+          "Terus pukul target saat mereka muncul"
+        ]
+      },
+      {
+        "title": "Strategi Membidik",
+        "steps": [
+          "Fokus pada gerakan yang mulus dan terkontrol",
+          "Jangan melewati target Anda (overshoot)",
+          "Prioritaskan mengenai target (akurasi) daripada sekadar gerakan cepat",
+          "Atur ulang posisi mouse Anda jika diperlukan"
+        ]
+      },
+      {
+        "title": "Rutinitas Latihan",
+        "steps": [
+          "Berlatihlah 15-20 menit setiap hari",
+          "Lakukan pemanasan dengan target yang lebih lambat",
+          "Lacak persentase akurasi dan jumlah hit per menit",
+          "Eksperimen dengan pengaturan sensitivitas yang berbeda"
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Kurangi Latensi Input",
+        "content": "Gunakan mouse kabel dan monitor dengan refresh rate tinggi jika memungkinkan. Latensi perangkat keras menambah milidetik pada skor Anda."
+      },
+      {
+        "title": "Kesiapan Fisik",
+        "content": "Pastikan tangan Anda hangat dan postur tubuh Anda siaga. Ketegangan fisik dapat memperlambat gerakan awal Anda."
+      },
+      {
+        "title": "Fokus Mental",
+        "content": "Kosongkan pikiran Anda dan fokus sepenuhnya pada stimulus visual. Antisipasi sering kali memicu reaksi nyata yang lebih lambat atau kesalahan."
+      },
+      {
+        "title": "Manajemen Kedipan Mata",
+        "content": "Atur waktu berkedip Anda di antara percobaan. Berkedip selama fase tunggu dapat membuat Anda melewatkan momen perubahan yang tepat."
+      },
+      {
+        "title": "Tidur yang Konsisten",
+        "content": "Waktu reaksi sangat dipengaruhi oleh kelelahan. Pastikan Anda cukup istirahat untuk performa puncak."
+      },
+      {
+        "title": "Pelatihan Silang (Cross-Training)",
+        "content": "Gabungkan latihan Aim Trainer dengan latihan penargetan presisi dan koordinasi mata-tangan lainnya. Pelatihan silang mengembangkan berbagai keterampilan yang saling melengkapi, menciptakan sistem penargetan yang secara keseluruhan lebih tangguh."
+      },
+      {
+        "title": "Faktor Kesehatan Fisik",
+        "content": "Pastikan tidur yang cukup, nutrisi yang tepat, dan olahraga teratur. Performa kognitif dan motorik terhubung langsung dengan kesehatan fisik. Tangan dan tubuh yang beristirahat dengan baik mengeksekusi gerakan dengan lebih akurat."
+      },
+      {
+        "title": "Kesabaran dan Ketekunan",
+        "content": "Peningkatan aim bersifat bertahap namun terukur. Bersabarlah dengan kemajuan Anda dan pertahankan latihan yang konsisten. Selama beberapa minggu dan bulan, Anda akan melihat peningkatan yang signifikan dalam akurasi dan kecepatan. Rayakan kemenangan kecil dan jaga motivasi."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Berapa persentase akurasi yang bagus?",
+        "answer": "Persentase akurasi yang baik berkisar antara 85-90%. Akurasi yang sangat baik adalah 90-95%, dan akurasi luar biasa melebihi 95%. Fokuslah pada peningkatan rekor pribadi Anda alih-alih membandingkannya dengan orang lain. Lacak akurasi Anda dari waktu ke waktu untuk mengukur kemajuan."
+      },
+      {
+        "question": "Seberapa sering saya harus berlatih Aim Trainer?",
+        "answer": "Untuk hasil optimal, berlatihlah 15-20 menit setiap hari. Konsistensi lebih berharga daripada sesi tunggal yang terlalu lama. Latihan harian yang rutin menciptakan memori otot yang lebih kuat daripada latihan intensif yang sporadis."
+      },
+      {
+        "question": "Bisakah Aim Trainer meningkatkan performa bermain game saya?",
+        "answer": "Ya, aim yang lebih baik secara langsung meningkatkan performa game dengan memungkinkan penargetan yang lebih cepat dan akurat, kontrol yang lebih baik dalam game yang memerlukan bidikan presisi, serta koordinasi mata-tangan yang lebih baik. Keterampilan ini ditransfer langsung ke ranah game kompetitif."
+      },
+      {
+        "question": "Sensitivitas mouse apa yang harus saya gunakan?",
+        "answer": "Sensitivitas mouse adalah preferensi pribadi. Beberapa pemain lebih menyukai sensitivitas tinggi untuk gerakan yang lebih cepat, sementara yang lain memilih sensitivitas rendah untuk kontrol yang lebih presisi. Lakukan eksperimen untuk menemukan pengaturan yang paling cocok untuk Anda, lalu jaga konsistensinya."
+      },
+      {
+        "question": "Mengapa saya terkadang meleset dari target?",
+        "answer": "Meleset dari target dapat terjadi karena terburu-buru, kontrol mouse yang buruk, gangguan, kelelahan, atau kecepatan target yang melebihi tingkat keahlian Anda saat ini. Fokuslah pada akurasi terlebih dahulu, lalu secara bertahap tingkatkan kecepatan."
+      },
+      {
+        "question": "Bisakah Aim Trainer membantu pekerjaan komputer profesional?",
+        "answer": "Ya, penargetan yang ditingkatkan dapat membantu pekerjaan komputer profesional dengan memungkinkan kontrol mouse yang lebih cepat dan akurat, navigasi antarmuka (UI) yang lebih baik, serta kemahiran komputer yang lebih baik secara keseluruhan. Keterampilan ini ditransfer langsung ke produktivitas tempat kerja."
+      },
+      {
+        "question": "Haruskah saya fokus pada kecepatan atau akurasi?",
+        "answer": "Awalnya, prioritaskan akurasi di atas kecepatan. Akurasi tinggi dengan kecepatan sedang lebih baik daripada kecepatan tinggi dengan banyak tembakan meleset. Seiring meningkatnya akurasi (di atas 90%), tingkatkan kecepatan secara bertahap sambil tetap mempertahankan standar akurasi."
+      },
+      {
+        "question": "Apakah anak-anak bisa mendapatkan manfaat dari latihan Aim Trainer?",
+        "answer": "Ya, Aim Trainer dapat membantu anak-anak mengembangkan koordinasi mata-tangan dan kontrol mouse. Namun, pastikan tingkat kesulitannya sesuai dengan usia dan awasi sesi latihan mereka. Fokuslah pada kesenangan dan peningkatan alih-alih performa yang ekstrem."
+      },
+      {
+        "question": "Apakah ukuran tangan memengaruhi kemampuan membidik?",
+        "answer": "Ukuran tangan mungkin memiliki efek minor, tetapi teknik dan latihan jauh lebih penting daripada ukuran tangan. Orang dengan berbagai ukuran tangan dapat mencapai kemampuan membidik yang sangat baik melalui teknik yang tepat dan latihan yang konsisten."
+      },
+      {
+        "question": "Apakah lebih baik berlatih pada waktu yang sama setiap hari?",
+        "answer": "Meskipun konsistensi itu berharga, berlatih saat Anda merasa waspada dan tangan Anda sudah melakukan pemanasan bisa jadi lebih penting. Beberapa orang tampil lebih baik setelah melakukan latihan tangan ringan. Bereksperimenlah untuk menemukan kondisi latihan optimal Anda."
+      },
+      {
+        "question": "Berapa lama waktu yang dibutuhkan untuk melihat kemajuan?",
+        "answer": "Kebanyakan orang melihat peningkatan dalam waktu 1-2 minggu setelah latihan yang konsisten. Peningkatan yang signifikan biasanya terjadi selama 4-8 minggu. Peningkatan jangka panjang akan terus berlanjut selama beberapa bulan dengan latihan rutin. Lacak akurasi Anda untuk memvisualisasikan kemajuan."
+      },
+      {
+        "question": "Bisakah Aim Trainer menyebabkan ketegangan pada tangan?",
+        "answer": "Latihan yang berlebihan dapat menyebabkan ketegangan tangan. Berlatihlah secara moderat, istirahatlah, dan pertahankan ergonomi yang baik. Jika Anda mengalami nyeri atau ketidaknyamanan, segera berhenti dan istirahat. Prioritaskan keselamatan daripada latihan yang ekstrem."
+      }
+    ]
+  },
+  "rpg-reaction": {
+    "description": [
+      {
+        "title": "Tentang Tes Reaksi RPG",
+        "content": "Tes Reaksi RPG adalah alat pelatihan interaktif yang dirancang untuk menantang dan meningkatkan waktu reaksi, ketepatan waktu, dan kemampuan pengambilan keputusan cepat dalam konteks permainan peran (role-playing game). Tes ini mensimulasikan skenario di mana kamu harus merespons isyarat visual dengan cepat, melatih otak untuk memproses informasi dengan sigap dan mengeksekusi respons secara tepat waktu dengan akurasi yang luar biasa."
+      },
+      {
+        "title": "Memahami Reaksi RPG",
+        "content": "Reaksi RPG melibatkan respons cepat terhadap rangsangan visual yang muncul dalam skenario mirip game. Saat kamu berlatih Tes Reaksi RPG, kamu melatih berbagai sistem kognitif termasuk pemrosesan visual untuk identifikasi isyarat, pengambilan keputusan untuk pemilihan respons, dan kontrol motorik untuk eksekusi yang tepat waktu. Pelatihan komprehensif ini meningkatkan kecepatan reaksi sekaligus akurasi keputusan."
+      },
+      {
+        "title": "Ilmu di Balik Reaksi RPG",
+        "content": "Penelitian menunjukkan bahwa latihan rutin dengan tugas reaksi memperkuat jalur saraf yang menghubungkan pemrosesan visual, pengambilan keputusan, dan kontrol motorik. Latihan yang konsisten meningkatkan waktu reaksi, mempercepat pengambilan keputusan, dan mengembangkan strategi respons yang efisien. Kemampuan otak untuk memproses isyarat dengan cepat dan mengeksekusi respons meningkat secara signifikan dengan latihan."
+      },
+      {
+        "title": "Mengapa Reaksi RPG Penting",
+        "content": "Dalam gaming dan kehidupan sehari-hari, reaksi cepat dan pengambilan keputusan yang cepat adalah keterampilan yang sangat berharga. Dari gaming kompetitif yang membutuhkan respons tepat waktu hingga situasi di dunia nyata yang memerlukan keputusan cepat, pelatihan reaksi memainkan peran penting dalam performa. Gamer, atlet, dan siapa saja yang membutuhkan respons cepat akan mendapatkan manfaat dari peningkatan kemampuan reaksi."
+      },
+      {
+        "title": "Manfaat untuk Gamer",
+        "content": "Gamer dapat meningkatkan performa mereka secara dramatis dengan mengasah keterampilan reaksi. Baik saat bermain game aksi, RPG, maupun game apa pun yang membutuhkan respons cepat, peningkatan waktu reaksi memungkinkan performa yang lebih baik dan keunggulan kompetitif. Keterampilan yang dikembangkan melalui latihan Tes Reaksi RPG dapat langsung diterapkan untuk meraih kesuksesan dalam bermain game."
+      },
+      {
+        "title": "Manfaat untuk Kehidupan Sehari-hari",
+        "content": "Waktu reaksi yang lebih baik meningkatkan aktivitas sehari-hari dengan memungkinkan respons yang lebih cepat terhadap situasi, pengambilan keputusan yang lebih kilat, and responsivitas keseluruhan yang lebih baik. Keterampilan ini dapat ditransfer ke aktivitas yang memerlukan respons cepat dan pemikiran cekatan."
+      },
+      {
+        "title": "Cara Kerja Tes Reaksi RPG",
+        "content": "Tes ini menyajikan isyarat visual atau skenario yang harus kamu tanggapi dengan cepat. Isyarat dapat muncul secara tiba-tiba, yang memerlukan respons segera, atau dapat memerlukan respons berbasis waktu. Waktu reaksi dan akurasi kamu akan diukur, dan tantangannya akan meningkat seiring dengan kemajuanmu."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Cara Bermain",
+        "steps": [
+          "Perhatikan layar dengan seksama untuk melihat isyarat visual.",
+          "Saat isyarat muncul, klik atau tekan tombol yang ditentukan segera.",
+          "Berikan respons secepat mungkin sambil tetap menjaga akurasi.",
+          "Selesaikan semua ronde untuk melihat rata-rata waktu reaksimu."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Perhatian dan Fokus",
+        "content": "Kembangkan kemampuanmu untuk mempertahankan perhatian yang terfokus. Waktu reaksi meningkat secara signifikan saat kamu benar-benar fokus pada tugas. Latih kesadaran penuh (mindfulness) dan latihan pelatihan perhatian untuk meningkatkan kemampuan konsentrasi dan respons cepatmu."
+      },
+      {
+        "title": "Hilangkan Gangguan",
+        "content": "Ciptakan lingkungan pengujian yang bebas dari gangguan. Tutup aplikasi yang tidak perlu, senyapkan notifikasi, and pastikan ruangannya tenang. Gangguan secara signifikan memperlambat waktu reaksi dengan membagi perhatian dan menunda dimulainya respons."
+      },
+      {
+        "title": "Kondisi Pengujian yang Optimal",
+        "content": "Lakukan tes saat kamu beristirahat dengan cukup, waspada, dan berada pada waktu performa puncakmu. Waktu reaksi bervariasi sepanjang hari berdasarkan ritme sirkadian dan tingkat energi. Kenali waktu pengujian optimalmu dan berlatihlah pada periode tersebut."
+      },
+      {
+        "title": "Faktor Kesehatan Fisik",
+        "content": "Pastikan tidur yang cukup, nutrisi yang tepat, dan olahraga teratur. Performa kognitif terikat secara langsung dengan kesehatan fisik. Otak dan tubuh yang beristirahat dengan baik akan memproses informasi secara lebih efisien dan mengeksekusi respons dengan lebih cepat."
+      },
+      {
+        "title": "Persiapan Mental",
+        "content": "Persiapkan diri secara mental sebelum setiap tes. Ambil beberapa napas dalam-dalam, jernihkan pikiranmu, dan fokus pada tugas. Persiapan mental meningkatkan perhatian dan kesiapan, yang mengarah pada waktu reaksi yang lebih cepat. Hindari tes saat sedang stres atau cemas."
+      },
+      {
+        "title": "Pelatihan Progresif",
+        "content": "Mulailah dengan tes reaksi standar dan berikan tantangan pada dirimu secara bertahap. Beberapa variasi mungkin mencakup jenis isyarat yang berbeda atau memerlukan respons yang lebih kompleks. Pelatihan progresif memastikan peningkatan yang berkelanjutan."
+      },
+      {
+        "title": "Istirahat dan Pemulihan",
+        "content": "Pastikan waktu istirahat yang cukup di antara sesi latihan. Latihan yang terlalu berlebihan dapat menyebabkan kelelahan dan waktu reaksi yang lebih lambat. Biarkan otak dan sistem sarafmu pulih di antara sesi untuk peningkatan performa yang optimal."
+      },
+      {
+        "title": "Lacak Kemajuanmu",
+        "content": "Pantau waktu reaksimu selama beberapa minggu dan bulan untuk melacak peningkatan. Tetapkan target pribadi dan rayakan pencapaian saat kamu berhasil meraih waktu reaksi yang lebih cepat. Pelacakan kemajuan mempertahankan motivasi dan menunjukkan peningkatan yang nyata."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Berapa waktu reaksi yang bagus?",
+        "answer": "Waktu reaksi yang bagus berkisar antara 200-250 milidetik. Waktu reaksi yang sangat baik berada di bawah 200md, dan waktu reaksi yang luar biasa berada di bawah 180md. Fokuslah untuk meningkatkan rekor pribadi (personal best) alih-alih membandingkannya dengan orang lain."
+      },
+      {
+        "question": "Seberapa sering saya harus berlatih Tes Reaksi RPG?",
+        "answer": "Untuk hasil yang optimal, berlatihlah selama 10-15 menit setiap hari. Konsistensi lebih berharga daripada sesi tunggal yang terlalu lama. Latihan harian yang rutin menciptakan jalur saraf yang lebih kuat daripada latihan intensif yang jarang."
+      },
+      {
+        "question": "Bisakah Tes Reaksi RPG meningkatkan performa gaming saya?",
+        "answer": "Ya, peningkatan waktu reaksi secara langsung mendongkrak performa gaming dengan memungkinkan respons yang lebih cepat terhadap kejadian di dalam game, pengambilan keputusan yang lebih kilat, and gameplay secara keseluruhan yang lebih baik. Keterampilan ini dapat langsung ditransfer ke gaming kompetitif."
+      },
+      {
+        "question": "Mengapa waktu reaksi saya bervariasi?",
+        "answer": "Waktu reaksi bervariasi berdasarkan berbagai faktor: kelelahan, tingkat stres, waktu dalam sehari, gangguan, and tingkat latihan. Performa terbaikmu biasanya terjadi saat kamu beristirahat dengan cukup, fokus, dan dalam kondisi optimal."
+      },
+      {
+        "question": "Apakah saya harus fokus pada kecepatan atau akurasi?",
+        "answer": "Untuk tes reaksi, fokuslah pada kecepatan sambil tetap menjaga akurasi. Tujuannya adalah merespons secepat mungkin saat kamu melihat isyarat tersebut. Namun, hindari merespons secara prematur sebelum isyarat muncul."
+      },
+      {
+        "question": "Apakah anak-anak bisa mendapatkan manfaat dari pelatihan Tes Reaksi RPG?",
+        "answer": "Ya, Tes Reaksi RPG dapat membantu anak-anak mengembangkan waktu reaksi dan keterampilan mengambil keputusan. Namun, pastikan tingkat kesulitan yang sesuai dengan usia dan awasi sesi latihannya. Fokuslah pada kesenangan dan peningkatan."
+      },
+      {
+        "question": "Apa yang harus saya lakukan jika waktu reaksi saya tidak kunjung meningkat?",
+        "answer": "Jika progres terhenti, pastikan kamu berlatih secara teratur, mendapatkan istirahat yang cukup, and melakukan tes dalam kondisi optimal. Coba variasi waktu latihan dan hilangkan gangguan. Terkadang jeda singkat memungkinkan sistem sarafmu mengonsolidasikan peningkatan."
+      },
+      {
+        "question": "Apakah lebih baik berlatih pada waktu yang sama setiap harinya?",
+        "answer": "Meskipun konsistensi itu berharga, berlatih pada waktu optimalmu dalam sehari mungkin lebih penting. Beberapa orang tampil lebih baik di pagi hari saat masih segar, sementara yang lain mencapai puncaknya di sore hari. Bereksperimenlah untuk menemukan waktu latihan terbaikmu."
+      },
+      {
+        "question": "Berapa lama waktu yang dibutuhkan untuk melihat peningkatan?",
+        "answer": "Kebanyakan orang melihat peningkatan dalam waktu 1-2 minggu dari latihan yang konsisten. Peningkatan yang signifikan biasanya terjadi dalam waktu 4-8 minggu. Peningkatan jangka panjang berlanjut selama berbulan-bulan dengan latihan teratur. Lacak waktu reaksimu untuk memvisualisasikan kemajuannya."
+      }
+    ]
+  },
+  "math-flash": {
+    "description": [
+      {
+        "title": "Tentang Math Flash Cards",
+        "content": "Math Flash Cards adalah alat edukasi komprehensif yang dirancang untuk menantang dan meningkatkan kemampuan aritmatika mental, kecepatan perhitungan, dan kefasihan numerik Anda. Permainan menarik ini menyajikan masalah matematika dalam format kartu kilat, melatih otak Anda untuk menyelesaikan masalah dengan cepat dan akurat sekaligus membangun keterampilan matematika dasar yang kuat."
+      },
+      {
+        "title": "Memahami Math Flash Cards",
+        "content": "Math flash cards menyajikan masalah matematika yang harus Anda selesaikan dengan cepat. Saat Anda berlatih Math Flash Cards, Anda melatih berbagai sistem kognitif termasuk memori kerja untuk mengingat angka, pemrosesan numerik untuk memanipulasi nilai, dan fungsi eksekutif untuk strategi pemecahan masalah. Pelatihan komprehensif ini meningkatkan kecepatan perhitungan dan pemahaman matematika."
+      },
+      {
+        "title": "Ilmu di Balik Math Flash Cards",
+        "content": "Penelitian menunjukkan bahwa latihan teratur dengan soal matematika memperkuat jalur saraf di lobus parietalis (yang bertanggung jawab untuk pemrosesan numerik) dan korteks prefrontal (yang terlibat dalam memori kerja dan pemecahan masalah). Latihan yang konsisten meningkatkan kepekaan angka (number sense), meningkatkan kapasitas memori kerja, dan mengembangkan strategi perhitungan yang efisien. Kemampuan otak untuk memproses dan memanipulasi angka meningkat secara signifikan dengan pelatihan teratur."
+      },
+      {
+        "title": "Mengapa Math Flash Cards Penting",
+        "content": "Di dunia yang didorong oleh data ini, keterampilan matematika yang kuat sangat penting untuk kesuksesan akademik, kinerja profesional, dan kehidupan sehari-hari. Mulai dari memecahkan masalah dengan cepat hingga membuat perhitungan cepat dan memahami hubungan numerik, latihan math flash cards memainkan peran krusial dalam kemahiran matematika. Pelajar, profesional, dan siapa pun yang berurusan dengan angka akan mendapat manfaat dari peningkatan keterampilan matematika."
+      },
+      {
+        "title": "Manfaat untuk Pelajar",
+        "content": "Pelajar dapat secara drastis meningkatkan kinerja akademik mereka dengan mengasah keterampilan matematika melalui latihan flash cards. Baik saat menyelesaikan soal aljabar, menghitung statistik, atau mengerjakan persamaan fisika, aritmatika mental yang lebih cepat memungkinkan pemecahan masalah yang lebih cepat dan nilai ujian yang lebih baik. Keterampilan ini ditransfer langsung ke matematika, sains, dan mata pelajaran kuantitatif lainnya."
+      },
+      {
+        "title": "Manfaat untuk Kehidupan Sehari-hari",
+        "content": "Keterampilan matematika yang lebih baik meningkatkan kehidupan sehari-hari dengan memungkinkan perhitungan tip yang lebih cepat, estimasi biaya yang cepat, perhitungan diskon kilat, dan kerja angka yang percaya diri. Keterampilan ini langsung dapat diterapkan pada aktivitas sehari-hari yang membutuhkan pemikiran matematis."
+      },
+      {
+        "title": "Cara Kerja Math Flash Cards",
+        "content": "Permainan ini menyajikan masalah matematika dalam format kartu kilat. Masalah dapat berupa penjumlahan, pengurangan, perkalian, pembagian, atau kombinasi operasi. Tugas Anda adalah menyelesaikan setiap masalah secara mental dan memasukkan jawabannya. Permainan ini memberikan umpan balik instan serta melacak akurasi dan kecepatan Anda."
+      },
+      {
+        "title": "Pembelajaran Progresif",
+        "content": "Math Flash Cards beradaptasi dengan tingkat keahlian Anda, dimulai dengan masalah yang lebih mudah dan secara bertahap memperkenalkan perhitungan yang lebih menantang. Pendekatan progresif ini memastikan pembelajaran yang berkelanjutan dan pengembangan keterampilan sambil menjaga keterlibatan dan motivasi."
+      },
+      {
+        "title": "Aplikasi Dunia Nyata",
+        "content": "Keterampilan yang dikembangkan melalui latihan Math Flash Cards meluas jauh melampaui permainan itu sendiri. Aritmatika mental yang ditingkatkan meningkatkan kemampuan Anda untuk menghitung tip, memperkirakan biaya, memecahkan masalah dengan cepat, membuat keputusan cepat, dan bekerja dengan angka secara percaya diri. Penerapan praktis ini membuat pelatihan math flash cards berharga bagi semua orang."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Memulai",
+        "steps": [
+          "Pilih Math Flash Cards dari alat edukasi",
+          "Pilih jenis operasi Anda (Tambah, Kurang, Kali, Bagi)",
+          "Atur tingkat kesulitan Anda",
+          "Siapkan numpad atau keyboard Anda"
+        ]
+      },
+      {
+        "title": "Memainkan Permainan",
+        "steps": [
+          "Klik 'Start Game' untuk mulai",
+          "Baca soal yang ditampilkan pada kartu",
+          "Hitung jawabannya secara mental",
+          "Ketik jawaban dan tekan Enter",
+          "Tinjau umpan balik secara instan"
+        ]
+      },
+      {
+        "title": "Strategi Belajar",
+        "steps": [
+          "Fokus pada akurasi terlebih dahulu, baru kecepatan",
+          "Gunakan jalan pintas mental untuk angka yang kompleks",
+          "Pecah masalah menjadi bagian-bagian yang lebih kecil",
+          "Visualisasikan angka-angkanya"
+        ]
+      },
+      {
+        "title": "Rutinitas Latihan",
+        "steps": [
+          "Latih 15-20 menit setiap hari",
+          "Campurkan berbagai jenis operasi",
+          "Tantang diri Anda dengan tingkat kesulitan yang lebih tinggi",
+          "Lacak waktu penyelesaian dan akurasi Anda"
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Pengembangan Kepekaan Angka (Number Sense)",
+        "content": "Kembangkan number sense yang kuat melalui latihan teratur dengan angka. Pahami hubungan, sifat, dan pola angka. Number sense yang kuat memungkinkan pengenalan jalan pintas perhitungan yang lebih cepat dan strategi pemecahan masalah yang lebih efisien."
+      },
+      {
+        "title": "Strategi Perhitungan Mental",
+        "content": "Pelajari dan praktikkan berbagai teknik perhitungan mental. Metode seperti memecách angka menjadi beberapa bagian, menggunakan pembulatan, menerapkan sifat angka, dan mengenali pola dapat mempercepat perhitungan secara signifikan. Kembangkan seperangkat strategi untuk berbagai jenis masalah."
+      },
+      {
+        "title": "Pelatihan Memori Kerja",
+        "content": "Tingkatkan kapasitas memori kerja melalui latihan yang terarah. Memori kerja yang kuat memungkinkan Anda menyimpan perhitungan intermediate di dalam pikiran saat menyelesaikan masalah multi-langkah. Latihlah kemampuan menahan angka dan melakukan operasi secara mental."
+      },
+      {
+        "title": "Jadwal Latihan Teratur",
+        "content": "Buatlah rutinitas latihan harian. Penelitian menunjukkan bahwa 15-20 menit latihan terfokus setiap hari menghasilkan hasil yang lebih baik daripada sesi yang lebih lama namun jarang. Konsistensi membangun jalur perhitungan secara lebih efektif daripada latihan intensif yang sporadis."
+      },
+      {
+        "title": "Keseimbangan Kecepatan-Akurasi",
+        "content": "Seimbangkan kecepatan dengan akurasi. Pada awalnya, prioritaskan akurasi di atas kecepatan. Seiring meningkatnya akurasi, tingkatkan kecepatan secara bertahap sambil mempertahankan standar akurasi yang tinggi. Terburu-buru akan menyebabkan kesalahan, jadi temukan tempo optimal Anda."
+      },
+      {
+        "title": "Analisis Kesalahan",
+        "content": "Saat Anda membuat kesalahan, analisislah apa yang salah. Apakah Anda salah membaca soal? Membuat kesalahan perhitungan? Menggunakan strategi yang salah? Memahami pola kesalahan membantu Anda mengembangkan strategi peningkatan yang tepat sasaran."
+      },
+      {
+        "title": "Pelatihan Silang (Cross-Training)",
+        "content": "Gabungkan latihan Math Flash Cards dengan latihan numerik lainnya. Latih estimasi, permainan matematika mental, dan teka-teki angka untuk mengembangkan keterampilan perhitungan yang beragam. Pelatihan silang meningkatkan kemahiran numerik secara keseluruhan."
+      },
+      {
+        "title": "Faktor Kesehatan Fisik",
+        "content": "Pastikan tidur yang cukup, nutrisi yang tepat, dan olahraga teratur. Kinerja kognitif terikat secara langsung dengan kesehatan fisik. Otak yang cukup istirahat memproses informasi numerik dengan lebih efisien, yang mengarah pada kinerja perhitungan yang lebih baik."
+      },
+      {
+        "title": "Kesabaran dan Kegigihan",
+        "content": "Peningkatan keterampilan matematika terjadi secara bertahap tetapi terukur. Bersabarlah dengan kemajuan Anda dan pertahankan latihan yang konsisten. Selama beberapa minggu dan bulan, Anda akan melihat peningkatan yang signifikan dalam kecepatan dan akurasi perhitungan. Rayakan kemenangan kecil dan jaga motivasi."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Berapa persentase akurasi yang baik?",
+        "answer": "Persentase akurasi yang baik berkisar antara 85-90%. Akurasi yang sangat baik adalah 90-95%, dan akurasi luar biasa melebihi 95%. Fokuslah pada peningkatan rekor pribadi Anda alih-alih membandingkannya dengan orang lain. Lacak akurasi Anda dari waktu ke waktu untuk mengukur kemajuan."
+      },
+      {
+        "question": "Seberapa sering saya harus berlatih Math Flash Cards?",
+        "answer": "Untuk hasil yang optimal, berlatihlah 15-20 menit setiap hari. Konsistensi lebih berharga daripada sesi tunggal yang diperpanjang. Latihan harian yang teratur menciptakan jalur perhitungan yang lebih kuat daripada latihan intensif yang jarang."
+      },
+      {
+        "question": "Bisakah Math Flash Cards meningkatkan kinerja ujian saya?",
+        "answer": "Ya, aritmatika mental yang lebih baik meningkatkan kinerja ujian dengan memungkinkan pemecahan masalah yang lebih cepat, manajemen waktu yang lebih baik, dan peningkatan kepercayaan diri. Keterampilan ini ditransfer langsung ke ujian matematika dan penilaian kuantitatif."
+      },
+      {
+        "question": "Haruskah saya menghafal jawaban atau mempelajari strategi?",
+        "answer": "Fokuslah pada pengembangan strategi pemecahan masalah daripada menghafal jawaban tertentu. Strategi dapat diterapkan pada masalah baru, sementara hafalan hanya membantu pada masalah tertentu. Memahami hubungan angka memungkinkan pemecahan masalah yang lebih cepat."
+      },
+      {
+        "question": "Apakah anak-anak bisa mendapatkan manfaat dari pelatihan Math Flash Cards?",
+        "answer": "Tentu saja. Math Flash Cards sangat bagus untuk perkembangan matematika anak-anak. Ini meningkatkan kepekaan angka (number sense), meningkatkan kelancaran perhitungan, dan membangun kepercayaan diri dalam matematika. Mulailah dengan tingkat kesulitan yang sesuai dengan usia."
+      },
+      {
+        "question": "Mengapa saya membuat kesalahan perhitungan?",
+        "answer": "Kesalahan dapat terjadi karena terburu-buru, strategi yang buruk, kelebihan beban memori kerja, atau kurang latihan. Perlambat tempo, fokus pada akurasi, kembangkan strategi yang efisien, dan berlatihlah secara teratur untuk mengurangi kesalahan."
+      },
+      {
+        "question": "Apakah Math Flash Cards membantu dalam perhitungan sehari-hari?",
+        "answer": "Ya, aritmatika mental yang ditingkatkan memperkaya kehidupan sehari-hari dengan memungkinkan perhitungan tip yang lebih cepat, estimasi biaya yang cepat, perhitungan diskon kilat, dan kerja angka yang percaya diri. Keterampilan ini langsung dapat ditransfer ke aktivitas sehari-hari."
+      },
+      {
+        "question": "Apa yang harus saya lakukan jika saya terjebak pada jenis soal tertentu?",
+        "answer": "Jika jenis soal tertentu menantang Anda, latihlah secara khusus. Pelajari strategi untuk jenis soal tersebut, mulailah dengan versi yang lebih mudah, dan tingkatkan kesulitan secara bertahap. Jangan menghindari soal yang menantang; latihlah lebih sering."
+      },
+      {
+        "question": "Apakah lebih baik berlatih pada waktu yang sama setiap hari?",
+        "answer": "Meskipun konsistensi itu berharga, berlatih saat Anda waspada dan fokus mungkin lebih penting. Beberapa orang tampil lebih baik di pagi hari saat masih segar, sementara yang lain mencapai puncaknya di sore hari. Bereksperimenlah untuk menemukan waktu latihan yang optimal."
+      },
+      {
+        "question": "Berapa lama waktu yang dibutuhkan untuk melihat peningkatan?",
+        "answer": "Kebanyakan orang melihat peningkatan dalam waktu 1-2 minggu dari latihan yang konsisten. Peningkatan yang signifikan biasanya terjadi selama 4-8 minggu. Peningkatan jangka panjang berlanjut selama berbulan-bulan dengan latihan teratur. Lacak skor Anda untuk memvisualisasikan kemajuan."
+      },
+      {
+        "question": "Haruskah saya fokus pada kecepatan atau akurasi?",
+        "answer": "Pada awalnya, prioritaskan akurasi di atas kecepatan. Akurasi tinggi dengan kecepatan sedang lebih baik daripada kecepatan tinggi dengan banyak kesalahan. Seiring meningkatnya akurasi (di atas 90%), tingkatkan kecepatan secara bertahap sambil mempertahankan standar akurasi."
+      },
+      {
+        "question": "Bisakah Math Flash Cards membantu pekerjaan profesional?",
+        "answer": "Ya, aritmatika mental yang lebih baik meningkatkan kinerja profesional di bidang yang membutuhkan kerja numerik. Akuntan, insinyur, analis, and profesional bisnis mendapat manfaat dari perhitungan yang lebih cepat dan number sense yang lebih baik."
+      }
+    ]
+  },
+  "geography-quiz": {
+    "description": [
+      {
+        "title": "Tentang Kuis Geografi",
+        "content": "Kuis Geografi adalah alat edukasi komprehensif yang dirancang untuk menantang dan meningkatkan pengetahuan Anda tentang geografi dunia, negara, ibu kota, landmark, dan fitur geografis. Kuis menarik ini menguji pemahaman Anda tentang geografi global sekaligus membangun pengetahuan dunia melalui pertanyaan interaktif dan umpan balik instan."
+      },
+      {
+        "title": "Memahami Pengetahuan Geografi",
+        "content": "Pengetahuan geografi melibatkan pemahaman tentang fitur fisik Bumi, lokasi negara dan kota, wilayah budaya, dan hubungan spasial. Saat Anda berlatih Kuis Geografi, Anda melatih berbagai sistem kognitif termasuk memori spasial untuk lokasi, pengetahuan faktual untuk informasi geografis, dan pemrosesan visual-spasial untuk pemahaman peta. Pelatihan komprehensif ini meningkatkan pengetahuan geografis dan kesadaran spasial."
+      },
+      {
+        "title": "Ilmu di Balik Pembelajaran Geografi",
+        "content": "Penelitian menunjukkan bahwa mempelajari geografi memperkuat jalur saraf di hipokampus (pembentukan memori) dan lobus parietalis (pemrosesan spasial). Latihan yang konsisten meningkatkan memori spasial, memperkaya pengetahuan geografis, dan mengembangkan pemahaman yang lebih baik tentang hubungan dunia. Kemampuan otak untuk mengingat lokasi dan fakta geografis meningkat secara signifikan dengan latihan teratur."
+      },
+      {
+        "title": "Mengapa Pengetahuan Geografi Penting",
+        "content": "Di dunia kita yang saling terhubung ini, pengetahuan geografi sangat berharga untuk memahami peristiwa global, kesadaran budaya, perjalanan, dan pendidikan umum. Dari memahami berita dan peristiwa terkini hingga merencanakan perjalanan dan menghargai berbagai budaya, pengetahuan geografi memainkan peran penting dalam kewarganegaraan global. Pelajar, pelancong, dan siapa pun yang tertarik pada pengetahuan dunia akan mendapat manfaat dari peningkatan keterampilan geografi."
+      },
+      {
+        "title": "Manfaat untuk Pelajar",
+        "content": "Pelajar dapat meningkatkan performa akademis mereka secara drastis dengan meningkatkan pengetahuan geografi. Baik mempelajari ilmu sosial, sejarah, maupun budaya dunia, keterampilan geografi yang kuat memungkinkan pemahaman yang lebih baik dan nilai ujian yang lebih tinggi. Keterampilan ini ditransfer langsung ke mata pelajaran geografi, sejarah, dan ilmu sosial."
+      },
+      {
+        "title": "Manfaat untuk Pelancong",
+        "content": "Pelancong mendapat manfaat yang signifikan dari peningkatan pengetahuan geografi. Memahami lokasi, budaya, dan fitur geografis meningkatkan pengalaman perjalanan dan memungkinkan perencanaan perjalanan yang lebih baik. Pengetahuan yang diperoleh melalui latihan Kuis Geografi secara langsung meningkatkan pemahaman perjalanan."
+      },
+      {
+        "title": "Cara Kerja Kuis Geografi",
+        "content": "Kuis ini menyajikan pertanyaan tentang geografi dunia termasuk negara, ibu kota, landmark, fitur geografis, dan wilayah budaya. Tugas Anda adalah menjawab pertanyaan dengan benar. Kuis ini memberikan umpan balik instan, melacak akurasi Anda, dan dapat meningkatkan tingkat kesulitan seiring kemajuan Anda. Pendekatan interaktif ini membuat pembelajaran menjadi menarik dan efektif."
+      },
+      {
+        "title": "Pembelajaran Progresif",
+        "content": "Kuis Geografi beradaptasi dengan tingkat pengetahuan Anda, dimulai dengan pertanyaan yang lebih mudah dan secara bertahap memperkenalkan topik yang lebih menantang. Pendekatan progresif ini memastikan pembelajaran yang berkelanjutan dan pembangunan pengetahuan sambil menjaga keterlibatan dan motivasi."
+      },
+      {
+        "title": "Aplikasi Dunia Nyata",
+        "content": "Keterampilan yang dikembangkan melalui latihan Kuis Geografi meluas jauh melampaui kuis itu sendiri. Peningkatan pengetahuan geografi meningkatkan kemampuan Anda untuk memahami peristiwa dunia, menghargai berbagai budaya, merencanakan perjalanan, dan terlibat dalam percakapan global. Aplikasi praktis ini membuat pembelajaran geografi sangat berharga bagi semua orang."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Memulai",
+        "steps": [
+          "Pilih Kuis Geografi dari alat edukasi",
+          "Pilih kategori kuis (Negara, Ibu Kota, dll.)",
+          "Pilih tingkat kesulitan",
+          "Tinjau instruksi permainan"
+        ]
+      },
+      {
+        "title": "Mengikuti Kuis",
+        "steps": [
+          "Baca pertanyaan dengan cermat",
+          "Lihat peta atau gambar jika disediakan",
+          "Pilih jawaban yang benar dari opsi yang ada",
+          "Tinjau jawaban yang benar beserta penjelasannya"
+        ]
+      },
+      {
+        "title": "Mode Belajar",
+        "steps": [
+          "Gunakan 'Mode Belajar' untuk meninjau fakta sebelum kuis",
+          "Periksa penjelasan mendetail untuk pertanyaan yang terjawab salah",
+          "Gunakan fitur peta untuk menjelajahi lokasi",
+          "Buat catatan tentang wilayah yang sulit"
+        ]
+      },
+      {
+        "title": "Strategi Latihan",
+        "steps": [
+          "Mulailah dengan wilayah yang familier",
+          "Secara bertahap berkembang ke area yang belum diketahui",
+          "Berlatihlah 15-20 menit setiap hari",
+          "Tinjau pertanyaan yang salah secara teratur"
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Studi Peta",
+        "content": "Pelajari peta secara teratur untuk membangun memori visual tentang lokasi. Memahami hubungan spasial antara negara, kota, dan fitur geografis meningkatkan performa kuis dan pemahaman geografis. Gunakan peta fisik, peta digital, dan sumber daya interaktif."
+      },
+      {
+        "title": "Jadwal Latihan Teratur",
+        "content": "Buat rutinitas latihan harian. Penelitian menunjukkan bahwa 15-20 menit latihan terfokus setiap hari menghasilkan hasil yang lebih baik daripada sesi yang lebih lama namun jarang. Konsistensi membangun pengetahuan geografis lebih efektif daripada latihan intensif yang sporadis."
+      },
+      {
+        "title": "Fokus Kategori",
+        "content": "Identifikasi kategori geografis yang menjadi tantangan bagi Anda dan pelajari secara khusus. Baik negara, ibu kota, landmark, maupun fitur geografis, studi yang ditargetkan meningkatkan performa di area tertentu. Jangan hindari kategori yang sulit; pelajari lebih mendalam."
+      },
+      {
+        "title": "Teknik Memori Visual",
+        "content": "Gunakan teknik memori visual untuk mengingat lokasi. Buat peta mental, asosiasikan lokasi dengan gambar visual, atau gunakan perangkat mnemonik. Memori visual membantu retensi dan meningkatkan daya ingat selama kuis."
+      },
+      {
+        "title": "Konteks Budaya",
+        "content": "Pelajari tentang budaya dan wilayah seiring dengan fakta geografis. Memahami konteks budaya membantu Anda mengingat lokasi dan membuat pembelajaran lebih menarik. Pengetahuan budaya meningkatkan pemahaman geografis."
+      },
+      {
+        "title": "Analisis Kesalahan",
+        "content": "Saat Anda menjawab salah, analisis apa yang salah. Apakah Anda bingung membedakan lokasi yang mirip? Lupa fakta? Salah memahami pertanyaan? Memahami pola kesalahan Anda membantu Anda mengembangkan strategi peningkatan yang ditargetkan."
+      },
+      {
+        "title": "Pelatihan Silang",
+        "content": "Gabungkan latihan Kuis Geografi dengan aktivitas pembelajaran geografi lainnya. Baca tentang berbagai wilayah, tonton dokumenter, pelajari peta, dan jelajahi sumber daya geografi interaktif. Pelatihan silang meningkatkan pengetahuan geografis secara keseluruhan."
+      },
+      {
+        "title": "Faktor Kesehatan Fisik",
+        "content": "Pastikan waktu tidur yang cukup, nutrisi yang tepat, dan olahraga teratur. Performa kognitif terkait langsung dengan kesehatan fisik. Otak yang cukup istirahat memproses dan menyimpan informasi geografis dengan lebih efisien."
+      },
+      {
+        "title": "Kesabaran dan Ketekunan",
+        "content": "Peningkatan pengetahuan geografi bersifat bertahap namun dapat diukur. Bersabarlah dengan kemajuan Anda dan pertahankan latihan yang konsisten. Selama beberapa minggu dan bulan, Anda akan melihat peningkatan yang signifikan dalam pengetahuan geografis dan akurasi kuis. Rayakan kemenangan kecil dan jaga motivasi."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Berapa persentase akurasi yang baik?",
+        "answer": "Persentase akurasi yang baik berkisar antara 70-80%. Akurasi yang sangat baik adalah 80-90%, dan akurasi luar biasa melebihi 90%. Fokuslah untuk meningkatkan rekor pribadi Anda daripada membandingkannya dengan orang lain. Lacak akurasi Anda dari waktu ke waktu untuk mengukur kemajuan."
+      },
+      {
+        "question": "Seberapa sering saya harus berlatih Kuis Geografi?",
+        "answer": "Untuk hasil yang optimal, berlatihlah 15-20 menit setiap hari. Konsistensi lebih berharga daripada sesi tunggal yang diperpanjang. Latihan harian yang teratur menciptakan pengetahuan geografis yang lebih kuat daripada latihan intensif yang sporadis."
+      },
+      {
+        "question": "Bisakah Kuis Geografi meningkatkan performa ujian saya?",
+        "answer": "Ya, peningkatan pengetahuan geografi meningkatkan performa ujian dengan memungkinkan pemahaman pertanyaan yang lebih baik, penarikan fakta yang lebih cepat, dan peningkatan kepercayaan diri. Keterampilan ini ditransfer langsung ke ujian geografi dan ilmu sosial."
+      },
+      {
+        "question": "Mengapa saya melupakan fakta-fakta geografis?",
+        "answer": "Lupa dapat terjadi karena kurangnya ulasan, kebingungan dengan lokasi yang mirip, atau memori visual yang tidak memadai. Belajarlah secara teratur, gunakan peta, buat asosiasi visual, dan berlatihlah secara konsisten untuk meningkatkan retensi."
+      },
+      {
+        "question": "Apakah anak-anak dapat mengambil manfaat dari pelatihan Kuis Geografi?",
+        "answer": "Tentu saja. Kuis Geografi sangat bagus untuk edukasi geografis anak-anak. Ini meningkatkan pengetahuan dunia, meningkatkan kesadaran spasial, dan membangun kepercayaan diri dalam geografi. Mulailah dengan tingkat kesulitan yang sesuai dengan usia."
+      },
+      {
+        "question": "Apakah studi peta membantu dalam kuis geografi?",
+        "answer": "Ya, studi peta secara teratur secara signifikan meningkatkan performa kuis geografi dengan membangun memori visual tentang lokasi dan hubungan spasial. Memori visual membantu retensi dan meningkatkan daya ingat selama kuis."
+      },
+      {
+        "question": "Apa yang harus saya lakukan jika saya terus-menerus salah menjawab kategori tertentu?",
+        "answer": "Jika kategori tertentu menjadi tantangan bagi Anda, pelajari secara khusus. Gunakan peta, buat asosiasi visual, dan latih kategori tersebut lebih sering. Studi yang ditargetkan meningkatkan performa di area tertentu."
+      },
+      {
+        "question": "Bisakah Kuis Geografi membantu dalam perencanaan perjalanan?",
+        "answer": "Ya, peningkatan pengetahuan geografi meningkatkan perencanaan perjalanan dengan memungkinkan pemahaman yang lebih baik tentang lokasi, budaya, dan fitur geografis. Pengetahuan yang diperoleh secara langsung meningkatkan pemahaman dan perencanaan perjalanan."
+      },
+      {
+        "question": "Apakah lebih baik berlatih pada waktu yang sama setiap hari?",
+        "answer": "Meskipun konsistensi itu berharga, berlatih saat Anda waspada dan fokus mungkin lebih penting. Beberapa orang tampil lebih baik di pagi hari saat masih segar, sementara yang lain mencapai puncaknya di sore hari. Bereksperimenlah untuk menemukan waktu latihan yang optimal bagi Anda."
+      },
+      {
+        "question": "Berapa lama waktu yang dibutuhkan untuk melihat kemajuan?",
+        "answer": "Kebanyakan orang melihat kemajuan dalam waktu 1-2 minggu setelah latihan yang konsisten. Peningkatan yang signifikan biasanya terjadi dalam waktu 4-8 minggu. Peningkatan jangka panjang berlanjut selama beberapa bulan dengan latihan teratur. Lacak akurasi Anda untuk memvisualisasikan kemajuan."
+      },
+      {
+        "question": "Haruskah saya fokus pada kecepatan atau akurasi?",
+        "answer": "Awalnya prioritaskan akurasi daripada kecepatan. Akurasi tinggi dengan kecepatan sedang lebih baik daripada kecepatan tinggi dengan banyak kesalahan. Seiring meningkatnya akurasi (di atas 80%), Anda dapat secara bertahap meningkatkan kecepatan sambil mempertahankan standar akurasi."
+      },
+      {
+        "question": "Bisakah Kuis Geografi membantu memahami peristiwa dunia?",
+        "answer": "Ya, peningkatan pengetahuan geografi meningkatkan pemahaman tentang peristiwa dunia dengan memberikan konteks untuk lokasi, budaya, dan hubungan geografis. Pengetahuan yang diperoleh membantu Anda memahami berita dan peristiwa global dengan lebih baik."
+      }
+    ]
+  },
+  "image-recognition": {
+    "description": [
+      {
+        "title": "Tentang Tes Pengenalan Gambar",
+        "content": "Tes Pengenalan Gambar adalah alat pelatihan kognitif tingkat lanjut yang dirancang untuk menantang dan meningkatkan kemampuan Anda dalam mengidentifikasi, mengklasifikasikan, serta mengenali pola visual, objek, dan gambar. Tes yang menarik ini mengukur kecepatan pemrosesan visual Anda, kemampuan pengenalan pola, dan akurasi identifikasi objek, serta melatih otak Anda untuk memproses informasi visual secara efisien dan akurat."
+      },
+      {
+        "title": "Memahami Pengenalan Gambar",
+        "content": "Pengenalan gambar melibatkan kemampuan untuk mengidentifikasi objek, pola, dan informasi visual dari gambar. Saat Anda berlatih Tes Pengenalan Gambar, Anda sedang melatih beberapa sistem kognitif termasuk pemrosesan visual untuk analisis gambar, pengenalan pola untuk mengidentifikasi fitur, dan sistem memori untuk mengingat informasi visual. Pelatihan komprehensif ini meningkatkan kecepatan dan akurasi pengenalan."
+      },
+      {
+        "title": "Ilmu di Balik Pengenalan Gambar",
+        "content": "Penelitian menunjukkan bahwa pengenalan gambar melibatkan jalur saraf yang kompleks di lobus oksipital (pemrosesan visual) dan lobus temporal (pengenalan objek). Latihan teratur dengan tugas pengenalan gambar memperkuat jalur-jalur ini, meningkatkan kecepatan pemrosesan visual, dan mempertajam kemampuan pengenalan pola. Kemampuan otak untuk mengidentifikasi dan mengklasifikasikan informasi visual dengan cepat meningkat secara signifikan melalui pelatihan."
+      },
+      {
+        "title": "Mengapa Pengenalan Gambar Penting",
+        "content": "Di dunia kita yang kaya akan visual, keterampilan pengenalan gambar sangat berharga untuk berbagai aktivitas. Dari mengidentifikasi objek dan pola hingga memahami data visual dan memproses informasi visual, pengenalan gambar memainkan peran krusial dalam fungsi sehari-hari. Profesional di bidang seperti desain, keamanan, kontrol kualitas, dan analisis data sangat mengandalkan kemampuan pengenalan gambar yang kuat."
+      },
+      {
+        "title": "Manfaat bagi Profesional",
+        "content": "Para profesional dapat meningkatkan efisiensi mereka dengan mempertajam keterampilan pengenalan gambar. Desainer dapat mengidentifikasi pola visual dengan lebih cepat, petugas keamanan dapat menemukan anomali dengan lebih akurat, dan analis data dapat mengenali pola dalam visualisasi dengan presisi yang lebih tinggi. Keterampilan ini ditransfer secara langsung ke performa di tempat kerja."
+      },
+      {
+        "title": "Manfaat untuk Kehidupan Sehari-hari",
+        "content": "Pengenalan gambar yang lebih baik meningkatkan kehidupan sehari-hari dengan memungkinkan identifikasi objek yang lebih cepat, memori visual yang lebih baik, dan kemampuan yang ditingkatkan untuk memproses informasi visual. Keterampilan ini dapat diterapkan pada aktivitas yang memerlukan pemrosesan visual dan pengenalan pola."
+      },
+      {
+        "title": "Cara Kerja Tes Pengenalan Gambar",
+        "content": "Tes ini menyajikan gambar yang harus Anda identifikasi, klasifikasikan, atau kenali. Gambar dapat berupa objek, pola, pemandangan, atau informasi visual. Tugas Anda adalah mengidentifikasi atau mengklasifikasikan gambar tersebut secara akurat. Tes ini mengukur akurasi dan kecepatan pengenalan Anda, serta memberikan umpan balik tentang performa Anda."
+      },
+      {
+        "title": "Pelatihan Pemrosesan Visual",
+        "content": "Tes Pengenalan Gambar melatih kemampuan Anda untuk memproses informasi visual dengan cepat dan akurat. Keterampilan pemrosesan visual ini sangat krusial untuk banyak aktivitas yang memerlukan identifikasi gambar dan pengenalan pola."
+      },
+      {
+        "title": "Aplikasi Dunia Nyata",
+        "content": "Keterampilan yang dikembangkan melalui latihan Tes Pengenalan Gambar meluas jauh melampaui tes itu sendiri. Pengenalan gambar yang lebih baik meningkatkan kemampuan Anda untuk mengidentifikasi objek dengan cepat, mengenali pola dalam data, memproses informasi visual secara efisien, and melakukan tugas yang memerlukan analisis visual. Aplikasi praktis ini membuat pelatihan pengenalan gambar sangat berharga bagi semua orang."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Memulai",
+        "steps": [
+          "Pilih Tes Pengenalan Gambar dari alat akurasi",
+          "Tinjau kategori identifikasi",
+          "Atur tingkat kesulitan dan jenis gambar Anda",
+          "Bersiaplah untuk analisis visual"
+        ]
+      },
+      {
+        "title": "Pengaturan Awal",
+        "steps": [
+          "Pastikan visibilitas layar dan pencahayaan yang baik",
+          "Hilangkan silau dan pantulan cahaya",
+          "Posisikan diri Anda dengan nyaman",
+          "Singkirkan gangguan"
+        ]
+      },
+      {
+        "title": "Mengikuti Tes",
+        "steps": [
+          "Periksa setiap gambar dengan cermat",
+          "Identifikasi fitur dan pola utama",
+          "Klasifikasikan atau identifikasi gambar dengan benar",
+          "Kirimkan jawaban Anda dengan segera"
+        ]
+      },
+      {
+        "title": "Mekanika Tes",
+        "steps": [
+          "Klik 'Mulai Tes' untuk memulai",
+          "Lihat gambar saat muncul",
+          "Berikan respons sesuai dengan aturan tes",
+          "Tinjau umpan balik mengenai akurasi Anda"
+        ]
+      },
+      {
+        "title": "Rutinitas Latihan",
+        "steps": [
+          "Berlatih selama 10-15 menit setiap hari",
+          "Variasikan jenis gambar dan tingkat kesulitan",
+          "Fokus pada akurasi lalu kecepatan",
+          "Lacak konsistensi pengenalan Anda"
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Pelatihan Pengenalan Pola",
+        "content": "Berlatihlah mengidentifikasi pola visual dan fitur khas. Kembangkan kemampuan Anda untuk mengenali karakteristik utama yang membantu mengidentifikasi gambar dengan cepat. Latihan pengenalan pola secara teratur akan meningkatkan pemrosesan visual dan kecepatan identifikasi."
+      },
+      {
+        "title": "Pengembangan Memori Visual",
+        "content": "Tingkatkan memori visual melalui latihan yang terarah. Memori visual yang kuat memungkinkan pengenalan gambar dan pola yang familier dengan lebih cepat. Berlatihlah mengingat detail visual dan memanggilnya kembali nanti."
+      },
+      {
+        "title": "Analisis Sistematis",
+        "content": "Kembangkan pendekatan sistematis untuk analisis gambar. Cari fitur, pola, atau karakteristik tertentu dalam urutan yang konsisten. Analisis sistematis memastikan pemeriksaan yang komprehensif dan mengurangi detail yang terlewat."
+      },
+      {
+        "title": "Fokus dan Konsentrasi",
+        "content": "Hilangkan gangguan sepenuhnya selama berlatih. Tutup aplikasi yang tidak perlu, matikan notifikasi, dan ciptakan ruang latihan khusus. Perhatian penuh secara drastis akan meningkatkan akurasi dan kecepatan pengenalan."
+      },
+      {
+        "title": "Jadwal Latihan Reguler",
+        "content": "Buat rutinitas latihan harian. Penelitian menunjukkan bahwa 10-15 menit latihan terfokus setiap hari menghasilkan hasil yang lebih baik daripada sesi yang lebih lama namun jarang. Konsistensi membangun jalur pemrosesan visual lebih efektif daripada latihan intensif yang sporadis."
+      },
+      {
+        "title": "Analisis Kesalahan",
+        "content": "Saat Anda melakukan kesalahan, analisis apa yang salah. Apakah Anda melewatkan fitur utama? Salah mengira gambar yang mirip? Terlalu terburu-buru? Memahami pola kesalahan Anda membantu Anda mengembangkan strategi perbaikan yang ditargetkan."
+      },
+      {
+        "title": "Pelatihan Silang",
+        "content": "Gabungkan latihan Tes Pengenalan Gambar dengan latihan visual lainnya. Aktivitas yang memerlukan analisis visual, pencocokan pola, dan identifikasi objek melengkapi pelatihan pengenalan gambar dan meningkatkan pemrosesan visual secara keseluruhan."
+      },
+      {
+        "title": "Faktor Kesehatan Fisik",
+        "content": "Pastikan tidur yang cukup, nutrisi yang tepat, dan olahraga teratur. Performa visual berkaitan langsung dengan kesehatan fisik. Mata dan otak yang cukup istirahat memproses informasi visual dengan lebih efisien."
+      },
+      {
+        "title": "Kesabaran dan Ketekunan",
+        "content": "Peningkatan dalam pengenalan gambar bersifat bertahap namun terukur. Bersabarlah dengan kemajuan Anda dan pertahankan latihan yang konsisten. Selama beberapa minggu dan bulan, Anda akan melihat peningkatan yang signifikan dalam kecepatan dan akurasi pengenalan."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Berapa persentase akurasi yang dianggap baik?",
+        "answer": "Persentase akurasi yang baik berkisar antara 80-85%. Akurasi yang sangat baik adalah 85-90%, dan akurasi luar biasa melebihi 90%. Fokuslah untuk meningkatkan rekor terbaik pribadi Anda daripada membandingkannya dengan orang lain. Lacak akurasi Anda dari waktu ke waktu untuk mengukur kemajuan."
+      },
+      {
+        "question": "Seberapa sering saya harus berlatih Tes Pengenalan Gambar?",
+        "answer": "Untuk hasil optimal, berlatihlah selama 10-15 menit setiap hari. Konsistensi lebih berharga daripada sesi tunggal yang diperpanjang. Latihan harian yang teratur menciptakan jalur pemrosesan visual yang lebih kuat daripada latihan intensif yang sporadis."
+      },
+      {
+        "question": "Bisakah Tes Pengenalan Gambar meningkatkan pekerjaan profesional saya?",
+        "answer": "Ya, pengenalan gambar yang lebih baik meningkatkan performa profesional di bidang yang memerlukan analisis visual. Desainer, petugas keamanan, and analis data mendapatkan keuntungan dari pengenalan pola yang lebih cepat dan pemrosesan visual yang lebih baik."
+      },
+      {
+        "question": "Mengapa saya terkadang salah mengidentifikasi gambar?",
+        "answer": "Kesalahan identifikasi dapat terjadi karena terburu-buru, melewatkan fitur utama, salah mengira gambar yang mirip, atau kurang latihan. Perlambat tempo, fokus pada fitur utama, dan berlatihlah secara teratur untuk meningkatkan pengenalan."
+      },
+      {
+        "question": "Bisakah anak-anak mendapat manfaat dari pelatihan Tes Pengenalan Gambar?",
+        "answer": "Ya, Tes Pengenalan Gambar dapat membantu anak-anak mengembangkan keterampilan pemrosesan visual dan pengenalan pola. Namun, pastikan tingkat kesulitan yang sesuai dengan usia dan awasi sesi latihan mereka."
+      },
+      {
+        "question": "Apakah kualitas layar memengaruhi pengenalan?",
+        "answer": "Ya, kualitas layar dan visibilitas dapat memengaruhi akurasi pengenalan. Pastikan visibilitas layar yang baik, pencahayaan yang memadai, dan gambar yang jernih untuk hasil terbaik. Sesuaikan pengaturan layar jika diperlukan."
+      },
+      {
+        "question": "Apa yang harus saya lakukan jika akurasi saya tidak kunjung meningkat?",
+        "answer": "Jika kemajuan terhenti, perlambat tempo dan fokus pada akurasi alih-alih kecepatan. Pastikan Anda memeriksa gambar secara sistematis, menghilangkan gangguan, and berlatih secara teratur. Terkadang istirahat sejenak memungkinkan sistem visual Anda untuk mengonsolidasikan pembelajaran."
+      },
+      {
+        "question": "Apakah lebih baik berlatih pada waktu yang sama setiap hari?",
+        "answer": "Meskipun konsistensi itu berharga, berlatih saat Anda waspada dan mata Anda beristirahat mungkin lebih penting. Beberapa orang tampil lebih baik saat beristirahat dengan cukup. Bereksperimenlah untuk menemukan kondisi latihan yang optimal bagi Anda."
+      },
+      {
+        "question": "Berapa lama waktu yang dibutuhkan untuk melihat peningkatan?",
+        "answer": "Kebanyakan orang melihat peningkatan dalam waktu 1-2 minggu setelah latihan yang konsisten. Peningkatan yang signifikan biasanya terjadi dalam 4-8 minggu. Peningkatan jangka panjang berlanjut selama berbulan-bulan dengan latihan teratur. Lacak akurasi Anda untuk memvisualisasikan kemajuan."
+      },
+      {
+        "question": "Haruskah saya fokus pada kecepatan atau akurasi?",
+        "answer": "Awalnya, prioritaskan akurasi di atas kecepatan. Akurasi tinggi dengan kecepatan sedang lebih baik daripada kecepatan tinggi dengan banyak kesalahan. Seiring meningkatnya akurasi (di atas 85%), tingkatkan kecepatan secara bertahap sambil tetap mempertahankan standar akurasi."
+      }
+    ]
+  },
+  "data-entry": {
+    "description": [
+      {
+        "title": "Tentang Tes Entri Data",
+        "content": "Tes Entri Data membantu Anda mengetik dengan lebih cepat dan akurat. Alat ini mengukur seberapa baik Anda memasukkan data ke dalam formulir. Anda akan berlatih mengetik teks, angka, dan alamat. Tes ini melacak kecepatan dan keakuratan Anda."
+      },
+      {
+        "title": "Apa itu Entri Data?",
+        "content": "Entri data berarti mengetik informasi dari kertas atau layar ke dalam komputer. Saat berlatih, Anda melatih tiga keterampilan: membaca data sumber dengan cepat, mengingat apa yang Anda baca, dan mengetik dengan akurat tanpa membuat kesalahan."
+      },
+      {
+        "title": "Bagaimana Latihan Membantu",
+        "content": "Latihan teratur memperkuat koneksi otak Anda. Anda akan mengetik lebih cepat dan membuat lebih sedikit kesalahan. Otak Anda belajar memproses informasi dengan cepat. Ini membuat entri data menjadi lebih mudah seiring berjalannya waktu."
+      },
+      {
+        "title": "Mengapa Keterampilan Entri Data Penting",
+        "content": "Keterampilan entri data yang baik sangat berguna dalam banyak pekerjaan. Anda akan bekerja lebih cepat dan membuat lebih sedikit kesalahan. Ini menghemat waktu dan mengurangi kesalahan."
+      },
+      {
+        "title": "Untuk Profesional",
+        "content": "Masukkan informasi pelanggan dengan lebih cepat, proses formulir dengan lebih efisien, kelola basis data dengan lebih sedikit kesalahan, dan tingkatkan kinerja kerja secara keseluruhan."
+      },
+      {
+        "title": "Untuk Pelajar",
+        "content": "Selesaikan tugas lebih cepat, buat catatan yang lebih baik, gunakan komputer dengan lebih efisien, dan selesaikan Pekerjaan Rumah (PR) lebih cepat."
+      },
+      {
+        "title": "Cara Kerja Tes",
+        "content": "Tes ini menampilkan data yang harus Anda ketik. Anda akan melihat kata-kata dan kalimat teks, angka dan alamat, serta informasi campuran. Ketik semuanya secara akurat. Tes ini mengukur persentase keakuratan dan kecepatan mengetik Anda. Tes ini juga melacak berapa banyak kesalahan yang Anda buat."
+      },
+      {
+        "title": "Fokus pada Keakuratan",
+        "content": "Keakuratan lebih penting daripada kecepatan. Entri data yang benar sangat penting untuk pekerjaan. Tes ini membantu Anda meningkatkan keakuratan sambil menjaga kecepatan yang baik."
+      },
+      {
+        "title": "Penggunaan di Dunia Nyata",
+        "content": "Keterampilan ini membantu Anda bekerja lebih cepat di tempat kerja, membuat lebih sedikit kesalahan mengetik, menyelesaikan tugas dengan lebih efisien, and menangani pekerjaan entri data dengan lebih baik."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Memulai",
+        "steps": [
+          "Pilih Tes Entri Data dari bagian alat keakuratan",
+          "Tes ini mensimulasikan pekerjaan entri data yang sebenarnya",
+          "Ini membantu Anda berlatih mengetik secara akurat"
+        ]
+      },
+      {
+        "title": "Persiapan",
+        "steps": [
+          "Temukan tempat yang tenang tanpa gangguan",
+          "Duduklah dengan nyaman dengan keyboard yang siap digunakan",
+          "Pastikan Anda dapat fokus sepenuhnya"
+        ]
+      },
+      {
+        "title": "Cara Kerja Tes",
+        "steps": [
+          "Layar akan menampilkan data yang perlu Anda ketik",
+          "Anda akan melihat berbagai jenis informasi",
+          "Baca dengan cermat, lalu ketik persis seperti yang ditampilkan",
+          "Perhatikan huruf kapital, tanda baca, dan spasi antar kata"
+        ]
+      },
+      {
+        "title": "Mengikuti Tes",
+        "steps": [
+          "Klik 'Mulai Tes' untuk memulai",
+          "Data akan muncul di layar",
+          "Baca setiap item dengan cermat",
+          "Ketik dengan akurat ke dalam kolom masukan"
+        ]
+      },
+      {
+        "title": "Metrik Tes",
+        "steps": [
+          "Persentase keakuratan Anda",
+          "Kecepatan mengetik Anda",
+          "Jumlah kesalahan"
+        ]
+      },
+      {
+        "title": "Tips untuk Keberhasilan",
+        "steps": [
+          "Fokus pada keakuratan terlebih dahulu, kecepatan di urutan kedua",
+          "Baca data secara lengkap sebelum mengetik",
+          "Periksa kembali entri Anda",
+          "Jangan terburu-buru - keakuratan lebih penting"
+        ]
+      },
+      {
+        "title": "Jadwal Latihan",
+        "steps": [
+          "Berlatihlah 15-20 menit setiap hari",
+          "Sesi singkat yang teratur bekerja lebih baik daripada sesi panjang yang jarang",
+          "Lacak keakuratan dan kesalahan Anda untuk melihat peningkatan"
+        ]
+      },
+      {
+        "title": "Memperbaiki Kesalahan",
+        "steps": [
+          "Saat Anda membuat kesalahan, perbaiki segera",
+          "Belajar mengenali kesalahan dengan cepat",
+          "Perhatikan pola dalam kesalahan Anda",
+          "Ini membantu Anda menghindari pengulangannya"
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Cara Menjadi Lebih Baik",
+        "content": "Tingkatkan entri data Anda dengan strategi sederhana ini. Fokus pada keakuratan terlebih dahulu, lalu kecepatan. Latihan teratur adalah kunci."
+      },
+      {
+        "title": "Berlatih Mengetik Secara Akurat",
+        "content": "Keakuratan lebih penting daripada kecepatan. Berlatihlah mengetik dengan benar terlebih dahulu. Kemudian secara bertahap ketik lebih cepat sambil tetap akurat."
+      },
+      {
+        "title": "Pelajari Mengetik 10 Jari (Touch Typing)",
+        "content": "Touch typing berarti mengetik tanpa melihat keyboard. Ini membantu Anda: mengetik lebih cepat, membuat lebih sedikit kesalahan, dan fokus pada layar bukan pada tombol. Gunakan kesepuluh jari. Jaga tangan Anda dalam posisi yang benar."
+      },
+      {
+        "title": "Berlatih Setiap Hari",
+        "content": "Berlatihlah 15-20 menit setiap hari. Sesi harian yang singkat bekerja lebih baik daripada sesi panjang yang jarang. Konsistensi membangun keterampilan lebih cepat."
+      },
+      {
+        "title": "Temukan Pola Kesalahan Anda",
+        "content": "Perhatikan kesalahan apa yang sering Anda buat. Apakah Anda melewatkan huruf tertentu? Mencampuradukkan kata-kata yang mirip? Lupa tanda baca? Memahami pola Anda membantu Anda berkembang."
+      },
+      {
+        "title": "Tetap Fokus",
+        "content": "Hilangkan gangguan saat berlatih: tutup tab browser tambahan, matikan notifikasi, cari tempat yang tenang. Perhatian penuh meningkatkan keakuratan dan kecepatan."
+      },
+      {
+        "title": "Atur Ruang Kerja Anda",
+        "content": "Pastikan ruang kerja Anda nyaman: kursi dengan ketinggian yang tepat, keyboard di posisi yang baik, monitor sejajar dengan mata. Pengaturan yang baik mengurangi kelelahan dan membantu Anda bekerja lebih lama."
+      },
+      {
+        "title": "Seimbangkan Kecepatan dan Keakuratan",
+        "content": "Mulailah dengan keakuratan. Begitu Anda mencapai keakuratan 95%, mulailah melatih kecepatan. Jangan terburu-buru - temukan kecepatan terbaik Anda."
+      },
+      {
+        "title": "Berlatih dengan Konten Berbeda",
+        "content": "Ketik berbagai hal yang berbeda: teks biasa, angka, alamat, karakter khusus. Ini membangun keterampilan mengetik yang lengkap."
+      },
+      {
+        "title": "Jaga Kesehatan Anda",
+        "content": "Tidur yang cukup, makan dengan baik, dan berolahraga. Tangan dan tubuh yang sehat mengetik dengan lebih akurat."
+      },
+      {
+        "title": "Bersabarlah",
+        "content": "Peningkatan membutuhkan waktu. Berlatihlah secara teratur. Anda akan melihat kemajuan selama beberapa minggu dan bulan. Rayakan kemenangan kecil untuk tetap termotivasi."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Berapa persentase keakuratan yang dianggap baik?",
+        "answer": "Persentase keakuratan yang baik untuk entri data berkisar antara 95-97%. Keakuratan yang sangat baik adalah 97-99%, dan keakuratan luar biasa melebihi 99%. Entri data memerlukan keakuratan tinggi, jadi fokuslah untuk mempertahankan standar keakuratan sambil meningkatkan kecepatan."
+      },
+      {
+        "question": "Seberapa sering saya harus berlatih Tes Entri Data?",
+        "answer": "Untuk hasil optimal, berlatihlah 15-20 menit setiap hari. Konsistensi lebih berharga daripada sesi tunggal yang diperpanjang. Latihan harian yang teratur menciptakan keterampilan mengetik yang lebih kuat daripada latihan intensif yang sporadis."
+      },
+      {
+        "question": "Bisakah Tes Entri Data meningkatkan produktivitas profesional saya?",
+        "answer": "Ya, peningkatan keterampilan entri data secara langsung meningkatkan produktivitas profesional dengan memungkinkan masukan data yang lebih cepat dan akurat, mengurangi kesalahan, and meningkatkan efisiensi alur kerja. Keterampilan ini ditransfer langsung ke kinerja di tempat kerja."
+      },
+      {
+        "question": "Mengapa saya membuat kesalahan mengetik?",
+        "answer": "Kesalahan dapat terjadi karena terburu-buru, teknik mengetik yang buruk, kurang latihan, atau gangguan. Perlambat kecepatan, fokus pada keakuratan, kembangkan teknik mengetik yang tepat, and berlatih secara teratur untuk mengurangi kesalahan."
+      },
+      {
+        "question": "Haruskah saya fokus pada kecepatan atau keakuratan?",
+        "answer": "Awalnya prioritaskan keakuratan di atas kecepatan. Keakuratan tinggi dengan kecepatan sedang lebih baik daripada kecepatan tinggi dengan banyak kesalahan. Seiring meningkatnya keakuratan (di atas 95%), tingkatkan kecepatan secara bertahap sambil mempertahankan standar keakuratan."
+      },
+      {
+        "question": "Bisakah anak-anak mendapat manfaat dari pelatihan Tes Entri Data?",
+        "answer": "Ya, Tes Entri Data dapat membantu anak-anak mengembangkan keterampilan mengetik dan kemahiran komputer. Namun, pastikan tingkat kesulitan yang sesuai dengan usia dan awasi sesi latihan. Fokus pada keakuratan dan teknik yang tepat."
+      },
+      {
+        "question": "Apakah jenis keyboard memengaruhi kinerja entri data?",
+        "answer": "Jenis keyboard dapat memengaruhi kenyamanan dan preferensi, tetapi kinerja entri data terutama ditentukan oleh keterampilan dan latihan daripada jenis keyboard. Gunakan keyboard apa pun yang paling membuat Anda nyaman."
+      },
+      {
+        "question": "Apa yang harus saya lakukan jika keakuratan saya tidak meningkat?",
+        "answer": "Jika kemajuan terhenti, perlambat kecepatan dan fokus pada keakuratan daripada kecepatan. Pastikan Anda menggunakan teknik mengetik yang tepat, menghilangkan gangguan, and berlatih secara teratur. Terkadang istirahat sejenak memungkinkan keterampilan Anda terkonsolidasi."
+      },
+      {
+        "question": "Apakah lebih baik berlatih pada waktu yang sama setiap hari?",
+        "answer": "Meskipun konsistensi itu berharga, berlatih saat Anda waspada dan tangan Anda sudah melakukan pemanasan mungkin lebih penting. Beberapa orang tampil lebih baik setelah melakukan latihan tangan ringan. Bereksperimenlah untuk menemukan kondisi latihan yang optimal bagi Anda."
+      },
+      {
+        "question": "Berapa lama waktu yang dibutuhkan untuk melihat kemajuan?",
+        "answer": "Kebanyakan orang melihat peningkatan dalam 1-2 minggu latihan yang konsisten. Peningkatan yang signifikan biasanya terjadi selama 4-8 minggu. Peningkatan jangka panjang berlanjut selama berbulan-bulan dengan latihan teratur. Lacak keakuratan dan kecepatan Anda untuk memvisualisasikan kemajuan."
+      },
+      {
+        "question": "Bisakah Tes Entri Data membantu tugas mengetik lainnya?",
+        "answer": "Ya, peningkatan keterampilan entri data menyempurnakan semua tugas mengetik dengan meningkatkan keakuratan, kecepatan, dan kemahiran keyboard. Keterampilan ini ditransfer langsung ke penulisan, email, dan aktivitas berbasis komputer lainnya."
+      },
+      {
+        "question": "Apa faktor terpenting dalam entri data?",
+        "answer": "Keakuratan adalah faktor terpenting dalam entri data. Entri data yang akurat lebih berharga daripada entri yang cepat tetapi rentan kesalahan. Fokuslah untuk mengembangkan keakuratan tinggi terlebih dahulu, kemudian tingkatkan kecepatan secara bertahap sambil mempertahankan standar keakuratan."
+      }
+    ]
+  },
+  "multi-stimulus": {
+    "description": [
+      {
+        "title": "Tentang Reaksi Multi-Stimulus",
+        "content": "Empat opsi muncul dengan aturan yang berubah (warna, keunikan, atau posisi). Kamu harus menguraikan instruksi, memilih target yang benar, dan mengeklik dengan cepat—perhatian selektif ditambah waktu reaksi (RT) keputusan."
+      },
+      {
+        "title": "Dibandingkan Reaksi Sederhana",
+        "content": "RT Sederhana adalah satu stimulus, satu respons. Di sini kamu menyaring distraktor dan menerapkan aturan di bawah tekanan waktu."
+      },
+      {
+        "title": "Jenis Instruksi",
+        "content": "Contohnya meliputi mengeklik warna yang disebutkan, mengeklik yang berbeda sendiri (odd one out), atau mengeklik target posisional. Aturan berubah di setiap ronde."
+      },
+      {
+        "title": "Penilaian Skor",
+        "content": "Akurasi diutamakan, lalu rata-rata RT pada jawaban yang benar. Klik salah yang terburu-buru adalah latihan yang buruk."
+      },
+      {
+        "title": "Sensasi Tingkat Kesulitan",
+        "content": "Waktu baca yang lebih singkat dan distraktor yang semakin mirip akan meningkatkan beban kognitif."
+      },
+      {
+        "title": "Penerapan",
+        "content": "Pandangan saat mengemudi, pekerjaan UI, dan game yang membutuhkan perhatian fleksibel terhadap aturan."
+      },
+      {
+        "title": "Biaya Peralihan Aturan (Rule Switching Cost)",
+        "content": "Saat instruksi berubah setiap ronde, sisa perhatian pada aturan lama menyebabkan kesalahan. Kosongkan aturan sebelumnya secara jelas: ucapkan aturan baru sekali sebelum melihat kotak."
+      },
+      {
+        "title": "Pencarian Visual dalam Batas Waktu",
+        "content": "Kamu tidak hanya bereaksi—kamu mencari di bawah filter kategoris. Ini lebih mirip pemantauan dasbor daripada klik lampu hijau sederhana."
+      },
+      {
+        "title": "Taksonomi Kesalahan",
+        "content": "Pisahkan kesalahan warna yang salah dari kesalahan keunikan dan kesalahan posisi. Masing-masing mengarah ke perbaikan yang berbeda (penamaan warna, pemindaian perbedaan, label spasial)."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Mulai",
+        "steps": [
+          "Mulai permainan.",
+          "Baca instruksi sebelum bergerak."
+        ]
+      },
+      {
+        "title": "Putuskan",
+        "steps": [
+          "Petakan aturan ke dalam kotak.",
+          "Klik sekali dengan mantap.",
+          "Bersiaplah untuk perubahan aturan berikutnya."
+        ]
+      },
+      {
+        "title": "Selesai",
+        "steps": [
+          "Tinjau akurasi dan rata-rata RT.",
+          "Coba lagi dengan fokus membaca instruksi jika kesalahan mendominasi."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Baca dengan Seksama",
+        "content": "Aturan yang dibaca setengah-setengah berakibat pada klik salah yang penuh keyakinan."
+      },
+      {
+        "title": "Akurasi Sebelum Kecepatan",
+        "content": "Kecepatan mengikuti keputusan yang bersih."
+      },
+      {
+        "title": "Pengaturan yang Tenang",
+        "content": "Distraksi eksternal merusak peralihan aturan."
+      },
+      {
+        "title": "Sebutkan Aturan dengan Suara Keras",
+        "content": "Label satu kata (HIJAU / BERBEDA / KIRI) menstabilkan pemetaan."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Kisaran RT yang bagus?",
+        "content": "Biasanya sekitar ~400–600ms dengan akurasi yang solid; di bawah 350ms sudah sangat bagus jika akurat."
+      },
+      {
+        "question": "Dibandingkan RT sederhana?",
+        "content": "Menambahkan biaya keputusan dan penyaringan."
+      },
+      {
+        "question": "Manfaat untuk gaming?",
+        "content": "Membantu perhatian yang fleksibel terhadap aturan di tengah keramaian/kekacauan visual."
+      },
+      {
+        "question": "Metrik prioritas?",
+        "content": "Akurasi, lalu RT."
+      },
+      {
+        "question": "Mengapa instruksi berubah?",
+        "content": "Untuk melatih kontrol yang fleksibel, bukan sekadar memetakan hafalan."
+      },
+      {
+        "question": "Batas kesalahan (Miss budget)?",
+        "content": "Kesalahan terbatas dapat mengakhiri permainan lebih awal—lihat UI."
+      },
+      {
+        "question": "Sentuh vs mouse?",
+        "content": "Gunakan perangkat apa pun yang biasa kamu mainkan; bandingkan dalam perangkat yang sama."
+      },
+      {
+        "question": "Durasi latihan?",
+        "content": "10–15 menit setiap hari."
+      },
+      {
+        "question": "Pemain buta warna?",
+        "content": "Ronde posisional/keberbedaan masih bisa dimainkan; ronde warna mungkin lebih sulit."
+      },
+      {
+        "question": "Cara memperbaiki RT yang mandek?",
+        "content": "Kurangi kesalahan terlebih dahulu—noise akan menaikkan rata-rata."
+      }
+    ]
+  },
+  "sequence-reaction": {
+    "description": [
+      {
+        "title": "Tentang Sequence Reaction",
+        "content": "Perhatikan urutan warna yang menyala, lalu reproduksi dengan cepat secara berurutan. Game ini menggabungkan pengkodean memori kerja dengan output motorik berkecepatan tinggi."
+      },
+      {
+        "title": "Tuntutan Ganda",
+        "content": "Mengingat urutan saja tidak cukup—kamu juga harus mengeksekusi rantai tersebut dengan cepat tanpa kesalahan transposisi."
+      },
+      {
+        "title": "Progresi",
+        "content": "Urutan akan semakin panjang di setiap ronde. Akurasi awal sangat penting; satu kesalahan posisi dapat mengakhiri rentetan kemenanganmu."
+      },
+      {
+        "title": "Sistem Skor",
+        "content": "Urutan benar yang lebih panjang dan kecepatan eksekusi yang bersih sangat menentukan. Jangan mengorbankan urutan demi klik sembarangan."
+      },
+      {
+        "title": "Transfer Keterampilan",
+        "content": "Membantu dalam prosedur multi-langkah, urutan serial seperti musik, dan combo game—tetaplah berlatih keterampilan aslinya secara terpisah."
+      },
+      {
+        "title": "Kegagalan Umum",
+        "content": "Transposisi (menukar dua warna) dan terburu-buru melakukan ketukan pertama setelah proses pengkodean."
+      },
+      {
+        "title": "Memori Urutan Serial",
+        "content": "Kesalahan urutan berbeda dengan kesalahan item. Kamu mungkin tahu warna-warnanya tetapi menukar dua warna di tengah urutan. Chunking dan pengulangan berirama secara khusus melatih urutan."
+      },
+      {
+        "title": "Output Buffering",
+        "content": "Beberapa pemain dapat mengkodekan dengan baik tetapi gagal saat eksekusi. Jeda sejenak setelah urutan berakhir, lalu mainkan kembali dengan tempo yang terukur."
+      },
+      {
+        "title": "Progresi Panjang",
+        "content": "Tambahkan panjang hanya setelah berhasil menyelesaikan tiga kali percobaan yang bersih pada panjang saat ini. Memaksakan panjang demi ego hanya akan menghasilkan pembelajaran yang buruk."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Perhatikan",
+        "steps": [
+          "Mulai ronde.",
+          "Perhatikan setiap lampu secara berurutan.",
+          "Ulangi rantai tersebut dalam hati."
+        ]
+      },
+      {
+        "title": "Mainkan Kembali",
+        "steps": [
+          "Klik warna dalam urutan yang sama.",
+          "Utamakan urutan yang benar daripada kecepatan klik."
+        ]
+      },
+      {
+        "title": "Lanjutkan",
+        "steps": [
+          "Urutan yang lebih panjang akan muncul setelah berhasil.",
+          "Kendalikan kembali ketenangan setelah melakukan kesalahan."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Kelompokkan Warna (Chunking)",
+        "content": "Kelompokkan sebagai merah-merah-biru alih-alih enam langkah terpisah."
+      },
+      {
+        "title": "Kodekan Lalu Eksekusi",
+        "content": "Jangan mulai mengklik saat masih ragu dengan item pertama."
+      },
+      {
+        "title": "Pengulangan Berirama",
+        "content": "Ketukan dengan ritme yang stabil mengurangi kesalahan tukar posisi."
+      },
+      {
+        "title": "Latihan Singkat Harian",
+        "content": "Memori serial akan semakin kuat dengan pengulangan."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Berapa panjang yang bagus?",
+        "answer": "Kebanyakan orang dapat menampung 5–7 item; latihan dapat meningkatkannya lebih tinggi."
+      },
+      {
+        "question": "Memori atau kecepatan dulu?",
+        "answer": "Akurasi memori yang utama."
+      },
+      {
+        "question": "Kenapa kesalahan tukar posisi bisa terjadi?",
+        "answer": "Pengkodean yang lemah atau output motorik yang terburu-buru."
+      },
+      {
+        "question": "Apakah teknik chunking membantu?",
+        "answer": "Ya—karena unit yang perlu disimpan menjadi lebih sedikit."
+      },
+      {
+        "question": "Apakah sama dengan sequence memory?",
+        "answer": "Terkait, tetapi game ini lebih menekankan pada reproduksi kecepatan."
+      },
+      {
+        "question": "Berapa lama durasi sesi?",
+        "answer": "10–15 menit."
+      },
+      {
+        "question": "Apa yang harus dilakukan setelah salah?",
+        "answer": "Bangun kembali dengan pola pikir rantai pendek yang bersih."
+      },
+      {
+        "question": "Apakah ada isyarat audio?",
+        "answer": "Jika ada, gunakan; jika tidak, mengandalkan visual + latihan mental."
+      },
+      {
+        "question": "Bagaimana cara membandingkan skor?",
+        "answer": "Gunakan tingkat kesulitan dan perangkat masukan yang sama."
+      },
+      {
+        "question": "Bagaimana cara mengatasi plateau?",
+        "answer": "Perlambat pemutaran ulang sebesar 10% untuk mengurangi kesalahan transposisi."
+      }
+    ]
+  },
+  "pattern-matching": {
+    "description": [
+      {
+        "title": "Tentang Pencocokan Pola",
+        "content": "Sebuah pola berkedip sebentar; Anda harus memilih yang identik di antara pilihan yang mirip. Ini melatih kecepatan pengkodean visual dan diskriminasi visual yang tajam."
+      },
+      {
+        "title": "Apa yang Membuat Sulit",
+        "content": "Pilihan yang mirip memiliki perbedaan kecil. Durasi tampil yang singkat menghukum kebiasaan melihat secara sekilas dan malas."
+      },
+      {
+        "title": "Alur Permainan",
+        "content": "Pelajari kedipan → opsi muncul → pilih kecocokan yang tepat → pola menjadi lebih kompleks / durasi tampil lebih singkat."
+      },
+      {
+        "title": "Metrik",
+        "content": "Persentase akurasi adalah yang utama; kecepatan adalah yang kedua. Menebak-nebak akan merusak proses belajar."
+      },
+      {
+        "title": "Penerapan",
+        "content": "Pemeriksaan visual QA, kritik desain, peninjauan gambar keamanan, dan studi yang berorientasi pada detail."
+      },
+      {
+        "title": "Keterbatasan",
+        "content": "Ini adalah latihan permainan, bukan ujian penglihatan klinis."
+      },
+      {
+        "title": "Jendela Pengkodean",
+        "content": "Kedipan adalah batas waktu pengkodean. Latih diri Anda untuk langsung mengambil dua jangkar (jumlah elemen + satu fitur asimetris)."
+      },
+      {
+        "title": "Psikologi Pilihan Pengecoh",
+        "content": "Desainer uji sulit mengubah satu detail lokal. Jika Anda hanya mengingat siluet global, Anda akan memilih pengecoh yang salah. Paksa pemeriksaan lokal."
+      },
+      {
+        "title": "Kebersihan Visual",
+        "content": "Bersihkan layar, tingkatkan kontras, dan duduklah pada jarak yang stabil. Perbedaan silau kecil menjadi penentu saat kedipan berlangsung singkat."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Kode",
+        "steps": [
+          "Mulai.",
+          "Pelajari kedipan dengan cermat.",
+          "Perhatikan fitur lokal yang khas."
+        ]
+      },
+      {
+        "title": "Pilih",
+        "steps": [
+          "Bandingkan opsi secara sistematis.",
+          "Tolak pilihan pengecoh yang hampir mirip.",
+          "Konfirmasi sebelum mengetuk."
+        ]
+      },
+      {
+        "title": "Progres",
+        "steps": [
+          "Bersiaplah menghadapi kedipan yang lebih cepat nantinya.",
+          "Jaga akurasi di atas ego kecepatan."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Daftar Periksa Fitur",
+        "content": "Sudut, celah, jumlah—pilih 2–3 jangkar selama kedipan."
+      },
+      {
+        "title": "Perbandingan Sistematis",
+        "content": "Pindai opsi posisi demi posisi, bukan berdasarkan tebakan."
+      },
+      {
+        "title": "Lindungi Waktu Pengkodean",
+        "content": "Kedipkan mata setelah kedipan selesai, bukan saat kedipan terjadi."
+      },
+      {
+        "title": "Latihan Presisi Harian",
+        "content": "Sesi pendek yang akurat jauh lebih baik daripada sesi panjang yang ceroboh."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Akurasi yang baik?",
+        "answer": "Targetkan 80–90%+; kejar kecepatan hanya setelah itu."
+      },
+      {
+        "question": "Kenapa makin sulit?",
+        "answer": "Untuk menjaga tantangan diskriminasi tetap ada seiring peningkatan kemampuan Anda."
+      },
+      {
+        "question": "Kecepatan vs presisi?",
+        "answer": "Presisi yang utama."
+      },
+      {
+        "question": "Semua opsi terlihat sama?",
+        "answer": "Temukan satu sel/tepi yang berbeda."
+      },
+      {
+        "question": "Masalah penglihatan?",
+        "answer": "Tingkatkan kecerahan layar; kunjungi dokter mata jika ada masalah nyata."
+      },
+      {
+        "question": "Durasi sesi?",
+        "answer": "~10 menit."
+      },
+      {
+        "question": "Presisi sentuhan?",
+        "answer": "Zum peramban Anda jika ketukan terasa canggung."
+      },
+      {
+        "question": "Cara meningkatkan pengkodean?",
+        "answer": "Sebutkan satu fitur kecil dengan lantang selama kedipan."
+      },
+      {
+        "question": "Tujuan pilihan pengecoh?",
+        "answer": "Memaksa pemeriksaan detail, bukan pencocokan siluet."
+      },
+      {
+        "question": "Membandingkan hasil lari/sesi?",
+        "answer": "Gunakan tingkat kesulitan dan ukuran layar yang sama."
+      }
+    ]
+  },
+  "precision-click": {
+    "description": [
+      {
+        "title": "Tentang Precision Click",
+        "content": "Target kecil muncul sebentar; kamu harus mengekliknya dengan akurat. Game ini mengukur kontrol pointer, akuisisi visual, dan disiplin klik."
+      },
+      {
+        "title": "Tradeoff Kecepatan–Akurasi",
+        "content": "CPS mentah tidak berarti banyak jika banyak meleset. Akurasi tinggi dengan kecepatan stabil adalah tujuan latihan."
+      },
+      {
+        "title": "Alur Permainan",
+        "content": "Target muncul → klik sebelum waktu habis → target mengecil seiring skor bertambah → waktu sesi mengakhiri permainan."
+      },
+      {
+        "title": "Metrik",
+        "content": "Hit (kena), akurasi (hit vs miss), dan klik/detik (CPS). Pantau ketiganya."
+      },
+      {
+        "title": "Pengaturan Itu Penting",
+        "content": "DPI mouse, polling rate, dan gesekan permukaan memengaruhi hasil—bandingkan pada satu pengaturan yang sama."
+      },
+      {
+        "title": "Siapa yang Diuntungkan",
+        "content": "Gamer, desainer, dan siapa saja yang ingin mengasah kontrol kursor tingkat lanjut."
+      },
+      {
+        "title": "Koreksi Mikro",
+        "content": "Presisi tingkat tinggi sebagian besar berasal dari koreksi detik-detik terakhir, bukan sekadar flick mentah. Datangi dengan cepat, perlambat, lalu lakukan penyesuaian mikro tepat di tengah."
+      },
+      {
+        "title": "Manajemen Ketegangan",
+        "content": "Mencengkeram mouse terlalu erat (death-grip) meningkatkan risiko kelewatan (overshoot). Lepaskan ketegangan tangan di sela-sela permainan."
+      },
+      {
+        "title": "Triad Metrik",
+        "content": "Perhatikan hit, akurasi, dan CPS secara bersamaan. CPS naik tetapi akurasi turun bukanlah sebuah kemajuan."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Mulai",
+        "steps": [
+          "Mulai sesi berwaktu.",
+          "Jaga kursor bergerak dengan mulus."
+        ]
+      },
+      {
+        "title": "Klik",
+        "steps": [
+          "Temukan pusat target.",
+          "Klik sekali dengan bersih.",
+          "Jangan asal spam klik di sekitar target."
+        ]
+      },
+      {
+        "title": "Adaptasi",
+        "steps": [
+          "Saat target mengecil, perlambat pendekatan akhir.",
+          "Atur ulang genggaman jika ketegangan tangan meningkat."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Bias Akurasi",
+        "content": "Rentetan hit yang bersih lebih baik daripada asal klik yang panik."
+      },
+      {
+        "title": "Pemanasan",
+        "content": "30 detik klik santai sebelum memulai sesi yang dinilai."
+      },
+      {
+        "title": "Kenyamanan DPI",
+        "content": "Gunakan sensitivitas yang bisa kamu sesuaikan secara mikro, bukan sekadar melakukan flick."
+      },
+      {
+        "title": "Lengan vs Pergelangan Tangan",
+        "content": "Gerakan besar menggunakan lengan; koreksi halus menggunakan jari/pergelangan tangan."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "CPS yang bagus?",
+        "answer": "Sekitar 2–3 CPS yang akurat sudah bagus; 3–4 CPS dengan akurasi tinggi sangat tangguh."
+      },
+      {
+        "question": "Jenis mouse?",
+        "answer": "Kenyamanan lebih penting daripada mitos merek."
+      },
+      {
+        "question": "Cara mengurangi miss?",
+        "answer": "Bidik target kecil, klik sekali—hentikan kebiasaan asal spam saat panik."
+      },
+      {
+        "question": "Alasan target mengecil?",
+        "answer": "Agar tingkat presisi tetap menantang seiring meningkatnya kemampuanmu."
+      },
+      {
+        "question": "Durasi sesi?",
+        "answer": "Biasanya sekitar ~30 detik berpoin—cek UI."
+      },
+      {
+        "question": "Bagaimana dengan layar sentuh?",
+        "answer": "Keterampilan motoriknya berbeda; catat skor secara terpisah."
+      },
+      {
+        "question": "Tanda-tanda kelelahan?",
+        "answer": "Meningkatnya jumlah miss dan ketegangan pada genggaman—segeralah istirahat."
+      },
+      {
+        "question": "Cara membandingkan skor?",
+        "answer": "Gunakan DPI dan mouse yang sama."
+      },
+      {
+        "question": "Apakah mousepad berpengaruh?",
+        "answer": "Permukaan yang konsisten membantu konsistensi latihan."
+      },
+      {
+        "question": "Latihan terbaik?",
+        "answer": "Selingi hari khusus fokus akurasi dan hari khusus fokus kecepatan secara bergantian."
+      }
+    ]
+  },
+  "object-tracking": {
+    "description": [
+      {
+        "title": "Tentang Multiple Object Tracking",
+        "content": "Multiple Object Tracking (MOT) meminta Anda untuk mengikuti beberapa titik target di antara pengecoh yang identik saat mereka bergerak, lalu memilih target ketika gerakan berhenti."
+      },
+      {
+        "title": "Tuntutan Perhatian",
+        "content": "Anda mempertahankan fokus perhatian, melewati persimpangan jalur tanpa tertukar identitasnya, dan menolak pengecoh yang lewat di dekatnya."
+      },
+      {
+        "title": "Struktur Ronde",
+        "content": "Target berkedip, semua titik bergerak, lalu Anda mengeklik target asli. Kepadatan dan persimpangan jalur menimbulkan sebagian besar kesalahan."
+      },
+      {
+        "title": "Tingkat Kesulitan",
+        "content": "Lebih banyak target, kecepatan lebih tinggi, waktu penandaan lebih singkat, dan bidang yang lebih padat meningkatkan beban."
+      },
+      {
+        "title": "Kasus Penggunaan",
+        "content": "Visi olahraga, latihan kesadaran mengemudi, dan atensi situasional esports—transfer kemampuan tetap memerlukan latihan tugas nyata."
+      },
+      {
+        "title": "Pola Pikir Skor",
+        "content": "Prioritaskan persentase target yang berhasil ditemukan sebelum menaikkan jumlah set."
+      },
+      {
+        "title": "Identitas Dibandingkan Cuplikan Lokasi",
+        "content": "Pemula mengingat tangkapan layar posisi pada satu momen, lalu gagal saat objek bergerak. Pakar mempertahankan lintasan berkelanjutan. Ucapkan dalam hati: target kiri atas melayang turun, dan seterusnya."
+      },
+      {
+        "title": "Kepadatan dan Kapasitas",
+        "content": "Kapasitas perhatian untuk MOT terbatas. Menambahkan target bukanlah kesulitan yang bersifat linear—kesulitan sering kali melonjak drastis secara tiba-tiba. Hormati batasan tersebut; berlatihlah tepat di bawahnya."
+      },
+      {
+        "title": "Persamaan dengan Olahraga",
+        "content": "Memantau rekan setim dan lawan menyerupai MOT, tetapi olahraga juga menambahkan makna dan prediksi. Gunakan MOT sebagai tempat gym perhatian, lalu terapkan pemindaian dalam aktivitas nyata."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Tandai",
+        "steps": [
+          "Hafalkan target yang berkedip.",
+          "Jangan mengalihkan pandangan saat sorotan berlangsung."
+        ]
+      },
+      {
+        "title": "Lacak",
+        "steps": [
+          "Gunakan fokus lunak pada titik tengah kelompok.",
+          "Temukan kembali setelah persimpangan jalur."
+        ]
+      },
+      {
+        "title": "Pilih",
+        "steps": [
+          "Klik setiap target yang diingat.",
+          "Hindari pengecoh di sekitar."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Fokus Lunak",
+        "content": "Penginderaan gerak periferal lebih baik daripada pandangan yang melirik cepat ke sana ke mari."
+      },
+      {
+        "title": "Protokol Persimpangan",
+        "content": "Antisipasi pertukaran; kunci kembali menggunakan kontinuitas gerakan."
+      },
+      {
+        "title": "Set Kecil Terlebih Dahulu",
+        "content": "Menangkan 2–3 target sebelum menambah lebih banyak."
+      },
+      {
+        "title": "Berhenti Saat Mulai Menebak",
+        "content": "Kelelahan merusak akurasi MOT."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Jumlah target untuk pemula?",
+        "answer": "Mulai dengan 2–3 target."
+      },
+      {
+        "question": "Mengapa persimpangan jalur merugikan?",
+        "answer": "Terjadi pertukaran identitas antara target dan pengecoh."
+      },
+      {
+        "question": "Haruskah menatap satu titik?",
+        "answer": "Tidak—Anda akan kehilangan set tersebut."
+      },
+      {
+        "question": "Transfer ke kemampuan mengemudi?",
+        "answer": "Merupakan keterampilan perhatian yang terkait; bukan pengganti latihan mengemudi yang sebenarnya."
+      },
+      {
+        "question": "Durasi sesi?",
+        "answer": "5–12 menit berkualitas."
+      },
+      {
+        "question": "Mengapa titik-titiknya identik?",
+        "answer": "Untuk memaksa pelacakan perhatian, bukan jalan pintas fitur."
+      },
+      {
+        "question": "Apakah lebih cepat selalu lebih baik?",
+        "answer": "Hanya jika akurasi tetap terjaga."
+      },
+      {
+        "question": "Aim trainer vs MOT?",
+        "answer": "Aim adalah pengejaran motorik; MOT adalah rangkaian perhatian."
+      },
+      {
+        "question": "Indikasi peningkatan?",
+        "answer": "Akurasi yang sama pada pengaturan yang lebih sulit, atau pemulihan yang lebih tinggi pada pengaturan yang sama."
+      },
+      {
+        "question": "Bolehkah jeda di tengah gerakan?",
+        "answer": "Anggap uji coba berlangsung terus-menerus."
+      }
+    ]
+  },
+  "color-blindness": {
+    "description": [
+      {
+        "title": "Tentang Tes Penglihatan Warna Ini",
+        "content": "Pelat gaya Ishihara menyembunyikan angka di dalam ladang titik berwarna. Penglihatan merah-hijau normal biasanya dapat membaca angka tersebut; kekurangan penglihatan merah-hijau mungkin melihat angka lain atau tidak melihat apa pun."
+      },
+      {
+        "title": "Apa Saja yang Disaring",
+        "content": "Terutama pola merah-hijau (protan/deutan). Tes ini kurang efektif untuk masalah biru-kuning (tritan) dan bukan merupakan rangkaian tes klinis lengkap."
+      },
+      {
+        "title": "Tingkat Kesulitan",
+        "content": "Mode yang lebih mudah meningkatkan kontras; Mode Sulit/Profesional memperkecil perbedaan rona warna. Tingkat yang lebih sulit bukan berarti otomatis menjadi diagnosis."
+      },
+      {
+        "title": "Batasan Kritis",
+        "content": "Bukan saran medis. Night Light, tingkat kecerahan, jenis panel, dan pencahayaan ruangan mengubah hasil. Kebutuhan okupasional memerlukan pengujian bersertifikat."
+      },
+      {
+        "title": "Siapa yang Menggunakannya",
+        "content": "Untuk rasa ingin tahu, empati aksesibilitas bagi desainer, dan pemeriksaan mandiri informal sebelum mencari pengujian profesional."
+      },
+      {
+        "title": "Membaca Hasil",
+        "content": "Perhatikan kesalahan yang konsisten pada pelat bergaya merah-hijau di bawah pencahayaan yang baik—bukan hanya satu kesalahan pada tingkat Profesional."
+      },
+      {
+        "title": "Pola Protan vs Deutan",
+        "content": "Kekurangan penglihatan merah-hijau yang berbeda mengubah pelat mana yang gagal dikenali. Alat ini tidak akan memberi label subspesifik secara jelas, tetapi klinik bisa. Gunakan hasil kami sebagai pendorong untuk melakukan tes jika pelat gagal dikenali secara konsisten."
+      },
+      {
+        "title": "Empati Desain",
+        "content": "Jika Anda mengalami kesulitan di sini, lakukan audit pada tangkapan layar produk Anda sendiri dengan simulator skala abu-abu dan buta warna. Ganti titik status yang hanya mengandalkan warna dengan ikon atau teks."
+      },
+      {
+        "title": "Protokol Pengujian Ulang",
+        "content": "Gunakan perangkat yang sama, filter nonaktif, kecerahan tetap, dan pencahayaan pagi hari. Ubah satu variabel dalam satu waktu jika Anda sedang menyelidiki hasil yang mengejutkan."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Persiapan",
+        "steps": [
+          "Nonaktifkan filter cahaya biru.",
+          "Tingkatkan kecerahan layar.",
+          "Hindari penggunaan lensa bertanda/berwarna."
+        ]
+      },
+      {
+        "title": "Uji",
+        "steps": [
+          "Pilih tingkat kesulitan.",
+          "Mulai tes.",
+          "Masukkan angka yang Anda lihat."
+        ]
+      },
+      {
+        "title": "Jika Kosong",
+        "steps": [
+          "Lewati daripada menebak secara acak jika Anda menginginkan keakuratan yang bermakna.",
+          "Uji ulang pada layar lain yang sudah dikalibrasi jika merasa terkejut dengan hasilnya."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Perbandingan Perangkat yang Sama",
+        "content": "Hanya bandingkan sesi dengan pengaturan tampilan yang cocok."
+      },
+      {
+        "title": "Uji Ulang di Siang Hari",
+        "content": "Tema malam yang hangat mendistorsi rona warna."
+      },
+      {
+        "title": "Poin Penting Aksesibilitas",
+        "content": "Jika warna merah-hijau sulit dibedakan, lebih baik gunakan antarmuka (UI) yang tidak hanya mengandalkan warna."
+      },
+      {
+        "title": "Konsultasikan dengan Profesional Saat Dibutuhkan",
+        "content": "Pekerjaan dan lisensi tertentu mungkin memerlukan tes klinis."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Apakah ini diagnosis medis?",
+        "answer": "Tidak—ini hanya penyaringan edukatif."
+      },
+      {
+        "question": "Jenis kekurangan warna apa?",
+        "answer": "Terutama pola merah-hijau."
+      },
+      {
+        "question": "Kenapa ada perbedaan antara ponsel dan laptop?",
+        "answer": "Panel atau manajemen warna yang berbeda."
+      },
+      {
+        "question": "Apa dampak filter cahaya biru?",
+        "answer": "Ya—matikan filter tersebut saat melakukan tes."
+      },
+      {
+        "question": "Apakah kekurangan ringan tetap bisa melihat beberapa pelat?",
+        "answer": "Hal ini umum terjadi pada pelat kontras tinggi."
+      },
+      {
+        "question": "Bagaimana untuk anak-anak?",
+        "answer": "Bisa untuk pembelajaran; konfirmasikan secara klinis jika ada kekhawatiran."
+      },
+      {
+        "question": "Apakah latihan dapat menyembuhkan buta warna?",
+        "answer": "Tidak."
+      },
+      {
+        "question": "Apakah desainer boleh mengandalkan alat ini saja?",
+        "answer": "Tidak—gunakan juga alat penguji kontras dan simulasi."
+      },
+      {
+        "question": "Khawatir dengan hasilnya?",
+        "answer": "Jadwalkan pemeriksaan penglihatan warna profesional."
+      },
+      {
+        "question": "Apakah boleh melewati soal?",
+        "answer": "Ya, saat tidak ada angka yang terlihat."
+      }
+    ]
+  },
+  "mental-rotation": {
+    "description": [
+      {
+        "title": "Tentang Rotasi Mental",
+        "content": "Tentukan apakah dua figur balok 3D adalah objek yang sama pada sudut yang berbeda atau merupakan bayangan cermin yang tidak dapat disamakan melalui rotasi."
+      },
+      {
+        "title": "Apa yang Diukurnya",
+        "content": "Visualisasi spasial dan beban dalam mentransformasikan struktur 3D secara mental—kognisi gaya klasik Shepard–Metzler."
+      },
+      {
+        "title": "Logika Percobaan",
+        "content": "Pilih Sama jika rotasi kaku menyelaraskannya; Berbeda jika salah satunya adalah cermin (enantiomorf)."
+      },
+      {
+        "title": "Kesulitan",
+        "content": "Sudut yang lebih besar, bentuk yang kompleks, dan batasan waktu yang lebih ketat meningkatkan beban—terutama rotasi kedalaman."
+      },
+      {
+        "title": "Pola Peningkatan",
+        "content": "Lebih sedikit kebingungan cermin dan RT (Waktu Reaksi) yang lebih stabil, bukan lonjakan IQ dalam semalam."
+      },
+      {
+        "title": "Manfaat Penggunaan",
+        "content": "Geometri, sketsa teknik, desain, dan game yang membutuhkan tata letak imajiner."
+      },
+      {
+        "title": "Disparitas Sudut",
+        "content": "Sudut rotasi yang lebih besar biasanya memperlambat respons dan meningkatkan kesalahan—temuan klasik. Saat Anda berkembang, Anda sering kali mengurangi biaya sudut tersebut melalui strategi yang lebih baik, bukan sihir."
+      },
+      {
+        "title": "Jebakan Cermin",
+        "content": "Percobaan tersulit terlihat hampir benar hingga satu lengan terbalik orientasinya. Biasakan memeriksa titik acuan kedua sebelum mengonfirmasi Sama."
+      },
+      {
+        "title": "Tautan Praktik STEM",
+        "content": "Membuat sketsa pandangan ortografis di atas kertas melengkapi game ini. Rotasi mental digital ditambah sketsa fisik mencakup lebih banyak keterampilan daripada melakukannya secara terpisah."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Mulai",
+        "steps": [
+          "Pilih tingkat kesulitan.",
+          "Inisialisasi.",
+          "Bandingkan kedua figur sebelum menjawab."
+        ]
+      },
+      {
+        "title": "Menilai",
+        "steps": [
+          "Pilih satu lengan sebagai titik acuan.",
+          "Bayangkan memutarnya ke posisi yang tepat.",
+          "Jika hanya bayangan cermin yang cocok, pilih Berbeda."
+        ]
+      },
+      {
+        "title": "Dalam Batas Waktu",
+        "steps": [
+          "Hindari panik mengetuk Sama.",
+          "Periksa ulang korespondensi satu sendi saat merasa tidak yakin."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Pelacakan Titik Acuan",
+        "content": "Putar satu fitur, jangan seluruh objek sekaligus."
+      },
+      {
+        "title": "Pemeriksaan Kiralitas",
+        "content": "Rotasi mempertahankan orientasi tangan; cermin tidak."
+      },
+      {
+        "title": "Latihan Kedalaman",
+        "content": "Habiskan sesi untuk putaran ke dalam kedalaman—itu lebih sulit daripada putaran bidang gambar."
+      },
+      {
+        "title": "Lingkungan Tenang",
+        "content": "Memori kerja spasial sangat terganggu oleh kebisingan tugas ganda."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Sama artinya?",
+        "answer": "Identik setelah memperhitungkan rotasi 3D."
+      },
+      {
+        "question": "Berbeda artinya?",
+        "answer": "Pencerminan atau kecocokan yang tidak dapat dirotasi."
+      },
+      {
+        "question": "Tes IQ?",
+        "answer": "Bukan—sampel keterampilan spasial."
+      },
+      {
+        "question": "Apakah latihan membantu?",
+        "answer": "Ya, terutama mengurangi kesalahan cermin."
+      },
+      {
+        "question": "Mengapa kedalaman lebih sulit?",
+        "answer": "Struktur tersembunyi dan pemendekan visual membebani memori."
+      },
+      {
+        "question": "Kecepatan atau akurasi?",
+        "answer": "Akurasi diutamakan."
+      },
+      {
+        "question": "Keluarga Shepard–Metzler?",
+        "answer": "Ya."
+      },
+      {
+        "question": "Dosis latihan?",
+        "answer": "10–15 menit, beberapa kali seminggu."
+      },
+      {
+        "question": "Sekilas terlihat identik?",
+        "answer": "Tetap wajibkan pemeriksaan titik acuan."
+      },
+      {
+        "question": "Efek orientasi tangan?",
+        "answer": "Beragam dalam penelitian; strategi lebih penting."
+      }
+    ]
+  },
+  "n-back": {
+    "description": [
+      {
+        "title": "Tentang N-Back",
+        "content": "N-Back adalah tugas pembaruan memori kerja kontinu. Huruf-huruf muncul dalam aliran; kamu merespons saat huruf saat ini cocok dengan huruf dari N langkah sebelumnya."
+      },
+      {
+        "title": "Arti N",
+        "content": "1-back: cocokkan dengan huruf sebelumnya. 2-back: cocokkan dengan huruf dua percobaan lalu. 3-back: tiga percobaan lalu. N yang lebih tinggi memaksa penyangga bergulir yang lebih panjang di bawah tekanan waktu."
+      },
+      {
+        "title": "Kesalahan yang Berarti",
+        "content": "Terlewat (tidak ada respons pada kecocokan yang benar) dan alarm palsu (merespons pada bukan kecocokan) sama-sama merugikan. Nyawa atau metrik akurasi melacak keduanya."
+      },
+      {
+        "title": "Pemetaan Kesulitan",
+        "content": "Pemula/Mudah biasanya menggunakan 1-back. Normal/Sulit menggunakan 2-back. Profesional menggunakan 3-back dengan waktu yang lebih cepat dan nyawa yang lebih sedikit."
+      },
+      {
+        "title": "Mengapa Orang Melatihnya",
+        "content": "Ini menguji pemantauan, pembaruan, dan pengendalian interferensi—operasi memori kerja inti yang telah dipelajari selama berdekade-dekade."
+      },
+      {
+        "title": "Transfer yang Jujur",
+        "content": "Harapkan performa N-Back yang lebih baik dengan latihan. Klaim IQ yang luas masih diperdebatkan; anggap ini sebagai latihan memori kerja yang ditargetkan."
+      },
+      {
+        "title": "Memperbarui di Bawah Beban",
+        "content": "Setiap huruf baru harus masuk ke penyangga sementara huruf yang lebih lama keluar. Operasi pembaruan itulah—bukan sekadar penyimpanan mentah—yang membuat N-Back terasa sangat melelahkan dibandingkan rentang digit statis."
+      },
+      {
+        "title": "Pola Pikir Deteksi Sinyal",
+        "content": "Berpikirlah dalam hal hit (kecocokan tepat), miss (terlewat), dan alarm palsu. Jumlah hit yang tinggi dengan banyak alarm palsu bukanlah penguasaan. Targetkan sensitivitas yang seimbang: tangkap kecocokan nyata tanpa memicu alarm pada huruf yang mirip."
+      },
+      {
+        "title": "Tips Desain Program",
+        "content": "Naikkan N hanya setelah akurasi stabil. Langsung melompat ke 3-back saat masih kacau di 2-back sama saja melatih tebakan. Catat % akurasi di samping jumlah hit agar progresmu jujur."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Mulai",
+        "steps": [
+          "Pilih tingkat kesulitan (ini mengatur N).",
+          "Inisialisasi.",
+          "Perhatikan apakah kamu berada di mode 1-, 2-, atau 3-back."
+        ]
+      },
+      {
+        "title": "Bermain",
+        "steps": [
+          "Perhatikan setiap huruf.",
+          "Tekan Cocok (Match) / Spasi hanya pada kecocokan N-back yang benar.",
+          "Jangan lakukan apa pun pada bukan kecocokan."
+        ]
+      },
+      {
+        "title": "Pulih",
+        "steps": [
+          "Setelah alarm palsu, setel ulang penyangga mentalmu.",
+          "Jangan asal menekan tombol Cocok karena panik."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Latih Penyangga",
+        "content": "Ulangi N huruf terakhir dalam hati sebagai jendela geser."
+      },
+      {
+        "title": "Putuskan di Akhir, Jangan di Awal",
+        "content": "Tunggu hingga identitas huruf jelas untuk memangkas alarm palsu."
+      },
+      {
+        "title": "Stabilitas di Atas Kecepatan",
+        "content": "Akurasi yang mulus mengalahkan permainan dengan hit tinggi / alarm palsu tinggi yang tidak stabil."
+      },
+      {
+        "title": "Sesi Singkat",
+        "content": "12 menit yang fokus lebih baik daripada satu jam menebak-nebak dalam kelelahan."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Berapa skor yang bagus?",
+        "answer": "Jumlah hit benar yang lebih tinggi dengan % akurasi yang kuat. Hit saja dapat menyembunyikan alarm palsu yang ceroboh."
+      },
+      {
+        "question": "Apa arti 2-back?",
+        "answer": "Merespons saat huruf saat ini sama dengan huruf dari dua percobaan lalu."
+      },
+      {
+        "question": "Dukungan keyboard?",
+        "answer": "Tombol Spasi biasanya memicu Cocok (Match) selama jendela stimulus."
+      },
+      {
+        "question": "Apa yang mengurangi nyawa?",
+        "answer": "Kecocokan yang terlewat dan alarm palsu."
+      },
+      {
+        "question": "Seberapa cepat stimuluasnya?",
+        "answer": "Sekitar ~1,5 detik pada mode yang lebih mudah dan ~1 detik pada mode Sulit/Pro."
+      },
+      {
+        "question": "Berapa ukuran set huruf?",
+        "answer": "Set kecil (misalnya, A–H) membuat tingkat kecocokan dapat dilatih."
+      },
+      {
+        "question": "Apakah ini dual n-back?",
+        "answer": "Tidak—versi ini adalah huruf aliran tunggal."
+      },
+      {
+        "question": "Apakah latihan membantu?",
+        "answer": "Ya untuk performa tugas; tetaplah bersikap moderat terhadap klaim transfer jarak jauh."
+      },
+      {
+        "question": "Kapan suatu putaran berakhir?",
+        "answer": "Setelah batas percobaan habis atau ketika nyawa mencapai nol."
+      },
+      {
+        "question": "Mengapa saya sering salah mendeteksi di akhir?",
+        "answer": "Kelelahan dan terlalu bersemangat mencocokkan—perlambat jari pemicumu."
+      }
+    ]
+  },
+  "go-no-go": {
+    "description": [
+      {
+        "title": "Tentang Go/No-Go",
+        "content": "Go/No-Go mengukur hambatan respons: tekan dengan cepat pada isyarat Go dan tahan pada isyarat No-Go. Rasio Go ~80% membangun kebiasaan menekan sehingga percobaan No-Go menjadi tantangan yang sebenarnya."
+      },
+      {
+        "title": "Apa yang Diukur",
+        "content": "Kesiapan motorik yang cepat ditambah kontrol inhibisi—kemampuan untuk membatalkan tindakan yang telah disiapkan saat isyarat mengatakan berhenti."
+      },
+      {
+        "title": "Anatomi Percobaan",
+        "content": "Hijau (Go): tekan Spasi/ketuk secepatnya. Merah (No-Go): jangan lakukan apa-apa. Lewat (miss) dan alarm palsu (false alarm) sama-sama mengurangi skor."
+      },
+      {
+        "title": "Tingkat Kesulitan",
+        "content": "Mode yang lebih sulit menambah percobaan dan memperpendek jendela/jeda stimulus sehingga keputusan menumpuk dengan cepat."
+      },
+      {
+        "title": "Membaca Skor",
+        "content": "Hitung percobaan yang benar (pukulan Go + penahanan yang berhasil). Perhatikan juga waktu reaksi Go—permainan yang cepat namun ceroboh akan memicu banyak alarm palsu."
+      },
+      {
+        "title": "Penerapan Nyata",
+        "content": "Kontrol impuls di bawah tekanan kecepatan penting dalam mengemudi, olahraga, dan pekerjaan antarmuka yang cepat—ini adalah latihan bergaya laboratorium, bukan baterai klinis lengkap."
+      },
+      {
+        "title": "Respons Prepoten",
+        "content": "Ketika sebagian besar percobaan adalah Go, sistem motorik Anda bersiap untuk menekan secara default. Percobaan No-Go mengukur apakah Anda dapat membatalkan persiapan tersebut tepat waktu—inti dari hambatan respons."
+      },
+      {
+        "title": "Kompromi Kecepatan dan Akurasi",
+        "content": "Mengejar waktu reaksi Go (RT) terendah biasanya meningkatkan alarm palsu. Buat aturan pribadi: jangan pernah menekan kecuali warna hijau terkonfirmasi jelas. Pukulan Go yang sedikit lebih lambat dengan penahanan bersih menghasilkan skor keseluruhan yang lebih baik."
+      },
+      {
+        "title": "Ekspektasi Transfer",
+        "content": "Peningkatan inhibisi pada tugas ini dapat mendukung kebiasaan sinyal berhenti yang lebih baik dalam game dan latihan mengemudi, tetapi kontrol impuls dunia nyata juga bergantung pada tidur, stres, dan konteks."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Pengaturan",
+        "steps": [
+          "Pilih tingkat kesulitan.",
+          "Inisialisasi.",
+          "Istirahatkan satu jari di dekat tombol Spasi tanpa menekannya."
+        ]
+      },
+      {
+        "title": "Respon",
+        "steps": [
+          "Tekan saat warna hijau.",
+          "Diam saat warna merah.",
+          "Lebih utamakan menahan dengan bersih daripada asal tekan berisiko."
+        ]
+      },
+      {
+        "title": "Tinjauan",
+        "steps": [
+          "Periksa jumlah alarm palsu.",
+          "Jika tinggi, bersikaplah sedikit lebih hati-hati pada percobaan berikutnya."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Siap, Jangan Tegang",
+        "content": "Posisikan jari sebelumnya; ketegangan menyebabkan tekanan prematur."
+      },
+      {
+        "title": "Hargai Penahanan",
+        "content": "Pada kedipan warna yang ambigu, tidak menekan sering kali lebih aman."
+      },
+      {
+        "title": "Kesadaran Irama",
+        "content": "Setelah rangkaian Go yang panjang, bersiaplah untuk No-Go—atur ulang urgensi."
+      },
+      {
+        "title": "Sesi Pendek yang Berkualitas",
+        "content": "Inhibisi mengalami kelelahan; berhentilah ketika alarm palsu mulai meningkat."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Bagaimana skor dihitung?",
+        "answer": "Pukulan Go yang benar ditambah penahanan No-Go yang benar."
+      },
+      {
+        "question": "Apa itu alarm palsu (false alarm)?",
+        "answer": "Menekan pada percobaan No-Go (merah)."
+      },
+      {
+        "question": "Apa itu terlewat (miss)?",
+        "answer": "Gagal menekan selama jendela Go."
+      },
+      {
+        "question": "Mengapa sebagian besar percobaan berupa Go?",
+        "answer": "Untuk membangun respons prepoten sehingga inhibisi dapat diuji."
+      },
+      {
+        "question": "Apakah waktu reaksi (RT) ditampilkan?",
+        "answer": "Ya, untuk pukulan Go yang berhasil."
+      },
+      {
+        "question": "Apakah menggunakan keyboard?",
+        "answer": "Tombol spasi didukung."
+      },
+      {
+        "question": "Berapa jumlah percobaan?",
+        "answer": "Sekitar 20 pada tingkat Pemula hingga ~40 pada Profesional."
+      },
+      {
+        "question": "Digunakan dalam penelitian?",
+        "answer": "Ya—paradigma fungsi eksekutif klasik."
+      },
+      {
+        "question": "Apa yang paling merugikan?",
+        "answer": "Alarm palsu pada No-Go dan terlewat pada Go."
+      },
+      {
+        "question": "Tips mode sulit?",
+        "answer": "Komitmen pada warna dengan cepat; keraguan dan impulsivitas sama-sama meningkat saat jendela waktu menyusut."
+      }
+    ]
+  },
+  "flanker": {
+    "description": [
+      {
+        "title": "Tentang Tugas Flanker",
+        "content": "Tugas Eriksen Flanker mengukur perhatian selektif di bawah tekanan konflik. Kamu merespons panah tengah sambil mengabaikan panah di samping (flanker) yang mungkin mengarah ke arah sebaliknya."
+      },
+      {
+        "title": "Kongruen vs Inkongruen",
+        "content": "Kongruen: semua panah searah. Inkongruen: flanker berlawanan dengan panah tengah, menciptakan kompetisi respons yang harus kamu hambat."
+      },
+      {
+        "title": "Cara Merespons",
+        "content": "Baca hanya panah tengah. Tekan Kiri/Kanan (tombol panah atau A/D). Waktu habis dan arah yang salah akan mengurangi nyawa."
+      },
+      {
+        "title": "Tingkat Kesulitan",
+        "content": "Mode yang lebih sulit meningkatkan rasio inkongruen, mempercepat batas waktu, dan mengurangi nyawa."
+      },
+      {
+        "title": "Metrik",
+        "content": "Lacak respons yang benar dan rata-rata RT (Waktu Reaksi) pada jawaban yang benar. RT inkongruen yang cepat dengan akurasi tinggi menunjukkan kontrol konflik yang kuat."
+      },
+      {
+        "title": "Bukan Stroop",
+        "content": "Flanker adalah konflik panah/spasial. Stroop adalah konflik warna-kata. Masih satu rumpun, tetapi jenis konflik berbeda."
+      },
+      {
+        "title": "Pemantauan Konflik",
+        "content": "Uji coba inkongruen mengaktifkan dua rencana respons. Sistem prefrontal/perhatianmu harus menekan rencana flanker dan mengeksekusi rencana tengah. Biaya konflik tersebut terlihat dari RT yang lebih lambat dan lebih banyak kesalahan."
+      },
+      {
+        "title": "Disiplin Pandangan",
+        "content": "Jika matamu melompat ke panah paling kiri, kamu sudah membiarkan flanker masuk ke dalam keputusanmu. Lembutkan kesadaran perifer, tetapi jaga keputusan sadar terkunci pada karakter tengah."
+      },
+      {
+        "title": "Progresi Pelatihan",
+        "content": "Pertama, tingkatkan akurasi inkongruen. Setelah itu, pangkas RT. Membalik urutan tersebut sering kali memicu kebiasaan menebak-nebak pada uji coba konflik."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Mulai",
+        "steps": [
+          "Pilih tingkat kesulitan.",
+          "Inisialisasi.",
+          "Letakkan jari pada kontrol Kiri/Kanan."
+        ]
+      },
+      {
+        "title": "Respon",
+        "steps": [
+          "Fiksasi pada karakter tengah.",
+          "Abaikan flanker.",
+          "Tekan arah tengah saja."
+        ]
+      },
+      {
+        "title": "Setelah Melakukan Kesalahan",
+        "steps": [
+          "Atur ulang fiksasi ke tengah.",
+          "Jangan biarkan arah flanker sebelumnya memengaruhi uji coba berikutnya."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Fokus pada Tengah",
+        "content": "Ambil keputusan sebelum panah perifer mendominasi."
+      },
+      {
+        "title": "Jangan Ikut Mayoritas",
+        "content": "Pada uji coba inkongruen, gerombolan flanker adalah jebakannya."
+      },
+      {
+        "title": "Pandangan Stabil",
+        "content": "Melakukan *micro-scanning* pada seluruh deretan panah akan memperlambatmu dan mengundang gangguan flanker."
+      },
+      {
+        "title": "Akurasi adalah Utama",
+        "content": "Keputusan tengah yang bersih mengalahkan kecepatan yang ceroboh."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Apa itu kongruen?",
+        "answer": "Semua panah menunjuk ke arah yang sama."
+      },
+      {
+        "question": "Apa itu inkongruen?",
+        "answer": "Flanker menunjuk berlawanan dengan panah tengah."
+      },
+      {
+        "question": "Bagaimana skor dihitung?",
+        "answer": "Jumlah respons tengah yang benar."
+      },
+      {
+        "question": "Rata-rata RT?",
+        "answer": "Ditampilkan untuk respons yang benar."
+      },
+      {
+        "question": "Tombol A/D?",
+        "answer": "Ya, bisa digunakan selain tombol panah."
+      },
+      {
+        "question": "Waktu habis?",
+        "answer": "Dihitung sebagai kegagalan dan mengurangi satu nyawa."
+      },
+      {
+        "question": "Kenapa inkongruen terasa lebih sulit?",
+        "answer": "Aktivasi respons yang bersaing harus dihambat."
+      },
+      {
+        "question": "Apakah ini tes Stroop?",
+        "answer": "Bukan—dimensi konflik yang berbeda."
+      },
+      {
+        "question": "Jumlah uji coba?",
+        "answer": "Sekitar 20–40 tergantung pada tingkat kesulitan."
+      },
+      {
+        "question": "Taktik terbaik?",
+        "answer": "Fiksasi tengah, tentukan pilihan, lalu bergerak."
+      }
+    ]
+  },
+  "choice-reaction": {
+    "description": [
+      {
+        "title": "Tentang Waktu Reaksi Pilihan",
+        "content": "Choice RT mengukur seberapa cepat Anda memilih opsi yang benar di antara beberapa alternatif setelah stimulus muncul—lebih mendekati situasi nyata multi-tombol daripada RT satu-tombol yang sederhana."
+      },
+      {
+        "title": "Alur Tugas",
+        "content": "Beberapa kotak menunggu. Setelah jeda acak, salah satu menyala. Klik hanya pada kotak tersebut. Klik terlalu dini dan kotak yang salah dihitung sebagai kesalahan."
+      },
+      {
+        "title": "Mengapa Ada Jeda Acak",
+        "content": "Jeda acak mencegah antisipasi murni sehingga yang diukur adalah latensi keputusan ditambah motorik, bukan tebakan."
+      },
+      {
+        "title": "Tingkat Kesulitan",
+        "content": "Mode Pemula menggunakan lebih sedikit pilihan; mode yang lebih sulit menambah kotak, memperketat waktu, dan dapat menampilkan sorotan umpan (decoy) pada mode Profesional."
+      },
+      {
+        "title": "Arti Skor",
+        "content": "Rata-rata RT dalam milidetik (ms) pada hit yang benar—semakin kecil semakin baik. RT Terbaik menyimpan rata-rata terbaik Anda untuk tingkat kesulitan tersebut."
+      },
+      {
+        "title": "Tips Latihan",
+        "content": "Posisikan kursor untuk bersiap tanpa melakukan twitch. Kesalahan pilihan akan melonjak jika Anda menebak-nebak terlalu cepat."
+      },
+      {
+        "title": "Intuisi Hukum Hick",
+        "content": "Lebih banyak alternatif umumnya memperlambat Choice RT. Itulah mengapa rata-rata 4 kotak tidak boleh dibandingkan secara naif dengan rata-rata 2 kotak. Catat tingkat kesulitan di sebelah setiap rekor pribadi."
+      },
+      {
+        "title": "Informasi Sebelum Gerakan",
+        "content": "Pola yang menang adalah persepsi → pilih → gerak. Memulai gerakan mouse sebelum lampu menyala akan menciptakan kesalahan klik dini dan rata-rata yang berantakan."
+      },
+      {
+        "title": "Catatan Perangkat Keras",
+        "content": "Refresh rate layar dan input lag menambah milidetik. Gunakan monitor dan mouse yang sama saat melacak perkembangan dari minggu ke minggu."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Mulai",
+        "steps": [
+          "Pilih tingkat kesulitan.",
+          "Inisialisasi.",
+          "Fokuskan mata pada seluruh set kotak."
+        ]
+      },
+      {
+        "title": "Respon",
+        "steps": [
+          "Tunggu hingga lampu yang benar menyala.",
+          "Klik hanya pada target yang menyala.",
+          "Jangan pernah mengklik selama fase menunggu."
+        ]
+      },
+      {
+        "title": "Mode Pro",
+        "steps": [
+          "Abaikan warna umpan (decoy) yang samar.",
+          "Hanya target yang terang yang dihitung."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Tangan Siap",
+        "content": "Jaga penunjuk kursor di dekat kisi-kisi tanpa menekan."
+      },
+      {
+        "title": "Tahan Antisipasi",
+        "content": "Jika Anda merasakan hitung mundur di kepala Anda, reset—waktu tunggu bersifat acak."
+      },
+      {
+        "title": "Disiplin Umpan (Decoy)",
+        "content": "Pada mode Profesional, lampu redup adalah jebakan."
+      },
+      {
+        "title": "Bandingkan yang Setara",
+        "content": "Hanya bandingkan rata-rata dalam jumlah pilihan yang sama."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Apakah lebih kecil lebih baik?",
+        "answer": "Ya—rata-rata RT dalam milidetik."
+      },
+      {
+        "question": "Apa itu RT Terbaik?",
+        "answer": "Rata-rata terbaik (terendah) Anda untuk tingkat kesulitan tersebut."
+      },
+      {
+        "question": "Apa itu kesalahan?",
+        "answer": "Mengklik terlalu dini atau mengklik kotak yang salah."
+      },
+      {
+        "question": "Apakah kesalahan masuk ke dalam perhitungan rata-rata?",
+        "answer": "Biasanya hanya hit yang benar yang menyumbang sampel RT."
+      },
+      {
+        "question": "Berapa percobaan per sesi?",
+        "answer": "Sekitar 8 pada Pemula hingga sekitar 20 pada Profesional."
+      },
+      {
+        "question": "Berapa jumlah kotaknya?",
+        "answer": "2 pada Pemula/Mudah, 3 pada Normal, 4 pada Sulit/Pro."
+      },
+      {
+        "question": "Menggunakan keyboard?",
+        "answer": "Mode ini utamanya adalah klik/tap pada kotak."
+      },
+      {
+        "question": "Mengapa ada waktu tunggu acak?",
+        "answer": "Untuk mencegah kecurangan antisipasi."
+      },
+      {
+        "question": "Apa arti Rekor Baru?",
+        "answer": "Rata-rata Anda mengalahkan rekor terbaik yang tersimpan (atau skor pertama)."
+      },
+      {
+        "question": "Apa itu decoy (umpan)?",
+        "answer": "Lampu samar yang bukan target pada mode Profesional."
+      }
+    ]
+  },
+  "schulte-table": {
+    "description": [
+      {
+        "title": "Tentang Tabel Schulte",
+        "content": "Tabel Schulte adalah grid angka yang diacak dan harus kamu selesaikan secara berurutan secepat mungkin. Tabel ini melatih pencarian visual, kesadaran perifer, dan pengalihan perhatian yang secara historis digunakan dalam latihan membaca cepat."
+      },
+      {
+        "title": "Cara Kerja",
+        "content": "Klik angka secara berurutan dari kecil ke besar (atau dari besar ke kecil pada mode Sulit). Timer berjalan hingga grid selesai. Klik yang salah akan berkedip; teruskan untuk mencari target yang benar."
+      },
+      {
+        "title": "Ukuran Grid",
+        "content": "Pemula 3×3, Mudah 4×4, Normal 5×5, Sulit 5×5 terbalik, Profesional 7×7 (1–49)."
+      },
+      {
+        "title": "Apa yang Dilatih",
+        "content": "Penyelesaian yang lebih cepat biasanya berarti luas bidang pandang yang lebih baik dan sedikitnya pemindaian model terowongan (tunnel scanning). Fokus lunak di bagian tengah lebih baik daripada membaca baris per baris."
+      },
+      {
+        "title": "Skor",
+        "content": "Waktu penyelesaian dalam milidetik—semakin kecil semakin baik. Rekor terbaik disimpan per tingkat kesulitan."
+      },
+      {
+        "title": "Saran Latihan",
+        "content": "Lebih baik beberapa kali penyelesaian bersih daripada satu percobaan mode Profesional yang panik."
+      },
+      {
+        "title": "Konsep Rentang Visual",
+        "content": "Tujuannya adalah memperluas area tempatmu dapat menemukan angka tanpa harus menggerakkan mata ke setiap sel. Fokus lunak adalah sebuah keterampilan; pada awalnya terasa abstrak tetapi lama-kelamaan akan terbiasa."
+      },
+      {
+        "title": "Patologi Pencarian",
+        "content": "Membaca baris demi baris terasa aman tetapi lambat. Melompat secara acak tanpa rencana juga lambat. Kompromi yang berguna: jaga pandangan tetap di dekat tengah dan biarkan perhatian menelusuri kuadran dalam urutan yang berulang."
+      },
+      {
+        "title": "Hitung Mundur",
+        "content": "Mode Sulit (turun) memutus kebiasaan selalu mencari angka yang lebih tinggi berikutnya. Ini adalah cara yang baik untuk menguji apakah metode yang kamu gunakan fleksibel atau kaku."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Mulai",
+        "steps": [
+          "Pilih tingkat kesulitan.",
+          "Inisialisasi.",
+          "Perhatikan apakah kamu menghitung naik atau turun."
+        ]
+      },
+      {
+        "title": "Selesaikan Grid",
+        "steps": [
+          "Gunakan petunjuk Target di layar.",
+          "Klik angka berikutnya yang diperlukan.",
+          "Abaikan kedipan klik yang salah dan lanjutkan."
+        ]
+      },
+      {
+        "title": "Selesai",
+        "steps": [
+          "Timer berhenti saat angka terakhir diklik.",
+          "Bandingkan dengan catatan waktu terbaikmu."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Fokus Pusat yang Lunak",
+        "content": "Lihat ke dekat bagian tengah; biarkan penglihatan perifer menemukan angka berikutnya."
+      },
+      {
+        "title": "Hindari Pemindaian Garis",
+        "content": "Jangan membaca seperti buku—lompatkan perhatian ke seluruh tabel."
+      },
+      {
+        "title": "Bernapaslah di Antara Penemuan Angka",
+        "content": "Jeda mikro mengurangi kesalahan panik yang membuang-buang waktu."
+      },
+      {
+        "title": "Kuasai 5×5 Sebelum 7×7",
+        "content": "Grid profesional akan menghukum kebiasaan mencari yang buruk."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Apakah waktu yang lebih singkat itu lebih baik?",
+        "answer": "Ya."
+      },
+      {
+        "question": "Apa itu mode Sulit?",
+        "answer": "Grid 5×5 dihitung menurun."
+      },
+      {
+        "question": "Berapa ukuran Profesional?",
+        "answer": "7×7 (1–49)."
+      },
+      {
+        "question": "Apakah salah klik akan mengakhiri permainan?",
+        "answer": "Tidak—hanya berkedip dan lanjutkan."
+      },
+      {
+        "question": "Kapan timer mulai berjalan?",
+        "answer": "Saat grid muncul setelah tombol mulai ditekan."
+      },
+      {
+        "question": "Bagaimana Rekor Terbaik disimpan?",
+        "answer": "Ketika waktu penyelesaian mengalahkan rekor terbaik yang tersimpan."
+      },
+      {
+        "question": "Apa hubungannya dengan membaca cepat?",
+        "answer": "Secara tradisional digunakan untuk memperluas rentang visual."
+      },
+      {
+        "question": "Bisakah saya menjeda permainan?",
+        "answer": "Tidak ada jeda di tengah permainan."
+      },
+      {
+        "question": "Mengapa harus diacak ulang?",
+        "answer": "Untuk menghentikan hafalan posisi di setiap percobaan."
+      },
+      {
+        "question": "Apa itu Target?",
+        "answer": "Angka berikutnya yang harus kamu klik."
+      }
+    ]
+  }
+}

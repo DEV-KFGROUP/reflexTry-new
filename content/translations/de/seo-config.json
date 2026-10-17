@@ -1,0 +1,954 @@
+{
+  "sequence-memory": {
+    "title": "Sequenzen-Gedächtnistest - Muster-Erinnerungs-Benchmark | Reflextry",
+    "description": "Übe das Abrufen größer werdender räumlicher Lichtmuster mit unserem kostenlosen Sequenzen-Gedächtnistest. Lies die Regeln und vergleiche deine Sitzungen.",
+    "keywords": [
+      "sequenzen gedächtnistest",
+      "sequenz gedächtnis spiel",
+      "human benchmark sequenz gedächtnis",
+      "simon spiel online kostenlos",
+      "simon says gedächtnisspiel",
+      "muster sequenz test",
+      "visueller sequenzen gedächtnistest",
+      "sequence memory online spielen",
+      "sequenz gedächtnis üben",
+      "sequenz gedächtnis training",
+      "sequenzgedächtnis verbessern",
+      "sequenz gedächtnis weltrekord",
+      "kostenloser sequenzen gedächtnistest",
+      "kurzzeit sequenzgedächtnis",
+      "kognitiver sequenztest",
+      "corsi block tapping test online",
+      "räumliches sequenzgedächtnis spiel",
+      "sequenz gedächtnis punkteschnitt",
+      "gehirntraining sequenz gedächtnis"
+    ]
+  },
+  "number-memory": {
+    "title": "Zahlen-Gedächtnistest - Ziffernspannen-Benchmark | Reflextry",
+    "description": "Messe dein Arbeitsgedächtnis und deine Ziffernspanne mit unserem kostenlosen Zahlen-Gedächtnistest. Merke dir wachsende Zahlenreihen und vergleiche deine Punktzahl.",
+    "keywords": [
+      "zahlen gedächtnistest",
+      "ziffernspanne test online",
+      "zahlen gedächtnis human benchmark",
+      "ziffernspanne vorwärts test",
+      "ziffernspanne rückwärts test",
+      "zahlen gedächtnis spiel",
+      "zahlen merken test",
+      "kurzzeit zahlengedächtnis",
+      "zahlen gedächtnis üben",
+      "human benchmark zahlen gedächtnis rekord",
+      "zahlen abruf test",
+      "sequenz zahlen gedächtnis",
+      "kostenloser ziffernspanne test online",
+      "wie man das zahlengedächtnis verbessert",
+      "gehirntraining zahlen abrufen",
+      "gedächtnisspannen test",
+      "wais ziffernspanne benchmark",
+      "arbeitsgedächtnis kapazität test",
+      "durchschnittliche zahlen gedächtnis punktzahl"
+    ]
+  },
+  "visual-memory": {
+    "title": "Visueller Gedächtnistest - Räumliches Raster-Erinnerungsspiel | Reflextry",
+    "description": "Verbessere die visuelle Merkfähigkeit und das räumliche Mustererkennen. Teste dein visuelles Gedächtnis, indem du aufblinkende Rastermuster auf einer wachsenden Matrix abrufst. Kostenloses Human-Benchmark-Tool.",
+    "keywords": [
+      "visueller gedächtnistest",
+      "visuelles gedächtnis spiel",
+      "human benchmark visuelles gedächtnis",
+      "raster gedächtnistest kostenlos",
+      "kurzzeit visueller gedächtnistest",
+      "visueller arbeitsgedächtnis test",
+      "visuell räumlicher gedächtnistest",
+      "visuelles gedächtnis verbessern",
+      "fotografisches gedächtnis test online",
+      "visueller abruf test",
+      "muster gedächtnistest",
+      "visuelles gedächtnis üben",
+      "kostenloses visuelles gedächtnis spiel",
+      "eidetisches gedächtnis test",
+      "visueller kognitionstest",
+      "matrix gedächtnistest",
+      "merke dir die quadrate spiel",
+      "visueller mustererkennungs test"
+    ]
+  },
+  "color-memory": {
+    "title": "Farb-Gedächtnistest - Visuelles Sequenz-Erinnerungsspiel | Reflextry",
+    "description": "Fordere dein chromatisches Gedächtnis und deine visuelle Aufmerksamkeit heraus. Merke dir schnell wechselnde Farbsequenzen und trainiere die kognitive Flexibilität mit unserem kostenlosen Farb-Gedächtnistest.",
+    "keywords": [
+      "farb gedächtnistest",
+      "farb abruf test",
+      "farb gedächtnis spiel",
+      "simon farb gedächtnis spiel",
+      "kurzzeit farbgedächtnis",
+      "farben merken test",
+      "visuelles farbgedächtnis",
+      "sequenz farb gedächtnistest",
+      "online farbgedächtnis spiel",
+      "farb gehirntraining",
+      "simon says farbtest",
+      "farbsequenz üben",
+      "exakter farbabruf",
+      "farbgedächtnis human benchmark",
+      "chromatischer gedächtnistest",
+      "farbton speicherungs spiel",
+      "visueller farbspannen benchmark"
+    ]
+  },
+  "shape-memory": {
+    "title": "Formen-Gedächtnistest - Geometrisches Muster-Erinnern | Reflextry",
+    "description": "Trainiere die Unterscheidung geometrischer Formen und das räumliche Gedächtnis. Merke dir abstrakte Formen und Symbole, um das nonverbale visuelle Denken und die Konzentration zu verbessern.",
+    "keywords": [
+      "formen gedächtnistest",
+      "form zuordnungs gedächtnisspiel",
+      "geometrischer formen gedächtnistest",
+      "visuelles formengedächtnis",
+      "merke dir die form test",
+      "form abruf spiel",
+      "formen sequenz gedächtnis",
+      "kognitiver formentest",
+      "3d formen gedächtnistest",
+      "muster und formen gedächtnis",
+      "kostenloses formen gedächtnis spiel online",
+      "polygon gedächtnistest",
+      "visuelles denken formen",
+      "abstrakter formen abruf",
+      "räumlicher formen gedächtnistest"
+    ]
+  },
+  "symbol-memory": {
+    "title": "Symbol-Gedächtnistest - Assoziativer Icon-Abruf | Reflextry",
+    "description": "Verbessere abstrakte Mustererkennung und assoziatives Gedächtnis. Ordne kryptische Symbole und Icons zu, um mentale Fokussierung und visuelle Verarbeitungsgeschwindigkeit zu schärfen.",
+    "keywords": [
+      "symbol gedächtnistest",
+      "aliensymbol gedächtnisspiel",
+      "visueller symboltest",
+      "abstraktes symbolgedächtnis",
+      "symbol abruftest",
+      "human benchmark symbolgedächtnis",
+      "kurzzeit symbolgedächtnis",
+      "symbol zuordnung gedächtnistest",
+      "symbole merken spiel",
+      "muster symbol gedächtnis",
+      "kognitiver symboltest",
+      "seltsame symbole gedächtnis",
+      "icon gedächtnisspiel",
+      "symbol digit modalities test online",
+      "glyph abruftest"
+    ]
+  },
+  "word-recall": {
+    "title": "Wort-Wiedererkennungstest - Verbales Gedächtnisspiel | Reflextry",
+    "description": "Validiere deine verbale Gedächtnisleistung und Vokabelerkennung. Teste, ob Wörter neu sind oder bereits gesehen wurden, um das sprachliche Kurzzeitgedächtnis zu messen.",
+    "keywords": [
+      "wort abruf test",
+      "verbaler gedächtnistest",
+      "wort gedächtnistest kostenlos",
+      "human benchmark verbales gedächtnis",
+      "kurzzeit wortwiedererkennung",
+      "gedächtnistest wörter liste",
+      "sofortiger wort abruf test",
+      "listenlernen worttest",
+      "wortgedächtnis gehirnspiel",
+      "gedächtnisspiel wörter",
+      "wortsequenz abruf",
+      "kostenloser wort abruf test online",
+      "wörter abrufen gedächtnis training",
+      "kognitiver wort abruf",
+      "gesehene oder neue wörter test",
+      "verbaler gedächtnisspannweitentest",
+      "auditory verbal learning test online"
+    ]
+  },
+  "card-match": {
+    "title": "Karten-Paare Gedächtnisspiel - Konzentrationstest | Reflextry",
+    "description": "Trainiere räumliches Gedächtnis und visuelles Musterrückrufen mit unserem kostenlosen Online-Karten-Paare-Gedächtnisspiel. Drehe Karten um, finde Paare mit den wenigsten Zügen und schlage die Zeit.",
+    "keywords": [
+      "karten zuordnen gedächtnisspiel",
+      "gedächtnis kartenspiel online",
+      "karten paare test",
+      "karten umdrehen gedächtnisspiel",
+      "paarzuordnung kartenspiel",
+      "karten zuordnung spielen",
+      "bildkarten gedächtnistest",
+      "klassisches gedächtnis kartenspiel",
+      "kostenloses memory spiel",
+      "karten konzentrationsspiel",
+      "gehirntraining karten zuordnung",
+      "visueller kartenabgleich",
+      "pelmanismus spiel online",
+      "memory paare finden kostenlos"
+    ]
+  },
+  "chimp-test": {
+    "title": "Chimp-Test - Arbeitsgedächtnis Benchmark-Spiel | Reflextry",
+    "description": "Bist du schlauer als ein Schimpanse? Mache den berühmten Chimp-Test, um dein visuell-räumliches Arbeitsgedächtnis zu messen. Merke dir das Zahlenraster, bevor es verschwindet.",
+    "keywords": [
+      "chimp test",
+      "chimp test human benchmark",
+      "schimpansen gedächtnistest",
+      "chimp gedächtnisspiel",
+      "bist du schlauer als ein schimpanse test",
+      "affen gedächtnistest online",
+      "chimp test weltrekord",
+      "chimp test spielen",
+      "mensch vs affe gedächtnistest",
+      "schimpansen gehirntest",
+      "zahlengedächtnis affenspiel",
+      "primaten gedächtnistest",
+      "chimp test training",
+      "ayumu chimp gedächtnistest",
+      "räumliches arbeitsgedächtnis test"
+    ]
+  },
+  "verbal-memory": {
+    "title": "Verbaler Gedächtnistest - Wortwiedererkennungs-Benchmark | Reflextry",
+    "description": "Teste dein verbales Arbeitsgedächtnis mit unserem kostenlosen verbalen Gedächtnistest. Identifiziere gesehene Wörter im Vergleich zu neuen Wörtern, um sprachliches Speichervermögen und kognitive Verarbeitungsgeschwindigkeit zu messen.",
+    "keywords": [
+      "verbaler gedächtnistest",
+      "verbal memory human benchmark",
+      "verbales gedächtnisspiel",
+      "kurzzeit verbaler gedächtnistest",
+      "verbales gedächtnis verbessern",
+      "verbaler gedächtnistraining",
+      "verbaler arbeitsgedächtnistest",
+      "verbaler gedächtnisspanne test",
+      "human benchmark verbal",
+      "verbaler abruftest",
+      "kostenloser verbaler gedächtnistest online",
+      "wortgedächtnistest",
+      "verbaler kognitiver test",
+      "gesehene oder neue wörter test",
+      "vokabel speichertest"
+    ]
+  },
+  "object-tracking": {
+    "title": "Mehrfach-Objektverfolgung (MOT) - Visueller Fokustest | Reflextry",
+    "description": "Teste dynamische visuelle Aufmerksamkeit und räumliche Verfolgung. Folge mehreren sich bewegenden Zielkugeln zwischen Ablenkungen in diesem wissenschaftlich fundierten kognitiven Test.",
+    "keywords": [
+      "objektverfolgung test",
+      "multiple object tracking test",
+      "visuelles objektverfolgungsspiel",
+      "human benchmark objektverfolgung",
+      "augenverfolgung gedächtnistest",
+      "multiple object tracking kognitiver test",
+      "objektverfolgung üben",
+      "visueller verfolgungstest online",
+      "spiel zur verfolgung bewegter objekte",
+      "3d objektverfolgung test",
+      "visuelle verfolgung verbessern",
+      "mot kognitiver test",
+      "test für visuelle aufmerksamkeitsverfolgung"
+    ]
+  },
+  "n-back": {
+    "title": "N-Back-Test - Arbeitsgedächtnis-Kapazitäts-Benchmark | Reflextry",
+    "description": "Trainiere dein Arbeitsgedächtnis mit der klassischen N-Back-Aufgabe. Vergleiche Buchstaben, die vor N Schritten erschienen sind, verfolge Treffer und Genauigkeit und steigere dich von 1-back auf 3-back.",
+    "keywords": [
+      "n-back test",
+      "n back arbeitsgedächtnis",
+      "2-back test online",
+      "3-back kognitiver test",
+      "dual n-back kostenlos",
+      "arbeitsgedächtnis n-back spiel",
+      "n-back gehirntraining",
+      "kontinuierliche leistung n-back",
+      "buchstaben abgleich gedächtnistest",
+      "n-back genauigkeitstest",
+      "kognitiver n-back benchmark",
+      "human benchmark n-back",
+      "arbeitsgedächtnis n-back verbessern"
+    ]
+  },
+  "reaction-time": {
+    "title": "Reaktionstest - Millisekunden-Benchmark (ms) | Reflextry",
+    "description": "Teste und verbessere deine visuelle Reaktionszeit in Millisekunden. Mach unseren kostenlosen Millisekunden-Reaktionstest, vergleiche dich mit Pro-Gamern und verfolge deinen Reflexfortschritt.",
+    "keywords": [
+      "reaktionstest",
+      "reaktionstest ms",
+      "human benchmark reaktionszeit",
+      "grünlicht reaktionstest",
+      "klicken wenn bildschirm grün wird test",
+      "durchschnittliche reaktionszeit test",
+      "valorant reaktionstest",
+      "f1 reaktionstest online",
+      "cs2 reaktionstest",
+      "reaktionszeit millisekunden benchmark",
+      "schneller reaktionstest online",
+      "reflexe kostenlos testen",
+      "fahrer reaktionszeit test online",
+      "144hz reaktionstest",
+      "240hz reaktionstest",
+      "monitor input lag test",
+      "reaktionszeit verbessern",
+      "pro gamer reaktionszeit durchschnitt"
+    ]
+  },
+  "sound-reaction": {
+    "title": "Audio-Reaktionstest - Sound-Reflex (ms) | Reflextry",
+    "description": "Messe deine auditive Reaktionsgeschwindigkeit in Millisekunden. Teste Hörreflexe mit sofortigen Audiosignalen und vergleiche deine Sound-Reaktion mit der visuellen Reaktionszeit.",
+    "keywords": [
+      "sound reflex test",
+      "audio reaktionstest",
+      "audio reflex test",
+      "hörreaktionszeit",
+      "sound reaktionsspiel",
+      "human benchmark audio reaktion",
+      "auditive reaktionszeit test",
+      "sound reflex üben",
+      "beep reaktionstest",
+      "schneller sound klick test",
+      "akustischer reflex test online",
+      "soundbasierte reaktionszeit",
+      "hörreflex geschwindigkeit",
+      "auditive vs visuelle reaktionszeit",
+      "ohr reaktionstest ms"
+    ]
+  },
+  "grid-shot": {
+    "title": "Grid Shot Aim Trainer - Maus-Präzisionsreflex | Reflextry",
+    "description": "Wärme dein Zielen und deine Mausgeschwindigkeit mit Grid Shot auf. Klicke auf schnell erscheinende Ziele im Raster, um die Hand-Auge-Koordination für FPS-Spiele wie Valorant und CS2 zu verbessern.",
+    "keywords": [
+      "raster reflex test",
+      "grid shot aim trainer",
+      "ziel raster test",
+      "grid click reaktion",
+      "reflex raster spiel",
+      "human benchmark raster",
+      "raster klick geschwindigkeitstest",
+      "schneller raster klicker",
+      "reaktionsraster üben",
+      "valorant gridshot im browser",
+      "fps aim aufwärm raster",
+      "kachel reflex test",
+      "raster tipp geschwindigkeit",
+      "blazepod reaktion online",
+      "hand auge koordination raster test"
+    ]
+  },
+  "peripheral-vision": {
+    "title": "Peripheres Sehtest - Sichtfeld-Wahrnehmung | Reflextry",
+    "description": "Trainiere die periphere Sehwahrnehmung und die seitliche Reaktionsgeschwindigkeit. Erkenne und klicke auf abseits der Mitte liegende Reize, um den visuellen Fokus für Autofahren, Sport und kompetitives Gaming zu erweitern.",
+    "keywords": [
+      "peripherer Reflextest",
+      "Peripheres Sehtest online",
+      "peripheres Reaktionsspiel",
+      "Sichtfeld-Reflextest",
+      "Peripheriewahrnehmungs-Test",
+      "Sehtest für seitliche Reaktion",
+      "peripherer Aim-Trainer",
+      "periphere Ziele anklicken",
+      "Widescreen-Reflextest",
+      "Peripheres Sehen Klicktest",
+      "Reflextest außerhalb der Mitte",
+      "räumliche Wahrnehmungsreflexe",
+      "Sport-Peripherietest",
+      "Esports Peripherie-Wahrnehmung"
+    ]
+  },
+  "directional-reflex": {
+    "title": "Direktionaler Reflextest - Pfeiltasten-Geschwindigkeitsspiel | Reflextry",
+    "description": "Teste die Reaktionsgeschwindigkeit der Tastatur und räumliche Entscheidungsfindung. Drücke Pfeiltasten passend zu schnellen Richtungs-Prompts, um kognitive Verarbeitung und Reflex-Agilität zu verbessern.",
+    "keywords": [
+      "Richtungs-Reflextest",
+      "Pfeil-Reaktionstest",
+      "Richtung-Klick-Spiel",
+      "Tastatur-Richtungsreflex",
+      "Pfeiltasten-Reaktionsspiel",
+      "räumlicher Richtungsreflex",
+      "Schnellrichtungs-Test",
+      "kognitiver Richtungstest",
+      "Pfeil-Matching-Reflex",
+      "Links-Rechts-Reaktionstest",
+      "direktionaler Geschwindigkeitsstest",
+      "schneller Pfeildruck-Reflex",
+      "Entscheidungs-Richtungsreaktionstest"
+    ]
+  },
+  "multi-stimulus": {
+    "title": "Multi-Stimulus-Reaktionstest - Wahlreaktionsspiel | Reflextry",
+    "description": "Teste die Wahlreaktionszeit und selektive Aufmerksamkeit. Verarbeite mehrere visuelle und auditive Reize gleichzeitig, um die Entscheidungsgeschwindigkeit im Bruchteil einer Sekunde zu messen.",
+    "keywords": [
+      "Multi-Stimulus-Reaktionstest",
+      "Wahlreaktionszeit-Test online",
+      "Multi-Reiz-Reflextest",
+      "komplexer Reaktionstest",
+      "kognitiver Stimulus-Test",
+      "Multitasking-Reflextest",
+      "Hicksches Gesetz Reaktionstest",
+      "Donders Wahlreaktionstest",
+      "Multi-Stimulus Human Benchmark",
+      "Test auf variable Reaktionszeit",
+      "komplexer Reflex-Trainer",
+      "Entscheidungsreaktions-Benchmark"
+    ]
+  },
+  "sequence-reaction": {
+    "title": "Sequenz-Reaktionstest - Schnelle Combo-Reflexe | Reflextry",
+    "description": "Kombiniere Gedächtnisabruf mit schnellen motorischen Reflexen. Folge schnelllebigen Lichtsequenzen und führe rasante Kombos aus, um rhythmische Reaktionszeiten und Schnelligkeit zu trainieren.",
+    "keywords": [
+      "Sequenz-Reaktionstest",
+      "Simon Says Reaktionszeit",
+      "Muster-Reflextest",
+      "serielle Reaktionszeitaufgabe",
+      "sequenzieller Klicktest",
+      "Reflex-Sequenzspiel",
+      "Gedächtnis- und Reaktionstest",
+      "schneller Sequenz-Clicker",
+      "kognitive Sequenzreaktion",
+      "Schnellsequenz-Test",
+      "sequenzieller Tipp-Test",
+      "schnelles Combo-Reflexspiel"
+    ]
+  },
+  "whack-a-mole": {
+    "title": "Whack-a-Mole Online - Hand-Auge-Reaktionsspiel | Reflextry",
+    "description": "Spiele das klassische Whack-a-Mole online kostenlos. Tippe auf aufauchende Maulwürfe so schnell wie möglich, um Reaktionsgeschwindigkeit, Präzisionsklicks und motorische Agilität zu messen.",
+    "keywords": [
+      "Whack a Mole online",
+      "Whack a Mole kostenlos spielen",
+      "Whack a Mole Reaktionstest",
+      "virtuelles Whack a Mole",
+      "Klick das Maulwurf Spiel",
+      "Maus Whack a Mole",
+      "Whack a Mole Reflexspiel",
+      "schnelles Whack a Mole",
+      "Aim Whack a Mole",
+      "Browser Whack a Mole Spiel",
+      "Pop-up Reflextest",
+      "Ziel-Pop-Reaktionsspiel",
+      "Hand-Auge-Koordination-Spiel"
+    ]
+  },
+  "color-switch": {
+    "title": "Color Switch Reflextest - Visuelle Reaktionszeit | Reflextry",
+    "description": "Trainiere deine Farb-Reaktionszeit und selektive Antwortgeschwindigkeit. Reagiere sofort auf Bildschirm-Farbwechsel und Blitzsignale ohne Zögern.",
+    "keywords": [
+      "color switch reaktionstest",
+      "farbwechsel reflex test",
+      "rot grün reaktionstest",
+      "ampel reaktionszeit",
+      "bildschirm farbwechsel test",
+      "schneller farb klick test",
+      "human benchmark farbwechsel",
+      "visueller color switch reflex",
+      "farbblitz reaktion",
+      "einfache farbreaktionszeit",
+      "farbwechsel clicker",
+      "visueller reiz farbtest"
+    ]
+  },
+  "time-perception": {
+    "title": "Zeitempfindungstest - Innerer Uhr Benchmark | Reflextry",
+    "description": "Teste deine innere Uhr und Zeiteinschätzung. Halte und laufe den Button los, um Zielzeitintervalle präzise auf die Millisekunde genau zu treffen.",
+    "keywords": [
+      "zeitempfindung test",
+      "human benchmark zeitwahrnehmung",
+      "innerer uhr test",
+      "zeiteinschätzung test",
+      "errate die zeit test",
+      "wahrnehmung von zeit spiel",
+      "zeitgenauigkeit test",
+      "kognitive zeitempfindung",
+      "sekunden schätzung test",
+      "zeitdauer test",
+      "blinder zeit test online",
+      "zeitliche wahrnehmung test",
+      "innerer schrittmacher benchmark"
+    ]
+  },
+  "go-no-go": {
+    "title": "Go / No-Go Test - Impuls- & Reaktionskontrolle | Reflextry",
+    "description": "Messe deine Reaktionshemmung mit einem Go/No-Go-Test. Klicke bei grünen Go-Versuchen, stoppe bei roten No-Go-Versuchen und tracke Genauigkeit und Reaktionszeit.",
+    "keywords": [
+      "go no go test",
+      "go nogo aufgabe online",
+      "inhibitionskontrolle test",
+      "reaktionshemmung spiel",
+      "go no-go reaktionstest",
+      "impulskontrolle kognitiver test",
+      "grün rot go stop test",
+      "exekutive funktion go nogo",
+      "falschalarm inhibitions test",
+      "continuous performance go nogo",
+      "gehirntraining hemmung"
+    ]
+  },
+  "flanker": {
+    "title": "Flanker-Test - Selektiver Aufmerksamkeits-Benchmark | Reflextry",
+    "description": "Mache den Eriksen Flanker-Test online. Reagiere auf den mittleren Pfeil und ignoriere kongruente oder inkongruente Flanker, um deine Aufmerksamkeitskontrolle zu messen.",
+    "keywords": [
+      "flanker aufgabe online",
+      "eriksen flanker test",
+      "selektiver aufmerksamkeitstest",
+      "pfeil flanker spiel",
+      "inkongruente flanker aufgabe",
+      "aufmerksamkeitskonflikt test",
+      "kognitive kontrolle flanker",
+      "mitte pfeil reaktionstest",
+      "exekutive aufmerksamkeit benchmark",
+      "flanker effekt test kostenlos"
+    ]
+  },
+  "choice-reaction": {
+    "title": "Choice Reaction Time Test - Mehrfach-Auswahl RT (ms) | Reflextry",
+    "description": "Messe deine Wahl-Reaktionszeit über 2–4 farbige Ziele hinweg. Klicke so schnell wie möglich auf das aufleuchtende Feld und schlage deine durchschnittliche RT in Millisekunden.",
+    "keywords": [
+      "wahlreaktionszeit test",
+      "multi choice rt test",
+      "4er wahl reaktionszeit",
+      "farbiges feld reaktionstest",
+      "disjunktive reaktionszeit",
+      "choice rt benchmark ms",
+      "komplexe reaktionszeit online",
+      "mehrfachreiz reaktionstest",
+      "kognitive wahlreaktion",
+      "human benchmark wahlreaktion"
+    ]
+  },
+  "cps-test": {
+    "title": "CPS-Test – Clicks Per Second Geschwindigkeits-Benchmark | Reflextry",
+    "description": "Messe deine Klickgeschwindigkeit mit unserem kostenlosen CPS-Test. Teste die Modi 1s, 5s, 10s, 30s und 60s für normales Klicken, Jitter-Klicken, Butterfly-Klicken und Drag-Klicken.",
+    "keywords": [
+      "cps test",
+      "clicks per second test",
+      "klick geschwindigkeits test",
+      "1 sekunde cps test",
+      "5 sekunden cps test",
+      "10 sekunden cps test",
+      "30 sekunden klick test",
+      "60 sekunden klick geschwindigkeits test",
+      "jitter click test",
+      "butterfly click test",
+      "drag click test",
+      "minecraft pvp cps test",
+      "kohi click test",
+      "leertasten zähler test",
+      "mausklick geschwindigkeits test",
+      "cps human benchmark",
+      "schnellster klickgeschwindigkeits rekord"
+    ]
+  },
+  "speed-math": {
+    "title": "Kopfrechnen-Geschwindigkeitstest – Schnelles Rechen-Quiz | Reflextry",
+    "description": "Schärfe dein Kopfrechnen und deine Rechengeschwindigkeit. Löse schnelle Additionen, Subtraktionen, Multiplikationen und Divisionen unter Zeitdruck, um deine mathematische Gewandtheit zu verbessern.",
+    "keywords": [
+      "mathe geschwindigkeitstest",
+      "kopfrechnen geschwindigkeitstest",
+      "schneller arithmetik test",
+      "kopfrechnen spiel",
+      "schneller mathe test online kostenlos",
+      "rechen geschwindigkeitstest",
+      "schnelles mathe rechenspiel",
+      "1 minute mathe geschwindigkeitstest",
+      "mathe reflex test",
+      "mathe geschwindigkeits-sprint 60 sekunden",
+      "kognitiver mathe test",
+      "multiplikations geschwindigkeitstest",
+      "kopfrechnen training für erwachsene",
+      "arithmetik geschwindigkeits-herausforderung"
+    ]
+  },
+  "math-speed": {
+    "title": "Kopfrechnen-Geschwindigkeitstest – Schnelles Rechen-Quiz | Reflextry",
+    "description": "Schärfe dein Kopfrechnen und deine Rechengeschwindigkeit. Löse schnelle Additionen, Subtraktionen, Multiplikationen und Divisionen unter Zeitdruck, um deine mathematische Gewandtheit zu verbessern.",
+    "keywords": [
+      "mathe geschwindigkeitstest",
+      "kopfrechnen geschwindigkeitstest",
+      "schneller arithmetik test",
+      "kopfrechnen spiel",
+      "schneller mathe test online kostenlos",
+      "rechen geschwindigkeitstest",
+      "schnelles mathe rechenspiel",
+      "1 minute mathe geschwindigkeitstest",
+      "mathe reflex test",
+      "mathe geschwindigkeits-sprint 60 sekunden",
+      "kognitiver mathe test",
+      "multiplikations geschwindigkeitstest",
+      "kopfrechnen training für erwachsene",
+      "arithmetik geschwindigkeits-herausforderung"
+    ]
+  },
+  "typing-speed": {
+    "title": "Tippgeschwindigkeitstest – Kostenloser Online-WPM-Benchmark | Reflextry",
+    "description": "Teste Wörter pro Minute (WPM) und Genauigkeit mit unserem kostenlosen 1-Minuten-Tippgeschwindigkeitstest. Benchmarke deine Tastaturgeschwindigkeit, verfolge Fehlerquoten und verbessere das Zehnfingersystem.",
+    "keywords": [
+      "tippgeschwindigkeitstest",
+      "wpm test online kostenlos",
+      "wörter pro minute test",
+      "1 minute tipptest",
+      "60 sekunden tippgeschwindigkeitstest",
+      "tippgenauigkeitstest",
+      "zehnfingersystem geschwindigkeitstest",
+      "10 fast fingers tipptest",
+      "monkeytype alternative online",
+      "human benchmark tippen",
+      "schnellschreiben üben",
+      "tastatur geschwindigkeitstest",
+      "tipptest mit wpm und genauigkeit",
+      "tippgeschwindigkeitsprüfer",
+      "kostenloser tippgeschwindigkeitstest"
+    ]
+  },
+  "word-accuracy": {
+    "title": "Wortgenauigkeits-Test – Schnelle Tipppräzision | Reflextry",
+    "description": "Verbessere deine Tipppräzision und eliminiere Tippfehler. Tippe Hochgeschwindigkeits-Wörter mit 100 % Genauigkeit, um fehlerfreies Tippen unter Zeitdruck zu meistern.",
+    "keywords": [
+      "wortgenauigkeits test",
+      "wort geschwindigkeitstest",
+      "präzisions tipptest",
+      "fehlerfreier tipptest",
+      "schnelles wort-tippspiel",
+      "tippgenauigkeitstest online",
+      "rechtschreib geschwindigkeitstest",
+      "schnelles wort-tipptraining",
+      "tastenanschlag genauigkeitstest",
+      "datenerfassung tipppräzision",
+      "worterkennungs tippgeschwindigkeit"
+    ]
+  },
+  "word-speed": {
+    "title": "Schnelllese-Test - Wortwiedererkennung WPM | Reflextry",
+    "description": "Teste deine Lesegeschwindigkeit und Wortwiedererkennung. Messe Wörter pro Minute und rasche visuelle Identifikation mit unserem interaktiven Speed-Words-Tool.",
+    "keywords": [
+      "wort geschwindigkeit test",
+      "schnelllese test online kostenlos",
+      "schneller wortwiedererkennungs test",
+      "wörter pro minute lesetest",
+      "rsvp schnelllese test",
+      "wie schnell kann ich lesen test",
+      "flash wort lesegeschwindigkeit",
+      "visueller wort geschwindigkeitstest",
+      "kognitiver wort geschwindigkeits benchmark"
+    ]
+  },
+  "grid-selection": {
+    "title": "Gitter-Geschwindigkeitstest - 5x5 Nummern-Suchspiel | Reflextry",
+    "description": "Trainiere visuelles Scannen und periphere Lesegeschwindigkeit mit Schulte-Gattern. Finde Zahlen in aufsteigender Reihenfolge auf einem 5x5-Gitter, um deine visuelle Suchgeschwindigkeit zu steigern.",
+    "keywords": [
+      "schulte gatter online",
+      "schulte gitter test",
+      "gitter geschwindigkeitstest",
+      "zahlen 1 bis 25 finden geschwindigkeitstest",
+      "schulte gatter für schnelllesen",
+      "gitter auswahltest",
+      "visueller suchgeschwindigkeitstest",
+      "5x5 zahlengitter geschwindigkeitsspiel",
+      "matrix visueller scan test",
+      "peripheres sehen schulte gatter",
+      "zahlen der reihe nach antippen test"
+    ]
+  },
+  "grid-speed": {
+    "title": "Gitter-Geschwindigkeitstest - 5x5 Nummern-Suchspiel | Reflextry",
+    "description": "Trainiere visuelles Scannen und periphere Lesegeschwindigkeit mit Schulte-Gattern. Finde Zahlen in aufsteigender Reihenfolge auf einem 5x5-Gitter, um deine visuelle Suchgeschwindigkeit zu steigern.",
+    "keywords": [
+      "schulte gatter online",
+      "schulte gitter test",
+      "gitter geschwindigkeitstest",
+      "zahlen 1 bis 25 finden geschwindigkeitstest",
+      "schulte gatter für schnelllesen",
+      "gitter auswahltest",
+      "visueller suchgeschwindigkeitstest",
+      "5x5 zahlengitter geschwindigkeitsspiel",
+      "matrix visueller scan test",
+      "peripheres sehen schulte gatter",
+      "zahlen der reihe nach antippen test"
+    ]
+  },
+  "schulte-table": {
+    "title": "Schulte-Gatter-Test - Visuelle Scan-Geschwindigkeit | Reflextry",
+    "description": "Klassische Schulte-Gatter-Herausforderung. Klicke gemischte Zahlen der Reihe nach auf 3×3 bis 7×7 Gittern an. Trainiere peripheres Sehen, visuelle Suchgeschwindigkeit und Fokus unter Zeitdruck.",
+    "keywords": [
+      "schulte gatter online kostenlos",
+      "schulte gatter test",
+      "schulte gitter 5x5",
+      "schulte gatter 7x7",
+      "visueller scan geschwindigkeitstest",
+      "peripheres sehen training schulte",
+      "zahlen der reihe nach finden spiel",
+      "schnelllesen schulte gatter",
+      "nummerngitter aufmerksamkeitstest",
+      "schulte gatter gehirntraining",
+      "aufsteigendes nummerngitter duell"
+    ]
+  },
+  "number-rush": {
+    "title": "Number Rush Geschwindigkeitstest - Aufsteigender Tipp-Blitz | Reflextry",
+    "description": "Teste rasche Nummernerkennung und Tipp-Geschwindigkeit. Suche und klicke aufsteigende Zahlen so schnell wie menschenmöglich, um deine kognitive Verarbeitungsgeschwindigkeit zu benchen.",
+    "keywords": [
+      "number rush spiel",
+      "zahlen geschwindigkeitstest",
+      "schnelles zahlenklicken",
+      "zahlen der reihe nach tippen geschwindigkeitstest",
+      "aufsteigender zahlen klicker test",
+      "1 bis 50 zahlenspiel online",
+      "schneller zahlen tipp wettbewerb",
+      "number rush weltrekord",
+      "schnelles ziffernfindungs spiel",
+      "zahlensequenzierung geschwindigkeit"
+    ]
+  },
+  "quick-sort": {
+    "title": "Quick-Sort-Geschwindigkeitsspiel - Schneller Sortiertest | Reflextry",
+    "description": "Fordere kognitive Kategorisierung und schnelle Entscheidungsfindung heraus. Sortiere eintreffende Elemente unter strengem Zeitlimit in die entsprechenden Kategorien.",
+    "keywords": [
+      "quick sort geschwindigkeitstest",
+      "schnelles sortierspiel",
+      "geschwindigkeits-kategorisierungstest online",
+      "kognitiver sortiertest",
+      "schnell sortieren spiel",
+      "visuelle sortiergeschwindigkeit",
+      "kategoriensortiertest",
+      "links oder rechts sortierspiel online",
+      "schneller klassifizierungsgeschwindigkeitstest",
+      "entscheidungsgeschwindigkeits-sortierspiel"
+    ]
+  },
+  "pattern-matching": {
+    "title": "Mustererkennungs-Test - Visuelle Matrixgenauigkeit | Reflextry",
+    "description": "Verbessere die visuelle Mustererkennung und das nonverbale logische Denken. Gleiche komplexe Matrixmuster und geometrische Sequenzen ab, um Sehstärke und analytisches Denken zu testen.",
+    "keywords": [
+      "mustererkennungstest online",
+      "mustererkennungstest kostenlos",
+      "matrix-intelligenztest",
+      "iq muster test online",
+      "visuelles muster-puzzlespiel",
+      "muster erkennen test",
+      "abstrakter mustererkenungstest",
+      "raven progressive matrizen kostenlos üben",
+      "mustervervollständigungstest",
+      "logische mustererkennung"
+    ]
+  },
+  "precision-click": {
+    "title": "Präzisionsklick-Test - Maus-Zielgenauigkeit | Reflextry",
+    "description": "Schärfe die Mauspräzision und Mikro-Zielgenauigkeit. Klicke auf kleine Punktziele, ohne daneben zu klicken, um Feinmotorik und Cursor-Genauigkeit für Gaming zu verfeinern.",
+    "keywords": [
+      "präzisionsklick test",
+      "mauspräzisionstest",
+      "mikro zielklick test",
+      "mauscursor genauigkeitstest",
+      "kleine ziele klickgeschwindigkeit",
+      "pixelgenaues klickspiel",
+      "fps maus präzisionstest",
+      "zielgenauigkeit prozentsatz test",
+      "hand-auge-koordination klicktest",
+      "feiner cursor-kontroll-benchmark"
+    ]
+  },
+  "data-entry": {
+    "title": "Dateneingabe-Genauigkeitstest - Tastenanschlag-Benchmark | Reflextry",
+    "description": "Messe Dateneingabegeschwindigkeit, alphanumerische Tipppräzision und Fehlerraten. Teste bürokratische Anschläge pro Stunde (APH) mit realistischen numerischen und Code-Benchmarks.",
+    "keywords": [
+      "dateneingabetest online",
+      "dateneingabe geschwindigkeitstest kostenlos",
+      "alphanumerischer dateneingabetest",
+      "10-tasten dateneingabe übung",
+      "datentipptest online",
+      "bureaukratischer dateneingabetest",
+      "aph dateneingabetest",
+      "tastenanschlag genauigkeitstest",
+      "dateneingabe genauigkeit prozentsatz",
+      "aufmerksamkeitstest detailgenauigkeit online"
+    ]
+  },
+  "image-recognition": {
+    "title": "Bilderkennungs-Test - Visuelle Detailgenauigkeit | Reflextry",
+    "description": "Teste visuelle Wahrnehmung und schnelle Bildunterscheidung. Identifiziere subtile visuelle Unterschiede und gleiche Zielobjekte bei hoher Geschwindigkeit ab, um Beobachtungsfähigkeiten zu trainieren.",
+    "keywords": [
+      "bilderkennungstest online",
+      "visuelles erkennungsspiel",
+      "schneller bildgedächtnistest",
+      "bilderkennungs geschwindigkeitstest",
+      "fange den unterschied geschwindigkeitstest",
+      "visueller diskriminationstest",
+      "kognitiver bildtest",
+      "visueller suchaufgabentest",
+      "human benchmark bilderkennung"
+    ]
+  },
+  "angle-estimation": {
+    "title": "Winkelschätzungs-Test – Räumliche Geometrie-Sehschärfe | Reflextry",
+    "description": "Teste dein Auge für Geometrie und räumliche Schätzungen. Errate Grade von vorgegebenen Winkeln präzise, um visuelle Winkelschärfe und räumliches Urteilsvermögen zu benchen.",
+    "keywords": [
+      "winkel schätzen test online",
+      "errate den winkel spiel",
+      "winkelmessungs test online",
+      "winkel grad schätzen spiel",
+      "geodreieck winkelschätzung spiel",
+      "räumlicher winkel sehschärfe test",
+      "geometrie winkel test spiel online",
+      "wie genau ist dein auge für winkel",
+      "human benchmark winkel"
+    ]
+  },
+  "color-match": {
+    "title": "Farbabgleich-Test – RGB-Farbton-Unterscheidung | Reflextry",
+    "description": "Teste deine Farbwahrnehmung und subtile Schattierungsunterscheidung mit unserem Farbabgleich-Test. Gleiche Ziel-RGB-Farbtöne unter Zeitdruck ab und benche deine visuelle Präzision.",
+    "keywords": [
+      "farbabgleich test",
+      "farbdiskriminierungs test",
+      "farbton abgleich test",
+      "farbsehschärfe test",
+      "farbwahrnehmungs test",
+      "schattierungs abgleich test online",
+      "rgb farbtest",
+      "visuelle farbdiskriminierung",
+      "farbabgleich spiel online",
+      "subtiler farbunterschied test",
+      "farnsworth munsell alternative",
+      "empfindlichkeitstest farbe",
+      "chromatische sehschärfe test"
+    ]
+  },
+  "color-blindness": {
+    "title": "Farbenblindheits-Test – Ishihara-Tafeln Screener | Reflextry",
+    "description": "Erkunde Ishihara-ähnliche prozedurale Punkttafeln in einem kostenlosen, lehrreichen Farbsehspiel. Display-Einstellungen beeinflussen die Ergebnisse; dies ist keine diagnostische Beurteilung.",
+    "keywords": [
+      "farbenblindheit test",
+      "farbsehtest online",
+      "ishihara test online kostenlos",
+      "rot grün schwäche test",
+      "farbenblinden testtafeln",
+      "protanopie test",
+      "deuteranopie test",
+      "online ishihara tafeln",
+      "farbsehschwäche test",
+      "kostenloser farbenblinden check",
+      "farbsehschwäche screening",
+      "ishihara tafeln test",
+      "farbenblindheits beurteilung"
+    ]
+  },
+  "mental-rotation": {
+    "title": "Mentaler Rotationstest – 3D-Raumvorstellung | Reflextry",
+    "description": "Benche deine 3D-Raumvisualisierung und kognitive Rotationsgeschwindigkeit. Bestimme in Echtzeit, ob komplexe geometrische Formen identisch oder spiegelverkehrt sind.",
+    "keywords": [
+      "mentaler rotationstest",
+      "shepard metzler test online",
+      "raumvorstellungstest kostenlos",
+      "3d raumvisualisierungs test",
+      "räumlicher intelligenztest",
+      "kognitiver rotationstest",
+      "räumliche fähigkeiten benchmark",
+      "3d objekt rotations test",
+      "räumliche beziehungen test",
+      "vandenberg mentale rotation",
+      "raumkognitions test",
+      "mentale rotation üben"
+    ]
+  },
+  "aim-trainer": {
+    "title": "FPS Aim-Trainer – Maus-Aim & Flick-Warm-up | Reflextry",
+    "description": "Verbessere deine Mausgenauigkeit, Zielverfolgung und Flick-Geschwindigkeit für FPS-Spiele wie Valorant, CS2 und Apex. Kostenloser 3D-Aim-Trainer direkt in deinem Webbrowser.",
+    "keywords": [
+      "aim trainer online kostenlos",
+      "fps aim trainer im browser",
+      "maus aim test",
+      "valorant aim trainer kostenlos",
+      "cs2 aim training online",
+      "aim lab browser alternative",
+      "3d aim trainer online",
+      "gridshot aim trainer online",
+      "maus genauigkeit aim test",
+      "fps maus empfindlichkeits test",
+      "tägliches aim warm up browser",
+      "aim reflex spiel"
+    ]
+  },
+  "rpg-reaction": {
+    "title": "Esports Gamer Reaktionstest - Kampfreflexe | Reflextry",
+    "description": "Teste kompetitive Kampfreflexe, Quick-Time-Event (QTE)-Parade-Timing und Esports-Reaktionsgeschwindigkeiten in millisekundengenauen, simulierten Kampfszenarien.",
+    "keywords": [
+      "gamer reaktionszeit test",
+      "esports reaktionsgeschwindigkeit test",
+      "rpg reaktionstest",
+      "qte reaktionsspiel online",
+      "gaming reflex test",
+      "pro gamer reaktionszeit durchschnitt",
+      "cs2 peeker advantage reaktionstest",
+      "valorant reaktionszeit benchmark",
+      "hit confirm reflex test",
+      "actionspiel parade timing test"
+    ]
+  },
+  "endless-dodge": {
+    "title": "Endless Dodge Spiel - Kugel-Ausweich-Agilität | Reflextry",
+    "description": "Teste deine Ausweichreflexe und räumliche Agilität. Navigiere deinen Cursor durch endlose Schwärme sich bewegender Hindernisse in diesem intensiven Reflex-Überlebensspiel.",
+    "keywords": [
+      "endless dodge spiel online",
+      "ausweich reaktionstest",
+      "bullet hell ausweichen üben",
+      "mauszeiger ausweichspiel",
+      "evade reflex spiel online",
+      "hindernisse ausweichen reflex spiel",
+      "bullet dodge aufwärmspiel",
+      "cursor ausweich geschwindigkeitstest",
+      "micro evasion agilitätstrainer"
+    ]
+  },
+  "stroop-drop": {
+    "title": "Stroop-Effekt-Test - Impuls- & Aufmerksamkeitsspiel | Reflextry",
+    "description": "Fordere deine inhibitorische Kontrolle mit dem interaktiven Spiel Stroop Drop heraus. Löse kognitive Interferenzen zwischen fallenden Farbwörtern und ihrer Tintenfarbe.",
+    "keywords": [
+      "stroop effekt test online kostenlos",
+      "stroop farbwort test spiel",
+      "kognitiver interferenztest",
+      "stroop drop spiel online",
+      "inhibitorische kontrolle test spiel",
+      "farbwort unstimmigkeit test",
+      "psychologischer stroop effekt test",
+      "gehirn konflikt reaktionsspiel",
+      "exekutive funktionen stroop test"
+    ]
+  },
+  "target-tracking": {
+    "title": "Target Tracking Aim Trainer - Maus-Aim-Aufwärmen | Reflextry",
+    "description": "Meistere flüssiges Maus-Tracking für kompetitive FPS-Spiele. Trainiere kontinuierliche Präzisions-Aims gegen ausweichende, bewegte Ziele ohne Maus-Glättung.",
+    "keywords": [
+      "smooth tracking aim trainer",
+      "zielverfolgung aim test online",
+      "fps smooth tracking üben",
+      "apex legends tracking trainer online",
+      "maus tracking genauigkeitstest",
+      "zielverfolgung aim test",
+      "fadenkreuz tracking test",
+      "kontinuierliches aim tracking üben",
+      "reaktives tracking spiel online"
+    ]
+  },
+  "flick-shot": {
+    "title": "Flick Shot Aim Trainer - Schnelles Flick-Maus-Aim | Reflextry",
+    "description": "Trainiere Muskelgedächtnis und Snap-Aiming mit unserem Flick-Shot-Trainer. Kalibriere schnelle Mikro-Anpassungen und Zielerfassung für Taktik-Shooter.",
+    "keywords": [
+      "flick shot aim trainer online",
+      "flick aim test kostenlos",
+      "cs2 flick shot üben online",
+      "valorant flick shot aufwärmen",
+      "micro flick aim trainer",
+      "schneller flick maus genauigkeitstest",
+      "gridshot flick trainer",
+      "reflex flick shot spiel",
+      "ziel flick genauigkeitstest",
+      "one tap flick trainer"
+    ]
+  },
+  "rhythm-tap": {
+    "title": "Rhythm-Tap-Spiel - Audiovisueller Beat-Timing-Test | Reflextry",
+    "description": "Teste deine musikalische Timing-Genauigkeit und Millisekunden-Rhythmuswahrnehmung. Tippe synchron zu steigenden BPM-Tempos und verfolge Off-Beat-Latenzfehler.",
+    "keywords": [
+      "rhythmus timing test online",
+      "beat tap reaktionstest",
+      "audiovisueller rhythmustest",
+      "osu rhythmus warm-up im browser",
+      "auf den beat tippen genauigkeitstest",
+      "rhythmus reaktionsspiel kostenlos",
+      "musikalisches timing testen online",
+      "millisekunden audio sync test",
+      "bpm tap genauigkeitsspiel",
+      "rhythmus reflex trainer"
+    ]
+  }
+}

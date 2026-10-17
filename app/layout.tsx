@@ -79,17 +79,22 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
+import { headers } from "next/headers";
 import { I18nProvider } from "@/lib/i18n/context";
+import { DEFAULT_LOCALE, isSupportedLocale, type Locale } from "@/lib/i18n/config";
 
 export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  const headerList = await headers();
+  const rawLocale = headerList.get("x-locale");
+  const locale: Locale = rawLocale && isSupportedLocale(rawLocale) ? rawLocale : DEFAULT_LOCALE;
   const organizationSchema = generateOrganizationSchema();
 
   return (
-    <html lang="en" className="light" suppressHydrationWarning>
+    <html lang={locale} className="light" suppressHydrationWarning>
       <head>
         <StructuredData type="Organization" data={organizationSchema} />
 
@@ -145,7 +150,7 @@ export default async function RootLayout({
         className={`${outfit.variable} antialiased bg-background text-foreground flex flex-col min-h-screen`}
       >
         <ThemeProvider>
-          <I18nProvider>
+          <I18nProvider initialLocale={locale}>
             <ErrorBoundary>
               <NavbarDynamic />
               <main className="flex-1 pt-20">

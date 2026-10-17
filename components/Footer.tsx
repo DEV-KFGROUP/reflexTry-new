@@ -127,16 +127,17 @@ export function Footer() {
                     </div>
 
                     {/* Links Column 2: Features / Stats */}
+                    {/* Links Column 2: Features / Stats */}
                     <div>
                         <p className="flex items-center gap-2 text-xs font-mono font-bold text-foreground uppercase tracking-widest mb-6">
                             <Trophy className="w-4 h-4 text-amber-500" />
-                            Features
+                            {t("footer.features", "Features")}
                         </p>
                         <ul className="space-y-3">
                             {[
                                 { name: t("nav.leaderboard", "Leaderboard"), href: "/leaderboard" },
                                 { name: t("nav.statistics", "Statistics"), href: "/statistics" },
-                                { name: "Achievements", href: "/achievements" },
+                                { name: t("footer.achievements", "Achievements"), href: "/achievements" },
                                 { name: t("nav.challenges", "Daily Challenges"), href: "/challenges" },
                             ].map(link => (
                                 <li key={link.href}>
@@ -153,15 +154,15 @@ export function Footer() {
                     <div>
                         <p className="flex items-center gap-2 text-xs font-mono font-bold text-foreground uppercase tracking-widest mb-6">
                             <BookOpen className="w-4 h-4 text-purple-500" />
-                            Research
+                            {t("footer.research", "Research")}
                         </p>
                         <ul className="space-y-3">
                             {[
-                                { name: "Methodology", href: "/methodology" },
+                                { name: t("footer.methodology", "Methodology"), href: "/methodology" },
                                 { name: t("nav.science", "Science & Citations"), href: "/science" },
-                                { name: "Training Programs", href: "/training-programs" },
+                                { name: t("footer.trainingPrograms", "Training Programs"), href: "/training-programs" },
                                 { name: t("nav.blog", "Research Blog"), href: "/blog" },
-                                { name: "FAQ", href: "/faq" },
+                                { name: t("footer.faq", "FAQ"), href: "/faq" },
                             ].map(link => (
                                 <li key={link.href}>
                                     <Link href={getLocalizedHref(link.href)} prefetch={false} className="group flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
@@ -200,29 +201,46 @@ export function Footer() {
 
                 {/* Footer Language Selection Bar */}
                 <div className="py-4 border-t border-black/10 dark:border-white/10 flex justify-center sm:justify-start">
-                    <button type="button" className="text-sm text-slate-700 underline hover:text-slate-900" onClick={() => window.dispatchEvent(new Event(PREFERENCES_EVENT))}>Cookie preferences</button>
-                        <LanguageSwitcher variant="footer" />
+                    <button type="button" className="text-sm text-slate-700 dark:text-slate-300 underline hover:text-slate-900 dark:hover:text-white" onClick={() => window.dispatchEvent(new Event(PREFERENCES_EVENT))}>
+                        {t("footer.cookiePreferences", "Cookie preferences")}
+                    </button>
+                    <LanguageSwitcher variant="footer" />
                 </div>
 
                 {/* SEO/AEO Global Context */}
                 <div className="py-6 border-t border-black/10 dark:border-white/10 text-xs text-muted-foreground">
                     <details className="group cursor-pointer">
                         <summary className="font-mono uppercase tracking-widest text-center list-none flex items-center justify-center gap-2 hover:text-foreground transition-colors">
-                            <span>About Reflextry Platform & Methodology</span>
+                            <span>{t("footer.platformMethodology", "About Reflextry Platform & Methodology")}</span>
                             <span className="transition group-open:rotate-180">▼</span>
                         </summary>
                         <div className="mt-6 text-sm text-muted-foreground/80 leading-relaxed max-w-5xl mx-auto space-y-4 text-justify px-4">
                             <p>
-                                <strong className="text-foreground font-mono uppercase tracking-wide">Brain Training:</strong> We built Reflextry to give gamers and competitive players a raw, unfiltered look at their baseline mechanics. No fluff, just pure performance tracking. By pushing your working memory and visual pattern recognition to the limit every day, you force your brain to build faster, stronger neural pathways—a process known as neuroplasticity. We isolate specific cognitive loads (like spatial recall and sequence memory) so you can train exactly what you're weak at.
+                                <strong className="text-foreground font-mono uppercase tracking-wide">
+                                    {t("footer.brainTrainingTitle", "Brain Training:")}{" "}
+                                </strong>
+                                {t("footer.brainTrainingText", "We built Reflextry to give gamers and competitive players a raw, unfiltered look at their baseline mechanics. No fluff, just pure performance tracking. By pushing your working memory and visual pattern recognition to the limit every day, you force your brain to build faster, stronger neural pathways—a process known as neuroplasticity. We isolate specific cognitive loads (like spatial recall and sequence memory) so you can train exactly what you're weak at.")}
                             </p>
                             <p>
-                                <strong className="text-foreground font-mono uppercase tracking-wide">Esports Latency:</strong> In competitive gaming, 50 milliseconds is the difference between clicking a head and getting sent back to the lobby. Our Speed and Reflex arenas strip away all external game mechanics to measure your raw biological reaction time. We track your Click-Per-Second (CPS), flick-shot accuracy, and raw tracking speed. We heavily optimized our testing environment to cut out browser-level input lag, giving you a true measurement of your hardware and nervous system working together. Use these tools to warm up your fast-twitch muscles before jumping into ranked.
+                                <strong className="text-foreground font-mono uppercase tracking-wide">
+                                    {t("footer.esportsTitle", "Esports Latency:")}{" "}
+                                </strong>
+                                {t("footer.esportsText", "In competitive gaming, 50 milliseconds is the difference between clicking a head and getting sent back to the lobby. Our Speed and Reflex arenas strip away all external game mechanics to measure your raw biological reaction time. We track your Click-Per-Second (CPS), flick-shot accuracy, and raw tracking speed. We heavily optimized our testing environment to cut out browser-level input lag, giving you a true measurement of your hardware and nervous system working together. Use these tools to warm up your fast-twitch muscles before jumping into ranked.")}
                             </p>
                             <p>
-                                <strong className="text-foreground font-mono uppercase tracking-wide">Accuracy:</strong> Speed means nothing if you miss. The Accuracy Hub forces you to lock in and prioritize precision over raw velocity. Through spatial grids, angle estimation, and color matching, you refine your fine motor control. Training speed and accuracy simultaneously teaches your central nervous system to hit complex mechanical movements efficiently. We save all your session data so you can actually see your performance curve go up over time. 10 minutes of focused practice here beats 5 hours of mindless grinding.
+                                <strong className="text-foreground font-mono uppercase tracking-wide">
+                                    {t("footer.accuracyTitle", "Accuracy:")}{" "}
+                                </strong>
+                                {t("footer.accuracyText", "Speed means nothing if you miss. The Accuracy Hub forces you to lock in and prioritize precision over raw velocity. Through spatial grids, angle estimation, and color matching, you refine your fine motor control. Training speed and accuracy simultaneously teaches your central nervous system to hit complex mechanical movements efficiently. We save all your session data so you can actually see your performance curve go up over time. 10 minutes of focused practice here beats 5 hours of mindless grinding.")}
                             </p>
                             <p className="text-center mt-4">
-                                <span className="font-bold text-foreground">Clinical Ref:</span> Consistent cognitive exercises are designed to leverage neuroplasticity. Read more about <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6128435/" target="_blank" rel="noopener noreferrer" className="text-indigo-700 dark:text-indigo-400 hover:text-indigo-900 dark:hover:text-indigo-300 font-semibold underline underline-offset-2 transition-colors">brain training research</a>.
+                                <span className="font-bold text-foreground">
+                                    {t("footer.clinicalRef", "Clinical Ref:")}{" "}
+                                </span>
+                                <span>Consistent cognitive exercises are designed to leverage neuroplasticity. Read more about </span>
+                                <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6128435/" target="_blank" rel="noopener noreferrer" className="text-indigo-700 dark:text-indigo-400 hover:text-indigo-900 dark:hover:text-indigo-300 font-semibold underline underline-offset-2 transition-colors">
+                                    {t("footer.brainTrainingResearch", "brain training research")}
+                                </a>.
                             </p>
                         </div>
                     </details>
@@ -231,14 +249,14 @@ export function Footer() {
                 {/* Bottom Bar */}
                 <div className="pt-6 border-t border-black/10 dark:border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
                     <div className="text-xs font-mono uppercase tracking-widest text-muted-foreground flex items-center flex-wrap gap-2 justify-center">
-                        <span>&copy; {mounted ? currentYear : 2024} REFLEXTRY. ALL RIGHTS RESERVED.</span>
+                        <span>&copy; {mounted ? currentYear : 2024} REFLEXTRY. {t("footer.allRightsReserved", "ALL RIGHTS RESERVED.")}</span>
                         <span className="hidden md:inline border-l border-black/10 dark:border-white/10 h-3 mx-1"></span>
-                        <time dateTime="2026-07-09">LST UPDATE: JUL 2026</time>
+                        <time dateTime="2026-07-09">{t("footer.lastUpdate", "LST UPDATE: JUL 2026")}</time>
                     </div>
                     <div className="flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-muted-foreground">
-                        <span>BUILT WITH</span>
+                        <span>{t("footer.builtWith", "BUILT WITH")}</span>
                         <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500 animate-pulse" />
-                        <span>FOR GAMERS</span>
+                        <span>{t("footer.forGamers", "FOR GAMERS")}</span>
                     </div>
                 </div>
             </div>

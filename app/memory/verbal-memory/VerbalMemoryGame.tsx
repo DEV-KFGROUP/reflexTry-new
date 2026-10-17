@@ -8,6 +8,7 @@ import { GameDashboardLayout } from "@/components/dashboard/GameDashboardLayout"
 import { DashboardDifficultyCard } from "@/components/dashboard/DashboardDifficultyCard";
 import { StatBox } from "@/components/dashboard/StatBox";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from "@/lib/i18n/context";
 
 type DiffId = "beginner" | "easy" | "normal" | "hard" | "professional";
 
@@ -196,14 +197,18 @@ export default function VerbalMemoryGame() {
     }
   };
 
+  const { t } = useTranslation();
+
   const difficultySelector = DIFF_ORDER.map(k => {
     const d = DIFFICULTIES[k];
+    const diffDescKey = `verbalMemory.${k}Desc`;
+    const localizedDesc = t(diffDescKey, d.description);
     return (
       <DashboardDifficultyCard
         key={k}
         id={k}
         label={d.label}
-        description={d.description}
+        description={localizedDesc}
         selected={diffId === k}
         onSelect={() => {
           play("click");
@@ -226,14 +231,16 @@ export default function VerbalMemoryGame() {
     </>
   );
 
+  const diffLabel = t(`game.diff${diff.id.charAt(0).toUpperCase() + diff.id.slice(1)}`, diff.label).toUpperCase();
+
   return (
     <GameDashboardLayout
-      title="VERBAL MEMORY"
-      subtitle="LEXICAL RECOGNITION"
+      title={t("verbalMemory.title", "VERBAL MEMORY")}
+      subtitle={t("verbalMemory.subtitle", "LEXICAL RECOGNITION")}
       difficultySelector={difficultySelector}
       stats={stats}
-      arenaHeaderLeft={`ARENA // ${diff.label.toUpperCase()}`}
-      arenaHeaderRight="IDENTIFY NOVEL STIMULI"
+      arenaHeaderLeft={`${t("game.arena", "ARENA")} // ${diffLabel}`}
+      arenaHeaderRight={t("verbalMemory.arenaGoal", "IDENTIFY NOVEL STIMULI")}
       soundEnabled={!isMuted}
       onToggleSound={toggleMute}
     >
@@ -250,17 +257,17 @@ export default function VerbalMemoryGame() {
               <BookA className="w-10 h-10 text-indigo-500" />
             </div>
             <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-wider mb-4">
-              Verbal Memory Test
+              {t("verbalMemory.testTitle", "Verbal Memory Test")}
             </h2>
             <p className="text-sm text-slate-500 dark:text-slate-400 mb-8 leading-relaxed">
-              Test your verbal memory. Keep track of which words you've seen and which are new.
+              {t("verbalMemory.testDesc", "Test your verbal memory. Keep track of which words you've seen and which are new.")}
             </p>
             <button
               onClick={startGame}
               className="w-full sm:w-auto px-12 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold uppercase tracking-widest text-sm transition-all shadow-lg hover:shadow-indigo-500/20 flex items-center justify-center gap-3"
             >
               <Play className="w-4 h-4 fill-current" />
-              Initialize Test
+              {t("game.initializeTest", "Initialize Test")}
             </button>
           </motion.div>
         )}
@@ -284,13 +291,13 @@ export default function VerbalMemoryGame() {
                 onClick={() => handleChoice(true)}
                 className="flex-1 py-5 bg-white dark:bg-slate-800 border-2 border-indigo-500 dark:border-indigo-400 text-indigo-600 dark:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 rounded-2xl font-black text-xl tracking-widest uppercase transition-all hover:scale-105 active:scale-95 shadow-sm"
               >
-                Seen
+                {t("game.seen", "Seen")}
               </button>
               <button
                 onClick={() => handleChoice(false)}
                 className="flex-1 py-5 bg-indigo-600 hover:bg-indigo-700 border-2 border-indigo-600 hover:border-indigo-700 text-white rounded-2xl font-black text-xl tracking-widest uppercase transition-all hover:scale-105 active:scale-95 shadow-lg shadow-indigo-500/30"
               >
-                New
+                {t("game.new", "New")}
               </button>
             </div>
           </motion.div>
@@ -307,13 +314,13 @@ export default function VerbalMemoryGame() {
               <Trophy className="w-10 h-10 text-rose-500" />
             </div>
             <h2 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-widest mb-2">
-              Calibration Complete
+              {t("game.calibrationComplete", "Calibration Complete")}
             </h2>
             <div className="text-slate-500 mb-2 text-sm uppercase tracking-widest">
-              Final Score: <span className="text-xl font-black text-slate-900 dark:text-white ml-2">{score}</span>
+              {t("game.finalScore", "Final Score:")} <span className="text-xl font-black text-slate-900 dark:text-white ml-2">{score}</span>
             </div>
             {score > 0 && score >= highScores[diffId] ? (
-              <p className="text-amber-500 font-bold text-xs uppercase tracking-widest mb-6">New Record!</p>
+              <p className="text-amber-500 font-bold text-xs uppercase tracking-widest mb-6">{t("game.newRecord", "New Record!")}</p>
             ) : (
               <div className="mb-6" />
             )}
@@ -324,13 +331,13 @@ export default function VerbalMemoryGame() {
                 className="flex items-center gap-2 px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold uppercase tracking-widest text-xs transition-all shadow-lg hover:shadow-indigo-500/20"
               >
                 <RotateCcw className="w-4 h-4" />
-                Recalibrate
+                {t("game.recalibrate", "Recalibrate")}
               </button>
               <button
                 onClick={() => setGameState("select")}
                 className="flex items-center gap-2 px-8 py-4 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-900 dark:text-white rounded-xl font-bold uppercase tracking-widest text-xs transition-all"
               >
-                Menu
+                {t("game.menu", "Menu")}
               </button>
             </div>
           </motion.div>

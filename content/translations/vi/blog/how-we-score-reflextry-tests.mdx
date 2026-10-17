@@ -1,0 +1,86 @@
+---
+title: >-
+  Cách chúng tôi tính điểm các bài kiểm tra trên Reflextry (Và ý nghĩa của các
+  con số)
+description: >-
+  Hướng dẫn rõ ràng về hệ thống tính điểm của Reflextry: mili-giây, khoảng nhớ,
+  độ chính xác và thời gian hoàn thành—cộng với những gì chúng tôi không khẳng
+  định về phân vị hay chẩn đoán lâm sàng.
+publishedAt: '2026-08-01'
+author:
+  name: Kaushik Rabadiya
+category: Methodology
+tags:
+  - scoring
+  - methodology
+  - benchmarks
+  - transparency
+readingTime: 8 min read
+---
+Nếu một trang web luyện tập công bố điểm số mà không giải thích quy tắc, con số đó chỉ để làm tiếp thị chứ không phải đo lường. Bài viết này ghi lại cách Reflextry tính điểm cho các nhóm bài kiểm tra chính, cách độ khó thay đổi nhiệm vụ và những tuyên bố nào chúng tôi từ chối đưa ra nếu không có dữ liệu có kiểm soát.
+
+## Một nguyên tắc duy nhất: cùng thiết bị, cùng độ khó
+
+Các bài kiểm tra trên trình duyệt luôn mang theo nhiễu phần cứng: tần số quét, độ trễ polling của chuột, độ trễ cảm ứng, hiện tượng giảm xung nhịp do nhiệt (thermal throttling) và các tab chạy nền. Điều đó không khiến điểm số trở nên vô ích—nó có nghĩa là **các phép so sánh nên được thực hiện trong phạm vi thiết bị của bạn**. Thời gian phản hồi 220 mili-giây trên một chiếc laptop 60 Hz không phải là một thí nghiệm giống như 180 mili-giây trên màn hình chơi game 240 Hz. Luôn ghi lại chế độ độ khó bên cạnh các kỷ lục cá nhân (personal best).
+
+## Phản hồi đơn và phản hồi lựa chọn (mili-giây)
+
+Điểm **phản hồi đơn** thường là độ trễ trung bình từ khi kích thích xuất hiện đến khi có phản hồi hợp lệ, tính bằng mili-giây. Số càng thấp càng tốt. Việc bấm sớm (trước tín hiệu) được tính là lỗi, không phải sự dự đoán tài tình.
+
+**Phản hồi lựa chọn** có thêm các phương án khác. Thời gian phản hồi (RT) trung bình vẫn là chỉ số chính, nhưng chỉ những lần bấm đúng mới được đưa vào số trung bình. Các cú nhấp nhầm ô và nhấp sớm sẽ được tính là số lần lỗi. Vì có nhiều lựa chọn thường làm chậm quyết định (theo trực giác của Định luật Hick), không nên so sánh điểm trung bình của 2 ô với 4 ô như thể chúng là các bài kiểm tra giống hệt nhau.
+
+## Khoảng nhớ (Memory span) và các lượt nhận diện
+
+Các công cụ theo phong cách **Chimp / chuỗi / chữ số** thường tính điểm khoảng nhớ sạch dài nhất hoặc cấp độ đạt được theo quy tắc về mạng sống (lives) và quy tắc biến mất của chế độ đó. Số càng cao càng tốt.
+
+**Trí nhớ từ vựng (Verbal memory)** thường tính điểm xem bạn tiến xa đến đâu trước khi mắc lỗi trong các phán quyết XEM/MỚI (SEEN/NEW). Sự nhiễu loạn tăng lên về cuối một lượt chơi; điều đó là dễ hiểu, không phải bài kiểm tra bị lỗi.
+
+Khi số mạng sống thay đổi theo độ khó, một "điểm số cao" ở mức Dễ (Beginner) không thể thay thế cho Chuyên nghiệp (Professional). Hãy coi mỗi độ khó là một bảng xếp hạng riêng trong ghi chú của bạn.
+
+## Độ chính xác, sự ức chế và các bài kiểm tra xung đột
+
+Bài kiểm tra **Go/No-Go** thưởng cho các cú bấm Go đúng **và** các lần kìm lại đúng. Thời gian phản hồi Go chớp nhoáng nhưng kèm theo nhiều tín hiệu báo động giả thì không phải là sự thành thạo.
+
+Bài **Flanker** tính điểm các phản hồi mũi tên ở giữa chính xác; các thử nghiệm không tương đồng (incongruent) sẽ chậm hơn và dễ mắc lỗi hơn theo thiết kế. Hãy theo dõi độ chính xác trước, sau đó mới tính thời gian phản hồi trung bình ở các câu đúng.
+
+**Khớp mẫu / nh��p chính xác (Pattern matching / precision click)** ưu tiên sự chính xác (và chất lượng cú nhấp) hơn tốc độ liều lĩnh. CPS hoặc tốc độ hoàn thành mà không có độ chính xác chỉ là một chỉ số mang tính hình thức.
+
+## Hoàn thành dựa trên thời gian (Schulte và tương tự)
+
+Lưới kiểu Schulte tính điểm **thời gian hoàn thành**—số càng thấp càng tốt. Những cú nhấp sai không được phép "thành công" một cách âm thầm; chúng làm mất thời gian. Các chế độ đếm ngược là một nhiệm vụ khác so với các bài xóa số tăng dần.
+
+## Những gì chúng tôi không tuyên bố
+
+Chúng tôi không bịa ra các số liệu thống kê chung cho toàn trang web như "người dùng trung bình cải thiện X% sau 14 ngày" mà không có mẫu được công bố và kiểm soát. Chúng tôi không trình bày các bảng kiểm tra kiểu Ishihara như một chẩn đoán y tế. Chúng tôi không đánh đồng điểm số cao trong trò chơi với chỉ số IQ, đánh giá ADHD lâm sàng hoặc mức độ sẵn sàng ký hợp đồng thi đấu thể thao điện tử (esports).
+
+Khi chúng tôi trích dẫn nghiên cứu bên ngoài (NIH, NCBI, các tài liệu tâm lý học kinh điển), nghiên cứu đó mô tả **các hiện tượng chung**. Đường cong cá nhân của bạn trên Reflextry vẫn là một thí nghiệm n=1—hữu ích để luyện tập, không phải là báo cáo từ phòng khám.
+
+## Cách giữ nhật ký trung thực
+
+1. Ghi lại ngày tháng, độ khó, thiết bị và ghi chú về giấc ngủ/caffeine nếu bạn quan tâm đến xu hướng.
+2. Ưu tiên số trung vị hàng tuần (rolling weekly medians) hơn là một phiên chơi may mắn.
+3. Thay đổi từng biến một khi thử nghiệm "điều này có giúp ích gì không?".
+4. Dừng các phiên chơi khi sự mệt mỏi làm tăng đột biến số lỗi; điểm số lúc mệt mỏi sẽ dạy cho bạn những bài học sai lầm.
+
+## Tại sao sự minh bạch này lại quan trọng
+
+Các trang web thời đại AdSense đôi khi sao chép y nguyên nội dung "cải thiện 12–15%" dưới mọi công cụ. Điều đ�� làm tổnNiềm tin và dạy người dùng cách phớt lờ các con số. Mục tiêu của Reflextry thì ngược lại: **một quy tắc rõ ràng cho mỗi công cụ**, giới hạn trung thực và điểm số bạn có thể tự hào bảo vệ khi chia sẻ với đồng đội hoặc huấn luyện viên.
+
+Nếu mô tả tính điểm trên trang công cụ nào đó mâu thuẫn với bài viết này, hãy coi giao diện công cụ trực tiếp là nguồn chân lý và gửi email về support@reflextry.com để chúng tôi có thể sửa lại tài liệu.
+
+## Cách chúng tôi suy nghĩ về "dữ liệu gốc" trên một phòng thí nghiệm miễn phí
+
+Chúng tôi không công bố phần trăm bảng xếp hạng giả được thu thập (scrape) từ các phiên ẩn danh và khoác lên mình chiếc áo khoa học. Nếu chúng tôi phát hành các phân phối tổng hợp (ví dụ: biểu đồ tần suất của mức trung bình phản hồi đơn trên một loại thiết bị đã khai báo), chúng tôi sẽ nêu rõ:
+
+- quy tắc đưa vào (số lần thử tối thiểu, độ khó, loại bỏ spam nhấp sớm)
+- quy mô mẫu xấp xỉ và khoảng thời gian
+- các lưu ý về thiết bị
+- biểu đồ đó *không phải* là gì (tiêu chuẩn lâm sàng)
+
+Cho đến khi loại báo cáo đó xuất hiện, hãy coi nhật ký của chính bạn là tập dữ liệu chính. Điều đó vẫn rất có giá trị: các thí nghiệm cá nhân chính là cách mà việc luyện tập hoạt động.
+
+## Hướng dẫn liên quan
+
+- [Những gì bài kiểm tra phản hồi trên trình duyệt có thể và không thể đo lường](/blog/browser-reaction-time-limits)
+- [Phản hồi lựa chọn so với Phản hồi đơn](/blog/choice-reaction-vs-simple-reaction)
+- [Thế nào là một thời gian phản hồi tốt?](/blog/what-is-a-good-reaction-time)

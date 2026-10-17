@@ -1,0 +1,954 @@
+{
+  "sequence-memory": {
+    "title": "Sequentieel Geheugentest - Patroonherkenning Benchmark | Reflextry",
+    "description": "Oefen met het herinneren van uitbreidende ruimtelijke lichtpatronen met onze gratis Sequentieel Geheugentest. Lees de score-regels en vergelijk je eigen sessies.",
+    "keywords": [
+      "sequentieel geheugen test",
+      "sequentieel geheugenspel",
+      "human benchmark sequentieel geheugen",
+      "simon spel online gratis",
+      "simon says geheugenspel",
+      "patroonsequentie test",
+      "visueel sequentieel geheugen test",
+      "speel sequentieel geheugen online",
+      "sequentieel geheugen oefenen",
+      "sequentieel geheugen training",
+      "sequentieel geheugen verbeteren",
+      "sequentieel geheugen wereldrecord",
+      "gratis sequentieel geheugen test",
+      "kortetermijn sequentieel geheugen",
+      "cognitieve sequentietest",
+      "corsi block tapping test online",
+      "ruimtelijk sequentieherkenningsspel",
+      "sequentieel geheugen gemiddelde score",
+      "breintraining sequentieel geheugen"
+    ]
+  },
+  "number-memory": {
+    "title": "Cijfergeheugentest - Digit Span Geheugen Benchmark | Reflextry",
+    "description": "Meet je werkgeheugen en cijferreeks-capaciteit met onze gratis Cijfergeheugentest. Onthoud uitbreidende cijferreeksen en benchmark je geheugenscore.",
+    "keywords": [
+      "cijfergeheugen test",
+      "digit span test online",
+      "cijfergeheugen human benchmark",
+      "forward digit span test",
+      "reverse digit span test",
+      "cijfergeheugen spel",
+      "getallen onthouden test",
+      "kortetermijn cijfergeheugen",
+      "cijfergeheugen oefenen",
+      "human benchmark cijfergeheugen record",
+      "cijferherkenning test",
+      "sequentieel cijfergeheugen",
+      "gratis digit span test online",
+      "hoe verbeter je cijfergeheugen",
+      "breintraining cijferherkenning",
+      "geheugenspan test",
+      "wais digit span benchmark",
+      "werkgeheugen capaciteit test",
+      "gemiddelde cijfergeheugen score"
+    ]
+  },
+  "visual-memory": {
+    "title": "Visueel Geheugentest - Ruimtelijk Raster Geheugenspel | Reflextry",
+    "description": "Vergroot je visuele retentie en ruimtelijke patroonherkenning. Test je visuele geheugen door oplichtende rasterpatronen op een groeiende matrix te onthouden. Gratis human benchmark-tool.",
+    "keywords": [
+      "visueel geheugen test",
+      "visueel geheugen spel",
+      "human benchmark visueel geheugen",
+      "raster geheugentest gratis",
+      "kortetermijn visueel geheugen test",
+      "visueel werkgeheugen test",
+      "visueel ruimtelijk geheugen test",
+      "visueel geheugen verbeteren",
+      "fotografisch geheugen test online",
+      "visuele herinnering test",
+      "patroon geheugen test",
+      "visueel geheugen oefenen",
+      "gratis visueel geheugen spel",
+      "eidetisch geheugen test",
+      "visuele cognitie test",
+      "matrix geheugentest",
+      "onthoud de vierkanten spel",
+      "visuele patroonherkenning test"
+    ]
+  },
+  "color-memory": {
+    "title": "Kleurgeheugentest - Visueel Kleurreeksen Geheugenspel | Reflextry",
+    "description": "Daag je chromatische geheugen en visuele aandacht uit. Onthoud snel wisselende kleurenreeksen en train je cognitieve flexibiliteit met onze gratis Kleurgeheugentest.",
+    "keywords": [
+      "kleurgeheugen test",
+      "kleurherinnering test",
+      "kleurgeheugen spel",
+      "simon kleurgeheugen spel",
+      "kortetermijn kleurgeheugen",
+      "kleuren onthouden test",
+      "visueel kleurgeheugen",
+      "kleursequentie geheugentest",
+      "online kleurgeheugen spel",
+      "kleur breintraining",
+      "simon says kleur test",
+      "kleursequentie oefenen",
+      "exacte kleurherkenning",
+      "kleurgeheugen human benchmark",
+      "chromatische geheugentest",
+      "tintretentie spel",
+      "visuele kleurspan benchmark"
+    ]
+  },
+  "shape-memory": {
+    "title": "Vormgeheugentest - Geometrisch Patroon Geheugen | Reflextry",
+    "description": "Train geometrische vormherkenning en ruimtelijk geheugen. Onthoud abstracte vormen en symbolen om je non-verbale visuele redeneervermogen en focus te verbeteren.",
+    "keywords": [
+      "vormgeheugen test",
+      "vormen matchen geheugenspel",
+      "geometrische vormgeheugen test",
+      "visueel vormgeheugen",
+      "onthoud de vorm test",
+      "vorm herinnering spel",
+      "vormsequentie geheugen",
+      "cognitieve vormtest",
+      "3d vormgeheugen test",
+      "patroon- en vormgeheugen",
+      "gratis vormgeheugen spel online",
+      "polygoon geheugentest",
+      "visueel redeneren vormen",
+      "abstracte vorm herinnering",
+      "ruimtelijk vormgeheugen test"
+    ]
+  },
+  "symbol-memory": {
+    "title": "Symbol Memory Test - Associatieve Icoonherkenning | Reflextry",
+    "description": "Verbeter abstracte patroonherkenning en associatief geheugen. Match cryptische symbolen en iconen om je mentale focus en visuele verwerkingssnelheid te scherpen.",
+    "keywords": [
+      "symbool geheugen test",
+      "alien symbool geheugen spel",
+      "visuele symbool test",
+      "abstract symbool geheugen",
+      "symbool herinnering test",
+      "human benchmark symbol memory",
+      "kortetermijn symbool geheugen",
+      "symbolen matchen geheugentest",
+      "symbolen memoriseren spel",
+      "patroon symbool geheugen",
+      "cognitieve symbool test",
+      "vreemde symbolen geheugen",
+      "icoon geheugen spel",
+      "symbol digit modalities test online",
+      "glyph herinnering test"
+    ]
+  },
+  "word-recall": {
+    "title": "Word Recall Geheugentest - Verbale Retentie Spel | Reflextry",
+    "description": "Evalueer je verbale geheugenretentie en woordenschatherkenning. Test of woorden nieuw zijn of al eerder zijn gezien om het kortetermijn taalgeheugen te meten.",
+    "keywords": [
+      "word recall test",
+      "verbaal geheugen test",
+      "woord geheugen test gratis",
+      "human benchmark verbal memory",
+      "kortetermijn woord herinnering",
+      "geheugentest woordenlijst",
+      "onmiddellijke woordherinnering test",
+      "lijst leren woord test",
+      "woord herinnering brein spel",
+      "geheugenspel woorden",
+      "woordreeks herinnering",
+      "gratis woord herinnering test online",
+      "woorden onthouden geheugen oefening",
+      "cognitieve woordherinnering",
+      "gezien of nieuw woord test",
+      "verbale geheugenspanwijdte test",
+      "auditory verbal learning test online"
+    ]
+  },
+  "card-match": {
+    "title": "Kaart Match Geheugenspel - Concentratie Paren | Reflextry",
+    "description": "Train je ruimtelijk geheugen en visuele patroonherkenning met ons gratis online Kaart Match Geheugenspel. Draai kaarten om, vind paren in zo min mogelijk zetten en verslaan de klok.",
+    "keywords": [
+      "kaart match geheugenspel",
+      "geheugenkaartspel online",
+      "kaarten matchen test",
+      "draai kaart geheugenspel",
+      "paar matchen kaartspel",
+      "kaart matching spelen",
+      "afbeelding kaart geheugentest",
+      "klassiek geheugenkaartspel",
+      "gratis memory match spel",
+      "kaart concentratie spel",
+      "breintraining kaart match",
+      "visuele kaart match",
+      "pelmanism spel online",
+      "geheugen match paren gratis"
+    ]
+  },
+  "chimp-test": {
+    "title": "Chimp Test - Werkgeheugen Benchmark Spel | Reflextry",
+    "description": "Ben je slimmer dan een chimpansee? Doe de beroemde Chimp Test om je visueel-ruimtelijk werkgeheugen te meten. Onthoud het getallenraster voordat het verdwijnt.",
+    "keywords": [
+      "chimp test",
+      "chimp test human benchmark",
+      "chimpansee geheugen test",
+      "chimp geheugen spel",
+      "ben je slimmer dan een chimp test",
+      "apen geheugen test online",
+      "chimp test wereldrecord",
+      "chimp test spelen",
+      "mens vs chimp geheugen test",
+      "chimp brein test",
+      "getallen geheugen aap spel",
+      "primate geheugen test",
+      "chimp test oefenen",
+      "ayumu chimp geheugen test",
+      "ruimtelijk werkgeheugen test"
+    ]
+  },
+  "verbal-memory": {
+    "title": "Verbaal Geheugen Test - Woordherkenning Benchmark | Reflextry",
+    "description": "Test je verbale werkgeheugen met onze gratis Verbaal Geheugen Test. Identificeer bekende versus nieuwe woorden om taalretentie en cognitieve verwerkingssnelheid te meten.",
+    "keywords": [
+      "verbaal geheugen test",
+      "verbaal geheugen human benchmark",
+      "verbaal geheugen spel",
+      "kortetermijn verbaal geheugen test",
+      "verbeter verbaal geheugen",
+      "verbaal geheugen oefenen",
+      "verbaal werkgeheugen test",
+      "verbale geheugenspanwijdte test",
+      "human benchmark verbal",
+      "verbaal herinnering test",
+      "gratis verbaal geheugen test online",
+      "woord geheugen test",
+      "verbale cognitieve test",
+      "gezien of nieuw woord test",
+      "woordenschat retentie test"
+    ]
+  },
+  "object-tracking": {
+    "title": "Multiple Object Tracking - Visuele Focustest | Reflextry",
+    "description": "Test dynamische visuele aandacht en ruimtelijke tracking. Volg meerdere bewegende doelsferen tussen afleiders in deze wetenschappelijk onderbouwde cognitieve test.",
+    "keywords": [
+      "object tracking test",
+      "multiple object tracking test",
+      "visueel object tracking spel",
+      "human benchmark object tracking",
+      "eye tracking geheugentest",
+      "multiple object tracking cognitieve test",
+      "object tracking oefenen",
+      "visuele tracking test online",
+      "bewegend object tracking spel",
+      "3d object tracking test",
+      "verbeter visuele tracking",
+      "mot cognitieve test",
+      "visuele aandacht tracking test"
+    ]
+  },
+  "n-back": {
+    "title": "N-Back Test - Werkgeheugencapaciteit Benchmark | Reflextry",
+    "description": "Train je werkgeheugen met de klassieke N-Back taak. Match letters die N stappen geleden verschenen, volg hits en nauwkeurigheid, en ga van 1-back naar 3-back.",
+    "keywords": [
+      "n-back test",
+      "n back werkgeheugen",
+      "2-back test online",
+      "3-back cognitieve test",
+      "dual n-back gratis",
+      "werkgeheugen n-back spel",
+      "n-back breintraining",
+      "continue prestatie n-back",
+      "letter matching geheugentest",
+      "n-back nauwkeurigheidstest",
+      "cognitieve n-back benchmark",
+      "human benchmark n-back",
+      "verbeter werkgeheugen n-back"
+    ]
+  },
+  "reaction-time": {
+    "title": "Reactietijd Test - Milliseconde Benchmark (ms) | Reflextry",
+    "description": "Test en verbeter je visuele reactietijd in milliseconden. Doe onze gratis milliseconde reactietest, vergelijk met pro gamers en volg je reflexvoortgang.",
+    "keywords": [
+      "reactietijd test",
+      "reactietest ms",
+      "human benchmark reactietijd",
+      "groen licht reactietijd test",
+      "klik wanneer scherm groen wordt test",
+      "gemiddelde reactietijd test",
+      "valorant reactietijd test",
+      "f1 reactietijd test online",
+      "cs2 reactietest",
+      "reactietijd milliseconde benchmark",
+      "snelle reactietest online",
+      "test mijn reflexen gratis",
+      "bestuurder reactietijd test online",
+      "144hz reactietijd test",
+      "240hz reactietijd test",
+      "monitor input lag test",
+      "hoe verbeter je reactietijd",
+      "pro gamer reactietijd gemiddelde"
+    ]
+  },
+  "sound-reaction": {
+    "title": "Audio Reactietijd Test - Geluid Reflex (ms) | Reflextry",
+    "description": "Meet je auditieve reactiesnelheid in milliseconden. Test gehoorreflexen met instant audio-cues en vergelijk je geluidreactie met je visuele reactietijden.",
+    "keywords": [
+      "geluid reflex test",
+      "audio reactietijd test",
+      "audio reflex test",
+      "gehoor reactietijd",
+      "geluid reactie spel",
+      "human benchmark audio reactie",
+      "auditieve reactietijd test",
+      "geluid reflex oefenen",
+      "piep reactietest",
+      "snelle geluid klik test",
+      "akoestische reflex test online",
+      "geluid gebaseerde reactietijd",
+      "gehoor reflex snelheid",
+      "auditieve vs visuele reactietijd",
+      "oor reactietest ms"
+    ]
+  },
+  "grid-shot": {
+    "title": "Grid Shot Aim Trainer - Muis Precisie Reflex | Reflextry",
+    "description": "Warm je aim en muissnelheid op met Grid Shot. Klik op snel verschijnende doelen over het raster om hand-oogcoördinatie te verbeteren voor FPS-games zoals Valorant en CS2.",
+    "keywords": [
+      "grid reflex test",
+      "grid shot aim trainer",
+      "aim grid test",
+      "grid klik reactie",
+      "reflex grid spel",
+      "human benchmark grid",
+      "grid klikken snelheidstest",
+      "snelle grid clicker",
+      "reactie grid oefenen",
+      "valorant gridshot in browser",
+      "fps aim warming-up grid",
+      "tegel reflex test",
+      "grid tap snelheid",
+      "blazepod reactie online",
+      "hand oog coördinatie grid test"
+    ]
+  },
+  "peripheral-vision": {
+    "title": "Perifere Perceptietest - Gezichtsveldbewustzijn | Reflextry",
+    "description": "Train je perifere zicht en reactiesnelheid aan de zijkant. Spot en klik op doelen buiten het midden om je visuele focus te vergroten voor autorijden, sport en competitief gamen.",
+    "keywords": [
+      "perifere reflekstest",
+      "perifere visustest online",
+      "perifeer reactiespel",
+      "gezichtsveld reflekstest",
+      "perifere bewustzijnstest",
+      "reactietest zijgezicht",
+      "perifere aim trainer",
+      "klik op perifere doelen",
+      "breedbeeld reflekstest",
+      "perifere visie kliktest",
+      "reflekstest buiten het midden",
+      "ruimtelijk bewustzijn reflex",
+      "sport perifere visustest",
+      "esports perifeer bewustzijn"
+    ]
+  },
+  "directional-reflex": {
+    "title": "Directionele Reflekstest - Pijltoetsen Snelheidsspel | Reflextry",
+    "description": "Test de reactiesnelheid van je toetsenbord en ruimtelijke besluitvorming. Druk op pijltoetsen die overeenkomen met snelle richtingsaanwijzingen om je cognitieve verwerking en reflexbehendigheid te verbeteren.",
+    "keywords": [
+      "richting reflekstest",
+      "pijl reactietest",
+      "richting klikspel",
+      "toetsenbord richting reflex",
+      "pijltoetsen reactiespel",
+      "ruimtelijke richting reflex",
+      "snelle richtingstest",
+      "cognitieve richtingstest",
+      "pijl matching reflex",
+      "links rechts reactietest",
+      "directionele snelheidstest",
+      "snelle pijl indrukken reflex",
+      "keuze richting reactietest"
+    ]
+  },
+  "multi-stimulus": {
+    "title": "Multi-Stimulus Reactietest - Keuze RT Spel | Reflextry",
+    "description": "Test keuzereactietijd en selectieve aandacht. Verwerk meerdere visuele en audio-stimuli tegelijkertijd om je beslissingssnelheid in een fractie van een seconde te meten.",
+    "keywords": [
+      "multi-stimulus reactietest",
+      "keuze reactietijd test online",
+      "meerdere stimuli reflexspel",
+      "complexe reactietijd test",
+      "cognitieve stimulus test",
+      "multitasking reflekstest",
+      "wet van hick reactietest",
+      "donders keuze reactietest",
+      "multi-stimulus human benchmark",
+      "variabele reactietijd test",
+      "complexe reflex trainer",
+      "beslissing reactie benchmark"
+    ]
+  },
+  "sequence-reaction": {
+    "title": "Volgorde Reactietest - Snelle Combo Reflexen | Reflextry",
+    "description": "Combineer geheugen met snelle motorische reflexen. Volg snelgaande lichtvolgorden en voer snelle combo's uit om ritmische reactietijden en snelheid te trainen.",
+    "keywords": [
+      "volgorde reactietest",
+      "simon says reactietijd",
+      "patroon reflekstest",
+      "seriële reactietijd taak",
+      "sequentiële kliktest",
+      "reflex volgorde spel",
+      "geheugen en reactietest",
+      "snelle volgorde clicker",
+      "cognitieve volgorde reactie",
+      "snelle volgorde test",
+      "sequentiële taptest",
+      "snelle combo reflexspel"
+    ]
+  },
+  "whack-a-mole": {
+    "title": "Whack-a-Mole Online - Oog-Hand Reactiespel | Reflextry",
+    "description": "Speel gratis de klassieke Whack-a-Mole online. Tik op tevoorschijn komende mollen zo snel mogelijk om reactiesnelheid, precisiekliks en motorische behendigheid te meten.",
+    "keywords": [
+      "whack a mole online",
+      "speel whack a mole gratis",
+      "whack a mole reactietest",
+      "virtuele whack a mole",
+      "klik op de mol spel",
+      "muis whack a mole",
+      "whack a mole reflexspel",
+      "snelle whack a mole",
+      "aim whack a mole",
+      "browser whack a mole spel",
+      "pop-up reflekstest",
+      "doel pop reactiespel",
+      "oog hand coördinatie spel"
+    ]
+  },
+  "color-switch": {
+    "title": "Kleurwissel Reflex Test - Visuele Reactietijd | Reflextry",
+    "description": "Train je kleurreactietijd en selectieve responssnelheid. Reageer onmiddellijk op kleurwisselingen en flitssignalen op het scherm zonder aarzelen.",
+    "keywords": [
+      "kleurwissel reactietest",
+      "kleurverandering reflextest",
+      "rood groen reactietest",
+      "stoplicht reactietijd",
+      "scherm kleurverandering test",
+      "snelle kleurklik test",
+      "human benchmark kleurverandering",
+      "visuele kleurwissel reflex",
+      "kleur flits reactie",
+      "eenvoudige kleurreactietijd",
+      "kleurverandering clicker",
+      "visuele stimulus kleurtest"
+    ]
+  },
+  "time-perception": {
+    "title": "Tijdsperceptie Test - Interne Klok Benchmark | Reflextry",
+    "description": "Test je interne klok en temporele schatting. Houd de knop ingedrukt en laat los om doel-tijdsintervallen tot op de milliseconde nauwkeurig te produceren.",
+    "keywords": [
+      "tijdsperceptie test",
+      "human benchmark tijdsperceptie",
+      "interne klok test",
+      "tijdschatting test",
+      "raad de tijd test",
+      "perceptie van tijd spel",
+      "tijd nauwkeurigheid test",
+      "cognitieve tijdsperceptie",
+      "seconden schatting test",
+      "tijdsduur test",
+      "blinde tijd test online",
+      "temporele perceptie test",
+      "interne pacemaker benchmark"
+    ]
+  },
+  "go-no-go": {
+    "title": "Go / No-Go Test - Impuls- & Reactiecontrole | Reflextry",
+    "description": "Meet responsremming met een Go/No-Go taak. Druk op bij groene Go-pogingen, rem af bij rode No-Go-pogingen en houd nauwkeurigheid en reactietijd bij.",
+    "keywords": [
+      "go no go test",
+      "go nogo taak online",
+      "remmende controle test",
+      "responsremming spel",
+      "go no-go reactietest",
+      "impulscontrole cognitieve test",
+      "groen rood go stop test",
+      "executieve functie go nogo",
+      "vals alarm remming test",
+      "continuous performance go nogo",
+      "breintraining remming"
+    ]
+  },
+  "flanker": {
+    "title": "Flanker Test - Selectieve Aandacht Benchmark | Reflextry",
+    "description": "Doe de Eriksen Flanker-taak online. Reageer op de middelste pijl en negeer congruente of incongruente flankers om je aandachtscontrole te meten.",
+    "keywords": [
+      "flanker taak online",
+      "eriksen flanker test",
+      "selectieve aandacht test",
+      "pijl flanker spel",
+      "incongruente flanker taak",
+      "aandacht conflict test",
+      "cognitieve controle flanker",
+      "middelste pijl reactietest",
+      "executieve aandacht benchmark",
+      "flanker effect test gratis"
+    ]
+  },
+  "choice-reaction": {
+    "title": "Keuzereactietijd Test - Meervoudige Keuze RT (ms) | Reflextry",
+    "description": "Meet je keuzereactietijd over 2–4 gekleurde doelen. Klik zo snel mogelijk op het verlichte vakje en verbreek je gemiddelde RT in milliseconden.",
+    "keywords": [
+      "keuzereactietijd test",
+      "multi keuze RT test",
+      "4 keuzes reactietijd",
+      "gekleurd vakje reactietest",
+      "disjunctieve reactietijd",
+      "keuze RT benchmark ms",
+      "complexe reactietijd online",
+      "meerdere stimulus reactietest",
+      "cognitieve keuzereactie",
+      "human benchmark keuzereactie"
+    ]
+  },
+  "cps-test": {
+    "title": "CPS-test - Clicks Per Second Snelheidsbenchmark | Reflextry",
+    "description": "Meet je klinktheid en kliksnelheid met onze gratis CPS-test. Test de modi van 1s, 5s, 10s, 30s en 60s voor normaal klikken, jitter klikken, butterfly klikken en drag klikken.",
+    "keywords": [
+      "cps test",
+      "clicks per second test",
+      "klik snelheid test",
+      "1 seconde cps test",
+      "5 seconden cps test",
+      "10 seconden cps test",
+      "30 seconden klik test",
+      "60 seconden klik snelheid test",
+      "jitter click test",
+      "butterfly click test",
+      "drag click test",
+      "minecraft pvp cps test",
+      "kohi click test",
+      "spatiebalk teller test",
+      "muis klik snelheid test",
+      "cps human benchmark",
+      "snelste kliksnelheid record"
+    ]
+  },
+  "speed-math": {
+    "title": "Hoofdrekenen Snelheidstest - Snelle Rekenquiz | Reflextry",
+    "description": "Scherp je hoofdrekenen en rekensnelheid aan. Los snelle optellingen, aftrekkingen, vermenigvuldigingen en delingen op binnen de tijd om je rekenvaardigheid te verbeteren.",
+    "keywords": [
+      "reken snelheid test",
+      "hoofdrekenen snelheidstest",
+      "snelle rekenen test",
+      "hoofdrekenen spel",
+      "snelle rekentest online gratis",
+      "berekening snelheidstest",
+      "snel rekenen spel",
+      "1 minuut reken snelheidstest",
+      "reken reflex test",
+      "speed math sprint 60 seconden",
+      "cognitieve rekentest",
+      "tafel vermenigvuldigen snelheidstest",
+      "hoofdrekenen training voor volwassenen",
+      "reken snelheid uitdaging"
+    ]
+  },
+  "math-speed": {
+    "title": "Hoofdrekenen Snelheidstest - Snelle Rekenquiz | Reflextry",
+    "description": "Scherp je hoofdrekenen en rekensnelheid aan. Los snelle optellingen, aftrekkingen, vermenigvuldigingen en delingen op binnen de tijd om je rekenvaardigheid te verbeteren.",
+    "keywords": [
+      "reken snelheid test",
+      "hoofdrekenen snelheidstest",
+      "snelle rekenen test",
+      "hoofdrekenen spel",
+      "snelle rekentest online gratis",
+      "berekening snelheidstest",
+      "snel rekenen spel",
+      "1 minuut reken snelheidstest",
+      "reken reflex test",
+      "speed math sprint 60 seconden",
+      "cognitieve rekentest",
+      "tafel vermenigvuldigen snelheidstest",
+      "hoofdrekenen training voor volwassenen",
+      "reken snelheid uitdaging"
+    ]
+  },
+  "typing-speed": {
+    "title": "Typen Snelheidstest - Gratis Online WPM Benchmark | Reflextry",
+    "description": "Test woorden per minuut (WPM) en nauwkeurigheid met onze gratis typetest van 1 minuut. Benchmark je typesnelheid, houd foutenpercentages bij en verbeter blinde typen.",
+    "keywords": [
+      "typen snelheidstest",
+      "wpm test online gratis",
+      "woorden per minuut test",
+      "1 minuut type test",
+      "60 seconden type snelheidstest",
+      "type nauwkeurigheid test",
+      "blinde typen snelheidstest",
+      "10 fast fingers type test",
+      "monkeytype alternatief online",
+      "human benchmark typen",
+      "snel typen oefenen",
+      "toetsenbord snelheidstest",
+      "type test met wpm en nauwkeurigheid",
+      "type snelheid controle",
+      "gratis typen snelheidstest"
+    ]
+  },
+  "word-accuracy": {
+    "title": "Woord Nauwkeurigheidstest - Snelle Typ Precisie | Reflextry",
+    "description": "Verbeter de typeprecisie en elimineer tikfouten. Typ supersnelle promptwoorden met 100% nauwkeurigheid om foutloos typen onder tijdsdruk onder de knie te krijgen.",
+    "keywords": [
+      "woord nauwkeurigheidstest",
+      "woord snelheidstest",
+      "precisie type test",
+      "foutloos typen test",
+      "snelle woord type spel",
+      "type nauwkeurigheid test online",
+      "spelling snelheidstest",
+      "snel woord typen oefenen",
+      "toetsanslag nauwkeurigheidstest",
+      "data entry type precisie",
+      "woordherkenning type snelheid"
+    ]
+  },
+  "word-speed": {
+    "title": "Snelheidsleestest - Woordherkenning WPM | Reflextry",
+    "description": "Test je leessnelheid en woordherkenning. Meet woorden per minuut aan leesvaardigheid en snelle visuele identificatie met onze interactieve Speed Words-tool.",
+    "keywords": [
+      "woord snelheidstest",
+      "snelheidsleestest online gratis",
+      "snelle woordherkenning test",
+      "woorden per minuut leestest",
+      "rsvp snelheidsleestest",
+      "hoe snel kan ik lezen test",
+      "flitswoord leessnelheid",
+      "visuele woord snelheidstest",
+      "cognitieve woord snelheid benchmark"
+    ]
+  },
+  "grid-selection": {
+    "title": "Grid Snelheidstest - 5x5 Nummer Zoekspel | Reflextry",
+    "description": "Train visuele scanning en perifeer lezen met Schulte-tabellen. Vind cijfers in oplopende volgorde op een 5x5 raster om je visuele zoeksnelheid te vergroten.",
+    "keywords": [
+      "schulte tabel online",
+      "schulte grid test",
+      "grid snelheidstest",
+      "vind getallen 1 tot 25 snelheidstest",
+      "schulte tabel voor snel lezen",
+      "grid selectie test",
+      "visuele zoeksnelheid test",
+      "5x5 nummer grid snelheidspel",
+      "matrix visuele scanning test",
+      "perifere visie schulte tabel",
+      "tik getallen in volgorde test"
+    ]
+  },
+  "grid-speed": {
+    "title": "Grid Snelheidstest - 5x5 Nummer Zoekspel | Reflextry",
+    "description": "Train visuele scanning en perifeer lezen met Schulte-tabellen. Vind cijfers in oplopende volgorde op een 5x5 raster om je visuele zoeksnelheid te vergroten.",
+    "keywords": [
+      "schulte tabel online",
+      "schulte grid test",
+      "grid snelheidstest",
+      "vind getallen 1 tot 25 snelheidstest",
+      "schulte tabel voor snel lezen",
+      "grid selectie test",
+      "visuele zoeksnelheid test",
+      "5x5 nummer grid snelheidspel",
+      "matrix visuele scanning test",
+      "perifere visie schulte tabel",
+      "tik getallen in volgorde test"
+    ]
+  },
+  "schulte-table": {
+    "title": "Schulte Tabel Test - Visuele Scansnelheid | Reflextry",
+    "description": "Klassieke Schulte Tabel uitdaging. Klik door elkaar gehusselde getallen op volgorde aan in rasters van 3×3 tot 7×7. Train perifere visie, visuele zoeksnelheid en focus tegen de klok.",
+    "keywords": [
+      "schulte tabel online gratis",
+      "schulte tabel test",
+      "schulte grid 5x5",
+      "schulte tabel 7x7",
+      "visuele scansnelheid test",
+      "perifere visie training schulte",
+      "vind getallen op volgorde spel",
+      "snel lezen schulte tabel",
+      "getallenraster aandachtstest",
+      "schulte tabel hersentraining",
+      "oplopende getallenraster uitdaging"
+    ]
+  },
+  "number-rush": {
+    "title": "Number Rush Snelheidstest - Oplopend Tik Blitz | Reflextry",
+    "description": "Test snelle getalherkenning en tik-snelheid. Zoek en klik op oplopende getallen zo snel als menselijkerwijs mogelijk is om je cognitieve verwerkingssnelheid te benchmarken.",
+    "keywords": [
+      "number rush spel",
+      "snelheid getal test",
+      "snelle getallen klikken",
+      "tik getallen in volgorde snelheidstest",
+      "oplopende getallen klikker test",
+      "1 tot 50 getallen spel online",
+      "snelle getal tik uitdaging",
+      "number rush wereldrecord",
+      "snelle cijfer zoekspel",
+      "snelle getalsequencing"
+    ]
+  },
+  "quick-sort": {
+    "title": "Quick Sort Snelheidsspel - Snelle Sorteertest | Reflextry",
+    "description": "Daag cognitieve categorisatie en snelle beslissingstijd uit. Sorteer binnenkomende items in de juiste categorieën onder strikte tijdsdruk.",
+    "keywords": [
+      "quick sort snelheidstest",
+      "snel sorteerspel",
+      "snelle categorisatietest online",
+      "cognitieve sorteertest",
+      "snel sorteerspel",
+      "visuele sorteersnelheid",
+      "categorie sorteertest",
+      "links of rechts sorteerspel online",
+      "snelle classificatiesnelheidstest",
+      "beslissingssnelheid sorteerspel"
+    ]
+  },
+  "pattern-matching": {
+    "title": "Patroonherkenningstest - Visuele Matrix Nauwkeurigheid | Reflextry",
+    "description": "Verbeter visuele patroonherkenning en non-verbale redenering. Match complexe matrixtypen en geometrische reeksen om visuele scherpte en analytisch denken te testen.",
+    "keywords": [
+      "patroonherkenningstest online",
+      "patroonherkenningstest gratis",
+      "matrix redeneertest",
+      "iq patroon test online",
+      "visueel patroon puzzelspel",
+      "zoek het patroon test",
+      "abstracte patroonmatching test",
+      "raven progressive matrices gratis oefenen",
+      "patroonvoltooiingstest",
+      "logische patroonherkenning"
+    ]
+  },
+  "precision-click": {
+    "title": "Precisie Kliktest - Muis Doelnauwkeurigheid | Reflextry",
+    "description": "Scherp muisprecisie en micro-doelnauwkeurigheid aan. Klik op kleine, precieze doelen zonder te missen om fijne motoriek en cursornauwkeurigheid voor gaming te verfijnen.",
+    "keywords": [
+      "precisie kliktest",
+      "muis precisie test",
+      "micro doel kliktest",
+      "muiscursor nauwkeurigheidstest",
+      "kleine doel kliksnelheid",
+      "pixel precisie klikspel",
+      "fps muis precisie test",
+      "aim nauwkeurigheid percentage test",
+      "hand oog coördinatie kliktest",
+      "fijne cursor controle benchmark"
+    ]
+  },
+  "data-entry": {
+    "title": "Gegevensinvoer Nauwkeurigheidstest - Toetsaanslag Benchmark | Reflextry",
+    "description": "Meet gegevensinvoersnelheid, alfanumerieke typeprecisie en foutpercentages. Test administratieve toetsaanslagen per uur (KPH) met realistische numerieke en code-benchmarks.",
+    "keywords": [
+      "data entry test online",
+      "gegevensinvoer snelheidstest gratis",
+      "alfanumerieke gegevensinvoer test",
+      "10 toetsen data entry oefenen",
+      "data type test online",
+      "administratieve gegevensinvoer test",
+      "kph gegevensinvoer test",
+      "toetsaanslag nauwkeurigheidstest",
+      "gegevensinvoer nauwkeurigheidspercentage",
+      "oog voor detail test online"
+    ]
+  },
+  "image-recognition": {
+    "title": "Beeldherkenningstest - Visuele Detail Nauwkeurigheid | Reflextry",
+    "description": "Test visuele perceptie en snelle beelddiscriminatie. Identificeer subtiele visuele verschillen en match doelobjecten op hoge snelheid om observatievaardigheden te trainen.",
+    "keywords": [
+      "beeldherkenningstest online",
+      "visueel herkenningsspel",
+      "snelle beeldsnelheid test",
+      "picture recognition snelheidstest",
+      "zoek de verschillen snelheidstest",
+      "visuele discriminatietest",
+      "cognitieve imagemelding test",
+      "visuele zoektaak test",
+      "human benchmark beeldherkenning"
+    ]
+  },
+  "angle-estimation": {
+    "title": "Hoekschatting Test - Ruimtelijke Geometrie Acuiteit | Reflextry",
+    "description": "Test je oog voor geometrie en ruimtelijke schatting. Raad graden van opgegeven hoeken nauwkeurig om visuele hoekacuiteit en ruimtelijk oordeel te benchmarken.",
+    "keywords": [
+      "hoekschatting test online",
+      "raad de hoek spel",
+      "hoek meten test online",
+      "hoek graden schatten spel",
+      "geodriehoek hoekschatting spel",
+      "ruimtelijke hoek acuiteit test",
+      "geometrie hoek test spel online",
+      "hoe nauwkeurig is jouw oog voor hoeken",
+      "human benchmark hoek"
+    ]
+  },
+  "color-match": {
+    "title": "Kleurmatching Test - RGB Tint Discriminatie | Reflextry",
+    "description": "Test kleurperceptie en subtiele tintdiscriminatie met onze Kleurmatching Test. Match doel-RGB-tinten onder tijdsdruk en benchmark visuele precisie.",
+    "keywords": [
+      "kleurmatching test",
+      "kleurdiscriminatie test",
+      "tint matching test",
+      "kleur acuiteit test",
+      "kleurperceptie test",
+      "tint match test online",
+      "rgb kleurtest",
+      "visuele kleurdiscriminatie",
+      "kleurmatching spel online",
+      "subtiele kleurverschil test",
+      "farnsworth munsell alternatief",
+      "kleurgevoeligheid test",
+      "chromatische acuiteit test"
+    ]
+  },
+  "color-blindness": {
+    "title": "Kleurenblindheid Test - Ishihara Platen Screener | Reflextry",
+    "description": "Ontdek Ishihara-stijl procedurele stippenplaten in een gratis educatief kleurenzienspel. Scherminstellingen beïnvloeden de resultaten; dit is geen diagnostische beoordeling.",
+    "keywords": [
+      "kleurenblindheid test",
+      "kleurenziekte test online",
+      "ishihara test online gratis",
+      "rood groen kleurenblindheid test",
+      "kleurenblind test platen",
+      "protanopie test",
+      "deuteranopie test",
+      "online ishihara platen",
+      "kleurenzien deficiëntie test",
+      "gratis kleurenblind check",
+      "kleurdeficiëntie screening",
+      "ishihara kaart test",
+      "kleurenblindheid beoordeling"
+    ]
+  },
+  "mental-rotation": {
+    "title": "Mentale Rotatie Test - 3D Ruimtelijk Redeneren | Reflextry",
+    "description": "Benchmark 3D ruimtelijke visualisatie en cognitieve rotatiesnelheid. Bepaal in realtime of complexe geometrische vormen identiek of gespiegeld zijn.",
+    "keywords": [
+      "mentale rotatie test",
+      "shepard metzler test online",
+      "ruimtelijk redeneren test gratis",
+      "3d ruimtelijke visualisatie test",
+      "ruimtelijke intelligentie test",
+      "cognitieve rotatie test",
+      "ruimtelijk vermogen benchmark",
+      "3d object rotatie test",
+      "ruimtelijke relaties test",
+      "vandenberg mentale rotatie",
+      "ruimtelijke cognitietest",
+      "mentale rotatie oefening"
+    ]
+  },
+  "aim-trainer": {
+    "title": "FPS Aim Trainer - Muis Aim & Flick Opwarming | Reflextry",
+    "description": "Verbeter je muisnauwkeurigheid, target tracking en flicksnelheid voor FPS-games zoals Valorant, CS2 en Apex. Gratis 3D aim trainer direct in je webbrowser.",
+    "keywords": [
+      "aim trainer online gratis",
+      "fps aim trainer in browser",
+      "muis aim test",
+      "valorant aim trainer gratis",
+      "cs2 aim training online",
+      "aim lab browser alternatief",
+      "3d aim trainer online",
+      "gridshot aim trainer online",
+      "muisnauwkeurigheid aim test",
+      "fps muisgevoeligheid test",
+      "dagelijkse aim opwarming browser",
+      "aim reflex spel"
+    ]
+  },
+  "rpg-reaction": {
+    "title": "Esports Gamer Reactietest - Gevechtsreflexen | Reflextry",
+    "description": "Test competitieve gevechtsreflexen, quick-time event (QTE) parry-timing en e-sports reactiesnelheden in milliseconde-nauwkeurige gesimuleerde gevechtsscenario's.",
+    "keywords": [
+      "reactietijd test gamer",
+      "esports reactiesnelheid test",
+      "rpg reactietest",
+      "qte reactiespel online",
+      "gaming reflex test",
+      "pro gamer gemiddelde reactietijd",
+      "cs2 peeker advantage reactietest",
+      "valorant reactietijd benchmark",
+      "hit confirm reflex test",
+      "actiegame parry timing test"
+    ]
+  },
+  "endless-dodge": {
+    "title": "Endless Dodge Game - Kogelontwijking & Behendigheid | Reflextry",
+    "description": "Test je ontwijkreflexen en ruimtelijke behendigheid. Navigeer je cursor door oneindige zwermen bewegende obstakels in dit intense reflex-survivalspel.",
+    "keywords": [
+      "endless dodge game online",
+      "ontwijkreactie test",
+      "bullet hell dodge oefenen",
+      "muiscursor ontwijkspel",
+      "evade reflex game online",
+      "obstakels ontwijken reflex spel",
+      "bullet dodge opwarmspel",
+      "cursor ontwijking snelheidstest",
+      "micro evasion behendigheidstrainer"
+    ]
+  },
+  "stroop-drop": {
+    "title": "Stroop-effect Test - Impuls- & Aandachtsspel | Reflextry",
+    "description": "Daag je remmingsvermogen uit met het interactieve Stroop Drop-spel. Los cognitieve interferentie op tussen vallende kleurenwoorden en hun inktkleur.",
+    "keywords": [
+      "stroop effect test online gratis",
+      "stroop kleuren woorden test spel",
+      "cognitieve interferentie test",
+      "stroop drop game online",
+      "inhibitory control test game",
+      "kleuren woord mismatch test",
+      "psychologische stroop effect test",
+      "brein conflict reactie spel",
+      "executive function stroop test"
+    ]
+  },
+  "target-tracking": {
+    "title": "Target Tracking Aim Trainer - Muis Aim Opwarming | Reflextry",
+    "description": "Beheers vloeiende muistracking voor competitieve FPS-games. Oefen continue precisie-aim tegen ontwijkende bewegendedoelen met nul muisnetting.",
+    "keywords": [
+      "smooth tracking aim trainer",
+      "target tracking aim test online",
+      "fps smooth tracking oefenen",
+      "apex legends tracking trainer online",
+      "muis tracking nauwkeurigheid test",
+      "bewegend doel aim test",
+      "crosshair tracking test",
+      "continue aim tracking oefening",
+      "reactive tracking game online"
+    ]
+  },
+  "flick-shot": {
+    "title": "Flick Shot Aim Trainer - Snel Flick Muis Aim | Reflextry",
+    "description": "Train spiergeheugen en snap aiming met onze Flick Shot-trainer. Kalibreer snelle micro-aanpassingen en doelacquisitie voor tactische shooters.",
+    "keywords": [
+      "flick shot aim trainer online",
+      "flick aim test gratis",
+      "cs2 flick shot oefenen online",
+      "valorant flick shot opwarming",
+      "micro flick aim trainer",
+      "snelle flick muis nauwkeurigheid test",
+      "gridshot flick trainer",
+      "reflex flick shot game",
+      "target flick nauwkeurigheid test",
+      "one tap flick trainer"
+    ]
+  },
+  "rhythm-tap": {
+    "title": "Rhythm Tap Game - Audio-Visuele Beat Timing Test | Reflextry",
+    "description": "Test je muzikale timing en milliseconden ritme-perceptie. Tik synchroon met oplopende BPM-tempo's en houd afwijkende latentiefouten bij.",
+    "keywords": [
+      "ritme timing test online",
+      "beat tap reactietest",
+      "audio visuele ritme test",
+      "osu ritme opwarming in browser",
+      "tik op de beat nauwkeurigheidstest",
+      "ritme reactiespel gratis",
+      "muzikale timing test online",
+      "milliseconde audio sync test",
+      "bpm tap nauwkeurigheidsspel",
+      "ritme reflex trainer"
+    ]
+  }
+}

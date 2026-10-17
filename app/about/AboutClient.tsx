@@ -4,13 +4,16 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { Target, Zap, Users, Heart, Trophy, Sparkles, Brain, Shield, BarChart3, Star, ArrowRight, Code2, Globe } from "lucide-react";
 import Image from "next/image";
+import { useTranslation } from "@/lib/i18n/context";
 
 export default function AboutClient() {
+    const { t, getLocalizedHref } = useTranslation();
+
     const values = [
         {
             icon: Target,
-            title: "Accuracy",
-            description: "No fluff, just precise measurements and reliable testing to track your true mechanical baseline.",
+            title: t("about.valAccuracyTitle", "Accuracy"),
+            description: t("about.valAccuracyDesc", "No fluff, just precise measurements and reliable testing to track your true mechanical baseline."),
             color: "text-cyan-600",
             bg: "bg-cyan-50 border-cyan-200",
             glow: "hover:shadow-[0_0_20px_rgba(6,182,212,0.15)]",
@@ -19,8 +22,8 @@ export default function AboutClient() {
         },
         {
             icon: Zap,
-            title: "Innovation",
-            description: "Constantly pushing new modules to test the absolute limits of human reaction time.",
+            title: t("about.valInnovationTitle", "Innovation"),
+            description: t("about.valInnovationDesc", "Constantly pushing new modules to test the absolute limits of human reaction time."),
             color: "text-amber-600",
             bg: "bg-amber-50 border-amber-200",
             glow: "hover:shadow-[0_0_20px_rgba(245,158,11,0.15)]",
@@ -29,8 +32,8 @@ export default function AboutClient() {
         },
         {
             icon: Users,
-            title: "Accessibility",
-            description: "Professional-grade testing and performance tracking tools, completely free for everyone.",
+            title: t("about.valAccessibilityTitle", "Accessibility"),
+            description: t("about.valAccessibilityDesc", "Professional-grade testing and performance tracking tools, completely free for everyone."),
             color: "text-violet-600",
             bg: "bg-violet-50 border-violet-200",
             glow: "hover:shadow-[0_0_20px_rgba(139,92,246,0.15)]",
@@ -39,8 +42,8 @@ export default function AboutClient() {
         },
         {
             icon: Heart,
-            title: "User First",
-            description: "We build what the community asks for. If a game mode sucks, we fix it.",
+            title: t("about.valUserFirstTitle", "User First"),
+            description: t("about.valUserFirstDesc", "We build what the community asks for. If a game mode sucks, we fix it."),
             color: "text-rose-600",
             bg: "bg-rose-50 border-rose-200",
             glow: "hover:shadow-[0_0_20px_rgba(244,63,94,0.15)]",
@@ -52,29 +55,29 @@ export default function AboutClient() {
     const offerings = [
         {
             icon: Brain,
-            title: "Brain Training Games",
-            description: "Push your working memory and pattern recognition with cognitive loads designed to force neuroplasticity.",
+            title: t("about.offerBrainTitle", "Brain Training Games"),
+            description: t("about.offerBrainDesc", "Push your working memory and pattern recognition with cognitive loads designed to force neuroplasticity."),
             color: "text-violet-600",
             bg: "bg-violet-50 border-violet-200",
         },
         {
             icon: Zap,
-            title: "Reaction & Speed Tests",
-            description: "Measure your raw physical latency down to the exact millisecond in our aim, click, and reaction arenas.",
+            title: t("about.offerReflexTitle", "Reaction & Speed Tests"),
+            description: t("about.offerReflexDesc", "Measure your raw physical latency down to the exact millisecond in our aim, click, and reaction arenas."),
             color: "text-cyan-600",
             bg: "bg-cyan-50 border-cyan-200",
         },
         {
             icon: BarChart3,
-            title: "Progress Tracking",
-            description: "Automatically log your session data and watch your performance curve go up over time.",
+            title: t("about.offerTrackingTitle", "Progress Tracking"),
+            description: t("about.offerTrackingDesc", "Automatically log your session data and watch your performance curve go up over time."),
             color: "text-emerald-600",
             bg: "bg-emerald-50 border-emerald-200",
         },
         {
             icon: Trophy,
-            title: "Achievements & Leaderboards",
-            description: "Unlock ranks, grind daily challenges, and see where you stack up against players worldwide.",
+            title: t("about.offerLeaderboardTitle", "Achievements & Leaderboards"),
+            description: t("about.offerLeaderboardDesc", "Unlock ranks, grind daily challenges, and see where you stack up against players worldwide."),
             color: "text-amber-600",
             bg: "bg-amber-50 border-amber-200",
         },
@@ -131,11 +134,11 @@ export default function AboutClient() {
                 >
                     <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/20 bg-cyan-500/5 text-cyan-600 text-xs font-mono tracking-widest uppercase">
                         <Sparkles className="w-3.5 h-3.5 text-cyan-500 animate-pulse" />
-                        Identity Profile
+                        {t("about.identityProfile", "Identity Profile")}
                     </div>
 
                     <h1 className="text-5xl md:text-6xl lg:text-7xl font-mono font-extrabold tracking-tight text-slate-900 dark:text-white uppercase leading-none">
-                        About{" "}
+                        {t("about.heroTitle", "About")}{" "}
                         <span
                             className="inline-block text-cyan-600"
                             style={{
@@ -145,12 +148,12 @@ export default function AboutClient() {
                                 backgroundClip: "text",
                             }}
                         >
-                            Us
+                            {t("about.heroTitleHighlight", "Us")}
                         </span>
                     </h1>
 
                     <p className="text-sm md:text-base text-slate-500 max-w-xl leading-relaxed">
-                        A no-nonsense platform for measuring and pushing your mechanical limits. Built by competitive players for anyone who wants to get sharper.
+                        {t("about.heroSubtitle", "A no-nonsense platform for measuring and pushing your mechanical limits. Built by competitive players for anyone who wants to get sharper.")}
                     </p>
                 </motion.div>
 
@@ -170,10 +173,10 @@ export default function AboutClient() {
                             <Sparkles className="w-7 h-7 text-amber-500" />
                         </div>
                         <div>
-                            <div className="text-xs font-mono text-slate-400 tracking-widest uppercase mb-1">Mission Statement</div>
-                            <h2 className="text-2xl font-mono font-bold text-slate-900 mb-3">Our Mission</h2>
+                            <div className="text-xs font-mono text-slate-400 tracking-widest uppercase mb-1">{t("about.missionLabel", "Mission Statement")}</div>
+                            <h2 className="text-2xl font-mono font-bold text-slate-900 mb-3">{t("about.missionTitle", "Our Mission")}</h2>
                             <p className="text-slate-600 leading-relaxed">
-                                Our mission is simple: democratize the exact same high-level reaction and cognitive testing tools used by pro esports teams. Improvement starts with raw, honest data. We built Reflextry so you can find your exact baseline, lock in, and beat it.
+                                {t("about.missionDesc", "Our mission is simple: democratize the exact same high-level reaction and cognitive testing tools used by pro esports teams. Improvement starts with raw, honest data. We built Reflextry so you can find your exact baseline, lock in, and beat it.")}
                             </p>
                         </div>
                     </div>
@@ -195,12 +198,12 @@ export default function AboutClient() {
                             <Globe className="w-7 h-7 text-violet-500" />
                         </div>
                         <div className="w-full">
-                            <div className="text-xs font-mono text-slate-400 tracking-widest uppercase mb-1">Origin Log</div>
-                            <h2 className="text-2xl font-mono font-bold text-slate-900 mb-4">Our Story</h2>
+                            <div className="text-xs font-mono text-slate-400 tracking-widest uppercase mb-1">{t("about.originLabel", "Origin Log")}</div>
+                            <h2 className="text-2xl font-mono font-bold text-slate-900 mb-4">{t("about.originTitle", "Our Story")}</h2>
                             <div className="space-y-3 text-slate-600 leading-relaxed">
-                                <p>Reflextry began as a small side project: a browser script to measure click latency without installing another desktop trainer. That one tool turned into a question we kept hearing—can we put memory, reflex, speed, accuracy, and aim drills in one place, free to try, with scores you can track yourself?</p>
-                                <p>We built the site in Surat, India, as a small two-person team. Every module ships as a real interactive test in the browser—not a download wall, not a paywalled “premium battery.” Progress lives in your session and statistics tools so you can see trends without creating an account for core practice.</p>
-                                <p>Today Reflextry is used by gamers warming up before ranked, students drilling working memory, and curious visitors checking reaction time or color vision. We keep expanding the suite carefully: new tests only ship when scoring rules are clear and the UI explains what the number means.</p>
+                                <p>{t("about.originP1", "Reflextry began as a small side project: a browser script to measure click latency without installing another desktop trainer. That one tool turned into a question we kept hearing—can we put memory, reflex, speed, accuracy, and aim drills in one place, free to try, with scores you can track yourself?")}</p>
+                                <p>{t("about.originP2", "We built the site in Surat, India, as a small two-person team. Every module ships as a real interactive test in the browser—not a download wall, not a paywalled “premium battery.” Progress lives in your session and statistics tools so you can see trends without creating an account for core practice.")}</p>
+                                <p>{t("about.originP3", "Today Reflextry is used by gamers warming up before ranked, students drilling working memory, and curious visitors checking reaction time or color vision. We keep expanding the suite carefully: new tests only ship when scoring rules are clear and the UI explains what the number means.")}</p>
                             </div>
                         </div>
                     </div>
@@ -411,18 +414,18 @@ export default function AboutClient() {
                             Ready to see where you stand? Explore the leaderboards, challenge your friends, and connect with other members of the Reflextry network.
                         </p>
                         <div className="flex flex-wrap gap-3">
-                            <Link href="/leaderboard"
+                            <Link href={getLocalizedHref("/leaderboard")}
                                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-cyan-600 text-white text-sm font-mono font-semibold shadow-[0_4px_12px_rgba(6,182,212,0.3),inset_0_1px_0_rgba(255,255,255,0.2)] hover:bg-cyan-500 active:shadow-[0_1px_4px_rgba(6,182,212,0.3),inset_0_2px_4px_rgba(0,0,0,0.1)] active:translate-y-0.5 transition-all duration-150"
                                 style={{ border: "1px solid rgba(6,182,212,0.5)" }}
                             >
                                 <Trophy className="w-4 h-4" />
-                                View Leaderboard
+                                {t("nav.leaderboard", "View Leaderboard")}
                                 <ArrowRight className="w-3.5 h-3.5 opacity-70" />
                             </Link>
-                            <Link href="/contact"
+                            <Link href={getLocalizedHref("/contact")}
                                 className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white text-slate-700 text-sm font-mono font-semibold border border-slate-200 shadow-[0_2px_8px_rgba(15,23,42,0.06),inset_0_1px_0_rgba(255,255,255,0.8)] hover:border-cyan-300 hover:text-cyan-600 active:shadow-[0_1px_2px_rgba(15,23,42,0.08),inset_0_1px_3px_rgba(15,23,42,0.05)] active:translate-y-0.5 transition-all duration-150"
                             >
-                                Contact Us
+                                {t("footer.contact", "Contact Us")}
                             </Link>
                         </div>
                     </div>
@@ -451,13 +454,13 @@ export default function AboutClient() {
                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                             {[
-                                { href: "/privacy", label: "Privacy Policy", icon: "🔒", color: "hover:border-cyan-300 hover:text-cyan-600" },
-                                { href: "/terms", label: "Terms of Service", icon: "📋", color: "hover:border-violet-300 hover:text-violet-600" },
-                                { href: "/cookies", label: "Cookie Policy", icon: "🍪", color: "hover:border-amber-300 hover:text-amber-600" },
+                                { href: "/privacy", label: t("footer.privacy", "Privacy Policy"), icon: "🔒", color: "hover:border-cyan-300 hover:text-cyan-600" },
+                                { href: "/terms", label: t("footer.terms", "Terms of Service"), icon: "📋", color: "hover:border-violet-300 hover:text-violet-600" },
+                                { href: "/cookies", label: t("footer.cookies", "Cookie Policy"), icon: "🍪", color: "hover:border-amber-300 hover:text-amber-600" },
                             ].map((link) => (
                                 <Link
                                     key={link.href}
-                                    href={link.href}
+                                    href={getLocalizedHref(link.href)}
                                     className={`flex items-center justify-center gap-2 px-5 py-3.5 bg-white border border-slate-200 rounded-xl text-slate-700 text-sm font-mono font-medium shadow-sm hover:shadow-md ${link.color} transition-all duration-200`}
                                 >
                                     <span>{link.icon}</span>
@@ -484,12 +487,12 @@ export default function AboutClient() {
                             style={{ boxShadow: "3px 6px 16px rgba(15,23,42,0.08)", transform: "perspective(600px) rotateX(12deg) rotateY(-8deg)" }}>
                             <Star className="w-7 h-7 text-cyan-500" />
                         </div>
-                        <h2 className="text-2xl font-mono font-bold text-slate-900 mb-3">Ready to Test Your Limits?</h2>
+                        <h2 className="text-2xl font-mono font-bold text-slate-900 mb-3">{t("about.ctaTitle", "Ready to Test Your Limits?")}</h2>
                         <p className="text-slate-500 text-sm leading-relaxed mb-6 max-w-md mx-auto">
-                            Jump straight into the action and find out how fast you truly are.
+                            {t("about.ctaDesc", "Jump straight into the action and find out how fast you truly are.")}
                         </p>
                         <Link
-                            href="/"
+                            href={getLocalizedHref("/")}
                             className="inline-flex items-center gap-2 px-7 py-3 rounded-xl bg-cyan-600 text-sm font-mono font-semibold active:translate-y-0.5 transition-all duration-150"
                             style={{
                                 background: "linear-gradient(to right, #0891b2, #7c3aed)",
@@ -497,7 +500,7 @@ export default function AboutClient() {
                                 boxShadow: "0 4px 16px rgba(6,182,212,0.25), inset 0 1px 0 rgba(255,255,255,0.15)"
                             }}
                         >
-                            Start Playing Now
+                            {t("about.ctaStart", "Start Playing Now")}
                             <ArrowRight className="w-4 h-4" />
                         </Link>
 

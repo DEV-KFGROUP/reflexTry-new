@@ -1,6 +1,7 @@
+import { headers } from 'next/headers';
 import { Metadata } from 'next';
 import WhackAMoleGame from './WhackAMoleGame';
-import { getToolMetadata } from '@/lib/seo-utils';
+import { getToolMetadata, getToolSEOConfig } from '@/lib/seo-utils';
 import { SchemaInjector } from '@/components/SchemaInjector';
 import { generateToolStructuredData, generateBreadcrumbStructuredData, generateWebPageSchema } from '@/lib/structured-data';
 import { SEO_CONFIGS } from '@/config/seo-config';
@@ -8,12 +9,16 @@ import { ToolContent } from '@/components/ToolContent';
 import { getToolContent } from '@/lib/tool-content';
 
 export async function generateMetadata(): Promise<Metadata> {
-    return getToolMetadata('whack-a-mole', '/reflex/whack-a-mole');
+    const headersList = await headers();
+    const locale = headersList.get('x-locale') || 'en';
+    return getToolMetadata('whack-a-mole', '/reflex/whack-a-mole', locale);
 }
 
-export default function Page() {
-    const config = SEO_CONFIGS['whack-a-mole'];
-    const content = getToolContent('whack-a-mole', config.title);
+export default async function Page() {
+    const headersList = await headers();
+    const locale = headersList.get('x-locale') || 'en';
+    const config = getToolSEOConfig('whack-a-mole', locale);
+    const content = getToolContent('whack-a-mole', config.title, locale);
     const structuredData = generateToolStructuredData(
         'whack-a-mole',
         config.title,

@@ -1,0 +1,79 @@
+---
+title: 'Vals alarm in Go/No-Go: Waarom “snel” kan betekenen dat je hebt gefaald'
+description: >-
+  Hoe je Go/No-Go- en remscores op Reflextry leest: vals alarm, gemiste Go's, en
+  waarom de gemiddelde Go-reactietijd zonder nauwkeurigheid bij het inhouden een
+  schijnmetriek is.
+publishedAt: '2026-07-25'
+author:
+  name: Kaushik Rabadiya
+category: Reflex
+tags:
+  - go-no-go
+  - inhibition
+  - false-alarms
+  - training
+readingTime: 9 min read
+---
+Go/No-Go lijkt simpel: druk bij Go, houd in bij No-Go. De metriek waar mensen als eerste naar staren is de Go-reactietijd. De metriek die daadwerkelijk vertelt of je de taak hebt geleerd, is vaak het **vals alarm**—drukken terwijl je had moeten stilstaan.
+
+## De twee soorten fouten
+
+- **Misser (omissie):** Go verscheen; je drukte niet op tijd.
+- **Vals alarm (commissie):** No-Go verscheen; je drukte alsnog.
+
+Een hippe Go-reactietijd met een stapel valse alarmen betekent dat je aan het anticiperen en gokken bent. Dat voelt misschien snel. Het is geen gecontroleerde prestatie.
+
+## Waarom valse alarmen toenemen
+- Overwegende Go-trials creëren een "drukvoorkeur".
+- Vermoeidheid en afleiding breken remmen sneller af dan motoren.
+- Snelheidsdoelen zonder nauwkeurigheidsrestricties belonen impulsiviteit.
+- Stimuli die tot laat in het flashvenster op elkaar lijken, nodigen uit tot late correcties die als drukken aankomen.
+
+## Hoe je de rem traint
+
+1. **Begin met nauwkeurigheidsdoelen.** Voorbeeld: houd valse alarmen onder een persoonlijke drempel voordat je ms najaagt.
+2. **Gebruik korte blokken.** Remming stort in als je uit woede doorspeelt.
+3. **Adem bij No-Go.** Een bewuste non-respons is een vaardigheidsherhaling.
+4. **Wissel af met Flanker.** Conflicttaken straffen ook impulsieve, op het midden gerichte reacties af—zie [Go/No-Go en Flanker uitgelegd](/blog/go-no-go-and-flanker-explained).
+5. **Controleer simpele reacties apart.** Detectiesnelheid en remming zijn gerelateerd maar niet identiek—[Keuze- vs. simpele reactie](/blog/choice-reaction-vs-simple-reaction).
+
+## Reflextry Go/No-Go lezen
+
+Behandel de sessie als een paar: Go-reactietijd bij correcte treffers **en** het vals-alarmpercentage.
+Verbetering is:
+
+- Stabiele of betere inhuanauwkeurigheid, daarna
+- Lagere Go-reactietijd zonder die nauwkeurigheid op te offeren.
+
+Moilijkheidsstanden die de No-Go-frequentie verhogen of de timing verscherpen veranderen het experiment—leg de modus vast.
+
+## Realtime analogie (zonder te overdrijven)
+
+Autorijden, ranked shooters en typen straffen allemaal impulsieve acties: van rijstrook wisselen zonder checken, pre-firing, versturen voor het proeflezen. Go/No-Go is een schoon labspeeltje voor die rem. Het is geen persoonlijkheidsdiagnose.
+
+## Een microsessie remming van 10 minuten
+
+- 4 min Go/No-Go — nauwkeurigheid primair
+- 3 min Flanker — congruent vs. incongruent bewustzijn
+- 3 min simpele reactie — schone detectie, minimale vroege klikken
+
+Stop als valse alarmen pieken. Kom morgen terug.
+
+## Conclusie
+
+Een snelle Go met luide valse alarmen is geen meesterschap. Train het inhouden, scheer er dan tijd vanaf. Oefen op [Go/No-Go](/reflex/go-no-go) en lees de scorecontext in [Hoe wij Reflextry-tests scoren](/blog/how-we-score-reflextry-tests).
+
+## Een opmerking over "predatory Go"-ontwerpen
+
+Sommige casual games maken bijna elke trial een Go en strooien er zeldzame No-Go's doorheen. Dat ontwerp creëert een sterke drukgewoonte, wat leerzaam is—maar het betekent ook dat je eerste sessies er lelijk uitzien. Verwacht vroege valse alarmen. De leercurve is precies de rem die de motor inhaalt.
+
+Als een modus oneerlijk Go-zwaar aanvoelt, omarm het dan als rem-training in plaats van te rage-quiten. Registreer het vals-alarmpercentage een week lang als je primaire KPI en herintroduceer daarna snelheidsdoelen.
+
+## Koppelen met slaap en stimulantia
+
+Slaaptekort verhoogt bij veel mensen de commissiefouten. Extra caffeïne kan helpen bij de alertheid totdat trillingen en anticipatie vroege drukken veroorzaken. Als je vals-alarmgrafiek piekt na een late avond, geloof dan de grafiek: herstel je slaap voordat je de tool de schuld geeft.
+
+## Scores delen met een coach of teammate
+
+Wanneer je een Go/No-Go-resultaat deelt, vermeld dan: moeilijkheidsgraad, gemiddelde Go-reactietijd, aantal of percentage valse alarmen, aantal missers, apparaat en tijd van de dag. Een eenzame screenshot van "Ik had 210 ms" zonder inhuastats is incompleet—en coaches moeten om de ontbrekende helft vragen.

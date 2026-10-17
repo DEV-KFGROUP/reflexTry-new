@@ -1,0 +1,954 @@
+{
+  "sequence-memory": {
+    "title": "Tes Memori Sekuens - Benchmark Mengingat Pola | Reflextry",
+    "description": "Latih kemampuan mengingat pola lampu spasial yang semakin panjang dengan Tes Memori Sekuens gratis kami. Baca aturan penilaian dan bandingkan sesi latihanmu.",
+    "keywords": [
+      "tes memori sekuens",
+      "game memori sekuens",
+      "human benchmark memori sekuens",
+      "game simon online gratis",
+      "game memori simon says",
+      "tes sekuens pola",
+      "tes memori sekuens visual",
+      "main memori sekuens online",
+      "latihan memori sekuens",
+      "pelatihan memori sekuens",
+      "meningkatkan memori sekuens",
+      "rekor dunia memori sekuens",
+      "tes memori sekuens gratis",
+      "memori sekuens jangka pendek",
+      "tes sekuens kognitif",
+      "tes corsi block tapping online",
+      "game mengingat sekuens spasial",
+      "rata-rata skor memori sekuens",
+      "memori sekuens latihan otak"
+    ]
+  },
+  "number-memory": {
+    "title": "Tes Memori Angka - Benchmark Memori Digit Span | Reflextry",
+    "description": "Ukur memori kerja dan kapasitas digit span dengan Tes Memori Angka gratis kami. Hafalkan urutan angka yang terus bertambah dan ukur skor ingatanmu.",
+    "keywords": [
+      "tes memori angka",
+      "tes digit span online",
+      "memori angka human benchmark",
+      "tes forward digit span",
+      "tes reverse digit span",
+      "game memori digit",
+      "tes menghafal angka",
+      "memori angka jangka pendek",
+      "latihan memori angka",
+      "rekor memori angka human benchmark",
+      "tes mengingat angka",
+      "memori sekuens angka",
+      "tes digit span online gratis",
+      "cara meningkatkan memori angka",
+      "pelatihan memori angka",
+      "tes rentang memori",
+      "benchmark digit span wais",
+      "tes kapasitas memori kerja",
+      "rata-rata skor memori angka"
+    ]
+  },
+  "visual-memory": {
+    "title": "Tes Memori Visual - Game Mengingat Grid Spasial | Reflextry",
+    "description": "Tingkatkan retensi visual dan pengenalan pola spasial. Uji memori visualmu dengan mengingat pola grid kilat pada matriks yang meluas. Alat human benchmark gratis.",
+    "keywords": [
+      "tes memori visual",
+      "game memori visual",
+      "human benchmark memori visual",
+      "tes memori grid gratis",
+      "tes memori visual jangka pendek",
+      "tes memori kerja visual",
+      "tes memori spasial visual",
+      "meningkatkan memori visual",
+      "tes memori fotografis online",
+      "tes ingatan visual",
+      "tes memori pola",
+      "latihan memori visual",
+      "game memori visual gratis",
+      "tes memori eidetik",
+      "tes kognisi visual",
+      "tes memori matriks",
+      "game mengingat kotak",
+      "tes pengenalan pola visual"
+    ]
+  },
+  "color-memory": {
+    "title": "Tes Memori Warna - Game Mengingat Sekuens Visual | Reflextry",
+    "description": "Tantang memori kromatik dan perhatian visualmu. Hafalkan urutan warna yang berubah dengan cepat dan latih fleksibilitas kognitif dengan Tes Memori Warna gratis kami.",
+    "keywords": [
+      "tes memori warna",
+      "tes ingatan warna",
+      "game memori warna",
+      "game memori warna simon",
+      "memori warna jangka pendek",
+      "tes menghafal warna",
+      "memori warna visual",
+      "tes memori sekuens warna",
+      "game memori warna online",
+      "pelatihan otak warna",
+      "tes warna simon says",
+      "latihan sekuens warna",
+      "ingatan warna akurat",
+      "memori warna human benchmark",
+      "tes memori kromatik",
+      "game retensi rona warna",
+      "benchmark rentang warna visual"
+    ]
+  },
+  "shape-memory": {
+    "title": "Tes Memori Bentuk - Mengingat Pola Geometris | Reflextry",
+    "description": "Latih diskriminasi bentuk geometris dan memori spasial. Hafalkan bentuk abstrak dan simbol untuk meningkatkan penalaran visual non-verbal serta fokus.",
+    "keywords": [
+      "tes memori bentuk",
+      "game memori mencocokkan bentuk",
+      "tes memori bentuk geometris",
+      "memori bentuk visual",
+      "tes mengingat bentuk",
+      "game mengingat bentuk",
+      "memori sekuens bentuk",
+      "tes bentuk kognitif",
+      "tes memori bentuk 3d",
+      "memori pola dan bentuk",
+      "game memori bentuk online gratis",
+      "tes memori poligon",
+      "penalaran visual bentuk",
+      "ingatan bentuk abstrak",
+      "tes memori bentuk spasial"
+    ]
+  },
+  "symbol-memory": {
+    "title": "Tes Memori Simbol - Mengingat Ikon Asosiatif | Reflextry",
+    "description": "Tingkatkan pengenalan pola abstrak dan memori asosiatif. Cocokkan simbol dan ikon kriptik untuk mempertajam fokus mental dan kecepatan pemrosesan visual.",
+    "keywords": [
+      "tes memori simbol",
+      "game memori simbol alien",
+      "tes simbol visual",
+      "memori simbol abstrak",
+      "tes mengingat simbol",
+      "human benchmark memori simbol",
+      "memori simbol jangka pendek",
+      "tes memori pencocokan simbol",
+      "game menghafal simbol",
+      "memori simbol pola",
+      "tes simbol kognitif",
+      "memori simbol aneh",
+      "game memori ikon",
+      "tes modalitas digit simbol online",
+      "tes mengingat glif"
+    ]
+  },
+  "word-recall": {
+    "title": "Tes Memori Mengingat Kata - Game Retensi Verbal | Reflextry",
+    "description": "Evaluasi retensi memori verbal dan pengenalan kosakata Anda. Uji apakah kata-kata tersebut baru atau pernah dilihat sebelumnya untuk mengukur memori linguistik jangka pendek.",
+    "keywords": [
+      "tes mengingat kata",
+      "tes memori verbal",
+      "tes memori kata gratis",
+      "human benchmark memori verbal",
+      "ingatan kata jangka pendek",
+      "daftar tes memori kata",
+      "tes ingat kata langsung",
+      "tes kata pembelajaran daftar",
+      "game otak mengingat kata",
+      "game memori kata",
+      "ingatan urutan kata",
+      "tes mengingat kata gratis online",
+      "latihan memori mengingat kata",
+      "ingatan kata kognitif",
+      "tes kata yang dilihat atau baru",
+      "tes rentang memori verbal",
+      "tes pembelajaran verbal auditori online"
+    ]
+  },
+  "card-match": {
+    "title": "Game Memori Pencocokan Kartu - Pasangan Konsentrasi | Reflextry",
+    "description": "Latih memori spasial dan mengingat pola visual dengan Game Memori Pencocokan Kartu online gratis kami. Balik kartu, cocokkan pasangan dengan gerakan paling sedikit, dan kalahkan waktu.",
+    "keywords": [
+      "game memori pencocokan kartu",
+      "game kartu memori online",
+      "tes mencocokkan kartu",
+      "game memori balik kartu",
+      "game kartu mencocokkan pasangan",
+      "mainkan pencocokan kartu",
+      "tes memori kartu gambar",
+      "game kartu memori klasik",
+      "game mencocokkan memori gratis",
+      "game konsentrasi kartu",
+      "pencocokan kartu latihan otak",
+      "pencocokan kartu visual",
+      "game pelmanism online",
+      "pasangan pencocokan memori gratis"
+    ]
+  },
+  "chimp-test": {
+    "title": "Chimp Test - Game Benchmark Memori Kerja | Reflextry",
+    "description": "Apakah Anda lebih pintar dari simpanse? Ikuti Chimp Test yang terkenal untuk mengukur memori kerja visuospatial Anda. Hafalkan kisi angka sebelum menghilang.",
+    "keywords": [
+      "chimp test",
+      "chimp test human benchmark",
+      "tes memori simpanse",
+      "game memori chimp",
+      "apakah kamu lebih pintar dari chimp test",
+      "tes memori monyet online",
+      "rekor dunia chimp test",
+      "mainkan chimp test",
+      "tes memori manusia vs chimp",
+      "tes otak chimp",
+      "game monyet memori angka",
+      "tes memori primata",
+      "latihan chimp test",
+      "tes memori chimp ayumu",
+      "tes memori kerja spasial"
+    ]
+  },
+  "verbal-memory": {
+    "title": "Tes Memori Verbal - Benchmark Pengenalan Kata | Reflextry",
+    "description": "Uji memori kerja verbal dengan Tes Memori Verbal gratis kami. Identifikasi kata yang sudah dilihat vs kata baru untuk mengukur retensi linguistik dan kecepatan pemrosesan kognitif.",
+    "keywords": [
+      "tes memori verbal",
+      "memori verbal human benchmark",
+      "game memori verbal",
+      "tes memori verbal jangka pendek",
+      "meningkatkan memori verbal",
+      "latihan memori verbal",
+      "tes memori kerja verbal",
+      "tes rentang memori verbal",
+      "human benchmark verbal",
+      "tes mengingat verbal",
+      "tes memori verbal gratis online",
+      "tes memori kata",
+      "tes kognitif verbal",
+      "tes kata yang dilihat atau baru",
+      "tes retensi kosakata"
+    ]
+  },
+  "object-tracking": {
+    "title": "Multiple Object Tracking - Tes Fokus Visual | Reflextry",
+    "description": "Uji perhatian visual dinamis dan pelacakan spasial. Ikuti beberapa bola target yang bergerak di antara pengecoh dalam tes kognitif berbasis sains ini.",
+    "keywords": [
+      "tes pelacakan objek",
+      "tes multiple object tracking",
+      "game pelacakan objek visual",
+      "human benchmark object tracking",
+      "tes memori pelacakan mata",
+      "tes kognitif multiple object tracking",
+      "latihan pelacakan objek",
+      "tes pelacakan visual online",
+      "game pelacakan objek bergerak",
+      "tes pelacakan objek 3d",
+      "meningkatkan pelacakan visual",
+      "tes kognitif mot",
+      "tes pelacakan perhatian visual"
+    ]
+  },
+  "n-back": {
+    "title": "Tes N-Back - Tolok Ukur Kapasitas Memori Kerja | Reflextry",
+    "description": "Latih memori kerja dengan tugas klasik N-Back. Cocokkan huruf yang muncul N langkah sebelumnya, lacak kecocokan dan akurasi, serta tingkatkan dari 1-back ke 3-back.",
+    "keywords": [
+      "tes n-back",
+      "memori kerja n back",
+      "tes 2-back online",
+      "tes kognitif 3-back",
+      "dual n-back gratis",
+      "game memori kerja n-back",
+      "pelatihan otak n-back",
+      "n-back kinerja kontinu",
+      "tes memori pencocokan huruf",
+      "tes akurasi n-back",
+      "tolok ukur n-back kognitif",
+      "human benchmark n-back",
+      "meningkatkan memori kerja n-back"
+    ]
+  },
+  "reaction-time": {
+    "title": "Tes Waktu Reaksi - Tolok Ukur Milidetik (ms) | Reflextry",
+    "description": "Uji dan tingkatkan waktu reaksi visual Anda dalam milidetik. Ikuti tes reaksi milidetik gratis kami, bandingkan dengan gamer profesional, dan lacak progres refleks Anda.",
+    "keywords": [
+      "tes waktu reaksi",
+      "tes reaksi ms",
+      "human benchmark reaction time",
+      "tes waktu reaksi lampu hijau",
+      "tes klik saat layar berubah hijau",
+      "tes waktu reaksi rata-rata",
+      "tes waktu reaksi valorant",
+      "tes waktu reaksi f1 online",
+      "tes reaksi cs2",
+      "tolok ukur milidetik waktu reaksi",
+      "tes reaksi cepat online",
+      "uji refleks saya gratis",
+      "tes waktu reaksi pengemudi online",
+      "tes waktu reaksi 144hz",
+      "tes waktu reaksi 240hz",
+      "tes input lag monitor",
+      "cara meningkatkan waktu reaksi",
+      "rata-rata waktu reaksi gamer pro"
+    ]
+  },
+  "sound-reaction": {
+    "title": "Tes Waktu Reaksi Audio - Refleks Suara (ms) | Reflextry",
+    "description": "Ukur kecepatan reaksi auditori Anda dalam milidetik. Uji refleks pendengaran dengan isyarat audio instan dan bandingkan waktu reaksi suara vs waktu reaksi visual Anda.",
+    "keywords": [
+      "tes refleks suara",
+      "tes waktu reaksi audio",
+      "tes refleks audio",
+      "waktu reaksi pendengaran",
+      "game reaksi suara",
+      "human benchmark audio reaction",
+      "tes waktu reaksi auditori",
+      "latihan refleks suara",
+      "tes reaksi bip",
+      "tes klik suara cepat",
+      "tes refleks akustik online",
+      "waktu reaksi berbasis suara",
+      "kecepatan refleks pendengaran",
+      "waktu reaksi auditori vs visual",
+      "tes reaksi telinga ms"
+    ]
+  },
+  "grid-shot": {
+    "title": "Grid Shot Aim Trainer - Refleks Presisi Mouse | Reflextry",
+    "description": "Panaskan bidikan (aim) dan kecepatan mouse Anda dengan Grid Shot. Klik target yang muncul dengan cepat di seluruh grid untuk meningkatkan koordinasi tangan-mata untuk game FPS seperti Valorant dan CS2.",
+    "keywords": [
+      "tes refleks grid",
+      "grid shot aim trainer",
+      "tes aim grid",
+      "reaksi klik grid",
+      "game grid refleks",
+      "human benchmark grid",
+      "tes kecepatan klik grid",
+      "pengklik grid cepat",
+      "latihan grid reaksi",
+      "gridshot valorant di browser",
+      "pemanasan aim fps grid",
+      "tes refleks ubin",
+      "kecepatan ketuk grid",
+      "reaksi blazepod online",
+      "tes koordinasi tangan mata grid"
+    ]
+  },
+  "peripheral-vision": {
+    "title": "Tes Visi Perifer - Kesadaran Lapangan Visual | Reflextry",
+    "description": "Latih kesadaran visi perifer dan kecepatan reaksi samping. Temukan dan klik stimulus di luar pusat untuk memperluas fokus visual untuk mengemudi, olahraga, dan gaming kompetitif.",
+    "keywords": [
+      "tes refleks perifer",
+      "tes visi perifer online",
+      "game reaksi perifer",
+      "tes refleks lapangan visual",
+      "tes kesadaran perifer",
+      "tes reaksi penglihatan samping",
+      "pelatih bidik perifer",
+      "klik target perifer",
+      "tes refleks layar lebar",
+      "tes klik visi perifer",
+      "tes refleks luar pusat",
+      "refleks kesadaran spasial",
+      "tes visi perifer olahraga",
+      "kesadaran perifer esports"
+    ]
+  },
+  "directional-reflex": {
+    "title": "Tes Refleks Terarah - Game Kecepatan Tombol Panah | Reflextry",
+    "description": "Uji kecepatan respons keyboard dan pengambilan keputusan spasial. Tekan tombol panah yang cocok dengan prompt arah cepat untuk meningkatkan pemrosesan kognitif dan kelincahan refleks.",
+    "keywords": [
+      "tes refleks arah",
+      "tes reaksi panah",
+      "game klik arah",
+      "refleks arah keyboard",
+      "game reaksi tombol panah",
+      "refleks arah spasial",
+      "tes arah cepat",
+      "tes arah kognitif",
+      "refleks pencocokan panah",
+      "tes reaksi kiri kanan",
+      "tes kecepatan terarah",
+      "refleks tekan panah cepat",
+      "tes reaksi arah pilihan"
+    ]
+  },
+  "multi-stimulus": {
+    "title": "Tes Reaksi Multi-Stimulus - Game Choice RT | Reflextry",
+    "description": "Uji waktu reaksi pilihan dan perhatian selektif. Proses beberapa stimulus visual dan audio secara bersamaan untuk mengukur kecepatan pengambilan keputusan sepersekian detik.",
+    "keywords": [
+      "tes reaksi multi-stimulus",
+      "tes waktu reaksi pilihan online",
+      "game refleks beberapa stimulus",
+      "tes waktu reaksi kompleks",
+      "tes stimulus kognitif",
+      "tes refleks multitasking",
+      "tes reaksi hukum hick",
+      "tes reaksi pilihan donders",
+      "benchmark manusia multi-stimulus",
+      "tes waktu reaksi variabel",
+      "pelatih refleks kompleks",
+      "benchmark reaksi keputusan"
+    ]
+  },
+  "sequence-reaction": {
+    "title": "Tes Reaksi Urutan - Refleks Kombo Cepat | Reflextry",
+    "description": "Gabungkan pemanggilan memori dengan refleks motorik cepat. Ikuti urutan lampu bertempo cepat dan eksekusi kombo cepat untuk melatih waktu respons dan kecepatan ritmik.",
+    "keywords": [
+      "tes reaksi urutan",
+      "waktu reaksi simon says",
+      "tes refleks pola",
+      "tugas waktu reaksi serial",
+      "tes mengklik berurutan",
+      "game urutan refleks",
+      "tes memori dan reaksi",
+      "clicker urutan cepat",
+      "reaksi urutan kognitif",
+      "tes urutan cepat",
+      "tes pengetukan berurutan",
+      "game refleks kombo cepat"
+    ]
+  },
+  "whack-a-mole": {
+    "title": "Whack-a-Mole Online - Game Reaksi Tangan-Mata | Reflextry",
+    "description": "Mainkan Whack-a-Mole klasik secara online gratis. Ketuk tikus tanah yang muncul secepat mungkin untuk mengukur kecepatan reaksi, klik presisi, dan kelincahan motorik.",
+    "keywords": [
+      "whack a mole online",
+      "main whack a mole gratis",
+      "tes reaksi whack a mole",
+      "whack a mole virtual",
+      "game klik tikus tanah",
+      "whack a mole mouse",
+      "game refleks whack a mole",
+      "whack a mole cepat",
+      "bidik whack a mole",
+      "game browser whack a mole",
+      "tes refleks pop up",
+      "game reaksi pop target",
+      "game koordinasi mata tangan"
+    ]
+  },
+  "color-switch": {
+    "title": "Tes Refleks Color Switch - Waktu Reaksi Visual | Reflextry",
+    "description": "Latih waktu reaksi warna dan kecepatan respons selektif. Bereaksi segera terhadap perubahan warna layar dan sinyal kilat tanpa keraguan.",
+    "keywords": [
+      "tes reaksi color switch",
+      "tes refleks perubahan warna",
+      "tes reaksi merah hijau",
+      "waktu reaksi lampu lalu lintas",
+      "tes perubahan warna layar",
+      "tes klik warna cepat",
+      "human benchmark perubahan warna",
+      "refleks switch warna visual",
+      "reaksi kilat warna",
+      "waktu reaksi warna sederhana",
+      "kliker perubahan warna",
+      "tes warna stimulus visual"
+    ]
+  },
+  "time-perception": {
+    "title": "Tes Persepsi Waktu - Tolok Ukur Jam Internal | Reflextry",
+    "description": "Uji jam internal dan estimasi temporal Anda. Tahan dan lepaskan tombol untuk menghasilkan interval waktu target secara akurat hingga tingkat milidetik.",
+    "keywords": [
+      "tes persepsi waktu",
+      "human benchmark persepsi waktu",
+      "tes jam internal",
+      "tes estimasi waktu",
+      "tes tebak waktu",
+      "game persepsi waktu",
+      "tes keakuratan waktu",
+      "persepsi waktu kognitif",
+      "tes estimasi detik",
+      "tes durasi waktu",
+      "tes waktu buta online",
+      "tes persepsi temporal",
+      "tolok ukur pacemaker internal"
+    ]
+  },
+  "go-no-go": {
+    "title": "Tes Go / No-Go - Kontrol Impuls & Reaksi | Reflextry",
+    "description": "Ukur inhibisi respons dengan tugas Go/No-Go. Tekan pada percobaan Go hijau, tahan pada percobaan No-Go merah, dan lacak akurasi beserta waktu reaksi.",
+    "keywords": [
+      "tes go no go",
+      "tugas go nogo online",
+      "tes kontrol inhibisi",
+      "game inhibisi respons",
+      "tes reaksi go no-go",
+      "tes kognitif kontrol impuls",
+      "tes berhenti jalan hijau merah",
+      "fungsi eksekutif go nogo",
+      "tes inhibisi alarm palsu",
+      "performa kontinu go nogo",
+      "pelatihan otak inhibisi"
+    ]
+  },
+  "flanker": {
+    "title": "Tes Flanker - Tolok Ukur Perhatian Selektif | Reflextry",
+    "description": "Ikuti tugas Eriksen Flanker secara online. Respons panah tengah sambil mengabaikan flanker yang kongruen atau tidak kongruen untuk mengukur kontrol perhatian.",
+    "keywords": [
+      "tugas flanker online",
+      "tes eriksen flanker",
+      "tes perhatian selektif",
+      "game panah flanker",
+      "tugas flanker inkongruen",
+      "tes konflik perhatian",
+      "flanker kontrol kognitif",
+      "tes reaksi panah tengah",
+      "tolok ukur perhatian eksekutif",
+      "tes efek flanker gratis"
+    ]
+  },
+  "choice-reaction": {
+    "title": "Tes Waktu Reaksi Pilihan - RT Multi-Pilihan (ms) | Reflextry",
+    "description": "Ukur waktu reaksi pilihan di 2–4 target berwarna. Klik kotak yang menyala secepat mungkin dan kalahkan rata-rata RT Anda dalam milidetik.",
+    "keywords": [
+      "tes waktu reaksi pilihan",
+      "tes RT multi pilihan",
+      "waktu reaksi 4 pilihan",
+      "tes reaksi kotak berwarna",
+      "waktu reaksi disjungtif",
+      "tolok ukur RT pilihan ms",
+      "waktu reaksi kompleks online",
+      "tes reaksi stimulus majemuk",
+      "reaksi pilihan kognitif",
+      "human benchmark reaksi pilihan"
+    ]
+  },
+  "cps-test": {
+    "title": "Uji CPS - Tolok Ukur Kecepatan Klik Per Detik | Reflextry",
+    "description": "Ukur kecepatan klik Anda dengan Uji CPS gratis kami. Uji mode 1d, 5d, 10d, 30d, dan 60d untuk klik normal, jitter clicking, butterfly clicking, dan drag clicking.",
+    "keywords": [
+      "uji cps",
+      "uji klik per detik",
+      "uji kecepatan klik",
+      "uji cps 1 detik",
+      "uji cps 5 detik",
+      "uji cps 10 detik",
+      "uji klik 30 detik",
+      "uji kecepatan klik 60 detik",
+      "uji jitter click",
+      "uji butterfly click",
+      "uji drag click",
+      "uji cps minecraft pvp",
+      "uji klik kohi",
+      "uji penghitung spasi",
+      "uji kecepatan klik mouse",
+      "patokan manusia cps",
+      "rekor kecepatan klik tercepat"
+    ]
+  },
+  "speed-math": {
+    "title": "Uji Kecepatan Matematika Mental - Kuis Kalkulasi Cepat | Reflextry",
+    "description": "Pertajam aritmatika mental dan kecepatan kalkulasi Anda. Selesaikan penjumlahan, pengurangan, perkalian, dan pembagian cepat di bawah pengatur waktu untuk meningkatkan kelancaran matematika.",
+    "keywords": [
+      "uji kecepatan matematika",
+      "uji kecepatan matematika mental",
+      "uji aritmatika cepat",
+      "game matematika mental",
+      "uji matematika cepat online gratis",
+      "uji kecepatan kalkulasi",
+      "game kalkulasi matematika cepat",
+      "uji kecepatan matematika 1 menit",
+      "uji refleks matematika",
+      "sprint kecepatan matematika 60 detik",
+      "uji matematika kognitif",
+      "uji kecepatan perkalian",
+      "pelatihan matematika mental untuk dewasa",
+      "tantangan kecepatan aritmatika"
+    ]
+  },
+  "math-speed": {
+    "title": "Uji Kecepatan Matematika Mental - Kuis Kalkulasi Cepat | Reflextry",
+    "description": "Pertajam aritmatika mental dan kecepatan kalkulasi Anda. Selesaikan penjumlahan, pengurangan, perkalian, dan pembagian cepat di bawah pengatur waktu untuk meningkatkan kelancaran matematika.",
+    "keywords": [
+      "uji kecepatan matematika",
+      "uji kecepatan matematika mental",
+      "uji aritmatika cepat",
+      "game matematika mental",
+      "uji matematika cepat online gratis",
+      "uji kecepatan kalkulasi",
+      "game kalkulasi matematika cepat",
+      "uji kecepatan matematika 1 menit",
+      "uji refleks matematika",
+      "sprint kecepatan matematika 60 detik",
+      "uji matematika kognitif",
+      "uji kecepatan perkalian",
+      "pelatihan matematika mental untuk dewasa",
+      "tantangan kecepatan aritmatika"
+    ]
+  },
+  "typing-speed": {
+    "title": "Uji Kecepatan Mengetik - Tolok Ukur WPM Online Gratis | Reflextry",
+    "description": "Uji kata per menit (WPM) dan akurasi dengan Uji Kecepatan Mengetik 1 menit gratis kami. Tolok ukur kecepatan keyboard Anda, lacak tingkat kesalahan, dan tingkatkan teknik mengetik 10 jari.",
+    "keywords": [
+      "uji kecepatan mengetik",
+      "uji wpm online gratis",
+      "uji kata per menit",
+      "uji mengetik 1 menit",
+      "uji kecepatan mengetik 60 detik",
+      "uji akurasi mengetik",
+      "uji kecepatan mengetik 10 jari",
+      "uji mengetik 10 fast fingers",
+      "alternatif monkeytype online",
+      "patokan manusia mengetik",
+      "latihan mengetik cepat",
+      "uji kecepatan keyboard",
+      "uji mengetik dengan wpm dan akurasi",
+      "pemeriksa kecepatan mengetik",
+      "uji kecepatan mengetik gratis"
+    ]
+  },
+  "word-accuracy": {
+    "title": "Uji Akurasi Kata - Ketepatan Mengetik Cepat | Reflextry",
+    "description": "Tingkatkan ketepatan mengetik dan hilangkan kesalahan ketukan tombol. Ketik kata-kata prompt berkecepatan tinggi dengan akurasi 100% untuk menguasai kemampuan mengetik bebas kesalahan di bawah tekanan waktu.",
+    "keywords": [
+      "uji akurasi kata",
+      "uji kecepatan kata",
+      "uji ketepatan mengetik",
+      "uji mengetik bebas kesalahan",
+      "game mengetik kata cepat",
+      "uji akurasi mengetik online",
+      "uji kecepatan ejaan",
+      "latihan mengetik kata cepat",
+      "uji akurasi ketukan tombol",
+      "ketepatan mengetik entri data",
+      "kecepatan mengetik pengenalan kata"
+    ]
+  },
+  "word-speed": {
+    "title": "Tes Kecepatan Membaca - Pengenalan Kata WPM | Reflextry",
+    "description": "Uji kecepatan membaca dan pengenalan kata. Ukur kelancaran membaca kata per menit dan identifikasi visual cepat dengan alat Speed Words interaktif kami.",
+    "keywords": [
+      "tes kecepatan kata",
+      "tes kecepatan membaca online gratis",
+      "tes pengenalan kata cepat",
+      "tes membaca kata per menit",
+      "tes kecepatan membaca rsvp",
+      "tes seberapa cepat saya bisa membaca",
+      "kecepatan membaca kata kilat",
+      "tes kecepatan kata visual",
+      "tolok ukur kecepatan kata kognitif"
+    ]
+  },
+  "grid-selection": {
+    "title": "Tes Kecepatan Grid - Game Pencarian Angka 5x5 | Reflextry",
+    "description": "Latih pemindaian visual dan kecepatan membaca perifer dengan Tabel Schulte. Temukan angka secara berurutan pada grid 5x5 untuk memperluas kecepatan pencarian visual.",
+    "keywords": [
+      "tabel schulte online",
+      "tes grid schulte",
+      "tes kecepatan grid",
+      "tes kecepatan mencari angka 1 sampai 25",
+      "tabel schulte untuk kecepatan membaca",
+      "tes pemilihan grid",
+      "tes kecepatan pencarian visual",
+      "game kecepatan grid angka 5x5",
+      "tes pemindaian visual matriks",
+      "tabel schulte penglihatan perifer",
+      "tes sentuh angka secara berurutan"
+    ]
+  },
+  "grid-speed": {
+    "title": "Tes Kecepatan Grid - Game Pencarian Angka 5x5 | Reflextry",
+    "description": "Latih pemindaian visual dan kecepatan membaca perifer dengan Tabel Schulte. Temukan angka secara berurutan pada grid 5x5 untuk memperluas kecepatan pencarian visual.",
+    "keywords": [
+      "tabel schulte online",
+      "tes grid schulte",
+      "tes kecepatan grid",
+      "tes kecepatan mencari angka 1 sampai 25",
+      "tabel schulte untuk kecepatan membaca",
+      "tes pemilihan grid",
+      "tes kecepatan pencarian visual",
+      "game kecepatan grid angka 5x5",
+      "tes pemindaian visual matriks",
+      "tabel schulte penglihatan perifer",
+      "tes sentuh angka secara berurutan"
+    ]
+  },
+  "schulte-table": {
+    "title": "Tes Tabel Schulte - Kecepatan Pemindaian Visual | Reflextry",
+    "description": "Tantangan Tabel Schulte klasik. Klik angka acak secara berurutan pada grid 3×3 hingga 7×7. Latih penglihatan perifer, kecepatan pencarian visual, dan fokus di bawah batas waktu.",
+    "keywords": [
+      "tabel schulte online gratis",
+      "tes tabel schulte",
+      "grid schulte 5x5",
+      "tabel schulte 7x7",
+      "tes kecepatan pemindaian visual",
+      "pelatihan penglihatan perifer schulte",
+      "game mencari angka berurutan",
+      "kecepatan membaca tabel schulte",
+      "tes perhatian grid angka",
+      "pelatihan otak tabel schulte",
+      "tantangan grid angka naik"
+    ]
+  },
+  "number-rush": {
+    "title": "Tes Kecepatan Number Rush - Blitz Ketuk Naik | Reflextry",
+    "description": "Uji pengenalan angka cepat dan kecepatan ketukan. Cari dan klik angka secara berurutan secepat mungkin untuk menguji tingkat pemrosesan kognitif Anda.",
+    "keywords": [
+      "game number rush",
+      "tes kecepatan angka",
+      "klik angka cepat",
+      "tes kecepatan ketuk angka berurutan",
+      "tes klik angka naik",
+      "game angka 1 sampai 50 online",
+      "tantangan ketuk angka cepat",
+      "rekor dunia number rush",
+      "game mencari digit cepat",
+      "pengurutan angka kecepatan"
+    ]
+  },
+  "quick-sort": {
+    "title": "Game Kecepatan Quick Sort - Tes Penyortiran Cepat | Reflextry",
+    "description": "Tantang kategorisasi kognitif dan kecepatan keputusan cepat. Urutkan item yang masuk ke dalam kategori yang sesuai dalam batas waktu yang ketat.",
+    "keywords": [
+      "tes kecepatan quick sort",
+      "game penyortiran cepat",
+      "tes kategorisasi kecepatan online",
+      "tes penyortiran kognitif",
+      "game sortir cepat",
+      "kecepatan penyortiran visual",
+      "tes sortir kategori",
+      "game sortir kiri atau kanan online",
+      "tes kecepatan klasifikasi cepat",
+      "game sortir kecepatan keputusan"
+    ]
+  },
+  "pattern-matching": {
+    "title": "Tes Pattern Matching - Akurasi Matriks Visual | Reflextry",
+    "description": "Tingkatkan pengenalan pola visual dan penalaran non-verbal. Cocokkan pola matriks kompleks dan sekuens geometris untuk menguji ketajaman visual dan pemikiran analitis.",
+    "keywords": [
+      "tes pattern matching online",
+      "tes pengenalan pola gratis",
+      "tes penalaran matriks",
+      "tes pola iq online",
+      "game puzzle pola visual",
+      "tes temukan pola",
+      "tes pencocokan pola abstrak",
+      "latihan gratis raven progressive matrices",
+      "tes penyelesaian pola",
+      "pengenalan pola logis"
+    ]
+  },
+  "precision-click": {
+    "title": "Tes Precision Clicking - Akurasi Target Mouse | Reflextry",
+    "description": "Pertajam presisi mouse dan akurasi target mikro. Klik target kecil dan presisi tanpa meleset untuk menyempurnakan kontrol motorik halus dan akurasi kursor untuk gaming.",
+    "keywords": [
+      "tes precision click",
+      "tes presisi mouse",
+      "tes klik target mikro",
+      "tes akurasi kursor mouse",
+      "kecepatan klik target kecil",
+      "game klik presisi piksel",
+      "tes presisi mouse fps",
+      "tes persentase akurasi aim",
+      "tes klik koordinasi mata tangan",
+      "benchmark kontrol kursor halus"
+    ]
+  },
+  "data-entry": {
+    "title": "Tes Akurasi Data Entry - Benchmark Penekanan Tombol | Reflextry",
+    "description": "Ukur kecepatan input data, presisi pengetikan alfanumerik, dan tingkat kesalahan. Uji keystrokes per hour (KPH) administratif dengan benchmark numerik dan kode yang realistis.",
+    "keywords": [
+      "tes data entry online",
+      "tes kecepatan data entry gratis",
+      "tes data entry alfanumerik",
+      "latihan data entry 10 tombol",
+      "tes pengetikan data online",
+      "tes data entry administratif",
+      "tes data entry kph",
+      "tes akurasi penekanan tombol",
+      "persentase akurasi data entry",
+      "tes perhatian terhadap detail online"
+    ]
+  },
+  "image-recognition": {
+    "title": "Tes Image Recognition - Akurasi Detail Visual | Reflextry",
+    "description": "Uji persepsi visual dan diskriminasi gambar cepat. Identifikasi perbedaan visual yang halus dan cocokkan objek target pada kecepatan tinggi untuk melatih keterampilan observasi.",
+    "keywords": [
+      "tes image recognition online",
+      "game pengenalan visual",
+      "tes memori gambar cepat",
+      "tes kecepatan pengenalan gambar",
+      "tes kecepatan temukan perbedaan",
+      "tes diskriminasi visual",
+      "tes gambar kognitif",
+      "tes tugas pencarian visual",
+      "human benchmark pengenalan gambar"
+    ]
+  },
+  "angle-estimation": {
+    "title": "Tes Estimasi Sudut - Ketajaman Geometri Spasial | Reflextry",
+    "description": "Uji ketelitian mata Anda terhadap geometri dan estimasi spasial. Tebak derajat sudut yang diberikan secara akurat untuk menguji ketajaman sudut visual dan penilaian spasial.",
+    "keywords": [
+      "tes estimasi sudut online",
+      "game tebak sudut",
+      "tes pengukuran sudut online",
+      "game estimasi derajat sudut",
+      "game estimasi sudut busur derajat",
+      "tes ketajaman sudut spasial",
+      "game tes sudut geometri online",
+      "seberapa akurat mata Anda melihat sudut",
+      "patokan sudut manusia"
+    ]
+  },
+  "color-match": {
+    "title": "Tes Pencocokan Warna - Diskriminasi Rona RGB | Reflextry",
+    "description": "Uji persepsi warna dan diskriminasi nuansa halus dengan Tes Pencocokan Warna kami. Cocokkan rona RGB target di bawah tekanan waktu dan uji presisi visual Anda.",
+    "keywords": [
+      "tes pencocokan warna",
+      "tes diskriminasi warna",
+      "tes pencocokan rona",
+      "tes ketajaman warna",
+      "tes persepsi warna",
+      "tes pencocokan nuansa online",
+      "tes warna rgb",
+      "diskriminasi warna visual",
+      "game pencocokan warna online",
+      "tes perbedaan warna halus",
+      "alternatif farnsworth munsell",
+      "tes sensitivitas warna",
+      "tes ketajaman kromatik"
+    ]
+  },
+  "color-blindness": {
+    "title": "Tes Buta Warna - Pemeriksa Plat Ishihara | Reflextry",
+    "description": "Jelajahi plat titik prosedural gaya Ishihara dalam game penglihatan warna edukasi gratis. Pengaturan layar mempengaruhi hasil; ini bukan penilaian diagnostik.",
+    "keywords": [
+      "tes buta warna",
+      "tes penglihatan warna online",
+      "tes ishihara online gratis",
+      "tes buta warna merah hijau",
+      "plat tes buta warna",
+      "tes protanopia",
+      "tes deuteranopia",
+      "plat ishihara online",
+      "tes defisiensi penglihatan warna",
+      "cek buta warna gratis",
+      "skrining defisiensi warna",
+      "tes bagan ishihara",
+      "penilaian buta warna"
+    ]
+  },
+  "mental-rotation": {
+    "title": "Tes Rotasi Mental - Penalaran Spasial 3D | Reflextry",
+    "description": "Uji visualisasi spasial 3D dan kecepatan rotasi kognitif Anda. Tentukan apakah bentuk geometri kompleks itu identik atau merupakan cerminan terbalik secara real-time.",
+    "keywords": [
+      "tes rotasi mental",
+      "tes shepard metzler online",
+      "tes penalaran spasial gratis",
+      "tes visualisasi spasial 3d",
+      "tes kecerdasan spasial",
+      "tes rotasi kognitif",
+      "patokan kemampuan spasial",
+      "tes rotasi objek 3d",
+      "tes hubungan spasial",
+      "rotasi mental vandenberg",
+      "tes kognisi spasial",
+      "latihan rotasi mental"
+    ]
+  },
+  "aim-trainer": {
+    "title": "Pelatih Aim FPS - Aim Mouse & Pemanasan Flick | Reflextry",
+    "description": "Tingkatkan akurasi mouse, pelacakan target, dan kecepatan flick Anda untuk game FPS seperti Valorant, CS2, dan Apex. Pelatih aim 3D gratis langsung di peramban web Anda.",
+    "keywords": [
+      "pelatih aim online gratis",
+      "pelatih aim fps di browser",
+      "tes aim mouse",
+      "pelatih aim valorant gratis",
+      "latihan aim cs2 online",
+      "alternatif browser aim lab",
+      "pelatih aim 3d online",
+      "pelatih aim gridshot online",
+      "tes aim akurasi mouse",
+      "tes sensitivitas mouse fps",
+      "pemasanan aim harian browser",
+      "game refleks aim"
+    ]
+  },
+  "rpg-reaction": {
+    "title": "Tes Reaksi Gamer Esports - Refleks Tempur | Reflextry",
+    "description": "Uji refleks tempur kompetitif, waktu parry quick-time event (QTE), dan kecepatan reaksi esports dalam skenario pertarungan simulasi dengan akurasi milidetik.",
+    "keywords": [
+      "tes waktu reaksi gamer",
+      "tes kecepatan reaksi esports",
+      "tes reaksi rpg",
+      "game reaksi qte online",
+      "tes refleks gaming",
+      "rata-rata waktu reaksi pro gamer",
+      "tes reaksi peeker advantage cs2",
+      "patokan waktu reaksi valorant",
+      "tes refleks konfirmasi hit",
+      "tes waktu parry game aksi"
+    ]
+  },
+  "endless-dodge": {
+    "title": "Game Menghindar Tanpa Henti - Kelincahan Evasion Peluru | Reflextry",
+    "description": "Uji refleks menghindar dan kelincahan evasi spasial. Navigasikan kursor Anda melewati kerumunan rintangan bergerak yang tak terbatas dalam game bertahan hidup refleks intensitas tinggi ini.",
+    "keywords": [
+      "game dodge tanpa henti online",
+      "tes reaksi menghindar",
+      "latihan dodge bullet hell",
+      "game menghindar kursor mouse",
+      "game refleks evasi online",
+      "game refleks hindari rintangan",
+      "game pemanasan dodge peluru",
+      "tes kecepatan evasi kursor",
+      "pelatih kelincahan micro evasion"
+    ]
+  },
+  "stroop-drop": {
+    "title": "Tes Efek Stroop - Game Impuls & Perhatian | Reflextry",
+    "description": "Tantang kontrol inhibisi Anda dengan game interaktif Stroop Drop. Atasi interferensi kognitif antara kata warna yang jatuh dan warna tintanya.",
+    "keywords": [
+      "tes efek stroop online gratis",
+      "game tes kata warna stroop",
+      "tes interferensi kognitif",
+      "game stroop drop online",
+      "game tes kontrol inhibisi",
+      "tes ketidakcocokan kata warna",
+      "tes efek stroop psikologis",
+      "game reaksi konflik otak",
+      "tes stroop fungsi eksekutif"
+    ]
+  },
+  "target-tracking": {
+    "title": "Pelatih Bidik Pelacakan Target - Pemanasan Bidikan Mouse | Reflextry",
+    "description": "Kuasai pelacakan mouse yang mulus untuk game FPS kompetitif. Latih bidikan presisi kontinu terhadap target bergerak yang lihai tanpa pelumasan mouse.",
+    "keywords": [
+      "pelatih bidik tracking mulus",
+      "tes bidik pelacakan target online",
+      "latihan tracking mulus fps",
+      "pelatih tracking apex legends online",
+      "tes akurasi pelacakan mouse",
+      "tes bidik target bergerak",
+      "tes pelacakan crosshair",
+      "latihan tracking bidik kontinu",
+      "game tracking reaktif online"
+    ]
+  },
+  "flick-shot": {
+    "title": "Pelatih Bidik Flick Shot - Bidik Mouse Flick Cepat | Reflextry",
+    "description": "Latih memori otot dan bidikan snap dengan pelatih Flick Shot kami. Kalibrasi penyesuaian mikro yang cepat dan perolehan target untuk penembak taktis.",
+    "keywords": [
+      "pelatih bidik flick shot online",
+      "tes bidik flick gratis",
+      "latihan flick shot cs2 online",
+      "pemanasan flick shot valorant",
+      "pelatih bidik micro flick",
+      "tes akurasi mouse flick cepat",
+      "pelatih flick gridshot",
+      "game reflex flick shot",
+      "tes akurasi target flick",
+      "pelatih flick one tap"
+    ]
+  },
+  "rhythm-tap": {
+    "title": "Game Rhythm Tap - Uji Ketepatan Ketukan Audio-Visual | Reflextry",
+    "description": "Uji keakuratan waktu musik dan persepsi ritme dalam milidetik. Ketuk selaras dengan peningkatan tempo BPM dan lacak kesalahan latensi.",
+    "keywords": [
+      "uji waktu ritme online",
+      "tes reaksi ketukan beat",
+      "tes ritme audio visual",
+      "pemanasan ritme osu di browser",
+      "tes keakuratan ketukan irama",
+      "game reaksi ritme gratis",
+      "tes waktu musik online",
+      "tes sinkronisasi audio milidetik",
+      "game akurasi tap bpm",
+      "pelatih refleks ritme"
+    ]
+  }
+}

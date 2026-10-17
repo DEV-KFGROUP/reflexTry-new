@@ -1,0 +1,79 @@
+---
+title: Cosa possono e non possono misurare i test di reazione del browser
+description: >-
+  Una guida pratica sulla frequenza di aggiornamento dello schermo, sull'input
+  lag e sul motivo per cui i punteggi del browser di Reflextry sono utili per il
+  tracciamento personale, ma non come strumenti clinici di livello di
+  laboratorio.
+publishedAt: '2026-08-04'
+author:
+  name: Kaushik Rabadiya
+category: Methodology
+tags:
+  - reaction-time
+  - browsers
+  - hardware
+  - limits
+readingTime: 11 min read
+---
+Le persone aprono un test di reazione, ottengono un numero e si chiedono: *Questa è la mia vera velocità neurologica?* In un browser, la risposta onesta è: è la tua velocità **attraverso l'intero sistema** — occhi, cervello, mano, dispositivo, sistema operativo, browser e codice della pagina — in questo preciso giorno.
+
+Questo sistema ha comunque valore. Non è un cronoscopio sigillato da laboratorio. Questo articolo traccia una linea netta in modo da poter usare Reflextry senza superstizioni.
+
+## Cosa misura effettivamente un tentativo nel browser
+
+In un tipico test di reazione semplice visivo:
+
+1. La pagina pianifica uno stimolo (cambio di colore, forma, suono).
+2. Il tuo display alla fine illumina i nuovi pixel (vincolato dal refresh rate).
+3. Rilevi il cambiamento e avvii una risposta motoria.
+4. Il dispositivo di input registra il clic o il tasto.
+5. Il browser assegna un timestamp all'evento e calcola la latenza.
+
+Qualsiasi fase può aggiungere millisecondi. Un pannello a 60 Hz si aggiorna circa ogni 16,7 ms; un pannello a 240 Hz molto più velocemente. Touchscreen e mouse Bluetooth spesso aggiungono più latenza rispetto a un mouse da gaming cablato. Il thermal throttling (strozzamento termico) e le schede in background aggiungono variabilità.
+
+## A cosa servono i test del browser
+
+- **Baseline personali** sulla stessa macchina e con la stessa difficoltà.
+- **Feedback di riscaldamento** prima di partite competitive o sessioni di allenamento.
+- **Sviluppo di abitudini:** brevi blocchi giornalieri battono rare sessioni maratona.
+- **Confronto tra tipi di attività** sullo stesso dispositivo (semplice vs scelta, Go vs No-Go).
+- **Apprendimento di una tecnica pulita:** meno clic anticipati, medie più stabili.
+
+Se la tua media di RT (Reaction Time) semplice scende da 280 ms a 230 ms nell'arco di tre settimane sullo stesso portatile, questo è un reale segnale di miglioramento per *te*, anche se un laboratorio potrebbe stampare un numero assoluto leggermente diverso.
+
+## Cosa non sono
+
+- **Non sono una diagnosi medica.** Stanchezza, caffeina, umore, sonno e malattia influenzano i punteggi. Gli strumenti non sostituiscono i medici.
+- **Non sono test occupazionali certificati** (visione dei colori per l'aviazione, batterie di neuropsicologia clinica, ecc.).
+- **Non sono affermazioni sul QI della popolazione.** Rifiutiamo percentili inventati derivanti da traffico web non controllato.
+- **Non sono una verità universale per le classifiche tra dispositivi diversi.** Telefono e desktop sono esperimenti differenti.
+
+## Come rendere i tuoi numeri più affidabili
+
+1. Usa un dispositivo principale per il tracciamento.
+2. Chiudi le schede pesanti; disattiva i filtri notturni se il colore o la tempistica sono importanti.
+3. Preferisci mouse cablati per i test di reazione e mira quando possibile.
+4. Fai 1-2 blocchi di riscaldamento a scarto prima di registrare una media "reale".
+5. Annota la modalità di difficoltà accanto a ogni record personale (personal best).
+6. Preferisci le medie su più tentativi rispetto a un singolo clic fortunato.
+
+## Avvertenze su audio e periferiche
+
+I segnali acustici dipendono dalla latenza dello stack audio e del dispositivo di output. I compiti di visione periferica dipendono dalla distanza di visione e dalle dimensioni dello schermo. Considera quei punteggi come metriche specifiche della tua configurazione, non come fisiologia universale.
+
+## Come Reflextry progetta per l'affidabilità
+
+Mostriamo unità trasparenti (ms, intervalli, precisione, tempo di completamento). La difficoltà cambia l'attività: quindi Principiante e Professionale non sono lo stesso test. Gli articoli sulla metodologia si trovano nel [Journal Cognitivo](/blog), incluso [Come valutiamo i test di Reflextry](/blog/how-we-score-reflextry-tests).
+
+Se qualcosa sembra rotto (medie impossibili inferiori a 100 ms su un pannello a 60 Hz con spam di clic anticipati), dai retta ai contatori di errori e alle note sulla tua configurazione prima di fidarti del numero dettato dall'ego.
+
+## Un modello di utilizzo settimanale sensato
+
+- **2–4 giorni/settimana:** 10–15 minuti tra reazione + uno strumento di memoria o precisione.
+- **Prima del gioco competitivo:** 5 minuti di test semplice + riscaldamento di mira (aim) o griglia.
+- **Mensilmente:** rileggi le tue note; cambia una sola variabile alla volta (sonno, dispositivo, difficoltà).
+
+## In conclusione
+
+I test di reazione del browser misurano un vero ciclo di abilità in presenza di rumore del mondo reale. Usali per allenarti e tracciare i progressi. Non trattarli come prove in tribunale sul tuo sistema nervoso. Per gli intervalli di cui le persone discutono solitamente, leggi [Cos'è un buon tempo di reazione?](/blog/what-is-a-good-reaction-time). Per fare pratica, inizia da [Tempo di Reazione](/reflex/reaction).

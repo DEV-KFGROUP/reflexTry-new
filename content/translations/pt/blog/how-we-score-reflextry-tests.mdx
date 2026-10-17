@@ -1,0 +1,86 @@
+---
+title: >-
+  Como Calculamos as Pontuações dos Testes do Reflextry (E o Que Os Números
+  Significam)
+description: >-
+  Um guia claro sobre a pontuação do Reflextry: milissegundos, amplitudes,
+  precisão e tempos de conclusão — além do que não afirmamos sobre percentis ou
+  diagnósticos clínicos.
+publishedAt: '2026-08-01'
+author:
+  name: Kaushik Rabadiya
+category: Methodology
+tags:
+  - scoring
+  - methodology
+  - benchmarks
+  - transparency
+readingTime: 8 min read
+---
+Se um site de treinamento publica uma pontuação sem explicar a regra, o número é marketing, não medição. Este artigo documenta como o Reflextry pontua suas principais famílias de testes, como a dificuldade altera a tarefa e quais afirmações nos recusamos a fazer sem dados controlados.
+
+## Um princípio: mesmo dispositivo, mesma dificuldade
+
+Testes de navegador herdam ruído de hardware: taxa de atualização, polling do mouse, latência de toque, *thermal throttling* (limitação térmica) e abas em segundo plano. Isso não torna as pontuações inúteis — significa que **as comparações devem ser feitas dentro da sua configuração**. Um tempo de reação de 220 ms em um notebook de 60 Hz não é o mesmo experimento que 180 ms em uma tela de esports de 240 Hz. Sempre anote o modo de dificuldade ao lado dos seus recordes pessoais.
+
+## Reação simples e reação de escolha (milissegundos)
+
+As pontuações de **reação simples** geralmente são a latência média desde o início do estímulo até uma resposta válida, em milissegundos. Quanto menor, melhor. Cliques antecipados (antes do sinal) são erros, não uma antecipação heroica.
+
+A **reação de escolha** adiciona alternativas. O TR (tempo de reação) médio continua sendo a principal métrica, mas apenas os acertos corretos devem alimentar a média. Cliques em caixas erradas e cliques prematuros contam como erros. Como mais escolhas geralmente tornam as decis��es mais lentas (intuição da lei de Hick), não compare a média de 2 caixas com a média de 4 caixas como se fossem testes idênticos.
+
+## Amplitudes de memória e sequências de reconhecimento
+
+Ferramentas do tipo **Chimp / sequência / dígitos** normalmente pontuam a maior sequência correta ou estágio alcançado sob as regras de vidas e desaparecimento do modo. Quanto maior, melhor.
+
+**Memória verbal** geralmente pontua o quão longe você chega antes de esgotar as tentativas em julgamentos de VISTO/NOVO. A interferência aumenta no final de uma sessão; isso é esperado, e não um teste com defeito.
+
+Quando as vidas diferem por dificuldade, uma "pontuação alta" no nível Iniciante não é intercambiável com o nível Profissional. Trate cada dificuldade como seu próprio ranking em suas anotações.
+
+## Precisão, inibição e tarefas de conflito
+
+O teste **Vai/Não-Vá** (Go/No-Go) premia acertos corretos no Vai **e** inibições corretas. Um TR de Vai chamativo com muitos alarmes falsos não é maestria.
+
+O **Flanker** pontua respostas corretas na seta central; tentativas incongruentes são mais lentas e propensas a erros por design. Acompanhe primeiro a precisão e, em seguida, o TR médio nos acertos.
+
+**Combinação de padrões / cliques de precisão** priorizam a correção (e a qualidade do acerto) em vez da velocidade imprudente. CPS (cliques por segundo) ou velocidade de conclusão sem precisão é uma métrica de vaidade.
+
+## Limpezas baseadas em tempo (Schulte e similares)
+
+Grades no estilo Schulte pontuam o **tempo de conclusão** — quanto menor, melhor. Cliques errados não devem "passar" silenciosamente; eles desperdiçam tempo. Modos de contagem regressiva são uma tarefa diferente de limpezas ascendentes.
+
+## O que nós não afirmamos
+
+Não inventamos estatísticas genéricas do site do tipo "o usuário médio melhora X% em 14 dias" sem uma amostra publicada e controlada. Não apresentamos placas estilo Ishihara como diagnóstico médico. Não equiparamos a pontuação alta em um jogo com QI, avaliação clínica de TDAH ou prontidão para contratos de esports.
+
+Quando citamos pesquisas externas (NIH, NCBI, artigos clássicos de psicologia), essa pesquisa descreve **fenômenos gerais**. Sua curva pessoal no Reflextry ainda é um experimento de n=1 — útil para prática, não um relatório clínico.
+
+## Como manter um registro honesto
+
+1. Registre data, dificuldade, dispositivo e notas sobre sono/cafeína se você se importa com tendências.
+2. Prefira medianas semanais móveis em vez de uma única sessão de sorte.
+3. Altere uma variável de cada vez ao testar "isso ajudou?".
+4. Encerre as sessões quando a fadiga aumentar os erros; pontuações obtidas com cansaço ensinam a lição errada.
+
+## Por que essa transparência importa
+
+Sites da era do AdSense às vezes colam cópias idênticas de "melhoria de 12–15%" em cada ferramenta. Isso prejudica a confiança e ensina os usuários a ignorar os números. O objetivo do Reflextry é o oposto: **uma regra clara por ferramenta**, limites honestos e pontuações que você pode defender ao compartilhá-las com um colega de equipe ou treinador.
+
+Se a descrição de pontuação em uma página de ferramenta divergir deste artigo, considere a interface da ferramenta ativa como a fonte da verdade e envie um e-mail para support@reflextry.com para que possamos corrigir a documentação.
+
+## Como pensamos sobre "dados originais" em um laboratório gratuito
+
+Não publicamos percentis de placares falsos extraídos de sessões anônimas e disfarçados de ciência. Se algum dia lançarmos distribuições agregadas (por exemplo, histogramas de médias de reação simples em uma classe de dispositivo declarada), declararemos:
+
+- regras de inclusão (tentativas mínimas, dificuldade, exclusão de spam de cliques iniciais)
+- tamanho aproximado da amostra e intervalo de datas
+- ressalvas sobre o dispositivo
+- o que o gráfico *não* é (normas clínicas)
+
+Até que esse tipo de relatório exista, trate seu próprio registro como o conjunto de dados primário. Isso ainda é valioso: experimentos pessoais são a forma como a prática funciona.
+
+## Guias relacionados
+
+- [O Que os Testes de Reação do Navegador Podem e Não Podem Medir](/blog/browser-reaction-time-limits)
+- [Reação de Escolha vs Reação Simples](/blog/choice-reaction-vs-simple-reaction)
+- [O Que É um Bom Tempo de Reação?](/blog/what-is-a-good-reaction-time)

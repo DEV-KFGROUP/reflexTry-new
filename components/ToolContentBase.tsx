@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { HelpCircle, Info, Sparkles, TrendingUp, ArrowRight, CheckCircle2, Target, Trophy, Brain, List, Gamepad2, MousePointer2 } from "lucide-react";
 import Link from "next/link";
+import { useTranslation } from "@/lib/i18n/context";
 
 interface FAQItem {
     question: string;
@@ -41,6 +42,7 @@ export interface ToolContentProps {
 }
 
 export function ToolContent({ title, description, howToUse, howToImprove, howToPlay, benefits, faqs, relatedTools = [] }: ToolContentProps) {
+    const { t, getLocalizedHref } = useTranslation();
 
     const containerVariants = {
         hidden: { opacity: 0 },
@@ -185,11 +187,11 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
                     <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 blur-2xl opacity-30 animate-pulse" />
                     <h2 className="text-4xl md:text-5xl font-black bg-gradient-to-br from-slate-900 via-slate-800 to-slate-600 dark:from-white dark:via-white dark:to-white/50 bg-clip-text text-transparent inline-flex items-center gap-3 relative z-10 drop-shadow-sm">
                         <Sparkles className="w-10 h-10 text-purple-400" />
-                        How It Works & Tips
+                        {t("guide.howItWorks", "How It Works & Tips")}
                     </h2>
                 </div>
                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-medium">
-                    Master the game with our comprehensive guide and improvement strategies.
+                    {t("guide.subtitle", "Master the game with our comprehensive guide and improvement strategies.")}
                 </p>
             </motion.div>
 
@@ -203,14 +205,14 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
                     className="flex flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-center rounded-2xl border border-black/10 dark:border-white/10 bg-background/80 backdrop-blur-md p-3 sm:p-4"
                 >
                     <span className="text-xs font-mono font-bold tracking-widest uppercase text-muted-foreground px-2">
-                        Jump to
+                        {t("guide.jumpTo", "Jump to")}
                     </span>
                     <div className="flex flex-wrap gap-2">
                         {[
-                            { href: "#guide-about", label: "About", icon: Info },
-                            { href: "#guide-how-to-play", label: "How to Play", icon: Gamepad2 },
-                            { href: "#guide-tips", label: "Pro Tips", icon: TrendingUp },
-                            { href: "#guide-faq", label: "FAQ", icon: HelpCircle },
+                            { href: "#guide-about", label: t("guide.about", "About"), icon: Info },
+                            { href: "#guide-how-to-play", label: t("guide.howToPlay", "How to Play"), icon: Gamepad2 },
+                            { href: "#guide-tips", label: t("guide.proTips", "Pro Tips"), icon: TrendingUp },
+                            { href: "#guide-faq", label: t("guide.faq", "FAQ"), icon: HelpCircle },
                         ].map(({ href, label, icon: Icon }) => (
                             <a
                                 key={href}
@@ -229,7 +231,7 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
                         <div className="rounded-3xl border border-black/10 dark:border-white/10 bg-background p-5 lg:p-7 shadow-sm">
                             <h3 className="text-2xl font-black text-foreground mb-4 flex items-center gap-3">
                                 <Info className="w-6 h-6 text-indigo-500" />
-                                About This Test
+                                {t("guide.aboutTest", "About This Test")}
                             </h3>
                             <div className="max-w-none">
                                 {renderDescription()}
@@ -239,11 +241,11 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
                                 <div className="mt-6 pt-5 border-t border-black/10 dark:border-white/10">
                                     <h3 className="text-xl font-bold text-foreground mb-4 flex items-center gap-3">
                                         <Brain className="w-6 h-6 text-pink-500" />
-                                        What This Test Trains
+                                        {t("guide.trains", "What This Test Trains")}
                                     </h3>
                                     <div className="grid sm:grid-cols-2 gap-3">
                                         {benefits.map((benefit, idx) => (
-                                            <div key={idx} className="flex items-start gap-3 p-3 rounded-xl border border-black/10 dark:border-white/10 bg-muted/30">
+                                             <div key={idx} className="flex items-start gap-3 p-3 rounded-xl border border-black/10 dark:border-white/10 bg-muted/30">
                                                 <span className="mt-1.5 w-2 h-2 rounded-full bg-pink-500 flex-shrink-0" />
                                                 <span className="text-foreground/90 text-base font-medium">{benefit}</span>
                                             </div>
@@ -259,10 +261,10 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
                             <div className="flex flex-wrap items-center justify-between gap-3 border-b border-black/5 dark:border-white/5 pb-4">
                                 <h3 className="text-xl font-mono font-bold text-foreground flex items-center gap-2.5">
                                     <Gamepad2 className="w-5 h-5 text-cyan-500" />
-                                    Instructions &amp; Mechanics
+                                    {t("guide.instructions", "Instructions & Mechanics")}
                                 </h3>
                                 <span className="text-xs font-mono text-muted-foreground uppercase tracking-widest">
-                                    Quick Setup
+                                    {t("guide.quickSetup", "Quick Setup")}
                                 </span>
                             </div>
 
@@ -274,7 +276,7 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
                                 <div className="p-4 rounded-2xl bg-cyan-500/5 border border-cyan-500/20 flex flex-col md:flex-row md:items-center gap-3 text-xs">
                                     <span className="font-mono font-bold text-cyan-600 dark:text-cyan-400 flex items-center gap-1.5 flex-shrink-0">
                                         <Trophy className="w-4 h-4 text-cyan-500" />
-                                        Key Rules:
+                                        {t("guide.keyRules", "Key Rules:")}
                                     </span>
                                     <div className="flex flex-wrap items-center gap-x-4 gap-y-1.5 text-muted-foreground">
                                         {howToPlay.map((step, idx) => (
@@ -293,7 +295,7 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
                         <div className="rounded-3xl border border-black/10 dark:border-white/10 bg-background p-6 lg:p-10 shadow-sm">
                             <h3 className="text-2xl font-black text-foreground mb-8 flex items-center gap-3">
                                 <TrendingUp className="w-6 h-6 text-amber-500" />
-                                Expert Strategies
+                                {t("guide.strategies", "Expert Strategies")}
                             </h3>
                             <div className="prose dark:prose-invert prose-lg max-w-none prose-headings:text-foreground prose-p:text-muted-foreground">
                                 {renderHowToImprove()}
@@ -304,7 +306,7 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
                     <section id="guide-faq" className="scroll-mt-28" data-speakable="true">
                         <h3 className="text-2xl font-black text-foreground mb-8 flex items-center gap-3">
                             <HelpCircle className="w-6 h-6 text-pink-500" />
-                            Frequently Asked Questions
+                            {t("guide.faqs", "Frequently Asked Questions")}
                         </h3>
                         <div className="grid md:grid-cols-2 gap-6">
                             {faqs?.map((faq, idx) => (
@@ -339,13 +341,13 @@ export function ToolContent({ title, description, howToUse, howToImprove, howToP
                     <div className="relative z-10">
                         <div className="flex items-center gap-3 mb-6">
                             <Sparkles className="w-6 h-6 text-purple-400 drop-shadow-[0_0_10px_rgba(192,132,252,0.8)]" />
-                            <h2 className="text-2xl font-black text-foreground">Continue Your Training</h2>
+                            <h2 className="text-2xl font-black text-foreground">{t("guide.continueTraining", "Continue Your Training")}</h2>
                         </div>
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                             {relatedTools.map((tool) => (
                                 <Link
                                     key={tool.id}
-                                    href={tool.href}
+                                    href={getLocalizedHref(tool.href)}
                                     className="group flex items-center gap-4 p-4 rounded-2xl bg-white/40 dark:bg-black/40 border border-black/10 dark:border-white/10 hover:border-purple-500/50 hover:bg-black/60 hover:shadow-[0_0_30px_rgba(168,85,247,0.3)] transition-all duration-300"
                                 >
                                     <div className="flex-shrink-0 w-12 h-12 rounded-xl bg-purple-500/20 border border-purple-500/30 flex items-center justify-center group-hover:scale-110 group-hover:bg-purple-500/40 transition-all duration-300">

@@ -4,8 +4,10 @@ import { useState } from "react";
 import { Mail, Send, Loader2, MessageSquare, Headphones, Twitter, Instagram, Sparkles, Shield, SendHorizontal, Building2, MapPin } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { toast } from "@/utils/toast";
+import { useTranslation } from "@/lib/i18n/context";
 
 export default function ContactClient() {
+    const { t } = useTranslation();
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -30,13 +32,13 @@ export default function ContactClient() {
             const data = await response.json();
 
             if (data.success) {
-                toast.success("Message sent successfully!");
+                toast.success(t("contact.successMsg", "Message sent successfully!"));
                 setFormData({ name: "", email: "", subject: "", message: "" });
             } else {
-                toast.error(data.message || "Failed to send message");
+                toast.error(data.message || t("contact.errorMsg", "Failed to send message"));
             }
         } catch (error) {
-            toast.error("Failed to send message. Please try again.");
+            toast.error(t("contact.errorMsg", "Failed to send message. Please try again."));
         } finally {
             setIsSubmitting(false);
         }
@@ -45,9 +47,9 @@ export default function ContactClient() {
     const contactMethods = [
         {
             icon: MessageSquare,
-            title: "General Inquiries",
+            title: t("contact.generalInquiries", "General Inquiries"),
             email: "support@reflextry.com",
-            description: "For general inquiries, partnerships, and press.",
+            description: t("contact.generalInquiriesDesc", "For general inquiries, partnerships, and press."),
             color: "from-cyan-500/20 to-cyan-500/5",
             borderColor: "border-cyan-200 hover:border-cyan-400/60",
             iconColor: "text-cyan-600",
@@ -56,9 +58,9 @@ export default function ContactClient() {
         },
         {
             icon: Headphones,
-            title: "Technical Support",
+            title: t("contact.technicalSupport", "Technical Support"),
             email: "support@reflextry.com",
-            description: "For technical support, bug reports, and product feedback.",
+            description: t("contact.technicalSupportDesc", "For technical support, bug reports, and product feedback."),
             color: "from-violet-500/20 to-violet-500/5",
             borderColor: "border-violet-200 hover:border-violet-400/60",
             iconColor: "text-violet-600",
@@ -162,7 +164,7 @@ export default function ContactClient() {
                     </div>
 
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-mono font-extrabold tracking-tight text-slate-900 dark:text-white uppercase">
-                        Contact{" "}
+                        {t("contact.heroTitle", "Contact")}{" "}
                         <span
                             className="inline-block text-cyan-600"
                             style={{
@@ -172,12 +174,12 @@ export default function ContactClient() {
                                 backgroundClip: "text",
                             }}
                         >
-                            Us
+                            {t("contact.heroTitleHighlight", "Us")}
                         </span>
                     </h1>
 
                     <p className="text-sm md:text-base text-slate-500 max-w-xl leading-relaxed">
-                        Have queries, feedback, or need technical calibration? Access our support pipelines below.
+                        {t("contact.heroSubtitle", "Have queries, feedback, or need technical calibration? Access our support pipelines below.")}
                     </p>
                 </motion.div>
 
@@ -288,10 +290,10 @@ export default function ContactClient() {
                         <div className="space-y-6">
                             <div className="space-y-1">
                                 <h2 className="text-xl font-mono font-bold text-slate-800 uppercase tracking-wide">
-                                    Transmit Message
+                                    {t("contact.heroTitle", "Transmit")} {t("contact.heroTitleHighlight", "Message")}
                                 </h2>
                                 <p className="text-xs text-slate-400">
-                                    Fill out the coordinates below to dispatch a message directly to our database.
+                                    {t("contact.heroSubtitle", "Fill out the coordinates below to dispatch a message directly to our database.")}
                                 </p>
                             </div>
 
@@ -299,7 +301,7 @@ export default function ContactClient() {
                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                                     <div className="space-y-1.5">
                                         <label htmlFor="name" className="text-xs font-mono font-semibold text-slate-500 uppercase">
-                                            Operator Name
+                                            {t("contact.formName", "Operator Name")}
                                         </label>
                                         <input
                                             type="text"
@@ -308,12 +310,12 @@ export default function ContactClient() {
                                             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                                             required
                                             className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-cyan-500 focus:border-cyan-500 focus:bg-white text-sm text-slate-800 placeholder-slate-400 transition-all font-sans"
-                                            placeholder="John Doe"
+                                            placeholder={t("contact.formNamePlaceholder", "John Doe")}
                                         />
                                     </div>
                                     <div className="space-y-1.5">
                                         <label htmlFor="email" className="text-xs font-mono font-semibold text-slate-500 uppercase">
-                                            Return Address
+                                            {t("contact.formEmail", "Return Address")}
                                         </label>
                                         <input
                                             type="email"
@@ -322,14 +324,14 @@ export default function ContactClient() {
                                             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                                             required
                                             className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-cyan-500 focus:border-cyan-500 focus:bg-white text-sm text-slate-800 placeholder-slate-400 transition-all font-sans"
-                                            placeholder="john@example.com"
+                                            placeholder={t("contact.formEmailPlaceholder", "john@example.com")}
                                         />
                                     </div>
                                 </div>
 
                                 <div className="space-y-1.5">
                                     <label htmlFor="subject" className="text-xs font-mono font-semibold text-slate-500 uppercase">
-                                        Signal Subject
+                                        {t("contact.formSubject", "Signal Subject")}
                                     </label>
                                     <input
                                         type="text"
@@ -337,13 +339,13 @@ export default function ContactClient() {
                                         value={formData.subject}
                                         onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                                         className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-cyan-500 focus:border-cyan-500 focus:bg-white text-sm text-slate-800 placeholder-slate-400 transition-all font-sans"
-                                        placeholder="Partnership / Bug / General Feedback"
+                                        placeholder={t("contact.formSubjectPlaceholder", "Partnership / Bug / General Feedback")}
                                     />
                                 </div>
 
                                 <div className="space-y-1.5">
                                     <label htmlFor="message" className="text-xs font-mono font-semibold text-slate-500 uppercase">
-                                        Message Payload
+                                        {t("contact.formMessage", "Message Payload")}
                                     </label>
                                     <textarea
                                         id="message"
@@ -352,7 +354,7 @@ export default function ContactClient() {
                                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                                         required
                                         className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-cyan-500 focus:border-cyan-500 focus:bg-white text-sm text-slate-800 placeholder-slate-400 transition-all font-sans resize-none"
-                                        placeholder="Describe the nature of your request..."
+                                        placeholder={t("contact.formMessagePlaceholder", "Describe the nature of your request...")}
                                     ></textarea>
                                 </div>
 
@@ -369,12 +371,12 @@ export default function ContactClient() {
                                             {isSubmitting ? (
                                                 <>
                                                     <Loader2 className="w-4 h-4 animate-spin" />
-                                                    Transmitting...
+                                                    {t("contact.formSending", "Transmitting...")}
                                                 </>
                                             ) : (
                                                 <>
                                                     <SendHorizontal className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                                                    Dispatch Signal
+                                                    {t("contact.formSubmit", "Dispatch Signal")}
                                                 </>
                                             )}
                                         </div>

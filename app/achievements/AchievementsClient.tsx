@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Trophy, Lock, Star, Target, Zap, Award, Sparkles, Medal } from "lucide-react";
 import { Achievements, Achievement } from "@/utils/achievements";
+import { useTranslation } from "@/lib/i18n/context";
 
 const FloatingBackground = () => {
     return (
@@ -47,6 +48,7 @@ const FloatingBackground = () => {
 };
 
 export default function AchievementsClient() {
+    const { t } = useTranslation();
     const [unlocked, setUnlocked] = useState<Achievement[]>([]);
     const [allAchievements, setAllAchievements] = useState<Achievement[]>([]);
 
@@ -97,11 +99,11 @@ export default function AchievementsClient() {
                         <div className="absolute inset-0 bg-gradient-to-r from-yellow-500 to-orange-500 blur-2xl opacity-30 animate-pulse" />
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-black bg-gradient-to-br from-slate-900 via-slate-800 to-slate-600 dark:from-yellow-400 dark:via-orange-400 dark:to-orange-500 bg-clip-text text-transparent inline-flex items-center gap-3 relative z-10 drop-shadow-sm">
                             <Sparkles className="w-10 h-10 text-yellow-400" />
-                            Achievements
+                            {t("achievements.heroTitle", "Achievements")}
                         </h1>
                     </div>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-medium">
-                        {unlocked.length} of {allAchievements.length} achievements unlocked
+                        {unlocked.length} / {allAchievements.length} {t("achievements.unlocked", "achievements unlocked")}
                     </p>
                 </motion.div>
 
@@ -134,7 +136,7 @@ export default function AchievementsClient() {
                     {/* Progress Bar */}
                     <div className="bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 rounded-3xl p-8 mb-12 relative z-10 shadow-xl">
                         <div className="flex items-center justify-between mb-4">
-                            <span className="text-lg font-bold text-muted-foreground uppercase tracking-wider">Overall Progress</span>
+                            <span className="text-lg font-bold text-muted-foreground uppercase tracking-wider">{t("achievements.totalUnlocked", "Overall Progress")}</span>
                             <span className="text-2xl font-black text-foreground drop-shadow-md">
                                 {allAchievements.length > 0 ? Math.round((unlocked.length / allAchievements.length) * 100) : 0}%
                             </span>
@@ -156,7 +158,7 @@ export default function AchievementsClient() {
                         <div className="space-y-6 relative z-10 mb-16">
                             <div className="flex items-center gap-3 mb-6">
                                 <Trophy className="w-8 h-8 text-yellow-400 drop-shadow-[0_0_10px_rgba(250,204,21,0.8)]" />
-                                <h2 className="text-3xl font-black text-foreground">Unlocked</h2>
+                                <h2 className="text-3xl font-black text-foreground">{t("achievements.unlocked", "Unlocked")}</h2>
                             </div>
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                                 {unlocked.map((achievement, index) => (
@@ -176,7 +178,7 @@ export default function AchievementsClient() {
                                         {achievement.unlockedAt && (
                                             <div className="mt-auto pt-4 border-t border-yellow-500/20">
                                                 <p className="text-sm font-bold text-yellow-600 dark:text-yellow-400">
-                                                    Unlocked: {new Date(achievement.unlockedAt).toLocaleDateString()}
+                                                    {t("achievements.unlocked", "Unlocked")}: {new Date(achievement.unlockedAt).toLocaleDateString()}
                                                 </p>
                                             </div>
                                         )}
@@ -191,7 +193,7 @@ export default function AchievementsClient() {
                         <div className="space-y-6 relative z-10">
                             <div className="flex items-center gap-3 mb-6">
                                 <Lock className="w-8 h-8 text-muted-foreground" />
-                                <h2 className="text-3xl font-black text-foreground">Locked</h2>
+                                <h2 className="text-3xl font-black text-foreground">{t("achievements.locked", "Locked")}</h2>
                             </div>
                             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                                 {locked.map((achievement, index) => (

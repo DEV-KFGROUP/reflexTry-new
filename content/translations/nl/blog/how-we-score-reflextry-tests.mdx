@@ -1,0 +1,84 @@
+---
+title: Hoe we Reflextry-tests beoordelen (en wat de cijfers betekenen)
+description: >-
+  Een duidelijke handleiding voor de puntentelling van Reflextry: milliseconden,
+  spans, nauwkeurigheid en voltooide tijden — plus wat we niet beweren over
+  percentielen of klinische diagnoses.
+publishedAt: '2026-08-01'
+author:
+  name: Kaushik Rabadiya
+category: Methodology
+tags:
+  - scoring
+  - methodology
+  - benchmarks
+  - transparency
+readingTime: 8 min read
+---
+Als een trainingssite een score publiceert zonder de regel toe te lichten, is het getal marketing in plaats van een meting. Dit artikel beschrijft hoe Reflextry zijn belangrijkste testcategorieën beoordeelt, hoe de moeilijkheidsgraad de taak verandert en welke beweringen we weigeren te doen zonder gecontroleerde data.
+
+## Één principe: dezelfde apparatuur, dezelfde moeilijkheidsgraad
+
+Browsertests erven hardware-ruis: vernieuwingsfrequentie (refresh rate), muis-polling, aanraaklatency (touch latency), thermal throttling en achtergrondtabbladen. Dat maakt scores niet nutteloos, maar betekent wel dat **vergelijkingen binnen je eigen setup moeten plaatsvinden**. Een reactietijd van 220 ms op een laptop van 60 Hz is niet dezelfde experimentele opstelling als 180 ms op een e-sportdisplay van 240 Hz. Noteer altijd de moeilijkheidsgraad naast je persoonlijk records.
+
+## Reactie en keuzereactie (milliseconden)
+
+Scores voor **eenvoudige reacties** zijn doorgaans de gemiddelde latentie van het begin van de stimulus tot een geldige respons, in milliseconden. Lager is beter. Vroege klikken (vóór het signaal) zijn fouten, geen heroïsche anticipering.
+
+**Keuzereacties** voegen alternatieven toe. De gemiddelde reactietijd (RT) blijft de primaire meting, maar alleen correcte treffers mogen meetellen voor het gemiddelde. Klikken op het verkeerde vakje en te vroeg klikken tellen als fouten. Omdat meer keuzes beslissingen over het algemeen vertragen (de intuïtie achter de wet van Hick), moet je het gemiddelde van 2 vakjes niet vergelijken met dat van 4 vakjes alsof het identieke tests zijn.
+
+## Geheugenspans en herkenningsrondes
+
+Tools in de stijl van **Chimp / reeks / cijfers** scoren doorgaans de langste foutloze span of het bereikte level onder de levens- en verdwijntypes van de modus. Hoger is beter.
+
+**Verbaal geheugen** scoort meestal hoe ver je komt voordat je af bent op SEEN/NEW-oordelen (gezien/nieuw). Interferentie neemt toe naarmate een ronde vordert; dat is te verwachten en betekent niet dat de test kapot is.
+
+Wanneer levens verschillen per moeilijkheidsgraad, is een "hogere score" op Beginner niet uitwisselbaar met Professioneel. Beschouw elke moeilijkheidsgraad in je notities als een eigen leaderboard.
+
+## Nauwkeurigheid, inhibitie en conflicttaken
+
+**Go/No-Go** beloont correcte Go-treffers **en** correct achterwege gelaten reacties. Een flitsende Go-reactietijd met veel vals alarm is geen meesterschap.
+
+**Flanker** scoort correcte reacties op de middelste pijl; congruente tests zijn ontworpen om langzamer en foutgevoeliger te zijn. Houd eerst de nauwkeurigheid bij en pas daarna de gemiddelde reactietijd bij correcte antwoorden.
+
+**Patroonmatching / precisiekliks** geven prioriteit aan juistheid (en de kwaliteit van de treffer) boven roekeloze snelheid. CPS (klikken per seconde) of voltooide snelheid zonder nauwkeurigheid is een ijdele meting.
+
+## Op tijd gebaseerde voltooiingen (Schulte en vergelijkbaar)
+
+Roosters in Schulte-stijl scoren op **voltooiingstijd** — lager is beter. Verkeerde klikken mogen niet stilletjes "lukken"; ze verspillen tijd. Aftellende modi zijn een andere taak dan oplopend voltooien.
+
+## Wat we niet beweren
+
+We verzinnen geen algemene statistieken voor de site zoals "de gemiddelde gebruiker verbetert met X% in 14 dagen" zonder een gepubliceerd, gecontroleerd steekproefonderzoek. We presenteren platen in Ishihara-stijl niet als een medische diagnose. We stellen een hoge spelscore niet gelijk aan een IQ, een klinische ADHD-beoordeling of gereedheid voor een e-sportcontract.
+
+Wanneer we externe onderzoeken citeren (NIH, NCBI, klassieke psychologische artikelen), beschrijven die onderzoeken **algemene fenomenen**. Je persoonlijke curve op Reflextry blijft een n=1 experiment — handig om te oefenen, niet als klinisch rapport.
+
+## Hoe je een eerlijk logboek bijhoudt
+
+1. Noteer de datum, moeilijkheidsgraad, apparatuur en opmerkingen over slaap/caffeïne als je trends wilt volgen.
+2. Geef de voorkeur aan rollende wekelijkse medianen boven één gelukkige sessie.
+3. Verander telkens één variabele wanneer je test of "dit heeft geholpen".
+4. Stop sessies wanneer vermoeidheid zorgt voor pieken in het aantal fouten; vermoeide scores leren je de verkeerde les.
+
+## Waarom deze transparantie belangrijk is
+
+Websites uit het AdSense-tijdperk plakken soms identieke kopieën van "12–15% verbetering" onder elke tool. Dat schaadt het vertrouwen en leert gebruikers om cijfers te negeren. Het doel van Reflextry is juist het tegenovergestelde: **één duidelijke regel per tool**, eerlijke grenzen en scores die je kunt verdedigen wanneer je ze deelt met een teamgenoot of coach.
+
+Als de beschrijving van de puntentelling op een toolpagina ooit verschilt van dit artikel, beschouw dan de live interface van de tool als de bron van waarheid en stuur een e-mail naar support@reflextry.com zodat we de documentatie kunnen corrigeren.
+
+## Hoe we denken over "originele data" op een gratis lab
+
+We publiceren geen neppe leaderboard-percentielen die zijn verzameld uit anonieme sessies en zijn vermomd als wetenschap. Als we ooit geaggregeerde verdelingen uitbrengen (bijvoorbeeld histogrammen van eenvoudige reactiegemiddeldes op een opgegeven apparaatklasse), vermelden we:
+
+- inclusieregels (minimum aantal pogingen, moeilijkheidsgraad, uitgesloten vroege-klikspam)
+- bij benadering de steekproefomvang en datumbereik
+- voorbehouden met betrekking tot apparatuur
+- wat de grafiek *niet* is (klinische normen)
+
+Tot dat soort rapporten bestaan, moet je je eigen logboek beschouwen als de primaire dataset. Dat is nog steeds waardevol: persoonlijke experimenten zijn hoe oefenen werkt.
+
+## Gerelateerde handleidingen
+
+- [Wat browser-reactietests wel en niet kunnen meten](/blog/browser-reaction-time-limits)
+- [Keuzereactie vs. Eenvoudige reactie](/blog/choice-reaction-vs-simple-reaction)
+- [Wat is een goede reactietijd?](/blog/what-is-a-good-reaction-time)

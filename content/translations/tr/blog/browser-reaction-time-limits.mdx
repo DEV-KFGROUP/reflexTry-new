@@ -1,0 +1,78 @@
+---
+title: Tarayıcı Tabanlı Reaksiyon Testlerinin Ölçebildiği ve Ölçemediği Şeyler
+description: >-
+  Ekran yenileme hızı, giriş gecikmesi ve Reflextry tarayıcı skorlarının kişisel
+  takip için neden faydalı olduğunu—ancak neden laboratuvar düzeyinde klinik
+  araçlar olmadığını açıklayan pratik bir rehber.
+publishedAt: '2026-08-04'
+author:
+  name: Kaushik Rabadiya
+category: Methodology
+tags:
+  - reaction-time
+  - browsers
+  - hardware
+  - limits
+readingTime: 11 min read
+---
+İnsanlar bir reaksiyon testi açar, bir sayı elde eder ve şunu sorar: *Bu benim gerçek nörolojik hızım mı?* Bir tarayıcıda verilecek dürüst cevap şudur: Bu, o günkü **bu yığın (stack)** üzerinden elde ettiğiniz hızınızdır—gözler, beyin, el, cihaz, işletim sistemi, tarayıcı ve sayfa kodu.
+
+Bu yığın yine de değerlidir. Mühürlü bir laboratuvar kronoskobu değildir. Bu makale, Reflextry'yi batıl inançlara kapılmadan kullanabilmeniz için aradaki çizgiyi net bir şekilde çeker.
+
+## Bir tarayıcı denemesi aslında neyi zamanlar?
+
+Tipik bir görsel basit reaksiyon denemesinde:
+
+1. Sayfa bir uyaran planlar (renk değişimi, şekil, ses).
+2. Ekranınız nihayet yeni pikselleri aydınlatır (yenileme hızı sınırlıdır).
+3. Değişimi fark eder ve bir motor tepki başlatırsınız.
+4. Giriş cihazı tıklamayı veya tuşu bildirir.
+5. Tarayıcı olaya zaman damgası vurar ve gecikmeyi hesaplar.
+
+Her aşama milisaniye ekleyebilir. 60 Hz'lik bir panel yaklaşık her 16.7 ms'de bir güncellenir; 240 Hz'lik bir panel ise çok daha hızlıdır. Dokunmatik ekranlar ve Bluetooth fareler genellikle kablolu bir oyuncu faresinden daha fazla gecikme ekler. Isıl kısıtlama (thermal throttling) ve arka plan sekmeleri değişkenlik yaratır.
+
+## Tarayıcı testlerinin iyi olduğu alanlar
+
+- Aynı makinede ve zorlukta **kişisel baz çizgileri (baseline)**.
+- Dereceli oyunlardan veya pratikten önce **ısınma geri bildirimi**.
+- **Alışkanlık oluşturma:** Kısa günlük seanslar, nadir yapılan uzun maraton seanslarından daha iyidir.
+- Aynı cihazda **grev türlerini karşılaştırma** (basit vs seçimli, Git vs Gitme).
+- **Temiz teknik öğrenme:** Daha az erken tıklama, daha istikrarlı ortalamalar.
+
+Ortalama basit reaksiyon süreniz aynı dizüstü bilgisayarda üç hafta içinde 280 ms'den 230 ms'ye düşerse, bir laboratuvar biraz farklı bir mutlak sayı verse bile, bu *sizin* için gerçek bir pratik sinyalidir.
+
+## Neyin yerini tutamazlar
+
+- **Tıbbi teşhis değildir.** Yorgunluk, kafein, ruh hali, uyku ve hastalık skorları etkiler. Araçlar klinisyenlerin yerini almaz.
+- **Sertifikalı mesleki taramalar değildir** (havacılık renk körlüğü, klinik nöropsikoloji test bataryaları vb.).
+- **Popülasyon IQ iddiaları değildir.** Kontrolsüz web trafiğinden türetilmiş uydurma persentilleri reddediyoruz.
+- **Cihazlar arası skor tahtası gerçeği değildir.** Telefon ile masaüstü farklı deneyimlerdir.
+
+## Sayılarınızı nasıl daha güvenilir hale getirebilirsiniz
+
+1. Takip için birincil bir cihaz kullanın.
+2. Ağır sekmeleri kapatın; renk/zamanlama önemliyse gece filtrelerini devre dışı bırakın.
+3. Mümkün olduğunca reaksiyon ve nişan alma araçları için kablolu fareleri tercih edin.
+4. "Gerçek" bir ortalamayı kaydetmeden önce 1–2 deneme seansıyla ısının.
+5. Her kişisel rekorun yanında zorluk modunu kaydedin.
+6. Tek bir şanslı tıklama yerine çoklu deneme ortalamalarını tercih edin.
+
+## Ses ve çevresel birim uyarıları
+
+İşitsel ipuçları, ses yığını gecikmesine ve çıkış cihazına bağlıdır. Çevresel görüş görevleri, izleme mesafesine ve ekran boyutuna bağlıdır. Bu skorları evrensel birer fizyoloji ölçütü olarak değil, kurulum içi metrikler olarak değerlendirin.
+
+## Reflextry dürüstlüğü nasıl tasarlar?
+
+Şeffaf birimler gösteriyoruz (ms, aralıklar, doğruluk, tamamlama süresi). Zorluk derecesi görevi değiştirir; bu nedenle Başlangıç ve Profesyonel seviyeleri aynı test değildir. Metodoloji yazıları [Kognitif Günlük](/blog) içinde, [Reflextry Testlerini Nasıl Puanlıyoruz?](/blog/how-we-score-reflextry-tests) makalesi de dahil olmak üzere yer almaktadır.
+
+Bir şeyler bozuk görünüyorsa (erken tıklama spam'i yapılan 60 Hz'lik bir panelde imkansız 100 ms altı ortalamalar), ego sayısına güvenmeden önce hata sayaçlarına ve kurulum notlarınıza güvenin.
+
+## Mantıklı bir haftalık kullanım düzeni
+
+- **Haftada 2–4 gün:** Reaksiyon + bir hafıza veya doğruluk aracı dahil 10–15 dakika.
+- **Rekabetçi oyundan önce:** 5 dakikalık basit reaksiyon + nişan alma veya ızgara ısınması.
+- **Aylık:** Notlarınızı yeniden okuyun; her seferinde yalnızca bir değişkeni değiştirin (uyku, cihaz, zorluk).
+
+## Sonuç
+
+Tarayıcı reaksiyon testleri, gerçek dünya gürültüsü altında gerçek bir beceri döngüsünü ölçer. Bunları antrenman yapmak ve takip etmek için kullanın. Bunları sinir sisteminiz hakkında mahkeme kanıtı olarak değerlendirmeyin. İnsanların genellikle tartıştığı aralıklar için [İyi Bir Reaksiyon Süresi Nedir?](/blog/what-is-a-good-reaction-time) makalesini okuyun. Pratik yapmak için [Reaksiyon Süresi](/reflex/reaction) sayfasından başlayın.

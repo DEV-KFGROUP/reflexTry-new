@@ -1,6 +1,7 @@
+import { headers } from 'next/headers';
 import { Metadata } from 'next';
 import TypingGame from './TypingGame';
-import { getToolMetadata } from '@/lib/seo-utils';
+import { getToolMetadata, getToolSEOConfig } from '@/lib/seo-utils';
 import { SchemaInjector } from '@/components/SchemaInjector';
 import { generateToolStructuredData, generateBreadcrumbStructuredData, generateWebPageSchema } from '@/lib/structured-data';
 import { SEO_CONFIGS } from '@/config/seo-config';
@@ -11,12 +12,16 @@ import { AEOAnswerBlock } from '@/components/AEOAnswerBlock';
 import { AEO_DEFINITIONS } from '@/lib/aeo-definitions';
 
 export async function generateMetadata(): Promise<Metadata> {
-    return getToolMetadata('typing-speed', '/speed/typing');
+    const headersList = await headers();
+    const locale = headersList.get('x-locale') || 'en';
+    return getToolMetadata('typing-speed', '/speed/typing', locale);
 }
 
-export default function Page() {
-    const config = SEO_CONFIGS['typing-speed'];
-    const content = getToolContent('typing-speed', config.title);
+export default async function Page() {
+    const headersList = await headers();
+    const locale = headersList.get('x-locale') || 'en';
+    const config = getToolSEOConfig('typing-speed', locale);
+    const content = getToolContent('typing-speed', config.title, locale);
     const typingDef = AEO_DEFINITIONS['typing-wpm'];
 
     const structuredData = generateToolStructuredData(

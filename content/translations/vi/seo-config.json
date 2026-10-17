@@ -1,0 +1,954 @@
+{
+  "sequence-memory": {
+    "title": "Bài kiểm tra Trí nhớ Trình tự - Đo lường khả năng ghi nhớ mẫu | Reflextry",
+    "description": "Luyện tập ghi nhớ các mẫu ánh sáng không gian đang mở rộng với Bài kiểm tra Trí nhớ Trình tự miễn phí của chúng tôi. Đọc quy tắc tính điểm và so sánh kết quả của bạn.",
+    "keywords": [
+      "kiểm tra trí nhớ trình tự",
+      "trò chơi trí nhớ trình tự",
+      "human benchmark sequence memory",
+      "trò chơi simon online miễn phí",
+      "trò chơi trí nhớ simon says",
+      "kiểm tra chuỗi mẫu",
+      "kiểm tra trí nhớ trình tự thị giác",
+      "chơi sequence memory online",
+      "luyện tập trí nhớ trình tự",
+      "rèn luyện trí nhớ trình tự",
+      "cải thiện trí nhớ trình tự",
+      "kỷ lục thế giới sequence memory",
+      "kiểm tra trí nhớ trình tự miễn phí",
+      "trí nhớ trình tự ngắn hạn",
+      "kiểm tra trình tự nhận thức",
+      "corsi block tapping test online",
+      "trò chơi hồi tưởng trình tự không gian",
+      "điểm trung bình trí nhớ trình tự",
+      "huấn luyện não bộ trí nhớ trình tự"
+    ]
+  },
+  "number-memory": {
+    "title": "Bài kiểm tra Trí nhớ Số - Đo lường khoảng nhớ chữ số | Reflextry",
+    "description": "Đo lường trí nhớ làm việc và dung lượng khoảng nhớ chữ số với Bài kiểm tra Trí nhớ Số miễn phí. Ghi nhớ các chuỗi số dài dần và đánh giá điểm ghi nhớ của bạn.",
+    "keywords": [
+      "kiểm tra trí nhớ số",
+      "digit span test online",
+      "number memory human benchmark",
+      "kiểm tra khoảng nhớ chữ số xuôi",
+      "kiểm tra khoảng nhớ chữ số ngược",
+      "trò chơi trí nhớ chữ số",
+      "kiểm tra ghi nhớ số",
+      "trí nhớ số ngắn hạn",
+      "luyện tập trí nhớ số",
+      "kỷ lục number memory human benchmark",
+      "kiểm tra nhớ số",
+      "trí nhớ trình tự số",
+      "kiểm tra digit span online miễn phí",
+      "cách cải thiện trí nhớ số",
+      "huấn luyện não bộ ghi nhớ số",
+      "kiểm tra khoảng nhớ",
+      "wais digit span benchmark",
+      "kiểm tra dung lượng trí nhớ làm việc",
+      "điểm trí nhớ số trung bình"
+    ]
+  },
+  "visual-memory": {
+    "title": "Bài kiểm tra Trí nhớ Thị giác - Trò chơi ghi nhớ lưới không gian | Reflextry",
+    "description": "Nâng cao khả năng lưu giữ thị giác và nhận diện mẫu không gian. Kiểm tra trí nhớ thị giác bằng cách nhớ các mẫu lưới nhấp nháy trên ma trận mở rộng. Công cụ benchmark miễn phí.",
+    "keywords": [
+      "kiểm tra trí nhớ thị giác",
+      "trò chơi trí nhớ thị giác",
+      "human benchmark visual memory",
+      "kiểm tra trí nhớ lưới miễn phí",
+      "kiểm tra trí nhớ thị giác ngắn hạn",
+      "kiểm tra trí nhớ làm việc thị giác",
+      "kiểm tra trí nhớ không gian thị giác",
+      "cải thiện trí nhớ thị giác",
+      "kiểm tra trí nhớ siêu phàm online",
+      "kiểm tra hồi tưởng thị giác",
+      "kiểm tra trí nhớ mẫu",
+      "luyện tập trí nhớ thị giác",
+      "trò chơi trí nhớ thị giác miễn phí",
+      "kiểm tra trí nhớ eidetic",
+      "kiểm tra nhận thức thị giác",
+      "kiểm tra trí nhớ ma trận",
+      "trò chơi nhớ ô vuông",
+      "kiểm tra nhận diện mẫu thị giác"
+    ]
+  },
+  "color-memory": {
+    "title": "Bài kiểm tra Trí nhớ Màu sắc - Trò chơi hồi tưởng chuỗi thị giác | Reflextry",
+    "description": "Thách thức trí nhớ sắc độ và sự tập trung thị giác của bạn. Ghi nhớ các chuỗi màu thay đổi liên tục và rèn luyện sự linh hoạt nhận thức với Bài kiểm tra Trí nhớ Màu sắc miễn phí.",
+    "keywords": [
+      "kiểm tra trí nhớ màu sắc",
+      "kiểm tra nhớ màu",
+      "trò chơi trí nhớ màu sắc",
+      "trò chơi trí nhớ màu simon",
+      "trí nhớ màu sắc ngắn hạn",
+      "kiểm tra ghi nhớ màu",
+      "trí nhớ màu sắc thị giác",
+      "kiểm tra trí nhớ trình tự màu",
+      "trò chơi trí nhớ màu sắc online",
+      "huấn luyện não bộ màu sắc",
+      "kiểm tra màu sắc simon says",
+      "luyện tập chuỗi màu",
+      "ghi nhớ chính xác màu sắc",
+      "trí nhớ màu sắc human benchmark",
+      "kiểm tra trí nhớ sắc độ",
+      "trò chơi lưu giữ sắc thái",
+      "benchmark khoảng nhớ màu sắc thị giác"
+    ]
+  },
+  "shape-memory": {
+    "title": "Bài kiểm tra Trí nhớ Hình khối - Ghi nhớ mẫu hình học | Reflextry",
+    "description": "Rèn luyện khả năng phân biệt hình học và trí nhớ không gian. Ghi nhớ các hình khối và ký hiệu trừu tượng để nâng cao tư duy thị giác phi ngôn ngữ và sự tập trung.",
+    "keywords": [
+      "kiểm tra trí nhớ hình khối",
+      "trò chơi trí nhớ ghép hình",
+      "kiểm tra trí nhớ hình học",
+      "trí nhớ hình khối thị giác",
+      "kiểm tra nhớ hình dạng",
+      "trò chơi hồi tưởng hình khối",
+      "trí nhớ trình tự hình khối",
+      "kiểm tra hình khối nhận thức",
+      "kiểm tra trí nhớ hình khối 3d",
+      "trí nhớ mẫu và hình khối",
+      "trò chơi trí nhớ hình khối online miễn phí",
+      "kiểm tra trí nhớ đa giác",
+      "tư duy thị giác hình khối",
+      "hồi tưởng hình khối trừu tượng",
+      "kiểm tra trí nhớ không gian hình khối"
+    ]
+  },
+  "symbol-memory": {
+    "title": "Bài Kiểm Tra Trí Nhớ Biểu Tượng - Nhớ Biểu Tượng Liên Kết | Reflextry",
+    "description": "Cải thiện khả năng nhận dạng mẫu trừu tượng và trí nhớ liên kết. Ghép các biểu tượng và ký hiệu ẩn mã hóa để nâng cao sự tập trung tinh thần và tốc độ xử lý thị giác.",
+    "keywords": [
+      "bài kiểm tra trí nhớ biểu tượng",
+      "trò chơi trí nhớ biểu tượng ngoài hành tinh",
+      "kiểm tra biểu tượng thị giác",
+      "trí nhớ biểu tượng trừu tượng",
+      "kiểm tra ghi nhớ biểu tượng",
+      "trí nhớ biểu tượng human benchmark",
+      "trí nhớ biểu tượng ngắn hạn",
+      "kiểm tra trí nhớ ghép biểu tượng",
+      "trò chơi ghi nhớ biểu tượng",
+      "trí nhớ biểu tượng mẫu",
+      "kiểm tra biểu tượng nhận thức",
+      "trí nhớ biểu tượng kỳ lạ",
+      "trò chơi trí nhớ biểu tượng",
+      "kiểm tra phương thức chữ số biểu tượng trực tuyến",
+      "kiểm tra ghi nhớ glyph"
+    ]
+  },
+  "word-recall": {
+    "title": "Bài Kiểm Tra Ghi Nhớ Từ - Trò Chơi Lưu Trữ Ngôn Ngữ | Reflextry",
+    "description": "Đánh giá khả năng lưu giữ trí nhớ ngôn ngữ và nhận dạng từ vựng của bạn. Kiểm tra xem các từ là mới hay đã thấy trước đó để đo lường trí nhớ ngôn ngữ ngắn hạn.",
+    "keywords": [
+      "bài kiểm tra ghi nhớ từ",
+      "bài kiểm tra trí nhớ ngôn ngữ",
+      "kiểm tra trí nhớ từ miễn phí",
+      "trí nhớ ngôn ngữ human benchmark",
+      "ghi nhớ từ ngắn hạn",
+      "danh sách từ kiểm tra trí nhớ",
+      "kiểm tra ghi nhớ từ tức thì",
+      "kiểm tra từ học danh sách",
+      "trò chơi rèn luyện trí não ghi nhớ từ",
+      "trò chơi trí nhớ từ",
+      "ghi nhớ chuỗi từ",
+      "kiểm tra ghi nhớ từ trực tuyến miễn phí",
+      "luyện tập ghi nhớ từ",
+      "ghi nhớ từ nhận thức",
+      "kiểm tra từ đã thấy hoặc từ mới",
+      "kiểm tra khoảng nhớ ngôn ngữ",
+      "kiểm tra học tập ngôn ngữ thính giác trực tuyến"
+    ]
+  },
+  "card-match": {
+    "title": "Trò Chơi Ghép Thẻ Trí Nhớ - Tìm Cặp Giống Nhau | Reflextry",
+    "description": "Rèn luyện trí nhớ không gian và khả năng ghi nhớ mẫu thị giác với Trò Chơi Ghép Thẻ Trí Nhớ trực tuyến miễn phí. Lật thẻ, ghép các cặp với số lần di chuyển ít nhất và vượt qua thời gian.",
+    "keywords": [
+      "trò chơi ghép thẻ trí nhớ",
+      "trò chơi thẻ nhớ trực tuyến",
+      "kiểm tra ghép thẻ",
+      "trò chơi trí nhớ lật thẻ",
+      "trò chơi ghép thẻ cặp",
+      "chơi ghép thẻ",
+      "kiểm tra trí nhớ thẻ hình ảnh",
+      "trò chơi thẻ nhớ cổ điển",
+      "trò chơi ghép trí nhớ miễn phí",
+      "trò chơi tập trung thẻ",
+      "ghép thẻ rèn luyện trí não",
+      "ghép thẻ thị giác",
+      "trò chơi pelmanism trực tuyến",
+      "ghép cặp trí nhớ miễn phí"
+    ]
+  },
+  "chimp-test": {
+    "title": "Chimp Test - Trò Chơi Chuẩn Trí Nhớ Làm Việc | Reflextry",
+    "description": "Bạn có thông minh hơn một con tinh tinh không? Tham gia Chimp Test nổi tiếng để đo lường trí nhớ làm việc không gian thị giác của bạn. Ghi nhớ lưới số trước khi nó biến mất.",
+    "keywords": [
+      "chimp test",
+      "chimp test human benchmark",
+      "bài kiểm tra trí nhớ tinh tinh",
+      "trò chơi trí nhớ tinh tinh",
+      "bạn có thông minh hơn chimp test",
+      "kiểm tra trí nhớ khỉ trực tuyến",
+      "kỷ lục th��� giới chimp test",
+      "chơi chimp test",
+      "kiểm tra trí nhớ người và chimp",
+      "kiểm tra não chimp",
+      "trò chơi khỉ ghi nhớ số",
+      "kiểm tra trí nhớ linh trưởng",
+      "luyện tập chimp test",
+      "kiểm tra trí nhớ ayumu chimp",
+      "kiểm tra trí nhớ làm việc không gian"
+    ]
+  },
+  "verbal-memory": {
+    "title": "Bài Kiểm Tra Trí Nhớ Ngôn Ngữ - Chuẩn Nhận Dạng Từ | Reflextry",
+    "description": "Kiểm tra trí nhớ làm việc ngôn ngữ với Bài Kiểm Tra Trí Nhớ Ngôn Ngữ miễn phí của chúng tôi. Xác định các từ đã thấy so với từ mới để đo lường khả năng lưu giữ ngôn ngữ và tốc độ xử lý nhận thức.",
+    "keywords": [
+      "bài kiểm tra trí nhớ ngôn ngữ",
+      "trí nhớ ngôn ngữ human benchmark",
+      "trò chơi trí nhớ ngôn ngữ",
+      "kiểm tra trí nhớ ngôn ngữ ngắn hạn",
+      "cải thiện trí nhớ ngôn ngữ",
+      "luyện tập trí nhớ ngôn ngữ",
+      "kiểm tra trí nhớ làm việc ngôn ngữ",
+      "kiểm tra khoảng nhớ ngôn ngữ",
+      "ngôn ngữ human benchmark",
+      "kiểm tra ghi nhớ ngôn ngữ",
+      "kiểm tra trí nhớ ngôn ngữ trực tuyến miễn phí",
+      "kiểm tra trí nhớ từ",
+      "kiểm tra nhận thức ngôn ngữ",
+      "kiểm tra từ đã thấy hoặc từ mới",
+      "kiểm tra lưu giữ từ vựng"
+    ]
+  },
+  "object-tracking": {
+    "title": "Multiple Object Tracking - Kiểm Tra Khả Năng Tập Trung Thị Giác | Reflextry",
+    "description": "Kiểm tra sự chú ý thị giác động và khả năng theo dõi không gian. Theo dõi nhiều hình cầu mục tiêu đang di chuyển giữa các vật cản trong bài kiểm tra nhận thức được khoa học chứng minh này.",
+    "keywords": [
+      "kiểm tra theo dõi đối tượng",
+      "kiểm tra theo dõi nhiều đối tượng",
+      "trò chơi theo dõi đối tượng thị giác",
+      "human benchmark theo dõi đối tượng",
+      "kiểm tra trí nhớ theo dõi bằng mắt",
+      "kiểm tra nhận thức theo dõi nhiều đối tượng",
+      "luyện tập theo dõi đối tượng",
+      "kiểm tra theo dõi thị giác trực tuyến",
+      "trò chơi theo dõi đối tượng di chuyển",
+      "kiểm tra theo dõi đối tượng 3d",
+      "cải thiện khả năng theo dõi thị giác",
+      "kiểm tra nhận thức mot",
+      "kiểm tra theo dõi sự chú ý thị giác"
+    ]
+  },
+  "n-back": {
+    "title": "Kiểm Tra N-Back - Chuẩn Đánh Giá Dung Lượng Trí Nhớ Làm Việc | Reflextry",
+    "description": "Luyện tập trí nhớ làm việc với bài kiểm tra N-Back cổ điển. Ghép các chữ cái xuất hiện từ N bước trước, theo dõi số lần đúng và độ chính xác, đồng thời nâng cấp từ 1-back lên 3-back.",
+    "keywords": [
+      "kiểm tra n-back",
+      "n back trí nhớ làm việc",
+      "kiểm tra 2-back trực tuyến",
+      "kiểm tra nhận thức 3-back",
+      "dual n-back miễn phí",
+      "trò chơi trí nhớ làm việc n-back",
+      "luyện tập trí não n-back",
+      "hiệu suất liên tục n-back",
+      "kiểm tra trí nhớ ghép chữ cái",
+      "kiểm tra độ chính xác n-back",
+      "chuẩn đánh giá nhận thức n-back",
+      "human benchmark n-back",
+      "cải thiện trí nhớ làm việc n-back"
+    ]
+  },
+  "reaction-time": {
+    "title": "Kiểm Tra Thời Gian Phản Ứng - Chuẩn Mili Giây (ms) | Reflextry",
+    "description": "Kiểm tra và cải thiện thời gian phản ứng thị giác của bạn tính bằng mili giây. Tham gia bài kiểm tra phản xạ mili giây miễn phí của chúng tôi, so sánh với các game thủ chuyên nghiệp và theo dõi tiến độ phản xạ của bạn.",
+    "keywords": [
+      "kiểm tra thời gian phản ứng",
+      "kiểm tra phản ứng ms",
+      "human benchmark thời gian phản ứng",
+      "kiểm tra phản ứng đèn xanh",
+      "kiểm tra nhấp khi màn hình chuyển sang màu xanh",
+      "kiểm tra thời gian phản ứng trung bình",
+      "kiểm tra phản ứng valorant",
+      "kiểm tra phản ứng f1 trực tuyến",
+      "kiểm tra phản ứng cs2",
+      "chuẩn thời gian phản ứng mili giây",
+      "kiểm tra phản ứng nhanh trực tuyến",
+      "kiểm tra phản xạ của tôi miễn phí",
+      "kiểm tra thời gian phản ứng của tài xế trực tuyến",
+      "kiểm tra thời gian phản ứng 144hz",
+      "kiểm tra thời gian phản ứng 240hz",
+      "kiểm tra độ trễ đầu vào màn hình",
+      "cách cải thiện thời gian phản ứng",
+      "thời gian phản ứng trung bình của game thủ chuyên nghiệp"
+    ]
+  },
+  "sound-reaction": {
+    "title": "Kiểm Tra Thời Gian Phản Ứng Âm Thanh - Phản Xạ Âm Thanh (ms) | Reflextry",
+    "description": "Đo tốc độ phản ứng thính giác của bạn tính bằng mili giây. Kiểm tra phản xạ thính giác với tín hiệu âm thanh tức thì và so sánh thời gian phản ứng âm thanh với phản ứng thị giác của bạn.",
+    "keywords": [
+      "kiểm tra phản xạ âm thanh",
+      "kiểm tra thời gian phản ứng âm thanh",
+      "kiểm tra phản xạ thính giác",
+      "thời gian phản ứng thính lực",
+      "trò chơi phản ứng âm thanh",
+      "human benchmark phản ứng âm thanh",
+      "kiểm tra thời gian phản ứng thính giác",
+      "luyện tập phản xạ âm thanh",
+      "kiểm tra phản ứng tiếng bíp",
+      "kiểm tra nhấp âm thanh nhanh",
+      "kiểm tra phản xạ âm học trực tuyến",
+      "thời gian phản ứng dựa trên âm thanh",
+      "tốc độ phản xạ thính lực",
+      "thời gian phản ứng thính giác so với thị giác",
+      "kiểm tra phản ứng tai ms"
+    ]
+  },
+  "grid-shot": {
+    "title": "Luyện Ngắm Grid Shot - Phản Xạ Độ Chính Xác Chuột | Reflextry",
+    "description": "Khởi động kỹ năng ngắm bắn và tốc độ chuột của bạn với Grid Shot. Nhấp vào các mục tiêu xuất hiện liên tục trên lưới để tăng cường khả năng phối hợp tay mắt cho các tựa game FPS như Valorant và CS2.",
+    "keywords": [
+      "kiểm tra phản xạ lưới",
+      "luyện ng��m grid shot",
+      "kiểm tra ngắm lưới",
+      "phản ứng nhấp lưới",
+      "trò chơi lưới phản xạ",
+      "human benchmark lưới",
+      "kiểm tra tốc độ nhấp lưới",
+      "trình nhấp lưới nhanh",
+      "luyện tập lưới phản ứng",
+      "gridshot valorant trên trình duyệt",
+      "lưới khởi động ngắm fps",
+      "kiểm tra phản xạ ô",
+      "tốc độ chạm lưới",
+      "phản ứng blazepod trực tuyến",
+      "kiểm tra phối hợp tay mắt lưới"
+    ]
+  },
+  "peripheral-vision": {
+    "title": "Bài kiểm tra Tầm nhìn Ngoại vi - Nhận thức Trường nhìn | Reflextry",
+    "description": "Luyện tập nhận thức tầm nhìn ngoại vi và tốc độ phản ứng hai bên. Phát hiện và nhấp vào các kích thích lệch tâm để mở rộng sự tập trung thị giác cho lái xe, thể thao và chơi game cạnh tranh.",
+    "keywords": [
+      "kiểm tra phản xạ ngoại vi",
+      "kiểm tra tầm nhìn ngoại vi trực tuyến",
+      "trò chơi phản ứng ngoại vi",
+      "kiểm tra phản xạ trường thị giác",
+      "kiểm tra nhận thức ngoại vi",
+      "kiểm tra phản ứng thị giác bên",
+      "trình luyện ngắm ngoại vi",
+      "nhấp vào mục tiêu ngoại vi",
+      "kiểm tra phản xạ màn hình rộng",
+      "kiểm tra nhấp tầm nhìn ngoại vi",
+      "kiểm tra phản xạ lệch tâm",
+      "phản xạ nhận thức không gian",
+      "kiểm tra tầm nhìn ngoại vi thể thao",
+      "nhận thức ngoại vi esports"
+    ]
+  },
+  "directional-reflex": {
+    "title": "Bài kiểm tra Phản xạ Theo hướng - Trò chơi Tốc độ Phím mũi tên | Reflextry",
+    "description": "Kiểm tra tốc độ phản hồi bàn phím và khả năng ra quyết định không gian. Nhấn các phím mũi tên khớp với các gợi ý hướng nhanh chóng để cải thiện khả năng xử lý nhận thức và độ nhanh nhạy của phản xạ.",
+    "keywords": [
+      "kiểm tra phản xạ hướng",
+      "kiểm tra phản ứng mũi tên",
+      "trò chơi nhấp theo hướng",
+      "phản xạ hướng bàn phím",
+      "trò chơi phản ứng phím mũi tên",
+      "phản xạ hướng không gian",
+      "kiểm tra hướng nhanh",
+      "kiểm tra định hướng nhận thức",
+      "phản xạ khớp mũi tên",
+      "kiểm tra phản ứng trái phải",
+      "kiểm tra tốc độ theo hướng",
+      "phản xạ nhấn mũi tên nhanh",
+      "kiểm tra phản ứng lựa chọn hướng"
+    ]
+  },
+  "multi-stimulus": {
+    "title": "Bài kiểm tra Phản ứng Đa kích thích - Trò chơi Lựa chọn RT | Reflextry",
+    "description": "Kiểm tra thời gian phản ứng lựa chọn và sự chú ý có chọn lọc. Xử lý đồng thời nhiều kích thích thị giác và thính giác để đo tốc độ ra quyết định trong tích tắc.",
+    "keywords": [
+      "kiểm tra phản ứng đa kích thích",
+      "kiểm tra thời gian phản ứng lựa chọn trực tuyến",
+      "trò chơi phản xạ nhiều kích thích",
+      "kiểm tra thời gian phản ứng phức tạp",
+      "kiểm tra kích thích nhận thức",
+      "kiểm tra phản xạ đa nhiệm",
+      "kiểm tra phản ứng theo định luật hick",
+      "kiểm tra phản ứng lựa chọn donders",
+      "tiêu chuẩn con người đa kích thích",
+      "kiểm tra thời gian phản ứng biến đổi",
+      "trình luyện phản xạ phức tạp",
+      "tiêu chuẩn phản ứng quyết định"
+    ]
+  },
+  "sequence-reaction": {
+    "title": "Bài kiểm tra Phản ứng Theo chuỗi - Phản xạ Combo Tốc độ | Reflextry",
+    "description": "Kết hợp khả năng ghi nhớ với phản xạ vận động nhanh chóng. Theo dõi các chuỗi ánh sáng nhịp độ nhanh và thực hiện các combo tốc độ để rèn luyện thời gian phản hồi nhịp nhàng và tốc độ.",
+    "keywords": [
+      "kiểm tra phản ứng theo chuỗi",
+      "thời gian phản ứng simon says",
+      "kiểm tra phản xạ mẫu",
+      "tác vụ thời gian phản ứng nối tiếp",
+      "kiểm tra nhấp tuần tự",
+      "trò chơi chuỗi phản xạ",
+      "kiểm tra trí nhớ và phản ứng",
+      "trình nhấp chuỗi nhanh",
+      "phản ứng chuỗi nhận thức",
+      "kiểm tra chuỗi nhanh",
+      "kiểm tra chạm tuần tự",
+      "trò chơi phản xạ combo tốc độ"
+    ]
+  },
+  "whack-a-mole": {
+    "title": "Đập chuột chũi Online - Trò chơi Phản ứng Tay-Mắt | Reflextry",
+    "description": "Chơi trò đập chuột chũi cổ điển trực tuyến miễn phí. Chạm vào những chú chuột chũi ngoi lên nhanh nhất có thể để đo tốc độ phản ứng, độ chính xác khi nhấp chuột và sự nhanh nhẹn của vận động.",
+    "keywords": [
+      "đập chuột chũi online",
+      "chơi đập chuột chũi miễn phí",
+      "kiểm tra phản ứng đập chuột chũi",
+      "đập chuột chũi ảo",
+      "trò chơi nhấp vào chuột chũi",
+      "đập chuột chũi bằng chuột",
+      "trò chơi phản xạ đập chuột chũi",
+      "đập chuột chũi nhanh",
+      "ngắm đập chuột chũi",
+      "trò chơi đập chuột chũi trên trình duyệt",
+      "kiểm tra phản xạ pop up",
+      "trò chơi phản ứng pop mục tiêu",
+      "trò chơi phối hợp tay mắt"
+    ]
+  },
+  "color-switch": {
+    "title": "Kiểm tra Phản xạ Đổi màu - Tốc độ Phản ứng Thị giác | Reflextry",
+    "description": "Luyện tập tốc độ phản ứng màu sắc và tốc độ phản hồi có chọn lọc. Phản ứng ngay lập tức với sự thay đổi màu sắc trên màn hình và tín hiệu chớp sáng mà không do dự.",
+    "keywords": [
+      "kiểm tra phản xạ đổi màu",
+      "test phản xạ thay đổi màu",
+      "kiểm tra phản ứng đỏ xanh",
+      "thời gian phản ứng đèn giao thông",
+      "kiểm tra thay đổi màu màn hình",
+      "test click màu nhanh",
+      "human benchmark đổi màu",
+      "phản xạ đổi màu thị giác",
+      "phản ứng chớp màu",
+      "thời gian phản ứng màu đơn giản",
+      "trình bấm đổi màu",
+      "test màu kích thích thị giác"
+    ]
+  },
+  "time-perception": {
+    "title": "Kiểm tra Nhận thức Thời gian - Chuẩn Đồng hồ Nội tại | Reflextry",
+    "description": "Kiểm tra đồng hồ nội tại và khả năng ước lượng thời gian của bạn. Giữ và thả nút để tạo chính xác các khoảng thời gian mục tiêu đến từng mili-giây.",
+    "keywords": [
+      "kiểm tra nhận thức thời gian",
+      "human benchmark nhận thức thời gian",
+      "test đồng hồ nội tại",
+      "kiểm tra ước lượng thời gian",
+      "game đoán thời gian",
+      "trò chơi nhận thức thời gian",
+      "kiểm tra độ chính xác thời gian",
+      "nhận thức thời gian nhận thức",
+      "test ước lượng giây",
+      "kiểm tra khoảng thời gian",
+      "test thời gian mù trực tuyến",
+      "kiểm tra nhận thức thời gian",
+      "chuẩn nhịp sinh học nội tại"
+    ]
+  },
+  "go-no-go": {
+    "title": "Kiểm tra Go / No-Go - Kiểm soát Xung động & Phản ứng | Reflextry",
+    "description": "Đo lường khả năng ức chế phản hồi với bài tập Go/No-Go. Nhấn vào các lượt Go màu xanh lá, dừng lại ở các lượt No-Go màu đỏ, và theo dõi độ chính xác kèm thời gian phản ứng.",
+    "keywords": [
+      "kiểm tra go no go",
+      "bài tập go nogo trực tuyến",
+      "kiểm tra kiểm soát ức chế",
+      "game ức chế phản hồi",
+      "test phản xạ go no-go",
+      "kiểm tra nhận thức kiểm soát xung động",
+      "test xanh đỏ go stop",
+      "chức năng điều hành go nogo",
+      "kiểm tra ức chế báo động giả",
+      "hiệu suất liên tục go nogo",
+      "luyện tập não bộ ức chế"
+    ]
+  },
+  "flanker": {
+    "title": "Kiểm tra Flanker - Chuẩn Chú ý Có chọn lọc | Reflextry",
+    "description": "Thực hiện bài tập Eriksen Flanker trực tuyến. Phản hồi mũi tên ở giữa đồng thời phớt lờ các mũi tên phụ đồng hướng hoặc trái hướng để đo lường khả năng kiểm soát chú ý.",
+    "keywords": [
+      "bài tập flanker trực tuyến",
+      "kiểm tra eriksen flanker",
+      "kiểm tra chú ý có chọn lọc",
+      "game mũi tên flanker",
+      "bài tập flanker trái hướng",
+      "kiểm tra xung đột chú ý",
+      "kiểm tra nhận thức flanker",
+      "test phản ứng mũi tên giữa",
+      "chuẩn chú ý điều hành",
+      "test hiệu ứng flanker miễn phí"
+    ]
+  },
+  "choice-reaction": {
+    "title": "Kiểm tra Thời gian Phản ứng Lựa chọn - RT Đa lựa chọn (ms) | Reflextry",
+    "description": "Đo lường thời gian phản ứng lựa chọn trên 2–4 mục tiêu có màu. Nhấp vào ô sáng nhanh nhất có thể và đánh bại điểm số RT trung bình của bạn tính bằng mili-giây.",
+    "keywords": [
+      "kiểm tra thời gian phản ứng lựa chọn",
+      "test RT ��a lựa chọn",
+      "thời gian phản ứng 4 lựa chọn",
+      "kiểm tra phản ứng ô màu",
+      "thời gian phản ứng phân ly",
+      "chuẩn RT lựa chọn ms",
+      "thời gian phản ứng phức tạp trực tuyến",
+      "kiểm tra phản ứng đa kích thích",
+      "phản ứng lựa chọn nhận thức",
+      "human benchmark phản ứng lựa chọn"
+    ]
+  },
+  "cps-test": {
+    "title": "Kiểm Tra CPS - Đo Tốc Độ Click Chuột Mỗi Giây | Reflextry",
+    "description": "Đo tốc độ click chuột của bạn với Bài kiểm tra CPS miễn phí. Thử nghiệm các chế độ 1 giây, 5 giây, 10 giây, 30 giây và 60 giây cho click thông thường, jitter click, butterfly click và drag click.",
+    "keywords": [
+      "kiểm tra cps",
+      "kiểm tra click mỗi giây",
+      "kiểm tra tốc độ click",
+      "kiểm tra cps 1 giây",
+      "kiểm tra cps 5 giây",
+      "kiểm tra cps 10 giây",
+      "kiểm tra click 30 giây",
+      "kiểm tra tốc độ click 60 giây",
+      "kiểm tra jitter click",
+      "kiểm tra butterfly click",
+      "kiểm tra drag click",
+      "kiểm tra cps minecraft pvp",
+      "kiểm tra kohi click",
+      "kiểm tra đếm phím spacebar",
+      "kiểm tra tốc độ click chuột",
+      "thước đo chuẩn cps",
+      "kỷ lục tốc độ click nhanh nhất"
+    ]
+  },
+  "speed-math": {
+    "title": "Kiểm Tra Tốc Độ Toán Nhẩm - Trắc Nghiệm Tính Nhanh | Reflextry",
+    "description": "Nâng cao khả năng tính nhẩm và tốc độ tính toán. Giải nhanh các bài toán cộng, trừ, nhân, chia trong thời gian giới hạn để cải thiện sự linh hoạt về toán học.",
+    "keywords": [
+      "kiểm tra tốc độ toán học",
+      "kiểm tra tốc độ toán nhẩm",
+      "kiểm tra số học nhanh",
+      "trò chơi toán nhẩm",
+      "kiểm tra toán nhanh trực tuyến miễn phí",
+      "kiểm tra tốc độ tính toán",
+      "trò chơi tính toán toán học nhanh",
+      "kiểm tra tốc độ toán 1 phút",
+      "kiểm tra phản xạ toán học",
+      "chạy nước rút toán tốc độ 60 giây",
+      "kiểm tra toán nhận thức",
+      "kiểm tra tốc độ nhân",
+      "luyện tập toán nhẩm cho người lớn",
+      "thử thách tốc độ số học"
+    ]
+  },
+  "math-speed": {
+    "title": "Kiểm Tra Tốc Độ Toán Nhẩm - Trắc Nghiệm Tính Nhanh | Reflextry",
+    "description": "Nâng cao khả năng tính nhẩm và tốc độ tính toán. Giải nhanh các bài toán cộng, trừ, nhân, chia trong thời gian giới hạn để cải thiện sự linh hoạt về toán học.",
+    "keywords": [
+      "kiểm tra tốc độ toán học",
+      "kiểm tra tốc độ toán nhẩm",
+      "kiểm tra số học nhanh",
+      "trò chơi toán nhẩm",
+      "kiểm tra toán nhanh trực tuyến miễn phí",
+      "kiểm tra tốc độ tính toán",
+      "trò chơi tính toán toán học nhanh",
+      "kiểm tra tốc độ toán 1 phút",
+      "kiểm tra phản xạ toán học",
+      "chạy nước rút toán tốc độ 60 giây",
+      "kiểm tra toán nhận thức",
+      "kiểm tra tốc độ nhân",
+      "luyện tập toán nhẩm cho người lớn",
+      "thử thách tốc độ số học"
+    ]
+  },
+  "typing-speed": {
+    "title": "Kiểm Tra Tốc Độ Gõ Phím - Chuẩn WPM Trực Tuyến Miễn Phí | Reflextry",
+    "description": "Kiểm tra số từ trên phút (WPM) và độ chính xác với Bài kiểm tra tốc độ gõ phím 1 phút miễn phí. Đánh giá tốc độ gõ bàn phím, theo dõi tỷ lệ lỗi và cải thiện kỹ năng gõ 10 ngón.",
+    "keywords": [
+      "kiểm tra tốc độ gõ phím",
+      "kiểm tra wpm trực tuyến miễn phí",
+      "kiểm tra từ trên phút",
+      "kiểm tra gõ phím 1 phút",
+      "kiểm tra tốc độ gõ phím 60 giây",
+      "kiểm tra độ chính xác gõ phím",
+      "kiểm tra tốc độ gõ 10 ngón",
+      "kiểm tra gõ 10 fast fingers",
+      "thay thế monkeytype trực tuyến",
+      "kiểm tra gõ phím human benchmark",
+      "luyện gõ phím nhanh",
+      "kiểm tra tốc độ bàn phím",
+      "kiểm tra gõ phím kèm wpm và độ chính xác",
+      "trình kiểm tra tốc độ gõ phím",
+      "kiểm tra tốc độ gõ phím miễn phí"
+    ]
+  },
+  "word-accuracy": {
+    "title": "Kiểm Tra Độ Chính Xác Từ - Độ Chính Xác Khi Gõ Nhanh | Reflextry",
+    "description": "Cải thiện độ chính xác khi gõ và loại bỏ lỗi gõ phím. Gõ các từ gợi ý tốc độ cao với độ chính xác 100% để làm chủ kỹ năng gõ không lỗi dưới áp lực thời gian.",
+    "keywords": [
+      "kiểm tra độ chính xác từ",
+      "kiểm tra tốc độ từ",
+      "kiểm tra gõ phím chính xác",
+      "kiểm tra gõ phím không lỗi",
+      "trò chơi gõ từ nhanh",
+      "kiểm tra độ chính xác gõ phím trực tuyến",
+      "kiểm tra tốc độ đánh vần",
+      "luyện tập gõ từ nhanh",
+      "kiểm tra độ chính xác phím bấm",
+      "độ chính xác gõ nhập liệu",
+      "tốc độ gõ nhận diện từ"
+    ]
+  },
+  "word-speed": {
+    "title": "Kiểm tra tốc độ đọc - Nhận diện từ WPM | Reflextry",
+    "description": "Kiểm tra tốc độ đọc và khả năng nhận diện từ. Đo lường số từ mỗi phút và khả năng xác định thị giác nhanh chóng với công cụ Speed Words tương tác.",
+    "keywords": [
+      "kiểm tra tốc độ từ",
+      "kiểm tra tốc độ đọc online miễn phí",
+      "kiểm tra nhận diện từ nhanh",
+      "kiểm tra tốc độ đọc từ trên phút",
+      "kiểm tra tốc độ đọc rsvp",
+      "kiểm tra tôi đọc nhanh thế nào",
+      "tốc độ đọc từ chớp nhoáng",
+      "kiểm tra tốc độ từ thị giác",
+      "chuẩn tốc độ từ nhận thức"
+    ]
+  },
+  "grid-selection": {
+    "title": "Kiểm tra tốc độ lưới - Trò chơi tìm số 5x5 | Reflextry",
+    "description": "Luyện tập quét thị giác và tốc độ đọc ngoại biên với bảng Schulte. Tìm các số theo thứ tự tăng dần trên lưới 5x5 để mở rộng tốc độ tìm kiếm thị giác.",
+    "keywords": [
+      "bảng schulte online",
+      "kiểm tra lưới schulte",
+      "kiểm tra tốc độ lưới",
+      "kiểm tra tốc độ tìm số từ 1 đến 25",
+      "bảng schulte cho tốc độ đọc",
+      "kiểm tra chọn lưới",
+      "kiểm tra tốc độ tìm kiếm thị giác",
+      "trò chơi tốc độ lưới số 5x5",
+      "kiểm tra quét thị giác ma trận",
+      "bảng schulte tầm nhìn ngoại biên",
+      "kiểm tra chạm số theo thứ tự"
+    ]
+  },
+  "grid-speed": {
+    "title": "Kiểm tra tốc độ lưới - Trò chơi tìm số 5x5 | Reflextry",
+    "description": "Luyện tập quét thị giác và tốc độ đọc ngoại biên với bảng Schulte. Tìm các số theo thứ tự tăng dần trên lưới 5x5 để mở rộng tốc độ tìm kiếm thị giác.",
+    "keywords": [
+      "bảng schulte online",
+      "kiểm tra lưới schulte",
+      "kiểm tra tốc độ lưới",
+      "kiểm tra tốc độ tìm số từ 1 đến 25",
+      "bảng schulte cho tốc độ đọc",
+      "kiểm tra chọn lưới",
+      "kiểm tra tốc độ tìm kiếm thị giác",
+      "trò chơi tốc độ lưới số 5x5",
+      "kiểm tra quét thị giác ma trận",
+      "bảng schulte tầm nhìn ngoại biên",
+      "kiểm tra chạm số theo thứ tự"
+    ]
+  },
+  "schulte-table": {
+    "title": "Kiểm tra bảng Schulte - Tốc độ quét thị giác | Reflextry",
+    "description": "Thử thách bảng Schulte cổ điển. Nhấp vào các số xáo trộn theo thứ tự trên lưới từ 3x3 đến 7x7. Luyện tập thị giác ngoại biên, tốc độ tìm kiếm thị giác và sự tập trung với thời gian.",
+    "keywords": [
+      "bảng schulte online miễn phí",
+      "kiểm tra bảng schulte",
+      "lưới schulte 5x5",
+      "bảng schulte 7x7",
+      "kiểm tra tốc độ quét thị giác",
+      "luyện tập thị giác ngoại biên schulte",
+      "trò chơi tìm số theo thứ tự",
+      "bảng schulte tốc độ đọc",
+      "kiểm tra sự chú ý lưới số",
+      "luyện tập não bộ bảng schulte",
+      "thử thách lưới số tăng dần"
+    ]
+  },
+  "number-rush": {
+    "title": "Kiểm tra tốc độ Number Rush - Thử thách chạm tăng dần | Reflextry",
+    "description": "Kiểm tra khả năng nhận diện số nhanh và tốc độ chạm. Săn và nhấp vào các số tăng dần nhanh nhất có thể để đo lường tốc độ xử lý nhận thức của bạn.",
+    "keywords": [
+      "trò chơi number rush",
+      "kiểm tra số tốc độ",
+      "nhấp số nhanh",
+      "kiểm tra tốc độ chạm số theo thứ tự",
+      "kiểm tra click số tăng dần",
+      "trò chơi số 1 đến 50 online",
+      "thử thách chạm số nhanh",
+      "kỷ lục thế giới number rush",
+      "trò chơi tìm chữ số nhanh",
+      "sắp xếp số tốc độ"
+    ]
+  },
+  "quick-sort": {
+    "title": "Trò chơi Tốc độ Sắp xếp Nhanh - Kiểm tra Phân loại | Reflextry",
+    "description": "Thử thách khả năng phân loại nhận thức và tốc độ ra quyết định nhanh chóng. Sắp xếp các vật phẩm xuất hiện vào các danh mục tương ứng dưới áp lực thời gian nghiêm ngặt.",
+    "keywords": [
+      "kiểm tra tốc độ quick sort",
+      "trò chơi sắp xếp nhanh",
+      "kiểm tra phân loại tốc độ trực tuyến",
+      "kiểm tra sắp xếp nhận thức",
+      "trò chơi sắp xếp nhanh",
+      "tốc độ sắp xếp trực quan",
+      "kiểm tra sắp xếp danh mục",
+      "trò chơi sắp xếp trái phải trực tuyến",
+      "kiểm tra tốc độ phân loại nhanh",
+      "trò chơi sắp xếp tốc độ quyết định"
+    ]
+  },
+  "pattern-matching": {
+    "title": "Kiểm tra Khớp mẫu - Độ chính xác Ma trận Trực quan | Reflextry",
+    "description": "Cải thiện khả năng nhận dạng mẫu trực quan và suy luận phi ngôn ngữ. Khớp các mẫu ma trận phức tạp và chuỗi hình học để kiểm tra độ nhạy thị giác và tư duy phân tích.",
+    "keywords": [
+      "kiểm tra khớp mẫu trực tuyến",
+      "kiểm tra nhận dạng mẫu miễn phí",
+      "kiểm tra suy luận ma trận",
+      "kiểm tra mẫu iq trực tuyến",
+      "trò chơi giải đố mẫu trực quan",
+      "kiểm tra tìm mẫu",
+      "kiểm tra khớp mẫu trừu tượng",
+      "luyện tập miễn phí raven progressive matrices",
+      "kiểm tra hoàn thành mẫu",
+      "nhận dạng mẫu logic"
+    ]
+  },
+  "precision-click": {
+    "title": "Kiểm tra Nhấp chính xác - Độ chính xác Mục tiêu Chuột | Reflextry",
+    "description": "Nâng cao độ chính xác của chuột và độ chính xác của vi mục tiêu. Nhấp vào các mục tiêu nhỏ, chính xác mà không bỏ sót để tinh chỉnh khả năng kiểm soát vận động tinh và độ chính xác con trỏ khi chơi game.",
+    "keywords": [
+      "kiểm tra nhấp chính xác",
+      "kiểm tra độ chính xác của chuột",
+      "kiểm tra nhấp vi mục tiêu",
+      "kiểm tra độ chính xác con trỏ chuột",
+      "tốc độ nhấp mục tiêu nhỏ",
+      "trò chơi nhấp độ chính xác điểm ảnh",
+      "kiểm tra độ chính xác chuột fps",
+      "kiểm tra phần trăm độ chính xác nhắm",
+      "kiểm tra nhấp phối hợp tay mắt",
+      "tiêu chuẩn kiểm soát con trỏ tinh"
+    ]
+  },
+  "data-entry": {
+    "title": "Kiểm tra Độ chính xác Nhập liệu - Tiêu chuẩn Phím gõ | Reflextry",
+    "description": "Đo lường tốc độ nhập dữ liệu, độ chính xác gõ phím chữ số và tỷ lệ lỗi. Kiểm tra số lần gõ phím mỗi giờ (KPH) với các tiêu chuẩn mã và số thực tế.",
+    "keywords": [
+      "kiểm tra nhập dữ liệu trực tuyến",
+      "kiểm tra tốc độ nhập dữ liệu miễn phí",
+      "kiểm tra nhập dữ liệu chữ số",
+      "luyện tập nhập dữ liệu 10 phím",
+      "kiểm tra gõ dữ liệu trực tuyến",
+      "kiểm tra nhập dữ liệu văn phòng",
+      "kiểm tra nhập dữ liệu kph",
+      "kiểm tra độ chính xác lần gõ phím",
+      "phần trăm độ chính xác nhập dữ liệu",
+      "kiểm tra chú ý đến chi tiết trực tuyến"
+    ]
+  },
+  "image-recognition": {
+    "title": "Kiểm tra Nhận dạng Hình ảnh - Độ chính xác Chi tiết Trực quan | Reflextry",
+    "description": "Kiểm tra nhận thức thị giác và khả năng phân biệt hình ảnh nhanh chóng. Xác định các điểm khác biệt tinh tế về mặt trực quan và khớp các đối tượng mục tiêu ở tốc độ cao để rèn luyện kỹ năng quan sát.",
+    "keywords": [
+      "kiểm tra nhận dạng hình ảnh trực tuyến",
+      "trò chơi nhận dạng trực quan",
+      "kiểm tra trí nhớ hình ảnh nhanh",
+      "kiểm tra tốc độ nhận dạng ảnh",
+      "kiểm tra tốc độ tìm điểm khác biệt",
+      "kiểm tra phân biệt trực quan",
+      "kiểm tra hình ảnh nhận thức",
+      "kiểm tra tác vụ tìm kiếm trực quan",
+      "nhận dạng hình ảnh human benchmark"
+    ]
+  },
+  "angle-estimation": {
+    "title": "Bài kiểm tra ước lượng góc - Độ nhạy hình học không gian | Reflextry",
+    "description": "Kiểm tra khả năng nhìn nhận hình học và ước lượng không gian của bạn. Đoán chính xác số độ của các góc cho trước để đánh giá độ nhạy góc thị giác và phán đoán không gian.",
+    "keywords": [
+      "bài kiểm tra ước lượng góc trực tuyến",
+      "trò chơi đoán góc",
+      "kiểm tra đo góc trực tuyến",
+      "trò chơi ước tính số độ góc",
+      "trò chơi ước lượng góc thước đo độ",
+      "kiểm tra độ nhạy góc không gian",
+      "trò chơi kiểm tra góc hình học trực tuyến",
+      "khả năng ước lượng góc của bạn chính xác đến mức nào",
+      "đo lường góc chuẩn con người"
+    ]
+  },
+  "color-match": {
+    "title": "Bài kiểm tra khớp màu - Phân biệt sắc độ RGB | Reflextry",
+    "description": "Kiểm tra khả năng nhận diện màu sắc và phân biệt sắc thái tinh tế với Bài kiểm tra khớp màu của chúng tôi. Khớp các sắc thái RGB mục tiêu dưới áp lực thời gian và đánh giá độ chính xác thị giác.",
+    "keywords": [
+      "bài kiểm tra khớp màu",
+      "bài kiểm tra phân biệt màu sắc",
+      "bài kiểm tra khớp sắc độ",
+      "bài kiểm tra độ nhạy màu",
+      "bài kiểm tra nhận thức màu sắc",
+      "kiểm tra khớp sắc thái trực tuyến",
+      "bài kiểm tra màu rgb",
+      "phân biệt màu sắc thị giác",
+      "trò chơi khớp màu trực tuyến",
+      "bài ki��m tra độ lệch màu tinh tế",
+      "giải pháp thay thế farnsworth munsell",
+      "bài kiểm tra độ nhạy màu sắc",
+      "bài kiểm tra độ nhạy sắc thái"
+    ]
+  },
+  "color-blindness": {
+    "title": "Bài kiểm tra mù màu - Sàng lọc bảng Ishihara | Reflextry",
+    "description": "Khám phá các bảng chấm thủ tục theo phong cách Ishihara trong trò chơi giáo dục về thị lực màu miễn phí. Cài đặt màn hình ảnh hưởng đến kết quả; đây không phải là đánh giá chẩn đoán y tế.",
+    "keywords": [
+      "bài kiểm tra mù màu",
+      "kiểm tra thị lực màu trực tuyến",
+      "kiểm tra ishihara trực tuyến miễn phí",
+      "bài kiểm tra mù màu đỏ xanh lá",
+      "bảng kiểm tra mù màu",
+      "kiểm tra chứng mù màu đỏ",
+      "kiểm tra chứng mù màu xanh lá",
+      "bảng ishihara trực tuyến",
+      "bài kiểm tra khiếm khuyết thị lực màu",
+      "kiểm tra mù màu miễn phí",
+      "sàng lọc khiếm khuyết màu sắc",
+      "kiểm tra biểu ��ồ ishihara",
+      "đánh giá mù màu"
+    ]
+  },
+  "mental-rotation": {
+    "title": "Bài kiểm tra xoay tâm trí - Tư duy không gian 3D | Reflextry",
+    "description": "Đánh giá trực quan hóa không gian 3D và tốc độ xoay nhận thức. Xác định xem các hình khối phức tạp có giống hệt nhau hay bị đảo ngược qua gương trong thời gian thực.",
+    "keywords": [
+      "bài kiểm tra xoay tâm trí",
+      "kiểm tra shepard metzler trực tuyến",
+      "bài kiểm tra tư duy không gian miễn phí",
+      "kiểm tra trực quan hóa không gian 3d",
+      "bài kiểm tra trí thông minh không gian",
+      "bài kiểm tra xoay nhận thức",
+      "đánh giá năng lực không gian",
+      "kiểm tra xoay đối tượng 3d",
+      "bài kiểm tra quan hệ không gian",
+      "xoay tâm trí vandenberg",
+      "bài kiểm tra nhận thức không gian",
+      "luyện tập xoay tâm trí"
+    ]
+  },
+  "aim-trainer": {
+    "title": "Trình luyện tâm bắn FPS - Độ chuẩn chuột & Khởi động Flick | Reflextry",
+    "description": "Cải thiện độ chính xác của chuột, khả năng theo dõi mục tiêu và tốc độ flick cho các tựa game FPS như Valorant, CS2 và Apex. Trình luyện tâm bắn 3D miễn phí ngay trên trình duyệt web của bạn.",
+    "keywords": [
+      "luyện tâm bắn trực tuyến miễn phí",
+      "trình luyện tâm bắn fps trên trình duyệt",
+      "kiểm tra độ chính xác chuột",
+      "luyện tâm bắn valorant miễn phí",
+      "luyện tâm cs2 trực tuyến",
+      "thay thế aim lab trên trình duyệt",
+      "luyện tâm bắn 3d trực tuyến",
+      "luyện tâm gridshot trực tuyến",
+      "kiểm tra độ chính xác chuột aim",
+      "kiểm tra độ nhạy chuột fps",
+      "khởi động tâm bắn hàng ngày trên trình duyệt",
+      "trò chơi phản xạ tâm bắn"
+    ]
+  },
+  "rpg-reaction": {
+    "title": "Kiểm tra phản xạ game thủ Esports - Phản xạ chiến đấu | Reflextry",
+    "description": "Kiểm tra phản xạ chiến đấu cạnh tranh, thời gian đỡ đòn sự kiện thời gian thực (QTE) và tốc độ phản xạ esports trong các kịch bản chiến đấu mô phỏng chính xác đến từng mili-giây.",
+    "keywords": [
+      "kiểm tra thời gian phản xạ game thủ",
+      "kiểm tra tốc độ phản xạ esports",
+      "kiểm tra phản xạ rpg",
+      "game phản xạ qte trực tuyến",
+      "ki���m tra phản xạ chơi game",
+      "thời gian phản xạ trung bình của game thủ chuyên nghiệp",
+      "kiểm tra phản xạ lợi thế người nhìn trộm cs2",
+      "chuẩn mực thời gian phản xạ valorant",
+      "kiểm tra phản xạ xác nhận đánh trúng",
+      "kiểm tra thời gian đỡ đòn game hành động"
+    ]
+  },
+  "endless-dodge": {
+    "title": "Game Né Tránh Vô Tận - Sự Nhanh Nhẹn Né Đạn | Reflextry",
+    "description": "Kiểm tra phản xạ né tránh và sự nhanh nhẹn trong không gian. Điều khiển con trỏ của bạn vượt qua vô số bầy chướng ngại vật di chuyển trong trò chơi sinh tồn phản xạ cường độ cao này.",
+    "keywords": [
+      "game né tránh vô tận trực tuyến",
+      "kiểm tra phản xạ né tránh",
+      "luyện tập né đạn bullet hell",
+      "game né con trỏ chuột",
+      "game phản xạ né tránh trực tuyến",
+      "game phản xạ tránh chướng ngại vật",
+      "game khởi động né đạn",
+      "kiểm tra tốc độ né con trỏ",
+      "trình huấn luyện sự nhanh nhẹn né vi mô"
+    ]
+  },
+  "stroop-drop": {
+    "title": "Kiểm tra Hiệu ứng Stroop - Trò chơi Sự chú ý & Xung lực | Reflextry",
+    "description": "Thách thức khả năng kiểm soát ức chế của bạn với trò chơi Stroop Drop tương tác. Giải quyết sự can thiệp nhận thức giữa các từ chỉ màu sắc đang rơi và màu mực của chúng.",
+    "keywords": [
+      "kiểm tra hiệu ứng stroop trực tuyến miễn phí",
+      "trò chơi kiểm tra từ màu sắc stroop",
+      "kiểm tra sự can thiệp nhận thức",
+      "trò chơi stroop drop trực tuyến",
+      "trò chơi kiểm tra khả năng kiểm soát ức chế",
+      "kiểm tra sự sai lệch từ màu sắc",
+      "kiểm tra hiệu ứng stroop tâm lý học",
+      "game phản xạ xung đột não bộ",
+      "kiểm tra stroop chức năng điều hành"
+    ]
+  },
+  "target-tracking": {
+    "title": "Trình Huấn Luyện Ngắm Mục Tiêu Tracking - Khởi Động Ngắm Chuột | Reflextry",
+    "description": "Làm chủ kỹ n��ng tracking chuột mượt mà cho các tựa game FPS cạnh tranh. Luyện tập ngắm bắn chính xác liên tục chống lại các mục tiêu di chuyển né tránh với độ mượt của chuột bằng không.",
+    "keywords": [
+      "trình huấn luyện aim tracking mượt mà",
+      "kiểm tra aim tracking mục tiêu trực tuyến",
+      "luyện tập smooth tracking fps",
+      "trình huấn luyện tracking apex legends trực tuyến",
+      "kiểm tra độ chính xác tracking chuột",
+      "kiểm tra aim mục tiêu di chuyển",
+      "kiểm tra tracking tâm ngắm",
+      "luyện tập tracking aim liên tục",
+      "game reactive tracking trực tuyến"
+    ]
+  },
+  "flick-shot": {
+    "title": "Trình Huấn Luyện Ngắm Flick Shot - Ngắm Chuột Flick Nhanh | Reflextry",
+    "description": "Rèn luyện trí nhớ cơ bắp và ngắm bắn chớp nhoáng với trình huấn luyện Flick Shot của chúng tôi. Hiệu chỉnh các thao tác vi tinh chỉnh và bắt mục tiêu nhanh chóng cho các tựa game bắn súng chiến thuật.",
+    "keywords": [
+      "trình huấn luyện aim flick shot trực tuyến",
+      "kiểm tra flick aim miễn phí",
+      "luyện tập flick shot cs2 trực tuyến",
+      "khởi động flick shot valorant",
+      "trình huấn luyện micro flick aim",
+      "kiểm tra độ chính xác chuột flick nhanh",
+      "trình huấn luyện flick gridshot",
+      "game phản xạ flick shot",
+      "kiểm tra độ chính xác flick mục tiêu",
+      "trình huấn luyện one tap flick"
+    ]
+  },
+  "rhythm-tap": {
+    "title": "Trò chơi Gõ Nhịp Điệu - Kiểm tra độ chính xác nhịp điệu nghe nhìn | Reflextry",
+    "description": "Đánh giá độ chính xác về thời gian âm nhạc và khả năng cảm nhận nhịp điệu đến từng mili-giây. Gõ đồng bộ với nhịp BPM tăng dần và theo dõi các lỗi độ trễ lệch nhịp.",
+    "keywords": [
+      "kiểm tra thời gian nhịp điệu trực tuyến",
+      "kiểm tra phản xạ gõ theo nhịp",
+      "kiểm tra nhịp điệu nghe nhìn",
+      "khởi động nhịp điệu osu tr��n trình duyệt",
+      "kiểm tra độ chính xác gõ theo nhịp",
+      "trò chơi phản xạ nhịp điệu miễn phí",
+      "kiểm tra thời gian âm nhạc trực tuyến",
+      "kiểm tra đồng bộ âm thanh mili-giây",
+      "trò chơi gõ chính xác theo bpm",
+      "trình huấn luyện phản xạ nhịp điệu"
+    ]
+  }
+}

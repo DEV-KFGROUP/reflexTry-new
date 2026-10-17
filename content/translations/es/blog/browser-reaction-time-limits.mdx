@@ -1,0 +1,78 @@
+---
+title: Lo que las pruebas de reacción en el navegador pueden y no pueden medir
+description: >-
+  Una guía práctica sobre la tasa de refresco de pantalla, el retardo de entrada
+  y por qué las puntuaciones de Reflextry en el navegador son útiles para el
+  seguimiento personal, pero no para instrumentos clínicos de laboratorio.
+publishedAt: '2026-08-04'
+author:
+  name: Kaushik Rabadiya
+category: Methodology
+tags:
+  - reaction-time
+  - browsers
+  - hardware
+  - limits
+readingTime: 11 min read
+---
+La gente abre una prueba de reacción, obtiene un número y se pregunta: *¿Es esta mi verdadera velocidad neurológica?* En un navegador, la respuesta honesta es: es tu velocidad **a través de toda esta pila** (ojos, cerebro, mano, dispositivo, SO, navegador y código de la página) en este día.
+
+Esa pila sigue siendo valiosa. No es un cronoscopio de laboratorio sellado. Este artículo traza la línea con claridad para que puedas usar Reflextry sin supersticiones.
+
+## Lo que un intento en el navegador mide realmente
+
+En una prueba típica de reacción simple visual:
+
+1. La página programada un estímulo (cambio de color, forma, sonido).
+2. Tu pantalla finalmente enciende los píxeles nuevos (limitado por la tasa de refresco).
+3. Detectas el cambio e inicias una respuesta motora.
+4. El dispositivo de entrada registra el clic o la tecla.
+5. El navegador marca el evento con una marca de tiempo y calcula la latencia.
+
+Cualquier etapa puede añadir milisegundos. Un panel de 60 Hz se actualiza aproximadamente cada 16.7 ms; uno de 240 Hz, mucho más rápido. Las pantallas táctiles y los ratones Bluetooth suelen añadir más latencia que un ratón de juegos con cable. La limitación térmica (thermal throttling) y las pestañas en segundo plano añaden varianza.
+
+## Para qué son buenas las pruebas de navegador
+
+- **Bases de referencia personales** en la misma máquina y dificultad.
+- **Retroalimentación de calentamiento** antes de partidas competitivas o prácticas.
+- **Creación de hábitos:** bloques diarios cortos superan a las sesiones maratónicas poco frecuentes.
+- **Comparar tipos de tareas** en el mismo dispositivo (simple vs. de elección, Go vs. No-Go).
+- **Aprender una técnica limpia:** menos clics prematuros, promedios más estables.
+
+Si tu tiempo de reacción simple promedio baja de 280 ms a 230 ms en tres semanas en la misma computadora portátil, esa es una señal de práctica real para *ti*, incluso aunque un laboratorio imprima un número absoluto ligeramente diferente.
+
+## Lo que no son
+
+- **No son un diagnóstico médico.** La fatiga, la cafeína, el estado de ánimo, el sueño y las enfermedades alteran las puntuaciones. Las herramientas no reemplazan a los médicos.
+- **No son exámenes ocupacionales certificados** (visión de colores en aviación, baterías de neuropsicología clínica, etc.).
+- **No son afirmaciones de coeficiente intelectual poblacional.** Rechazamos los percentiles inventados procedentes de tráfico web no controlado.
+- **No son una verdad absoluta en las tablas de clasificación entre dispositivos.** Un teléfono frente a una computadora de escritorio es un experimento diferente.
+
+## Cómo hacer que tus números sean más confiables
+
+1. Usa un dispositivo principal para el seguimiento.
+2. Cierra pestañas pesadas; desactiva los filtros nocturnos si el color o el tiempo importan.
+3. Prefiere ratones con cable para herramientas de reacción y puntería siempre que sea posible.
+4. Calienta de 1 a 2 bloques de práctica antes de registrar un promedio "real".
+5. Registra el modo de dificultad junto a cada récord personal.
+6. Prefiere los promedios de múltiples intentos en lugar de un único clic con suerte.
+
+## Advertencias sobre sonido y periféricos
+
+Las señales auditivas dependen de la latencia de la pila de audio y del dispositivo de salida. Las tareas de visión periférica dependen de la distancia de visualización y el tamaño de la pantalla. Considera esas puntuaciones como métricas dentro de tu propia configuración, no como fisiología universal.
+
+## Cómo diseña Reflextry para ser honesto
+
+Mostramos unidades transparentes (ms, intervalos, precisión, tiempo de finalización). La dificultad cambia la tarea, por lo que Principiante y Profesional no son la misma prueba. Los artículos de metodología se encuentran en el [Diario Cognitivo](/blog), incluyendo [Cómo puntuamos las pruebas de Reflextry](/blog/how-we-score-reflextry-tests).
+
+Si algo parece roto (promedios imposibles menores de 100 ms en un panel de 60 Hz con spam de clics prematuros), confía en los contadores de errores y en tus notas de configuración antes de confiar en el número por vanidad.
+
+## Un patrón de uso semanal sensato
+
+- **2–4 días/semana:** 10–15 minutos repartidos entre reacción + una herramienta de memoria o precisión.
+- **Antes de jugar de forma competitiva:** 5 minutos de reacción simple + calentamiento de puntería o cuadrícula.
+- **Mensualmente:** relee tus notas; cambia solo una variable a la vez (sueño, dispositivo, dificultad).
+
+## Conclusión
+
+Las pruebas de reacción en el navegador miden un bucle de habilidad real bajo el ruido del mundo real. Úsalas para entrenar y hacer un seguimiento. No las trates como evidencia de tribunal sobre tu sistema nervioso. Para conocer los rangos de los que la gente suele hablar, lee [¿Qué es un buen tiempo de reacción?](/blog/what-is-a-good-reaction-time). Para practicar, comienza en [Tiempo de reacción](/reflex/reaction).

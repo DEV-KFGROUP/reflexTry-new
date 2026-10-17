@@ -10,8 +10,12 @@ export async function generateMetadata(): Promise<Metadata> {
     return getCategoryMetadata('blog');
 }
 
+import { headers } from 'next/headers';
+
 export default async function Blog() {
-    const items = await getAllContent<Article>('blog');
+    const headersList = await headers();
+    const locale = headersList.get('x-locale') || 'en';
+    const items = await getAllContent<Article>('blog', locale);
     const posts: BlogPost[] = items.map(({ slug, meta }) => ({
         slug,
         title: meta.title,

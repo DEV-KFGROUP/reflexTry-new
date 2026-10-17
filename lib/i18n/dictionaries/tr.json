@@ -1,0 +1,944 @@
+{
+  "nav": {
+    "home": "Ana Sayfa",
+    "reflex": "Refleks",
+    "memory": "Hafıza",
+    "speed": "Hız",
+    "accuracy": "İsabet",
+    "gaming": "Oyun",
+    "tools": "Tüm Araçlar",
+    "leaderboard": "Liderlik Tablosu",
+    "challenges": "Meydan Okumalar",
+    "statistics": "İstatistikler",
+    "science": "Bilim",
+    "blog": "Blog"
+  },
+  "common": {
+    "start": "Testi Başlat",
+    "restart": "Tekrar Dene",
+    "next": "İleri",
+    "finish": "Bitir",
+    "score": "Skor",
+    "time": "Süre",
+    "bestScore": "En İyi Skor",
+    "average": "Ortalama",
+    "ms": "ms",
+    "wpm": "WPM",
+    "cps": "CPS",
+    "percentile": "Yüzdelik Dilim",
+    "saveScore": "Skoru Kaydet",
+    "share": "Sonucu Paylaş",
+    "instructions": "Talimatlar",
+    "difficulty": "Zorluk",
+    "easy": "Kolay",
+    "medium": "Orta",
+    "hard": "Zor",
+    "expert": "Uzman",
+    "globalBenchmarks": "Küresel Kriterler",
+    "howToPlay": "Nasıl Oynanır",
+    "faq": "Sıkça Sorulan Sorular",
+    "switchLanguage": "Dil",
+    "tools": "ücretsiz araç"
+  },
+  "home": {
+    "heroBadge": "Bilişsel Performans Ölçütü",
+    "heroTitle": "Şunu Ölç ve Geliştir:",
+    "heroTitleHighlight": "Beyin Hızı",
+    "heroSubtitle": "Ücretsiz milisaniye hassasiyetinde tepki süresi testleri, çalışma belleği oyunları, klavye hız testleri ve FPS nişan ısıınma araçları.",
+    "startTesting": "İlk Teste Başla",
+    "exploreTools": "40+ Aracı Keşfet",
+    "popularTests": "Popüler Testler",
+    "categories": "Kategoriler",
+    "statReaction": "Tepki Süresi Skorları",
+    "statTools": "Etkileşimli Araç",
+    "statFree": "Ücretsiz ve Tarayıcıda",
+    "enterArena": "Arenaya Gir",
+    "startQuest": "Görevi Başlat"
+  },
+  "categories": {
+    "reflex": {
+      "title": "Refleks ve Reaksiyon",
+      "description": "Görsel ve işitsel tepki sürelerinizi milisaniye hassasiyetinde test edin."
+    },
+    "memory": {
+      "title": "Çalışma Belleği",
+      "description": "Bellek kapasitenizi, dizi kalıplarını ve görsel kapsam yeteneğinizi çalıştırın."
+    },
+    "speed": {
+      "title": "Motor Hızı ve CPS",
+      "description": "Saniyedeki fare tıklama sayısını (CPS), yazma hızını (WPM) ve hesaplama çevikliğini test edin."
+    },
+    "accuracy": {
+      "title": "Nişan ve İsabet",
+      "description": "Mikro hedef hassasiyetini, örüntü tanımayı ve el-göz koordinasyonunu mükemmelleştirin."
+    },
+    "gaming": {
+      "title": "Espor Isınma",
+      "description": "Rekabetçi oyunlar için fare flick shot (ani nişan alma), hedef takibi ve çatışma reflekslerinizi kalibre edin."
+    }
+  },
+  "footer": {
+    "tagline": "Görsel tepki süresi, çalışma belleği, WPM yazma hızı ve nişan hassasiyeti testleri sunan ücretsiz çevrim içi bilişsel antrenman platformu.",
+    "quickLinks": "Hızlı Bağlantılar",
+    "tools": "Kategoriler",
+    "legal": "Yasal ve Gizlilik",
+    "privacy": "Gizlilik Politikası",
+    "terms": "Kullanım Şartları",
+    "cookies": "Çerez Politikası",
+    "contact": "Bize Ulaşın",
+    "about": "Hakkımızda",
+    "rights": "Tüm hakları saklıdır.",
+    "features": "Özellikler",
+    "achievements": "Başarımlar",
+    "research": "Araştırma",
+    "methodology": "Metodoloji",
+    "trainingPrograms": "Antrenman Programları",
+    "faq": "SSS",
+    "cookiePreferences": "Çerez tercihleri",
+    "platformMethodology": "Reflextry Platformu ve Metodolojisi Hakkında",
+    "brainTrainingTitle": "Beyin Antrenmanı:",
+    "brainTrainingText": "Reflextry'yi, oyunculara ve rekabetçi oyunculara temel mekaniklerinin ham ve filtrelenmemiş bir görünümünü sunmak için geliştirdik. Gereksiz detay yok, sadece saf performans takibi. Çalışan belleğinizi ve görsel örüntü tanıma yeteneğinizi her gün sınırına kadar zorlayarak, beyninizi daha hızlı ve daha güçlü sinir yolları oluşturmaya zorlarsınız; bu süreç nöroplastisite olarak bilinir. Zayıf olduğunuz noktaları tam olarak çalışabilmeniz için belirli bilişsel yükleri (uzaysal hatırlama ve dizi hafızası gibi) izole ediyoruz.",
+    "esportsTitle": "Espor Gecikmesi:",
+    "esportsText": "Rekabetçi oyunlarda 50 milisaniye, kafaya tıklamak ile lobiye geri gönderilmek arasındaki farktır. Hız ve Refleks alanlarımız; ham biyolojik reaksiyon sürenizi ölçmek için tüm harici oyun mekaniklerini ortadan kaldırır. Saniye Başına Tıklama (CPS) hızınızı, flick-shot isabetinizi ve ham takip hızınızı takip ediyoruz. Donanımınızın ve sinir sisteminizin birlikte çalışmasının gerçek bir ölçümünü size sunmak için test ortamımızı tarayıcı düzeyindeki giriş gecikmesini ortadan kaldıracak şekilde optimize ettik. Dereceli maçlara girmeden önce hızlı kaslarınızı ısıtmak için bu araçları kullanın.",
+    "accuracyTitle": "İsabet:",
+    "accuracyText": "Iskalarsanız hızın hiçbir önemi yoktur. İsabet Merkezi (Accuracy Hub), odaklanmanızı ve saf hız yerine hassasiyete öncelik vermenizi sağlar. Uzamsal ızgaralar, açı tahmini ve renk eşleştirme aracılığıyla ince motor becerilerinizi geliştirirsiniz. Hız ve isabeti ayn�� anda çalışmak, merkezi sinir sisteminize karmaşık mekanik hareketleri verimli bir şekilde yapmayı öğretir. Performans eğrinizin zamanla yükseldiğini gerçekten görebilmeniz için tüm oturum verilerinizi kaydediyoruz. Burada yapılan 10 dakikalık odaklanmış pratik, 5 saatlik amaçsız çalışmayı geride bırakır.",
+    "clinicalRef": "Klinik Kaynak:",
+    "brainTrainingResearch": "beyin egzersizi araştırması",
+    "allRightsReserved": "TÜM HAKLARI SAKLIDIR.",
+    "lastUpdate": "SON GÜNCELLEME: TEM 2026",
+    "builtWith": "GELİŞTİRİLDİ:",
+    "forGamers": "OYUNCULAR İÇİN"
+  },
+  "guide": {
+    "howItWorks": "Nasıl Çalışır ve İpuçları",
+    "subtitle": "Kapsamlı rehberimiz ve geliştirme stratejilerimizle oyunda ustalaşın.",
+    "jumpTo": "Git",
+    "about": "Hakkında",
+    "howToPlay": "Nasıl Oynanır",
+    "proTips": "Pro İpuçları",
+    "faq": "SSS",
+    "aboutTest": "Bu Test Hakkında",
+    "trains": "Bu Test Neyi Geliştirir",
+    "instructions": "Talimatlar ve Mekanikler",
+    "quickSetup": "Hızlı Kurulum",
+    "keyRules": "Temel Kurallar:",
+    "strategies": "Uzman Stratejileri",
+    "faqs": "Sıkça Sorulan Sorular",
+    "continueTraining": "Antrenmana Devam Et"
+  },
+  "game": {
+    "difficultyLevel": "Zorluk Seviyesi",
+    "sessionStats": "Oturum İstatistikleri",
+    "active": "Aktif",
+    "soundOn": "Ses Açık",
+    "unmute": "Sesi Aç",
+    "arena": "ARENA",
+    "initializeTest": "Testi Başlat",
+    "calibrationComplete": "Kalibrasyon Tamamlandı",
+    "finalScore": "Son Skor:",
+    "newRecord": "Yeni Rekor!",
+    "recalibrate": "Yeniden Dene",
+    "menu": "Menü",
+    "seen": "Görüldü",
+    "new": "Yeni",
+    "diffBeginner": "Başlangıç",
+    "diffEasy": "Kolay",
+    "diffNormal": "Normal",
+    "diffHard": "Zor",
+    "diffProfessional": "Profesyonel",
+    "diffExpert": "Uzman",
+    "telemetryStream": "TELEMETRİ_AKIŞI"
+  },
+  "stats": {
+    "score": "Skor",
+    "best": "En İyi",
+    "lives": "Can",
+    "timeleft": "Kalan Süre",
+    "time": "Süre",
+    "trial": "Deneme",
+    "rt": "TS",
+    "avgrt": "Ort. TS",
+    "bestrt": "En İyi TS",
+    "attempt": "Deneme",
+    "errors": "Hatalar",
+    "round": "Tur",
+    "averageerr": "Ort. Hata",
+    "besterr": "En İyi Hata",
+    "targetmargin": "Hedef Payı",
+    "level": "Seviye",
+    "objects": "Nesneler",
+    "target": "Hedef",
+    "grid": "Izgara",
+    "avgspeed": "Ort. Hız",
+    "bestclick": "En İyi Tıklama",
+    "failpenalty": "Hata Cezası"
+  },
+  "verbalMemory": {
+    "title": "SÖZEL HAFIZA",
+    "subtitle": "SÖZCÜKSEL TANIMA",
+    "arenaGoal": "YENİ UYARANLARI TANIYIN",
+    "testTitle": "Sözel Hafıza Testi",
+    "testDesc": "Sözel hafızanızı test edin. Hangi kelimeleri daha önce gördüğünüzü ve hangilerinin yeni olduğunu takip edin.",
+    "beginnerDesc": "50 Kelime · 5 Can",
+    "easyDesc": "100 Kelime · 3 Can",
+    "normalDesc": "300 Kelime · 3 Can",
+    "hardDesc": "500 Kelime · 1 Can",
+    "proDesc": "1000 Kelime · 3sn Sınır"
+  },
+  "tools": {
+    "sequence-memory": {
+      "title": "Dizi Hafızası Testi",
+      "desc": "Ücretsiz Dizi Hafızası Testimizle genişleyen uzamsal ışık desenlerini hatırlama pratiği yapın. Skor kurallarını okuyun ve kendi oturumlarınızı karşılaştırın."
+    },
+    "sequence": {
+      "title": "Dizi Hafızası Testi",
+      "desc": "Ücretsiz Dizi Hafızası Testimizle genişleyen uzamsal ışık desenlerini hatırlama pratiği yapın. Skor kurallarını okuyun ve kendi oturumlarınızı karşılaştırın."
+    },
+    "number-memory": {
+      "title": "Sayı Hafızası Testi",
+      "desc": "Ücretsiz Sayı Hafızası Testimizle çalışma belleğini ve rakam aralığı kapasitesini ölçün. Genişleyen sayı dizilerini ezberleyin ve hatırlama skorunuzu kıyaslayın."
+    },
+    "number": {
+      "title": "Sayı Hafızası Testi",
+      "desc": "Ücretsiz Sayı Hafızası Testimizle çalışma belleğini ve rakam aralığı kapasitesini ölçün. Genişleyen sayı dizilerini ezberleyin ve hatırlama skorunuzu kıyaslayın."
+    },
+    "visual-memory": {
+      "title": "Görsel Hafıza Testi",
+      "desc": "Görsel kalıcılığı ve uzamsal desen tanımayı geliştirin. Genişleyen bir matris üzerinde flaş ızgara desenlerini hatırlayarak görsel hafızanızı test edin. Ücretsiz insan kıyaslama aracı."
+    },
+    "visual": {
+      "title": "Görsel Hafıza Testi",
+      "desc": "Görsel kalıcılığı ve uzamsal desen tanımayı geliştirin. Genişleyen bir matris üzerinde flaş ızgara desenlerini hatırlayarak görsel hafızanızı test edin. Ücretsiz insan kıyaslama aracı."
+    },
+    "color-memory": {
+      "title": "Renk Hafızası Testi",
+      "desc": "Kromatik hafızanızı ve görsel dikkatinizi zorlayın. Ücretsiz Renk Hafızası Testimizle hızla değişen renk dizilerini ezberleyin ve bilişsel esnekliğinizi çalıştırın."
+    },
+    "color": {
+      "title": "Renk Hafızası Testi",
+      "desc": "Kromatik hafızanızı ve görsel dikkatinizi zorlayın. Ücretsiz Renk Hafızası Testimizle hızla değişen renk dizilerini ezberleyin ve bilişsel esnekliğinizi çalıştırın."
+    },
+    "shape-memory": {
+      "title": "Şekil Hafızası Testi",
+      "desc": "Geometrik şekil ayrımını ve uzamsal hafızayı çalıştırın. Sözel olmayan görsel akıl yürütmeyi ve odaklanmayı geliştirmek için soyut şekilleri ve sembolleri ezberleyin."
+    },
+    "shape": {
+      "title": "Şekil Hafızası Testi",
+      "desc": "Geometrik şekil ayrımını ve uzamsal hafızayı çalıştırın. Sözel olmayan görsel akıl yürütmeyi ve odaklanmayı geliştirmek için soyut şekilleri ve sembolleri ezberleyin."
+    },
+    "symbol-memory": {
+      "title": "Sembol Hafıza Testi",
+      "desc": "Soyut örüntü tanıma ve ilişkisel hafızanızı geliştirin. Zihinsel odaklanmayı ve görsel işlem hızını keskinleştirmek için gizemli sembolleri ve simgeleri eşleştirin."
+    },
+    "symbol": {
+      "title": "Sembol Hafıza Testi",
+      "desc": "Soyut örüntü tanıma ve ilişkisel hafızanızı geliştirin. Zihinsel odaklanmayı ve görsel işlem hızını keskinleştirmek için gizemli sembolleri ve simgeleri eşleştirin."
+    },
+    "word-recall": {
+      "title": "Kelime Hatırlama Testi",
+      "desc": "Sözel hafıza kapasitenizi ve kelime dağarcığı tanıma becerinizi değerlendirin. Kısa süreli dilsel hafızanızı ölçmek için kelimelerin yeni mi yoksa daha önce görülen mi olduğunu test edin."
+    },
+    "card-match": {
+      "title": "Kart Eşleştirme Hafıza Oyunu",
+      "desc": "Ücretsiz çevrimiçi Kart Eşleştirme Hafıza Oyunumuzla mekansal hafızayı ve görsel örüntü hatırlamayı eğitin. Kartları çevirin, en az hamleyle çiftleri eşleştirin ve zamana karşı yarışın."
+    },
+    "chimp-test": {
+      "title": "Şempanze Testi",
+      "desc": "Bir şempanzeden daha mı zekisiniz? Görsel-mekansal çalışma belleğinizi ölçmek için ünlü Şempanze Testini çözün. Sayı ızgarası kaybolmadan önce ezberleyin."
+    },
+    "verbal-memory": {
+      "title": "Sözel Hafıza Testi",
+      "desc": "Ücretsiz Sözel Hafıza Testimiz ile sözel çalışma belleğinizi test edin. Dilsel akılda tutma süresini ve bilişsel işlem hızını ölçmek için görülen kelimeleri yeni kelimelerle ayırt edin."
+    },
+    "object-tracking": {
+      "title": "Çoklu Nesne Takibi",
+      "desc": "Dinamik görsel dikkati ve uzamsal takibi test edin. Bilim destekli bu bilişsel testte, dikkat dağıtıcılar arasından hareket eden birden fazla hedef küreyi takip edin."
+    },
+    "n-back": {
+      "title": "N",
+      "desc": "Klasik N-Back görevi ile çalışma belleğinizi eğitin. N adım önce beliren harfleri eşleştirin, isabet ve doğruluğu takip edin, 1-back'ten 3-back'e ilerleyin."
+    },
+    "reaction-time": {
+      "title": "Reaksiyon Süresi Testi",
+      "desc": "Görsel reaksiyon sürenizi milisaniye cinsinden test edin ve geliştirin. Ücretsiz milisaniye reaksiyon testimizi çözün, profesyonel oyuncularla karşılaştırın ve refleks ilerlemenizi takip edin."
+    },
+    "reaction": {
+      "title": "E",
+      "desc": "Milisaniye hassasiyetindeki simüle edilmiş savaş senaryolarında rekabetçi savaş reflekslerini, hızlı zamanlama olayı (QTE) savuşturma zamanlamasını ve e-spor reaksiyon hızlarını test edin."
+    },
+    "sound-reaction": {
+      "title": "Sesli Reaksiyon Süresi Testi",
+      "desc": "İşitsel reaksiyon hızınızı milisaniye cinsinden ölçün. Anlık ses ipuçlarıyla duyma reflekslerini test edin ve ses reaksiyonu ile görsel reaksiyon sürelerinizi karşılaştırın."
+    },
+    "sound": {
+      "title": "Sesli Reaksiyon Süresi Testi",
+      "desc": "İşitsel reaksiyon hızınızı milisaniye cinsinden ölçün. Anlık ses ipuçlarıyla duyma reflekslerini test edin ve ses reaksiyonu ile görsel reaksiyon sürelerinizi karşılaştırın."
+    },
+    "grid-shot": {
+      "title": "Grid Shot Nişan Eğitmeni",
+      "desc": "Grid Shot ile nişanyanızı ve fare hızınızı ısıtın. Valorant ve CS2 gibi FPS oyunları için el-göz koordinasyonunu artırmak üzere ızgara üzerinde hızla beliren hedeflere tıklayın."
+    },
+    "grid": {
+      "title": "Izgara Hız Testi",
+      "desc": "Schulte Tabloları ile görsel tarama ve çevresel okuma hızınızı eğitin. Görsel arama hızınızı artırmak için 5x5'lik bir ızgarada sayıları artan sırada bulun."
+    },
+    "peripheral-vision": {
+      "title": "Çevresel Görüş Testi",
+      "desc": "Çevresel görüş farkındalığını ve yan reaksiyon hızını geliştirin. Sürüş, spor ve rekabetçi oyunlar için görsel odaklanmanızı genişletmek amacıyla merkez dışındaki uyaranları tespit edin ve tıklayın."
+    },
+    "peripheral": {
+      "title": "Çevresel Görüş Testi",
+      "desc": "Çevresel görüş farkındalığını ve yan reaksiyon hızını geliştirin. Sürüş, spor ve rekabetçi oyunlar için görsel odaklanmanızı genişletmek amacıyla merkez dışındaki uyaranları tespit edin ve tıklayın."
+    },
+    "directional-reflex": {
+      "title": "Yönsel Refleks Testi",
+      "desc": "Klavye tepki hızını ve uzamsal karar vermeyi test edin. Bilişsel işlemeyi ve refleks çevikliğini geliştirmek için hızlı yönsel komutlarla eşleşen ok tuşlarına basın."
+    },
+    "direction": {
+      "title": "Yönsel Refleks Testi",
+      "desc": "Klavye tepki hızını ve uzamsal karar vermeyi test edin. Bilişsel işlemeyi ve refleks çevikliğini geliştirmek için hızlı yönsel komutlarla eşleşen ok tuşlarına basın."
+    },
+    "multi-stimulus": {
+      "title": "Çoklu Uyaran Reaksiyon Testi",
+      "desc": "Seçim reaksiyon süresini ve seçici dikkatini test edin. Saliselik karar verme hızını ölçmek için birden fazla görsel ve işitsel uyaranı aynı anda işleyin."
+    },
+    "sequence-reaction": {
+      "title": "Sıralı Reaksiyon Testi",
+      "desc": "Hafıza hatırlamayı hızlı motor refleksleriyle birleştirin. Tempolu ışık dizilerini takip edin ve ritmik tepki sürelerini ve hızı eğitmek için hızlı kombolar gerçekleştirin."
+    },
+    "whack-a-mole": {
+      "title": "Çevrimiçi Köstebek Vurmaca",
+      "desc": "Klasik Köstebek Vurmaca oyununu ücretsiz olarak çevrimiçi oynayın. Reaksiyon hızını, hassas tıklamayı ve motor çevikliğini ölçmek için beliren köstebeklere olabildiğince hızlı dokunun."
+    },
+    "color-switch": {
+      "title": "Renk Değişimi Refleks Testi",
+      "desc": "Renk reaksiyon süresini ve seçici yanıt hızını geliştirin. Ekran rengi değişimlerine ve flaş sinyallerine hiç tereddüt etmeden anında tepki verin."
+    },
+    "time-perception": {
+      "title": "Zaman Algısı Testi",
+      "desc": "İç saatinizi ve zamansal tahmin becerinizi test edin. Milisaniye hassasiyetinde hedef zaman aralıkları oluşturmak için düğmeyi basılı tutun ve bırakın."
+    },
+    "go-no-go": {
+      "title": "Git / Gitme (Go / No",
+      "desc": "Go/No-Go göreviyle yanıt inhibisyonunu öl��ün. Yeşil Git denemelerinde tıklayın, kırmızı Gitme denemelerinde basmayın ve doğruluğu ile reaksiyon süresini takip edin."
+    },
+    "flanker": {
+      "title": "Flanker Testi",
+      "desc": "Eriksen Flanker görevini çevrimiçi çözün. Dikkat kontrolünü ölçmek için uyumlu veya uyumsuz yan okları görmezden gelerek orta ok tuşuna yanıt verin."
+    },
+    "choice-reaction": {
+      "title": "Seçimlik Reaksiyon Süresi Testi",
+      "desc": "2 ila 4 renkli hedef arasındaki seçimlik reaksiyon süresini ölçün. Yanan kutuya olabildiğince hızlı tıklayın ve milisaniye cinsinden ortalama RT'nizi geçin."
+    },
+    "cps-test": {
+      "title": "CPS Test",
+      "desc": "Ücretsiz CPS Testimizle tıklama hızınızı ölçün. Normal tıklama, jitter clicking, butterfly clicking ve drag clicking için 1s, 5s, 10s, 30s ve 60s modlarını test edin."
+    },
+    "click": {
+      "title": "CPS Test",
+      "desc": "Ücretsiz CPS Testimizle tıklama hızınızı ölçün. Normal tıklama, jitter clicking, butterfly clicking ve drag clicking için 1s, 5s, 10s, 30s ve 60s modlarını test edin."
+    },
+    "speed-math": {
+      "title": "Zihinden Matematik Hız Testi",
+      "desc": "Zihinsel aritmetik ve hesaplama hızınızı keskinleştirin. Matematik akıcılığınızı artırmak için süre tutarak hızlı toplama, çıkarma, çarpma ve bölme işlemleri çözün."
+    },
+    "math": {
+      "title": "Zihinden Matematik Hız Testi",
+      "desc": "Zihinsel aritmetik ve hesaplama hızınızı keskinleştirin. Matematik akıcılığınızı artırmak için süre tutarak hızlı toplama, çıkarma, çarpma ve bölme işlemleri çözün."
+    },
+    "math-speed": {
+      "title": "Zihinden Matematik Hız Testi",
+      "desc": "Zihinsel aritmetik ve hesaplama hızınızı keskinleştirin. Matematik akıcılığınızı artırmak için süre tutarak hızlı toplama, çıkarma, çarpma ve bölme işlemleri çözün."
+    },
+    "typing-speed": {
+      "title": "Yazma Hızı Testi",
+      "desc": "Ücretsiz 1 dakikalık Yazma Hızı Testimizle dakikadaki kelime sayısını (WPM) ve doğruluğu test edin. Klavye kullanım hızınızı ölçün, hata oranlarını takip edin ve on parmak yazmayı geliştirin."
+    },
+    "typing": {
+      "title": "Yazma Hızı Testi",
+      "desc": "Ücretsiz 1 dakikalık Yazma Hızı Testimizle dakikadaki kelime sayısını (WPM) ve doğruluğu test edin. Klavye kullanım hızınızı ölçün, hata oranlarını takip edin ve on parmak yazmayı geliştirin."
+    },
+    "word-accuracy": {
+      "title": "Kelime Doğruluk Testi",
+      "desc": "Yazma hassasiyetini artırın ve tuş vuruşu hatalarını ortadan kaldırın. Zaman baskısı altında hatasız yazma konusunda ustalaşmak için yüksek hızlı istem kelimelerini %100 doğrulukla yazın."
+    },
+    "words": {
+      "title": "Hızlı Okuma Testi",
+      "desc": "Okuma hızınızı ve kelime tanıma yeteneğinizi test edin. İnteraktif Kelime Hızı aracımızla dakikada okunan kelime akıcılığını ve hızlı görsel tanımlamayı ölçün."
+    },
+    "word-speed": {
+      "title": "Hızlı Okuma Testi",
+      "desc": "Okuma hızınızı ve kelime tanıma yeteneğinizi test edin. İnteraktif Kelime Hızı aracımızla dakikada okunan kelime akıcılığını ve hızlı görsel tanımlamayı ölçün."
+    },
+    "grid-selection": {
+      "title": "Izgara Hız Testi",
+      "desc": "Schulte Tabloları ile görsel tarama ve çevresel okuma hızınızı eğitin. Görsel arama hızınızı artırmak için 5x5'lik bir ızgarada sayıları artan sırada bulun."
+    },
+    "grid-speed": {
+      "title": "Izgara Hız Testi",
+      "desc": "Schulte Tabloları ile görsel tarama ve çevresel okuma hızınızı eğitin. Görsel arama hızınızı artırmak için 5x5'lik bir ızgarada sayıları artan sırada bulun."
+    },
+    "number-rush": {
+      "title": "Number Rush Hız Testi",
+      "desc": "Hızlı sayı tanıma ve tıklama hızınızı test edin. Bilişsel işlem hızınızı kıyaslamak için artan sayıları insani olarak mümkün olan en kısa sürede avlayın ve tıklayın."
+    },
+    "quick-sort": {
+      "title": "Hızlı Sıralama Hız Oyunu",
+      "desc": "Bilişsel kategorizasyon ve hızlı karar verme hızına meydan okuyun. Gelen öğeleri sıkı zaman kısıtlamaları altında ilgili kategorilere ayırın."
+    },
+    "schulte-table": {
+      "title": "Schulte Tablosu Testi",
+      "desc": "Klasik Schulte Tablosu meydan okuması. 3×3 ile 7×7 arası ızgaralarda karışık sayıları sırayla tıklayın. Zamanı karşı çevresel görüşü, görsel arama hızını ve odaklanmayı eğitin."
+    },
+    "aim-trainer": {
+      "title": "FPS Nişan Eğitmeni",
+      "desc": "Valorant, CS2 ve Apex gibi FPS oyunları için fare isabetliliğinizi, hedef takibinizi ve flick hızınızı geliştirin. Doğrudan web tarayıcınızda ücretsiz 3D nişan eğitmeni."
+    },
+    "aim": {
+      "title": "FPS Nişan Eğitmeni",
+      "desc": "Valorant, CS2 ve Apex gibi FPS oyunları için fare isabetliliğinizi, hedef takibinizi ve flick hızınızı geliştirin. Doğrudan web tarayıcınızda ücretsiz 3D nişan eğitmeni."
+    },
+    "rpg-reaction": {
+      "title": "E",
+      "desc": "Milisaniye hassasiyetindeki simüle edilmiş savaş senaryolarında rekabetçi savaş reflekslerini, hızlı zamanlama olayı (QTE) savuşturma zamanlamasını ve e-spor reaksiyon hızlarını test edin."
+    },
+    "endless-dodge": {
+      "title": "Sonsuz Kaçış Oyunu",
+      "desc": "Savuşturma reflekslerini ve uzaysal kaçış çevikliğini test edin. Bu yüksek yoğunluklu refleks hayatta kalma oyununda imlecinizi sonsuz hareketli engel sürüleri arasında yönlendirin."
+    },
+    "stroop-drop": {
+      "title": "Stroop Etkisi Testi",
+      "desc": "İnteraktif Stroop Drop oyunu ile ket vurma kontrolünüze meydan okuyun. Düşen renk kelimeleri ve m��rekkep tonları arasındaki bilişsel çatışmayı çözün."
+    },
+    "target-tracking": {
+      "title": "Hedef Takibi Nişan Çalıştırıcısı",
+      "desc": "Rekabetçi FPS oyunları için akıcı fare takibinde ustalaşın. Sıfır fare yumuşatma ile kaçamak hareket eden hedeflere karşı sürekli hassasiyet nişanı alıştırması yapın."
+    },
+    "flick-shot": {
+      "title": "Flick Shot Nişan Çalıştırıcısı",
+      "desc": "Flick Shot çalıştırıcımız ile kas hafızasını ve hızlı nişan almayı eğitin. Taktiksel nişancılar için hızlı mikro ayarlamaları ve hedef yakalamayı kalibre edin."
+    },
+    "rhythm-tap": {
+      "title": "Ritim Tap Oyunu",
+      "desc": "Müzikal zamanlama doğruluğunuzu ve milisaniye düzeyinde ritim algınızı test edin. Artan BPM tempolarıyla senkronize şekilde vurun ve ritim dışı gecikme hatalarınızı takip edin."
+    },
+    "image-recognition": {
+      "title": "Görüntü Tanıma Testi",
+      "desc": "Görsel algıyı ve hızlı görüntü ayırt etmeyi test edin. Gözlem becerilerini eğitmek için ince görsel farkları belirleyin ve hedef nesneleri yüksek hızda eşleştirin."
+    },
+    "data-entry": {
+      "title": "Veri Girişi Doğruluk Testi",
+      "desc": "Veri girişi hızını, alfasayısal yazma hassasiyetini ve hata oranlarını ölçün. Gerçekçi sayısal ve kod kıyaslamalarıyla büro tipi saatlik tuş vuruşunu (KPH) test edin."
+    },
+    "data": {
+      "title": "Veri Girişi Doğruluk Testi",
+      "desc": "Veri girişi hızını, alfasayısal yazma hassasiyetini ve hata oranlarını ölçün. Gerçekçi sayısal ve kod kıyaslamalarıyla büro tipi saatlik tuş vuruşunu (KPH) test edin."
+    },
+    "pattern-matching": {
+      "title": "Örüntü Eşleştirme Testi",
+      "desc": "Görsel örüntü tanıma ve sözel olmayan akıl yürütmeyi geliştirin. Görsel keskinliği ve analitik düşünceyi test etmek için karmaşık matris örüntülerini ve geometrik dizileri eşleştirin."
+    },
+    "precision-click": {
+      "title": "Hassas Tıklama Testi",
+      "desc": "Fare hassasiyetini ve mikro hedef doğruluğunu keskinleştirin. Oyun için ince motor kontrolünü ve imleç doğruluğunu geliştirmek üzere kaçırmadan küçük, nokta atışı hedeflere tıklayın."
+    },
+    "angle-estimation": {
+      "title": "Açı Tahmin Testi",
+      "desc": "Geometri ve uzaysal tahmin gözünüzü test edin. Görsel açı keskinliğini ve uzaysal muhakemeyi kıyaslamak için verilen açıların derecelerini doğru bir şekilde tahmin edin."
+    },
+    "color-match": {
+      "title": "Renk Eşleştirme Testi",
+      "desc": "Renk Eşleştirme Testimiz ile renk algısını ve ince ton ayrımını test edin. Zaman baskısı altında hedef RGB tonlarını eşleştirin ve görsel hassasiyeti kıyaslayın."
+    },
+    "color-blindness": {
+      "title": "Renk Körlüğü Testi",
+      "desc": "Ücretsiz, eğitici bir renk görme oyununda Ishihara tarzı prosedürel nokta levhalarını keşfedin. Ekran ayarları sonuçları etkiler; bu tıbbi bir teşhis değerlendirmesi değildir."
+    },
+    "mental-rotation": {
+      "title": "Zihinsel Döndürme Testi",
+      "desc": "3 boyutlu uzaysal görselleştirmeyi ve bilişsel döndürme hızını kıyaslayın. Karmaşık geometrik şekillerin aynı mı yoksa ayna görüntüsü mü olduğunu gerçek zamanlı olarak belirleyin."
+    }
+  },
+  "homeContent": {
+    "whatIsReflextryTitle": "Reflextry Nedir?",
+    "whatIsReflextryDesc1": "Reflextry; reaksiyon süresi, hafıza, klavye hızı, tıklama hızı, isabet ve nişan alma pratiği için 50'den fazla ücretsiz tarayıcı tabanlı oyun sunar. Her test, kendi oturumlarınızı karşılaştırabilmeniz için o göreve ait bir skor kaydeder.",
+    "whatIsReflextryDesc2": "Bir tarayıcı skoru; ekranınızın, giriş aygıtınızın, tarayıcınızın ve test ayarlarınızın etkilerini içerir. Biyolojik gecikmenin doğrudan bir ölçümü veya klinik bir değerlendirme değildir.",
+    "comparableSessionsTitle": "Pratik oturumlarınızı karşılaştırılabilir hale getirin",
+    "comparableStep1": "Her seferinde aynı testi, zorluk derecesini ve giriş aygıtını seçin.",
+    "comparableStep2": "Başlamadan önce puanlama kurallarını okuyun. Milisaniye, isabet oranları, bellek açıklığı ve dakdadaki kelime sayısı farklı görevleri tanımlar.",
+    "comparableStep3": "Tek bir sıra dışı iyi skordan ziyade birkaç denemeyi tekrarlayın ve eğilimleri karşılaştırın.",
+    "comparableStep4": "Yorgun veya rahatsız hissederseniz ara verin.",
+    "comparableFooterPre": "Puanlama formülleri ve donanım sınırlamaları için ",
+    "testingMethodology": "test metodolojimizi",
+    "comparableFooterMid": " okuyun. ",
+    "personalStatistics": "Kişisel istatistikleriniz",
+    "comparableFooterPost": " popülasyon normlarını değil, kendi kaydettiğiniz ilerlemeyi gösterir.",
+    "betterScoreTitle": "Daha iyi bir skor ne anlama gelir?",
+    "betterScoreDesc1Pre": "Pratik kazanımları en çok çalışılan görevlerde görülür; günlük bilişdeki genel faydalar daha az kanıtlanmıştır. Bkz. ",
+    "simonsReview": "Simons ve meslektaşlarının beyin egzersizi araştırması incelemesi",
+    "betterScoreDesc1Post": ". Bu araştırma, Reflextry'yi tıbbi veya zeka testi olarak doğrulamaz.",
+    "betterScoreDesc2Pre": "Doğrulanmış küresel bir kıyaslama veri seti yayınlamıyoruz. Pratik temeli olarak kendi tekrarlanan sonuçlarınızı kullanın. Arka plan ve kaynaklar için ",
+    "theSciencePage": "bilim sayfasını",
+    "betterScoreDesc2Post": " ziyaret edin.",
+    "faqTitle": "Sıkça sorulan sorular",
+    "faq1Q": "Beyin egzersizi gerçekten işe yarıyor mu?",
+    "faq1A": "Pratik yapmak, üzerinde çalıştığınız görevdeki performansınızı artırabilir. Daha iyi bir oyun skoru; gelişmiş zekayı, daha güvenli sürüşü veya bilişsel gerilemenin önlendiğini kanıtlamaz. Reflextry testleri klinik değerlendirmeler değil, pratik araçlarıdır.",
+    "faq2Q": "Ne sıklıkla pratik yapmalıyım?",
+    "faq2A": "Programınıza uyan kısa bir oturumla başlayın ve yorulduğunuzda veya rahatsız hissettiğinizde durun. Aynı cihazda aynı testi ve zorluğu karşılaştırın. Doğrulanmış bir Reflextry antrenman dozu veya garantili bir gelişme zaman çizelgesi yoktur.",
+    "faq3Q": "Reflextry'yi espor ısınması için kullanabilir miyim?",
+    "faq3A": "Nişan alma, takip ve reaksiyon oyunlarını tarayıcı tabanlı bir ısınma için kullanabilirsiniz. Skorları, başka bir oyundaki sıralamanızı veya muhtemel performansınızı değil, bu egzersizlerdeki performansınızı ölçer.",
+    "faq4Q": "Reflextry ücretsiz mi?",
+    "faq4A": "Testleri tarayıcınızda oynamak tamamen ücretsizdir. Hesap oluşturmadan bir teste başlayabilirsiniz.",
+    "aboutTheLab": "Laboratuvar Hakkında",
+    "aboutTheLabDesc": "Reflextry'yi kimler inşa etti, metodolojimiz ve bizimle nasıl iletişime geçebilirsiniz.",
+    "allGuides": "Tüm Rehberler",
+    "allGuidesDesc": "Bilişsel Günlük'ten hafıza, refleks, hız ve isabet makaleleri.",
+    "faqCardTitle": "SSS",
+    "faqCardDesc": "Antrenman sıklığı, gizlilik, puanlama ve yaygın ürün soruları.",
+    "whatReflextryMeasures": "Reflextry Neleri Ölçer?",
+    "whatReflextryMeasuresDesc": "Reaksiyon süresi, çalışan bellek, tıklama hızı, nişan ve isabet için ücretsiz tarayıcı testleri. Temel araçlar için hesap gerektirmez; bir taban çizgisi ölçün, kısa oturumlarda pratik yapın ve istatistik sayfasından ilerlemenizi takip edin.",
+    "journalBadge": "Bilişsel Laboratuvar Bülteni",
+    "journalTitle": "Önce ölçün. Kısa pratik yapın. Yöntemi okuyun.",
+    "journalDesc": "Reflextry; reaksiyon süresi, çalışma belleği, hız ve doğruluk için ücretsiz bir tarayıcı laboratuvarıdır. Puanlar şeffaftır (milisaniye, bellek aralığı, doğruluk)—klinik teşhisler veya uydurma yüzdelikler içermez. Bir temel ölçümle başlayın, 10–15 dakikalık seanslarla antrenman yapın ve rakamların ardındaki bilimi öğrenmek için kılavuzlarımızı inceleyin.",
+    "scoreGuideTitle": "Testleri nasıl puanlıyoruz?",
+    "scoreGuideDesc": "Milisaniye, bellek aralığı ve doğruluğun anlamı—ve iddia etmekten kaçındığımız konular.",
+    "reactionTimeGuideTitle": "İyi bir reaksiyon süresi nedir?",
+    "reactionTimeGuideDesc": "Gerçekçi aralıklar, donanım gecikmeleri ve kendi puanlarınızı nasıl yorumlamanız gerektiği.",
+    "choiceReactionGuideTitle": "Seçimli reaksiyon ile basit reaksiyon karşılaştırması",
+    "choiceReactionGuideDesc": "Daha fazla seçeneğin sizi neden yavaşlattığı ve her birini nasıl ayrı ayrı çalışabileceğiniz."
+  },
+  "categoryHub": {
+    "reflex": {
+      "heroTitle": "Refleks Antrenmanı ve Reaksiyon Oyunları",
+      "heroSubtitle": "Görsel ve işitsel reaksiyon sürelerinizi milisaniye hassasiyetinde ölçün.",
+      "heroDesc": "Profesyonel sporda, espor ve sürüşte refleks süresi kritik önem taşır. Refleks setimiz; görsel, işitsel ve yönsel olmak üzere farklı duyusal yolları izole eder, böylece en hızlı yanıt sürelerinizi belirleyebilir ve gecikmenizi azaltmak için antrenman yapabilirsiniz.",
+      "whatItCovers": "Bu Alan Neleri Kapsar",
+      "whatItCoversDesc": "Milisaniye cinsinden zamanlanan görsel ve işitsel reaksiyon testleri; basit reaksiyon, ses ipuçları, ızgara tıklamaları, çevresel hedefler ve çoklu uyaran seçimleri. Pratik ve ısınma için uyaran-tepki gecikmesini izole etmek üzere tasarlanmıştır.",
+      "benefit1Title": "Görsel Refleks",
+      "benefit1Desc": "Renklere tepki verin",
+      "benefit2Title": "İşitsel Refleks",
+      "benefit2Desc": "Seslere tepki verin",
+      "benefit3Title": "Uzamsal Refleks",
+      "benefit3Desc": "Ekranda tepki verin"
+    },
+    "memory": {
+      "heroTitle": "Hafıza Antrenman Oyunları ve Bilişsel Hatırlama",
+      "heroSubtitle": "Çalışan bellek kapasitenizi, basamak açıklığınızı ve uzamsal hatırlamanızı güçlendirin.",
+      "heroDesc": "Çalışan bellek; yönergeleri takip ederken veya problemleri çözerken kullandığınız zihinsel çalışma alanıdır. Hafıza oyunlarımız uyarlanabilir zorluk seviyesi kullanır: siz geliştikçe, akılda tutma sınırlarınızı zorlamak için zorluk derecesi artar.",
+      "whatItCovers": "Bu Alan Neleri Kapsar",
+      "whatItCoversDesc": "Uzamsal örüntüler, sayı dizileri, sözel tanıma ve çoklu nesne takibi. Aşamalı zorluk seviyeleriyle çalışan bellek tamponunuzu çalıştırmak için tasarlanmıştır.",
+      "benefit1Title": "Uzamsal Hatırlama",
+      "benefit1Desc": "Kare düzeni hafızası",
+      "benefit2Title": "Basamak Açıklığı",
+      "benefit2Desc": "Sayısal hafızada tutma",
+      "benefit3Title": "Örüntü Dizisi",
+      "benefit3Desc": "Genişleyen flaş örüntüleri"
+    },
+    "speed": {
+      "heroTitle": "Hız Testleri ve Hız Kıyaslamaları",
+      "heroSubtitle": "Saniye başına tıklama (CPS), yazma hızı (WPM) ve hesaplama çevikliğinizi artırın.",
+      "heroDesc": "Hız kıyaslamaları, nöromüsküler sisteminizin ham verimini ölçer; fare ve klavye girdileriyle birim zamanda kaç hassas eylem gerçekleştirebileceğinizi gösterir.",
+      "whatItCovers": "Bu Alan Neleri Kapsar",
+      "whatItCoversDesc": "Çoklu aralıklarda fare tıklama hızı, dakikadaki kelime yazma hızı, hızlı zihinsel matematik ve Schulte tablolarında görsel tarama.",
+      "benefit1Title": "Tıklama Hızı",
+      "benefit1Desc": "Ham CPS'yi ölçün",
+      "benefit2Title": "Yazma Hızı",
+      "benefit2Desc": "WPM'yi kıyaslayın",
+      "benefit3Title": "Zihinsel Matematik",
+      "benefit3Desc": "Hızlı hesaplamalar"
+    },
+    "accuracy": {
+      "heroTitle": "Nişan ve Hassasiyet Antrenmanı",
+      "heroSubtitle": "Mikro hedef isabetinizi, el-göz koordinasyonunuzu ve görsel tahmin becerinizi geliştirin.",
+      "heroDesc": "Hassasiyet olmadan hızın hiçbir anlamı yoktur. İsabet modüllerimiz; odaklanmanızı, minimum hata payıyla hedefleri temiz bir şekilde vurmanızı sağlar.",
+      "whatItCovers": "Bu Alan Neleri Kapsar",
+      "whatItCoversDesc": "Hassas mikro tıklama, açı tahmini, örüntü eşleştirme, renk ayrımı ve veri giriş doğruluğu.",
+      "benefit1Title": "Hassas Nişan",
+      "benefit1Desc": "Mikro hedef tıklamaları",
+      "benefit2Title": "Uzamsal Açılar",
+      "benefit2Desc": "Açı tahmini",
+      "benefit3Title": "Görsel Eşleşme",
+      "benefit3Desc": "Örüntü tanıma"
+    },
+    "gaming": {
+      "heroTitle": "Espor Isınma ve Nişan Alanı",
+      "heroSubtitle": "Rekabetçi oyunlar için fare flick shot'larını, hedef takibini ve çatışma reflekslerini kalibre edin.",
+      "heroDesc": "Dereceli maçlara girmeden önce mekanik kas hafızasını ısıtmak için Counter-Strike, Valorant, Apex Legends ve Overwatch oyuncuları özel olarak tasarlanmıştır.",
+      "whatItCovers": "Bu Alan Neleri Kapsar",
+      "whatItCoversDesc": "Flick shot nişanı, kesintisiz hedef takibi, anlık çatışma refleksleri ve engel akışlarından kaçınma.",
+      "benefit1Title": "Flick Shot'lar",
+      "benefit1Desc": "Hedef tespiti",
+      "benefit2Title": "Takip",
+      "benefit2Desc": "Akıcı hedef takibi",
+      "benefit3Title": "Çatışma Refleksi",
+      "benefit3Desc": "Hızlı karar verme"
+    },
+    "exploreOther": "Diğer Kategorileri Keşfedin",
+    "toolNameCol": "Araç Adı",
+    "bestForCol": "En Uygun Olduğu Alan (Kullanım Amacı)",
+    "coreBenefitCol": "Temel Fayda"
+  },
+  "allTools": {
+    "title": "Tüm Antrenman Araçları",
+    "subtitle": "Bilişsel ve psikomotor testlerden oluşan eksiksiz setimizi keşfedin. Kıyaslamaya başlamak için alana göre filtreleyin veya aşağıya göz atın.",
+    "filterAll": "Tüm Araçlar",
+    "filterMemory": "Hafıza",
+    "filterReflex": "Refleks",
+    "filterSpeed": "Hız",
+    "filterAccuracy": "İsabet",
+    "filterGaming": "Oyun",
+    "startTest": "Testi Başlat"
+  },
+  "about": {
+    "identityProfile": "Kimlik Profili",
+    "heroTitle": "Hakkımızda",
+    "heroTitleHighlight": "",
+    "heroSubtitle": "Mekanik sınırlarınızı ölçmek ve zorlamak için lafı uzatmayan bir platform. Daha keskin olmak isteyen herkes için rekabetçi oyuncular tarafından geliştirildi.",
+    "missionLabel": "Misyon Beyanı",
+    "missionTitle": "Misyonumuz",
+    "missionDesc": "Misyonumuz basit: Profesyonel espor takımları tarafından kullanılan üst düzey reaksiyon ve bilişsel test araçlarını herkes için erişilebilir kılmak. Gelişim, ham ve dürüst verilerle başlar. Reflextry'yi tam baz puanınızı bulmanız, odaklanmanız ve bunu geçebilmeniz için inşa ettik.",
+    "originLabel": "Köken Günlüğü",
+    "originTitle": "Hikayemiz",
+    "originP1": "Reflextry küçük bir yan proje olarak başladı: başka bir masaüstü eğitmeni kurmaya gerek kalmadan tıklama gecikmesini ölçen bir tarayıcı betiği. Bu tek araç, sürekli duyduğumuz bir soruya dönüştü; hafıza, refleks, hız, doğruluk ve nişan alma çalışmalarını tek bir yerde, ücretsiz olarak deneyebileceğimiz ve skorları kendimizin takip edebileceği bir şekilde bir araya getirebilir miyiz?",
+    "originP2": "Siteyi Hindistan'ın Surat şehrinde, iki kişilik küçük bir ekip olarak kurtuk. Her modül, indirme duvarı veya ücretli bir \"premium paket\" olmadan, tarayıcınızda gerçek bir interaktif test olarak çalışır. İlerlemeniz oturumunuzda ve istatistik araçlarında saklanır, böylece temel pratikler için bir hesap oluşturmanıza gerek kalmadan eğilimleri görebilirsiniz.",
+    "originP3": "Bugün Reflextry; dereceli maçlardan önce ısınan oyuncular, çalışma belleğini geliştiren öğrenciler ve reaksiyon süresini veya renk körlüğünü kontrol eden meraklı ziyaretçiler tarafından kullanılıyor. Paketi dikkatle genişletmeye devam ediyoruz: yeni testler yalnızca puanlama kuralları net olduğunda ve arayüz sayının ne anlama geldiğini açıkladığında yayınlanır.",
+    "coreValuesLabel": "Temel Değerler",
+    "valAccuracyTitle": "Doğruluk",
+    "valAccuracyDesc": "Gereksiz detay yok, sadece gerçek mekanik taban puanınızı takip etmek için hassas ölçümler ve güvenilir testler.",
+    "valInnovationTitle": "İnovasyon",
+    "valInnovationDesc": "İnsan reaksiyon süresinin mutlak sınırlarını test etmek için sürekli yeni modüller geliştirmek.",
+    "valAccessibilityTitle": "Erişilebilirlik",
+    "valAccessibilityDesc": "Herkes için tamamen ücretsiz, profesyonel düzeyde test ve performans takip araçları.",
+    "valUserFirstTitle": "Önce Kullanıcı",
+    "valUserFirstDesc": "Topluluğun istediği şeyleri inşa ediyoruz. Bir oyun modu kötüyse, onu düzeltiriz.",
+    "whatWeOfferLabel": "Ne Sunuyoruz?",
+    "offerBrainTitle": "Beyin Eğitimi Oyunları",
+    "offerBrainDesc": "Nöroplastisiteyi tetiklemek için tasarlanmış bilişsel yüklerle çalışma belleğinizi ve örüntü tanıma becerinizi zorlayın.",
+    "offerReflexTitle": "Reaksiyon ve Hız Testleri",
+    "offerReflexDesc": "Nişan alma, tıklama ve reaksiyon alanlarımızda ham fiziksel gecikmenizi milisaniyesine kadar ölçün.",
+    "offerTrackingTitle": "İlerleme Takibi",
+    "offerTrackingDesc": "Oturum verilerinizi otomatik olarak kaydedin ve performans eğrinizin zamanla yükselişini izleyin.",
+    "offerLeaderboardTitle": "Başarımlar ve Skor Tabloları",
+    "offerLeaderboardDesc": "Rütbelerin kilidini açın, günlük görevleri tamamlayın ve dünya çapındaki oyunculara karşı nerede durduğunuzu görün.",
+    "ctaTitle": "Baz Puanınızı Bulmaya Hazır mısınız?",
+    "ctaDesc": "Hesap gerekmez. Sadece bir araç seçin, odaklanın ve hızınızı test edin.",
+    "ctaStart": "Reaksiyon Testini Başlat",
+    "ctaExplore": "Tüm Araçları Keşfet"
+  },
+  "faqPage": {
+    "heroTitle": "Sıkça Sorulan Sorular",
+    "heroSubtitle": "Testler, antrenman faydaları ve puanlama hakkında bilmeniz gereken her şey.",
+    "catGettingStarted": "Başlarken",
+    "catBrainTraining": "Beyin Eğitimi",
+    "catMemoryTraining": "Hafıza Eğitimi",
+    "catReactionTime": "Reaksiyon Süresi",
+    "catSpeedAim": "Hız ve Nişan",
+    "catPrivacyScores": "Gizlilik ve Skorlar",
+    "q1": "Reflextry tam olarak nedir?",
+    "a1": "Reaksiyon süresi, çalışma belleği ve tıklama doğruluğu gibi ham mekanik becerilerinizi ölçmek ve geliştirmek için oluşturulmuş ücretsiz bir platformdur. İndirme veya kayıt olma gerektirmez. Sadece bir araç seçin ve sınırlarınızı test etmeye başlayın.",
+    "q2": "Hesap oluşturmam gerekiyor mu?",
+    "a2": "Hayır. Her şey tamamen ücretsiz ve hemen erişilebilir. İlerlemenizi cihazlar arasında kaydetmek veya küresel skor tablolarında rekabet etmek isterseniz daha sonra isteğe bağlı hesaplar ekleyeceğiz, ancak temel araçlar her zaman açık kalacaktır.",
+    "q3": "Nereden başlamalıyım?",
+    "a3": "Nişancı oyunları oynuyorsanız, Nişan Eğitmeni (Aim Trainer) veya Reaksiyon Süresi Testi ile başlayın. Bilişsel antrenman için buradaysanız, Dizi Hafızası (Sequence Memory) veya Sayı Hafızası'nı deneyin. Baz puanınızın nerede olduğunu görmek için birkaç tanesini denemenizi öneririz.",
+    "q4": "Beyin eğitimi gerçekten bir işe yarıyor mu?",
+    "a4": "Evet, nörobilimde buna 'yakın transfer' denir. Her gün sayı dizilerini hatırlama alıştırması yaparsanız, beyin fiziksel olarak uyum sağlar (nöroplastisite) ve kısa süreli hafızanızda bilgiyi tutma beceriniz gelişir. Spor salonuna gitmek gibidir, ancak merkezi sinir sisteminiz için.",
+    "q5": "Sonuçları görmem ne kadar sürer?",
+    "a5": "Günde 10-20 dakika çalışırsanız, 2 ila 3 hafta içinde skorlarınızın yükseldiğini görmeye başlayırsınız. Haftada bir kez 2 saatlik devasa bir seans yapmaktansa istikrarlı olmak çok daha önemlidir.",
+    "q6": "Şeyleri hemen unutmama nasıl son verebilirim?",
+    "a6": "En hızlı yöntem 'parçalara ayırma' (chunking) işlemidir; öğeleri gruplamak (bir telefon numarasını tek tek rakamlar yerine bloklar halinde hatırlamak gibi). Ayrıca beyniniz işe yaramaz olduğunu düşündüğü şeyleri siler, bu yüzden kalıcı olması için aktif olarak odaklanmanız ve hatırlamayı zorlamanız gerekir.",
+    "q7": "Çalışma belleği ile uzun süreli bellek arasındaki fark nedir?",
+    "a7": "Çalışma belleği beyin RAM'inizdir; şu anda düşündüğünüz şeyleri tutar. Uzun süreli bellek ise sabit disktir. Araçlarımız tam olarak RAM'inizi eğitir, böylece topu düşürmeden aynı anda daha fazla şeyi işleyebilirsiniz.",
+    "q8": "'İyi' bir reaksiyon süresi nedir?",
+    "a8": "Küresel ortalama görsel reaksiyon süresi 200–250ms civarındadır. Rekabetçi oyuncular genellikle 150–190ms süreler kaydeder. 150ms'nin altındaki her şey en üst %1'lik insan yeteneğidir.",
+    "q9": "Monitörüm veya farem girdi gecikmesine (input lag) neden oluyor mu?",
+    "a9": "Evet. 60Hz bir monitör, 144Hz (~7ms) veya 240Hz (~4ms) panele kıyasla ~16ms kare gecikmesi ekler. Düşük tarama hızına (polling rate) sahip kablosuz fareler de gecikmeyi artırabilir. Saf test doğruluğu için bir oyuncu faresi ve yüksek yenileme hızına sahip bir ekran kullanın.",
+    "q10": "CPS'imi (Saniyedeki Tıklama Sayısı) eğitebilir miyim?",
+    "a10": "Evet. Standart tıklama genellikle 6–8 CPS civarında sınırlıdır. Titreyerek tıklama (jitter clicking) veya kelebek tıklama (butterfly clicking) gibi teknikler sizi 12–16 CPS'in üzerine çıkarabilir.",
+    "q11": "Tarayıcımı kapatırsam skorum kaydedilir mi?",
+    "a11": "Skorlarınız ve oturum kayıtlarınız tarayıcınızın yerel depolama alanında (local storage) yerel olarak saklanır. Aynı cihazda ve tarayıcılarda yeniden yüklemelerden sonra kalıcıdırlar.",
+    "q12": "Kişisel verilerimi satıyor veya topluyor musunuz?",
+    "a12": "Hayır. Kişisel olarak tanımlayıcı verileri takip etmiyoruz veya satmıyoruz. Tüm bilişsel ve reaksiyon test metrikleri size aittir."
+  },
+  "contact": {
+    "heroTitle": "İletişime",
+    "heroTitleHighlight": "Geçin",
+    "heroSubtitle": "Sorular, özellik önerileri, ortaklık istekleri veya hata raporları mı var? Her mesajı okuyoruz.",
+    "generalInquiries": "Genel Sorular",
+    "generalInquiriesDesc": "Genel sorular, ortaklıklar ve basım için.",
+    "technicalSupport": "Teknik Destek",
+    "technicalSupportDesc": "Hata raporları, cihaz sorunları veya puanlama soruları için.",
+    "feedbackTitle": "Geri Bildirim ve Fikirler",
+    "feedbackDesc": "Yeni bir modül veya mevcut oyunlarda iyileştirmeler önerin.",
+    "formName": "Adınız",
+    "formNamePlaceholder": "örn. Ahmet Yılmaz",
+    "formEmail": "E-posta Adresi",
+    "formEmailPlaceholder": "siz@ornek.com",
+    "formSubject": "Konu",
+    "formSubjectPlaceholder": "Nasıl yardımcı olabiliriz?",
+    "formMessage": "Mesaj",
+    "formMessagePlaceholder": "Aklınızdakileri bize anlatın...",
+    "formSubmit": "Mesaj Gönder",
+    "formSending": "Gönderiliyor...",
+    "successMsg": "Mesaj başarıyla gönderildi!",
+    "errorMsg": "Mesaj gönderilemedi. Lütfen tekrar deneyin."
+  },
+  "leaderboard": {
+    "heroTitle": "Küresel Skor Tablosu",
+    "heroSubtitle": "Dünya çapındaki oyunculara karşı yarışın ve tüm Reflextry meydan okumalarındaki ilerlemenizi takip edin. Temel çizginizi belirleyin ve en üst seviyeyi hedefleyin.",
+    "personalBests": "Kişisel Rekorlar",
+    "personalBestsDesc": "Yerel en yüksek skorlarınız",
+    "globalRankings": "Küresel Sıralamalar",
+    "globalRankingsDesc": "Dünya çapında karşılaştırın",
+    "trackProgress": "İlerlemeyi Takip Et",
+    "trackProgressDesc": "Gelişiminizi görün",
+    "myScores": "Skorlarım",
+    "global": "Küresel",
+    "rank": "Sıra",
+    "player": "Oyuncu",
+    "score": "Skor",
+    "date": "Tarih",
+    "testNow": "Şimdi Test Et",
+    "noScoresYet": "Henüz kaydedilmiş skor yok. Sıralamanızı görmek için bir testi tamamlayın!"
+  },
+  "statistics": {
+    "heroTitle": "Kişisel İstatistikler",
+    "heroSubtitle": "Geçmiş performans eğrilerinizi, tutarlılık skorlarınızı ve kişisel rekorlarınızı takip edin.",
+    "totalSessions": "Toplam Oturum",
+    "bestPerformance": "En İyi Performans",
+    "averageScore": "Ortalama Skor",
+    "scoreTrend": "Skor Eğilimi",
+    "noData": "Henüz kaydedilmiş oturum verisi yok. İstatistiklerinizi görmek için bir oyun oynayın!",
+    "downloadData": "Verileri Dışa Aktar",
+    "selectTest": "Test Seç",
+    "clearHistory": "Geçmişi Temizle"
+  },
+  "challenges": {
+    "heroTitle": "Günlük Görevler",
+    "heroSubtitle": "Tutarlılık oluşturmak, seri ödülleri kazanmak ve seviye atlamak için günlük bilişsel egzersizlerinizi tamamlayın.",
+    "streak": "Mevcut Seri",
+    "days": "Gün",
+    "todayChallenge": "Günün Görevi",
+    "target": "Hedef:",
+    "completed": "Tamamlandı!",
+    "startChallenge": "Görevi Başlat",
+    "streakReward": "Seri Çarpanı",
+    "howItWorks": "Günlük Görevler Nasıl Çalışır?",
+    "howItWorksP1": "Her 24 saatte bir yeni bir görev oluşturulur. Günlük serinizi korumak için hedefi tamamlayın.",
+    "howItWorksP2": "Tutarlı günlük antrenman, nöroplastik adaptasyonu destekler ve bilişsel tıkanmayı önler."
+  },
+  "achievements": {
+    "heroTitle": "Başarımlar ve Kupalar",
+    "heroSubtitle": "Reaksiyon hızı bariyerlerini aşarken ve bilişsel dönüm noktalarına ulaşırken prestijli madalyaların kilidini açın.",
+    "totalUnlocked": "Toplam Açılan",
+    "unlocked": "Açıldı",
+    "locked": "Kilitli",
+    "rarityCommon": "Yaygın",
+    "rarityRare": "Nadir",
+    "rarityEpic": "Destansı",
+    "rarityLegendary": "Efsanevi"
+  },
+  "categorySeo": {
+    "reflex": {
+      "sec0Heading": "Reaksiyon Süresi Nasıl Çalışır",
+      "sec0Text": "Reaksiyon süreniz üç aşama tarafından yönetilir: algılama (uyarıcıyı tespit etme), biliş (ne yapılacağına karar verme) ve motor yürütme (eylemi gerçekleştirme). Her aşama bağımsız olarak eğitilebilir. Algılama hızı, uyarıcı a��inalığıyla artar — yeşil bir parlamaya tepki vermeyi ne kadar çok pratik yaparsanız, görsel korteksiniz onu o kadar hızlı tanır. Bilişsel işleme, karar verme süreci otomatistleştikçe hızlanır. Motor yürütme, sık kullanılan sinir yollarının miyelinlenmesi yoluyla gelişir ve bu, sinyal iletim hızını kelimenin tam anlamıyla artırır.",
+      "sec1Heading": "Reaksiyon Süresini Etkileyen Faktörler",
+      "sec1Text": "Birkaç değişken, herhangi bir gündeki reaksiyon sürenizi etkiler. Uyku eksikliği, temel değerinize 20–50ms ekleyebilir — çalışmalar, 24 saat uykusuz kalmanın reaksiyon süresini %0.10 kan alkol seviyesinden daha fazla bozduğunu göstermektedir. Kafein genellikle reaksiyon süresini 3–5 saat boyunca 10–20ms kısaltır. Fiziksel zindelik, daha hızlı işleme hızıyla ilişkilidir. Yaş bir rol oynar: reaksiyon süresi 18–25 yaşları arasında zirve yapar ve ardından kademeli olarak yavaşlar, ancak antrenman bu düşüşü önemli ölçüde telafi edebilir.",
+      "sec2Heading": "Gerçek Dünya Uygulamaları",
+      "sec2Text": "Hızlı reaksiyon süresi, 60 mph hızda 100ms'lik bir farkın 8.8 feet ek duruş mesafesine dönüştüğü sürüşte çok önemlidir. Rekabetçi esporlarda, 170ms altı reaksiyon sürelerine sahip profesyonel Counter-Strike oyuncuları, nişan düellolarında ölçülebilir bir avantaj elde eder. Masa tenisi, boks ve motor sporları gibi sporlardaki sporcular, kondisyon programlarının bir parçası olarak özel reaksiyon antrenmanından geçerler."
+    },
+    "memory": {
+      "sec0Heading": "Hafıza Antrenmanının Arkasındaki Bilim",
+      "sec0Text": "Bilişsel sinirbilim araştırmaları, çalışan hafıza kapasitesinin sabit olmadığını göstermiştir. PNAS'ta yayınlanan dönüm noktası niteliğindeki bir çalışma, yoğun çalışan hafıza antrenmanının akışkan zekada — akıl yürütme ve yeni problemleri çözme yeteneğinde — gelişmelere yol açabileceğini gösterdi. Hafıza oyunlarımız uyadaptif zorluktan yararlanır: siz geliştikçe zorluk ölçeklenir ve beyninizi nöroplastisite yoluyla sürekli olarak uyum sağlamaya zorlar.",
+      "sec1Heading": "Eğittiğimiz Hafıza Türleri",
+      "sec1Text": "Hafıza Arenamız birden fazla hafıza sistemini hedefler. Görsel-uzamsal hafıza, Görsel Hafıza ve Sıra Hafızası gibi oyunlar aracılığıyla test edilir. Sözel hafıza, görülen ve yeni kelimeler arasında ayrım yapmanızı gerektiren Sözel Hafıza testimizde sınanır. Sayısal hafıza, giderek uzayan sayı dizilerini tekrarladığınız Sayı Hafızası'nda zorlanır. Her sistem farklı beyin bölgelerini devreye sokar.",
+      "sec2Heading": "Hafıza Antrenmanından Kimler Faydalanır?",
+      "sec2Text": "Sınavlara hazırlanan öğrenciler, daha güçlü bir çalışan hafızanın doğrudan daha iyi okuduğunu anlama ve matematiksel problem çözme ile ilişkili olduğunu görürler. Yaşlı yetişkinler, yaşa bağlı gerilemeye karşı bilişsel rezerv oluşturmak için hafıza antrenmanını kullanır. Rekabetçi oyuncular, düşman konumlarını ve bekleme sürelerini aynı anda takip etmek için uzamsal hafızaya güvenirler."
+    },
+    "speed": {
+      "sec0Heading": "CPS'yi (Saniyedeki Tıklama Sayısı) Anlamak",
+      "sec0Text": "Eğitimsiz ortalama bir kişi saniyede 5–7 CPS ile tıklar. Rekabetçi oyuncular, titrek tıklama (jitter clicking) veya kelebek tıklama (butterfly clicking) gibi teknikleri kullanarak düzenli olarak 10–14 CPS elde eder. Geliştirdikleri parmak becerisi ve ince motor kontrolü, herhangi bir hassas fare görevine aktarılır. Tıklama Hızı testimiz, birden fazla zaman aralığında CPS'nizi ölçer.",
+      "sec1Heading": "Yazma Hızı ve Profesyonel Etki",
+      "sec1Text": "Ortalama bir yetişkin dakikada 40 WPM (Kelimeler/Dakika) hızla yazarken, profesyonel yazarlar dakikada 65–75 WPM'e ulaşır. 80–100 WPM'e ulaşmak, bilgi çalışmalarında yazmayı bir darboğaz olmaktan çıkararak parmakların düşüncelere ayak uydurmasını sağlar. Yazma testlerimiz hem brüt WPM'i hem de net doğruluğu ölçer.",
+      "sec2Heading": "Zihinsel Matematik Hızı",
+      "sec2Text": "Matematik Hızı testimiz sayısal işlemeyi ve zihinsel aritmetiği zorlar. Hızlı hesaplamalar yapma yeteneği; çalışan hafızaya, prosedürel kurallara ve işleme hızı becerilerine dayanır. Düzenli pratik yapmak, sayılara karşı sezgisel hissinizi geliştirir."
+    },
+    "accuracy": {
+      "sec0Heading": "Görsel-Uzamsal Zeka",
+      "sec0Text": "Görsel-uzamsal zeka; görsel bilgileri algılama, analiz etme ve zihinsel olarak manipüle etme yeteneğinizdir. Desen Eşleştirme testleri, görsel verilerdeki düzenlilikleri belirleme kapasitenizi değerlendirir. Zihinsel Döndürme, zihninizin gözünde 3D nesneleri manipüle etme yeteneğinizi zorlar.",
+      "sec1Heading": "İnce Motor Kontrolü ve Hassasiyet",
+      "sec1Text": "Hassasiyet Tıklama testleri, bir imleci küçük hedefler üzerinde doğru bir şekilde konumlandırma yeteneğinizi ölçer. İnce motor kontrolü beyincik, motor korteks ve proprioseptif geri bildirime bağlıdır. Düzenli pratik kas hafızası oluşturur, böylece hassas hareketler otomatistleşir.",
+      "sec2Heading": "Renk Algısı ve Tahmin",
+      "sec2Text": "Renk Eşleştirme ve Açı Tahmini araçlarımız, algısal kalibrasyonu — görsel özellikleri ne kadar doğrulukla yargıladığınızı — eğitir. Açı tahmini, geometri ve navigasyonda kullanılan uzamsal akıl yürütmeyi geliştirir. Anında geri bildirim, içsel bilişsel modelleri yeniden kalibre eder."
+    },
+    "gaming": {
+      "sec0Heading": "Nişan Alma Antrenmanı Mekaniği",
+      "sec0Text": "FPS oyunlarında nişan alma, ayrı mekaniklere ayrılır. Hedef takibi (Tracking), imlecinizi hareketli bir hedef üzerinde tutma yeteneğidir. Hızlı nişan alma (Flicking), imlecinizi ani hedeflere hızlıca oturtmaktır. Izgara tıklama (Grid click), değişen mesafelerdeki hedefleri hızla yeniden yakalama yeteneğini hedefler.",
+      "sec1Heading": "Espor Performansının Bilimi",
+      "sec1Text": "PLOS ONE'da yayınlanan bir araştırma, profesyonel oyuncuların oyuncu olmayanlara kıyasla önemli ölçüde daha hızlı görsel-motor işleme hızları sergilediğini ortaya koydu. Aksiyon video oyunu oyuncuları, bilinçli pratik yoluyla geliştirilmiş gelişmiş dikkat dağılımı ve algısal karar verme sergiler.",
+      "sec2Heading": "Optimum Isınma Protokolü",
+      "sec2Text": "5–10 dakikalık bir ısınma performansı artırır ve sakatlanma riskini azaltır. Yavaş, kontrollü hareketlerden oyun hızı reaksiyonlarına geçin: 2 dakika Izgara Tıklama ile başlayın, 3 dakika Aim Trainer ve ardından maksimum hızda 2 dakika Flick Shot ile devam edin."
+    }
+  },
+  "categoryGuide": {
+    "reflex": {
+      "whatIsTitle": "Refleks ve Rezonans (Reaksiyon) Eğitimi Nedir?",
+      "whatIsDesc": "Refleks eğitimi, duyusal bir uyaranın sunulması ile sonraki motor tepki arasında geçen toplam süreyi ölçer. Doğuştan gelen fizyolojik faktörler bir rol oynasa da düzenli antrenman, tereddüt ve karar yorgunluğunu ortadan kaldırmaya yardımcı olarak merkezi sinir sisteminizi belirli bir ipucu alır almaz motor nöronları anında ateşlemesi için eğitir.",
+      "howToTitle": "Reaksiyon Sürenizi Nasıl Geliştirebilirsiniz?",
+      "howToStep1Title": "Dikkat Dağıtıcı Unsurları Ortadan Kaldırın",
+      "howToStep1Desc": "Tamamen ekranınızın ortasındaki çapa noktasına odaklanın.",
+      "howToStep2Title": "En İyi Donanımı Kullanın",
+      "howToStep2Desc": "Yüksek yenileme hızına sahip bir monitör (144Hz+) ve düşük gecikmeli kablolu bir fare kullandığınızdan emin olun.",
+      "howToStep3Title": "Hidrate Kalın ve Dinlenin",
+      "howToStep3Desc": "Uyku eksikliği reaksiyon sürelerini 50 milisaniyeden fazla artırabilir.",
+      "howToStep4Title": "Günlük Pratik Yapın",
+      "howToStep4Desc": "Her gün sadece 5 dakikalık Reaksiyon Süresi ve Ses Refleksi testleri temel seviyenizi keskinleştirebilir.",
+      "shouldPracticeTitle": "Her Gün Pratik Yapmalı mıyım?",
+      "shouldPracticeDesc": "Evet. Sık ve kısa süreli antrenman seansları, beyninizi basit görevler için karmaşık bilişsel işlemeyi atlamaya koşullandırır ve bunun yerine daha hızlı, otomatik motor yollarına güvenir.",
+      "comparisonTitle": "Refleks Araçları Karşılaştırması",
+      "row1Tool": "Reaksiyon Süresi",
+      "row1BestFor": "Oyuncular, Genel Kitle",
+      "row1Benefit": "Temel görsel refleks hızını milisaniye cinsinden ölçer.",
+      "row2Tool": "Ses Refleksi",
+      "row2BestFor": "Sporcular (Koşu/Yüzme)",
+      "row2Benefit": "Görsel olanlardan daha hızlı işleyen işitsel yolları izole eder.",
+      "row3Tool": "Yönlü Refleks",
+      "row3BestFor": "Sürücüler, Kaleciler",
+      "row3Benefit": "Yönsel bir ipucunun fiziksel bir kaydırmaya bilişsel çevirisini eğitir.",
+      "benchmarksTitle": "Kıyaslamalar ve Bilimsel Kanıtlar",
+      "benchmarksDesc": "İnsan faktörü çalışmalarına göre, ortalama insan reaksiyon süresi görsel ipuçları için yaklaşık 250 milisaniye ve ses ipuçları için 170 milisaniyedir. Aktif tekrar ve nörolojik adaptasyon yoluyla, elit sporcular ve oyuncular görsel reaksiyon sürelerini 150 milisaniyenin altına düşürebilir. Journal of Sports Sciences tarafından yapılan bir çalışma, özel görsel-motor eğitimin rekabetçi ortamlarda reaksiyon gecikmesini önemli ölçüde azaltabileceği sonucuna varmıştır.",
+      "faqTitle": "Sıkça Sorulan Sorular",
+      "faq1Q": "Reaksiyon sürenizi gerçekten eğitebilir misiniz?",
+      "faq1A": "Ham genetik reaksiyon sürenizin kesin bir sınırı olsa da beyninizi sürekli olarak bu sınırın yaklaşması için kesinlikle eğitebilirsiniz. Araçlarımız, tereddütleri ve karar yorgunluğunu ortadan kaldırmaya yardımcı olarak sinir sisteminizi belirli bir ipucu aldığında anında ateşlemesi için eğitir.",
+      "faq2Q": "Ses reaksiyon süresi neden görselden daha hızlıdır?",
+      "faq2A": "İşitsel bir uyaranın beyne ulaşması görsel bir uyarandan daha az zaman alır. İşitsel korteks sesi, görsel korteksin karmaşık görsel bilgileri işlemesinden çok daha hızlı işler. Bir koşucunun yanıp sönen bir ışıktan ziyade başlangıç tabancasına tepki vermesinin nedeni budur."
+    },
+    "memory": {
+      "whatIsTitle": "Hafıza Eğitimi ve Bilişsel Geri Çağırma Nedir?",
+      "whatIsDesc": "Çalışma belleği, bilgileri geçici olarak tutmak ve işlemek için kullanılan zihinsel çalışma alanıdır. Uzun süreli belleğin aksine çalışma belleğinin kapasitesi sınırlıdır. Çeşitli hatırlama egzersizleriyle antrenman yapmak; beyni bilişsel yükü yönetmek, kalıpları daha hızlı tanımak ve baskı altında bilgiyi daha etkili bir şekilde akılda tutmak için koşullandırır.",
+      "howToTitle": "Çalışma Belleğinizi Nasıl Geliştirebilirsiniz?",
+      "howToStep1Title": "Parçalama (Chunking) Yöntemini Kullanın",
+      "howToStep1Desc": "Uzun sayıları veya karmaşık desenleri daha küçük, lokmalık parçalara ayırın.",
+      "howToStep2Title": "Mekansal Olarak Görselleştirin",
+      "howToStep2Desc": "Soyut sayıları veya kalıpları fiziksel şekiller veya ızgara koordinatlarıyla ilişkilendirin.",
+      "howToStep3Title": "Dikkat Dağıtıcı Unsurları Ortadan Kaldırın",
+      "howToStep3Desc": "Odaklanmanız tek bir saniye bile kayarsa çalışma belleği hızla zayıflar.",
+      "howToStep4Title": "Aşamalı Olarak Antrenman Yapın",
+      "howToStep4Desc": "Hatırlama doğruluğunuz sürekli olarak yüksek olana kadar daha düşük zorluk seviyelerinden başlayın.",
+      "shouldPracticeTitle": "Her Gün Pratik Yapmalı mıyım?",
+      "shouldPracticeDesc": "Evet. Tutarlı günl��k stimülasyon, beynin yeni sinir bağlantıları oluşturarak kendini yeniden organize etme yeteneği olan nöroplastisiteyi teşvik etmenin anahtarıdır.",
+      "comparisonTitle": "Hafıza Araçları Karşılaştırması",
+      "row1Tool": "Sayı Hafızası",
+      "row1BestFor": "Matematik öğrencileri, programcılar",
+      "row1Benefit": "Uzun sayı dizilerini tutmak için beynin fonolojik döngüsünü eğitir.",
+      "row2Tool": "Görsel Hafıza",
+      "row2BestFor": "Tasarımcılar, mimarlar",
+      "row2Benefit": "Mekansal koordinasyon için görsel-uzamsal eskiz defterini geliştirir.",
+      "row3Tool": "Sıralama Hafızası",
+      "row3BestFor": "Müzisyenler, genel biliş",
+      "row3Benefit": "Sıralı kalıp tanıma ve odaklanma dayanıklılığını artırır.",
+      "benchmarksTitle": "Kıyaslamalar ve Bilimsel Kanıtlar",
+      "benchmarksDesc": "George A. Miller'ın klasik çalışması, insanların genellikle anlık bellekte kabaca 7±2 parça tuttuğu fikrini popülerleştirdi. Parçalama gibi teknikler, saklamanız gereken bağımsız öğe sayısını azaltır. Ulusal Sağlık Enstitüleri (NIH) aracılığıyla tartışılan araştırmalar, çalışma belleği eğitimini incelemektedir. Reflextry üzerinde kendi basamak açıklığı (digit-span) ve hatırlama trendlerinizi aynı zorluk altında takip edin.",
+      "faqTitle": "Sıkça Sorulan Sorular",
+      "faq1Q": "Hafızanızı gerçekten geliştirebilir misiniz?",
+      "faq1A": "Evet. Uzun süreli hafıza kapasitenizi kolayca değiştiremeseniz de çalışma (kısa süreli) hafızanızı önemli ölçüde artırabilirsiniz. Sayı Hafızası veya Görsel Hafıza testlerimiz gibi araçlarla tutarlı pratik yapmak, beyninizi bilgileri daha verimli bir şekilde parçalara ayırmak için eğitir ve aynı anda daha fazla veriyi tutmanızı kolaylaştırır.",
+      "faq2Q": "Parçalama (Chunking) tekniği nedir?",
+      "faq2A": "Parçalama, daha küçük, bireysel veri parçalarını daha büyük, anlamlı birimler (parçalar) halinde gruplandırdığınız bir anımsatıcı stratejidir. Örneğin, 4-7-1-9-2-8 dizisini altı farklı basamak olarak hatırlamak yerine beyniniz bunları 471 ve 928 olarak gruplandırabilir, bu da bilişsel yükü altı öğeden sadece ikisine etkili bir şekilde düşürür."
+    },
+    "speed": {
+      "whatIsTitle": "Hız ve Nöromüsküler Hız (Velocity) Nedir?",
+      "whatIsDesc": "Hız testleri ham nöromüsküler çıktınızı ölçer; merkezi sinir sisteminizin parmaklarınıza, bileklerinize ve ellerinize ne kadar hızlı tekrarlayan motor sinyaller gönderebileceğini gösterir. Yüksek hızlı performans, hızlı kasılma gösteren kas tetiklemesini hassas fiziksel kontrolle dengelemeyi gerektirir.",
+      "howToTitle": "Tıklama ve Yazma Hızınızı Nasıl Geliştirebilirsiniz?",
+      "howToStep1Title": "El Pozisyonunu Optimize Edin",
+      "howToStep1Desc": "Akışkanlığı korumak için bileklerinizi masanızdan biraz yukarıda tutun.",
+      "howToStep2Title": "Alternatif Teknikleri Öğrenin",
+      "howToStep2Desc": "Fiziksel sınırları aşmak için jitter clicking veya butterfly clicking pratikleri yapın.",
+      "howToStep3Title": "Önce Doğruluğa Odaklanın",
+      "howToStep3Desc": "Yazım yanlışlarını düzeltmekle vakit geçirdiğinizde yazma hızı çarpıcı biçimde düşer.",
+      "howToStep4Title": "��ncesinde Isının",
+      "howToStep4Desc": "Soğuk parmaklar daha yavaş motor nöron iletim hızlarına sahiptir.",
+      "shouldPracticeTitle": "Her Gün Pratik Yapmalı mıyım?",
+      "shouldPracticeDesc": "Evet. 10 dakikalık kısa hız seansları, tekrarlayan zorlanma yaralanmalarına yol açmadan ellerde ve ön kollarda hızlı kasılan kas dayanıklılığı oluşturur.",
+      "comparisonTitle": "Hız Araçları Karşılaştırması",
+      "row1Tool": "Tıklama Hızı (CPS)",
+      "row1BestFor": "Minecraft PvP, MOBA Oyuncuları",
+      "row1Benefit": "Ham parmak tıklama dayanıklılığını ve hızını artırır.",
+      "row2Tool": "Yazma Testi (WPM)",
+      "row2BestFor": "Yazarlar, Kod Yazarlar, Veri Girişi",
+      "row2Benefit": "Dakika başına kelime oranını ve tuş vuruşu doğruluğunu ölçer ve artırır.",
+      "row3Tool": "Hızlı Matematik",
+      "row3BestFor": "Öğrenciler, Finansal Analistler",
+      "row3Benefit": "Zaman baskısı altında hızlı aritmetik işlemeyi eğitir.",
+      "benchmarksTitle": "Kıyaslamalar ve Bilimsel Kanıtlar",
+      "benchmarksDesc": "Ortalama internet kullanıcıları Dakikada kabaca 40 Kelime (WPM) hızla yazarken, profesyonel yazıcılar ve kod yazarlar düzenli olarak 90 WPM'yi aşmaktadır. Benzer şekilde, ortalama tıklama hızları 6 CPS civarındayken, rekabetçi oyuncular 10-14 CPS elde eder. PubMed'de yayınlanan insan motor performansı üzerine yapılan çalışmalara göre, anında geri bildirimle birleştirilen hedeflenmiş tekrar, motor eylem hızlarını kalıcı olarak artırmanın en etkili yoludur.",
+      "faqTitle": "Sıkça Sorulan Sorular",
+      "faq1Q": "CPS'mi nasıl artırabilirim?",
+      "faq1A": "Saniyedeki Tıklama Sayınızı (CPS) artırmak, parmaklarınızda ve ön kollarınızda özel kasılma kas lifleri geliştirmeyi gerektirir. Jitter clicking ve butterfly clicking gibi teknikler anında artış sağlayabilir, ancak uzun vadeli iyileştirme, dayanıklılık oluşturmak ve yorgunluğu önlemek için tutarlı, günlük dayanıklılık eğitimi gerektirir.",
+      "faq2Q": "WPM (Dakikadaki Kelime Sayısı) neden takılıp kaldı?",
+      "faq2A": "Yazma hızındaki duraksamalar genellikle parmak hızının eksikliğinden değil, doğruluk eksikliğinden kaynaklanır. Sürekli olarak geri tuşunu kullanıyorsanız, WPM'iniz önemli ölçüde düşecektir. Yazma Testi ve Kelime Doğruluğu araçlarımız önce hassasiyeti vurgular, bu da zamanla doğal olarak daha yüksek ham hızlara dönüşür."
+    },
+    "accuracy": {
+      "whatIsTitle": "Doğruluk ve Kesinlik Eğitimi Nedir?",
+      "whatIsDesc": "Doğruluk, hedeflenen bir hedef ile gerçek fiziksel uygulamanız arasındaki sapmayı temsil eder. Kesinlik içermeyen hız, maliyetli hatalara, boşa harcanan çabaya ve yüksek hata oranlarına yol açar. Piksel düzeyinde doğruluk geliştirmek, yüksek baskı senaryolarında tutarlılık sağlar.",
+      "howToTitle": "Doğruluk Puanınızı Nasıl Geliştirebilirsiniz?",
+      "howToStep1Title": "Yavaşlayın",
+      "howToStep1Desc": "Hız, kesinliğin bir yan ürünüdür. Sıfır hata yaptığınız bir tempoda hareket edin.",
+      "howToStep2Title": "DPI / Hassasiyeti Ayarlayın",
+      "howToStep2Desc": "Oyuncular için daha düşük fare hassasiyetleri genellikle nişan eğitmenlerinde daha yüksek kesinlik sağlar.",
+      "howToStep3Title": "Merkeze Odaklanın",
+      "howToStep3Desc": "Açı Tahmini gibi görsel görevlerde, dışarıya doğru tarama yapmadan önce gözlerinizi merkez köşeye sabitleyin.",
+      "howToStep4Title": "Nefes Alın",
+      "howToStep4Desc": "Acele etmek gerginliğe neden olur. Mikro ayarlamalara izin vermek için fiziksel olarak rahat kalın.",
+      "shouldPracticeTitle": "Her Gün Pratik Yapmalı mıyım?",
+      "shouldPracticeDesc": "Evet, ancak seansları kısa tutun. Yüksek hassasiyetli görevler bilişsel olarak yorucudur. Günde 5-10 dakika, yorgunluk kaynaklı hatalara neden olmadan doğru sinir yollarını pekiştirmek için yeterlidir.",
+      "comparisonTitle": "Doğruluk Araçları Karşılaştırması",
+      "row1Tool": "Hassas Tıklama",
+      "row1BestFor": "Grafik Tasarımcılar, Oyuncular",
+      "row1Benefit": "Küçük, alt piksel hedeflere tıklamak için ince motor kontrolünü geliştirir.",
+      "row2Tool": "Veri Giriş Doğruluğu",
+      "row2BestFor": "Programcılar, Yazıcılar",
+      "row2Benefit": "Karmaşık sözdizimi (syntax) veya alfasayısal diziler yazarken tuş vuruşu hatalarını azaltır.",
+      "row3Tool": "Açı Tahmini",
+      "row3BestFor": "Mimarlar, Sanatçılar",
+      "row3Benefit": "Bilişsel görsel-uzamsal zekayı ve geometrik algıyı geliştirir.",
+      "benchmarksTitle": "Kıyaslamalar ve Bilimsel Kanıtlar",
+      "benchmarksDesc": "Hıza karşı doğruluğa öncelik verme kavramı, genellikle 'yavaş pürüzsüzdür, pürüzsüz hızlıdır' askeri özdeyişinde özetlenen motor öğrenmenin temel bir ilkesidir. Journal of Experimental Psychology'ye göre, başlangıçta sadece kesinliğe odaklanmak, beynin gereken tam sinir yollarını miyelinlemesine izin vererek daha yüksek hızlarda hata düzeltme gecikmelerinin ortaya çıkmasını önler.",
+      "faqTitle": "Sıkça Sorulan Sorular",
+      "faq1Q": "Önce hızı mı yoksa doğruluğu mu eğitmeliyim?",
+      "faq1A": "Her zaman önce doğruluğu eğitin. Hızlı bir şekilde hata yapma alıştırması yaptığınızda, beyniniz kelimenin tam anlamıyla hata yapma konusunda daha iyi hale gelir. Yavaş bir tempoda %100 doğruluğu zorlayarak, oluşturduğunuz hareket kalıplarının kusursuz olmasını garanti edersiniz. Kalıp yerleştikten sonra hız doğal olarak gelecektir.",
+      "faq2Q": "Bu yazmama nasıl yardımcı olur?",
+      "faq2A": "Yüksek WPM'in (Dakikadaki Kelime Sayısı) önündeki en büyük engel, geri tuşuna basarak harcanan zamandır. Veri Giriş Doğruluğu gibi araçları kullanarak tuş vuruşlarınıza olan güveninizi artırır, ortalama yazıcıları yavaşlatan bilişsel tereddütleri önemli ölçüde azaltırsınız."
+    },
+    "gaming": {
+      "whatIsTitle": "Esports Nişan ve Isınma Eğitimi Nedir?",
+      "whatIsDesc": "Rekabetçi oyun, görsel reaksiyon, mikro nişan alma kesinliği ve akıcı hedef takibinin bir karışımını gerektirir. Profesyonel espor oyuncuları, rekabetçi maçlardan önce en yüksek bilişsel aktivasyona ulaşmak ve erken oyun hatalarından kaçınmak için özel ısınma rutinleri kullanır.",
+      "howToTitle": "Oyun İçi Nişanınızı Nasıl Geliştirebilirsiniz?",
+      "howToStep1Title": "Yavaş başlayın",
+      "howToStep1Desc": "Hızınızı artırmaya çalışmadan önce %100 doğruluk odaklanın.",
+      "howToStep2Title": "Doğru araçları kullanın",
+      "howToStep2Desc": "Akıcı nişan almak için Hedef Takibi (Target Tracking), hızlı refleksler için Nişan Atışı (Flick Shot) kullanın.",
+      "howToStep3Title": "Duruşu koruyun",
+      "howToStep3Desc": "Yorgunluk ve yaralanmayı önlemek için kolunuzun ve bileğinizin uygun şekilde desteklendiğinden emin olun.",
+      "howToStep4Title": "Günlük olarak ısının",
+      "howToStep4Desc": "Dereceli eşleştirmeye girmeden önce 10 dakikalık bir rutin büyük fark yaratır.",
+      "shouldPracticeTitle": "Her Gün Pratik Yapmalı mıyım?",
+      "shouldPracticeDesc": "Evet. 15-20 dakikalık tutarlı günlük pratik, haftada bir kez yapılan 2 saatlik bir seansa kıyasla nöroplastisite ve kas hafızası için daha iyi sonuçlar verir.",
+      "comparisonTitle": "Oyun Araçları Karşılaştırması",
+      "row1Tool": "Nişan Eğitmeni (Aim Trainer)",
+      "row1BestFor": "FPS Oyuncuları (Valorant, CS2)",
+      "row1Benefit": "Statik hedef tıklamasını ve genel fare kontrolünü iyileştirir.",
+      "row2Tool": "Flick Shot",
+      "row2BestFor": "Keskin nişancı rolleri, hızlı tempolu nişancı oyunları",
+      "row2Benefit": "Ani artı imleci (crosshair) geçişleri için hızlı kasılan kas hafızası oluşturur.",
+      "row3Tool": "Hedef Takibi (Target Tracking)",
+      "row3BestFor": "Apex Legends, Overwatch oyuncuları",
+      "row3Benefit": "Akıcı takip göz hareketlerini ve sürekli fare takibini geliştirir.",
+      "benchmarksTitle": "Kıyaslamalar ve Bilimsel Kanıtlar",
+      "benchmarksDesc": "Rekabetçi oyuncular genellikle sıradan kullanıcılara göre daha hızlı duyusal motor tepkileri gösterir ve Ulusal Biyoteknoloji Bilgi Merkezi (NCBI) tarafından kataloglanan araştırmalar, aksiyon oyunu pratiğini görsel dikkat ve motor kontroldeki kazançlarla ilişkilendirir. Reflextry'de Flick Shot ve Target Tracking'i izole mekanik matkaplar olarak ele alın: aynı fare ve zorluk derecesinde kendi temel çizgilerinizi kaydedin, ardından haftalar içinde daha istikrarlı bir doğruluk ve hedefe ulaşmak için daha temiz süreler arayın.",
+      "faqTitle": "Sıkça Sorulan Sorular",
+      "faq1Q": "Nişan eğitimi oyunumu gerçekten geliştiriyor mu?",
+      "faq1A": "Evet. Ni��an eğitmenleri, takip etme ve nişan alma gibi fareyi kullanmanın fiziksel mekaniklerini izole eder. Bunları oyun hissinden, harita farkındalığından ve stratejiden ayırarak, sadece oyunu tek başına oynamaktan çok daha hızlı ham mekanik kas hafızası oluşturabilirsiniz.",
+      "faq2Q": "Dereceli bir maçtan önce ısınmanın en iyi yolu nedir?",
+      "faq2A": "Sağlam bir maç öncesi ısınma 5-10 dakika sürmeli ve kademeli olarak daha hızlı hareketler içermelidir. Şu sırayı öneriyoruz: Temel doğruluğu oluşturmak için 2 dakika Aim Trainer, akıcı hareketler için 3 dakika Target Tracking ve hız sınırlarınızı zorlamak için 2 dakika Flick Shot."
+    }
+  }
+}

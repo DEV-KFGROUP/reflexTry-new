@@ -1,0 +1,944 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "reflex": "Refleks",
+    "memory": "Memori",
+    "speed": "Kecepatan",
+    "accuracy": "Akurasi",
+    "gaming": "Gaming",
+    "tools": "Semua Alat",
+    "leaderboard": "Papan Peringkat",
+    "challenges": "Tantangan",
+    "statistics": "Statistik",
+    "science": "Sains",
+    "blog": "Blog"
+  },
+  "common": {
+    "start": "Mulai Tes",
+    "restart": "Coba Lagi",
+    "next": "Berikutnya",
+    "finish": "Selesai",
+    "score": "Skor",
+    "time": "Waktu",
+    "bestScore": "Skor Terbaik",
+    "average": "Rata-rata",
+    "ms": "ms",
+    "wpm": "WPM",
+    "cps": "CPS",
+    "percentile": "Persentil",
+    "saveScore": "Simpan Skor",
+    "share": "Bagikan Hasil",
+    "instructions": "Instruksi",
+    "difficulty": "Tingkat Kesulitan",
+    "easy": "Mudah",
+    "medium": "Sedang",
+    "hard": "Sulit",
+    "expert": "Ahli",
+    "globalBenchmarks": "Patokan Global",
+    "howToPlay": "Cara Bermain",
+    "faq": "Pertanyaan yang Sering Diajukan",
+    "switchLanguage": "Bahasa",
+    "tools": "alat gratis"
+  },
+  "home": {
+    "heroBadge": "Patokan Performa Kognitif",
+    "heroTitle": "Ukur & Latih",
+    "heroTitleHighlight": "Kecepatan Otakmu",
+    "heroSubtitle": "Tes waktu reaksi presisi milidetik gratis, game memori kerja, patokan kecepatan mengetik, dan alat pemanasan bidikan FPS.",
+    "startTesting": "Mulai Tes Pertama",
+    "exploreTools": "Jelajahi 40+ Alat",
+    "popularTests": "Tes Populer",
+    "categories": "Kategori",
+    "statReaction": "Skor Waktu Reaksi",
+    "statTools": "Alat Interaktif",
+    "statFree": "Gratis & Di Peramban",
+    "enterArena": "Masuk ke Arena",
+    "startQuest": "Mulai Misi"
+  },
+  "categories": {
+    "reflex": {
+      "title": "Refleks & Reaksi",
+      "description": "Uji waktu reaksi visual dan auditori dengan keakuratan milidetik."
+    },
+    "memory": {
+      "title": "Memori Kerja",
+      "description": "Latih retensi memori, pola sekuens, dan kapasitas rentang visual."
+    },
+    "speed": {
+      "title": "Kecepatan Motorik & CPS",
+      "description": "Uji klik mouse per detik (CPS), kecepatan mengetik (WPM), dan ketangkasan berhitung."
+    },
+    "accuracy": {
+      "title": "Bidikan & Akurasi",
+      "description": "Pertajam presisi mikro-target, pengenalan pola, dan koordinasi tangan-mata."
+    },
+    "gaming": {
+      "title": "Pemanasan Esports",
+      "description": "Kalibrasi flick shot mouse, pelacakan target, dan refleks tempur untuk game kompetitif."
+    }
+  },
+  "footer": {
+    "tagline": "Platform pelatihan kognitif online gratis yang menyediakan waktu reaksi visual, memori kerja, WPM mengetik, dan patokan presisi bidikan.",
+    "quickLinks": "Tautan Cepat",
+    "tools": "Kategori",
+    "legal": "Hukum & Privasi",
+    "privacy": "Kebijakan Privasi",
+    "terms": "Ketentuan Layanan",
+    "cookies": "Kebijakan Cookie",
+    "contact": "Hubungi Kami",
+    "about": "Tentang Kami",
+    "rights": "Hak cipta dilindungi undang-undang.",
+    "features": "Fitur",
+    "achievements": "Pencapaian",
+    "research": "Penelitian",
+    "methodology": "Metodologi",
+    "trainingPrograms": "Program Latihan",
+    "faq": "FAQ",
+    "cookiePreferences": "Preferensi cookie",
+    "platformMethodology": "Tentang Platform & Metodologi Reflextry",
+    "brainTrainingTitle": "Pelatihan Otak:",
+    "brainTrainingText": "Kami membangun Reflextry untuk memberikan pandangan mentah dan tanpa filter kepada para gamer dan pemain kompetitif tentang mekanika dasar mereka. Tanpa basa-basi, hanya pelacakan performa murni. Dengan mendorong memori kerja dan pengenalan pola visual Anda hingga batas maksimal setiap hari, Anda memaksa otak membangun jalur saraf yang lebih cepat dan kuat—sebuah proses yang dikenal sebagai neuroplastisitas. Kami mengisolasi beban kognitif tertentu (seperti memori spasial dan memori sekuens) agar Anda dapat melatih persis apa yang menjadi kelemahan Anda.",
+    "esportsTitle": "Latensi Esports:",
+    "esportsText": "Dalam game kompetitif, 50 milidetik adalah perbedaan antara mengeklik kepala musuh dan dikirim kembali ke lobi. Arena Kecepatan dan Refleks kami menepis semua mekanika game eksternal untuk mengukur waktu reaksi biologis mentah Anda. Kami melacak Klik per Detik (CPS), akurasi flick shot, dan kecepatan pelacakan mentah Anda. Kami sangat mengoptimalkan lingkungan pengujian untuk memangkas lag masukan tingkat peramban, memberi Anda pengukuran nyata dari kerja sama perangkat keras dan sistem saraf Anda. Gunakan alat ini untuk memanaskan otot kedutan cepat Anda sebelum terjun ke mode peringkat.",
+    "accuracyTitle": "Akurasi:",
+    "accuracyText": "Kecepatan tidak ada artinya jika Anda meleset. Hub Akurasi memaksa Anda untuk fokus dan memprioritaskan presisi di atas kecepatan mentah. Melalui kisi spasial, estimasi sudut, dan pencocokan warna, Anda menyempurnakan kontrol motorik halus. Melatih kecepatan dan akurasi secara bersamaan mengajarkan sistem saraf pusat Anda untuk mengeksekusi gerakan mekanis yang rumit secara efisien. Kami menyimpan semua data sesi Anda sehingga Anda dapat benar-benar melihat kurva performa Anda naik dari waktu ke waktu. 10 menit latihan terfokus di sini jauh lebih baik daripada 5 jam grinding tanpa arah.",
+    "clinicalRef": "Referensi Klinis:",
+    "brainTrainingResearch": "penelitian pelatihan otak",
+    "allRightsReserved": "HAK CIPTA DILINDUNGI UNDANG-UNDANG.",
+    "lastUpdate": "PEMBARUAN TERAKHIR: JUL 2026",
+    "builtWith": "DIBUAT DENGAN",
+    "forGamers": "UNTUK GAMER"
+  },
+  "guide": {
+    "howItWorks": "Cara Kerja & Tips",
+    "subtitle": "Kuasai permainan dengan panduan lengkap dan strategi peningkatan kami.",
+    "jumpTo": "Lompat ke",
+    "about": "Tentang",
+    "howToPlay": "Cara Bermain",
+    "proTips": "Tips Pro",
+    "faq": "FAQ",
+    "aboutTest": "Tentang Tes Ini",
+    "trains": "Kemampuan yang Dilatih",
+    "instructions": "Instruksi & Mekanisme",
+    "quickSetup": "Pengaturan Cepat",
+    "keyRules": "Aturan Utama:",
+    "strategies": "Strategi Ahli",
+    "faqs": "Pertanyaan yang Sering Diajukan",
+    "continueTraining": "Lanjutkan Latihan"
+  },
+  "game": {
+    "difficultyLevel": "Tingkat Kesulitan",
+    "sessionStats": "Statistik Sesi",
+    "active": "Aktif",
+    "soundOn": "Suara Nyala",
+    "unmute": "Bunyikan Suara",
+    "arena": "ARENA",
+    "initializeTest": "Mulai Tes",
+    "calibrationComplete": "Kalibrasi Selesai",
+    "finalScore": "Skor Akhir:",
+    "newRecord": "Rekor Baru!",
+    "recalibrate": "Kalibrasi Ulang",
+    "menu": "Menu",
+    "seen": "Pernah",
+    "new": "Baru",
+    "diffBeginner": "Pemula",
+    "diffEasy": "Mudah",
+    "diffNormal": "Normal",
+    "diffHard": "Sulit",
+    "diffProfessional": "Profesional",
+    "diffExpert": "Pakar",
+    "telemetryStream": "ALIRAN_TELEMETRI"
+  },
+  "stats": {
+    "score": "Skor",
+    "best": "Terbaik",
+    "lives": "Nyawa",
+    "timeleft": "Sisa Waktu",
+    "time": "Waktu",
+    "trial": "Percobaan",
+    "rt": "WR",
+    "avgrt": "WR Rata-rata",
+    "bestrt": "WR Terbaik",
+    "attempt": "Percobaan",
+    "errors": "Kesalahan",
+    "round": "Ronde",
+    "averageerr": "Rata-rata Galat",
+    "besterr": "Galat Terkecil",
+    "targetmargin": "Margin Target",
+    "level": "Tingkat",
+    "objects": "Objek",
+    "target": "Target",
+    "grid": "Kisi",
+    "avgspeed": "Kecepatan Rata-rata",
+    "bestclick": "Klik Terbaik",
+    "failpenalty": "Penalti"
+  },
+  "verbalMemory": {
+    "title": "MEMORI VERBAL",
+    "subtitle": "PENGENALAN LEKSIKAL",
+    "arenaGoal": "IDENTIFIKASI STIMULUS BARU",
+    "testTitle": "Tes Memori Verbal",
+    "testDesc": "Uji daya ingat verbal Anda. Ingat kata mana yang sudah pernah muncul dan mana yang baru.",
+    "beginnerDesc": "50 Kata · 5 Nyawa",
+    "easyDesc": "100 Kata · 3 Nyawa",
+    "normalDesc": "300 Kata · 3 Nyawa",
+    "hardDesc": "500 Kata · 1 Nyawa",
+    "proDesc": "1000 Kata · Batas 3 detik"
+  },
+  "tools": {
+    "sequence-memory": {
+      "title": "Tes Memori Sekuens",
+      "desc": "Latih kemampuan mengingat pola lampu spasial yang semakin panjang dengan Tes Memori Sekuens gratis kami. Baca aturan penilaian dan bandingkan sesi latihanmu."
+    },
+    "sequence": {
+      "title": "Tes Memori Sekuens",
+      "desc": "Latih kemampuan mengingat pola lampu spasial yang semakin panjang dengan Tes Memori Sekuens gratis kami. Baca aturan penilaian dan bandingkan sesi latihanmu."
+    },
+    "number-memory": {
+      "title": "Tes Memori Angka",
+      "desc": "Ukur memori kerja dan kapasitas digit span dengan Tes Memori Angka gratis kami. Hafalkan urutan angka yang terus bertambah dan ukur skor ingatanmu."
+    },
+    "number": {
+      "title": "Tes Memori Angka",
+      "desc": "Ukur memori kerja dan kapasitas digit span dengan Tes Memori Angka gratis kami. Hafalkan urutan angka yang terus bertambah dan ukur skor ingatanmu."
+    },
+    "visual-memory": {
+      "title": "Tes Memori Visual",
+      "desc": "Tingkatkan retensi visual dan pengenalan pola spasial. Uji memori visualmu dengan mengingat pola grid kilat pada matriks yang meluas. Alat human benchmark gratis."
+    },
+    "visual": {
+      "title": "Tes Memori Visual",
+      "desc": "Tingkatkan retensi visual dan pengenalan pola spasial. Uji memori visualmu dengan mengingat pola grid kilat pada matriks yang meluas. Alat human benchmark gratis."
+    },
+    "color-memory": {
+      "title": "Tes Memori Warna",
+      "desc": "Tantang memori kromatik dan perhatian visualmu. Hafalkan urutan warna yang berubah dengan cepat dan latih fleksibilitas kognitif dengan Tes Memori Warna gratis kami."
+    },
+    "color": {
+      "title": "Tes Memori Warna",
+      "desc": "Tantang memori kromatik dan perhatian visualmu. Hafalkan urutan warna yang berubah dengan cepat dan latih fleksibilitas kognitif dengan Tes Memori Warna gratis kami."
+    },
+    "shape-memory": {
+      "title": "Tes Memori Bentuk",
+      "desc": "Latih diskriminasi bentuk geometris dan memori spasial. Hafalkan bentuk abstrak dan simbol untuk meningkatkan penalaran visual non-verbal serta fokus."
+    },
+    "shape": {
+      "title": "Tes Memori Bentuk",
+      "desc": "Latih diskriminasi bentuk geometris dan memori spasial. Hafalkan bentuk abstrak dan simbol untuk meningkatkan penalaran visual non-verbal serta fokus."
+    },
+    "symbol-memory": {
+      "title": "Tes Memori Simbol",
+      "desc": "Tingkatkan pengenalan pola abstrak dan memori asosiatif. Cocokkan simbol dan ikon kriptik untuk mempertajam fokus mental dan kecepatan pemrosesan visual."
+    },
+    "symbol": {
+      "title": "Tes Memori Simbol",
+      "desc": "Tingkatkan pengenalan pola abstrak dan memori asosiatif. Cocokkan simbol dan ikon kriptik untuk mempertajam fokus mental dan kecepatan pemrosesan visual."
+    },
+    "word-recall": {
+      "title": "Tes Memori Mengingat Kata",
+      "desc": "Evaluasi retensi memori verbal dan pengenalan kosakata Anda. Uji apakah kata-kata tersebut baru atau pernah dilihat sebelumnya untuk mengukur memori linguistik jangka pendek."
+    },
+    "card-match": {
+      "title": "Game Memori Pencocokan Kartu",
+      "desc": "Latih memori spasial dan mengingat pola visual dengan Game Memori Pencocokan Kartu online gratis kami. Balik kartu, cocokkan pasangan dengan gerakan paling sedikit, dan kalahkan waktu."
+    },
+    "chimp-test": {
+      "title": "Chimp Test",
+      "desc": "Apakah Anda lebih pintar dari simpanse? Ikuti Chimp Test yang terkenal untuk mengukur memori kerja visuospatial Anda. Hafalkan kisi angka sebelum menghilang."
+    },
+    "verbal-memory": {
+      "title": "Tes Memori Verbal",
+      "desc": "Uji memori kerja verbal dengan Tes Memori Verbal gratis kami. Identifikasi kata yang sudah dilihat vs kata baru untuk mengukur retensi linguistik dan kecepatan pemrosesan kognitif."
+    },
+    "object-tracking": {
+      "title": "Multiple Object Tracking",
+      "desc": "Uji perhatian visual dinamis dan pelacakan spasial. Ikuti beberapa bola target yang bergerak di antara pengecoh dalam tes kognitif berbasis sains ini."
+    },
+    "n-back": {
+      "title": "Tes N",
+      "desc": "Latih memori kerja dengan tugas klasik N-Back. Cocokkan huruf yang muncul N langkah sebelumnya, lacak kecocokan dan akurasi, serta tingkatkan dari 1-back ke 3-back."
+    },
+    "reaction-time": {
+      "title": "Tes Waktu Reaksi",
+      "desc": "Uji dan tingkatkan waktu reaksi visual Anda dalam milidetik. Ikuti tes reaksi milidetik gratis kami, bandingkan dengan gamer profesional, dan lacak progres refleks Anda."
+    },
+    "reaction": {
+      "title": "Tes Reaksi Gamer Esports",
+      "desc": "Uji refleks tempur kompetitif, waktu parry quick-time event (QTE), dan kecepatan reaksi esports dalam skenario pertarungan simulasi dengan akurasi milidetik."
+    },
+    "sound-reaction": {
+      "title": "Tes Waktu Reaksi Audio",
+      "desc": "Ukur kecepatan reaksi auditori Anda dalam milidetik. Uji refleks pendengaran dengan isyarat audio instan dan bandingkan waktu reaksi suara vs waktu reaksi visual Anda."
+    },
+    "sound": {
+      "title": "Tes Waktu Reaksi Audio",
+      "desc": "Ukur kecepatan reaksi auditori Anda dalam milidetik. Uji refleks pendengaran dengan isyarat audio instan dan bandingkan waktu reaksi suara vs waktu reaksi visual Anda."
+    },
+    "grid-shot": {
+      "title": "Grid Shot Aim Trainer",
+      "desc": "Panaskan bidikan (aim) dan kecepatan mouse Anda dengan Grid Shot. Klik target yang muncul dengan cepat di seluruh grid untuk meningkatkan koordinasi tangan-mata untuk game FPS seperti Valorant dan CS2."
+    },
+    "grid": {
+      "title": "Tes Kecepatan Grid",
+      "desc": "Latih pemindaian visual dan kecepatan membaca perifer dengan Tabel Schulte. Temukan angka secara berurutan pada grid 5x5 untuk memperluas kecepatan pencarian visual."
+    },
+    "peripheral-vision": {
+      "title": "Tes Visi Perifer",
+      "desc": "Latih kesadaran visi perifer dan kecepatan reaksi samping. Temukan dan klik stimulus di luar pusat untuk memperluas fokus visual untuk mengemudi, olahraga, dan gaming kompetitif."
+    },
+    "peripheral": {
+      "title": "Tes Visi Perifer",
+      "desc": "Latih kesadaran visi perifer dan kecepatan reaksi samping. Temukan dan klik stimulus di luar pusat untuk memperluas fokus visual untuk mengemudi, olahraga, dan gaming kompetitif."
+    },
+    "directional-reflex": {
+      "title": "Tes Refleks Terarah",
+      "desc": "Uji kecepatan respons keyboard dan pengambilan keputusan spasial. Tekan tombol panah yang cocok dengan prompt arah cepat untuk meningkatkan pemrosesan kognitif dan kelincahan refleks."
+    },
+    "direction": {
+      "title": "Tes Refleks Terarah",
+      "desc": "Uji kecepatan respons keyboard dan pengambilan keputusan spasial. Tekan tombol panah yang cocok dengan prompt arah cepat untuk meningkatkan pemrosesan kognitif dan kelincahan refleks."
+    },
+    "multi-stimulus": {
+      "title": "Tes Reaksi Multi",
+      "desc": "Uji waktu reaksi pilihan dan perhatian selektif. Proses beberapa stimulus visual dan audio secara bersamaan untuk mengukur kecepatan pengambilan keputusan sepersekian detik."
+    },
+    "sequence-reaction": {
+      "title": "Tes Reaksi Urutan",
+      "desc": "Gabungkan pemanggilan memori dengan refleks motorik cepat. Ikuti urutan lampu bertempo cepat dan eksekusi kombo cepat untuk melatih waktu respons dan kecepatan ritmik."
+    },
+    "whack-a-mole": {
+      "title": "Whack",
+      "desc": "Mainkan Whack-a-Mole klasik secara online gratis. Ketuk tikus tanah yang muncul secepat mungkin untuk mengukur kecepatan reaksi, klik presisi, dan kelincahan motorik."
+    },
+    "color-switch": {
+      "title": "Tes Refleks Color Switch",
+      "desc": "Latih waktu reaksi warna dan kecepatan respons selektif. Bereaksi segera terhadap perubahan warna layar dan sinyal kilat tanpa keraguan."
+    },
+    "time-perception": {
+      "title": "Tes Persepsi Waktu",
+      "desc": "Uji jam internal dan estimasi temporal Anda. Tahan dan lepaskan tombol untuk menghasilkan interval waktu target secara akurat hingga tingkat milidetik."
+    },
+    "go-no-go": {
+      "title": "Tes Go / No",
+      "desc": "Ukur inhibisi respons dengan tugas Go/No-Go. Tekan pada percobaan Go hijau, tahan pada percobaan No-Go merah, dan lacak akurasi beserta waktu reaksi."
+    },
+    "flanker": {
+      "title": "Tes Flanker",
+      "desc": "Ikuti tugas Eriksen Flanker secara online. Respons panah tengah sambil mengabaikan flanker yang kongruen atau tidak kongruen untuk mengukur kontrol perhatian."
+    },
+    "choice-reaction": {
+      "title": "Tes Waktu Reaksi Pilihan",
+      "desc": "Ukur waktu reaksi pilihan di 2–4 target berwarna. Klik kotak yang menyala secepat mungkin dan kalahkan rata-rata RT Anda dalam milidetik."
+    },
+    "cps-test": {
+      "title": "Uji CPS",
+      "desc": "Ukur kecepatan klik Anda dengan Uji CPS gratis kami. Uji mode 1d, 5d, 10d, 30d, dan 60d untuk klik normal, jitter clicking, butterfly clicking, dan drag clicking."
+    },
+    "click": {
+      "title": "Uji CPS",
+      "desc": "Ukur kecepatan klik Anda dengan Uji CPS gratis kami. Uji mode 1d, 5d, 10d, 30d, dan 60d untuk klik normal, jitter clicking, butterfly clicking, dan drag clicking."
+    },
+    "speed-math": {
+      "title": "Uji Kecepatan Matematika Mental",
+      "desc": "Pertajam aritmatika mental dan kecepatan kalkulasi Anda. Selesaikan penjumlahan, pengurangan, perkalian, dan pembagian cepat di bawah pengatur waktu untuk meningkatkan kelancaran matematika."
+    },
+    "math": {
+      "title": "Uji Kecepatan Matematika Mental",
+      "desc": "Pertajam aritmatika mental dan kecepatan kalkulasi Anda. Selesaikan penjumlahan, pengurangan, perkalian, dan pembagian cepat di bawah pengatur waktu untuk meningkatkan kelancaran matematika."
+    },
+    "math-speed": {
+      "title": "Uji Kecepatan Matematika Mental",
+      "desc": "Pertajam aritmatika mental dan kecepatan kalkulasi Anda. Selesaikan penjumlahan, pengurangan, perkalian, dan pembagian cepat di bawah pengatur waktu untuk meningkatkan kelancaran matematika."
+    },
+    "typing-speed": {
+      "title": "Uji Kecepatan Mengetik",
+      "desc": "Uji kata per menit (WPM) dan akurasi dengan Uji Kecepatan Mengetik 1 menit gratis kami. Tolok ukur kecepatan keyboard Anda, lacak tingkat kesalahan, dan tingkatkan teknik mengetik 10 jari."
+    },
+    "typing": {
+      "title": "Uji Kecepatan Mengetik",
+      "desc": "Uji kata per menit (WPM) dan akurasi dengan Uji Kecepatan Mengetik 1 menit gratis kami. Tolok ukur kecepatan keyboard Anda, lacak tingkat kesalahan, dan tingkatkan teknik mengetik 10 jari."
+    },
+    "word-accuracy": {
+      "title": "Uji Akurasi Kata",
+      "desc": "Tingkatkan ketepatan mengetik dan hilangkan kesalahan ketukan tombol. Ketik kata-kata prompt berkecepatan tinggi dengan akurasi 100% untuk menguasai kemampuan mengetik bebas kesalahan di bawah tekanan waktu."
+    },
+    "words": {
+      "title": "Tes Kecepatan Membaca",
+      "desc": "Uji kecepatan membaca dan pengenalan kata. Ukur kelancaran membaca kata per menit dan identifikasi visual cepat dengan alat Speed Words interaktif kami."
+    },
+    "word-speed": {
+      "title": "Tes Kecepatan Membaca",
+      "desc": "Uji kecepatan membaca dan pengenalan kata. Ukur kelancaran membaca kata per menit dan identifikasi visual cepat dengan alat Speed Words interaktif kami."
+    },
+    "grid-selection": {
+      "title": "Tes Kecepatan Grid",
+      "desc": "Latih pemindaian visual dan kecepatan membaca perifer dengan Tabel Schulte. Temukan angka secara berurutan pada grid 5x5 untuk memperluas kecepatan pencarian visual."
+    },
+    "grid-speed": {
+      "title": "Tes Kecepatan Grid",
+      "desc": "Latih pemindaian visual dan kecepatan membaca perifer dengan Tabel Schulte. Temukan angka secara berurutan pada grid 5x5 untuk memperluas kecepatan pencarian visual."
+    },
+    "number-rush": {
+      "title": "Tes Kecepatan Number Rush",
+      "desc": "Uji pengenalan angka cepat dan kecepatan ketukan. Cari dan klik angka secara berurutan secepat mungkin untuk menguji tingkat pemrosesan kognitif Anda."
+    },
+    "quick-sort": {
+      "title": "Game Kecepatan Quick Sort",
+      "desc": "Tantang kategorisasi kognitif dan kecepatan keputusan cepat. Urutkan item yang masuk ke dalam kategori yang sesuai dalam batas waktu yang ketat."
+    },
+    "schulte-table": {
+      "title": "Tes Tabel Schulte",
+      "desc": "Tantangan Tabel Schulte klasik. Klik angka acak secara berurutan pada grid 3×3 hingga 7×7. Latih penglihatan perifer, kecepatan pencarian visual, dan fokus di bawah batas waktu."
+    },
+    "aim-trainer": {
+      "title": "Pelatih Aim FPS",
+      "desc": "Tingkatkan akurasi mouse, pelacakan target, dan kecepatan flick Anda untuk game FPS seperti Valorant, CS2, dan Apex. Pelatih aim 3D gratis langsung di peramban web Anda."
+    },
+    "aim": {
+      "title": "Pelatih Aim FPS",
+      "desc": "Tingkatkan akurasi mouse, pelacakan target, dan kecepatan flick Anda untuk game FPS seperti Valorant, CS2, dan Apex. Pelatih aim 3D gratis langsung di peramban web Anda."
+    },
+    "rpg-reaction": {
+      "title": "Tes Reaksi Gamer Esports",
+      "desc": "Uji refleks tempur kompetitif, waktu parry quick-time event (QTE), dan kecepatan reaksi esports dalam skenario pertarungan simulasi dengan akurasi milidetik."
+    },
+    "endless-dodge": {
+      "title": "Game Menghindar Tanpa Henti",
+      "desc": "Uji refleks menghindar dan kelincahan evasi spasial. Navigasikan kursor Anda melewati kerumunan rintangan bergerak yang tak terbatas dalam game bertahan hidup refleks intensitas tinggi ini."
+    },
+    "stroop-drop": {
+      "title": "Tes Efek Stroop",
+      "desc": "Tantang kontrol inhibisi Anda dengan game interaktif Stroop Drop. Atasi interferensi kognitif antara kata warna yang jatuh dan warna tintanya."
+    },
+    "target-tracking": {
+      "title": "Pelatih Bidik Pelacakan Target",
+      "desc": "Kuasai pelacakan mouse yang mulus untuk game FPS kompetitif. Latih bidikan presisi kontinu terhadap target bergerak yang lihai tanpa pelumasan mouse."
+    },
+    "flick-shot": {
+      "title": "Pelatih Bidik Flick Shot",
+      "desc": "Latih memori otot dan bidikan snap dengan pelatih Flick Shot kami. Kalibrasi penyesuaian mikro yang cepat dan perolehan target untuk penembak taktis."
+    },
+    "rhythm-tap": {
+      "title": "Game Rhythm Tap",
+      "desc": "Uji keakuratan waktu musik dan persepsi ritme dalam milidetik. Ketuk selaras dengan peningkatan tempo BPM dan lacak kesalahan latensi."
+    },
+    "image-recognition": {
+      "title": "Tes Image Recognition",
+      "desc": "Uji persepsi visual dan diskriminasi gambar cepat. Identifikasi perbedaan visual yang halus dan cocokkan objek target pada kecepatan tinggi untuk melatih keterampilan observasi."
+    },
+    "data-entry": {
+      "title": "Tes Akurasi Data Entry",
+      "desc": "Ukur kecepatan input data, presisi pengetikan alfanumerik, dan tingkat kesalahan. Uji keystrokes per hour (KPH) administratif dengan benchmark numerik dan kode yang realistis."
+    },
+    "data": {
+      "title": "Tes Akurasi Data Entry",
+      "desc": "Ukur kecepatan input data, presisi pengetikan alfanumerik, dan tingkat kesalahan. Uji keystrokes per hour (KPH) administratif dengan benchmark numerik dan kode yang realistis."
+    },
+    "pattern-matching": {
+      "title": "Tes Pattern Matching",
+      "desc": "Tingkatkan pengenalan pola visual dan penalaran non-verbal. Cocokkan pola matriks kompleks dan sekuens geometris untuk menguji ketajaman visual dan pemikiran analitis."
+    },
+    "precision-click": {
+      "title": "Tes Precision Clicking",
+      "desc": "Pertajam presisi mouse dan akurasi target mikro. Klik target kecil dan presisi tanpa meleset untuk menyempurnakan kontrol motorik halus dan akurasi kursor untuk gaming."
+    },
+    "angle-estimation": {
+      "title": "Tes Estimasi Sudut",
+      "desc": "Uji ketelitian mata Anda terhadap geometri dan estimasi spasial. Tebak derajat sudut yang diberikan secara akurat untuk menguji ketajaman sudut visual dan penilaian spasial."
+    },
+    "color-match": {
+      "title": "Tes Pencocokan Warna",
+      "desc": "Uji persepsi warna dan diskriminasi nuansa halus dengan Tes Pencocokan Warna kami. Cocokkan rona RGB target di bawah tekanan waktu dan uji presisi visual Anda."
+    },
+    "color-blindness": {
+      "title": "Tes Buta Warna",
+      "desc": "Jelajahi plat titik prosedural gaya Ishihara dalam game penglihatan warna edukasi gratis. Pengaturan layar mempengaruhi hasil; ini bukan penilaian diagnostik."
+    },
+    "mental-rotation": {
+      "title": "Tes Rotasi Mental",
+      "desc": "Uji visualisasi spasial 3D dan kecepatan rotasi kognitif Anda. Tentukan apakah bentuk geometri kompleks itu identik atau merupakan cerminan terbalik secara real-time."
+    }
+  },
+  "homeContent": {
+    "whatIsReflextryTitle": "Apa itu Reflextry?",
+    "whatIsReflextryDesc1": "Reflextry menawarkan lebih dari 50 game peramban gratis untuk waktu reaksi, memori, mengetik, mengeklik, akurasi, dan latihan membidik. Setiap tes mencatat skor untuk tugas tersebut sehingga Anda dapat membandingkan sesi Anda sendiri.",
+    "whatIsReflextryDesc2": "Skor peramban mencakup efek dari layar, perangkat masukan, peramban, dan pengaturan tes Anda. Ini bukanlah pengukuran langsung dari latensi biologis atau penilaian klinis.",
+    "comparableSessionsTitle": "Buat sesi latihan Anda dapat dibandingkan",
+    "comparableStep1": "Pilih tes, tingkat kesulitan, dan perangkat masukan yang sama setiap kali.",
+    "comparableStep2": "Baca aturan penilaian sebelum mulai. Milidetik, akurasi, panjang rentang, dan kata per menit mendeskripsikan tugas yang berbeda.",
+    "comparableStep3": "Ulangi beberapa percobaan dan bandingkan tren daripada hanya melihat satu skor yang luar biasa tinggi.",
+    "comparableStep4": "Beristirahatlah jika Anda merasa lelah atau tidak nyaman.",
+    "comparableFooterPre": "Baca ",
+    "testingMethodology": "metodologi pengujian",
+    "comparableFooterMid": " kami untuk rumus penilaian dan batasan perangkat keras. ",
+    "personalStatistics": "Statistik pribadi",
+    "comparableFooterPost": " Anda menunjukkan kemajuan yang Anda rekam sendiri, bukan norma populasi.",
+    "betterScoreTitle": "Apa arti skor yang lebih baik",
+    "betterScoreDesc1Pre": "Peningkatan latihan paling terasa pada tugas yang dilatih; manfaat luas dalam kognisi sehari-hari belum begitu mapan. Lihat ",
+    "simonsReview": "ulasan penelitian pelatihan otak oleh Simons dan rekan-rekan",
+    "betterScoreDesc1Post": ". Penelitian ini tidak memvalidasi Reflextry sebagai tes medis atau kecerdasan.",
+    "betterScoreDesc2Pre": "Kami tidak menerbitkan kumpulan data tolok ukur global yang telah diverifikasi. Gunakan hasil berulang Anda sendiri sebagai garis dasar latihan. Untuk latar belakang dan referensi, kunjungi ",
+    "theSciencePage": "halaman sains",
+    "betterScoreDesc2Post": ".",
+    "faqTitle": "Pertanyaan yang sering diajukan",
+    "faq1Q": "Apakah pelatihan otak benar-benar berfungsi?",
+    "faq1A": "Latihan dapat meningkatkan performa pada tugas yang Anda latih. Skor game yang lebih baik tidak membuktikan peningkatan kecerdasan, mengemudi yang lebih aman, atau pencegahan penurunan kognitif. Tes Reflextry adalah alat latihan, bukan penilaian klinis.",
+    "faq2Q": "Seberapa sering saya harus berlatih?",
+    "faq2A": "Mulailah dengan sesi singkat yang sesuai dengan jadwal Anda dan berhenti saat lelah atau tidak nyaman. Bandingkan tes dan tingkat kesulitan yang sama pada perangkat yang sama. Tidak ada dosis latihan Reflextry yang tervalidasi atau jadwal peningkatan yang dijamin.",
+    "faq3Q": "Bisakah saya menggunakan Reflextry untuk pemanasan esports?",
+    "faq3A": "Anda dapat menggunakan game membidik, melacak, dan reaksi untuk pemanasan berbasis peramban. Skornya mengukur performa dalam latihan ini, bukan peringkat atau kemungkinan performa Anda di game lain.",
+    "faq4Q": "Apakah Reflextry gratis?",
+    "faq4A": "Tes-tes ini gratis dimainkan di peramban Anda. Anda dapat memulai tes tanpa membuat akun.",
+    "aboutTheLab": "Tentang laboratorium",
+    "aboutTheLabDesc": "Siapa yang membangun Reflextry, metodologi kami, dan cara menghubungi kami.",
+    "allGuides": "Semua panduan",
+    "allGuidesDesc": "Artikel memori, refleks, kecepatan, dan akurasi dari Cognitive Journal.",
+    "faqCardTitle": "FAQ",
+    "faqCardDesc": "Frekuensi latihan, privasi, penilaian, dan pertanyaan umum seputar produk.",
+    "whatReflextryMeasures": "Apa yang Diukur oleh Reflextry",
+    "whatReflextryMeasuresDesc": "Tes peramban gratis untuk waktu reaksi, memori kerja, kecepatan klik, bidikan, dan akurasi. Ukur garis dasar, berlatihlah dalam sesi singkat, dan lacak kemajuan di halaman statistik—tidak perlu akun untuk alat inti.",
+    "journalBadge": "Jurnal Lab Kognitif",
+    "journalTitle": "Ukur dulu. Latihan singkat. Baca metodenya.",
+    "journalDesc": "Reflextry adalah lab peramban gratis untuk waktu reaksi, memori kerja, kecepatan, dan akurasi. Skor disajikan secara transparan (milidetik, rentang, akurasi)—bukan diagnosis klinis atau persentil rekayasa. Mulailah dengan baseline, berlatihlah dalam sesi 10–15 menit, dan gunakan panduan kami untuk memahami sains di balik setiap angka.",
+    "scoreGuideTitle": "Bagaimana kami menilai tes",
+    "scoreGuideDesc": "Arti milidetik, rentang memori, dan akurasi—serta batasan klaim kami.",
+    "reactionTimeGuideTitle": "Berapa waktu reaksi yang baik?",
+    "reactionTimeGuideDesc": "Rentang realistis, interferensi perangkat keras, dan cara membaca skor Anda sendiri.",
+    "choiceReactionGuideTitle": "Reaksi pilihan vs reaksi sederhana",
+    "choiceReactionGuideDesc": "Mengapa lebih banyak pilihan memperlambat Anda, dan cara melatih masing-masing secara terpisah."
+  },
+  "categoryHub": {
+    "reflex": {
+      "heroTitle": "Latihan Refleks & Game Reaksi",
+      "heroSubtitle": "Ukur waktu reaksi visual dan auditori Anda hingga tingkat milidetik.",
+      "heroDesc": "Dalam olahraga profesional, esports, dan berkendara, waktu refleks sangatlah krusial. Rangkaian refleks kami mengisolasi jalur sensorik yang berbeda—visual, auditori, dan arah—sehingga Anda dapat mengidentifikasi waktu respons tercepat dan berlatih untuk menurunkan latensi Anda.",
+      "whatItCovers": "Cakupan Arena Ini",
+      "whatItCoversDesc": "Tes reaksi visual dan auditori yang diukur dalam milidetik—reaksi sederhana, isyarat suara, klik kisi, target periferal, dan pilihan multi-stimulus. Dibangun untuk mengisolasi latensi stimulus-ke-respons untuk latihan dan pemanasan.",
+      "benefit1Title": "Refleks Visual",
+      "benefit1Desc": "Bereaksi terhadap warna",
+      "benefit2Title": "Refleks Audio",
+      "benefit2Desc": "Bereaksi terhadap suara",
+      "benefit3Title": "Refleks Spasial",
+      "benefit3Desc": "Bereaksi di seluruh layar"
+    },
+    "memory": {
+      "heroTitle": "Game Latihan Memori & Mengingat Kognitif",
+      "heroSubtitle": "Perkuat kapasitas memori kerja, rentang digit, dan daya ingat spasial Anda.",
+      "heroDesc": "Memori kerja adalah ruang kerja mental yang Anda gunakan saat mengikuti arahan atau memecahkan masalah. Game memori kami menggunakan tingkat kesulitan adaptif: seiring peningkatan Anda, tantangannya akan meningkat untuk mendorong batas retensi Anda.",
+      "whatItCovers": "Cakupan Arena Ini",
+      "whatItCoversDesc": "Pola spasial, urutan angka, pengenalan verbal, dan pelacakan multi-objek. Dibangun untuk melatih buffer memori kerja Anda melalui tingkat tantangan yang progresif.",
+      "benefit1Title": "Daya Ingat Spasial",
+      "benefit1Desc": "Memori tata letak ubin",
+      "benefit2Title": "Rentang Digit",
+      "benefit2Desc": "Retensi memori numerik",
+      "benefit3Title": "Urutan Pola",
+      "benefit3Desc": "Pola kilat yang meluas"
+    },
+    "speed": {
+      "heroTitle": "Tes Kecepatan & Tolok Ukur Kecepatan",
+      "heroSubtitle": "Dorong klik per detik (CPS), kecepatan mengetik (WPM), dan kelincahan perhitungan Anda.",
+      "heroDesc": "Tolok ukur kecepatan mengukur throughput mentah dari sistem neuromuskular Anda—berapa banyak tindakan presisi yang dapat Anda eksekusi per satuan waktu di seluruh masukan tetikus dan papan ketik.",
+      "whatItCovers": "Cakupan Arena Ini",
+      "whatItCoversDesc": "Kecepatan klik tetikus di beberapa interval, kata yang diketik per menit, matematika mental cepat, dan pemindaian visual pada tabel Schulte.",
+      "benefit1Title": "Kecepatan Klik",
+      "benefit1Desc": "Ukur CPS mentah",
+      "benefit2Title": "Kecepatan Mengetik",
+      "benefit2Desc": "Tolok ukur WPM",
+      "benefit3Title": "Matematika Mental",
+      "benefit3Desc": "Perhitungan cepat"
+    },
+    "accuracy": {
+      "heroTitle": "Latihan Bidik & Presisi",
+      "heroSubtitle": "Sempurnakan akurasi target mikro, koordinasi mata-tangan, dan estimasi visual Anda.",
+      "heroDesc": "Kecepatan tidak ada artinya tanpa presisi. Modul akurasi kami melatih Anda untuk fokus dan mengenai target dengan bersih dengan margin kesalahan minimal.",
+      "whatItCovers": "Cakupan Arena Ini",
+      "whatItCoversDesc": "Pengeklikan mikro presisi, estimasi sudut, pencocokan pola, diskriminasi warna, and keakuratan entri data.",
+      "benefit1Title": "Bidik Presisi",
+      "benefit1Desc": "Klik target mikro",
+      "benefit2Title": "Sudut Spasial",
+      "benefit2Desc": "Estimasi sudut",
+      "benefit3Title": "Pencocokan Visual",
+      "benefit3Desc": "Pengenalan pola"
+    },
+    "gaming": {
+      "heroTitle": "Pemanasan Esports & Arena Bidik",
+      "heroSubtitle": "Kalibrasi flick shot tetikus, pelacakan target, dan refleks tempur untuk game kompetitif.",
+      "heroDesc": "Dibangun khusus untuk gamer di Counter-Strike, Valorant, Apex Legends, and Overwatch guna memanaskan memori otot mekanis sebelum terjun ke game berperingkat.",
+      "whatItCovers": "Cakupan Arena Ini",
+      "whatItCoversDesc": "Bidikan flick shot, pelacakan target kontinu, refleks tempur sepersekian detik, dan menghindari arus rintangan.",
+      "benefit1Title": "Flick Shot",
+      "benefit1Desc": "Akuisisi target",
+      "benefit2Title": "Pelacakan",
+      "benefit2Desc": "Mengikuti target dengan mulus",
+      "benefit3Title": "Refleks Tempur",
+      "benefit3Desc": "Pengambilan keputusan cepat"
+    },
+    "exploreOther": "Jelajahi Kategori Lainnya",
+    "toolNameCol": "Nama Alat",
+    "bestForCol": "Terbaik Untuk (Kasus Penggunaan)",
+    "coreBenefitCol": "Manfaat Utama"
+  },
+  "allTools": {
+    "title": "Semua Alat Latihan",
+    "subtitle": "Jelajahi rangkaian lengkap tes kognitif dan psikomotorik kami. Filter berdasarkan arena atau telusuri di bawah ini untuk mulai melakukan tolok ukur.",
+    "filterAll": "Semua Alat",
+    "filterMemory": "Memori",
+    "filterReflex": "Refleks",
+    "filterSpeed": "Kecepatan",
+    "filterAccuracy": "Akurasi",
+    "filterGaming": "Gaming",
+    "startTest": "Mulai Tes"
+  },
+  "about": {
+    "identityProfile": "Profil Identitas",
+    "heroTitle": "Tentang",
+    "heroTitleHighlight": "Kami",
+    "heroSubtitle": "Platform tanpa basa-basi untuk mengukur dan mendorong batas mekanis Anda. Dibangun oleh pemain kompetitif untuk siapa saja yang ingin menjadi lebih tajam.",
+    "missionLabel": "Pernyataan Misi",
+    "missionTitle": "Misi Kami",
+    "missionDesc": "Misi kami sederhana: mendemokratisasi alat pengujian reaksi dan kognitif tingkat tinggi yang persis sama dengan yang digunakan oleh tim esports profesional. Peningkatan dimulai dengan data mentah yang jujur. Kami membangun Reflextry agar Anda dapat menemukan titik awal yang akurat, fokus, dan mengalahkannya.",
+    "originLabel": "Catatan Asal-usul",
+    "originTitle": "Kisah Kami",
+    "originP1": "Reflextry dimulai sebagai proyek sampingan kecil: skrip peramban untuk mengukur latensi klik tanpa perlu menginstal pelatih desktop lain. Satu alat itu berubah menjadi pertanyaan yang terus kami dengar—dapatkah kami menempatkan latihan memori, refleks, kecepatan, akurasi, dan bidikan di satu tempat, gratis untuk dicoba, dengan skor yang dapat Anda lacak sendiri?",
+    "originP2": "Kami membangun situs ini di Surat, India, sebagai tim kecil beranggotakan dua orang. Setiap modul dikirimkan sebagai uji interaktif nyata di peramban—tanpa tembok unduhan, tanpa \"baterai premium\" berbayar. Kemajuan hidup di sesi dan alat statistik Anda sehingga Anda dapat melihat tren tanpa perlu membuat akun untuk latihan inti.",
+    "originP3": "Hari ini Reflextry digunakan oleh para gamer yang melakukan pemanasan sebelum ranked, pelajar yang melatih memori kerja, dan pengunjung penasaran yang memeriksa waktu reaksi atau penglihatan warna. Kami terus memperluas rangkaian ini secara hati-hati: tes baru hanya dirilis ketika aturan penilaiannya jelas dan antarmuka menjelaskan apa arti angka tersebut.",
+    "coreValuesLabel": "Nilai Inti",
+    "valAccuracyTitle": "Akurasi",
+    "valAccuracyDesc": "Tanpa basa-basi, hanya pengukuran presisi dan pengujian andal untuk melacak titik awal mekanis Anda yang sebenarnya.",
+    "valInnovationTitle": "Inovasi",
+    "valInnovationDesc": "Terus mendorong modul baru untuk menguji batas absolut dari waktu reaksi manusia.",
+    "valAccessibilityTitle": "Aksesibilitas",
+    "valAccessibilityDesc": "Alat pengujian dan pelacakan performa tingkat profesional, sepenuhnya gratis untuk semua orang.",
+    "valUserFirstTitle": "Pengguna yang Utama",
+    "valUserFirstDesc": "Kami membangun apa yang diminta oleh komunitas. Jika mode game terasa buruk, kami memperbaikinya.",
+    "whatWeOfferLabel": "Apa yang Kami Tawarkan",
+    "offerBrainTitle": "Game Pelatihan Otak",
+    "offerBrainDesc": "Dorong memori kerja dan pengenalan pola Anda dengan beban kognitif yang dirancang untuk memicu neuroplastisitas.",
+    "offerReflexTitle": "Tes Reaksi & Kecepatan",
+    "offerReflexDesc": "Ukur latensi fisik mentah Anda hingga milidetik persis di arena bidik, klik, dan reaksi kami.",
+    "offerTrackingTitle": "Pelacakan Kemajuan",
+    "offerTrackingDesc": "Catat data sesi Anda secara otomatis dan saksikan kurva performa Anda meningkat dari waktu ke waktu.",
+    "offerLeaderboardTitle": "Pencapaian & Papan Peringkat",
+    "offerLeaderboardDesc": "Buka peringkat, selesaikan tantangan harian, dan lihat posisi Anda dibandingkan dengan pemain di seluruh dunia.",
+    "ctaTitle": "Siap Menemukan Titik Awal Anda?",
+    "ctaDesc": "Tidak perlu akun. Cukup pilih alat, fokus, dan uji kecepatan Anda.",
+    "ctaStart": "Mulai Tes Reaksi",
+    "ctaExplore": "Jelajahi Semua Alat"
+  },
+  "faqPage": {
+    "heroTitle": "Pertanyaan yang Sering Diajukan",
+    "heroSubtitle": "Semua hal yang perlu Anda ketahui tentang tes, manfaat pelatihan, dan penilaian.",
+    "catGettingStarted": "Memulai",
+    "catBrainTraining": "Pelatihan Otak",
+    "catMemoryTraining": "Pelatihan Memori",
+    "catReactionTime": "Waktu Reaksi",
+    "catSpeedAim": "Kecepatan & Bidikan",
+    "catPrivacyScores": "Privasi & Skor",
+    "q1": "Apa sebenarnya Reflextry itu?",
+    "a1": "Ini adalah platform gratis yang dibuat untuk mengukur dan meningkatkan keterampilan mekanis mentah Anda—seperti waktu reaksi, memori kerja, dan akurasi klik. Tidak perlu mengunduh atau mendaftar. Cukup pilih alat dan mulai uji batas kemampuan Anda.",
+    "q2": "Apakah saya harus membuat akun?",
+    "a2": "Tidak. Semuanya sepenuhnya gratis dan dapat diakses sekarang juga. Kami akan menambahkan opsi akun nanti jika Anda ingin menyimpan kemajuan di berbagai perangkat atau bersaing di papan peringkat global, namun alat inti akan selalu terbuka.",
+    "q3": "Di mana sebaiknya saya mulai?",
+    "a3": "Jika Anda bermain game penembak (shooter), cobalah Pelatih Bidik (Aim Trainer) atau Tes Waktu Reaksi. Jika Anda di sini untuk pelatihan kognitif, coba Memori Sekuens atau Memori Angka. Kami menyarankan untuk mencoba beberapa di antaranya untuk melihat di mana titik awal Anda.",
+    "q4": "Apakah pelatihan otak benar-benar berguna?",
+    "a4": "Ya, ini disebut 'transfer dekat' (near transfer) dalam neurosains. Jika Anda berlatih mengingat urutan angka setiap hari, otak Anda secara fisik beradaptasi (neuroplastisitas) dan Anda menjadi lebih baik dalam menyimpan informasi dalam memori jangka pendek Anda. Ini seperti pergi ke gym, tetapi untuk sistem saraf pusat Anda.",
+    "q5": "Berapa lama hingga saya melihat hasilnya?",
+    "a5": "Jika Anda berlatih selama 10–20 menit sehari, Anda akan mulai melihat skor Anda meningkat dalam waktu 2 hingga 3 minggu. Konsistensi jauh lebih penting daripada melakukan sesi 2 jam penuh sekali seminggu.",
+    "q6": "Bagaimana cara berhenti langsung lupa?",
+    "a6": "Peretasan tercepat adalah 'chunking'—mengelompokkan item bersama-sama (seperti mengingat nomor telepon dalam bentuk blok, bukan digit tunggal). Selain itu, otak Anda menghapus hal-hal yang dianggapnya tidak berguna, jadi Anda harus aktif fokus dan memksa mengingat agar melekat.",
+    "q7": "Memori kerja vs memori jangka panjang?",
+    "a7": "Memori kerja adalah RAM otak Anda—memori ini menyimpan apa yang sedang Anda pikirkan saat ini. Memori jangka panjang adalah hard drive-nya. Alat kami secara ketat melatih RAM Anda, sehingga Anda dapat memproses lebih banyak hal secara bersamaan tanpa ada yang terlewat.",
+    "q8": "Apa yang dimaksud dengan waktu reaksi yang 'baik'?",
+    "a8": "Rata-rata waktu reaksi visual global berkisar sekitar 200–250ms. Gamer kompetitif sering kali mencatat waktu 150–190ms. Apa pun di bawah 150ms adalah kemampuan manusia 1% teratas.",
+    "q9": "Apakah monitor atau mouse saya menyebabkan jeda input (input lag)?",
+    "a9": "Ya. Monitor 60Hz menambahkan penundaan bingkai sekitar ~16ms dibandingkan dengan panel 144Hz (~7ms) atau 240Hz (~4ms). Mouse nirkabel dengan tingkat polling yang buruk juga dapat menambah latensi. Untuk akurasi tes yang murni, gunakan mouse gaming dan layar dengan refresh rate tinggi.",
+    "q10": "Bisakah saya melatih CPS (Klik Per Detik) saya?",
+    "a10": "Ya. Mengeklik standar biasanya mencapai puncaknya sekitar 6–8 CPS. Teknik seperti jitter clicking atau butterfly clicking dapat mendorong Anda melewati 12–16 CPS.",
+    "q11": "Apakah skor saya disimpan jika saya menutup peramban?",
+    "a11": "Skor dan catatan sesi Anda disimpan secara lokal di penyimpanan lokal peramban Anda. Skor tersebut akan tetap ada di berbagai pemuatan ulang pada perangkat dan peramban yang sama.",
+    "q12": "Apakah Anda menjual atau mengumpulkan data pribadi saya?",
+    "a12": "Tidak. Kami tidak melacak atau menjual data pengenal pribadi. Semua metrik tes kognitif dan reaksi adalah milik Anda."
+  },
+  "contact": {
+    "heroTitle": "Hubungi",
+    "heroTitleHighlight": "Kami",
+    "heroSubtitle": "Pertanyaan, saran fitur, permintaan kerja sama, atau laporan bug? Kami membaca setiap pesan.",
+    "generalInquiries": "Pertanyaan Umum",
+    "generalInquiriesDesc": "Untuk pertanyaan umum, kemitraan, dan pers.",
+    "technicalSupport": "Dukungan Teknis",
+    "technicalSupportDesc": "Untuk laporan bug, masalah perangkat, atau pertanyaan seputar skor.",
+    "feedbackTitle": "Umpan Balik & Ide",
+    "feedbackDesc": "Sarankan modul baru atau peningkatan pada game yang sudah ada.",
+    "formName": "Nama Anda",
+    "formNamePlaceholder": "cth. Alex Chen",
+    "formEmail": "Alamat Email",
+    "formEmailPlaceholder": "anda@contoh.com",
+    "formSubject": "Subjek",
+    "formSubjectPlaceholder": "Ada yang bisa kami bantu?",
+    "formMessage": "Pesan",
+    "formMessagePlaceholder": "Ceritakan apa yang ada di pikiran Anda...",
+    "formSubmit": "Kirim Pesan",
+    "formSending": "Mengirim...",
+    "successMsg": "Pesan berhasil dikirim!",
+    "errorMsg": "Gagal mengirim pesan. Silakan coba lagi."
+  },
+  "leaderboard": {
+    "heroTitle": "Papan Peringkat Global",
+    "heroSubtitle": "Bersainglah dengan pemain di seluruh dunia dan lacak kemajuan Anda di semua tantangan Reflextry. Tetapkan titik awal Anda dan raih peringkat teratas.",
+    "personalBests": "Rekor Pribadi",
+    "personalBestsDesc": "Skor tertinggi lokal Anda",
+    "globalRankings": "Peringkat Global",
+    "globalRankingsDesc": "Bandingkan di seluruh dunia",
+    "trackProgress": "Lacak Kemajuan",
+    "trackProgressDesc": "Lihat peningkatan Anda",
+    "myScores": "Skor Saya",
+    "global": "Global",
+    "rank": "Peringkat",
+    "player": "Pemain",
+    "score": "Skor",
+    "date": "Tanggal",
+    "testNow": "Uji Sekarang",
+    "noScoresYet": "Belum ada skor yang tercatat. Selesaikan tes untuk melihat peringkat Anda!"
+  },
+  "statistics": {
+    "heroTitle": "Statistik Pribadi",
+    "heroSubtitle": "Lacak kurva performa historis, skor konsistensi, dan rekor pribadi Anda.",
+    "totalSessions": "Total Sesi",
+    "bestPerformance": "Performa Terbaik",
+    "averageScore": "Skor Rata-rata",
+    "scoreTrend": "Tren Skor",
+    "noData": "Belum ada data sesi yang tercatat. Mainkan game untuk melihat statistik Anda!",
+    "downloadData": "Ekspor Data",
+    "selectTest": "Pilih Tes",
+    "clearHistory": "Hapus Riwayat"
+  },
+  "challenges": {
+    "heroTitle": "Tantangan Harian",
+    "heroSubtitle": "Selesaikan latihan kognitif harian Anda untuk membangun konsistensi, raih hadiah beruntun, dan naik level.",
+    "streak": "Rentetan Saat Ini",
+    "days": "Hari",
+    "todayChallenge": "Tantangan Hari Ini",
+    "target": "Target:",
+    "completed": "Selesai!",
+    "startChallenge": "Mulai Tantangan",
+    "streakReward": "Pengali Rentetan",
+    "howItWorks": "Cara Kerja Tantangan Harian",
+    "howItWorksP1": "Tantangan baru dibuat setiap 24 jam. Selesaikan tujuannya untuk mempertahankan rentetan harian Anda.",
+    "howItWorksP2": "Pelatihan harian yang konsisten mendorong adaptasi neuroplastik dan mencegah dataran tinggi kognitif."
+  },
+  "achievements": {
+    "heroTitle": "Pencapaian & Trofi",
+    "heroSubtitle": "Buka medali bergengsi saat Anda memecahkan batasan kecepatan reaksi dan mencapai tonggak sejarah kognitif.",
+    "totalUnlocked": "Total Terbuka",
+    "unlocked": "Terbuka",
+    "locked": "Terkunci",
+    "rarityCommon": "Umum",
+    "rarityRare": "Langka",
+    "rarityEpic": "Epik",
+    "rarityLegendary": "Legendaris"
+  },
+  "categorySeo": {
+    "reflex": {
+      "sec0Heading": "Cara Kerja Waktu Reaksi",
+      "sec0Text": "Waktu reaksi Anda diatur oleh tiga tahap: persepsi (mendeteksi stimulus), kognisi (memutuskan apa yang harus dilakukan), dan eksekusi motorik (melakukan tindakan). Setiap tahap dapat dilatih secara mandiri. Kecepatan persepsi meningkat seiring dengan kebiasaan terhadap stimulus — semakin sering Anda berlatih bereaksi terhadap kilatan hijau, semakin cepat korteks visual Anda mengenalinya. Pemrosesan kognitif berakselerasi ketika pengambilan keputusan menjadi otomatis. Eksekusi motorik meningkat melalui mielinisasi jalur saraf yang sering digunakan, yang secara harfiah meningkatkan kecepatan transmisi sinyal.",
+      "sec1Heading": "Faktor-Faktor yang Memengaruhi Waktu Reaksi",
+      "sec1Text": "Beberapa variabel memengaruhi waktu reaksi Anda pada hari tertentu. Kurang tidur dapat menambah 20–50ms ke baseline Anda — penelitian menunjukkan bahwa 24 jam tanpa tidur mengganggu waktu reaksi lebih parah daripada kadar alkohol dalam darah 0,10%. Kafein biasanya mengurangi waktu reaksi sebesar 10–20ms selama 3–5 jam. Kebugaran fisik berkorelasi dengan kecepatan pemrosesan yang lebih cepat. Usia berperan: waktu reaksi mencapai puncaknya antara usia 18–25 tahun dan perlahan melambat setelahnya, meskipun latihan dapat secara signifikan mengimbangi penurunan ini.",
+      "sec2Heading": "Penerapan di Dunia Nyata",
+      "sec2Text": "Waktu reaksi yang cepat sangat penting saat mengemudi, di mana perbedaan 100ms pada kecepatan 60 mph setara dengan tambahan jarak pengereman 8,8 kaki. Dalam esports kompetitif, pemain profesional Counter-Strike dengan waktu reaksi di bawah 170ms mendapatkan keunggulan terukur dalam duel bidikan. Atlet dalam cabang olahraga seperti tenis meja, tinju, dan motorsport menjalani pelatihan reaksi khusus sebagai bagian dari program pengondisian mereka."
+    },
+    "memory": {
+      "sec0Heading": "Ilmu di Balik Pelatihan Memori",
+      "sec0Text": "Penelitian dalam neurosains kognitif telah menunjukkan bahwa kapasitas memori kerja tidaklah tetap. Sebuah studi tonggak sejarah yang diterbitkan dalam PNAS menunjukkan bahwa pelatihan memori kerja yang intensif dapat mengarah pada peningkatan kecerdasan cair — kemampuan untuk bernalar dan memecahkan masalah baru. Permainan memori kami memanfaatkan kesulitan adaptif: saat Anda meningkat, tantangan akan berskala naik, memaksa otak Anda untuk terus beradaptasi melalui neuroplastisitas.",
+      "sec1Heading": "Jenis Memori yang Kami Latih",
+      "sec1Text": "Arena Memori kami menargetkan berbagai sistem memori. Memori visuospasial diuji melalui permainan seperti Visual Memory dan Sequence Memory. Memori verbal diuji dalam tes Verbal Memory kami, yang mengharuskan Anda membedakan antara kata yang sudah dilihat dan kata baru. Memori numerik didorong dalam Number Memory, di mana Anda mereproduksi rangkaian digit yang semakin panjang. Setiap sistem melibatkan wilayah otak yang berbeda.",
+      "sec2Heading": "Siapa yang Diuntungkan dari Pelatihan Memori?",
+      "sec2Text": "Pelajar yang bersiap untuk ujian mendapati bahwa memori kerja yang lebih kuat berkorelasi langsung dengan pemahaman membaca dan pemecahan masalah matematika yang lebih baik. Orang dewasa yang lebih tua menggunakan pelatihan memori untuk membangun cadangan kognitif terhadap penurunan terkait usia. Gamer kompetitif mengandalkan memori spasial untuk melacak posisi musuh dan cooldown secara bersamaan."
+    },
+    "speed": {
+      "sec0Heading": "Memahami CPS (Klik Per Detik)",
+      "sec0Text": "Orang rata-rata yang tidak terlatih mengeklik pada 5–7 CPS. Gamer kompetitif secara teratur mencapai 10–14 CPS menggunakan teknik seperti jitter clicking atau butterfly clicking. Ketangkasan jari dan kontrol motorik halus yang mereka kembangkan dapat ditransfer ke tugas tetikus presisi apa pun. Tes Click Speed kami mengukur CPS Anda di beberapa interval waktu.",
+      "sec1Heading": "Kecepatan Mengetik dan Dampak Profesional",
+      "sec1Text": "Orang dewasa rata-rata mengetik pada 40 WPM, sementara juru tik profesional mencapai 65–75 WPM. Mencapai 80–100 WPM menghilangkan pengetikan sebagai hambatan dalam pekerjaan berbasis pengetahuan, memungkinkan jari-jari mengimbangi pikiran. Tes mengetik kami mengukur WPM kotor dan akurasi bersih.",
+      "sec2Heading": "Kecepatan Matematika Mental",
+      "sec2Text": "Tes Math Speed kami menantang pemrosesan numerik dan aritmatika mental. Kemampuan untuk melakukan perhitungan cepat mengandalkan memori kerja, aturan prosedural, dan kecepatan pemrosesan. Latihan teratur meningkatkan kepekaan intuitif Anda terhadap angka."
+    },
+    "accuracy": {
+      "sec0Heading": "Kecerdasan Visual-Spasial",
+      "sec0Text": "Kecerdasan visual-spasial adalah kemampuan Anda untuk mempersepsikan, menganalisis, dan memanipulasi informasi visual secara mental. Tes Pattern Matching mengevaluasi kapasitas Anda untuk mengidentifikasi keteraturan dalam data visual. Mental Rotation menantang kemampuan Anda untuk memanipulasi objek 3D dalam bayangan mental Anda.",
+      "sec1Heading": "Kontrol Motorik Halus dan Presisi",
+      "sec1Text": "Tes Precision Click mengukur kemampuan Anda untuk memposisikan kursor secara akurat pada target kecil. Kontrol motorik halus bergantung pada serebelum, korteks motorik, dan umpan balik proprioseptif. Latihan teratur membangun memori otot sehingga gerakan presisi menjadi otomatis.",
+      "sec2Heading": "Persepsi Warna dan Estimasi",
+      "sec2Text": "Alat Color Match dan Angle Estimation kami melatih kalibrasi persepsi — akurasi saat Anda menilai properti visual. Estimasi sudut mengembangkan penalaran spasial yang digunakan dalam geometri dan navigasi. Umpan balik langsung mengkalibrasi ulang model kognitif internal."
+    },
+    "gaming": {
+      "sec0Heading": "Mekanika Pelatihan Bidikan (Aim Training)",
+      "sec0Text": "Bidikan dalam game FPS terbagi menjadi mekanika yang jelas. Tracking adalah kemampuan menjaga crosshair Anda tetap berada di target yang bergerak. Flicking adalah sentakan cepat crosshair Anda ke target yang tiba-tiba muncul. Grid click menargetkan kemampuan untuk mendapatkan kembali target dengan cepat pada jarak yang berbeda-beda.",
+      "sec1Heading": "Ilmu Kinerja Esports",
+      "sec1Text": "Penelitian yang diterbitkan dalam PLOS ONE menemukan bahwa gamer profesional menunjukkan kecepatan pemrosesan visuomotor yang jauh lebih cepat dibandingkan non-gamer. Pemain video game aksi menunjukkan alokasi perhatian yang ditingkatkan dan pengambilan keputusan perseptual yang dikembangkan melalui latihan yang disengaja.",
+      "sec2Heading": "Protokol Pemanasan Optimal",
+      "sec2Text": "Pemanasan selama 5–10 menit meningkatkan kinerja dan mengurangi risiko cedera. Berkembanglah dari gerakan lambat dan terkontrol ke reaksi berkecepatan game: mulailah dengan 2 menit Grid Click, 3 menit Aim Trainer, diikuti oleh 2 menit Flick Shot pada kecepatan maksimum."
+    }
+  },
+  "categoryGuide": {
+    "reflex": {
+      "whatIsTitle": "Apa itu Pelatihan Refleks dan Reaksi?",
+      "whatIsDesc": "Pelatihan refleks mengukur total waktu yang berlalu antara penyajian stimulus sensorik dan respons motorik berikutnya. Meskipun faktor fisiologis bawaan berperan, pelatihan teratur membantu menghilangkan keraguan dan kelelahan pengambilan keputusan, melatih sistem saraf pusat Anda untuk memicu neuron motorik secara instan saat menerima isyarat tertentu.",
+      "howToTitle": "Bagaimana Cara Meningkatkan Waktu Reaksi Anda?",
+      "howToStep1Title": "Hilangkan Gangguan",
+      "howToStep1Desc": "Fokus sepenuhnya pada titik jangkar tengah layar Anda.",
+      "howToStep2Title": "Gunakan Perangkat Keras yang Optimal",
+      "howToStep2Desc": "Pastikan Anda menggunakan monitor dengan tingkat refresh tinggi (144Hz+) dan mouse kabel latensi rendah.",
+      "howToStep3Title": "Tetap Terhidrasi dan Cukup Istirahat",
+      "howToStep3Desc": "Kurang tidur dapat meningkatkan waktu reaksi lebih dari 50 milidetik.",
+      "howToStep4Title": "Latihan Setiap Hari",
+      "howToStep4Desc": "Hanya 5 menit tes Waktu Reaksi dan Refleks Suara setiap hari dapat menajamkan dasar kemampuan Anda.",
+      "shouldPracticeTitle": "Haruskah Saya Berlatih Setiap Hari?",
+      "shouldPracticeDesc": "Ya. Sesi latihan yang singkat dan sering mengondisikan otak Anda untuk melewati pemrosesan kognitif yang kompleks untuk tugas-tugas sederhana, dan mengandalkan jalur motorik yang lebih cepat serta otomatis.",
+      "comparisonTitle": "Perbandingan Alat Refleks",
+      "row1Tool": "Reaction Time",
+      "row1BestFor": "Gamer, Masyarakat Umum",
+      "row1Benefit": "Mengukur kecepatan refleks visual dasar dalam milidetik.",
+      "row2Tool": "Sound Reflex",
+      "row2BestFor": "Atlet (Lari/Renang)",
+      "row2Benefit": "Mengisolasi jalur pendengaran, yang memproses lebih cepat daripada jalur visual.",
+      "row3Tool": "Directional Reflex",
+      "row3BestFor": "Pengemudi, Penjaga Gawang",
+      "row3Benefit": "Melatih terjemahan kognitif dari isyarat arah menjadi usapan fisik.",
+      "benchmarksTitle": "Patokan & Bukti Ilmiah",
+      "benchmarksDesc": "Menurut studi faktor manusia, rata-rata waktu reaksi manusia adalah sekitar 250 milidetik untuk isyarat visual dan 170 milidetik untuk isyarat audio. Melalui pengulangan aktif dan adaptasi neurologis, para atlet dan gamer elit dapat menurunkan waktu reaksi visual mereka di bawah 150 milidetik. Sebuah studi oleh Journal of Sports Sciences menyimpulkan bahwa pelatihan visual-motorik khusus dapat secara signifikan mengurangi latensi reaksi di lingkungan yang kompetitif.",
+      "faqTitle": "Pertanyaan yang Sering Diajukan",
+      "faq1Q": "Apakah Anda benar-benar dapat melatih waktu reaksi Anda?",
+      "faq1A": "Meskipun waktu reaksi genetik mentah Anda memiliki batas maksimal, Anda pasti dapat melatih otak untuk mendekati batas tersebut secara konsisten. Alat-alat kami membantu menghilangkan keraguan dan kelelahan keputusan, melatih sistem saraf Anda untuk merespons secara instan saat menerima isyarat tertentu.",
+      "faq2Q": "Mengapa waktu reaksi audio lebih cepat daripada visual?",
+      "faq2A": "Dibutuhkan waktu yang lebih sedikit bagi stimulus auditori untuk mencapai otak dibandingkan dengan stimulus visual. Korteks auditori memproses suara secara signifikan lebih cepat daripada korteks visual dalam memproses informasi visual yang kompleks. Inilah sebabnya mengapa seorang pelari bereaksi terhadap pistol start daripada lampu kilat."
+    },
+    "memory": {
+      "whatIsTitle": "Apa itu Pelatihan Memori & Mengingat Kembali Kognitif?",
+      "whatIsDesc": "Memori kerja adalah ruang kerja mental yang digunakan untuk menyimpan dan memanipulasi informasi untuk sementara. Berbeda dengan memori jangka panjang, memori kerja memiliki kapasitas yang terbatas. Pelatihan dengan berbagai latihan pengingatan mengkondisikan otak untuk mengelola beban kognitif, mengenali pola lebih cepat, dan menyimpan informasi secara lebih efektif di bawah tekanan.",
+      "howToTitle": "Bagaimana Cara Meningkatkan Memori Kerja Anda?",
+      "howToStep1Title": "Gunakan Teknik Chunking",
+      "howToStep1Desc": "Pecah angka panjang atau pola kompleks menjadi bagian-bagian kecil yang lebih mudah dicerna.",
+      "howToStep2Title": "Visualisasikan Secara Spasial",
+      "howToStep2Desc": "Kaitkan angka atau pola abstrak dengan bentuk fisik atau koordinat kisi.",
+      "howToStep3Title": "Hilangkan Gangguan",
+      "howToStep3Desc": "Memori kerja menurun dengan cepat jika fokus Anda teralihkan bahkan selama satu detik saja.",
+      "howToStep4Title": "Latih Secara Progresif",
+      "howToStep4Desc": "Mulai dari tingkat kesulitan yang lebih rendah hingga akurasi pengingatan Anda konsisten tinggi.",
+      "shouldPracticeTitle": "Haruskah Saya Berlatih Setiap Hari?",
+      "shouldPracticeDesc": "Ya. Stimulasi harian yang konsisten adalah kunci untuk meningkatkan neuroplastisitas, yaitu kemampuan otak untuk mengatur ulang dirinya sendiri dengan membentuk koneksi saraf baru.",
+      "comparisonTitle": "Perbandingan Alat Memori",
+      "row1Tool": "Number Memory",
+      "row1BestFor": "Siswa matematika, pemrogram",
+      "row1Benefit": "Melatih lingkaran fonologis otak untuk menahan deretan angka yang panjang.",
+      "row2Tool": "Visual Memory",
+      "row2BestFor": "Desainer, arsitek",
+      "row2Benefit": "Meningkatkan ruang sketsa visuo-spasial untuk koordinasi spasial.",
+      "row3Tool": "Sequence Memory",
+      "row3BestFor": "Musisi, kognisi umum",
+      "row3Benefit": "Meningkatkan pengenalan pola sekuensial dan ketahanan fokus.",
+      "benchmarksTitle": "Patokan & Bukti Ilmiah",
+      "benchmarksDesc": "Karya klasik oleh George A. Miller mempopulerkan gagasan bahwa orang sering kali menyimpan sekitar 7±2 bagian (chunk) dalam memori langsung. Teknik seperti chunking mengurangi berapa banyak item independen yang harus Anda simpan. Penelitian yang dibahas melalui National Institutes of Health (NIH) mengeksplorasi pelatihan memori kerja. Di Reflextry, lacak rentang digit dan tren pengingatan Anda sendiri di bawah tingkat kesulitan yang sama.",
+      "faqTitle": "Pertanyaan yang Sering Diajukan",
+      "faq1Q": "Apakah Anda benar-benar dapat meningkatkan memori Anda?",
+      "faq1A": "Ya. Meskipun Anda tidak dapat dengan mudah mengubah kapasitas memori jangka panjang Anda, Anda dapat secara signifikan meningkatkan memori kerja (jangka pendek) Anda. Latihan yang konsisten dengan alat seperti tes Number Memory atau Visual Memory kami melatih otak Anda untuk memecah informasi secara lebih efisien, sehingga lebih mudah untuk menyimpan lebih banyak data secara bersamaan.",
+      "faq2Q": "Apa itu teknik 'Chunking'?",
+      "faq2A": "Chunking adalah strategi mnemonik di mana Anda mengelompokkan bagian data yang lebih kecil dan individual menjadi unit yang lebih besar dan bermakna (bagian/chunk). Misalnya, alih-alih mengingat urutan 4-7-1-9-2-8 sebagai enam digit terpisah, otak Anda dapat mengelompokkannya menjadi 471 dan 928, yang secara efektif mengurangi beban kognitif dari enam item menjadi hanya dua."
+    },
+    "speed": {
+      "whatIsTitle": "Apa itu Kecepatan & Kecepatan Neuromuskular?",
+      "whatIsDesc": "Tes kecepatan mengukur throughput neuromuskular mentah Anda—seberapa cepat sistem saraf pusat Anda dapat mengirimkan sinyal motorik berulang ke jari, pergelangan tangan, dan tangan Anda. Kinerja kecepatan tinggi membutuhkan penyeimbangan antara penembakan otot kedutan cepat dan kontrol fisik yang presisi.",
+      "howToTitle": "Bagaimana Cara Meningkatkan Kecepatan Mengklik & Mengetik Anda?",
+      "howToStep1Title": "Optimalkan Posisi Tangan",
+      "howToStep1Desc": "Jaga pergelangan tangan sedikit terangkat dari meja Anda untuk menjaga fluiditas.",
+      "howToStep2Title": "Pelajari Teknik Alternatif",
+      "howToStep2Desc": "Latihlah jitter clicking atau butterfly clicking untuk melampaui batas fisik.",
+      "howToStep3Title": "Fokus pada Akurasi Terlebih Dahulu",
+      "howToStep3Desc": "Kecepatan mengetik turun drastis saat Anda menghabiskan waktu untuk mengoreksi salah ketik.",
+      "howToStep4Title": "Pemanasan Terlebih Dahulu",
+      "howToStep4Desc": "Jari yang dingin memiliki tingkat transmisi neuron motorik yang lebih lambat.",
+      "shouldPracticeTitle": "Haruskah Saya Berlatih Setiap Hari?",
+      "shouldPracticeDesc": "Ya. Sesi kecepatan singkat selama 10 menit membangun daya tahan otot kedutan cepat di tangan dan lengan bawah tanpa menyebabkan cedera regangan berulang.",
+      "comparisonTitle": "Perbandingan Alat Kecepatan",
+      "row1Tool": "Click Speed (CPS)",
+      "row1BestFor": "Minecraft PvP, Gamer MOBA",
+      "row1Benefit": "Meningkatkan stamina dan kecepatan klik jari mentah.",
+      "row2Tool": "Typing Test (WPM)",
+      "row2BestFor": "Penulis, Pemrogram, Input Data",
+      "row2Benefit": "Mengukur dan meningkatkan tingkat kata per menit dan akurasi ketukan tombol.",
+      "row3Tool": "Speed Math",
+      "row3BestFor": "Pelajar, Analis Keuangan",
+      "row3Benefit": "Melatih pemrosesan aritmatika cepat di bawah tekanan waktu.",
+      "benchmarksTitle": "Patokan & Bukti Ilmiah",
+      "benchmarksDesc": "Rata-rata pengguna internet mengetik sekitar 40 Kata Per Menit (WPM), sedangkan juru ketik profesional dan pemrogram secara teratur melebihi 90 WPM. Demikian pula, kecepatan klik rata-rata berkisar di sekitar 6 CPS, sementara gamer kompetitif mencapai 10-14 CPS. Menurut penelitian tentang kinerja motorik manusia yang diterbitkan di PubMed, pengulangan yang ditargetkan dikombinasikan dengan umpan balik langsung adalah cara paling efektif untuk meningkatkan kecepatan aksi motorik secara permanen.",
+      "faqTitle": "Pertanyaan yang Sering Diajukan",
+      "faq1Q": "Bagaimana cara meningkatkan CPS saya?",
+      "faq1A": "Meningkatkan Klik Per Detik (CPS) Anda memerlukan pengembangan serat otot kedutan tertentu di jari dan lengan bawah Anda. Teknik seperti jitter clicking dan butterfly clicking dapat menghasilkan peningkatan instan, namun perbaikan jangka panjang memerlukan pelatihan ketahanan harian yang konsisten untuk membangun stamina dan mencegah kelelahan.",
+      "faq2Q": "Mengapa WPM (Kata Per Menit) saya mandek?",
+      "faq2A": "Kemandekan dalam kecepatan mengetik biasanya disebabkan oleh kurangnya akurasi, bukan kurangnya kecepatan jari. Jika Anda terus-menerus menekan tombol backspace, WPM Anda akan turun secara signifikan. Alat Tes Mengetik dan Akurasi Kata kami mengutamakan presisi terlebih dahulu, yang secara alami akan menghasilkan kecepatan mentah yang lebih tinggi seiring berjalannya waktu."
+    },
+    "accuracy": {
+      "whatIsTitle": "Apa itu Pelatihan Akurasi & Presisi?",
+      "whatIsDesc": "Akurasi mewakili deviasi antara target yang dituju dan eksekusi fisik aktual Anda. Kecepatan tanpa presisi mengarah pada kesalahan yang merugikan, pemborosan tenaga, dan tingkat kesalahan yang tinggi. Mengembangkan akurasi tingkat piksel memastikan konsistensi di bawah skenario tekanan tinggi.",
+      "howToTitle": "Bagaimana Cara Meningkatkan Skor Akurasi Anda?",
+      "howToStep1Title": "Perlambat",
+      "howToStep1Desc": "Kecepatan adalah produk sampingan dari presisi. Bergeraklah dengan kecepatan di mana Anda membuat nol kesalahan.",
+      "howToStep2Title": "Sesuaikan DPI/Sensitivitas",
+      "howToStep2Desc": "Bagi para gamer, sensitivitas mouse yang lebih rendah seringkali menghasilkan presisi yang lebih tinggi pada aim trainer.",
+      "howToStep3Title": "Fokus pada Bagian Tengah",
+      "howToStep3Desc": "Dalam tugas visual seperti Estimasi Sudut, fiksasikan mata Anda pada titik tengah sebelum memindai ke luar.",
+      "howToStep4Title": "Bernapaslah",
+      "howToStep4Desc": "Terburu-buru menyebabkan ketegangan. Tetaplah rileks secara fisik untuk memungkinkan penyesuaian mikro.",
+      "shouldPracticeTitle": "Haruskah Saya Berlatih Setiap Hari?",
+      "shouldPracticeDesc": "Ya, tetapi buat sesi tetap singkat. Tugas dengan presisi tinggi sangat menguras kognitif. 5-10 menit sehari sudah cukup untuk memperkuat jalur saraf yang akurat tanpa menyebabkan kesalahan akibat kelelahan.",
+      "comparisonTitle": "Perbandingan Alat Akurasi",
+      "row1Tool": "Precision Clicking",
+      "row1BestFor": "Desainer Grafis, Gamer",
+      "row1Benefit": "Meningkatkan kontrol motorik halus untuk mengklik target kecil sub-piksel.",
+      "row2Tool": "Data Entry Accuracy",
+      "row2BestFor": "Pemrogram, Juru Ketik",
+      "row2Benefit": "Mengurangi kesalahan penekanan tombol saat mengetik sintaks kompleks atau string alfanumerik.",
+      "row3Tool": "Angle Estimation",
+      "row3BestFor": "Arsitek, Seniman",
+      "row3Benefit": "Mengembangkan kecerdasan visual-spasial kognitif dan persepsi geometris.",
+      "benchmarksTitle": "Patokan & Bukti Ilmiah",
+      "benchmarksDesc": "Konsep memprioritaskan akurasi di atas kecepatan adalah prinsip fundamental pembelajaran motorik, yang sering disimpulkan dalam pepatah militer 'lambat itu mulus, mulus itu cepat.' Menurut Journal of Experimental Psychology, fokus murni pada presisi pada awalnya memungkinkan otak untuk memielinisasi jalur saraf persis yang diperlukan, mencegah penundaan koreksi kesalahan muncul pada kecepatan yang lebih tinggi.",
+      "faqTitle": "Pertanyaan yang Sering Diajukan",
+      "faq1Q": "Haruskah saya melatih kecepatan atau akurasi terlebih dahulu?",
+      "faq1A": "Selalu latih akurasi terlebih dahulu. Ketika Anda berlatih membuat kesalahan dengan cepat, otak Anda benar-benar menjadi lebih baik dalam membuat kesalahan. Dengan memaksakan akurasi 100% pada kecepatan lambat, Anda menjamin bahwa pola gerakan yang Anda bangun sangat sempurna. Begitu pola tersebut mendarah daging, kecepatan akan mengikuti dengan sendirinya.",
+      "faq2Q": "Bagaimana ini membantu pengetikan saya?",
+      "faq2A": "Kendala terbesar untuk WPM (Kata Per Menit) yang tinggi adalah waktu yang dihabiskan untuk menekan tombol backspace. Dengan menggunakan alat seperti Data Entry Accuracy, Anda membangun kepercayaan diri pada penekanan tombol Anda, secara signifikan mengurangi keraguan kognitif yang memperlambat rata-rata juru ketik."
+    },
+    "gaming": {
+      "whatIsTitle": "Apa itu Pelatihan Bidikan Esports & Pemanasan?",
+      "whatIsDesc": "Gim kompetitif membutuhkan perpaduan antara reaksi visual, presisi micro-flick, dan pelacakan target yang mulus. Pemain esports profesional menggunakan rutinitas pemanasan khusus sebelum pertandingan kompetitif untuk mencapai tingkat aktivasi kognitif puncak dan menghindari kesalahan bermain di awal gim.",
+      "howToTitle": "How to Improve Your In-Game Aim?",
+      "howToStep1Title": "Mulai perlahan",
+      "howToStep1Desc": "Fokus pada akurasi 100% sebelum mencoba meningkatkan kecepatan Anda.",
+      "howToStep2Title": "Gunakan alat yang tepat",
+      "howToStep2Desc": "Gunakan Target Tracking untuk bidikan yang mulus, dan Flick Shot untuk refleks flick yang cepat.",
+      "howToStep3Title": "Pertahankan postur tubuh",
+      "howToStep3Desc": "Pastikan lengan dan pergelangan tangan Anda ditopang dengan benar untuk mencegah kelelahan dan cedera.",
+      "howToStep4Title": "Pemanasan setiap hari",
+      "howToStep4Desc": "Rutinitas 10 menit sebelum terjun ke perjodohan berperingkat membuat perbedaan besar.",
+      "shouldPracticeTitle": "Haruskah Saya Berlatih Setiap Hari?",
+      "shouldPracticeDesc": "Ya. Latihan harian yang konsisten selama 15-20 menit memberikan hasil yang lebih baik untuk neuroplastisitas dan memori otot daripada sesi tunggal 2 jam seminggu sekali.",
+      "comparisonTitle": "Perbandingan Alat Gaming",
+      "row1Tool": "Aim Trainer",
+      "row1BestFor": "Gamer FPS (Valorant, CS2)",
+      "row1Benefit": "Meningkatkan klik target statis dan kontrol mouse secara keseluruhan.",
+      "row2Tool": "Flick Shot",
+      "row2BestFor": "Peran penembak jitu, penembak cepat",
+      "row2Benefit": "Membangun memori otot kedutan cepat untuk snap crosshair yang tiba-tiba.",
+      "row3Tool": "Target Tracking",
+      "row3BestFor": "Pemain Apex Legends, Overwatch",
+      "row3Benefit": "Meningkatkan gerakan mata pengejaran halus dan pelacakan mouse berkelanjutan.",
+      "benchmarksTitle": "Patokan & Bukti Ilmiah",
+      "benchmarksDesc": "Pemain kompetitif sering menunjukkan respons sensorimotor yang lebih cepat daripada pengguna biasa, dan penelitian yang dikatalogkan oleh National Center for Biotechnology Information (NCBI) menghubungkan praktik gim aksi dengan peningkatan perhatian visual dan kontrol motorik. Di Reflextry, perlakukan Flick Shot dan Target Tracking sebagai latihan mekanik terisolasi: catat garis dasar Anda sendiri pada mouse dan tingkat kesulitan yang sama, kemudian perhatikan akurasi yang lebih stabil dan waktu ke target yang lebih bersih dari minggu ke minggu.",
+      "faqTitle": "Pertanyaan yang Sering Diajukan",
+      "faq1Q": "Apakah pelatihan aim benar-benar meningkatkan permainan saya?",
+      "faq1A": "Ya. Aim trainer mengisolasi mekanika fisik penggunaan mouse, seperti melacak (tracking) dan menjentik (flicking). Dengan memisahkan hal-hal ini dari pemahaman gim (game sense), kesadaran peta, dan strategi, Anda dapat membangun memori otot mekanis mentah jauh lebih cepat daripada hanya bermain gim itu sendiri.",
+      "faq2Q": "Apa cara terbaik untuk melakukan pemanasan sebelum pertandingan berperingkat?",
+      "faq2A": "Pemanasan pra-gim yang solid harus berlangsung selama 5-10 menit dan melibatkan gerakan yang semakin cepat. Kami merekomendasikan urutan ini: 2 menit Aim Trainer untuk menetapkan akurasi dasar, 3 menit Target Tracking untuk gerakan yang mulus, dan 2 menit Flick Shot untuk mendorong batas kecepatan Anda."
+    }
+  }
+}

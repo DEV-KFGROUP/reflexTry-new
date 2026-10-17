@@ -6,6 +6,7 @@ import {
   ArrowRight, Target, Keyboard, Zap, Activity, MousePointer2,
   Calculator, Type, Grid3X3, Volume2, Eye, Move, Brain, Hash, HelpCircle, Palette, Sparkles, LayoutGrid
 } from "lucide-react";
+import { useTranslation } from "@/lib/i18n/context";
 
 interface ToolItem {
   id: string;
@@ -162,6 +163,8 @@ const FloatingBackground = () => {
 };
 
 export default function AllToolsClient() {
+  const { t, getLocalizedHref } = useTranslation();
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -205,14 +208,11 @@ export default function AllToolsClient() {
                   suppressHydrationWarning
               >
                   <Sparkles className="w-10 h-10 text-blue-400" />
-                  All Training Tools
+                  {t("allTools.title", "All Training Tools")}
               </h1>
           </div>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-medium">
-            Explore our complete suite of cognitive and psychomotor tests.
-          </p>
-          <p className="text-md text-muted-foreground/80 max-w-3xl mx-auto">
-            From raw reflex timing to complex visual memory retention, our suite offers comprehensive baseline testing across every major performance metric.
+            {t("allTools.subtitle", "Explore our complete suite of cognitive and psychomotor tests.")}
           </p>
         </motion.div>
 
@@ -234,14 +234,14 @@ export default function AllToolsClient() {
                   <category.icon className="w-6 h-6 drop-shadow-md" />
                 </div>
                 <h2 className="text-2xl font-bold text-foreground tracking-wide flex-1">
-                  {category.label}
+                  {t(`categories.${category.id}.title`, category.label)}
                 </h2>
                 <Link
-                  href={`/${category.id}`}
+                  href={getLocalizedHref(`/${category.id}`)}
                   prefetch={false}
                   className={`hidden sm:flex items-center gap-2 px-4 py-2 rounded-xl text-sm font-bold bg-white/5 border border-black/10 dark:border-white/10 hover:bg-white/10 transition-all duration-300 ${category.color}`}
                 >
-                  View Category <ArrowRight className="w-4 h-4" />
+                  {t("home.enterArena", "View Category")} <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
 
@@ -258,12 +258,12 @@ export default function AllToolsClient() {
                     <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                     
                     <Link
-                      href={tool.href}
+                      href={getLocalizedHref(tool.href)}
                       prefetch={false}
                       className="absolute inset-0 z-10"
-                      aria-label={`Play ${tool.title}`}
+                      aria-label={`Play ${t(`tools.${tool.id}.title`, tool.title)}`}
                     >
-                      <span className="sr-only">Play {tool.title}</span>
+                      <span className="sr-only">Play {t(`tools.${tool.id}.title`, tool.title)}</span>
                     </Link>
 
                     <div className="flex items-start gap-4 mb-3 relative z-10">
@@ -271,12 +271,12 @@ export default function AllToolsClient() {
                         <tool.icon className="w-5 h-5 drop-shadow-[0_0_8px_currentColor]" />
                       </div>
                       <h3 className="text-base font-bold text-foreground pt-1 flex-1 leading-tight group-hover:text-foreground/90 transition-colors">
-                        {tool.title}
+                        {t(`tools.${tool.id}.title`, tool.title)}
                       </h3>
                     </div>
                     
                     <p className="text-sm text-muted-foreground leading-relaxed flex-1 relative z-10">
-                      {tool.desc}
+                      {t(`tools.${tool.id}.desc`, tool.desc)}
                     </p>
                   </motion.div>
                 ))}
@@ -285,10 +285,10 @@ export default function AllToolsClient() {
               {/* Mobile Category Link */}
               <div className="sm:hidden mt-4">
                 <Link
-                  href={`/${category.id}`}
+                  href={getLocalizedHref(`/${category.id}`)}
                   className={`flex items-center justify-center w-full gap-2 px-4 py-3 rounded-xl text-sm font-bold bg-white/5 border border-black/10 dark:border-white/10 hover:bg-white/10 transition-all duration-300 ${category.color}`}
                 >
-                  View Category <ArrowRight className="w-4 h-4" />
+                  {t("home.enterArena", "View Category")} <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
             </motion.div>

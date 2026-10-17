@@ -1,0 +1,80 @@
+---
+title: 'Fałszywe alarmy w teście Go/No-Go: Dlaczego „szybko” może oznaczać porażkę'
+description: >-
+  Jak interpretować wyniki testu Go/No-Go oraz wskaźniki hamowania w Reflextry:
+  fałszywe alarmy, pominięcia bodźców Go i dlaczego średni czas reakcji Go bez
+  uwzględnienia celności powstrzymywania się to tylko próżny pomiar (vanity
+  metric).
+publishedAt: '2026-07-25'
+author:
+  name: Kaushik Rabadiya
+category: Reflex
+tags:
+  - go-no-go
+  - inhibition
+  - false-alarms
+  - training
+readingTime: 9 min read
+---
+Test Go/No-Go wygląda prosto: naciśnij przy bodźcu Go, powstrzymaj się przy No-Go. Metryka, na którą ludzie patrzą w pierwszej kolejności, to czas reakcji Go. Metryka, która tak naprawdę mówi, czy opanowałeś zadanie, to często **fałszywy alarm** – naciśnięcie wtedy, gdy powinieneś pozostać w bezruchu.
+
+## Dwa typy błędów
+
+- **Pominięcie (brak reakcji / omission):** Pojawił się bodźc Go; nie udało się nacisnąć na czas.
+- **Fałszywy alarm (commission):** Pojawił się bodziec No-Go; i tak nacisnąłeś.
+
+Efektowny czas reakcji Go z plagą fałszywych alarmów oznacza, że antycypujesz i grasz w losową gru. To może wydawać się szybkie. Nie jest to jednak kontrolowana wydajność.
+
+## Dlaczego rośnie liczba fałszywych alarmów
+
+- Przewaga prób Go tworzy „skłonność do naciskania” (press bias).
+- Zmęczenie i rozproszenie uwagi osłabiają hamulce bardziej niż silniki.
+- Cele szybkościowe bez ograniczeń dotyczących dokładności nagradzają impulsywność.
+- Bodźce, które wyglądają podobnie aż do końcowej fazy okna błysku, prowokują późne korekty, które docierają jako naciśnięcia.
+
+## Jak trenować hamulec
+
+1. **Zacznij od celów związanych z dokładnością.** Przykład: utrzymuj fałszywe alarmy poniżej osobistego progu, zanim zaczniesz gonić milisekundy.
+2. **Używaj krótkich bloków.** Hamowanie załamuje się, gdy ćwiczysz w złości.
+3. **Oddychaj przy No-Go.** Celowy brak reakcji to powtórzenie treningowe (rep).
+4. **Przeplataj z testem Flanker.** Zadania wymagające rozstrzygania konfliktów karzą również impulsywne reakcje ignorujące środek – zobacz [Wyjaśnienie testów Go/No-Go i Flanker](/blog/go-no-go-and-flanker-explained).
+5. **Sprawdź ponownie prosty czas reakcji osobno.** Szybkość detekcji i hamowanie są powiązane, ale nie identyczne – [Reakcja wyboru a reakcja prosta](/blog/choice-reaction-vs-simple-reaction).
+
+## Odczytywanie wyników Go/No-Go w Reflextry
+
+Traktuj sesję jako parę: czas reakcji Go przy poprawnych trafieniach **oraz** wskaźnik fałszywych alarmów. Poprawa to:
+
+- Stabilna lub lepsza celność powstrzymywania się od reakcji, a następnie
+- Niższy czas reakcji Go bez poświęcania tej dokładności.
+
+Tryby trudności, które zwiększają częstotliwość No-Go lub zacieśniają ramy czasowe, zmieniają eksperyment – zapisz użyty tryb.
+
+## Analogia ze świata rzeczywistego (bez nadmiernych uogólnień)
+
+Prowadzenie samochodu, rankingowe strzelanki i pisanie na klawiaturze – wszystko to karze impulsywne działania: zmiany pasa ruchu bez patrzenia w lusterka, strzelanie na oślep (pre-firing) czy wysyłanie tekstu przed korektą. Go/No-Go to czysta laboratyjna zabawka do trenowania tego hamulca. To nie jest diagnoza osobowości.
+
+## 10-minutowa mikrosesja hamowania
+
+- 4 minuty Go/No-Go – priorytetem jest dokładność
+- 3 minuty Flanker – świadomość bodźców zgodnych i niezgodnych
+- 3 minuty prostej reakcji – czysta detekcja, minimalna liczba przedwczesnych kliknięć
+
+Przerwij, jeśli liczba fałszywych alarmów gwałtownie wzrośnie. Wróć jutro.
+
+## Podsumowanie
+
+Szybkie Go z głośnymi fałszywymi alarmami to nie mistrzostwo. Przetrenuj powstrzymywanie się, a dopiero potem urzymuj czas. Ćwicz w sekcji [Go/No-Go](/reflex/go-no-go) i przeczytaj o kontekście punktacji w artykule [Jak oceniamy testy w Reflextry](/blog/how-we-score-reflextry-tests).
+
+## Uwaga na projekty typu „drapieżne Go”
+
+Niektóre gry zręcznościowe sprawiają, że prawie każda próba to Go, wplatając rzadkie bodźce No-Go. Taki projekt tworzy silny nawyk naciskania, co ma wartość edukacyjną – ale oznacza to również, że Twoje pierwsze sesje będą wyglądać słabo. Spodziewaj się fałszywych alarmów na początku. Krzywa uczenia się polega właśnie na tym, że hamulec dogania silnik.
+
+Jeśli jakiś tryb wydaje się niesprawiedliwie przeładowany próbami Go, podejdź do niego jak do treningu hamulca zamiast rzucać rage-quittingiem. Przez tydzień traktuj wskaźnik fałszywych alarmów jako swój główny KPI, a dopiero potem ponownie wprowadź cele prędkościowe.
+
+## Połączenie ze snem i stymulantami
+
+Deficyt snu zwiększa liczbę błędów commission u wielu osób. Dodatkowa kofeina może pomóc w czujności, dopóki drżenie rąk i antycypacja nie doprowadzą do przedwczesnych naciśnięć. Jeśli Twój wykres fałszywych alarmów skacze po zarwanej nocy, uwierz wykresowi: odzyskaj sen, zanim zaczniesz obwiniać narzędzie.
+
+## Dzielenie się wynikami z trenerem lub członkiem drużyny
+
+Kiedy udostępniasz wynik Go/No-Go, uwzględnij: poziom trudności, średni czas reakcji Go, liczbę lub wskaźnik fałszywych alarmów, liczbę pominięć, urządzenie oraz porę dnia. Samotny zrzut ekranu z wynikiem „Miałem 210 ms” bez statystyk powstrzymywania się jest niepełny – a trenerzy powinbrakujący element.

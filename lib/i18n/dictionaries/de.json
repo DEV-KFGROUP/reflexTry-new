@@ -1,12 +1,12 @@
 {
   "nav": {
     "home": "Startseite",
-    "reflex": "Reflexe",
+    "reflex": "Reflex",
     "memory": "Gedächtnis",
     "speed": "Geschwindigkeit",
-    "accuracy": "Präzision",
+    "accuracy": "Genauigkeit",
     "gaming": "Gaming",
-    "tools": "Alle Tests",
+    "tools": "Alle Tools",
     "leaderboard": "Bestenliste",
     "challenges": "Herausforderungen",
     "statistics": "Statistiken",
@@ -15,10 +15,10 @@
   },
   "common": {
     "start": "Test starten",
-    "restart": "Erneut versuchen",
+    "restart": "Nochmal versuchen",
     "next": "Weiter",
     "finish": "Beenden",
-    "score": "Ergebnis",
+    "score": "Punktzahl",
     "time": "Zeit",
     "bestScore": "Bestleistung",
     "average": "Durchschnitt",
@@ -26,61 +26,919 @@
     "wpm": "WPM",
     "cps": "CPS",
     "percentile": "Perzentil",
-    "saveScore": "Ergebnis speichern",
+    "saveScore": "Punktzahl speichern",
     "share": "Ergebnis teilen",
     "instructions": "Anleitung",
     "difficulty": "Schwierigkeit",
-    "easy": "Einfach",
+    "easy": "Leicht",
     "medium": "Mittel",
     "hard": "Schwer",
     "expert": "Experte",
     "globalBenchmarks": "Globale Benchmarks",
     "howToPlay": "Spielanleitung",
     "faq": "Häufig gestellte Fragen",
-    "switchLanguage": "Sprache"
+    "switchLanguage": "Sprache",
+    "tools": "kostenlose Tools"
   },
   "home": {
-    "heroBadge": "Kognitiver Leistungs-Benchmark",
-    "heroTitle": "Messen & Trainieren Sie Ihre",
-    "heroTitleHighlight": "Reaktionsgeschwindigkeit",
-    "heroSubtitle": "Kostenlose Reaktionszeittests mit Millisekunden-Präzision, Arbeitsgedächtnis-Spiele, Tippgeschwindigkeit-Benchmarks und FPS-Zielaufwärmung.",
+    "heroBadge": "Benchmark für kognitive Leistung",
+    "heroTitle": "Messe & trainiere deine",
+    "heroTitleHighlight": "Geschwindigkeit",
+    "heroSubtitle": "Kostenlose Reaktionstests mit Millisekunden-Präzision, Arbeitsgedächtnisspiele, Tippgeschwindigkeits-Benchmarks und FPS-Aim-Warmup-Tools.",
     "startTesting": "Ersten Test starten",
-    "exploreTools": "40+ Tests entdecken",
+    "exploreTools": "Über 40 Tools entdecken",
     "popularTests": "Beliebte Tests",
-    "categories": "Kategorien"
+    "categories": "Kategorien",
+    "statReaction": "Reaktionszeit-Ergebnisse",
+    "statTools": "Interaktive Tools",
+    "statFree": "Kostenlos & im Browser",
+    "enterArena": "Arena betreten",
+    "startQuest": "Quest starten"
   },
   "categories": {
     "reflex": {
       "title": "Reflexe & Reaktion",
-      "description": "Messen Sie Ihre visuelle und auditive Reaktionszeit mit Millisekunden-Genauigkeit."
+      "description": "Teste deine visuelle und auditive Reaktionszeit mit Millisekunden-Genauigkeit."
     },
     "memory": {
       "title": "Arbeitsgedächtnis",
-      "description": "Trainieren Sie Merkfähigkeit, Mustersequenzen und visuelle Gedächtniskapazität."
+      "description": "Trainiere Merkfähigkeit, Sequenzmuster und visuelle Spankapazität."
     },
     "speed": {
-      "title": "Motorik & Klickgeschwindigkeit",
-      "description": "Testen Sie Klicks pro Sekunde (CPS), Tippgeschwindigkeit (WPM) und Kopfrechengeschwindigkeit."
+      "title": "Motorgeschwindigkeit & CPS",
+      "description": "Teste Mausklicks pro Sekunde (CPS), Tippgeschwindigkeit (WPM) und Rechenagilität."
     },
     "accuracy": {
-      "title": "Zielgenauigkeit & Präzision",
-      "description": "Verbessern Sie Zielgenauigkeit, Mustererkennung und Hand-Auge-Koordination."
+      "title": "Aim & Genauigkeit",
+      "description": "Verbessere die Präzision von Mikrozielen, Mustererkennung und Hand-Auge-Koordination."
     },
     "gaming": {
       "title": "Esports Warmup",
-      "description": "Kalibrieren Sie Flickshots, Zielverfolgung und Kampfreaktion für kompetitives Gaming."
+      "description": "Kalibriere Maus-Flick-Shots, Zielverfolgung und Kampfreflexe für wettbewerbsorientierte Spiele."
     }
   },
   "footer": {
-    "tagline": "Kostenlose Online-Plattform für kognitives Training mit visuellen Reaktionszeit-, Arbeitsgedächtnis-, WPM- und Zielgenauigkeits-Benchmarks.",
+    "tagline": "Kostenlose Online-Plattform für kognitives Training mit Benchmarks für visuelle Reaktionszeit, Arbeitsgedächtnis, Tipp-WPM und Zielgenauigkeit.",
     "quickLinks": "Schnellzugriff",
     "tools": "Kategorien",
     "legal": "Rechtliches & Datenschutz",
-    "privacy": "Datenschutzerklärung",
+    "privacy": "Datenschutz",
     "terms": "Nutzungsbedingungen",
     "cookies": "Cookie-Richtlinie",
     "contact": "Kontakt",
-    "about": "Über Uns",
-    "rights": "Alle Rechte vorbehalten."
+    "about": "Über uns",
+    "rights": "Alle Rechte vorbehalten.",
+    "features": "Funktionen",
+    "achievements": "Erfolge",
+    "research": "Forschung",
+    "methodology": "Methodik",
+    "trainingPrograms": "Trainingsprogramme",
+    "faq": "FAQ",
+    "cookiePreferences": "Cookie-Einstellungen",
+    "platformMethodology": "Über die Reflextry-Plattform & Methodik",
+    "brainTrainingTitle": "Gehirntraining:",
+    "brainTrainingText": "Wir haben Reflextry entwickelt, um Gamern und kompetitiven Spielern einen rohen, ungefilterten Einblick in ihre grundlegende Mechanik zu geben. Kein Schnickschnack, nur pure Leistungsmessung. Indem du dein Arbeitsgedächtnis und deine visuelle Mustererkennung jeden Tag an die Grenzen bringst, zwingst du dein Gehirn dazu, schnellere, stärkere neuronale Bahnen aufzubauen – ein Prozess, der als Neuroplastizität bekannt ist. Wir isolieren spezifische kognitive Belastungen (wie räumliches Erinnern und Sequenzgedächtnis), damit du genau das trainieren kannst, worin du schwach bist.",
+    "esportsTitle": "Esports-Latenz:",
+    "esportsText": "Im kompetitiven Gaming sind 50 Millisekunden der Unterschied zwischen einem Kopfschuss und dem Rückwurf in die Lobby. Unsere Speed- und Reflex-Arenen entfernen alle externen Spielmechaniken, um deine rohe biologische Reaktionszeit zu messen. Wir verfolgen deine Klicks pro Sekunde (CPS), Flick-Shot-Genauigkeit und rohe Tracking-Geschwindigkeit. Wir haben unsere Testumgebung stark optimiert, um input-lag auf Browser-Ebene zu eliminieren, was dir eine echte Messung des Zusammenspiels von Hardware und Nervensystem liefert. Nutze diese Tools, um deine schnellzuckenden Muskeln aufzuwärmen, bevor du in Ranked-Matches springst.",
+    "accuracyTitle": "Genauigkeit:",
+    "accuracyText": "Geschwindigkeit bedeutet nichts, wenn du daneben schießt. Der Accuracy-Hub zwingt dich dazu, dich zu konzentrieren und Präzision über reine Geschwindigkeit zu stellen. Durch räumliche Raster, Winkelschätzung und Farbvergleich verfeinerst du deine Feinmotorik. Das gleichzeitige Training von Geschwindigkeit und Genauigkeit bringt deinem zentralen Nervensystem bei, komplexe mechanische Bewegungen effizient auszuführen. Wir speichern alle deine Sitzungsdaten, damit du im Laufe der Zeit tatsächlich sehen kannst, wie deine Leistungskurve nach oben geht. 10 Minuten fokussiertes Training hier schlagen 5 Stunden sinnloses Grinden.",
+    "clinicalRef": "Klinische Ref:",
+    "brainTrainingResearch": "Gehirntrainingsforschung",
+    "allRightsReserved": "ALLE RECHTE VORBEHALTEN.",
+    "lastUpdate": "LETZTES UPDATE: JUL 2026",
+    "builtWith": "ERSTELLT MIT",
+    "forGAMERS": "FÜR GAMER"
+  },
+  "guide": {
+    "howItWorks": "Funktionsweise & Tipps",
+    "subtitle": "Meistern Sie das Spiel mit unserem umfassenden Leitfaden und Verbesserungsstrategien.",
+    "jumpTo": "Springen zu",
+    "about": "Über",
+    "howToPlay": "Spielanleitung",
+    "proTips": "Profi-Tipps",
+    "faq": "FAQ",
+    "aboutTest": "Über Diesen Test",
+    "trains": "Was Dieser Test Trainiert",
+    "instructions": "Anleitung & Mechanik",
+    "quickSetup": "Schnellstart",
+    "keyRules": "Hauptregeln:",
+    "strategies": "Expertenstrategien",
+    "faqs": "Häufig Gestellte Fragen",
+    "continueTraining": "Training Fortsetzen"
+  },
+  "game": {
+    "difficultyLevel": "Schwierigkeitsgrad",
+    "sessionStats": "Sitzungsstatistik",
+    "active": "Aktiv",
+    "soundOn": "Ton An",
+    "unmute": "Ton Einschalten",
+    "arena": "ARENA",
+    "initializeTest": "Test Starten",
+    "calibrationComplete": "Kalibrierung Abgeschlossen",
+    "finalScore": "Endpunktzahl:",
+    "newRecord": "Neuer Rekord!",
+    "recalibrate": "Neu Kalibrieren",
+    "menu": "Menü",
+    "seen": "Gesehen",
+    "new": "Neu",
+    "diffBeginner": "Anfänger",
+    "diffEasy": "Einfach",
+    "diffNormal": "Normal",
+    "diffHard": "Schwer",
+    "diffProfessional": "Profi",
+    "diffExpert": "Experte",
+    "telemetryStream": "TELEMETRIE_STREAM"
+  },
+  "stats": {
+    "score": "Punkte",
+    "best": "Bestwert",
+    "lives": "Leben",
+    "timeleft": "Restzeit",
+    "time": "Zeit",
+    "trial": "Versuch",
+    "rt": "RZ",
+    "avgrt": "Durchschn. RZ",
+    "bestrt": "Beste RZ",
+    "attempt": "Versuch",
+    "errors": "Fehler",
+    "round": "Runde",
+    "averageerr": "Durchschn. Fehler",
+    "besterr": "Bester Fehler",
+    "targetmargin": "Zieltoleranz",
+    "level": "Level",
+    "objects": "Objekte",
+    "target": "Ziel",
+    "grid": "Gitter",
+    "avgspeed": "Durchschn. Tempo",
+    "bestclick": "Bester Klick",
+    "failpenalty": "Strafe"
+  },
+  "verbalMemory": {
+    "title": "VERBALES GEDÄCHTNIS",
+    "subtitle": "LEXIKALISCHE ERKENNUNG",
+    "arenaGoal": "NEUE REIZE ERKENNEN",
+    "testTitle": "Verbales Gedächtnistest",
+    "testDesc": "Testen Sie Ihr verbales Gedächtnis. Merken Sie sich, welche Wörter Sie bereits gesehen haben und welche neu sind.",
+    "beginnerDesc": "50 Wörter · 5 Leben",
+    "easyDesc": "100 Wörter · 3 Leben",
+    "normalDesc": "300 Wörter · 3 Leben",
+    "hardDesc": "500 Wörter · 1 Leben",
+    "proDesc": "1000 Wörter · 3s Limit"
+  },
+  "tools": {
+    "sequence-memory": {
+      "title": "Sequenzen",
+      "desc": "Übe das Abrufen größer werdender räumlicher Lichtmuster mit unserem kostenlosen Sequenzen-Gedächtnistest. Lies die Regeln und vergleiche deine Sitzungen."
+    },
+    "sequence": {
+      "title": "Sequenzen",
+      "desc": "Übe das Abrufen größer werdender räumlicher Lichtmuster mit unserem kostenlosen Sequenzen-Gedächtnistest. Lies die Regeln und vergleiche deine Sitzungen."
+    },
+    "number-memory": {
+      "title": "Zahlen",
+      "desc": "Messe dein Arbeitsgedächtnis und deine Ziffernspanne mit unserem kostenlosen Zahlen-Gedächtnistest. Merke dir wachsende Zahlenreihen und vergleiche deine Punktzahl."
+    },
+    "number": {
+      "title": "Zahlen",
+      "desc": "Messe dein Arbeitsgedächtnis und deine Ziffernspanne mit unserem kostenlosen Zahlen-Gedächtnistest. Merke dir wachsende Zahlenreihen und vergleiche deine Punktzahl."
+    },
+    "visual-memory": {
+      "title": "Visueller Gedächtnistest",
+      "desc": "Verbessere die visuelle Merkfähigkeit und das räumliche Mustererkennen. Teste dein visuelles Gedächtnis, indem du aufblinkende Rastermuster auf einer wachsenden Matrix abrufst. Kostenloses Human-Benchmark-Tool."
+    },
+    "visual": {
+      "title": "Visueller Gedächtnistest",
+      "desc": "Verbessere die visuelle Merkfähigkeit und das räumliche Mustererkennen. Teste dein visuelles Gedächtnis, indem du aufblinkende Rastermuster auf einer wachsenden Matrix abrufst. Kostenloses Human-Benchmark-Tool."
+    },
+    "color-memory": {
+      "title": "Farb",
+      "desc": "Fordere dein chromatisches Gedächtnis und deine visuelle Aufmerksamkeit heraus. Merke dir schnell wechselnde Farbsequenzen und trainiere die kognitive Flexibilität mit unserem kostenlosen Farb-Gedächtnistest."
+    },
+    "color": {
+      "title": "Farb",
+      "desc": "Fordere dein chromatisches Gedächtnis und deine visuelle Aufmerksamkeit heraus. Merke dir schnell wechselnde Farbsequenzen und trainiere die kognitive Flexibilität mit unserem kostenlosen Farb-Gedächtnistest."
+    },
+    "shape-memory": {
+      "title": "Formen",
+      "desc": "Trainiere die Unterscheidung geometrischer Formen und das räumliche Gedächtnis. Merke dir abstrakte Formen und Symbole, um das nonverbale visuelle Denken und die Konzentration zu verbessern."
+    },
+    "shape": {
+      "title": "Formen",
+      "desc": "Trainiere die Unterscheidung geometrischer Formen und das räumliche Gedächtnis. Merke dir abstrakte Formen und Symbole, um das nonverbale visuelle Denken und die Konzentration zu verbessern."
+    },
+    "symbol-memory": {
+      "title": "Symbol",
+      "desc": "Verbessere abstrakte Mustererkennung und assoziatives Gedächtnis. Ordne kryptische Symbole und Icons zu, um mentale Fokussierung und visuelle Verarbeitungsgeschwindigkeit zu schärfen."
+    },
+    "symbol": {
+      "title": "Symbol",
+      "desc": "Verbessere abstrakte Mustererkennung und assoziatives Gedächtnis. Ordne kryptische Symbole und Icons zu, um mentale Fokussierung und visuelle Verarbeitungsgeschwindigkeit zu schärfen."
+    },
+    "word-recall": {
+      "title": "Wort",
+      "desc": "Validiere deine verbale Gedächtnisleistung und Vokabelerkennung. Teste, ob Wörter neu sind oder bereits gesehen wurden, um das sprachliche Kurzzeitgedächtnis zu messen."
+    },
+    "card-match": {
+      "title": "Karten",
+      "desc": "Trainiere räumliches Gedächtnis und visuelles Musterrückrufen mit unserem kostenlosen Online-Karten-Paare-Gedächtnisspiel. Drehe Karten um, finde Paare mit den wenigsten Zügen und schlage die Zeit."
+    },
+    "chimp-test": {
+      "title": "Chimp",
+      "desc": "Bist du schlauer als ein Schimpanse? Mache den berühmten Chimp-Test, um dein visuell-räumliches Arbeitsgedächtnis zu messen. Merke dir das Zahlenraster, bevor es verschwindet."
+    },
+    "verbal-memory": {
+      "title": "Verbaler Gedächtnistest",
+      "desc": "Teste dein verbales Arbeitsgedächtnis mit unserem kostenlosen verbalen Gedächtnistest. Identifiziere gesehene Wörter im Vergleich zu neuen Wörtern, um sprachliches Speichervermögen und kognitive Verarbeitungsgeschwindigkeit zu messen."
+    },
+    "object-tracking": {
+      "title": "Mehrfach",
+      "desc": "Teste dynamische visuelle Aufmerksamkeit und räumliche Verfolgung. Folge mehreren sich bewegenden Zielkugeln zwischen Ablenkungen in diesem wissenschaftlich fundierten kognitiven Test."
+    },
+    "n-back": {
+      "title": "N",
+      "desc": "Trainiere dein Arbeitsgedächtnis mit der klassischen N-Back-Aufgabe. Vergleiche Buchstaben, die vor N Schritten erschienen sind, verfolge Treffer und Genauigkeit und steigere dich von 1-back auf 3-back."
+    },
+    "reaction-time": {
+      "title": "Reaktionstest",
+      "desc": "Teste und verbessere deine visuelle Reaktionszeit in Millisekunden. Mach unseren kostenlosen Millisekunden-Reaktionstest, vergleiche dich mit Pro-Gamern und verfolge deinen Reflexfortschritt."
+    },
+    "reaction": {
+      "title": "Esports Gamer Reaktionstest",
+      "desc": "Teste kompetitive Kampfreflexe, Quick-Time-Event (QTE)-Parade-Timing und Esports-Reaktionsgeschwindigkeiten in millisekundengenauen, simulierten Kampfszenarien."
+    },
+    "sound-reaction": {
+      "title": "Audio",
+      "desc": "Messe deine auditive Reaktionsgeschwindigkeit in Millisekunden. Teste Hörreflexe mit sofortigen Audiosignalen und vergleiche deine Sound-Reaktion mit der visuellen Reaktionszeit."
+    },
+    "sound": {
+      "title": "Audio",
+      "desc": "Messe deine auditive Reaktionsgeschwindigkeit in Millisekunden. Teste Hörreflexe mit sofortigen Audiosignalen und vergleiche deine Sound-Reaktion mit der visuellen Reaktionszeit."
+    },
+    "grid-shot": {
+      "title": "Grid Shot Aim Trainer",
+      "desc": "Wärme dein Zielen und deine Mausgeschwindigkeit mit Grid Shot auf. Klicke auf schnell erscheinende Ziele im Raster, um die Hand-Auge-Koordination für FPS-Spiele wie Valorant und CS2 zu verbessern."
+    },
+    "grid": {
+      "title": "Gitter",
+      "desc": "Trainiere visuelles Scannen und periphere Lesegeschwindigkeit mit Schulte-Gattern. Finde Zahlen in aufsteigender Reihenfolge auf einem 5x5-Gitter, um deine visuelle Suchgeschwindigkeit zu steigern."
+    },
+    "peripheral-vision": {
+      "title": "Peripheres Sehtest",
+      "desc": "Trainiere die periphere Sehwahrnehmung und die seitliche Reaktionsgeschwindigkeit. Erkenne und klicke auf abseits der Mitte liegende Reize, um den visuellen Fokus für Autofahren, Sport und kompetitives Gaming zu erweitern."
+    },
+    "peripheral": {
+      "title": "Peripheres Sehtest",
+      "desc": "Trainiere die periphere Sehwahrnehmung und die seitliche Reaktionsgeschwindigkeit. Erkenne und klicke auf abseits der Mitte liegende Reize, um den visuellen Fokus für Autofahren, Sport und kompetitives Gaming zu erweitern."
+    },
+    "directional-reflex": {
+      "title": "Direktionaler Reflextest",
+      "desc": "Teste die Reaktionsgeschwindigkeit der Tastatur und räumliche Entscheidungsfindung. Drücke Pfeiltasten passend zu schnellen Richtungs-Prompts, um kognitive Verarbeitung und Reflex-Agilität zu verbessern."
+    },
+    "direction": {
+      "title": "Direktionaler Reflextest",
+      "desc": "Teste die Reaktionsgeschwindigkeit der Tastatur und räumliche Entscheidungsfindung. Drücke Pfeiltasten passend zu schnellen Richtungs-Prompts, um kognitive Verarbeitung und Reflex-Agilität zu verbessern."
+    },
+    "multi-stimulus": {
+      "title": "Multi",
+      "desc": "Teste die Wahlreaktionszeit und selektive Aufmerksamkeit. Verarbeite mehrere visuelle und auditive Reize gleichzeitig, um die Entscheidungsgeschwindigkeit im Bruchteil einer Sekunde zu messen."
+    },
+    "sequence-reaction": {
+      "title": "Sequenz",
+      "desc": "Kombiniere Gedächtnisabruf mit schnellen motorischen Reflexen. Folge schnelllebigen Lichtsequenzen und führe rasante Kombos aus, um rhythmische Reaktionszeiten und Schnelligkeit zu trainieren."
+    },
+    "whack-a-mole": {
+      "title": "Whack",
+      "desc": "Spiele das klassische Whack-a-Mole online kostenlos. Tippe auf aufauchende Maulwürfe so schnell wie möglich, um Reaktionsgeschwindigkeit, Präzisionsklicks und motorische Agilität zu messen."
+    },
+    "color-switch": {
+      "title": "Color Switch Reflextest",
+      "desc": "Trainiere deine Farb-Reaktionszeit und selektive Antwortgeschwindigkeit. Reagiere sofort auf Bildschirm-Farbwechsel und Blitzsignale ohne Zögern."
+    },
+    "time-perception": {
+      "title": "Zeitempfindungstest",
+      "desc": "Teste deine innere Uhr und Zeiteinschätzung. Halte und laufe den Button los, um Zielzeitintervalle präzise auf die Millisekunde genau zu treffen."
+    },
+    "go-no-go": {
+      "title": "Go / No",
+      "desc": "Messe deine Reaktionshemmung mit einem Go/No-Go-Test. Klicke bei grünen Go-Versuchen, stoppe bei roten No-Go-Versuchen und tracke Genauigkeit und Reaktionszeit."
+    },
+    "flanker": {
+      "title": "Flanker",
+      "desc": "Mache den Eriksen Flanker-Test online. Reagiere auf den mittleren Pfeil und ignoriere kongruente oder inkongruente Flanker, um deine Aufmerksamkeitskontrolle zu messen."
+    },
+    "choice-reaction": {
+      "title": "Choice Reaction Time Test",
+      "desc": "Messe deine Wahl-Reaktionszeit über 2–4 farbige Ziele hinweg. Klicke so schnell wie möglich auf das aufleuchtende Feld und schlage deine durchschnittliche RT in Millisekunden."
+    },
+    "cps-test": {
+      "title": "CPS",
+      "desc": "Messe deine Klickgeschwindigkeit mit unserem kostenlosen CPS-Test. Teste die Modi 1s, 5s, 10s, 30s und 60s für normales Klicken, Jitter-Klicken, Butterfly-Klicken und Drag-Klicken."
+    },
+    "click": {
+      "title": "CPS",
+      "desc": "Messe deine Klickgeschwindigkeit mit unserem kostenlosen CPS-Test. Teste die Modi 1s, 5s, 10s, 30s und 60s für normales Klicken, Jitter-Klicken, Butterfly-Klicken und Drag-Klicken."
+    },
+    "speed-math": {
+      "title": "Kopfrechnen",
+      "desc": "Schärfe dein Kopfrechnen und deine Rechengeschwindigkeit. Löse schnelle Additionen, Subtraktionen, Multiplikationen und Divisionen unter Zeitdruck, um deine mathematische Gewandtheit zu verbessern."
+    },
+    "math": {
+      "title": "Kopfrechnen",
+      "desc": "Schärfe dein Kopfrechnen und deine Rechengeschwindigkeit. Löse schnelle Additionen, Subtraktionen, Multiplikationen und Divisionen unter Zeitdruck, um deine mathematische Gewandtheit zu verbessern."
+    },
+    "math-speed": {
+      "title": "Kopfrechnen",
+      "desc": "Schärfe dein Kopfrechnen und deine Rechengeschwindigkeit. Löse schnelle Additionen, Subtraktionen, Multiplikationen und Divisionen unter Zeitdruck, um deine mathematische Gewandtheit zu verbessern."
+    },
+    "typing-speed": {
+      "title": "Tippgeschwindigkeitstest",
+      "desc": "Teste Wörter pro Minute (WPM) und Genauigkeit mit unserem kostenlosen 1-Minuten-Tippgeschwindigkeitstest. Benchmarke deine Tastaturgeschwindigkeit, verfolge Fehlerquoten und verbessere das Zehnfingersystem."
+    },
+    "typing": {
+      "title": "Tippgeschwindigkeitstest",
+      "desc": "Teste Wörter pro Minute (WPM) und Genauigkeit mit unserem kostenlosen 1-Minuten-Tippgeschwindigkeitstest. Benchmarke deine Tastaturgeschwindigkeit, verfolge Fehlerquoten und verbessere das Zehnfingersystem."
+    },
+    "word-accuracy": {
+      "title": "Wortgenauigkeits",
+      "desc": "Verbessere deine Tipppräzision und eliminiere Tippfehler. Tippe Hochgeschwindigkeits-Wörter mit 100 % Genauigkeit, um fehlerfreies Tippen unter Zeitdruck zu meistern."
+    },
+    "words": {
+      "title": "Schnelllese",
+      "desc": "Teste deine Lesegeschwindigkeit und Wortwiedererkennung. Messe Wörter pro Minute und rasche visuelle Identifikation mit unserem interaktiven Speed-Words-Tool."
+    },
+    "word-speed": {
+      "title": "Schnelllese",
+      "desc": "Teste deine Lesegeschwindigkeit und Wortwiedererkennung. Messe Wörter pro Minute und rasche visuelle Identifikation mit unserem interaktiven Speed-Words-Tool."
+    },
+    "grid-selection": {
+      "title": "Gitter",
+      "desc": "Trainiere visuelles Scannen und periphere Lesegeschwindigkeit mit Schulte-Gattern. Finde Zahlen in aufsteigender Reihenfolge auf einem 5x5-Gitter, um deine visuelle Suchgeschwindigkeit zu steigern."
+    },
+    "grid-speed": {
+      "title": "Gitter",
+      "desc": "Trainiere visuelles Scannen und periphere Lesegeschwindigkeit mit Schulte-Gattern. Finde Zahlen in aufsteigender Reihenfolge auf einem 5x5-Gitter, um deine visuelle Suchgeschwindigkeit zu steigern."
+    },
+    "number-rush": {
+      "title": "Number Rush Geschwindigkeitstest",
+      "desc": "Teste rasche Nummernerkennung und Tipp-Geschwindigkeit. Suche und klicke aufsteigende Zahlen so schnell wie menschenmöglich, um deine kognitive Verarbeitungsgeschwindigkeit zu benchen."
+    },
+    "quick-sort": {
+      "title": "Quick",
+      "desc": "Fordere kognitive Kategorisierung und schnelle Entscheidungsfindung heraus. Sortiere eintreffende Elemente unter strengem Zeitlimit in die entsprechenden Kategorien."
+    },
+    "schulte-table": {
+      "title": "Schulte",
+      "desc": "Klassische Schulte-Gatter-Herausforderung. Klicke gemischte Zahlen der Reihe nach auf 3×3 bis 7×7 Gittern an. Trainiere peripheres Sehen, visuelle Suchgeschwindigkeit und Fokus unter Zeitdruck."
+    },
+    "aim-trainer": {
+      "title": "FPS Aim",
+      "desc": "Verbessere deine Mausgenauigkeit, Zielverfolgung und Flick-Geschwindigkeit für FPS-Spiele wie Valorant, CS2 und Apex. Kostenloser 3D-Aim-Trainer direkt in deinem Webbrowser."
+    },
+    "aim": {
+      "title": "FPS Aim",
+      "desc": "Verbessere deine Mausgenauigkeit, Zielverfolgung und Flick-Geschwindigkeit für FPS-Spiele wie Valorant, CS2 und Apex. Kostenloser 3D-Aim-Trainer direkt in deinem Webbrowser."
+    },
+    "rpg-reaction": {
+      "title": "Esports Gamer Reaktionstest",
+      "desc": "Teste kompetitive Kampfreflexe, Quick-Time-Event (QTE)-Parade-Timing und Esports-Reaktionsgeschwindigkeiten in millisekundengenauen, simulierten Kampfszenarien."
+    },
+    "endless-dodge": {
+      "title": "Endless Dodge Spiel",
+      "desc": "Teste deine Ausweichreflexe und räumliche Agilität. Navigiere deinen Cursor durch endlose Schwärme sich bewegender Hindernisse in diesem intensiven Reflex-Überlebensspiel."
+    },
+    "stroop-drop": {
+      "title": "Stroop",
+      "desc": "Fordere deine inhibitorische Kontrolle mit dem interaktiven Spiel Stroop Drop heraus. Löse kognitive Interferenzen zwischen fallenden Farbwörtern und ihrer Tintenfarbe."
+    },
+    "target-tracking": {
+      "title": "Target Tracking Aim Trainer",
+      "desc": "Meistere flüssiges Maus-Tracking für kompetitive FPS-Spiele. Trainiere kontinuierliche Präzisions-Aims gegen ausweichende, bewegte Ziele ohne Maus-Glättung."
+    },
+    "flick-shot": {
+      "title": "Flick Shot Aim Trainer",
+      "desc": "Trainiere Muskelgedächtnis und Snap-Aiming mit unserem Flick-Shot-Trainer. Kalibriere schnelle Mikro-Anpassungen und Zielerfassung für Taktik-Shooter."
+    },
+    "rhythm-tap": {
+      "title": "Rhythm",
+      "desc": "Teste deine musikalische Timing-Genauigkeit und Millisekunden-Rhythmuswahrnehmung. Tippe synchron zu steigenden BPM-Tempos und verfolge Off-Beat-Latenzfehler."
+    },
+    "image-recognition": {
+      "title": "Bilderkennungs",
+      "desc": "Teste visuelle Wahrnehmung und schnelle Bildunterscheidung. Identifiziere subtile visuelle Unterschiede und gleiche Zielobjekte bei hoher Geschwindigkeit ab, um Beobachtungsfähigkeiten zu trainieren."
+    },
+    "data-entry": {
+      "title": "Dateneingabe",
+      "desc": "Messe Dateneingabegeschwindigkeit, alphanumerische Tipppräzision und Fehlerraten. Teste bürokratische Anschläge pro Stunde (APH) mit realistischen numerischen und Code-Benchmarks."
+    },
+    "data": {
+      "title": "Dateneingabe",
+      "desc": "Messe Dateneingabegeschwindigkeit, alphanumerische Tipppräzision und Fehlerraten. Teste bürokratische Anschläge pro Stunde (APH) mit realistischen numerischen und Code-Benchmarks."
+    },
+    "pattern-matching": {
+      "title": "Mustererkennungs",
+      "desc": "Verbessere die visuelle Mustererkennung und das nonverbale logische Denken. Gleiche komplexe Matrixmuster und geometrische Sequenzen ab, um Sehstärke und analytisches Denken zu testen."
+    },
+    "precision-click": {
+      "title": "Präzisionsklick",
+      "desc": "Schärfe die Mauspräzision und Mikro-Zielgenauigkeit. Klicke auf kleine Punktziele, ohne daneben zu klicken, um Feinmotorik und Cursor-Genauigkeit für Gaming zu verfeinern."
+    },
+    "angle-estimation": {
+      "title": "Winkelschätzungs",
+      "desc": "Teste dein Auge für Geometrie und räumliche Schätzungen. Errate Grade von vorgegebenen Winkeln präzise, um visuelle Winkelschärfe und räumliches Urteilsvermögen zu benchen."
+    },
+    "color-match": {
+      "title": "Farbabgleich",
+      "desc": "Teste deine Farbwahrnehmung und subtile Schattierungsunterscheidung mit unserem Farbabgleich-Test. Gleiche Ziel-RGB-Farbtöne unter Zeitdruck ab und benche deine visuelle Präzision."
+    },
+    "color-blindness": {
+      "title": "Farbenblindheits",
+      "desc": "Erkunde Ishihara-ähnliche prozedurale Punkttafeln in einem kostenlosen, lehrreichen Farbsehspiel. Display-Einstellungen beeinflussen die Ergebnisse; dies ist keine diagnostische Beurteilung."
+    },
+    "mental-rotation": {
+      "title": "Mentaler Rotationstest",
+      "desc": "Benche deine 3D-Raumvisualisierung und kognitive Rotationsgeschwindigkeit. Bestimme in Echtzeit, ob komplexe geometrische Formen identisch oder spiegelverkehrt sind."
+    }
+  },
+  "homeContent": {
+    "whatIsReflextryTitle": "Was ist Reflextry?",
+    "whatIsReflextryDesc1": "Reflextry bietet über 50 kostenlose Browser-Spiele für Reaktionszeit, Gedächtnis, Tippen, Klicken, Genauigkeit und Aim-Training. Jeder Test zeichnet eine Punktzahl für diese Aufgabe auf, sodass du deine eigenen Sitzungen vergleichen kannst.",
+    "whatIsReflextryDesc2": "Eine Browser-Punktzahl enthält die Einflüsse deines Bildschirms, Eingabegeräts, Browsers und der Testeinstellungen. Sie ist keine direkte Messung der biologischen Latenz oder eine klinische Bewertung.",
+    "comparableSessionsTitle": "Mache deine Trainingseinheiten vergleichbar",
+    "comparableStep1": "Wähle jedes Mal denselben Test, dieselbe Schwierigkeit und dasselbe Eingabegerät.",
+    "comparableStep2": "Lies die Bewertungsregeln vor dem Start. Millisekunden, Genauigkeit, Spannenlänge und Wörter pro Minute beschreiben unterschiedliche Aufgaben.",
+    "comparableStep3": "Wiederhole mehrere Versuche und vergleiche Trends anstelle eines ungewöhnlich guten Ergebnisses.",
+    "comparableStep4": "Mach eine Pause, wenn du dich müde oder unwohl fühlst.",
+    "comparableFooterPre": "Lies unsere ",
+    "testingMethodology": "Testmethodik",
+    "comparableFooterMid": " für Bewertungsformeln und Hardware-Einschränkungen. Deine ",
+    "personalStatistics": "persönlichen Statistiken",
+    "comparableFooterPost": " zeigen deinen eigenen aufgezeichneten Fortschritt, keine Bevölkerungsnormen.",
+    "betterScoreTitle": "Was eine bessere Punktzahl bedeutet",
+    "betterScoreDesc1Pre": "Trainingsfortschritte sind bei trainierten Aufgaben am stärksten; breite Vorteile im alltäglichen kognitiven Bereich sind weniger belegt. Siehe ",
+    "simonsReview": "Simons und Kollegen – Übersicht über Gehirntrainingsforschung",
+    "betterScoreDesc1Post": ". Diese Forschung validiert Reflextry nicht als Medizin- oder Intelligenztest.",
+    "betterScoreDesc2Pre": "Wir veröffentlichen keinen verifizierten globalen Benchmark-Datensatz. Verwende deine eigenen wiederholten Ergebnisse als Trainingsgrundlage. Für Hintergrundinformationen und Referenzen besuche ",
+    "theSciencePage": "die Wissenschaftsseite",
+    "betterScoreDesc2Post": ".",
+    "faqTitle": "Häufig gestellte Fragen",
+    "faq1Q": "Funktioniert Gehirntraining tatsächlich?",
+    "faq1A": "Training kann die Leistung bei der Aufgabe verbessern, die du trainierst. Eine bessere Spielpunktzahl begründet keine verbesserte Intelligenz, sichereres Fahren oder die Verhinderung eines kognitiven Abbaus. Reflextry-Tests sind Trainingswerkzeuge, keine klinischen Bewertungen.",
+    "faq2Q": "Wie oft sollte ich trainieren?",
+    "faq2A": "Beginne mit einer kurzen Sitzung, die in deinen Zeitplan passt, und höre auf, wenn du müde oder unwohl bist. Vergleiche denselben Test und dieselbe Schwierigkeit auf demselben Gerät. Es gibt keine validierte Reflextry-Trainingsdosis oder einen garantierten Verbesserungszeitplan.",
+    "faq3Q": "Kann ich Reflextry für ein Esports-Warm-up nutzen?",
+    "faq3A": "Du kannst die Aim-, Tracking- und Reaktionsspiele für ein browserbasiertes Warm-up nutzen. Ihre Punktzahlen messen die Leistung in diesen Übungen, nicht deinen Rang oder deine wahrscheinliche Leistung in einem anderen Spiel.",
+    "faq4Q": "Ist Reflextry kostenlos?",
+    "faq4A": "Die Tests können kostenlos im Browser gespielt werden. Du kannst einen Test starten, ohne ein Konto zu erstellen.",
+    "aboutTheLab": "Über das Labor",
+    "aboutTheLabDesc": "Wer Reflextry entwickelt, unsere Methodik und wie du uns kontaktieren kannst.",
+    "allGuides": "Alle Ratgeber",
+    "allGuidesDesc": "Artikel zu Gedächtnis, Reflexen, Geschwindigkeit und Genauigkeit aus dem Cognitive Journal.",
+    "faqCardTitle": "FAQ",
+    "faqCardDesc": "Trainingstipps, Datenschutz, Bewertung und häufige Fragen zum Produkt.",
+    "whatReflextryMeasures": "Was Reflextry misst",
+    "whatReflextryMeasuresDesc": "Kostenlose Browsertests für Reaktionszeit, Arbeitsgedächtnis, Klickgeschwindigkeit, Aim und Genauigkeit. Messe eine Baseline, trainiere in kurzen Sitzungen und verfolge den Fortschritt auf der Statistikseite – kein Konto für die Kernfunktionen erforderlich.",
+    "journalBadge": "Kognitives Laborjournal",
+    "journalTitle": "Zuerst messen. Kurz üben. Methode lesen.",
+    "journalDesc": "Reflextry ist ein kostenloses Browser-Labor für Reaktionszeit, Arbeitsgedächtnis, Geschwindigkeit und Präzision. Die Ergebnisse sind transparent (Millisekunden, Spannen, Genauigkeit)—keine klinischen Diagnosen oder erfundenen Perzentile. Beginnen Sie mit einer Basislinie, trainieren Sie in 10–15-minütigen Einheiten und nutzen Sie unsere Leitfäden für die wissenschaftlichen Grundlagen.",
+    "scoreGuideTitle": "Wie wir Tests bewerten",
+    "scoreGuideDesc": "Was Millisekunden, Spannen und Genauigkeit bedeuten—und was wir nicht behaupten.",
+    "reactionTimeGuideTitle": "Was ist eine gute Reaktionszeit?",
+    "reactionTimeGuideDesc": "Realistische Bereiche, Hardware-Latenzen und wie Sie Ihre eigenen Ergebnisse deuten.",
+    "choiceReactionGuideTitle": "Wahl- vs. einfache Reaktion",
+    "choiceReactionGuideDesc": "Warum mehr Optionen verlangsamen und wie man beides getrennt trainiert."
+  },
+  "categoryHub": {
+    "reflex": {
+      "heroTitle": "Reflextraining & Reaktionsspiele",
+      "heroSubtitle": "Messe deine visuellen und auditorischen Reaktionszeiten bis auf die Millisekunde.",
+      "heroDesc": "Im Profisport, Esports und beim Autofahren ist die Reflexzeit von entscheidender Bedeutung. Unsere Reflex-Suite isoliert verschiedene sensorische Bahnen – visuell, auditorisch und direktional –, damit du deine schnellsten Reaktionszeiten ermitteln und trainieren kannst, deine Latenz zu senken.",
+      "whatItCovers": "Was diese Arena abdeckt",
+      "whatItCoversDesc": "Visuelle und auditorische Reaktionstests, gemessen in Millisekunden – einfache Reaktion, Tonsignale, Rasterklicks, periphere Ziele und Multi-Stimulus-Entscheidungen. Entwickelt, um die Reiz-Reaktions-Latenz für Training und Warm-up zu isolieren.",
+      "benefit1Title": "Visueller Reflex",
+      "benefit1Desc": "Auf Farben reagieren",
+      "benefit2Title": "Audio-Reflex",
+      "benefit2Desc": "Auf Geräusche reagieren",
+      "benefit3Title": "Räumlicher Reflex",
+      "benefit3Desc": "Über den Bildschirm hinweg reagieren"
+    },
+    "memory": {
+      "heroTitle": "Gedächtnistrainingsspiele & kognitiver Abruf",
+      "heroSubtitle": "Stärke deine Arbeitsgedächtniskapazität, Ziffernspanne und räumliche Erinnerung.",
+      "heroDesc": "Das Arbeitsgedächtnis ist der mentale Arbeitsbereich, den du beim Befolgen von Anweisungen oder Lösen von Problemen nutzt. Unsere Gedächtnisspiele nutzen eine adaptive Schwierigkeit: Je besser du wirst, desto höher steigt die Herausforderung, um deine Behaltensgrenzen zu erweitern.",
+      "whatItCovers": "Was diese Arena abdeckt",
+      "whatItCoversDesc": "Räumliche Muster, numerische Sequenzen, verbale Erkennung und Multi-Objekt-Tracking. Entwickelt, um deinen Arbeitsgedächtnispuffer durch progressive Schwierigkeitsstufen zu trainieren.",
+      "benefit1Title": "Räumliches Erinnern",
+      "benefit1Desc": "Gedächtnis für Kachellayouts",
+      "benefit2Title": "Ziffernspanne",
+      "benefit2Desc": "Numerisches Gedächtnis",
+      "benefit3Title": "Mustersequenz",
+      "benefit3Desc": "Sich ausdehnende Blitzmuster"
+    },
+    "speed": {
+      "heroTitle": "Geschwindigkeitstests & Geschwindigkeits-Benchmarks",
+      "heroSubtitle": "Steigere deine Klicks pro Sekunde (CPS), Tippgeschwindigkeit (WPM) und Rechenagilität.",
+      "heroDesc": "Geschwindigkeits-Benchmarks messen den rohen Durchsatz deines neuromuskulären Systems – wie viele präzise Aktionen du pro Zeiteinheit über Maus- und Tastatureingaben ausführen kannst.",
+      "whatItCovers": "Was diese Arena abdeckt",
+      "whatItCoversDesc": "Mausklickgeschwindigkeit über mehrere Intervalle, getippte Wörter pro Minute, schnelles Kopfrechnen und visuelles Scannen auf Schulte-Tabellen.",
+      "benefit1Title": "Klickgeschwindigkeit",
+      "benefit1Desc": "Rohe CPS messen",
+      "benefit2Title": "Tippgeschwindigkeit",
+      "benefit2Desc": "WPM-Benchmark",
+      "benefit3Title": "Kopfrechnen",
+      "benefit3Desc": "Schnelle Berechnungen"
+    },
+    "accuracy": {
+      "heroTitle": "Aim- & Präzisionstraining",
+      "heroSubtitle": "Verfeinere deine Micro-Target-Genauigkeit, Hand-Auge-Koordination und visuelle Einschätzung.",
+      "heroDesc": "Geschwindigkeit bedeutet ohne Präzision gar nichts. Unsere Genauigkeitsmodule trainieren dich darauf, Ziele sauber und mit minimalen Fehlertoleranzen anzvisieren.",
+      "whatItCovers": "Was diese Arena abdeckt",
+      "whatItCoversDesc": "Präzises Micro-Klicken, Winkelschätzung, Mustererkennung, Farbunterscheidung und Dateneingabegenauigkeit.",
+      "benefit1Title": "Präzisions-Aim",
+      "benefit1Desc": "Micro-Target-Klicks",
+      "benefit2Title": "Räumliche Winkel",
+      "benefit2Desc": "Winkelschätzung",
+      "benefit3Title": "Visueller Abgleich",
+      "benefit3Desc": "Mustererkennung"
+    },
+    "gaming": {
+      "heroTitle": "Esports Warm-up & Aim-Arena",
+      "heroSubtitle": "Kalibriere Maus-Flick-Shots, Target-Tracking und Kampfreflexe für kompetitive Spiele.",
+      "heroDesc": "Speziell entwickelt für Gamer in Counter-Strike, Valorant, Apex Legends und Overwatch, um das mechanische Muskelgedächtnis aufzuwärmen, bevor es in Ranked-Spiele geht.",
+      "whatItCovers": "Was diese Arena abdeckt",
+      "whatItCoversDesc": "Flick-Shot-Aim, kontinuierliches Ziel-Tracking (Tracking), reflexartige Kampfreflexe und das Ausweichen vor Hindernisströmen.",
+      "benefit1Title": "Flick Shots",
+      "benefit1Desc": "Zielerfassung",
+      "benefit2Title": "Tracking",
+      "benefit2Desc": "Flüssiges Zielverfolgen",
+      "benefit3Title": "Kampfreflex",
+      "benefit3Desc": "Schnelle Entscheidungsfindung"
+    },
+    "exploreOther": "Weitere Kategorien erkunden",
+    "toolNameCol": "Tool-Name",
+    "bestForCol": "Bestens geeignet für (Anwendungsfall)",
+    "coreBenefitCol": "Hauptvorteil"
+  },
+  "allTools": {
+    "title": "Alle Trainingstools",
+    "subtitle": "Entdecke unsere komplette Suite kognitiver und psychomotorischer Tests. Filtere nach Arena oder stöbere unten, um mit dem Benchmarking zu beginnen.",
+    "filterAll": "Alle Tools",
+    "filterMemory": "Gedächtnis",
+    "filterReflex": "Reflex",
+    "filterSpeed": "Geschwindigkeit",
+    "filterAccuracy": "Genauigkeit",
+    "filterGaming": "Gaming",
+    "startTest": "Test starten"
+  },
+  "about": {
+    "identityProfile": "Identitätsprofil",
+    "heroTitle": "Über",
+    "heroTitleHighlight": "Uns",
+    "heroSubtitle": "Eine schnörkellose Plattform zum Messen und Ausreizen deiner mechanischen Grenzen. Entwickelt von kompetitiven Spielern für jeden, der besser werden möchte.",
+    "missionLabel": "Leitbild",
+    "missionTitle": "Unsere Mission",
+    "missionDesc": "Unsere Mission ist einfach: Mach die exakt gleichen hochrangigen Reaktions- und kognitiven Testtools, die von professionellen E-Sport-Teams genutzt werden, für jeden zugänglich. Verbesserung beginnt mit rohen, ehrlichen Daten. Wir haben Reflextry entwickelt, damit du deine genaue Baseline findest, dich fokussierst und sie übertriffst.",
+    "originLabel": "Ursprungs-Log",
+    "originTitle": "Unsere Geschichte",
+    "originP1": "Reflextry begann als kleines Nebenprojekt: Ein Skript für den Browser, um die Klicklatenz zu messen, ohne einen weiteren Desktop-Trainer installieren zu müssen. Dieses eine Tool führte zu einer Frage, die wir immer wieder hörten: Können wir Gedächtnis, Reflexe, Geschwindigkeit, Genauigkeit und Zielübungen an einem Ort vereinen, kostenlos ausprobierbar und mit Werten, die man selbst nachverfolgen kann?",
+    "originP2": "Wir haben die Seite in Surat, Indien, als kleines Zweier-Team aufgebaut. Jedes Modul ist ein echter interaktiver Test im Browser – keine Download-Sperre, kein kostenpflichtiges „Premium-Paket“. Der Fortschritt wird in deinen Sitzungs- und Statistik-Tools gespeichert, damit du Trends erkennen kannst, ohne für das Kern-Training ein Konto erstellen zu müssen.",
+    "originP3": "Heute wird Reflextry von Gamern genutzt, die sich vor Ranglistenspielen aufwärmen, von Schülern, die ihr Arbeitsgedächtnis trainieren, und von neugierigen Besuchern, die ihre Reaktionszeit oder ihr Farbsehen testen. Wir erweitern die Suite kontinuierlich und sorgfältig: Neue Tests werden erst veröffentlicht, wenn die Bewertungsregeln klar sind und die Benutzeroberfläche erklärt, was die Zahl bedeutet.",
+    "coreValuesLabel": "Kernwerte",
+    "valAccuracyTitle": "Genauigkeit",
+    "valAccuracyDesc": "Kein Schnickschnack, nur präzise Messungen und zuverlässige Tests zur Verfolgung deiner wahren mechanischen Baseline.",
+    "valInnovationTitle": "Innovation",
+    "valInnovationDesc": "Ständige Entwicklung neuer Module, um die absoluten Grenzen der menschlichen Reaktionszeit zu testen.",
+    "valAccessibilityTitle": "Zugänglichkeit",
+    "valAccessibilityDesc": "Tests und Leistungstracking-Tools auf Profi-Niveau, komplett kostenlos für jeden.",
+    "valUserFirstTitle": "Der Nutzer zuerst",
+    "valUserFirstDesc": "Wir bauen, was die Community verlangt. Wenn ein Spielmodus schlecht ist, fixen wir ihn.",
+    "whatWeOfferLabel": "Was wir bieten",
+    "offerBrainTitle": "Gehirntraining-Spiele",
+    "offerBrainDesc": "Fordere dein Arbeitsgedächtnis und deine Mustererkennung mit kognitiven Aufgaben heraus, die auf Neuroplastizität ausgelegt sind.",
+    "offerReflexTitle": "Reaktions- & Geschwindigkeitstests",
+    "offerReflexDesc": "Messe deine physische Latenz bis auf die genaue Millisekunde in unseren Ziel-, Klick- und Reaktionsarenen.",
+    "offerTrackingTitle": "Fortschrittsverfolgung",
+    "offerTrackingDesc": "Protokolliere deine Sitzungsdaten automatisch und beobachte, wie deine Leistungskurve im Laufe der Zeit steigt.",
+    "offerLeaderboardTitle": "Erfolge & Bestenlisten",
+    "offerLeaderboardDesc": "Schalte Ränge frei, besiege tägliche Herausforderungen und sieh nach, wie du im Vergleich zu Spielern weltweit abschneidest.",
+    "ctaTitle": "Bereit, deine Baseline zu finden?",
+    "ctaDesc": "Kein Konto erforderlich. Wähle einfach ein Tool aus, fokussiere dich und teste deine Geschwindigkeit.",
+    "ctaStart": "Reaktionstest starten",
+    "ctaExplore": "Alle Tools erkunden"
+  },
+  "faqPage": {
+    "heroTitle": "Häufig gestellte Fragen",
+    "heroSubtitle": "Alles, was du über die Tests, Trainingsvorteile und die Bewertung wissen musst.",
+    "catGettingStarted": "Erste Schritte",
+    "catBrainTraining": "Gehirntraining",
+    "catMemoryTraining": "Gedächtnistraining",
+    "catReactionTime": "Reaktionszeit",
+    "catSpeedAim": "Geschwindigkeit & Zielgenauigkeit",
+    "catPrivacyScores": "Datenschutz & Werte",
+    "q1": "Was genau ist Reflextry?",
+    "a1": "Es ist eine kostenlose Plattform, die entwickelt wurde, um deine rohen mechanischen Fähigkeiten zu messen und zu verbessern – Dinge wie Reaktionszeit, Arbeitsgedächtnis und Klickgenauigkeit. Keine Downloads oder Registrierungen erforderlich. Wähle einfach ein Tool aus und teste deine Grenzen.",
+    "q2": "Muss ich ein Konto erstellen?",
+    "a2": "Nein. Alles ist absolut kostenlos und sofort zugänglich. Wir werden später optionale Konten hinzufügen, wenn du deinen Fortschritt geräteübergreifend speichern oder auf globalen Bestenlisten antreten möchtest, aber die Kern-Tools bleiben immer offen.",
+    "q3": "Wo sollte ich anfangen?",
+    "a3": "Wenn du Shooter spielst, probiere den Aim Trainer oder den Reaktionstest. Wenn du für das kognitive Training hier bist, versuche Sequenzgedächtnis oder Zahlengedächtnis. Wir empfehlen, einfach ein paar auszuprobieren, um zu sehen, wo deine Baseline liegt.",
+    "q4": "Bringt Gehirntraining überhaupt etwas?",
+    "a4": "Ja, in den Neurowissenschaften nennt man das „Near Transfer“ (naher Transfer). Wenn du täglich das Merken von Zahlenfolgen übst, passt sich dein Gehirn physisch an (Neuroplastizität) und du wirst besser darin, Informationen in deinem Kurzzeitgedächtnis zu behalten. Es ist wie Fitnessstudio, nur für dein zentrales Nervensystem.",
+    "q5": "Wie lange dauert es, bis ich Ergebnisse sehe?",
+    "a5": "Wenn du 10–20 Minuten pro Tag trainierst, wirst du innerhalb von 2 bis 3 Wochen feststellen, dass deine Werte steigen. Konsistenz ist dabei viel wichtiger als einmal pro Woche eine riesige 2-Stunden-Sitzung einzulegen.",
+    "q6": "Wie höre ich auf, Dinge sofort zu vergessen?",
+    "a6": "Der schnellste Trick ist „Chunking“ – das Gruppieren von Elementen (wie das Merken einer Telefonnummer in Blöcken statt einzelner Ziffern). Außerdem löscht dein Gehirn Dinge, die es für nutzlos hält, weshalb du dich aktiv konzentrieren und den Abruf erzwingen musst, damit es hängen bleibt.",
+    "q7": "Arbeitsgedächtnis vs. Langzeitgedächtnis?",
+    "a7": "Das Arbeitsgedächtnis ist der RAM deines Gehirns – es speichert das, worüber du gerade nachdenkst. Das Langzeitgedächtnis ist die Festplatte. Unsere Tools trainieren strikt deinen RAM, damit du mehr Dinge gleichzeitig verarbeiten kannst, ohne den Faden zu verlieren.",
+    "q8": "Was ist eine „gute“ Reaktionszeit?",
+    "a8": "Der weltweite Durchschnitt der visuellen Reaktionszeit liegt bei etwa 200–250 ms. Kompetitive Gamer erreichen häufig 150–190 ms. Alles unter 150 ms gehört zum Top 1 % des menschlichen Leistungsvermögens.",
+    "q9": "Verursachen mein Monitor oder meine Maus Input-Lag?",
+    "a9": "Ja. Ein 60-Hz-Monitor fügt im Vergleich zu einem 144-Hz- (~7 ms) oder 240-Hz-Panel (~4 ms) etwa 16 ms Verzögerung hinzu. Kabellose Mäuse mit schlechten Polling-Raten können ebenfalls Latenz verursachen. Für eine perfekte Testgenauigkeit solltest du eine Gaming-Maus und ein Display mit hoher Bildwiederholrate verwenden.",
+    "q10": "Kann ich meine CPS (Klicks pro Sekunde) trainieren?",
+    "a10": "Ja. Standardklickraten liegen normalerweise bei etwa 6–8 CPS. Techniken wie Jitter-Clicking oder Butterfly-Clicking können dich über 12–16 CPS bringen.",
+    "q11": "Wird mein Punktestand gespeichert, wenn ich den Browser schließe?",
+    "a11": "Deine Punkte und Sitzungsaufzeichnungen werden lokal im Local Storage deines Browsers gespeichert. Sie bleiben bei Neuladepunkten auf demselben Gerät und demselben Browser erhalten.",
+    "q12": "Verkauft oder sammelt ihr meine persönlichen Daten?",
+    "a12": "Nein. Wir verfolgen oder verkaufen keine personenbezogenen Daten. Alle Metriken kognitiver und Reaktions-Tests gehören dir."
+  },
+  "contact": {
+    "heroTitle": "Nimm",
+    "heroTitleHighlight": "Kontakt auf",
+    "heroSubtitle": "Fragen, Funktionsvorschläge, Partnerschaftsanfragen oder Bugreports? Wir lesen jede Nachricht.",
+    "generalInquiries": "Allgemeine Anfragen",
+    "generalInquiriesDesc": "Für allgemeine Anfragen, Partnerschaften und Presse.",
+    "technicalSupport": "Technischer Support",
+    "technicalSupportDesc": "Für Bugreports, Geräteprobleme oder Fragen zur Bewertung.",
+    "feedbackTitle": "Feedback & Ideen",
+    "feedbackDesc": "Schlage ein neues Modul oder Verbesserungen für bestehende Spiele vor.",
+    "formName": "Dein Name",
+    "formNamePlaceholder": "z. B. Alex Chen",
+    "formEmail": "E-Mail-Adresse",
+    "formEmailPlaceholder": "du@beispiel.de",
+    "formSubject": "Betreff",
+    "formSubjectPlaceholder": "Wie können wir dir helfen?",
+    "formMessage": "Nachricht",
+    "formMessagePlaceholder": "Erzähl uns, was dir auf dem Herzen liegt...",
+    "formSubmit": "Nachricht senden",
+    "formSending": "Wird gesendet...",
+    "successMsg": "Nachricht erfolgreich gesendet!",
+    "errorMsg": "Senden der Nachricht fehlgeschlagen. Bitte versuche es erneut."
+  },
+  "leaderboard": {
+    "heroTitle": "Globale Bestenliste",
+    "heroSubtitle": "Tritt gegen Spieler weltweit an und verfolge deinen Fortschritt bei allen Reflextry-Herausforderungen. Etabliere deine Baseline und erreiche die Spitze.",
+    "personalBests": "Persönliche Bestleistungen",
+    "personalBestsDesc": "Deine Top-Werte lokal",
+    "globalRankings": "Globale Rangliste",
+    "globalRankingsDesc": "Weltweiter Vergleich",
+    "trackProgress": "Fortschritt verfolgen",
+    "trackProgressDesc": "Sieh dir deine Verbesserungen an",
+    "myScores": "Meine Werte",
+    "global": "Global",
+    "rank": "Rang",
+    "player": "Spieler",
+    "score": "Punktzahl",
+    "date": "Datum",
+    "testNow": "Jetzt testen",
+    "noScoresYet": "Noch keine Werte aufgezeichnet. Schließe einen Test ab, um deine Ranglistenposition zu sehen!"
+  },
+  "statistics": {
+    "heroTitle": "Persönliche Statistiken",
+    "heroSubtitle": "Verfolge deine historischen Leistungskurven, Konsistenzwerte und persönlichen Bestleistungen.",
+    "totalSessions": "Sitzungen gesamt",
+    "bestPerformance": "Beste Leistung",
+    "averageScore": "Durchschnittspunktzahl",
+    "scoreTrend": "Punkte-Trend",
+    "noData": "Noch keine Sitzungsdaten aufgezeichnet. Spiele ein Spiel, um deine Statistiken anzuzeigen!",
+    "downloadData": "Daten exportieren",
+    "selectTest": "Test auswählen",
+    "clearHistory": "Verlauf löschen"
+  },
+  "challenges": {
+    "heroTitle": "Tägliche Herausforderungen",
+    "heroSubtitle": "Absolviere deine täglichen kognitiven Übungen, um Konsistenz aufzubauen, Streak-Belohnungen zu verdienen und im Level aufzusteigen.",
+    "streak": "Aktuelle Streak",
+    "days": "Tage",
+    "todayChallenge": "Herausforderung des Tages",
+    "target": "Ziel:",
+    "completed": "Abgeschlossen!",
+    "startChallenge": "Herausforderung starten",
+    "streakReward": "Streak-Multiplikator",
+    "howItWorks": "Wie tägliche Herausforderungen funktionieren",
+    "howItWorksP1": "Alle 24 Stunden wird eine neue Herausforderung generiert. Erfülle das Ziel, um deine tägliche Streak aufrechtzuerhalten.",
+    "howItWorksP2": "Kontinuierliches tägliches Training fördert die neuroplastische Anpassung und verhindert kognitive Stagnation."
+  },
+  "achievements": {
+    "heroTitle": "Erfolge & Trophäen",
+    "heroSubtitle": "Schalte prestigeträchtige Medaillen frei, während du Reaktionsgeschwindigkeitsbarrieren durchbrichst und kognitive Meilensteine erreichst.",
+    "totalUnlocked": "Insgesamt freigeschaltet",
+    "unlocked": "Freigeschaltet",
+    "locked": "Gesperrt",
+    "rarityCommon": "Gewöhnlich",
+    "rarityRare": "Selten",
+    "rarityEpic": "Episch",
+    "rarityLegendary": "Legendär"
+  },
+  "categorySeo": {
+    "reflex": {
+      "sec0Heading": "Wie die Reaktionszeit funktioniert",
+      "sec0Text": "Deine Reaktionszeit wird durch drei Phasen gesteuert: Wahrnehmung (Erkennen des Reizes), Kognition (Entscheidung, was zu tun ist) und motorische Ausführung (Ausführen der Aktion). Jede Phase kann unabhängig voneinander trainiert werden. Die Wahrnehmungsgeschwindigkeit verbessert sich mit der Vertrautheit mit dem Reiz – je mehr du übst, auf ein grünes Aufblitzen zu reagieren, desto schneller erkennt es dein visueller Kortex. Die kognitive Verarbeitung beschleunigt sich, wenn die Entscheidungsfindung automatisiert wird. Die motorische Ausführung verbessert sich durch die Myeliniserung häufig genutzter neuronaler Bahnen, was die Signalübertragungsgeschwindigkeit buchstäblich erhöht.",
+      "sec1Heading": "Faktoren, die die Reaktionszeit beeinflussen",
+      "sec1Text": "Mehrere Variablen beeinflussen deine Reaktionszeit an einem bestimmten Tag. Schlafentzug kann deinem Ausgangswert 20–50 ms hinzufügen – Studien zeigen, dass 24 Stunden ohne Schlaf die Reaktionszeit stärker beeinträchtigen als ein Blutalkoholspiegel von 0,10 %. Koffein verkürzt die Reaktionszeit typischerweise für 3–5 Stunden um 10–20 ms. Körperliche Fitness korreliert mit einer schnelleren Verarbeitungsgeschwindigkeit. Das Alter spielt eine Rolle: Die Reaktionszeit erreicht zwischen dem 18. und 25. Lebensjahr ihren Höchststand und verlangsamt sich danach allmählich, obwohl Training diesen Rückgang erheblich ausgleichen kann.",
+      "sec2Heading": "Anwendungen in der Praxis",
+      "sec2Text": "Eine schnelle Reaktionszeit ist beim Autofahren von entscheidender Bedeutung, wo ein Unterschied von 100 ms bei 60 mph (ca. 96 km/h) einen zusätzlichen Bremsweg von 8,8 Fuß (ca. 2,7 Metern) bedeutet. Im kompetitiven Esports verschaffen sich professionelle Counter-Strike-Spieler mit Reaktionszeiten von unter 170 ms einen messbaren Vorteil in Aim-Duellen. Sportler in Sportarten wie Tischtennis, Boxen und Motorsport absolvieren als Teil ihrer Konditionsprogramme ein gezieltes Reaktionstraining."
+    },
+    "memory": {
+      "sec0Heading": "Die Wissenschaft hinter dem Gedächtnistraining",
+      "sec0Text": "Die kognitive Neurowissenschaft hat gezeigt, dass die Kapazität des Arbeitsgedächtnisses nicht fix ist. Eine bahnbrechende, in PNAS veröffentlichte Studie zeigte, dass ein intensives Arbeitsgedächtnistraining zu Verbesserungen der fluiden Intelligenz führen kann – der Fähigkeit, zu schlussfolgern und neue Probleme zu lösen. Unsere Gedächtnisspiele nutzen einen adaptiven Schwierigkeitsgrad: Wenn du dich verbesserst, steigt die Herausforderung, was dein Gehirn dazu zwingt, sich durch Neuroplastizität kontinuierlich anzupassen.",
+      "sec1Heading": "Arten von Gedächtnis, die wir trainieren",
+      "sec1Text": "Unsere Memory Arena zielt auf mehrere Gedächtnissysteme ab. Das visuell-räumliche Gedächtnis wird durch Spiele wie Visual Memory und Sequence Memory getestet. Das verbale Gedächtnis wird in unserem Test Verbal Memory herausgefordert, bei dem du zwischen gesehenen und neuen Wörtern unterscheiden musst. Das numerische Gedächtnis wird im Number Memory gefordert, wo du immer längere Zahlenreihen reproduzierst. Jedes System beansprucht andere Gehirnregionen.",
+      "sec2Heading": "Wer profitiert vom Gedächtnistraining?",
+      "sec2Text": "Schüler und Studenten, die sich auf Prüfungen vorbereiten, stellen fest, że ein stärkeres Arbeitsgedächtnis direkt mit einem besseren Leseverständnis und mathematischen Problemlösen korreliert. Ältere Erwachsene nutzen Gedächtnistraining, um kognitive Reserve gegen altersbedingten Abbau aufzubauen. Kompetitive Gamer verlassen sich auf das räumliche Gedächtnis, um feindliche Positionen und Abklingzeiten (Cooldowns) gleichzeitig zu verfolgen."
+    },
+    "speed": {
+      "sec0Heading": "CPS (Klicks pro Sekunde) verstehen",
+      "sec0Text": "Der durchschnittliche, untrainierte Mensch klickt mit 5–7 CPS. Kompetitive Gamer erreichen regelmäßig 10–14 CPS mit Techniken wie Jitter-Clicking oder Butterfly-Clicking. Die Fingerfertigkeit und Feinmotorik, die sie dabei entwickeln, übertragen sich auf jede präzise Mausebene. Unser Click Speed-Test misst deine CPS über mehrere Zeitintervalle hinweg.",
+      "sec1Heading": "Tippgeschwindigkeit und beruflicher Einfluss",
+      "sec1Text": "Der durchschnittliche Erwachsene tippt mit 40 WPM, während professionelle Tipper 65–75 WPM erreichen. Das Erreichen von 80–100 WPM beseitigt das Tippen als Engpass in der Wissensarbeit, sodass die Finger mit den Gedanken Schritt halten können. Unsere Tipptests messen sowohl das Brutto-WPM als auch die Netto-Genauigkeit.",
+      "sec2Heading": "Kopfrechengeschwindigkeit",
+      "sec2Text": "Unser Math Speed-Test fordert die numerische Verarbeitung und das Kopfrechnen heraus. Die Fähigkeit, schnelle Berechnungen durchzuführen, stützt sich auf das Arbeitsgedächtnis, prozedurale Regeln und die Verarbeitungsgeschwindigkeit. Regelmäßiges Üben verbessert dein intuitives Zahlenverständnis."
+    },
+    "accuracy": {
+      "sec0Heading": "Visuell-räumliche Intelligenz",
+      "sec0Text": "Visuell-räumliche Intelligenz ist deine Fähigkeit, visuelle Informationen wahrzunehmen, zu analysieren und im Kopf zu manipulieren. Pattern Matching-Tests bewerten deine Fähigkeit, Regelmäßigkeiten in visuellen Daten zu erkennen. Mental Rotation fordert deine Fähigkeit heraus, 3D-Objekte in deinem inneren Auge zu manipulieren.",
+      "sec1Heading": "Feinmotorik und Präzision",
+      "sec1Text": "Precision Click-Tests messen deine Fähigkeit, einen Cursor präzise auf kleinen Zielen zu positionieren. Die Feinmotorik hängt vom Kleinhirn, dem motorischen Kortex und dem propriozeptiven Feedback ab. Regelmäßiges Üben baut Muskelgedächtnis auf, sodass präzise Bewegungen automatisch ablaufen.",
+      "sec2Heading": "Farbwahrnehmung und Schätzung",
+      "sec2Text": "Unsere Tools Color Match und Angle Estimation trainieren die perzeptive Kalibrierung – die Genauigkeit, mit der du visuelle Eigenschaften beurteilst. Die Winkelschätzung entwickelt das räumliche Denken, das in Geometrie und Navigation verwendet wird. Sofortiges Feedback rekalibriert interne kognitive Modelle."
+    },
+    "gaming": {
+      "sec0Heading": "Aim-Training-Mechaniken",
+      "sec0Text": "Das Zielen (Aim) in FPS-Spielen unterteilt sich in verschiedene Mechaniken. Tracking ist die Fähigkeit, dein Fadenkreuz auf einem sich bewegenden Ziel zu halten. Flicking ist das schnelle Schnappen deines Fadenkreuzes auf plötzliche Ziele. Grid Click zielt auf die Fähigkeit ab, Ziele in unterschiedlichen Entfernungen schnell wieder zu erfassen.",
+      "sec1Heading": "Die Wissenschaft der Esports-Leistung",
+      "sec1Text": "In PLOS ONE veröffentlichte Forschungsergebnisse ergaben, dass professionelle Gamer im Vergleich zu Nicht-Gamern eine deutlich schnellere visuomotorische Verarbeitungsgeschwindigkeit aufweisen. Action-Videospieler zeigen eine verbesserte Aufmerksamkeitsverteilung und perzeptive Entscheidungsfindung, die durch gezieltes Üben entwickelt wurde.",
+      "sec2Heading": "Optimales Aufwärmprotokoll",
+      "sec2Text": "Ein 5–10-minütiges Aufwärmen verbessert die Leistung und verringert das Verletzungsrisiko. Gehe von langsamen, kontrollierten Bewegungen zu Reaktionen in Spielgeschwindigkeit über: Beginne mit 2 Minuten Grid Click, 3 Minuten Aim Trainer, gefolgt von 2 Minuten Flick Shot bei maximaler Geschwindigkeit."
+    }
+  },
+  "categoryGuide": {
+    "reflex": {
+      "whatIsTitle": "Was ist Reflex- und Reaktionstraining?",
+      "whatIsDesc": "Das Reflextraining misst die genaue Zeitspanne zwischen der Präsentation eines sensorischen Reizes und der anschließenden motorischen Reaktion. Während angeborene physiologische Faktoren eine Rolle spielen, hilft regelmäßiges Training dabei, Zögern und Entscheidungsermüdung abzubauen, und trainiert Ihr zentrales Nervensystem darauf, nach Erhalt eines bestimmten Signals sofort motorische Neuronen zu aktivieren.",
+      "howToTitle": "Wie verbessern Sie Ihre Reaktionszeit?",
+      "howToStep1Title": "Ablenkungen eliminieren",
+      "howToStep1Desc": "Konzentrieren Sie sich voll und ganz auf den zentralen Ankerpunkt Ihres Bildschirms.",
+      "howToStep2Title": "Optimale Hardware nutzen",
+      "howToStep2Desc": "Stellen Sie sicher, dass Sie einen Monitor mit hoher Bildwiederholrate (144Hz+) und eine kabelgebundene Maus mit geringer Latenz verwenden.",
+      "howToStep3Title": "Hydriert und ausgeruht bleiben",
+      "howToStep3Desc": "Schlafentzug kann die Reaktionszeiten um über 50 Millisekunden erhöhen.",
+      "howToStep4Title": "Täglich üben",
+      "howToStep4Desc": "Bereits 5 Minuten tägliche Tests für Reaktionszeit und akustische Reflexe können Ihre Basislinie schärfen.",
+      "shouldPracticeTitle": "Sollte ich täglich üben?",
+      "shouldPracticeDesc": "Ja. Häufige, kurze Trainingseinheiten konditionieren Ihr Gehirn darauf, für einfache Aufgaben komplexe kognitive Prozesse zu umgehen, und verlassen sich stattdessen auf schnellere, automatisierte motorische Bahnen.",
+      "comparisonTitle": "Vergleich der Reflex-Tools",
+      "row1Tool": "Reaktionszeit",
+      "row1BestFor": "Gamer, Allgemeinbevölkerung",
+      "row1Benefit": "Misst die visuelle Reflexgeschwindigkeit im Millisekundenbereich.",
+      "row2Tool": "Akustischer Reflex",
+      "row2BestFor": "Sportler (Leichtathletik/Schwimmen)",
+      "row2Benefit": "Isoliert auditive Bahnen, die schneller als visuelle verarbeitet werden.",
+      "row3Tool": "Direktionaler Reflex",
+      "row3BestFor": "Autofahrer, Torhüter",
+      "row3Benefit": "Trainiert die kognitive Übersetzung eines Richtungshinweises in eine physische Wischbewegung.",
+      "benchmarksTitle": "Benchmarks & Wissenschaftliche Belege",
+      "benchmarksDesc": "Untersuchungen zum menschlichen Faktor zufolge liegt die durchschnittliche menschliche Reaktionszeit bei visuellen Reizen bei etwa 250 Millisekunden und bei akustischen Reizen bei 170 Millisekunden. Durch aktive Wiederholung und neurologische Anpassung können Spitzensportler und Gamer ihre visuellen Reaktionszeiten unter 150 Millisekunden bringen. Eine Studie des Journal of Sports Sciences kam zu dem Schluss, dass spezialisiertes visuell-motorisches Training die Reaktionslatenz in wettbewerbsorientierten Umgebungen erheblich reduzieren kann.",
+      "faqTitle": "Häufig gestellte Fragen",
+      "faq1Q": "Kann man seine Reaktionszeit tatsächlich trainieren?",
+      "faq1A": "Obwohl Ihre genetische Roh-Reaktionszeit ein hartes Limit hat, können Sie Ihr Gehirn definitiv so trainieren, dass es sich diesem Limit konstant annähert. Unsere Tools helfen dabei, Zögern und Entscheidungsermüdung abzubauen, und trainieren Ihr Nervensystem darauf, bei einem bestimmten Signal sofort zu reagieren.",
+      "faq2Q": "Warum ist die auditive Reaktionszeit schneller als die visuelle?",
+      "faq2A": "Ein auditiver Reiz benötigt weniger Zeit, um das Gehirn zu erreichen als ein visueller. Der auditorische Kortex verarbeitet Töne wesentlich schneller als der visuelle Kortex komplexe visuelle Informationen. Aus diesem Grund reagiert ein Läufer auf eine Startpistole und nicht auf ein aufblinkendes Licht."
+    },
+    "memory": {
+      "whatIsTitle": "Was ist Gedächtnistraining & Kognitiver Abruf?",
+      "whatIsDesc": "Das Arbeitsgedächtnis ist der mentale Arbeitsbereich, der zum vorübergehenden Speichern und Verarbeiten von Informationen genutzt wird. Im Gegensatz zum Langzeitgedächtnis hat das Arbeitsgedächtnis eine begrenzte Kapazität. Das Training mit verschiedenen Abruf-Übungen konditioniert das Gehirn darauf, die kognitive Belastung zu bewältigen, Muster schneller zu erkennen und Informationen unter Druck effektiver zu behalten.",
+      "howToTitle": "Wie verbessern Sie Ihr Arbeitsgedächtnis?",
+      "howToStep1Title": "Chunking anwenden",
+      "howToStep1Desc": "Brechen Sie lange Zahlen oder komplexe Muster in kleinere, leicht verdauliche Teile herunter.",
+      "howToStep2Title": "Räumlich visualisieren",
+      "howToStep2Desc": "Assoziieren Sie abstrakte Zahlen oder Muster mit physischen Formen oder Rasterkoordinaten.",
+      "howToStep3Title": "Ablenkungen eliminieren",
+      "howToStep3Desc": "Das Arbeitsgedächtnis baut sich rapide ab, wenn sich Ihre Konzentration auch nur für eine einzige Sekunde verlagert.",
+      "howToStep4Title": "Progressiv trainieren",
+      "howToStep4Desc": "Beginnen Sie auf niedrigeren Schwierigkeitsgraden, bis Ihre Abrufgenauigkeit konstant hoch ist.",
+      "shouldPracticeTitle": "Sollte ich täglich üben?",
+      "shouldPracticeDesc": "Ja. Eine konsistente tägliche Stimulation ist der Schlüssel zur Förderung der Neuroplastizität, welche die Fähigkeit des Gehirns beschreibt, sich durch die Bildung neuer neuronaler Verknüpfungen selbst zu reorganisieren.",
+      "comparisonTitle": "Vergleich der Gedächtnis-Tools",
+      "row1Tool": "Zahlengedächtnis",
+      "row1BestFor": "Mathestudenten, Programmierer",
+      "row1Benefit": "Trainiert die phonologische Schleife des Gehirns, lange Zahlenfolgen zu halten.",
+      "row2Tool": "Visuelles Gedächtnis",
+      "row2BestFor": "Designer, Architekten",
+      "row2Benefit": "Verbessert den visuell-räumlichen Notizblock für räumliche Koordination.",
+      "row3Tool": "Sequenzgedächtnis",
+      "row3BestFor": "Musiker, allgemeine Kognition",
+      "row3Benefit": "Verbessert die Erkennung sequenzieller Muster und die Fokussierungsausdauer.",
+      "benchmarksTitle": "Benchmarks & Wissenschaftliche Belege",
+      "benchmarksDesc": "Klassische Arbeiten von George A. Miller machten die Idee populär, dass Menschen oft etwa 7±2 Informationseinheiten im Kurzzeitgedächtnis behalten. Techniken wie Chunking reduzieren die Anzahl unabhängiger Elemente, die Sie speichern müssen. Von den National Institutes of Health (NIH) diskutierte Forschung untersucht das Arbeitsgedächtnistraining. Verfolgen Sie auf Reflextry Ihre eigenen Ziffernspannen- und Abruftrends bei gleichem Schwierigkeitsgrad.",
+      "faqTitle": "Häufig gestellte Fragen",
+      "faq1Q": "Kann man sein Gedächtnis tatsächlich verbessern?",
+      "faq1A": "Ja. Zwar können Sie Ihre Langzeitgedächtniskapazität nicht einfach so verändern, aber Sie können Ihr Arbeitsgedächtnis (Kurzzeitgedächtnis) deutlich verbessern. Regelmäßiges Üben mit Tools wie unseren Zahlengedächtnis- oder visuellen Gedächtnistests trainiert Ihr Gehirn, Informationen effizienter zu bündeln, wodurch es einfacher wird, mehr Daten gleichzeitig zu behalten.",
+      "faq2Q": "Was ist die 'Chunking'-Technik?",
+      "faq2A": "Chunking ist eine mnemonische Strategie, bei der Sie kleinere, einzelne Datenstücke zu größeren, sinnvollen Einheiten (Chanks) zusammenfassen. Anstatt sich beispielsweise die Sequenz 4-7-1-9-2-8 als sechs separate Ziffern zu merken, kann Ihr Gehirn sie als 471 und 928 gruppieren, wodurch die kognitive Last effektiv von sechs auf nur zwei Elemente reduziert wird."
+    },
+    "speed": {
+      "whatIsTitle": "Was ist Schnelligkeit & Neuromuskuläre Geschwindigkeit?",
+      "whatIsDesc": "Geschwindigkeitstests messen Ihren rohen neuromuskulären Durchsatz – wie schnell Ihr zentrales Nervensystem repetitive motorische Signale an Ihre Finger, Handgelenke und Hände senden kann. High-Speed-Performance erfordert ein Gleichgewicht aus der schnellen Aktivierung von Zuckungsfasern und präziser physischer Kontrolle.",
+      "howToTitle": "Wie verbessern Sie Ihre Klick- und Tippgeschwindigkeit?",
+      "howToStep1Title": "Handposition optimieren",
+      "howToStep1Desc": "Halten Sie die Handgelenke leicht von Ihrem Schreibtisch abgehoben, um die Flüssigkeit der Bewegungen zu wahren.",
+      "howToStep2Title": "Alternative Techniken erlernen",
+      "howToStep2Desc": "Üben Sie Jitter-Clicking oder Butterfly-Clicking, um physische Grenzen zu überwinden.",
+      "howToStep3Title": "Zuerst auf Genauigkeit konzentrieren",
+      "howToStep3Desc": "Die Tippgeschwindigkeit sinkt drastisch, wenn Sie Zeit damit verbringen, Tippfehler zu korrigieren.",
+      "howToStep4Title": "Vorher aufwärmen",
+      "howToStep4Desc": "Kalte Finger haben langsamere Übertragungsraten der motorischen Neuronen.",
+      "shouldPracticeTitle": "Sollte ich täglich üben?",
+      "shouldPracticeDesc": "Ja. Kurze 10-minütige Geschwindigkeitseinheiten bauen die Ausdauer der schnellen Muskelzuckungen in Händen und Unterarmen auf, ohne RSI-Syndrome (Repetitive Strain Injury) zu verursachen.",
+      "comparisonTitle": "Vergleich der Geschwindigkeits-Tools",
+      "row1Tool": "Klickgeschwindigkeit (CPS)",
+      "row1BestFor": "Minecraft PvP, MOBA-Gamer",
+      "row1Benefit": "Erhöht die rohe Klick-Ausdauer und -Geschwindigkeit der Finger.",
+      "row2Tool": "Tipptest (WPM)",
+      "row2BestFor": "Autoren, Programmierer, Dateneingabe",
+      "row2Benefit": "Misst und steigert die Wörter-pro-Minute-Rate und die Tastenanschlagsgenauigkeit.",
+      "row3Tool": "Geschwindigkeits-Mathe",
+      "row3BestFor": "Schüler, Finanzanalysten",
+      "row3Benefit": "Trainiert die schnelle arithmetische Verarbeitung unter Zeitdruck.",
+      "benchmarksTitle": "Benchmarks & Wissenschaftliche Belege",
+      "benchmarksDesc": "Der durchschnittliche Internetnutzer tippt mit etwa 40 WPM (Words Per Minute), während professionelle Tipper und Programmierer regelmäßig 90 WPM überschreiten. Ähnlich verhält sich die durchschnittliche Klickgeschwindigkeit bei etwa 6 CPS, während wettbewerbsorientierte Gamer 10-14 CPS erreichen. Laut auf PubMed veröffentlichten Studien zur menschlichen motorischen Leistung ist gezielte Wiederholung in Kombination mit sofortigem Feedback der effektivste Weg, um motorische Aktionsgeschwindigkeiten dauerhaft zu erhöhen.",
+      "faqTitle": "Häufig gestellte Fragen",
+      "faq1Q": "Wie kann ich meine CPS erhöhen?",
+      "faq1A": "Das Erhöhen Ihrer Clicks Per Second erfordert die Entwicklung spezifischer schnell zuckender Muskelfasern in Ihren Fingern und Unterarmen. Techniken wie Jitter-Clicking und Butterfly-Clicking können sofortige Leistungssteigerungen bringen, aber eine langfristige Verbesserung erfordert ein konsistentes, tägliches Ausdauertraining, um Kraft aufzubauen und Ermüdung vorzubeugen.",
+      "faq2Q": "Warum steckt meine WPM (Wörter pro Minute) fest?",
+      "faq2A": "Plateaus bei der Tippgeschwindigkeit werden in der Regel durch mangelnde Genauigkeit verursacht, nicht durch mangelnde Fingergeschwindigkeit. Wenn Sie ständig die Backspace-Taste drücken, sinkt Ihre WPM erheblich. Unser Tipptest und unsere Wortgenauigkeits-Tools legen den Schwerpunkt auf Präzision, was im Laufe der Zeit auf natürliche Weise zu höheren Geschwindigkeiten führt."
+    },
+    "accuracy": {
+      "whatIsTitle": "Was ist Genauigkeits- und Präzisionstraining?",
+      "whatIsDesc": "Genauigkeit stellt die Abweichung zwischen einem beabsichtigten Ziel und Ihrer tatsächlichen physischen Ausführung dar. Geschwindigkeit ohne Präzision führt zu kostspieligen Fehlern, verschwendeter Anstrengung und hohen Fehlerraten. Die Entwicklung pixelgenauer Präzision sorgt für Konsistenz in Szenarien mit hohem Druck.",
+      "howToTitle": "Wie verbessern Sie Ihren Genauigkeitsscore?",
+      "howToStep1Title": "Langsamermachen",
+      "howToStep1Desc": "Geschwindigkeit ist ein Nebenprodukt von Präzision. Bewegen Sie sich in einem Tempo, bei dem Sie keine Fehler machen.",
+      "howToStep2Title": "DPI/Empfindlichkeit anpassen",
+      "howToStep2Desc": "Für Gamer führt eine geringere Mausempfindlichkeit in Aim Trainern oft zu höherer Präzision.",
+      "howToStep3Title": "Auf die Mitte konzentrieren",
+      "howToStep3Desc": "Fixieren Sie bei visuellen Aufgaben wie der Winkelschätzung Ihre Augen auf den zentralen Scheitelpunkt, bevor Sie nach außen scannen.",
+      "howToStep4Title": "Atmen",
+      "howToStep4Desc": "Hektik erzeugt Spannung. Bleiben Sie physisch entspannt, um Mikroanpassungen zu ermöglichen.",
+      "shouldPracticeTitle": "Sollte ich täglich üben?",
+      "shouldPracticeDesc": "Ja, aber halten Sie die Einheiten kurz. Aufgaben mit hoher Präzision sind kognitiv anstrengend. 5-10 Minuten am Tag reichen aus, um genaue neuronale Bahnen zu stärken, ohne ermüdungsbedingte Fehler zu verursachen.",
+      "comparisonTitle": "Vergleich der Genauigkeits-Tools",
+      "row1Tool": "Präzisionsklicken",
+      "row1BestFor": "Grafikdesigner, Gamer",
+      "row1Benefit": "Verbessert die Feinmotorik zum Anklicken winziger Sub-Pixel-Ziele.",
+      "row2Tool": "Dateneingabe-Genauigkeit",
+      "row2BestFor": "Programmierer, Tipper",
+      "row2Benefit": "Reduziert Tastenanschlagsfehler beim Tippen komplexer Syntax oder alphanumerischer Strings.",
+      "row3Tool": "Winkelschätzung",
+      "row3BestFor": "Architekten, Künstler",
+      "row3Benefit": "Entwickelt kognitive visuell-räumliche Intelligenz und geometrische Wahrnehmung.",
+      "benchmarksTitle": "Benchmarks & Wissenschaftliche Belege",
+      "benchmarksDesc": "Das Konzept, Genauigkeit vor Geschwindigkeit zu priorisieren, ist ein Grundprinzip des motorischen Lernens, das oft in dem militärischen Leitsatz ‚langsam ist flüssig, flüssig ist schnell‘ zusammengefasst wird. Laut dem Journal of Experimental Psychology ermöglicht die anfängliche Konzentration auf reine Präzision dem Gehirn, die exakten neuronalen Pfade zu myelinisieren, die erforderlich sind, um Verzögerungen bei der Fehlerkorrektur bei höheren Geschwindigkeiten zu verhindern.",
+      "faqTitle": "Häufig gestellte Fragen",
+      "faq1Q": "Soll ich zuerst Geschwindigkeit oder Genauigkeit trainieren?",
+      "faq1A": "Trainieren Sie immer zuerst die Genauigkeit. Wenn Sie üben, schnell Fehler zu machen, wird Ihr Gehirn buchstäblich besser darin, Fehler zu machen. Indem Sie 100%ige Genauigkeit bei langsamem Tempo erzwingen, garantieren Sie, dass die Bewegungsmuster, die Sie aufbauen, fehlerfrei sind. Sobald das Muster verinnerlicht ist, folgt die Geschwindigkeit ganz natürlich.",
+      "faq2Q": "Wie hilft mir das beim Tippen?",
+      "faq2A": "Der größte Engpass für hohe WPM (Wörter pro Minute) ist die Zeit, die mit dem Drücken der Rücktaste verbracht wird. Durch die Nutzung von Tools wie der Dateneingabe-Genauigkeit gewinnen Sie Vertrauen in Ihre Tastenanschläge, was das kognitive Zögern, das durchschnittliche Tipper ausbremst, drastisch reduziert."
+    },
+    "gaming": {
+      "whatIsTitle": "Was ist Esports-Aim- und Aufwärmtraining?",
+      "whatIsDesc": "Wettkampf-Gaming erfordert eine Mischung aus visueller Reaktion, Micro-Flick-Präzision und flüssiger Zielverfolgung. Professionelle E-Sportler nutzen dedizierte Aufwärmroutinen vor Wettkampfmatches, um die kognitive Spitzenaktivierung zu erreichen und Fehltritte im frühen Spiel zu vermeiden.",
+      "howToTitle": "Wie verbessern Sie Ihr In-Game-Aim?",
+      "howToStep1Title": "Langsam starten",
+      "howToStep1Desc": "Konzentrieren Sie sich auf 100%ige Genauigkeit, bevor Sie versuchen, Ihre Geschwindigkeit zu erhöhen.",
+      "howToStep2Title": "Die richtigen Tools verwenden",
+      "howToStep2Desc": "Verwenden Sie Target Tracking für flüssiges Aim und Flick Shot für schnelle Flick-Reflexe.",
+      "howToStep3Title": "Haltung bewahren",
+      "howToStep3Desc": "Stellen Sie sicher, dass Ihr Arm und Ihr Handgelenk richtig gestützt werden, um Ermüdung und Verletzungen vorzubeugen.",
+      "howToStep4Title": "Täglich aufwärmen",
+      "howToStep4Desc": "Eine 10-minütige Routine vor dem Einstieg in das Ranked-Matchmaking macht einen riesigen Unterschied.",
+      "shouldPracticeTitle": "Sollte ich täglich üben?",
+      "shouldPracticeDesc": "Ja. Konsequentes tägliches Üben von 15-20 Minuten erzielt bessere Ergebnisse für Neuroplastizität und Muskelgedächtnis als eine einzige 2-stündige Session einmal pro Woche.",
+      "comparisonTitle": "Vergleich der Gaming-Tools",
+      "row1Tool": "Aim Trainer",
+      "row1BestFor": "FPS-Gamer (Valorant, CS2)",
+      "row1Benefit": "Verbessert das Anklicken statischer Ziele und die allgemeine Mauskontrolle.",
+      "row2Tool": "Flick Shot",
+      "row2BestFor": "Scharfschützen-Rollen, rnecc-Shooter",
+      "row2Benefit": "Baut ein schnell zuckendes Muskelgedächtnis für plötzliche Fadenkreuz-Snaps auf.",
+      "row3Tool": "Target Tracking",
+      "row3BestFor": "Apex Legends, Overwatch-Spieler",
+      "row3Benefit": "Verbessert flüssige Verfolgungsaugenbewegungen und kontinuierliches Maus-Tracking.",
+      "benchmarksTitle": "Benchmarks & Wissenschaftliche Belege",
+      "benchmarksDesc": "Wettkampfspieler zeigen oft schnellere sensorimotorische Reaktionen als Gelegenheitsnutzer, und vom National Center for Biotechnology Information (NCBI) katalogisierte Forschung verknüpft das Üben von Actionspielen mit Fortschritten in visueller Aufmerksamkeit und motorischer Kontrolle. Betrachten Sie auf Reflextry Flick Shot und Target Tracking als isolierte Mechanik-Drills: Protokollieren Sie Ihre eigenen Basislinien mit derselben Maus und demselben Schwierigkeitsgrad und achten Sie über Wochen hinweg auf konstantere Genauigkeit und sauberere Zielerfassungszeiten.",
+      "faqTitle": "Häufig gestellte Fragen",
+      "faq1Q": "Verbessert Aim-Training tatsächlich mein Spiel?",
+      "faq1A": "Ja. Aim Trainer isolieren die physische Mechanik der Mausbedienung, wie zum Beispiel Tracking und Flicking. Indem Sie diese von Gamesense, Kartenbewusstsein und Strategie trennen, können Sie rohes mechanisches Muskelgedächtnis viel schneller aufbauen, als wenn Sie nur das Spiel selbst spielen.",
+      "faq2Q": "Was ist der beste Weg, sich vor einem Ranked-Match aufzuwärmen?",
+      "faq2A": "Ein solides Vor-Spiel-Aufwärmtraining sollte 5-10 Minuten dauern und progressiv schnellere Bewegungen beinhalten. Wir empfehlen folgende Sequenz: 2 Minuten Aim Trainer zur Etablierung der Basisgenauigkeit, 3 Minuten Target Tracking für flüssige Bewegungen und 2 Minuten Flick Shot, um Ihre Geschwindigkeitsgrenzen auszureizen."
+    }
   }
 }

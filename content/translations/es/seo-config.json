@@ -1,0 +1,954 @@
+{
+  "sequence-memory": {
+    "title": "Test de Memoria de Secuencias - Benchmark de Recordatorio de Patrones | Reflextry",
+    "description": "Practica recordando patrones de luces espaciales expansivos con nuestro Test de Memoria de Secuencias gratuito. Lee las reglas de puntuación y compara tus propias sesiones.",
+    "keywords": [
+      "test de memoria de secuencias",
+      "juego de memoria de secuencias",
+      "human benchmark memoria de secuencias",
+      "juego simon online gratis",
+      "juego de memoria simon dice",
+      "test de secuencias de patrones",
+      "test de memoria secuencial visual",
+      "jugar memoria de secuencias online",
+      "práctica de memoria de secuencias",
+      "entrenamiento de memoria de secuencias",
+      "mejorar la memoria de secuencias",
+      "récord mundial memoria de secuencias",
+      "test de memoria de secuencias gratis",
+      "memoria de secuencias a corto plazo",
+      "test de secuencias cognitivas",
+      "test de bloques de corsi online",
+      "juego de recuerdo de secuencias espaciales",
+      "promedio de puntuación memoria de secuencias",
+      "entrenamiento cerebral memoria de secuencias"
+    ]
+  },
+  "number-memory": {
+    "title": "Test de Memoria Numérica - Benchmark de Retención de Dígitos | Reflextry",
+    "description": "Mide tu memoria de trabajo y capacidad de retención de dígitos con nuestro Test de Memoria Numérica gratuito. Memoriza secuencias numéricas expansivas y compara tu puntuación.",
+    "keywords": [
+      "test de memoria numérica",
+      "test de retención de dígitos online",
+      "memoria numérica human benchmark",
+      "test de dígitos en orden directo",
+      "test de dígitos en orden inverso",
+      "juego de memoria de números",
+      "test para memorizar números",
+      "memoria numérica a corto plazo",
+      "práctica de memoria numérica",
+      "récord human benchmark memoria numérica",
+      "test de recuerdo de números",
+      "memoria de secuencias numéricas",
+      "test de retención de dígitos online gratis",
+      "cómo mejorar la memoria numérica",
+      "entrenamiento cerebral recuerdo de números",
+      "test de span de memoria",
+      "benchmark wais retención de dígitos",
+      "test de capacidad de memoria de trabajo",
+      "puntuación promedio memoria numérica"
+    ]
+  },
+  "visual-memory": {
+    "title": "Test de Memoria Visual - Juego de Recuerdo en Cuadrícula Espacial | Reflextry",
+    "description": "Mejora tu retención visual y el reconocimiento de patrones espaciales. Pon a prueba tu memoria visual recordando patrones de cuadrículas parpadeantes en una matriz expansiva. Herramienta de human benchmark gratuita.",
+    "keywords": [
+      "test de memoria visual",
+      "juego de memoria visual",
+      "human benchmark memoria visual",
+      "test de memoria de cuadrícula gratis",
+      "test de memoria visual a corto plazo",
+      "test de memoria de trabajo visual",
+      "test de memoria visoespacial",
+      "mejorar la memoria visual",
+      "test de memoria fotográfica online",
+      "test de recuerdo visual",
+      "test de memoria de patrones",
+      "práctica de memoria visual",
+      "juego de memoria visual gratis",
+      "test de memoria eidética",
+      "test de cognición visual",
+      "test de memoria de matriz",
+      "juego de recordar los cuadrados",
+      "test de reconocimiento de patrones visuales"
+    ]
+  },
+  "color-memory": {
+    "title": "Test de Memoria de Color - Juego de Recuerdo de Secuencias Visuales | Reflextry",
+    "description": "Desafía tu memoria cromática y atención visual. Memoriza secuencias de colores cambiantes y entrena tu flexibilidad cognitiva con nuestro Test de Memoria de Color gratuito.",
+    "keywords": [
+      "test de memoria de color",
+      "test de recuerdo de colores",
+      "juego de memoria de colores",
+      "juego de memoria de color simon",
+      "memoria de colores a corto plazo",
+      "test para memorizar colores",
+      "memoria visual de colores",
+      "test de memoria de secuencias de colores",
+      "juego de memoria de color online",
+      "entrenamiento cerebral de colores",
+      "test de color simon dice",
+      "práctica de secuencias de colores",
+      "recuerdo exacto de colores",
+      "memoria de color human benchmark",
+      "test de memoria cromática",
+      "juego de retención de tonos",
+      "benchmark de span visual de colores"
+    ]
+  },
+  "shape-memory": {
+    "title": "Test de Memoria de Formas - Recuerdo de Patrones Geométricos | Reflextry",
+    "description": "Entrena la discriminación de formas geométricas y la memoria espacial. Memoriza formas y símbolos abstractos para mejorar tu razonamiento visual no verbal y la concentración.",
+    "keywords": [
+      "test de memoria de formas",
+      "juego de memoria de emparejamiento de formas",
+      "test de memoria de formas geométricas",
+      "memoria visual de formas",
+      "test de recordar la forma",
+      "juego de recuerdo de formas",
+      "memoria de secuencias de formas",
+      "test de formas cognitivas",
+      "test de memoria de formas 3d",
+      "memoria de patrones y formas",
+      "juego de memoria de formas online gratis",
+      "test de memoria de polígonos",
+      "formas de razonamiento visual",
+      "recuerdo de formas abstractas",
+      "test de memoria de formas espaciales"
+    ]
+  },
+  "symbol-memory": {
+    "title": "Test de Memoria de Símbolos - Recordatorio de Iconos Asociativos | Reflextry",
+    "description": "Mejora el reconocimiento de patrones abstractos y la memoria asociativa. Empareja símbolos y ircóns crípticos para agudizar tu concentración mental y velocidad de procesamiento visual.",
+    "keywords": [
+      "test de memoria de símbolos",
+      "juego de memoria de símbolos alienígenas",
+      "test de símbolos visuales",
+      "memoria de símbolos abstractos",
+      "test de recuerdo de símbolos",
+      "symbol memory human benchmark",
+      "memoria de símbolos a corto plazo",
+      "test de memoria de emparejamiento de símbolos",
+      "juego de memorizar símbolos",
+      "memoria de símbolos de patrones",
+      "test cognitivo de símbolos",
+      "memoria de símbolos extraños",
+      "juego de memoria de iconos",
+      "test de modalidades de dígitos y símbolos online",
+      "test de recuerdo de glifos"
+    ]
+  },
+  "word-recall": {
+    "title": "Test de Memoria de Recuerdo de Palabras - Juego de Retención Verbal | Reflextry",
+    "description": "Evalúa tu retención de memoria verbal y reconocimiento de vocabulario. Pon a prueba si las palabras son nuevas o ya vistas para medir la memoria lingüística a corto plazo.",
+    "keywords": [
+      "test de recuerdo de palabras",
+      "test de memoria verbal",
+      "test de memoria de palabras gratis",
+      "human benchmark memoria verbal",
+      "recuerdo de palabras a corto plazo",
+      "lista de palabras para test de memoria",
+      "test de recuerdo inmediato de palabras",
+      "test de palabras de aprendizaje de listas",
+      "juego mental de recuerdo de palabras",
+      "juego de memoria de palabras",
+      "recuerdo de secuencias de palabras",
+      "test de recuerdo de palabras online gratis",
+      "práctica de memoria de recuerdo de palabras",
+      "recuerdo de palabras cognitivo",
+      "test de palabras vistas o nuevas",
+      "test de amplitud de memoria verbal",
+      "test de aprendizaje verbal auditivo online"
+    ]
+  },
+  "card-match": {
+    "title": "Juego de Memoria de Emparejar Cartas - Pares de Concentración | Reflextry",
+    "description": "Entrena la memoria espacial y el recuerdo de patrones visuales con nuestro juego gratuito online de Emparejar Cartas. Voltea cartas, empareja pares con los mínimos movimientos y vence al cronómetro.",
+    "keywords": [
+      "juego de memoria de emparejar cartas",
+      "juego de cartas de memoria online",
+      "test de emparejar cartas",
+      "juego de memoria de voltear cartas",
+      "juego de cartas de emparejar pares",
+      "jugar a emparejar cartas",
+      "test de memoria de cartas con imágenes",
+      "juego clásico de cartas de memoria",
+      "juego de emparejar memoria gratis",
+      "juego de concentración de cartas",
+      "emparejar cartas de entrenamiento cerebral",
+      "emparejamiento visual de cartas",
+      "juego de pelmanismo online",
+      "emparejar pares de memoria gratis"
+    ]
+  },
+  "chimp-test": {
+    "title": "Test del Chimpancé - Juego de Benchmark de Memoria de Trabajo | Reflextry",
+    "description": "¿Eres más inteligente que un chimpancé? Realiza el famoso Test del Chimpancé para medir tu memoria de trabajo visoespacial. Memoriza la cuadrícula de números antes de que desaparezca.",
+    "keywords": [
+      "test del chimpancé",
+      "chimp test human benchmark",
+      "test de memoria de chimpancé",
+      "juego de memoria del chimpancé",
+      "eres más inteligente que un chimpancé test",
+      "test de memoria de mono online",
+      "récord mundial chimp test",
+      "jugar al chimp test",
+      "test de memoria humano vs chimpancé",
+      "test cerebral del chimpancé",
+      "juego de mono de memoria de números",
+      "test de memoria de primates",
+      "práctica de chimp test",
+      "test de memoria de chimpancé ayumu",
+      "test de memoria de trabajo espacial"
+    ]
+  },
+  "verbal-memory": {
+    "title": "Test de Memoria Verbal - Benchmark de Reconocimiento de Palabras | Reflextry",
+    "description": "Pon a prueba tu memoria de trabajo verbal con nuestro Test de Memoria Verbal gratuito. Identifica palabras vistas frente a palabras nuevas para medir la retención lingüística y la velocidad de procesamiento cognitivo.",
+    "keywords": [
+      "test de memoria verbal",
+      "memoria verbal human benchmark",
+      "juego de memoria verbal",
+      "test de memoria verbal a corto plazo",
+      "mejorar la memoria verbal",
+      "práctica de memoria verbal",
+      "test de memoria de trabajo verbal",
+      "test de amplitud de memoria verbal",
+      "human benchmark verbal",
+      "test de recuerdo verbal",
+      "test de memoria verbal online gratis",
+      "test de memoria de palabras",
+      "test cognitivo verbal",
+      "test de palabras vistas o nuevas",
+      "test de retención de vocabulario"
+    ]
+  },
+  "object-tracking": {
+    "title": "Seguimiento de Múltiples Objetos - Test de Enfoque Visual | Reflextry",
+    "description": "Pon a prueba la atención visual dinámica y el seguimiento espacial. Sigue múltiples esferas objetivo en movimiento entre distractores en este test cognitivo respaldado por la ciencia.",
+    "keywords": [
+      "test de seguimiento de objetos",
+      "test de seguimiento de múltiples objetos",
+      "juego de seguimiento visual de objetos",
+      "seguimiento de objetos human benchmark",
+      "test de memoria con seguimiento ocular",
+      "test cognitivo de seguimiento de múltiples objetos",
+      "práctica de seguimiento de objetos",
+      "test de seguimiento visual online",
+      "juego de seguimiento de objetos en movimiento",
+      "test de seguimiento de objetos 3d",
+      "mejorar el seguimiento visual",
+      "test cognitivo mot",
+      "test de seguimiento de atención visual"
+    ]
+  },
+  "n-back": {
+    "title": "Test N-Back - Benchmark de Capacidad de Memoria de Trabajo | Reflextry",
+    "description": "Entrena tu memoria de trabajo con la clásica tarea N-Back. Empareja letras que aparecieron N pasos atrás, haz un seguimiento de aciertos y precisión, y avanza de 1-back a 3-back.",
+    "keywords": [
+      "test n-back",
+      "memoria de trabajo n back",
+      "test 2-back online",
+      "test cognitivo 3-back",
+      "dual n-back gratis",
+      "juego de memoria de trabajo n-back",
+      "entrenamiento cerebral n-back",
+      "rendimiento continuo n-back",
+      "test de memoria de emparejamiento de letras",
+      "test de precisión n-back",
+      "benchmark cognitivo n-back",
+      "n-back human benchmark",
+      "mejorar memoria de trabajo n-back"
+    ]
+  },
+  "reaction-time": {
+    "title": "Test de Tiempo de Reacción - Benchmark en Milisegundos (ms) | Reflextry",
+    "description": "Pon a prueba y mejora tu tiempo de reacción visual en milisegundos. Realiza nuestro test gratuito de reacción en milisegundos, compárate con jugadores profesionales y sigue el progreso de tus reflejos.",
+    "keywords": [
+      "test de tiempo de reacción",
+      "test de reacción ms",
+      "tiempo de reacción human benchmark",
+      "test de tiempo de reacción luz verde",
+      "test de hacer clic cuando la pantalla se pone verde",
+      "test de tiempo de reacción promedio",
+      "test de tiempo de reacción valorant",
+      "test de tiempo de reacción f1 online",
+      "test de reacción cs2",
+      "benchmark de tiempo de reacción en milisegundos",
+      "test de reacción rápida online",
+      "probar mis reflejos gratis",
+      "test de tiempo de reacción de conductor online",
+      "test de tiempo de reacción 144hz",
+      "test de tiempo de reacción 240hz",
+      "test de input lag de monitor",
+      "cómo mejorar el tiempo de reacción",
+      "promedio de tiempo de reacción de videojugador profesional"
+    ]
+  },
+  "sound-reaction": {
+    "title": "Test de Tiempo de Reacción Auditiva - Reflejo de Sonido (ms) | Reflextry",
+    "description": "Mide tu velocidad de reacción auditiva en milisegundos. Pon a prueba tus reflejos auditivos con señales de audio instantáneas y compara tus tiempos de reacción de sonido frente a los visuales.",
+    "keywords": [
+      "test de reflejo de sonido",
+      "test de tiempo de reacción auditiva",
+      "test de reflejo auditivo",
+      "tiempo de reacción auditiva",
+      "juego de reacción de sonido",
+      "reacción de audio human benchmark",
+      "test de tiempo de reacción acústica",
+      "práctica de reflejo de sonido",
+      "test de reacción a pitido",
+      "test de clic rápido por sonido",
+      "test de reflejo acústico online",
+      "tiempo de reacción basado en sonido",
+      "velocidad de reflejo auditivo",
+      "tiempo de reacción auditiva vs visual",
+      "test de reacción de oído ms"
+    ]
+  },
+  "grid-shot": {
+    "title": "Entrenador de Puntería Grid Shot - Reflejo de Precisión de Ratón | Reflextry",
+    "description": "Calienta tu puntería y la velocidad de tu ratón con Grid Shot. Haz clic rápidamente en objetivos que aparecen por la cuadrícula para potenciar tu coordinación óculo-manual en juegos FPS como Valorant y CS2.",
+    "keywords": [
+      "test de reflejos en cuadrícula",
+      "entrenador de puntería grid shot",
+      "test de puntería en cuadrícula",
+      "reacción de clic en cuadrícula",
+      "juego de reflejos en cuadrícula",
+      "cuadrícula human benchmark",
+      "test de velocidad de clics en cuadrícula",
+      "clicador rápido en cuadrícula",
+      "práctica de reacción en cuadrícula",
+      "gridshot de valorant en navegador",
+      "calentamiento de puntería fps en cuadrícula",
+      "test de reflejos con mosaicos",
+      "velocidad de toque en cuadrícula",
+      "reacción blazepod online",
+      "test de coordinación óculo-manual en cuadrícula"
+    ]
+  },
+  "peripheral-vision": {
+    "title": "Test de Visión Periférica - Conciencia del Campo Visual | Reflextry",
+    "description": "Entrena tu conciencia de visión periférica y velocidad de reacción lateral. Detecta y haz clic en estímulos descentrados para ampliar tu enfoque visual para conducir, deportes y gaming competitivo.",
+    "keywords": [
+      "test de reflejos periféricos",
+      "test de visión periférica online",
+      "juego de reacción periférica",
+      "test de reflejos de campo visual",
+      "test de conciencia periférica",
+      "test de reacción de visión lateral",
+      "entrenador de puntería periférica",
+      "clic en objetivos periféricos",
+      "test de reflejos en pantalla panorámica",
+      "test de clics de visión periférica",
+      "test de reflejos fuera del centro",
+      "reflejo de conciencia espacial",
+      "test de visión periférica deportiva",
+      "conciencia periférica en esports"
+    ]
+  },
+  "directional-reflex": {
+    "title": "Test de Reflejos Direccionales - Juego de Velocidad con Flechas | Reflextry",
+    "description": "Pon a prueba tu velocidad de respuesta en el teclado y tu toma de decisiones espaciales. Presiona las teclas de flecha que coincidan con indicaciones direccionales rápidas para mejorar tu procesamiento cognitivo y agilidad de reflejos.",
+    "keywords": [
+      "test de reflejos de dirección",
+      "test de reacción de flechas",
+      "juego de clics direccionales",
+      "reflejo de dirección en teclado",
+      "juego de reacción con flechas",
+      "reflejo de dirección espacial",
+      "test de dirección rápida",
+      "test de dirección cognitiva",
+      "reflejo de coincidencia de flechas",
+      "test de reacción izquierda derecha",
+      "test de velocidad direccional",
+      "reflejo de pulsación rápida de flechas",
+      "test de reacción de elección direccional"
+    ]
+  },
+  "multi-stimulus": {
+    "title": "Test de Reacción Multi-Estímulo - Juego de TR de Elección | Reflextry",
+    "description": "Pon a prueba tu tiempo de reacción de elección y atención selectiva. Procesa múltiples estímulos visuales y auditivos simultáneamente para medir tu velocidad de toma de decisiones en fracciones de segundo.",
+    "keywords": [
+      "test de reacción multiestímulo",
+      "test de tiempo de reacción de elección online",
+      "juego de reflejos de múltiples estímulos",
+      "test de tiempo de reacción complejo",
+      "test de estímulo cognitivo",
+      "test de reflejos multitarea",
+      "test de reacción de la ley de hick",
+      "test de reacción de elección de donders",
+      "human benchmark multiestímulo",
+      "test de tiempo de reacción variable",
+      "entrenador de reflejos complejos",
+      "benchmark de reacción de decisión"
+    ]
+  },
+  "sequence-reaction": {
+    "title": "Test de Reacción en Secuencia - Reflejos de Combos Rápidos | Reflextry",
+    "description": "Combina la memoria con reflejos motores rápidos. Sigue secuencias de luces de ritmo rápido y ejecuta combos rápidos para entrenar tus tiempos de respuesta rítmicos y tu velocidad.",
+    "keywords": [
+      "test de reacción en secuencia",
+      "simon dice tiempo de reacción",
+      "test de reflejos de patrones",
+      "tarea de tiempo de reacción serial",
+      "test de clics secuenciales",
+      "juego de secuencias de reflejos",
+      "test de memoria y reacción",
+      "clicador de secuencias rápidas",
+      "reacción de secuencia cognitiva",
+      "test de secuencias rápidas",
+      "test de toque secuencial",
+      "juego de reflejos de combos rápidos"
+    ]
+  },
+  "whack-a-mole": {
+    "title": "Whack-a-Mole Online - Juego de Reacción Ojo-Mano | Reflextry",
+    "description": "Juega al clásico Whack-a-Mole (Topo Gigio / Golpea al topo) online gratis. Toca a los topos que aparecen tan rápido como sea posible para medir tu velocidad de reacción, precisión de clics y agilidad motora.",
+    "keywords": [
+      "whack a mole online",
+      "jugar whack a mole gratis",
+      "test de reacción whack a mole",
+      "whack a mole virtual",
+      "juego de hacer clic al topo",
+      "whack a mole con ratón",
+      "juego de reflejos whack a mole",
+      "whack a mole rápido",
+      "puntería whack a mole",
+      "juego de whack a mole para navegador",
+      "test de reflejos de aparición",
+      "juego de reacción de aparición de objetivos",
+      "juego de coordinación óculo-manual"
+    ]
+  },
+  "color-switch": {
+    "title": "Test de Reflejos Color Switch - Tiempo de Reacción Visual | Reflextry",
+    "description": "Entrena tu tiempo de reacción al color y la velocidad de respuesta selectiva. Reacciona de inmediato a los cambios de color en pantalla y señales de destello sin dudar.",
+    "keywords": [
+      "test de reacción color switch",
+      "test de reflejos de cambio de color",
+      "test de reacción rojo verde",
+      "tiempo de reacción semáforo",
+      "test de cambio de color en pantalla",
+      "test de clics de color rápido",
+      "human benchmark cambio de color",
+      "reflejo visual color switch",
+      "reacción a destellos de color",
+      "tiempo de reacción de color simple",
+      "clicker de cambio de color",
+      "test de color por estímulo visual"
+    ]
+  },
+  "time-perception": {
+    "title": "Test de Percepción del Tiempo - Benchmark de Reloj Interno | Reflextry",
+    "description": "Pon a prueba tu reloj interno y estimación temporal. Mantén pulsado y suelta el botón para producir con precisión intervalos de tiempo objetivo al milisegundo.",
+    "keywords": [
+      "test de percepción del tiempo",
+      "human benchmark percepción temporal",
+      "test de reloj interno",
+      "test de estimación del tiempo",
+      "test adivina el tiempo",
+      "juego de percepción del tiempo",
+      "test de precisión temporal",
+      "percepción temporal cognitiva",
+      "test de estimación de segundos",
+      "test de duración del tiempo",
+      "test de tiempo a ciegas online",
+      "test de percepción temporal",
+      "benchmark de marcapasos interno"
+    ]
+  },
+  "go-no-go": {
+    "title": "Test Go / No-Go - Control de Impulsos y Reacción | Reflextry",
+    "description": "Mide la inhibición de respuesta con una tarea Go/No-Go. Pulsa en los ensayos Go verdes, evita pulsar en los No-Go rojos y mide tu precisión y tiempo de reacción.",
+    "keywords": [
+      "test go no go",
+      "tarea go nogo online",
+      "test de control inhibitorio",
+      "juego de inhibición de respuesta",
+      "test de reacción go no-go",
+      "test cognitivo de control de impulsos",
+      "test de parar y seguir verde rojo",
+      "función ejecutiva go nogo",
+      "test de inhibición de falsas alarmas",
+      "rendimiento continuo go nogo",
+      "entrenamiento cerebral inhibición"
+    ]
+  },
+  "flanker": {
+    "title": "Test Flanker - Benchmark de Atención Selectiva | Reflextry",
+    "description": "Realiza la tarea Flanker de Eriksen online. Responde a la flecha central ignorando los distractores congruentes o incongruentes para medir tu control atencional.",
+    "keywords": [
+      "tarea flanker online",
+      "test flanker de eriksen",
+      "test de atención selectiva",
+      "juego de flechas flanker",
+      "tarea flanker incongruente",
+      "test de conflicto atencional",
+      "control cognitivo flanker",
+      "test de reacción de flecha central",
+      "benchmark de atención ejecutiva",
+      "test de efecto flanker gratis"
+    ]
+  },
+  "choice-reaction": {
+    "title": "Test de Tiempo de Reacción de Elección - TR Multiopción (ms) | Reflextry",
+    "description": "Mide tu tiempo de reacción de elección entre 2 y 4 objetivos de colores. Haz clic en la casilla iluminada lo más rápido posible y supera tu TR promedio en milisegundos.",
+    "keywords": [
+      "test de tiempo de reacción de elección",
+      "test de TR multiopción",
+      "tiempo de reacción de 4 elecciones",
+      "test de reacción de casillas de colores",
+      "tiempo de reacción disyuntiva",
+      "benchmark TR de elección ms",
+      "tiempo de reacción complejo online",
+      "test de reacción a múltiples estímulos",
+      "reacción de elección cognitiva",
+      "human benchmark reacción de elección"
+    ]
+  },
+  "cps-test": {
+    "title": "Prueba de CPS - Benchmark de velocidad de Clics por Segundo | Reflextry",
+    "description": "Mide tu velocidad de clic con nuestra prueba de CPS gratuita. Pon a prueba los modos de 1s, 5s, 10s, 30s y 60s para clic normal, jitter clicking, butterfly clicking y drag clicking.",
+    "keywords": [
+      "prueba de cps",
+      "test de clics por segundo",
+      "prueba de velocidad de clic",
+      "prueba de cps de 1 segundo",
+      "prueba de cps de 5 segundos",
+      "prueba de cps de 10 segundos",
+      "prueba de clic de 30 segundos",
+      "prueba de velocidad de clic de 60 segundos",
+      "prueba de jitter click",
+      "prueba de butterfly click",
+      "prueba de drag click",
+      "prueba de cps para minecraft pvp",
+      "kohi click test",
+      "contador de barra espaciadora",
+      "test de velocidad de ratón",
+      "cps human benchmark",
+      "récord de velocidad de clic más rápido"
+    ]
+  },
+  "speed-math": {
+    "title": "Prueba de velocidad de cálculo mental - Test rápido | Reflextry",
+    "description": "Agudiza tu aritmética mental y velocidad de cálculo. Resuelve sumas, restas, multiplicaciones y divisiones rápidas bajo temporizador para mejorar tu fluidez matemática.",
+    "keywords": [
+      "prueba de velocidad matemática",
+      "test de cálculo mental",
+      "prueba de aritmética rápida",
+      "juego de cálculo mental",
+      "prueba de matemáticas rápidas online gratis",
+      "prueba de velocidad de cálculo",
+      "juego de cálculo matemático rápido",
+      "prueba de velocidad matemática de 1 minuto",
+      "prueba de reflejos matemáticos",
+      "sprint de cálculo mental de 60 segundos",
+      "prueba matemática cognitiva",
+      "prueba de velocidad de multiplicación",
+      "entrenamiento de cálculo mental para adultos",
+      "desafío de velocidad aritmética"
+    ]
+  },
+  "math-speed": {
+    "title": "Prueba de velocidad de cálculo mental - Test rápido | Reflextry",
+    "description": "Agudiza tu aritmética mental y velocidad de cálculo. Resuelve sumas, restas, multiplicaciones y divisiones rápidas bajo temporizador para mejorar tu fluidez matemática.",
+    "keywords": [
+      "prueba de velocidad matemática",
+      "test de cálculo mental",
+      "prueba de aritmética rápida",
+      "juego de cálculo mental",
+      "prueba de matemáticas rápidas online gratis",
+      "prueba de velocidad de cálculo",
+      "juego de cálculo matemático rápido",
+      "prueba de velocidad matemática de 1 minuto",
+      "prueba de reflejos matemáticos",
+      "sprint de cálculo mental de 60 segundos",
+      "prueba matemática cognitiva",
+      "prueba de velocidad de multiplicación",
+      "entrenamiento de cálculo mental para adultos",
+      "desafío de velocidad aritmética"
+    ]
+  },
+  "typing-speed": {
+    "title": "Test de velocidad de escritura - Benchmark WPM online gratis | Reflextry",
+    "description": "Pon a prueba tus palabras por minuto (WPM) y precisión con nuestro test de velocidad de escritura gratuito de 1 minuto. Evalúa tu velocidad con el teclado y mejora la dactilografía.",
+    "keywords": [
+      "test de velocidad de escritura",
+      "test wpm online gratis",
+      "prueba de palabras por minuto",
+      "test de mecanografía de 1 minuto",
+      "test de velocidad de escritura de 60 segundos",
+      "prueba de precisión de escritura",
+      "test de velocidad de dactilografía",
+      "test de 10 fast fingers",
+      "alternativa a monkeytype online",
+      "human benchmark mecanografía",
+      "práctica de escritura rápida",
+      "test de velocidad de teclado",
+      "test de escritura con wpm y precisión",
+      "medidor de velocidad de escritura",
+      "test de velocidad de mecanografía gratis"
+    ]
+  },
+  "word-accuracy": {
+    "title": "Test de precisión de palabras - Precisión en mecanografía | Reflextry",
+    "description": "Mejora tu precisión de escritura y elimina errores de tecleo. Escribe palabras rápidas con un 100% de precisión para dominar la escritura sin errores bajo presión de tiempo.",
+    "keywords": [
+      "test de precisión de palabras",
+      "test de velocidad de palabras",
+      "test de precisión en mecanografía",
+      "test de escritura sin errores",
+      "juego de escritura rápida de palabras",
+      "test de precisión de tecleo online",
+      "test de velocidad de ortografía",
+      "práctica de escritura rápida de palabras",
+      "test de precisión de pulsaciones",
+      "precisión de escritura para entrada de datos",
+      "velocidad de escritura por reconocimiento de palabras"
+    ]
+  },
+  "word-speed": {
+    "title": "Test de velocidad de lectura - Reconocimiento de palabras WPM | Reflextry",
+    "description": "Pon a prueba tu velocidad de lectura y reconocimiento de palabras. Mide tus palabras por minuto de fluidez lectora y la identificación visual rápida con nuestra herramienta interactiva de palabras rápidas.",
+    "keywords": [
+      "test de velocidad de palabras",
+      "test de velocidad lectora online gratis",
+      "test de reconocimiento rápido de palabras",
+      "test de lectura de palabras por minuto",
+      "test de lectura rápida rsvp",
+      "test de qué tan rápido puedo leer",
+      "velocidad de lectura de palabras flash",
+      "test de velocidad visual de palabras",
+      "benchmark cognitivo de velocidad de palabras"
+    ]
+  },
+  "grid-selection": {
+    "title": "Test de velocidad de cuadrícula - Juego de búsqueda de números 5x5 | Reflextry",
+    "description": "Entrena tu escaneo visual y la velocidad de lectura periférica con las tablas de Schulte. Encuentra los números en orden ascendente en una cuadrícula de 5x5 para ampliar tu velocidad de búsqueda visual.",
+    "keywords": [
+      "tabla de schulte online",
+      "test de cuadrícula de schulte",
+      "test de velocidad de cuadrícula",
+      "test de velocidad encontrar números del 1 al 25",
+      "tabla de schulte para lectura rápida",
+      "test de selección de cuadrícula",
+      "test de velocidad de búsqueda visual",
+      "juego de velocidad de cuadrícula numérica 5x5",
+      "test de escaneo visual en matriz",
+      "tabla de schulte visión periférica",
+      "test de tocar números en orden"
+    ]
+  },
+  "grid-speed": {
+    "title": "Test de velocidad de cuadrícula - Juego de búsqueda de números 5x5 | Reflextry",
+    "description": "Entrena tu escaneo visual y la velocidad de lectura periférica con las tablas de Schulte. Encuentra los números en orden ascendente en una cuadrícula de 5x5 para ampliar tu velocidad de búsqueda visual.",
+    "keywords": [
+      "tabla de schulte online",
+      "test de cuadrícula de schulte",
+      "test de velocidad de cuadrícula",
+      "test de velocidad encontrar números del 1 al 25",
+      "tabla de schulte para lectura rápida",
+      "test de selección de cuadrícula",
+      "test de velocidad de búsqueda visual",
+      "juego de velocidad de cuadrícula numérica 5x5",
+      "test de escaneo visual en matriz",
+      "tabla de schulte visión periférica",
+      "test de tocar números en orden"
+    ]
+  },
+  "schulte-table": {
+    "title": "Test de tabla de Schulte - Velocidad de escaneo visual | Reflextry",
+    "description": "El clásico desafío de la tabla de Schulte. Haz clic en los números desordenados en orden en cuadrículas de 3×3 a 7×7. Entrena tu visión periférica, la velocidad de búsqueda visual y la concentración contra el reloj.",
+    "keywords": [
+      "tabla de schulte online gratis",
+      "test de tabla de schulte",
+      "cuadrícula de schulte 5x5",
+      "tabla de schulte 7x7",
+      "test de velocidad de escaneo visual",
+      "entrenamiento de visión periférica schulte",
+      "juego de encontrar números en orden",
+      "tabla de schulte para lectura rápida",
+      "test de atención de cuadrícula numérica",
+      "entrenamiento cerebral con tabla de schulte",
+      "desafío de cuadrícula numérica ascendente"
+    ]
+  },
+  "number-rush": {
+    "title": "Test de velocidad Number Rush - Blitz de toques ascendentes | Reflextry",
+    "description": "Pon a prueba tu reconocimiento rápido de números y velocidad de pulsación. Busca y haz clic en los números en orden ascendente lo más rápido posible para medir tu tasa de procesamiento cognitivo.",
+    "keywords": [
+      "juego number rush",
+      "test de velocidad numérica",
+      "clics rápidos de números",
+      "test de velocidad de tocar números en orden",
+      "test de clicker de números ascendentes",
+      "juego de números del 1 al 50 online",
+      "desafío de toques rápidos de números",
+      "récord mundial number rush",
+      "juego rápido de búsqueda de dígitos",
+      "secuenciación numérica de velocidad"
+    ]
+  },
+  "quick-sort": {
+    "title": "Juego de velocidad Quick Sort - Test de clasificación rápida | Reflextry",
+    "description": "Desafía tu categorización cognitiva y velocidad de decisión rápida. Clasifica elementos entrantes en sus categorías correspondientes bajo estrictas restricciones de tiempo.",
+    "keywords": [
+      "test de velocidad quick sort",
+      "juego de clasificación rápida",
+      "test de categorización de velocidad online",
+      "test de clasificación cognitiva",
+      "juego de clasificación rápida",
+      "velocidad de clasificación visual",
+      "test de clasificación por categorías",
+      "juego de ordenar izquierda o derecha online",
+      "test de velocidad de clasificación rápida",
+      "juego de clasificación por velocidad de decisión"
+    ]
+  },
+  "pattern-matching": {
+    "title": "Test de reconocimiento de patrones - Precisión en matriz visual | Reflextry",
+    "description": "Mejora el reconocimiento de patrones visuales y el razonamiento no verbal. Empareja patrones de matriz complejos y secuencias geométricas para poner a prueba tu agudeza visual y pensamiento analítico.",
+    "keywords": [
+      "test de reconocimiento de patrones online",
+      "test de reconocimiento de patrones gratis",
+      "test de razonamiento con matrices",
+      "test de patrones de ci online",
+      "juego de puzzles de patrones visuales",
+      "test encuentra el patrón",
+      "test de reconocimiento de patrones abstractos",
+      "practica gratis matrices progresivas de raven",
+      "test de completado de patrones",
+      "reconocimiento lógico de patrones"
+    ]
+  },
+  "precision-click": {
+    "title": "Test de clic de precisión - Precisión en objetivos de ratón | Reflextry",
+    "description": "Perfecciona la precisión con el ratón y la exactitud en micro-objetivos. Haz clic en objetivos pequeños y precisos sin fallar para refinar el control motor fino y la precisión del cursor para los videojuegos.",
+    "keywords": [
+      "test de clic de precisión",
+      "test de precisión de ratón",
+      "test de clic en micro-objetivos",
+      "test de precisión de cursor de ratón",
+      "velocidad de clic en objetivos pequeños",
+      "juego de clic con precisión de píxel",
+      "test de precisión de ratón para fps",
+      "test de porcentaje de precisión de puntería",
+      "test de clic de coordinación mano-ojo",
+      "benchmark de control fino de cursor"
+    ]
+  },
+  "data-entry": {
+    "title": "Test de precisión de entrada de datos - Benchmark de tecleo | Reflextry",
+    "description": "Mide tu velocidad de entrada de datos, precisión de tecleo alfanumérico y tasa de errores. Pon a prueba tus pulsaciones por hora (KPH) con benchmarks realistas de números y códigos.",
+    "keywords": [
+      "test de entrada de datos online",
+      "test de velocidad de entrada de datos gratis",
+      "test de entrada de datos alfanuméricos",
+      "práctica de entrada de datos de 10 teclas",
+      "test de mecanografía de datos online",
+      "test de entrada de datos administrativos",
+      "test de entrada de datos kph",
+      "test de precisión de tecleo",
+      "porcentaje de precisión de entrada de datos",
+      "test de atención al detalle online"
+    ]
+  },
+  "image-recognition": {
+    "title": "Test de reconocimiento de imágenes - Precisión de detalles visuales | Reflextry",
+    "description": "Pon a prueba tu percepción visual y discriminación rápida de imágenes. Identifica sutiles diferencias visuales y empareja objetos objetivo a alta velocidad para entrenar tus habilidades de observación.",
+    "keywords": [
+      "test de reconocimiento de imágenes online",
+      "juego de reconocimiento visual",
+      "test de memoria rápida de imágenes",
+      "test de velocidad de reconocimiento de fotos",
+      "test de velocidad encuentra las diferencias",
+      "test de discriminación visual",
+      "test de imágenes cognitivas",
+      "test de tarea de búsqueda visual",
+      "reconocimiento de imágenes human benchmark"
+    ]
+  },
+  "angle-estimation": {
+    "title": "Test de Estimación de Ángulos - Agudeza de Geometría Espacial | Reflextry",
+    "description": "Pon a prueba tu ojo para la geometría y la estimación espacial. Adivina los grados de ángulos dados con precisión para medir tu agudeza visual de ángulos y juicio espacial.",
+    "keywords": [
+      "test de estimación de ángulos online",
+      "juego adivina el ángulo",
+      "test de medición de ángulos online",
+      "juego estimar grados de ángulos",
+      "juego de transportador y estimación de ángulos",
+      "test de agudeza de ángulos espaciales",
+      "juego test de ángulos de geometría online",
+      "qué tan preciso es tu ojo para los ángulos",
+      "human benchmark de ángulos"
+    ]
+  },
+  "color-match": {
+    "title": "Test de Coincidencia de Color - Discriminación de Tonalidad RGB | Reflextry",
+    "description": "Pon a prueba tu percepción del color y la discriminación de matices sutiles con nuestro Test de Coincidencia de Color. Empareja tonalidades RGB objetivo bajo presión de tiempo y mide tu precisión visual.",
+    "keywords": [
+      "test de coincidencia de color",
+      "test de discriminación de color",
+      "test de emparejamiento de tonalidad",
+      "test de agudeza de color",
+      "test de percepción del color",
+      "test de coincidencia de matices online",
+      "test de color rgb",
+      "discriminación visual de color",
+      "juego de combinación de colores online",
+      "test de diferencia sutil de color",
+      "alternativa a farnsworth munsell",
+      "test de sensibilidad al color",
+      "test de agudeza cromática"
+    ]
+  },
+  "color-blindness": {
+    "title": "Test de Daltonismo - Evaluador de Láminas de Ishihara | Reflextry",
+    "description": "Explora láminas de puntos procedurales estilo Ishihara en un juego educativo gratuito de visión a color. La configuración de la pantalla afecta los resultados; esto no es una evaluación diagnóstica.",
+    "keywords": [
+      "test de daltonismo",
+      "test de visión a color online",
+      "test de ishihara online gratis",
+      "test de daltonismo rojo verde",
+      "test de láminas para daltónicos",
+      "test de protanopía",
+      "test de deuteranopía",
+      "láminas de ishihara online",
+      "test de deficiencia en la visión a color",
+      "verificación gratuita de daltonismo",
+      "evaluación de deficiencia de color",
+      "test de tabla de ishihara",
+      "evaluación de daltonismo"
+    ]
+  },
+  "mental-rotation": {
+    "title": "Test de Rotación Mental - Razonamiento Espacial 3D | Reflextry",
+    "description": "Mide tu visualización espacial 3D y la velocidad de rotación cognitiva. Determina si formas geométricas complejas son idénticas o están invertidas como un espejo en tiempo real.",
+    "keywords": [
+      "test de rotación mental",
+      "test de shepard metzler online",
+      "test de razonamiento espacial gratis",
+      "test de visualización espacial 3d",
+      "test de inteligencia espacial",
+      "test de rotación cognitiva",
+      "benchmark de habilidad espacial",
+      "test de rotación de objetos 3d",
+      "test de relaciones espaciales",
+      "rotación mental de vandenberg",
+      "test de cognición espacial",
+      "práctica de rotación mental"
+    ]
+  },
+  "aim-trainer": {
+    "title": "Entrenador de Puntería FPS - Puntería de Mouse y Calentamiento de Flick | Reflextry",
+    "description": "Mejora la precisión de tu mouse, el seguimiento de objetivos y tu velocidad de flick para juegos FPS como Valorant, CS2 y Apex. Entrenador de puntería 3D gratuito directamente en tu navegador web.",
+    "keywords": [
+      "aim trainer online gratis",
+      "entrenador de puntería fps en el navegador",
+      "test de puntería de mouse",
+      "aim trainer de valorant gratis",
+      "entrenamiento de aim para cs2 online",
+      "alternativa a aim lab en navegador",
+      "aim trainer 3d online",
+      "gridshot aim trainer online",
+      "test de puntería y precisión de mouse",
+      "test de sensibilidad de mouse fps",
+      "calentamiento diario de puntería en navegador",
+      "juego de reflejos de aim"
+    ]
+  },
+  "rpg-reaction": {
+    "title": "Prueba de Reacción para Gamers de Esports - Reflejos de Combate | Reflextry",
+    "description": "Pon a prueba tus reflejos de combate competitivo, la sincronización de parry en eventos de tiempo rápido (QTE) y la velocidad de reacción en esports con escenarios de combate simulados con precisión de milisegundos.",
+    "keywords": [
+      "test de tiempo de reacción para gamers",
+      "test de velocidad de reacción en esports",
+      "prueba de reacción rpg",
+      "juego de reacción qte online",
+      "test de reflejos gaming",
+      "promedio de tiempo de reacción de pro player",
+      "test de reacción de ventaja de asomarse cs2",
+      "benchmark de tiempo de reacción valorant",
+      "test de reflejos de confirmación de impacto",
+      "test de timing de parry en juegos de acción"
+    ]
+  },
+  "endless-dodge": {
+    "title": "Juego de Esquive Infinito - Agilidad y Evasión de Proyectiles | Reflextry",
+    "description": "Pon a prueba tus reflejos de esquive y tu agilidad de evasión espacial. Mueve tu cursor a través de enjambres infinitos de obstáculos en movimiento en este juego de supervivencia y reflejos de alta intensidad.",
+    "keywords": [
+      "juego de esquive infinito online",
+      "test de reacción de esquive",
+      "práctica de esquive bullet hell",
+      "juego de esquivar con el cursor del ratón",
+      "juego online de reflejos de evasión",
+      "juego de reflejos de evitar obstáculos",
+      "juego de calentamiento de esquive de balas",
+      "test de velocidad de evasión con cursor",
+      "entrenador de agilidad y microevasión"
+    ]
+  },
+  "stroop-drop": {
+    "title": "Prueba del Efecto Stroop - Juego de Atención e Impulso | Reflextry",
+    "description": "Desafía tu control inhibitorio con el juego interactivo Stroop Drop. Resuelve la interferencia cognitiva entre palabras de colores que caen y el color de su tinta.",
+    "keywords": [
+      "test del efecto stroop online gratis",
+      "juego de prueba de palabra y color stroop",
+      "test de interferencia cognitiva",
+      "juego stroop drop online",
+      "juego de prueba de control inhibitorio",
+      "test de discrepancia entre palabra y color",
+      "test psicológico del efecto stroop",
+      "juego de reacción a conflictos cerebrales",
+      "test stroop de función ejecutiva"
+    ]
+  },
+  "target-tracking": {
+    "title": "Entrenador de Aim de Seguimiento de Objetivos - Calentamiento de Puntería | Reflextry",
+    "description": "Domina el seguimiento suave con el ratón para juegos FPS competitivos. Practica la puntería de precisión continua contra objetivos en movimiento evasivos sin suavizado de ratón.",
+    "keywords": [
+      "entrenador de aim de seguimiento suave",
+      "test de aim de seguimiento de objetivos online",
+      "práctica de seguimiento suave fps",
+      "entrenador de tracking de apex legends online",
+      "test de precisión de seguimiento con ratón",
+      "test de aim con objetivos en movimiento",
+      "test de seguimiento de retícula",
+      "práctica de seguimiento de aim continuo",
+      "juego de seguimiento reactivo online"
+    ]
+  },
+  "flick-shot": {
+    "title": "Entrenador de Aim Flick Shot - Puntería Rápida con Ratón | Reflextry",
+    "description": "Entrena la memoria muscular y el apuntado rápido con nuestro entrenador Flick Shot. Calibra microajustes rápidos y adquisición de objetivos para shooters tácticos.",
+    "keywords": [
+      "entrenador de aim flick shot online",
+      "test de flick aim gratis",
+      "práctica de flick shot cs2 online",
+      "calentamiento de flick shot valorant",
+      "entrenador de micro flick aim",
+      "test de precisión de ratón para flick rápido",
+      "entrenador de flick gridshot",
+      "juego de flick shot de reflejos",
+      "test de precisión de flick de objetivos",
+      "entrenador de one tap flick"
+    ]
+  },
+  "rhythm-tap": {
+    "title": "Juego de Ritmo - Test de Precisión de Pulso Audiovisual | Reflextry",
+    "description": "Mide tu precisión de sincronización musical y tu percepción del ritmo en milisegundos. Toca al compás de tempos de BPM crecientes y registra tus errores de latencia.",
+    "keywords": [
+      "test de ritmo online",
+      "test de reacción de ritmo",
+      "prueba de ritmo audiovisual",
+      "calentamiento de ritmo osu en navegador",
+      "test de precisión de ritmo",
+      "juego de reacción de ritmo gratis",
+      "test de tiempo musical online",
+      "prueba de sincronización de audio en milisegundos",
+      "juego de precisión de ritmo bpm",
+      "entrenador de reflejos de ritmo"
+    ]
+  }
+}

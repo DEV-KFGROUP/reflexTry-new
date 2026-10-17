@@ -1,0 +1,954 @@
+{
+  "sequence-memory": {
+    "title": "Dizi Hafızası Testi - Desen Hatırlama Kıyaslaması | Reflextry",
+    "description": "Ücretsiz Dizi Hafızası Testimizle genişleyen uzamsal ışık desenlerini hatırlama pratiği yapın. Skor kurallarını okuyun ve kendi oturumlarınızı karşılaştırın.",
+    "keywords": [
+      "dizi hafızası testi",
+      "dizi hafızası oyunu",
+      "human benchmark dizi hafızası",
+      "simon oyunu online ücretsiz",
+      "simon says hafıza oyunu",
+      "desen dizi testi",
+      "görsel dizi hafızası testi",
+      "online dizi hafızası oyna",
+      "dizi hafızası pratiği",
+      "dizi hafızası antrenmanı",
+      "dizi hafızasını geliştir",
+      "dizi hafızası dünya rekoru",
+      "ücretsiz dizi hafızası testi",
+      "kısa süreli dizi hafızası",
+      "bilişsel dizi testi",
+      "corsi blok vurma testi online",
+      "uzamsal dizi hatırlama oyunu",
+      "dizi hafızası ortalama skor",
+      "beyin antrenmanı dizi hafızası"
+    ]
+  },
+  "number-memory": {
+    "title": "Sayı Hafızası Testi - Rakam Aralığı Hafıza Kıyaslaması | Reflextry",
+    "description": "Ücretsiz Sayı Hafızası Testimizle çalışma belleğini ve rakam aralığı kapasitesini ölçün. Genişleyen sayı dizilerini ezberleyin ve hatırlama skorunuzu kıyaslayın.",
+    "keywords": [
+      "sayı hafızası testi",
+      "rakam aralığı testi online",
+      "sayı hafızası human benchmark",
+      "ileri rakam aralığı testi",
+      "ters rakam aralığı testi",
+      "rakam hafıza oyunu",
+      "sayı ezberleme testi",
+      "kısa süreli sayı hafızası",
+      "sayı hafızası pratiği",
+      "human benchmark sayı hafızası rekoru",
+      "sayı hatırlama testi",
+      "dizi sayı hafızası",
+      "ücretsiz rakam aralığı testi online",
+      "sayı hafızası nasıl geliştirilir",
+      "beyin antrenmanı sayı hatırlama",
+      "hafıza aralığı testi",
+      "wais rakam aralığı kıyaslaması",
+      "çalışma belleği kapasite testi",
+      "ortalama sayı hafızası skoru"
+    ]
+  },
+  "visual-memory": {
+    "title": "Görsel Hafıza Testi - Uzamsal Izgara Hatırlama Oyunu | Reflextry",
+    "description": "Görsel kalıcılığı ve uzamsal desen tanımayı geliştirin. Genişleyen bir matris üzerinde flaş ızgara desenlerini hatırlayarak görsel hafızanızı test edin. Ücretsiz insan kıyaslama aracı.",
+    "keywords": [
+      "görsel hafıza testi",
+      "görsel hafıza oyunu",
+      "human benchmark görsel hafıza",
+      "ızgara hafıza testi ücretsiz",
+      "kısa süreli görsel hafıza testi",
+      "görsel çalışma belleği testi",
+      "görsel uzamsal hafıza testi",
+      "görsel hafızayı geliştir",
+      "fotografik hafıza testi online",
+      "görsel hatırlama testi",
+      "desen hafıza testi",
+      "görsel hafıza pratiği",
+      "ücretsiz görsel hafıza oyunu",
+      "eidetik hafıza testi",
+      "görsel biliş testi",
+      "matris hafıza testi",
+      "kareleri hatırla oyunu",
+      "görsel desen tanıma testi"
+    ]
+  },
+  "color-memory": {
+    "title": "Renk Hafızası Testi - Görsel Dizi Hatırlama Oyunu | Reflextry",
+    "description": "Kromatik hafızanızı ve görsel dikkatinizi zorlayın. Ücretsiz Renk Hafızası Testimizle hızla değişen renk dizilerini ezberleyin ve bilişsel esnekliğinizi çalıştırın.",
+    "keywords": [
+      "renk hafızası testi",
+      "renk hatırlama testi",
+      "renk hafızası oyunu",
+      "simon renk hafızası oyunu",
+      "kısa süreli renk hafızası",
+      "renkleri ezberleme testi",
+      "görsel renk hafızası",
+      "dizi renk hafızası testi",
+      "online renk hafızası oyunu",
+      "renk beyin antrenmanı",
+      "simon says renk testi",
+      "renk dizisi pratiği",
+      "kesin renk hatırlama",
+      "renk hafızası human benchmark",
+      "kromatik hafıza testi",
+      "ton kalıcılığı oyunu",
+      "görsel renk aralığı kıyaslaması"
+    ]
+  },
+  "shape-memory": {
+    "title": "Şekil Hafızası Testi - Geometrik Desen Hatırlama | Reflextry",
+    "description": "Geometrik şekil ayrımını ve uzamsal hafızayı çalıştırın. Sözel olmayan görsel akıl yürütmeyi ve odaklanmayı geliştirmek için soyut şekilleri ve sembolleri ezberleyin.",
+    "keywords": [
+      "şekil hafızası testi",
+      "şekil eşleştirme hafıza oyunu",
+      "geometrik şekil hafıza testi",
+      "görsel şekil hafızası",
+      "şekli hatırla testi",
+      "şekil hatırlama oyunu",
+      "şekil dizisi hafızası",
+      "bilişsel şekil testi",
+      "3d şekil hafızası testi",
+      "desen ve şekil hafızası",
+      "ücretsiz şekil hafıza oyunu online",
+      "çokgen hafıza testi",
+      "görsel akıl yürütme şekilleri",
+      "soyut şekil hatırlama",
+      "uzamsal şekil hafızası testi"
+    ]
+  },
+  "symbol-memory": {
+    "title": "Sembol Hafıza Testi - İlişkisel Simge Hatırlama | Reflextry",
+    "description": "Soyut örüntü tanıma ve ilişkisel hafızanızı geliştirin. Zihinsel odaklanmayı ve görsel işlem hızını keskinleştirmek için gizemli sembolleri ve simgeleri eşleştirin.",
+    "keywords": [
+      "sembol hafıza testi",
+      "uzaylı sembolü hafıza oyunu",
+      "görsel sembol testi",
+      "soyut sembol hafızası",
+      "sembol hatırlama testi",
+      "human benchmark sembol hafızası",
+      "kısa süreli sembol hafızası",
+      "sembol eşleştirme hafıza testi",
+      "sembol ezberleme oyunu",
+      "örüntü sembol hafızası",
+      "bilişsel sembol testi",
+      "garip semboller hafızası",
+      "simge hafıza oyunu",
+      "sembol rakam modaliteleri testi çevrimiçi",
+      "glif hatırlama testi"
+    ]
+  },
+  "word-recall": {
+    "title": "Kelime Hatırlama Testi - Sözel Akılda Tutma Oyunu | Reflextry",
+    "description": "Sözel hafıza kapasitenizi ve kelime dağarcığı tanıma becerinizi değerlendirin. Kısa süreli dilsel hafızanızı ölçmek için kelimelerin yeni mi yoksa daha önce görülen mi olduğunu test edin.",
+    "keywords": [
+      "kelime hatırlama testi",
+      "sözel hafıza testi",
+      "kelime hafıza testi ücretsiz",
+      "human benchmark sözel hafıza",
+      "kısa süreli kelime hatırlama",
+      "hafıza testi kelime listesi",
+      "anında kelime hatırlama testi",
+      "liste öğrenme kelime testi",
+      "kelime hatırlama beyin oyunu",
+      "hafıza oyunu kelimeler",
+      "kelime dizisi hatırlama",
+      "ücretsiz kelime hatırlama testi çevrimiçi",
+      "kelime hatırlama hafıza egzersizi",
+      "bilişsel kelime hatırlama",
+      "görülen veya yeni kelime testi",
+      "sözel hafıza açıklığı testi",
+      "işitsel sözel öğrenme testi çevrimiçi"
+    ]
+  },
+  "card-match": {
+    "title": "Kart Eşleştirme Hafıza Oyunu - Konsantrasyon Çiftleri | Reflextry",
+    "description": "Ücretsiz çevrimiçi Kart Eşleştirme Hafıza Oyunumuzla mekansal hafızayı ve görsel örüntü hatırlamayı eğitin. Kartları çevirin, en az hamleyle çiftleri eşleştirin ve zamana karşı yarışın.",
+    "keywords": [
+      "kart eşleştirme hafıza oyunu",
+      "hafıza kartı oyunu çevrimiçi",
+      "kart eşleştirme testi",
+      "kart çevirme hafıza oyunu",
+      "çift eşleştirme kart oyunu",
+      "kart eşleştirme oyna",
+      "resimli kart hafıza testi",
+      "klasik hafıza kartı oyunu",
+      "ücretsiz hafıza eşleştirme oyunu",
+      "kart konsantrasyon oyunu",
+      "beyin egzersizi kart eşleştirme",
+      "görsel kart eşleştirme",
+      "pelmanism oyunu çevrimiçi",
+      "hafıza eşleştirme çiftleri ücretsiz"
+    ]
+  },
+  "chimp-test": {
+    "title": "Şempanze Testi - Çalışma Belleği Benchmark Oyunu | Reflextry",
+    "description": "Bir şempanzeden daha mı zekisiniz? Görsel-mekansal çalışma belleğinizi ölçmek için ünlü Şempanze Testini çözün. Sayı ızgarası kaybolmadan önce ezberleyin.",
+    "keywords": [
+      "şempanze testi",
+      "chimp test human benchmark",
+      "şempanze hafıza testi",
+      "şempanze hafıza oyunu",
+      "şempanzeden akıllı mısın testi",
+      "maymun hafıza testi çevrimiçi",
+      "şempanze testi dünya rekoru",
+      "şempanze testi oyna",
+      "insan vs şempanze hafıza testi",
+      "şempanze beyin testi",
+      "sayı hafızası maymun oyunu",
+      "primat hafıza testi",
+      "şempanze testi alıştırması",
+      "ayumu şempanze hafıza testi",
+      "mekansal çalışma belleği testi"
+    ]
+  },
+  "verbal-memory": {
+    "title": "Sözel Hafıza Testi - Kelime Tanıma Benchmark | Reflextry",
+    "description": "Ücretsiz Sözel Hafıza Testimiz ile sözel çalışma belleğinizi test edin. Dilsel akılda tutma süresini ve bilişsel işlem hızını ölçmek için görülen kelimeleri yeni kelimelerle ayırt edin.",
+    "keywords": [
+      "sözel hafıza testi",
+      "sözel hafıza human benchmark",
+      "sözel hafıza oyunu",
+      "kısa süreli sözel hafıza testi",
+      "sözel hafızayı geliştir",
+      "sözel hafıza alıştırması",
+      "sözel çalışma belleği testi",
+      "sözel hafıza açıklığı testi",
+      "human benchmark sözel",
+      "sözel hatırlama testi",
+      "ücretsiz sözel hafıza testi çevrimiçi",
+      "kelime hafıza testi",
+      "sözel bilişsel test",
+      "görülen veya yeni kelime testi",
+      "kelime dağarcığı akılda tutma testi"
+    ]
+  },
+  "object-tracking": {
+    "title": "Çoklu Nesne Takibi - Görsel Odaklanma Testi | Reflextry",
+    "description": "Dinamik görsel dikkati ve uzamsal takibi test edin. Bilim destekli bu bilişsel testte, dikkat dağıtıcılar arasından hareket eden birden fazla hedef küreyi takip edin.",
+    "keywords": [
+      "nesne takibi testi",
+      "çoklu nesne takibi testi",
+      "görsel nesne takibi oyunu",
+      "human benchmark nesne takibi",
+      "göz takibi hafıza testi",
+      "çoklu nesne takibi bilişsel test",
+      "nesne takibi pratiği",
+      "çevrimiçi görsel takip testi",
+      "hareketli nesne takibi oyunu",
+      "3d nesne takibi testi",
+      "görsel takibi geliştir",
+      "mot bilişsel test",
+      "görsel dikkat takip testi"
+    ]
+  },
+  "n-back": {
+    "title": "N-Back Testi - Çalışma Belleği Kapasitesi Benchmark | Reflextry",
+    "description": "Klasik N-Back görevi ile çalışma belleğinizi eğitin. N adım önce beliren harfleri eşleştirin, isabet ve doğruluğu takip edin, 1-back'ten 3-back'e ilerleyin.",
+    "keywords": [
+      "n-back testi",
+      "n back çalışma belleği",
+      "2-back testi çevrimiçi",
+      "3-back bilişsel test",
+      "dual n-back ücretsiz",
+      "çalışma belleği n-back oyunu",
+      "n-back beyin egzersizi",
+      "sürekli performans n-back",
+      "harf eşleştirme hafıza testi",
+      "n-back doğruluk testi",
+      "bilişsel n-back benchmark",
+      "human benchmark n-back",
+      "çalışma belleğini n-back ile geliştir"
+    ]
+  },
+  "reaction-time": {
+    "title": "Reaksiyon Süresi Testi - Milisaniye Benchmark (ms) | Reflextry",
+    "description": "Görsel reaksiyon sürenizi milisaniye cinsinden test edin ve geliştirin. Ücretsiz milisaniye reaksiyon testimizi çözün, profesyonel oyuncularla karşılaştırın ve refleks ilerlemenizi takip edin.",
+    "keywords": [
+      "reaksiyon süresi testi",
+      "reaksiyon testi ms",
+      "human benchmark reaksiyon süresi",
+      "yeşil ışık reaksiyon süresi testi",
+      "ekran yeşile döndüğünde tıkla testi",
+      "ortalama reaksiyon süresi testi",
+      "valorant reaksiyon süresi testi",
+      "f1 reaksiyon süresi testi çevrimiçi",
+      "cs2 reaksiyon testi",
+      "reaksiyon süresi milisaniye benchmark",
+      "hızlı reaksiyon testi çevrimiçi",
+      "reflekslerimi test et ücretsiz",
+      "sürücü reaksiyon süresi testi çevrimiçi",
+      "144hz reaksiyon süresi testi",
+      "240hz reaksiyon süresi testi",
+      "monitör input lag testi",
+      "reaksiyon süresi nasıl geliştirilir",
+      "pro oyuncu reaksiyon süresi ortalaması"
+    ]
+  },
+  "sound-reaction": {
+    "title": "Sesli Reaksiyon Süresi Testi - Ses Refleksi (ms) | Reflextry",
+    "description": "İşitsel reaksiyon hızınızı milisaniye cinsinden ölçün. Anlık ses ipuçlarıyla duyma reflekslerini test edin ve ses reaksiyonu ile görsel reaksiyon sürelerinizi karşılaştırın.",
+    "keywords": [
+      "ses refleksi testi",
+      "sesli reaksiyon süresi testi",
+      "ses refleksi testi",
+      "duyma reaksiyon süresi",
+      "ses reaksiyon oyunu",
+      "human benchmark ses reaksiyonu",
+      "işitsel reaksiyon süresi testi",
+      "ses refleksi pratiği",
+      "bip reaksiyon testi",
+      "hızlı ses tıklama testi",
+      "akustik refleks testi çevrimiçi",
+      "sese dayalı reaksiyon süresi",
+      "duyma refleksi hızı",
+      "işitsel ve görsel reaksiyon süresi",
+      "kulak reaksiyon testi ms"
+    ]
+  },
+  "grid-shot": {
+    "title": "Grid Shot Nişan Eğitmeni - Fare Hassasiyeti Refleksi | Reflextry",
+    "description": "Grid Shot ile nişanyanızı ve fare hızınızı ısıtın. Valorant ve CS2 gibi FPS oyunları için el-göz koordinasyonunu artırmak üzere ızgara üzerinde hızla beliren hedeflere tıklayın.",
+    "keywords": [
+      "grid refleks testi",
+      "grid shot aim trainer",
+      "nişan ızgara testi",
+      "grid tıklama reaksiyonu",
+      "refleks grid oyunu",
+      "human benchmark grid",
+      "grid tıklama hızı testi",
+      "hızlı grid tıklayıcı",
+      "reaksiyon ızgara pratiği",
+      "tarayıcıda valorant gridshot",
+      "fps aim ısınma grid",
+      "kare refleks testi",
+      "grid dokunma hızı",
+      "blazepod reaksiyon çevrimiçi",
+      "el göz koordinasyonu grid testi"
+    ]
+  },
+  "peripheral-vision": {
+    "title": "Çevresel Görüş Testi - Görüş Alanı Farkındalığı | Reflextry",
+    "description": "Çevresel görüş farkındalığını ve yan reaksiyon hızını geliştirin. Sürüş, spor ve rekabetçi oyunlar için görsel odaklanmanızı genişletmek amacıyla merkez dışındaki uyaranları tespit edin ve tıklayın.",
+    "keywords": [
+      "çevresel refleks testi",
+      "çevrimiçi çevresel görüş testi",
+      "çevresel reaksiyon oyunu",
+      "görüş alanı refleks testi",
+      "çevresel farkındalık testi",
+      "yan görüş reaksiyon testi",
+      "çevresel nişan çalıştırıcısı",
+      "çevresel hedeflere tıklama",
+      "geniş ekran refleks testi",
+      "çevresel görüş tıklama testi",
+      "merkez dışı refleks testi",
+      "uzamsal farkındalık refleksi",
+      "spor çevresel görüş testi",
+      "espor çevresel farkındalık"
+    ]
+  },
+  "directional-reflex": {
+    "title": "Yönsel Refleks Testi - Ok Tuşu Hız Oyunu | Reflextry",
+    "description": "Klavye tepki hızını ve uzamsal karar vermeyi test edin. Bilişsel işlemeyi ve refleks çevikliğini geliştirmek için hızlı yönsel komutlarla eşleşen ok tuşlarına basın.",
+    "keywords": [
+      "yön refleksi testi",
+      "ok reaksiyon testi",
+      "yön tıklama oyunu",
+      "klavye yön refleksi",
+      "ok tuşu reaksiyon oyunu",
+      "uzamsal yön refleksi",
+      "hızlı yön testi",
+      "bilişsel yön testi",
+      "ok eşleştirme refleksi",
+      "sol sağ reaksiyon testi",
+      "yönsel hız testi",
+      "hızlı ok basma refleksi",
+      "seçim yönü reaksiyon testi"
+    ]
+  },
+  "multi-stimulus": {
+    "title": "Çoklu Uyaran Reaksiyon Testi - Seçim RT Oyunu | Reflextry",
+    "description": "Seçim reaksiyon süresini ve seçici dikkatini test edin. Saliselik karar verme hızını ölçmek için birden fazla görsel ve işitsel uyaranı aynı anda işleyin.",
+    "keywords": [
+      "çoklu uyaran reaksiyon testi",
+      "çevrimiçi seçim reaksiyon süresi testi",
+      "birden fazla uyaran refleks oyunu",
+      "kompleks reaksiyon süresi testi",
+      "bilişsel uyaran testi",
+      "aynı anda iş yapma refleks testi",
+      "hick yasası reaksiyon testi",
+      "donders seçim reaksiyon testi",
+      "çoklu uyaran insan kıyaslaması",
+      "değişken reaksiyon süresi testi",
+      "karmaşık refleks çalıştırıcısı",
+      "karar reaksiyonu kıyaslaması"
+    ]
+  },
+  "sequence-reaction": {
+    "title": "Sıralı Reaksiyon Testi - Hızlı Kombo Refleksleri | Reflextry",
+    "description": "Hafıza hatırlamayı hızlı motor refleksleriyle birleştirin. Tempolu ışık dizilerini takip edin ve ritmik tepki sürelerini ve hızı eğitmek için hızlı kombolar gerçekleştirin.",
+    "keywords": [
+      "sıralı reaksiyon testi",
+      "simon says reaksiyon süresi",
+      "örüntü refleks testi",
+      "seri reaksiyon süresi görevi",
+      "sıralı tıklama testi",
+      "refleks dizi oyunu",
+      "hafıza ve reaksiyon testi",
+      "hızlı dizi tıklayıcısı",
+      "bilişsel dizi reaksiyonu",
+      "hızlı dizi testi",
+      "sıralı dokunma testi",
+      "hızlı kombo refleks oyunu"
+    ]
+  },
+  "whack-a-mole": {
+    "title": "Çevrimiçi Köstebek Vurmaca - El-Göz Reaksiyon Oyunu | Reflextry",
+    "description": "Klasik Köstebek Vurmaca oyununu ücretsiz olarak çevrimiçi oynayın. Reaksiyon hızını, hassas tıklamayı ve motor çevikliğini ölçmek için beliren köstebeklere olabildiğince hızlı dokunun.",
+    "keywords": [
+      "çevrimiçi köstebek vurmaca",
+      "ücretsiz köstebek vurmaca oyna",
+      "köstebek vurmaca reaksiyon testi",
+      "sanal köstebek vurmaca",
+      "köstebeğe tıkla oyunu",
+      "fare ile köstebek vurmaca",
+      "köstebek vurmaca refleks oyunu",
+      "hızlı köstebek vurmaca",
+      "köstebek vurmaca nişan",
+      "tarayıcı köstebek vurmaca oyunu",
+      "belirme refleks testi",
+      "hedef belirme reaksiyon oyunu",
+      "el göz koordinasyon oyunu"
+    ]
+  },
+  "color-switch": {
+    "title": "Renk Değişimi Refleks Testi - Görsel Reaksiyon Süresi | Reflextry",
+    "description": "Renk reaksiyon süresini ve seçici yanıt hızını geliştirin. Ekran rengi değişimlerine ve flaş sinyallerine hiç tereddüt etmeden anında tepki verin.",
+    "keywords": [
+      "renk değişimi reaksiyon testi",
+      "renk değişimi refleks testi",
+      "kırmızı yeşil reaksiyon testi",
+      "trafik ışığı reaksiyon süresi",
+      "ekran renk değişimi testi",
+      "hızlı renk tıklama testi",
+      "human benchmark renk değişimi",
+      "görsel renk değişimi refleksi",
+      "renk flaşı reaksiyonu",
+      "basit renk reaksiyon süresi",
+      "renk değişimi tıklayıcısı",
+      "görsel uyaran renk testi"
+    ]
+  },
+  "time-perception": {
+    "title": "Zaman Algısı Testi - İç Saat Kıyaslaması | Reflextry",
+    "description": "İç saatinizi ve zamansal tahmin becerinizi test edin. Milisaniye hassasiyetinde hedef zaman aralıkları oluşturmak için düğmeyi basılı tutun ve bırakın.",
+    "keywords": [
+      "zaman algısı testi",
+      "human benchmark zaman algısı",
+      "iç saat testi",
+      "zaman tahmin testi",
+      "zamanı tahmin et testi",
+      "zaman algısı oyunu",
+      "zaman doğruluğu testi",
+      "bilişsel zaman algısı",
+      "saniye tahmin testi",
+      "zaman süresi testi",
+      "çevrimiçi kör zaman testi",
+      "zamansal algı testi",
+      "iç kalp pili kıyaslaması"
+    ]
+  },
+  "go-no-go": {
+    "title": "Git / Gitme (Go / No-Go) Testi - Dürtü ve Reaksiyon Kontrolü | Reflextry",
+    "description": "Go/No-Go göreviyle yanıt inhibisyonunu öl��ün. Yeşil Git denemelerinde tıklayın, kırmızı Gitme denemelerinde basmayın ve doğruluğu ile reaksiyon süresini takip edin.",
+    "keywords": [
+      "go no go testi",
+      "çevrimiçi go nogo görevi",
+      "inhibitory kontrol testi",
+      "yanıt inhibisyonu oyunu",
+      "go no-go reaksiyon testi",
+      "dürtü kontrolü bilişsel test",
+      "yeşil kırmızı git dur testi",
+      "yürütücü işlev go nogo",
+      "yanlış alarm inhibisyon testi",
+      "sürekli performans go nogo",
+      "beyin egzersizi inhibisyonu"
+    ]
+  },
+  "flanker": {
+    "title": "Flanker Testi - Seçici Dikkat Kıyaslaması | Reflextry",
+    "description": "Eriksen Flanker görevini çevrimiçi çözün. Dikkat kontrolünü ölçmek için uyumlu veya uyumsuz yan okları görmezden gelerek orta ok tuşuna yanıt verin.",
+    "keywords": [
+      "çevrimiçi flanker görevi",
+      "eriksen flanker testi",
+      "seçici dikkat testi",
+      "ok flanker oyunu",
+      "uyumsuz flanker görevi",
+      "dikkat çatışması testi",
+      "bilişsel kontrol flanker",
+      "orta ok reaksiyon testi",
+      "yürütücü dikkat kıyaslaması",
+      "ücretsiz flanker etkisi testi"
+    ]
+  },
+  "choice-reaction": {
+    "title": "Seçimlik Reaksiyon Süresi Testi - Çoklu Seçim RT (ms) | Reflextry",
+    "description": "2 ila 4 renkli hedef arasındaki seçimlik reaksiyon süresini ölçün. Yanan kutuya olabildiğince hızlı tıklayın ve milisaniye cinsinden ortalama RT'nizi geçin.",
+    "keywords": [
+      "seçimlik reaksiyon süresi testi",
+      "çoklu seçim RT testi",
+      "4 seçimli reaksiyon süresi",
+      "renkli kutu reaksiyon testi",
+      "ayrıştırmalı reaksiyon süresi",
+      "seçim RT kıyaslama ms",
+      "çevrimiçi karmaşık reaksiyon süresi",
+      "çoklu uyaran reaksiyon testi",
+      "bilişsel seçim reaksiyonu",
+      "human benchmark seçim reaksiyonu"
+    ]
+  },
+  "cps-test": {
+    "title": "CPS Test - Saniye Başına Tıklama Hızı Testi | Reflextry",
+    "description": "Ücretsiz CPS Testimizle tıklama hızınızı ölçün. Normal tıklama, jitter clicking, butterfly clicking ve drag clicking için 1s, 5s, 10s, 30s ve 60s modlarını test edin.",
+    "keywords": [
+      "cps testi",
+      "saniye başına tıklama testi",
+      "tıklama hızı testi",
+      "1 saniye cps testi",
+      "5 saniye cps testi",
+      "10 saniye cps testi",
+      "30 saniye tıklama testi",
+      "60 saniye tıklama hızı testi",
+      "jitter click testi",
+      "butterfly click testi",
+      "drag click testi",
+      "minecraft pvp cps testi",
+      "kohi click testi",
+      "boşluk tuşu sayacı testi",
+      "fare tıklama hızı testi",
+      "cps insan kıstası",
+      "en hızlı tıklama hızı rekoru"
+    ]
+  },
+  "speed-math": {
+    "title": "Zihinden Matematik Hız Testi - Hızlı Hesaplama Sınavı | Reflextry",
+    "description": "Zihinsel aritmetik ve hesaplama hızınızı keskinleştirin. Matematik akıcılığınızı artırmak için süre tutarak hızlı toplama, çıkarma, çarpma ve bölme işlemleri çözün.",
+    "keywords": [
+      "hızlı matematik testi",
+      "zihinden matematik hız testi",
+      "hızlı aritmetik testi",
+      "zihinden matematik oyunu",
+      "çevrimiçi ücretsiz hızlı matematik testi",
+      "hesaplama hızı testi",
+      "hızlı matematik hesaplama oyunu",
+      "1 dakikalık matematik hız testi",
+      "matematik refleks testi",
+      "hızlı matematik sprint 60 saniye",
+      "bilişsel matematik testi",
+      "çarpma hızı testi",
+      "yetişkinler için zihinden matematik eğitimi",
+      "aritmetik hız meydan okuması"
+    ]
+  },
+  "math-speed": {
+    "title": "Zihinden Matematik Hız Testi - Hızlı Hesaplama Sınavı | Reflextry",
+    "description": "Zihinsel aritmetik ve hesaplama hızınızı keskinleştirin. Matematik akıcılığınızı artırmak için süre tutarak hızlı toplama, çıkarma, çarpma ve bölme işlemleri çözün.",
+    "keywords": [
+      "hızlı matematik testi",
+      "zihinden matematik hız testi",
+      "hızlı aritmetik testi",
+      "zihinden matematik oyunu",
+      "çevrimiçi ücretsiz hızlı matematik testi",
+      "hesaplama hızı testi",
+      "hızlı matematik hesaplama oyunu",
+      "1 dakikalık matematik hız testi",
+      "matematik refleks testi",
+      "hızlı matematik sprint 60 saniye",
+      "bilişsel matematik testi",
+      "çarpma hızı testi",
+      "yetişkinler için zihinden matematik eğitimi",
+      "aritmetik hız meydan okuması"
+    ]
+  },
+  "typing-speed": {
+    "title": "Yazma Hızı Testi - Ücretsiz Çevrimiçi WPM Kriteri | Reflextry",
+    "description": "Ücretsiz 1 dakikalık Yazma Hızı Testimizle dakikadaki kelime sayısını (WPM) ve doğruluğu test edin. Klavye kullanım hızınızı ölçün, hata oranlarını takip edin ve on parmak yazmayı geliştirin.",
+    "keywords": [
+      "yazma hızı testi",
+      "ücretsiz çevrimiçi wpm testi",
+      "dakikada kelime testi",
+      "1 dakikalık klavye testi",
+      "60 saniye yazma hızı testi",
+      "yazma doğruluğu testi",
+      "on parmak yazma hızı testi",
+      "10 fast fingers klavye testi",
+      "monkeytype çevrimiçi alternatifi",
+      "insan kıstası klavye testi",
+      "hızlı klavye pratik",
+      "klavye hızı testi",
+      "wpm ve doğruluk içeren yazma testi",
+      "yazma hızı denetleyicisi",
+      "ücretsiz klavye hızı testi"
+    ]
+  },
+  "word-accuracy": {
+    "title": "Kelime Doğruluk Testi - Hızlı Yazma Hassasiyeti | Reflextry",
+    "description": "Yazma hassasiyetini artırın ve tuş vuruşu hatalarını ortadan kaldırın. Zaman baskısı altında hatasız yazma konusunda ustalaşmak için yüksek hızlı istem kelimelerini %100 doğrulukla yazın.",
+    "keywords": [
+      "kelime doğruluk testi",
+      "kelime hızı testi",
+      "hassas yazma testi",
+      "hatasız yazma testi",
+      "hızlı kelime yazma oyunu",
+      "çevrimiçi yazma doğruluğu testi",
+      "imla hızı testi",
+      "hızlı kelime yazma pratiği",
+      "tuş vuruşu doğruluk testi",
+      "veri giriş yazma hassasiyeti",
+      "kelime tanıma yazma hızı"
+    ]
+  },
+  "word-speed": {
+    "title": "Hızlı Okuma Testi - Kelime Tanıma WPM | Reflextry",
+    "description": "Okuma hızınızı ve kelime tanıma yeteneğinizi test edin. İnteraktif Kelime Hızı aracımızla dakikada okunan kelime akıcılığını ve hızlı görsel tanımlamayı ölçün.",
+    "keywords": [
+      "kelime hız testi",
+      "çevrimiçi ücretsiz hızlı okuma testi",
+      "hızlı kelime tanıma testi",
+      "dakikada kelime okuma testi",
+      "rsvp hızlı okuma testi",
+      "ne kadar hızlı okuyabilirim testi",
+      "flaş kelime okuma hızı",
+      "görsel kelime hız testi",
+      "bilişsel kelime hızı kıyaslaması"
+    ]
+  },
+  "grid-selection": {
+    "title": "Izgara Hız Testi - 5x5 Numara Arama Oyunu | Reflextry",
+    "description": "Schulte Tabloları ile görsel tarama ve çevresel okuma hızınızı eğitin. Görsel arama hızınızı artırmak için 5x5'lik bir ızgarada sayıları artan sırada bulun.",
+    "keywords": [
+      "schulte tablosu online",
+      "schulte ızgara testi",
+      "ızgara hız testi",
+      "1'den 25'e kadar sayıları bulma hız testi",
+      "hızlı okuma için schulte tablosu",
+      "ızgara seçim testi",
+      "görsel arama hız testi",
+      "5x5 sayı ızgarası hız oyunu",
+      "matris görsel tarama testi",
+      "çevresel görüş schulte tablosu",
+      "sayılara sırayla dokunma testi"
+    ]
+  },
+  "grid-speed": {
+    "title": "Izgara Hız Testi - 5x5 Numara Arama Oyunu | Reflextry",
+    "description": "Schulte Tabloları ile görsel tarama ve çevresel okuma hızınızı eğitin. Görsel arama hızınızı artırmak için 5x5'lik bir ızgarada sayıları artan sırada bulun.",
+    "keywords": [
+      "schulte tablosu online",
+      "schulte ızgara testi",
+      "ızgara hız testi",
+      "1'den 25'e kadar sayıları bulma hız testi",
+      "hızlı okuma için schulte tablosu",
+      "ızgara seçim testi",
+      "görsel arama hız testi",
+      "5x5 sayı ızgarası hız oyunu",
+      "matris görsel tarama testi",
+      "çevresel görüş schulte tablosu",
+      "sayılara sırayla dokunma testi"
+    ]
+  },
+  "schulte-table": {
+    "title": "Schulte Tablosu Testi - Görsel Tarama Hızı | Reflextry",
+    "description": "Klasik Schulte Tablosu meydan okuması. 3×3 ile 7×7 arası ızgaralarda karışık sayıları sırayla tıklayın. Zamanı karşı çevresel görüşü, görsel arama hızını ve odaklanmayı eğitin.",
+    "keywords": [
+      "schulte tablosu online ücretsiz",
+      "schulte tablosu testi",
+      "schulte ızgara 5x5",
+      "schulte tablosu 7x7",
+      "görsel tarama hız testi",
+      "çevresel görüş eğitimi schulte",
+      "sayıları sırayla bulma oyunu",
+      "hızlı okuma schulte tablosu",
+      "sayı ızgarası dikkat testi",
+      "schulte tablosu beyin eğitimi",
+      "artan sayı ızgarası meydan okuması"
+    ]
+  },
+  "number-rush": {
+    "title": "Number Rush Hız Testi - Artan Sayı Dokunma Yarışı | Reflextry",
+    "description": "Hızlı sayı tanıma ve tıklama hızınızı test edin. Bilişsel işlem hızınızı kıyaslamak için artan sayıları insani olarak mümkün olan en kısa sürede avlayın ve tıklayın.",
+    "keywords": [
+      "number rush oyunu",
+      "hız sayı testi",
+      "hızlı sayı tıklama",
+      "sayılara sırayla dokunma hız testi",
+      "artan sayı tıklama testi",
+      "1'den 50'ye çevrimiçi sayı oyunu",
+      "hızlı sayı dokunma meydan okuması",
+      "number rush dünya rekoru",
+      "hızlı rakam bulma oyunu",
+      "hızlı sayı sıralama"
+    ]
+  },
+  "quick-sort": {
+    "title": "Hızlı Sıralama Hız Oyunu - Hızlı Sınıflandırma Testi | Reflextry",
+    "description": "Bilişsel kategorizasyon ve hızlı karar verme hızına meydan okuyun. Gelen öğeleri sıkı zaman kısıtlamaları altında ilgili kategorilere ayırın.",
+    "keywords": [
+      "hızlı sıralama hız testi",
+      "hızlı sınıflandırma oyunu",
+      "çevrimiçi hız kategorizasyon testi",
+      "bilişsel sıralama testi",
+      "hızlı sıralama oyunu",
+      "görsel sıralama hızı",
+      "kategori sıralama testi",
+      "çevrimiçi sağ veya sol sıralama oyunu",
+      "hızlı sınıflandırma hız testi",
+      "karar hızı sıralama oyunu"
+    ]
+  },
+  "pattern-matching": {
+    "title": "Örüntü Eşleştirme Testi - Görsel Matris Doğruluğu | Reflextry",
+    "description": "Görsel örüntü tanıma ve sözel olmayan akıl yürütmeyi geliştirin. Görsel keskinliği ve analitik düşünceyi test etmek için karmaşık matris örüntülerini ve geometrik dizileri eşleştirin.",
+    "keywords": [
+      "çevrimiçi örüntü eşleştirme testi",
+      "ücretsiz örüntü tanıma testi",
+      "matris akıl yürütme testi",
+      "çevrimiçi iq örüntü testi",
+      "görsel örüntü bulmaca oyunu",
+      "örüntüyü bul testi",
+      "soyut örüntü eşleştirme testi",
+      "raven ilerleyici matrisler ücretsiz alıştırma",
+      "örüntü tamamlama testi",
+      "mantıksal örüntü tanıma"
+    ]
+  },
+  "precision-click": {
+    "title": "Hassas Tıklama Testi - Fare Hedef Doğruluğu | Reflextry",
+    "description": "Fare hassasiyetini ve mikro hedef doğruluğunu keskinleştirin. Oyun için ince motor kontrolünü ve imleç doğruluğunu geliştirmek üzere kaçırmadan küçük, nokta atışı hedeflere tıklayın.",
+    "keywords": [
+      "hassas tıklama testi",
+      "fare hassasiyeti testi",
+      "mikro hedef tıklama testi",
+      "fare imleci doğruluk testi",
+      "küçük hedef tıklama hızı",
+      "piksel hassasiyetinde tıklama oyunu",
+      "fps fare hassasiyeti testi",
+      "nişan doğruluk yüzdesi testi",
+      "el göz koordinasyonu tıklama testi",
+      "ince imleç kontrolü kıyaslaması"
+    ]
+  },
+  "data-entry": {
+    "title": "Veri Girişi Doğruluk Testi - Tuş Vuruşu Kıyaslaması | Reflextry",
+    "description": "Veri girişi hızını, alfasayısal yazma hassasiyetini ve hata oranlarını ölçün. Gerçekçi sayısal ve kod kıyaslamalarıyla büro tipi saatlik tuş vuruşunu (KPH) test edin.",
+    "keywords": [
+      "çevrimiçi veri girişi testi",
+      "ücretsiz veri girişi hız testi",
+      "alfasayısal veri girişi testi",
+      "10 tuş veri girişi alıştırması",
+      "çevrimiçi veri yazma testi",
+      "büro tipi veri girişi testi",
+      "kph veri girişi testi",
+      "tuş vuruşu doğruluk testi",
+      "veri girişi doğruluk yüzdesi",
+      "çevrimiçi ayrıntılara dikkat testi"
+    ]
+  },
+  "image-recognition": {
+    "title": "Görüntü Tanıma Testi - Görsel Detay Doğruluğu | Reflextry",
+    "description": "Görsel algıyı ve hızlı görüntü ayırt etmeyi test edin. Gözlem becerilerini eğitmek için ince görsel farkları belirleyin ve hedef nesneleri yüksek hızda eşleştirin.",
+    "keywords": [
+      "çevrimiçi görüntü tanıma testi",
+      "görsel tanıma oyunu",
+      "hızlı görüntü hafıza testi",
+      "resim tanıma hız testi",
+      "farkı bul hız testi",
+      "görsel ayırt etme testi",
+      "bilişsel görüntü testi",
+      "görsel arama görev testi",
+      "insan kıyaslama görüntü tanıma"
+    ]
+  },
+  "angle-estimation": {
+    "title": "Açı Tahmin Testi - Uzaysal Geometri Keskinliği | Reflextry",
+    "description": "Geometri ve uzaysal tahmin gözünüzü test edin. Görsel açı keskinliğini ve uzaysal muhakemeyi kıyaslamak için verilen açıların derecelerini doğru bir şekilde tahmin edin.",
+    "keywords": [
+      "açı tahmin testi online",
+      "açıyı tahmin et oyunu",
+      "açı ölçme testi online",
+      "açı derece tahmin etme oyunu",
+      "iletki açı tahmin oyunu",
+      "uzaysal açı keskinliği testi",
+      "geometri açı testi oyunu online",
+      "açılar için gözün ne kadar doğru",
+      "human benchmark açı"
+    ]
+  },
+  "color-match": {
+    "title": "Renk Eşleştirme Testi - RGB Ton Ayrımı | Reflextry",
+    "description": "Renk Eşleştirme Testimiz ile renk algısını ve ince ton ayrımını test edin. Zaman baskısı altında hedef RGB tonlarını eşleştirin ve görsel hassasiyeti kıyaslayın.",
+    "keywords": [
+      "renk eşleştirme testi",
+      "renk ayırma testi",
+      "ton eşleştirme testi",
+      "renk keskinliği testi",
+      "renk algısı testi",
+      "gölge eşleştirme testi online",
+      "rgb renk testi",
+      "görsel renk ayrımı",
+      "renk eşleştirme oyunu online",
+      "ince renk farkı testi",
+      "farnsworth munsell alternatifi",
+      "renk duyarlılık testi",
+      "kromatık keskinlik testi"
+    ]
+  },
+  "color-blindness": {
+    "title": "Renk Körlüğü Testi - Ishihara Levhaları Taraması | Reflextry",
+    "description": "Ücretsiz, eğitici bir renk görme oyununda Ishihara tarzı prosedürel nokta levhalarını keşfedin. Ekran ayarları sonuçları etkiler; bu tıbbi bir teşhis değerlendirmesi değildir.",
+    "keywords": [
+      "renk körlüğü testi",
+      "renk görme testi online",
+      "ishihara testi online ücretsiz",
+      "kırmızı yeşil renk körlüğü testi",
+      "renk körü testi levhaları",
+      "protanopi testi",
+      "deuteranopi testi",
+      "online ishihara levhaları",
+      "renk görme bozukluğu testi",
+      "ücretsiz renk körlüğü kontrolü",
+      "renk eksikliği taraması",
+      "ishihara şeması testi",
+      "renk körlüğü değerlendirmesi"
+    ]
+  },
+  "mental-rotation": {
+    "title": "Zihinsel Döndürme Testi - 3 Boyutlu Uzaysal Akıl Yürütme | Reflextry",
+    "description": "3 boyutlu uzaysal görselleştirmeyi ve bilişsel döndürme hızını kıyaslayın. Karmaşık geometrik şekillerin aynı mı yoksa ayna görüntüsü mü olduğunu gerçek zamanlı olarak belirleyin.",
+    "keywords": [
+      "zihinsel döndürme testi",
+      "shepard metzler testi online",
+      "uzaysal akıl yürütme testi ücretsiz",
+      "3d uzaysal görselleştirme testi",
+      "uzaysal zeka testi",
+      "bilişsel döndürme testi",
+      "uzaysal yetenek kıyaslama",
+      "3d nesne döndürme testi",
+      "uzaysal ilişkiler testi",
+      "vandenberg zihinsel döndürme",
+      "uzaysal biliş testi",
+      "zihinsel döndürme pratik"
+    ]
+  },
+  "aim-trainer": {
+    "title": "FPS Nişan Eğitmeni - Fare Nişanı ve Flick Isınması | Reflextry",
+    "description": "Valorant, CS2 ve Apex gibi FPS oyunları için fare isabetliliğinizi, hedef takibinizi ve flick hızınızı geliştirin. Doğrudan web tarayıcınızda ücretsiz 3D nişan eğitmeni.",
+    "keywords": [
+      "nişan eğitmeni online ücretsiz",
+      "tarayıcıda fps nişan eğitmeni",
+      "fare nişan testi",
+      "valorant nişan eğitmeni ücretsiz",
+      "cs2 nişan eğitimi online",
+      "aim lab tarayıcı alternatifi",
+      "3d nişan eğitmeni online",
+      "gridshot nişan eğitmeni online",
+      "fare isabetliliği nişan testi",
+      "fps fare hassasiyet testi",
+      "günlük nişan ısınması tarayıcı",
+      "nişan refleks oyunu"
+    ]
+  },
+  "rpg-reaction": {
+    "title": "E-spor Oyuncu Reaksiyon Testi - Savaş Refleksleri | Reflextry",
+    "description": "Milisaniye hassasiyetindeki simüle edilmiş savaş senaryolarında rekabetçi savaş reflekslerini, hızlı zamanlama olayı (QTE) savuşturma zamanlamasını ve e-spor reaksiyon hızlarını test edin.",
+    "keywords": [
+      "oyuncu reaksiyon süresi testi",
+      "e-spor reaksiyon hızı testi",
+      "rpg reaksiyon testi",
+      "çevrimiçi qte reaksiyon oyunu",
+      "oyun refleks testi",
+      "profesyonel oyuncu reaksiyon süresi ortalaması",
+      "cs2 peeker advantage reaksiyon testi",
+      "valorant reaksiyon süresi kıyaslaması",
+      "hit confirm refleks testi",
+      "aksiyon oyunu savuşturma zamanlama testi"
+    ]
+  },
+  "endless-dodge": {
+    "title": "Sonsuz Kaçış Oyunu - Mermi Savuşturma Çevikliği | Reflextry",
+    "description": "Savuşturma reflekslerini ve uzaysal kaçış çevikliğini test edin. Bu yüksek yoğunluklu refleks hayatta kalma oyununda imlecinizi sonsuz hareketli engel sürüleri arasında yönlendirin.",
+    "keywords": [
+      "çevrimiçi sonsuz kaçış oyunu",
+      "kaçış reaksiyon testi",
+      "bullet hell kaçış pratik",
+      "fare imleci kaçış oyunu",
+      "çevrimiçi savuşturma refleks oyunu",
+      "engellerden kaçınma refleks oyunu",
+      "mermi kaçırma ısınma oyunu",
+      "imleç kaçış hız testi",
+      "mikro kaçış çeviklik çalıştırıcısı"
+    ]
+  },
+  "stroop-drop": {
+    "title": "Stroop Etkisi Testi - Dürtü ve Dikkat Oyunu | Reflextry",
+    "description": "İnteraktif Stroop Drop oyunu ile ket vurma kontrolünüze meydan okuyun. Düşen renk kelimeleri ve m��rekkep tonları arasındaki bilişsel çatışmayı çözün.",
+    "keywords": [
+      "ücretsiz çevrimiçi stroop etkisi testi",
+      "stroop renk kelime testi oyunu",
+      "bilişsel girişim testi",
+      "çevrimiçi stroop drop oyunu",
+      "ket vurma kontrol test oyunu",
+      "renk kelime uyuşmazlık testi",
+      "psikolojik stroop etkisi testi",
+      "beyin çatışması reaksiyon oyunu",
+      "yürütücü işlev stroop testi"
+    ]
+  },
+  "target-tracking": {
+    "title": "Hedef Takibi Nişan Çalıştırıcısı - Fare Nişan Isınması | Reflextry",
+    "description": "Rekabetçi FPS oyunları için akıcı fare takibinde ustalaşın. Sıfır fare yumuşatma ile kaçamak hareket eden hedeflere karşı sürekli hassasiyet nişanı alıştırması yapın.",
+    "keywords": [
+      "akıcı takip nişan çalıştırıcısı",
+      "çevrimiçi hedef takibi nişan testi",
+      "fps akıcı takip pratiği",
+      "çevrimiçi apex legends takip çalıştırıcısı",
+      "fare takibi doğruluk testi",
+      "hareketli hedef nişan testi",
+      "crosshair takip testi",
+      "sürekli nişan takibi pratiği",
+      "çevrimiçi reaktif takip oyunu"
+    ]
+  },
+  "flick-shot": {
+    "title": "Flick Shot Nişan Çalıştırıcısı - Hızlı Flick Fare Nişanı | Reflextry",
+    "description": "Flick Shot çalıştırıcımız ile kas hafızasını ve hızlı nişan almayı eğitin. Taktiksel nişancılar için hızlı mikro ayarlamaları ve hedef yakalamayı kalibre edin.",
+    "keywords": [
+      "çevrimiçi flick shot nişan çalıştırıcısı",
+      "ücretsiz flick nişan testi",
+      "çevrimiçi cs2 flick shot pratiği",
+      "valorant flick shot ısınması",
+      "mikro flick nişan çalıştırıcısı",
+      "hızlı flick fare doğruluk testi",
+      "gridshot flick çalıştırıcısı",
+      "refleks flick shot oyunu",
+      "hedef flick doğruluk testi",
+      "tek atış flick çalıştırıcısı"
+    ]
+  },
+  "rhythm-tap": {
+    "title": "Ritim Tap Oyunu - Görsel-İşitsel Vuruş Zamanlama Testi | Reflextry",
+    "description": "Müzikal zamanlama doğruluğunuzu ve milisaniye düzeyinde ritim algınızı test edin. Artan BPM tempolarıyla senkronize şekilde vurun ve ritim dışı gecikme hatalarınızı takip edin.",
+    "keywords": [
+      "çevrimiçi ritim zamanlama testi",
+      "vuruş tap reaksiyon testi",
+      "görsel işitsel ritim testi",
+      "tarayıcıda osu ritim ısınması",
+      "ritme ayak uydurma doğruluk testi",
+      "ücretsiz ritim reaksiyon oyunu",
+      "çevrimiçi müzikal zamanlama testi",
+      "milisaniye ses senkronizasyon testi",
+      "bpm vuruş doğruluk oyunu",
+      "ritim refleks çalıştırıcısı"
+    ]
+  }
+}

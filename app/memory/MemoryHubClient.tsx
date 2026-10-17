@@ -6,6 +6,8 @@ import {
   Brain, Activity, Hash, Grid, Palette, Shapes, Shuffle,
   BookOpen, Layers, Sparkles
 } from "lucide-react";
+import { useTranslation } from "@/lib/i18n/context";
+import { CategoryGuideSection } from "@/components/CategoryGuideSection";
 
 interface ToolItem {
   title: string;
@@ -167,6 +169,8 @@ const FloatingBackground = () => {
 };
 
 export default function MemoryHubClient() {
+    const { t, getLocalizedHref } = useTranslation();
+
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
@@ -210,23 +214,23 @@ export default function MemoryHubClient() {
                             suppressHydrationWarning
                         >
                             <Sparkles className="w-10 h-10 text-blue-400" />
-                            Memory Capacity & Training Games
+                            {t("categoryHub.memory.heroTitle", "Memory Capacity & Training Games")}
                         </h1>
                     </div>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-medium">
-                        Expand your working memory capacity and cognitive retention.
+                        {t("categoryHub.memory.heroSubtitle", "Expand your working memory capacity and cognitive retention.")}
                     </p>
                     <p className="text-md text-muted-foreground/80 max-w-3xl mx-auto">
-                        Your working memory is the scratchpad of your brain. By actively challenging your ability to hold and process visual, spatial, and sequential information, you can physically strengthen the neural pathways responsible for focus and retention.
+                        {t("categoryHub.memory.heroDesc", "Your working memory is the scratchpad of your brain. By actively challenging your ability to hold and process visual, spatial, and sequential information, you can physically strengthen the neural pathways responsible for focus and retention.")}
                     </p>
                 </motion.div>
 
                 <motion.section variants={itemVariants} className="bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 p-6 rounded-3xl mb-8 relative z-10 max-w-4xl mx-auto">
                     <h2 className="text-xl font-bold text-foreground mb-2 flex items-center gap-2">
-                        <Sparkles className="w-5 h-5 text-blue-500" /> What This Arena Covers
+                        <Sparkles className="w-5 h-5 text-blue-500" /> {t("categoryHub.memory.whatItCovers", "What This Arena Covers")}
                     </h2>
                     <p className="text-muted-foreground leading-relaxed">
-                        Working memory, spatial recall, and verbal recognition tests—including sequence patterns, digit span, visual grids, and the chimp test. Use them to measure how many items you can hold and update under time pressure.
+                        {t("categoryHub.memory.whatItCoversDesc", "Working memory, spatial recall, and verbal recognition tests—including sequence patterns, digit span, visual grids, and the chimp test. Use them to measure how many items you can hold and update under time pressure.")}
                     </p>
                 </motion.section>
 
@@ -241,145 +245,62 @@ export default function MemoryHubClient() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12 relative z-10">
                         <div className="p-6 rounded-2xl bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 text-center hover:bg-white/10 transition-colors">
                             <Brain className="w-8 h-8 text-blue-400 mx-auto mb-3 drop-shadow-[0_0_10px_rgba(96,165,250,0.8)]" />
-                            <h3 className="text-base font-bold text-foreground mb-1">Working Memory</h3>
-                            <p className="text-sm text-muted-foreground">Hold more info</p>
+                            <h3 className="text-base font-bold text-foreground mb-1">
+                                {t("categoryHub.memory.benefit1Title", "Working Memory")}
+                            </h3>
+                            <p className="text-sm text-muted-foreground">
+                                {t("categoryHub.memory.benefit1Desc", "Hold more info")}
+                            </p>
                         </div>
                         <div className="p-6 rounded-2xl bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 text-center hover:bg-white/10 transition-colors">
                             <Grid className="w-8 h-8 text-indigo-400 mx-auto mb-3 drop-shadow-[0_0_10px_rgba(129,140,248,0.8)]" />
-                            <h3 className="text-base font-bold text-foreground mb-1">Spatial Recall</h3>
-                            <p className="text-sm text-muted-foreground">Map your surroundings</p>
+                            <h3 className="text-base font-bold text-foreground mb-1">
+                                {t("categoryHub.memory.benefit2Title", "Spatial Recall")}
+                            </h3>
+                            <p className="text-sm text-muted-foreground">
+                                {t("categoryHub.memory.benefit2Desc", "Map your surroundings")}
+                            </p>
                         </div>
                         <div className="p-6 rounded-2xl bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 text-center hover:bg-white/10 transition-colors">
                             <div className="text-2xl mb-2 drop-shadow-md">💡</div>
-                            <h3 className="text-base font-bold text-foreground mb-1">Sharper Focus</h3>
-                            <p className="text-sm text-muted-foreground">Eliminate brain fog</p>
+                            <h3 className="text-base font-bold text-foreground mb-1">
+                                {t("categoryHub.memory.benefit3Title", "Sharper Focus")}
+                            </h3>
+                            <p className="text-sm text-muted-foreground">
+                                {t("categoryHub.memory.benefit3Desc", "Eliminate brain fog")}
+                            </p>
                         </div>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
-                        {MEMORY_TOOLS.map((tool, index) => (
-                            <motion.div
-                                key={tool.title}
-                                variants={itemVariants}
-                                className="group relative p-6 rounded-3xl bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 hover:border-blue-500/50 hover:bg-blue-500/5 transition-all duration-300 shadow-lg hover:shadow-[0_0_30px_rgba(59,130,246,0.2)] overflow-hidden"
-                            >
-                                <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                                <Link
-                                    href={tool.href}
-                                    className="absolute inset-0 z-10"
-                                    aria-label={`${tool.title} - ${tool.desc}`}
+                        {MEMORY_TOOLS.map((tool, index) => {
+                            const shortSlug = tool.href.replace("/memory/", "");
+                            const localizedTitle = t(`tools.${shortSlug}.title`, tool.title);
+                            const localizedDesc = t(`tools.${shortSlug}.desc`, tool.desc);
+
+                            return (
+                                <motion.div
+                                    key={tool.title}
+                                    variants={itemVariants}
+                                    className="group relative p-6 rounded-3xl bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 hover:border-blue-500/50 hover:bg-blue-500/5 transition-all duration-300 shadow-lg hover:shadow-[0_0_30px_rgba(59,130,246,0.2)] overflow-hidden"
                                 >
-                                    <span className="sr-only">{tool.title} - {tool.desc}</span>
-                                </Link>
-                                <tool.icon className={`w-12 h-12 text-blue-500 dark:text-blue-400 mb-4 group-hover:scale-110 transition-transform drop-shadow-[0_0_8px_currentColor]`} />
-                                <h3 className="text-xl font-bold text-foreground mb-2 drop-shadow-sm">{tool.title}</h3>
-                                <p className="text-muted-foreground leading-relaxed">{tool.desc}</p>
-                            </motion.div>
-                        ))}
+                                    <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                                    <Link
+                                        href={getLocalizedHref(tool.href)}
+                                        className="absolute inset-0 z-10"
+                                        aria-label={`${localizedTitle} - ${localizedDesc}`}
+                                    >
+                                        <span className="sr-only">{localizedTitle} - {localizedDesc}</span>
+                                    </Link>
+                                    <tool.icon className={`w-12 h-12 text-blue-500 dark:text-blue-400 mb-4 group-hover:scale-110 transition-transform drop-shadow-[0_0_8px_currentColor]`} />
+                                    <h3 className="text-xl font-bold text-foreground mb-2 drop-shadow-sm">{localizedTitle}</h3>
+                                    <p className="text-muted-foreground leading-relaxed">{localizedDesc}</p>
+                                </motion.div>
+                            );
+                        })}
                     </div>
 
-                    {/* Detailed SEO / AEO / GEO Section */}
-                    <div className="max-w-4xl mx-auto mt-16 space-y-12 text-left pt-6 border-t border-black/10 dark:border-white/10 relative z-10">
-                        
-                        <div className="space-y-4">
-                            <h2 className="text-3xl font-bold text-foreground">What is Working Memory Training?</h2>
-                            <p className="text-muted-foreground leading-relaxed">
-                                Working memory training involves engaging in structured cognitive exercises—like remembering digit sequences or spatial grids—to expand the "scratchpad" of your brain. By actively challenging your ability to hold and process visual, spatial, and sequential information, you can physically strengthen the neural pathways responsible for focus and retention.
-                            </p>
-                        </div>
-
-                        <div className="space-y-4">
-                            <h2 className="text-2xl font-bold text-foreground">How to Improve Your Memory Score?</h2>
-                            <ol className="list-decimal list-inside space-y-2 text-muted-foreground">
-                                <li><strong>Use Chunking:</strong> Break long strings of numbers (e.g., 9-2-5-4) into smaller chunks (92-54).</li>
-                                <li><strong>Visualize Patterns:</strong> In the Visual Memory test, try to see the highlighted squares as a cohesive shape rather than individual blocks.</li>
-                                <li><strong>Minimize Distractions:</strong> Working memory requires total focus. Play in a quiet environment.</li>
-                                <li><strong>Practice Consistently:</strong> Just 10 minutes a day yields better cognitive adaptations than long, infrequent sessions.</li>
-                            </ol>
-                        </div>
-
-                        <div className="space-y-4">
-                            <h3 className="text-2xl font-bold text-foreground">Should I Practice Daily?</h3>
-                            <p className="text-muted-foreground leading-relaxed">
-                                Yes. Consistent daily stimulation is key to promoting neuroplasticity, which is the brain's ability to reorganize itself by forming new neural connections.
-                            </p>
-                        </div>
-
-                        <div className="space-y-4">
-                            <h2 className="text-2xl font-bold text-foreground">Memory Tools Comparison</h2>
-                            <div className="overflow-x-auto">
-                                <table className="w-full text-left border-collapse min-w-[600px]">
-                                    <thead>
-                                        <tr className="border-b border-black/10 dark:border-white/10">
-                                            <th className="p-3 text-foreground font-bold">Tool Name</th>
-                                            <th className="p-3 text-foreground font-bold">Best For (Use Case)</th>
-                                            <th className="p-3 text-foreground font-bold">Core Benefit</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody className="text-muted-foreground">
-                                        <tr className="border-b border-black/5 dark:border-white/5">
-                                            <td className="p-3 font-bold text-blue-700 dark:text-blue-400">Number Memory</td>
-                                            <td className="p-3">Math students, programmers</td>
-                                            <td className="p-3">Trains the brain's phonological loop to hold long numeric strings.</td>
-                                        </tr>
-                                        <tr className="border-b border-black/5 dark:border-white/5">
-                                            <td className="p-3 font-bold text-blue-700 dark:text-blue-400">Visual Memory</td>
-                                            <td className="p-3">Designers, architects</td>
-                                            <td className="p-3">Improves the visuospatial sketchpad for spatial coordination.</td>
-                                        </tr>
-                                        <tr className="border-b border-black/5 dark:border-white/5">
-                                            <td className="p-3 font-bold text-blue-700 dark:text-blue-400">Sequence Memory</td>
-                                            <td className="p-3">Musicians, general cognition</td>
-                                            <td className="p-3">Enhances sequential pattern recognition and focus endurance.</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-
-                        <div className="space-y-4">
-                            <h2 className="text-2xl font-bold text-foreground">Benchmarks & Scientific Proof</h2>
-                            <p className="text-muted-foreground leading-relaxed">
-                                Classic work by George A. Miller popularized the idea that people often hold roughly 7±2 chunks in immediate memory—though modern views emphasize strategy and task design as much as a fixed capacity. Techniques like chunking reduce how many independent items you must store. Research discussed via the <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2629068/" target="_blank" rel="noopener noreferrer" className="text-blue-700 dark:text-blue-400 font-semibold hover:underline underline-offset-2">National Institutes of Health (NIH)</a> explores when working-memory training transfers and when it does not. On Reflextry, track your own digit-span and recall trends under the same difficulty; we do not claim a universal “average user reaches X after two weeks” outcome.
-                            </p>
-                        </div>
-                        
-                        <div className="space-y-4">
-                            <h2 className="text-2xl font-bold text-foreground">Frequently Asked Questions</h2>
-                            <div className="bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 p-6 rounded-3xl">
-                                <h3 className="text-xl font-bold text-foreground mb-3">Can you actually improve your memory?</h3>
-                                <p className="text-muted-foreground mb-3">Yes. While you cannot easily change your long-term memory capacity, you can significantly enhance your working (short-term) memory. Consistent practice with tools like our Number Memory or Visual Memory tests trains your brain to chunk information more efficiently, making it easier to hold more data simultaneously.</p>
-                            </div>
-                            
-                            <div className="bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 p-6 rounded-3xl">
-                                <h3 className="text-xl font-bold text-foreground mb-3">What is the 'Chunking' technique?</h3>
-                                <p className="text-muted-foreground mb-3">Chunking is a mnemonic strategy where you group smaller, individual pieces of data into larger, meaningful units (chunks). For example, rather than remembering the sequence 4-7-1-9-2-8 as six distinct digits, your brain can group them as 471 and 928, effectively reducing the cognitive load from six items to just two.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    {/* Related Categories */}
-                    <div className="mt-16 pt-8 border-t border-black/10 dark:border-white/10 relative z-10">
-                        <h3 className="text-2xl font-bold text-foreground mb-6 text-center">Explore Other Categories</h3>
-                        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                            <Link href="/gaming" className="p-4 rounded-2xl bg-white/5 border border-black/10 dark:border-white/10 hover:border-purple-500/50 hover:bg-purple-500/5 transition-all text-center">
-                                <div className="text-purple-500 text-2xl mb-2 drop-shadow-sm">🎮</div>
-                                <div className="text-sm font-bold text-foreground">Gaming Lab</div>
-                            </Link>
-                            <Link href="/reflex" className="p-4 rounded-2xl bg-white/5 border border-black/10 dark:border-white/10 hover:border-pink-500/50 hover:bg-pink-500/5 transition-all text-center">
-                                <div className="text-pink-500 text-2xl mb-2 drop-shadow-sm">⚡</div>
-                                <div className="text-sm font-bold text-foreground">Reflex Tests</div>
-                            </Link>
-                            <Link href="/speed" className="p-4 rounded-2xl bg-white/5 border border-black/10 dark:border-white/10 hover:border-purple-500/50 hover:bg-purple-500/5 transition-all text-center">
-                                <div className="text-purple-500 text-2xl mb-2 drop-shadow-sm">⌨️</div>
-                                <div className="text-sm font-bold text-foreground">Speed Tests</div>
-                            </Link>
-                            <Link href="/accuracy" className="p-4 rounded-2xl bg-white/5 border border-black/10 dark:border-white/10 hover:border-pink-500/50 hover:bg-pink-500/5 transition-all text-center">
-                                <div className="text-pink-500 text-2xl mb-2 drop-shadow-sm">🎯</div>
-                                <div className="text-sm font-bold text-foreground">Accuracy Tools</div>
-                            </Link>
-                        </div>
-                    </div>
+                    <CategoryGuideSection category="memory" />
                 </motion.div>
             </motion.div>
         </div>

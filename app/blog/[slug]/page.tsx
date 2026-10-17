@@ -22,11 +22,15 @@ export async function generateStaticParams() {
     }));
 }
 
+import { headers } from 'next/headers';
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const { slug } = await params;
     const baseUrl = getBaseUrl();
+    const headersList = await headers();
+    const locale = headersList.get('x-locale') || 'en';
     try {
-        const { meta } = await getContentBySlug<Article>('blog', slug);
+        const { meta } = await getContentBySlug<Article>('blog', slug, locale);
         const pageUrl = `${baseUrl}/blog/${slug}`;
         const ogImage = meta.image
             ? meta.image.startsWith('http')
@@ -85,9 +89,11 @@ import { BlogRelatedTools } from '@/components/BlogRelatedTools';
 
 export default async function BlogPostPage({ params }: Props) {
     const { slug } = await params;
+    const headersList = await headers();
+    const locale = headersList.get('x-locale') || 'en';
 
     try {
-        const { meta, content } = await getContentBySlug<Article>('blog', slug);
+        const { meta, content } = await getContentBySlug<Article>('blog', slug, locale);
         const articleLd = generateArticleStructuredData(meta, slug);
 
         const articleData = {

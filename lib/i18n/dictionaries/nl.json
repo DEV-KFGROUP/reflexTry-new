@@ -1,0 +1,944 @@
+{
+  "nav": {
+    "home": "Home",
+    "reflex": "Reflex",
+    "memory": "Geheugen",
+    "speed": "Snelheid",
+    "accuracy": "Nauwkeurigheid",
+    "gaming": "Gaming",
+    "tools": "Alle Tools",
+    "leaderboard": "Ranglijst",
+    "challenges": "Uitdagingen",
+    "statistics": "Statistieken",
+    "science": "Wetenschap",
+    "blog": "Blog"
+  },
+  "common": {
+    "start": "Test starten",
+    "restart": "Opnieuw proberen",
+    "next": "Volgende",
+    "finish": "Voltooien",
+    "score": "Score",
+    "time": "Tijd",
+    "bestScore": "Beste score",
+    "average": "Gemiddeld",
+    "ms": "ms",
+    "wpm": "WPM",
+    "cps": "CPS",
+    "percentile": "Percentiel",
+    "saveScore": "Score opslaan",
+    "share": "Resultaat delen",
+    "instructions": "Instructies",
+    "difficulty": "Moeilijkheidsgraad",
+    "easy": "Makkelijk",
+    "medium": "Gemiddeld",
+    "hard": "Moeilijk",
+    "expert": "Expert",
+    "globalBenchmarks": "Wereldwijde benchmarks",
+    "howToPlay": "Speluitleg",
+    "faq": "Veelgestelde vragen",
+    "switchLanguage": "Taal",
+    "tools": "gratis tools"
+  },
+  "home": {
+    "heroBadge": "Cognitieve prestatiebenchmark",
+    "heroTitle": "Meet & train jouw",
+    "heroTitleHighlight": "Brensnelheid",
+    "heroSubtitle": "Gratis reactietijdsessies met millisecondennauwkeurigheid, werkheugenpuzzels, typ-benchmarks en FPS-aimwarm-uptools.",
+    "startTesting": "Start eerste test",
+    "exploreTools": "Ontdek 40+ tools",
+    "popularTests": "Populaire tests",
+    "categories": "Categorieën",
+    "statReaction": "Reactietijd scores",
+    "statTools": "Interactieve tools",
+    "statFree": "Gratis en in de browser",
+    "enterArena": "Betreed Arena",
+    "startQuest": "Start missie"
+  },
+  "categories": {
+    "reflex": {
+      "title": "Reflex & Reactie",
+      "description": "Benchmark je visuele en auditieve reactietijden met millisecondennauwkeurigheid."
+    },
+    "memory": {
+      "title": "Werkgeheugen",
+      "description": "Train geheugenbehoud, reeks-patronen en visuele spanwijdte."
+    },
+    "speed": {
+      "title": "Motorsnelheid & CPS",
+      "description": "Test muisklikken per seconde (CPS), typsnelheid (WPM) en rekenbehendigheid."
+    },
+    "accuracy": {
+      "title": "Aim & Nauwkeurigheid",
+      "description": "Verfijn micro-targetprecisie, patroonherkenning en oog-handcoördinatie."
+    },
+    "gaming": {
+      "title": "Esports Warmup",
+      "description": "Kalibreer muis flick shots, target tracking en gevechtsreflexen voor competitieve games."
+    }
+  },
+  "footer": {
+    "tagline": "Gratis online platform voor cognitieve training met benchmarks voor visuele reactietijd, werkgeheugen, typ-WPM en aim-precisie.",
+    "quickLinks": "Snelle links",
+    "tools": "Categorieën",
+    "legal": "Juridisch & Privacy",
+    "privacy": "Privacybeleid",
+    "terms": "Servicevoorwaarden",
+    "cookies": "Cookiebeleid",
+    "contact": "Contact",
+    "about": "Over ons",
+    "rights": "Alle rechten voorbehouden.",
+    "features": "Functies",
+    "achievements": "Prestaties",
+    "research": "Onderzoek",
+    "methodology": "Methodologie",
+    "trainingPrograms": "Trainingsprogramma's",
+    "faq": "FAQ",
+    "cookiePreferences": "Cookievoorkeuren",
+    "platformMethodology": "Over Reflextry-platform en methodologie",
+    "brainTrainingTitle": "Hersentraining:",
+    "brainTrainingText": "We hebben Reflextry gebouwd om gamers en competitieve spelers een rauwe, ongefilterde blik te geven op hun basismechanica. Geen flauwekul, alleen pure prestatievolging. Door je werkgeheugen en visuele patroonherkenning elke dag tot het uiterste te drijven, dwing je je hersenen om snellere, sterkere neurale paden te bouwen—een proces dat neuroplasticiteit wordt genoemd. We isoleren specifieke cognitieve lasten (zoals ruimtelijk geheugen en reeksen onthouden) zodat je precies kunt trainen waar je zwak in bent.",
+    "esportsTitle": "Esports-latentie:",
+    "esportsText": "In competitief gamen is 50 milliseconden het verschil tussen op een hoofd klikken en terug naar de lobby worden gestuurd. Onze snelheid- en reflexarena's strippen alle externe gamemecanica weg om je rauwe biologische reactietijd te meten. We volgen je Clicks-Per-Second (CPS), flick-shot-nauwkeurigheid en rauwe trackingsnelheid. We hebben onze testomgeving sterk geoptimaliseerd om inputlag op browsterniveau te elimineren, waardoor je een echte meting krijgt van je hardware en zenuwstelsel die samenwerken. Gebruik deze tools om je snelle spieren op te warmen voordat je aan ranked begint.",
+    "accuracyTitle": "Nauwkeurigheid:",
+    "accuracyText": "Snelheid betekent niets als je misstreept. De Nauwkeurigheidshub dwingt je om te focussen en prioriteit te geven aan precisie boven pure snelheid. Via ruimtelijke rasters, hoekschattingen en kleurmatching verfijn je je fijnmotorische controle. Het tegelijkertijd trainen van snelheid en nauwkeurigheid leert je centrale zenuwstelsel om complexe mechanische bewegingen efficiënt uit te voeren. We slaan al je sessiegegevens op zodat je prestatiecurve daadwerkelijk omhoog ziet gaan in de loop van de tijd. 10 minuten geconcentreerd oefenen verslaat hier 5 uur gedachteloos grinden.",
+    "clinicalRef": "Klinische ref:",
+    "brainTrainingResearch": "hersentrainingonderzoek",
+    "allRightsReserved": "ALLE RECHTEN VOORBEHOUDEN.",
+    "lastUpdate": "LAATSTE UPDATE: JUL 2026",
+    "builtWith": "GEBOUWD MET",
+    "forGamers": "VOOR GAMERS"
+  },
+  "guide": {
+    "howItWorks": "Hoe Het Werkt & Tips",
+    "subtitle": "Beheers het spel met onze uitgebreide gids en verbeterstrategieën.",
+    "jumpTo": "Ga naar",
+    "about": "Over",
+    "howToPlay": "Spelregels",
+    "proTips": "Pro Tips",
+    "faq": "FAQ",
+    "aboutTest": "Over Deze Test",
+    "trains": "Wat Deze Test Traint",
+    "instructions": "Instructies & Spelmechanismen",
+    "quickSetup": "Snelle Start",
+    "keyRules": "Belangrijke Regels:",
+    "strategies": "Expertstrategieën",
+    "faqs": "Veelgestelde Vragen",
+    "continueTraining": "Ga Verder Met Trainen"
+  },
+  "game": {
+    "difficultyLevel": "Moeilijkheidsgraad",
+    "sessionStats": "Sessiestatistieken",
+    "active": "Actief",
+    "soundOn": "Geluid Aan",
+    "unmute": "Geluid Inschakelen",
+    "arena": "ARENA",
+    "initializeTest": "Start Test",
+    "calibrationComplete": "Kalibratie Voltooid",
+    "finalScore": "Eindscore:",
+    "newRecord": "Nieuw Record!",
+    "recalibrate": "Opnieuw Proberen",
+    "menu": "Menu",
+    "seen": "Gezien",
+    "new": "Nieuw",
+    "diffBeginner": "Beginner",
+    "diffEasy": "Makkelijk",
+    "diffNormal": "Normaal",
+    "diffHard": "Moeilijk",
+    "diffProfessional": "Professioneel",
+    "diffExpert": "Expert",
+    "telemetryStream": "TELEMETRIE_STREAM"
+  },
+  "stats": {
+    "score": "Score",
+    "best": "Beste",
+    "lives": "Levens",
+    "timeleft": "Resterende Tijd",
+    "time": "Tijd",
+    "trial": "Poging",
+    "rt": "RT",
+    "avgrt": "Gem. RT",
+    "bestrt": "Beste RT",
+    "attempt": "Poging",
+    "errors": "Fouten",
+    "round": "Ronde",
+    "averageerr": "Gem. Fout",
+    "besterr": "Beste Fout",
+    "targetmargin": "Doeltolerantie",
+    "level": "Niveau",
+    "objects": "Objecten",
+    "target": "Doel",
+    "grid": "Raster",
+    "avgspeed": "Gem. Snelheid",
+    "bestclick": "Beste Klik",
+    "failpenalty": "Straftijd"
+  },
+  "verbalMemory": {
+    "title": "VERBAAL GEHEUGEN",
+    "subtitle": "LEXICALE HERKENNING",
+    "arenaGoal": "IDENTIFICEER NIEUWE PRIKKELS",
+    "testTitle": "Verbale Geheugentest",
+    "testDesc": "Test je verbale geheugen. Onthoud welke woorden je al gezien hebt en welke nieuw zijn.",
+    "beginnerDesc": "50 Woorden · 5 Levens",
+    "easyDesc": "100 Woorden · 3 Levens",
+    "normalDesc": "300 Woorden · 3 Levens",
+    "hardDesc": "500 Woorden · 1 Leven",
+    "proDesc": "1000 Woorden · 3s Limiet"
+  },
+  "tools": {
+    "sequence-memory": {
+      "title": "Sequentieel Geheugentest",
+      "desc": "Oefen met het herinneren van uitbreidende ruimtelijke lichtpatronen met onze gratis Sequentieel Geheugentest. Lees de score-regels en vergelijk je eigen sessies."
+    },
+    "sequence": {
+      "title": "Sequentieel Geheugentest",
+      "desc": "Oefen met het herinneren van uitbreidende ruimtelijke lichtpatronen met onze gratis Sequentieel Geheugentest. Lees de score-regels en vergelijk je eigen sessies."
+    },
+    "number-memory": {
+      "title": "Cijfergeheugentest",
+      "desc": "Meet je werkgeheugen en cijferreeks-capaciteit met onze gratis Cijfergeheugentest. Onthoud uitbreidende cijferreeksen en benchmark je geheugenscore."
+    },
+    "number": {
+      "title": "Cijfergeheugentest",
+      "desc": "Meet je werkgeheugen en cijferreeks-capaciteit met onze gratis Cijfergeheugentest. Onthoud uitbreidende cijferreeksen en benchmark je geheugenscore."
+    },
+    "visual-memory": {
+      "title": "Visueel Geheugentest",
+      "desc": "Vergroot je visuele retentie en ruimtelijke patroonherkenning. Test je visuele geheugen door oplichtende rasterpatronen op een groeiende matrix te onthouden. Gratis human benchmark-tool."
+    },
+    "visual": {
+      "title": "Visueel Geheugentest",
+      "desc": "Vergroot je visuele retentie en ruimtelijke patroonherkenning. Test je visuele geheugen door oplichtende rasterpatronen op een groeiende matrix te onthouden. Gratis human benchmark-tool."
+    },
+    "color-memory": {
+      "title": "Kleurgeheugentest",
+      "desc": "Daag je chromatische geheugen en visuele aandacht uit. Onthoud snel wisselende kleurenreeksen en train je cognitieve flexibiliteit met onze gratis Kleurgeheugentest."
+    },
+    "color": {
+      "title": "Kleurgeheugentest",
+      "desc": "Daag je chromatische geheugen en visuele aandacht uit. Onthoud snel wisselende kleurenreeksen en train je cognitieve flexibiliteit met onze gratis Kleurgeheugentest."
+    },
+    "shape-memory": {
+      "title": "Vormgeheugentest",
+      "desc": "Train geometrische vormherkenning en ruimtelijk geheugen. Onthoud abstracte vormen en symbolen om je non-verbale visuele redeneervermogen en focus te verbeteren."
+    },
+    "shape": {
+      "title": "Vormgeheugentest",
+      "desc": "Train geometrische vormherkenning en ruimtelijk geheugen. Onthoud abstracte vormen en symbolen om je non-verbale visuele redeneervermogen en focus te verbeteren."
+    },
+    "symbol-memory": {
+      "title": "Symbol Memory Test",
+      "desc": "Verbeter abstracte patroonherkenning en associatief geheugen. Match cryptische symbolen en iconen om je mentale focus en visuele verwerkingssnelheid te scherpen."
+    },
+    "symbol": {
+      "title": "Symbol Memory Test",
+      "desc": "Verbeter abstracte patroonherkenning en associatief geheugen. Match cryptische symbolen en iconen om je mentale focus en visuele verwerkingssnelheid te scherpen."
+    },
+    "word-recall": {
+      "title": "Word Recall Geheugentest",
+      "desc": "Evalueer je verbale geheugenretentie en woordenschatherkenning. Test of woorden nieuw zijn of al eerder zijn gezien om het kortetermijn taalgeheugen te meten."
+    },
+    "card-match": {
+      "title": "Kaart Match Geheugenspel",
+      "desc": "Train je ruimtelijk geheugen en visuele patroonherkenning met ons gratis online Kaart Match Geheugenspel. Draai kaarten om, vind paren in zo min mogelijk zetten en verslaan de klok."
+    },
+    "chimp-test": {
+      "title": "Chimp Test",
+      "desc": "Ben je slimmer dan een chimpansee? Doe de beroemde Chimp Test om je visueel-ruimtelijk werkgeheugen te meten. Onthoud het getallenraster voordat het verdwijnt."
+    },
+    "verbal-memory": {
+      "title": "Verbaal Geheugen Test",
+      "desc": "Test je verbale werkgeheugen met onze gratis Verbaal Geheugen Test. Identificeer bekende versus nieuwe woorden om taalretentie en cognitieve verwerkingssnelheid te meten."
+    },
+    "object-tracking": {
+      "title": "Multiple Object Tracking",
+      "desc": "Test dynamische visuele aandacht en ruimtelijke tracking. Volg meerdere bewegende doelsferen tussen afleiders in deze wetenschappelijk onderbouwde cognitieve test."
+    },
+    "n-back": {
+      "title": "N",
+      "desc": "Train je werkgeheugen met de klassieke N-Back taak. Match letters die N stappen geleden verschenen, volg hits en nauwkeurigheid, en ga van 1-back naar 3-back."
+    },
+    "reaction-time": {
+      "title": "Reactietijd Test",
+      "desc": "Test en verbeter je visuele reactietijd in milliseconden. Doe onze gratis milliseconde reactietest, vergelijk met pro gamers en volg je reflexvoortgang."
+    },
+    "reaction": {
+      "title": "Esports Gamer Reactietest",
+      "desc": "Test competitieve gevechtsreflexen, quick-time event (QTE) parry-timing en e-sports reactiesnelheden in milliseconde-nauwkeurige gesimuleerde gevechtsscenario's."
+    },
+    "sound-reaction": {
+      "title": "Audio Reactietijd Test",
+      "desc": "Meet je auditieve reactiesnelheid in milliseconden. Test gehoorreflexen met instant audio-cues en vergelijk je geluidreactie met je visuele reactietijden."
+    },
+    "sound": {
+      "title": "Audio Reactietijd Test",
+      "desc": "Meet je auditieve reactiesnelheid in milliseconden. Test gehoorreflexen met instant audio-cues en vergelijk je geluidreactie met je visuele reactietijden."
+    },
+    "grid-shot": {
+      "title": "Grid Shot Aim Trainer",
+      "desc": "Warm je aim en muissnelheid op met Grid Shot. Klik op snel verschijnende doelen over het raster om hand-oogcoördinatie te verbeteren voor FPS-games zoals Valorant en CS2."
+    },
+    "grid": {
+      "title": "Grid Snelheidstest",
+      "desc": "Train visuele scanning en perifeer lezen met Schulte-tabellen. Vind cijfers in oplopende volgorde op een 5x5 raster om je visuele zoeksnelheid te vergroten."
+    },
+    "peripheral-vision": {
+      "title": "Perifere Perceptietest",
+      "desc": "Train je perifere zicht en reactiesnelheid aan de zijkant. Spot en klik op doelen buiten het midden om je visuele focus te vergroten voor autorijden, sport en competitief gamen."
+    },
+    "peripheral": {
+      "title": "Perifere Perceptietest",
+      "desc": "Train je perifere zicht en reactiesnelheid aan de zijkant. Spot en klik op doelen buiten het midden om je visuele focus te vergroten voor autorijden, sport en competitief gamen."
+    },
+    "directional-reflex": {
+      "title": "Directionele Reflekstest",
+      "desc": "Test de reactiesnelheid van je toetsenbord en ruimtelijke besluitvorming. Druk op pijltoetsen die overeenkomen met snelle richtingsaanwijzingen om je cognitieve verwerking en reflexbehendigheid te verbeteren."
+    },
+    "direction": {
+      "title": "Directionele Reflekstest",
+      "desc": "Test de reactiesnelheid van je toetsenbord en ruimtelijke besluitvorming. Druk op pijltoetsen die overeenkomen met snelle richtingsaanwijzingen om je cognitieve verwerking en reflexbehendigheid te verbeteren."
+    },
+    "multi-stimulus": {
+      "title": "Multi",
+      "desc": "Test keuzereactietijd en selectieve aandacht. Verwerk meerdere visuele en audio-stimuli tegelijkertijd om je beslissingssnelheid in een fractie van een seconde te meten."
+    },
+    "sequence-reaction": {
+      "title": "Volgorde Reactietest",
+      "desc": "Combineer geheugen met snelle motorische reflexen. Volg snelgaande lichtvolgorden en voer snelle combo's uit om ritmische reactietijden en snelheid te trainen."
+    },
+    "whack-a-mole": {
+      "title": "Whack",
+      "desc": "Speel gratis de klassieke Whack-a-Mole online. Tik op tevoorschijn komende mollen zo snel mogelijk om reactiesnelheid, precisiekliks en motorische behendigheid te meten."
+    },
+    "color-switch": {
+      "title": "Kleurwissel Reflex Test",
+      "desc": "Train je kleurreactietijd en selectieve responssnelheid. Reageer onmiddellijk op kleurwisselingen en flitssignalen op het scherm zonder aarzelen."
+    },
+    "time-perception": {
+      "title": "Tijdsperceptie Test",
+      "desc": "Test je interne klok en temporele schatting. Houd de knop ingedrukt en laat los om doel-tijdsintervallen tot op de milliseconde nauwkeurig te produceren."
+    },
+    "go-no-go": {
+      "title": "Go / No",
+      "desc": "Meet responsremming met een Go/No-Go taak. Druk op bij groene Go-pogingen, rem af bij rode No-Go-pogingen en houd nauwkeurigheid en reactietijd bij."
+    },
+    "flanker": {
+      "title": "Flanker Test",
+      "desc": "Doe de Eriksen Flanker-taak online. Reageer op de middelste pijl en negeer congruente of incongruente flankers om je aandachtscontrole te meten."
+    },
+    "choice-reaction": {
+      "title": "Keuzereactietijd Test",
+      "desc": "Meet je keuzereactietijd over 2–4 gekleurde doelen. Klik zo snel mogelijk op het verlichte vakje en verbreek je gemiddelde RT in milliseconden."
+    },
+    "cps-test": {
+      "title": "CPS",
+      "desc": "Meet je klinktheid en kliksnelheid met onze gratis CPS-test. Test de modi van 1s, 5s, 10s, 30s en 60s voor normaal klikken, jitter klikken, butterfly klikken en drag klikken."
+    },
+    "click": {
+      "title": "CPS",
+      "desc": "Meet je klinktheid en kliksnelheid met onze gratis CPS-test. Test de modi van 1s, 5s, 10s, 30s en 60s voor normaal klikken, jitter klikken, butterfly klikken en drag klikken."
+    },
+    "speed-math": {
+      "title": "Hoofdrekenen Snelheidstest",
+      "desc": "Scherp je hoofdrekenen en rekensnelheid aan. Los snelle optellingen, aftrekkingen, vermenigvuldigingen en delingen op binnen de tijd om je rekenvaardigheid te verbeteren."
+    },
+    "math": {
+      "title": "Hoofdrekenen Snelheidstest",
+      "desc": "Scherp je hoofdrekenen en rekensnelheid aan. Los snelle optellingen, aftrekkingen, vermenigvuldigingen en delingen op binnen de tijd om je rekenvaardigheid te verbeteren."
+    },
+    "math-speed": {
+      "title": "Hoofdrekenen Snelheidstest",
+      "desc": "Scherp je hoofdrekenen en rekensnelheid aan. Los snelle optellingen, aftrekkingen, vermenigvuldigingen en delingen op binnen de tijd om je rekenvaardigheid te verbeteren."
+    },
+    "typing-speed": {
+      "title": "Typen Snelheidstest",
+      "desc": "Test woorden per minuut (WPM) en nauwkeurigheid met onze gratis typetest van 1 minuut. Benchmark je typesnelheid, houd foutenpercentages bij en verbeter blinde typen."
+    },
+    "typing": {
+      "title": "Typen Snelheidstest",
+      "desc": "Test woorden per minuut (WPM) en nauwkeurigheid met onze gratis typetest van 1 minuut. Benchmark je typesnelheid, houd foutenpercentages bij en verbeter blinde typen."
+    },
+    "word-accuracy": {
+      "title": "Woord Nauwkeurigheidstest",
+      "desc": "Verbeter de typeprecisie en elimineer tikfouten. Typ supersnelle promptwoorden met 100% nauwkeurigheid om foutloos typen onder tijdsdruk onder de knie te krijgen."
+    },
+    "words": {
+      "title": "Snelheidsleestest",
+      "desc": "Test je leessnelheid en woordherkenning. Meet woorden per minuut aan leesvaardigheid en snelle visuele identificatie met onze interactieve Speed Words-tool."
+    },
+    "word-speed": {
+      "title": "Snelheidsleestest",
+      "desc": "Test je leessnelheid en woordherkenning. Meet woorden per minuut aan leesvaardigheid en snelle visuele identificatie met onze interactieve Speed Words-tool."
+    },
+    "grid-selection": {
+      "title": "Grid Snelheidstest",
+      "desc": "Train visuele scanning en perifeer lezen met Schulte-tabellen. Vind cijfers in oplopende volgorde op een 5x5 raster om je visuele zoeksnelheid te vergroten."
+    },
+    "grid-speed": {
+      "title": "Grid Snelheidstest",
+      "desc": "Train visuele scanning en perifeer lezen met Schulte-tabellen. Vind cijfers in oplopende volgorde op een 5x5 raster om je visuele zoeksnelheid te vergroten."
+    },
+    "number-rush": {
+      "title": "Number Rush Snelheidstest",
+      "desc": "Test snelle getalherkenning en tik-snelheid. Zoek en klik op oplopende getallen zo snel als menselijkerwijs mogelijk is om je cognitieve verwerkingssnelheid te benchmarken."
+    },
+    "quick-sort": {
+      "title": "Quick Sort Snelheidsspel",
+      "desc": "Daag cognitieve categorisatie en snelle beslissingstijd uit. Sorteer binnenkomende items in de juiste categorieën onder strikte tijdsdruk."
+    },
+    "schulte-table": {
+      "title": "Schulte Tabel Test",
+      "desc": "Klassieke Schulte Tabel uitdaging. Klik door elkaar gehusselde getallen op volgorde aan in rasters van 3×3 tot 7×7. Train perifere visie, visuele zoeksnelheid en focus tegen de klok."
+    },
+    "aim-trainer": {
+      "title": "FPS Aim Trainer",
+      "desc": "Verbeter je muisnauwkeurigheid, target tracking en flicksnelheid voor FPS-games zoals Valorant, CS2 en Apex. Gratis 3D aim trainer direct in je webbrowser."
+    },
+    "aim": {
+      "title": "FPS Aim Trainer",
+      "desc": "Verbeter je muisnauwkeurigheid, target tracking en flicksnelheid voor FPS-games zoals Valorant, CS2 en Apex. Gratis 3D aim trainer direct in je webbrowser."
+    },
+    "rpg-reaction": {
+      "title": "Esports Gamer Reactietest",
+      "desc": "Test competitieve gevechtsreflexen, quick-time event (QTE) parry-timing en e-sports reactiesnelheden in milliseconde-nauwkeurige gesimuleerde gevechtsscenario's."
+    },
+    "endless-dodge": {
+      "title": "Endless Dodge Game",
+      "desc": "Test je ontwijkreflexen en ruimtelijke behendigheid. Navigeer je cursor door oneindige zwermen bewegende obstakels in dit intense reflex-survivalspel."
+    },
+    "stroop-drop": {
+      "title": "Stroop",
+      "desc": "Daag je remmingsvermogen uit met het interactieve Stroop Drop-spel. Los cognitieve interferentie op tussen vallende kleurenwoorden en hun inktkleur."
+    },
+    "target-tracking": {
+      "title": "Target Tracking Aim Trainer",
+      "desc": "Beheers vloeiende muistracking voor competitieve FPS-games. Oefen continue precisie-aim tegen ontwijkende bewegendedoelen met nul muisnetting."
+    },
+    "flick-shot": {
+      "title": "Flick Shot Aim Trainer",
+      "desc": "Train spiergeheugen en snap aiming met onze Flick Shot-trainer. Kalibreer snelle micro-aanpassingen en doelacquisitie voor tactische shooters."
+    },
+    "rhythm-tap": {
+      "title": "Rhythm Tap Game",
+      "desc": "Test je muzikale timing en milliseconden ritme-perceptie. Tik synchroon met oplopende BPM-tempo's en houd afwijkende latentiefouten bij."
+    },
+    "image-recognition": {
+      "title": "Beeldherkenningstest",
+      "desc": "Test visuele perceptie en snelle beelddiscriminatie. Identificeer subtiele visuele verschillen en match doelobjecten op hoge snelheid om observatievaardigheden te trainen."
+    },
+    "data-entry": {
+      "title": "Gegevensinvoer Nauwkeurigheidstest",
+      "desc": "Meet gegevensinvoersnelheid, alfanumerieke typeprecisie en foutpercentages. Test administratieve toetsaanslagen per uur (KPH) met realistische numerieke en code-benchmarks."
+    },
+    "data": {
+      "title": "Gegevensinvoer Nauwkeurigheidstest",
+      "desc": "Meet gegevensinvoersnelheid, alfanumerieke typeprecisie en foutpercentages. Test administratieve toetsaanslagen per uur (KPH) met realistische numerieke en code-benchmarks."
+    },
+    "pattern-matching": {
+      "title": "Patroonherkenningstest",
+      "desc": "Verbeter visuele patroonherkenning en non-verbale redenering. Match complexe matrixtypen en geometrische reeksen om visuele scherpte en analytisch denken te testen."
+    },
+    "precision-click": {
+      "title": "Precisie Kliktest",
+      "desc": "Scherp muisprecisie en micro-doelnauwkeurigheid aan. Klik op kleine, precieze doelen zonder te missen om fijne motoriek en cursornauwkeurigheid voor gaming te verfijnen."
+    },
+    "angle-estimation": {
+      "title": "Hoekschatting Test",
+      "desc": "Test je oog voor geometrie en ruimtelijke schatting. Raad graden van opgegeven hoeken nauwkeurig om visuele hoekacuiteit en ruimtelijk oordeel te benchmarken."
+    },
+    "color-match": {
+      "title": "Kleurmatching Test",
+      "desc": "Test kleurperceptie en subtiele tintdiscriminatie met onze Kleurmatching Test. Match doel-RGB-tinten onder tijdsdruk en benchmark visuele precisie."
+    },
+    "color-blindness": {
+      "title": "Kleurenblindheid Test",
+      "desc": "Ontdek Ishihara-stijl procedurele stippenplaten in een gratis educatief kleurenzienspel. Scherminstellingen beïnvloeden de resultaten; dit is geen diagnostische beoordeling."
+    },
+    "mental-rotation": {
+      "title": "Mentale Rotatie Test",
+      "desc": "Benchmark 3D ruimtelijke visualisatie en cognitieve rotatiesnelheid. Bepaal in realtime of complexe geometrische vormen identiek of gespiegeld zijn."
+    }
+  },
+  "homeContent": {
+    "whatIsReflextryTitle": "Wat is Reflextry?",
+    "whatIsReflextryDesc1": "Reflextry biedt meer dan 50 gratis browsergames voor reactietijd, geheugen, typen, klikken, nauwkeurigheid en aim-training. Elke test legt een score vast voor die taak, zodat je je eigen sessies kunt vergelijken.",
+    "whatIsReflextryDesc2": "Een browserscore omvat de effecten van je scherm, invoerapparaat, browser en testinstellingen. Het is geen directe meting van biologische latentie of een klinische beoordeling.",
+    "comparableSessionsTitle": "Maak je oefensessies vergelijkbaar",
+    "comparableStep1": "Kies elke keer dezelfde test, moeilijkheidsgraad en invoerapparaat.",
+    "comparableStep2": "Lees de scoreregels voordat je begint. Milliseconden, nauwkeurigheid, spanlengte en woorden per minuut beschrijven verschillende taken.",
+    "comparableStep3": "Herhaal verschillende pogingen en vergelijk trends in plaats van één ongewoon goede score.",
+    "comparableStep4": "Neem een pauze als je je moe of oncomfortabel voelt.",
+    "comparableFooterPre": "Lees onze ",
+    "testingMethodology": "testmethodologie",
+    "comparableFooterMid": " voor scoreformules en hardwarebeperkingen. Je ",
+    "personalStatistics": "persoonlijke statistieken",
+    "comparableFooterPost": " tonen je eigen vastgelegde voortgang, geen populatienormen.",
+    "betterScoreTitle": "Wat een betere score betekent",
+    "betterScoreDesc1Pre": "Oefenwinsten zijn het grootst bij getrainde taken; brede voordelen voor de dagelijkse cognitie zijn minder vastgesteld. Zie ",
+    "simonsReview": "de recensie van brain-training-onderzoek door Simons en collega's",
+    "betterScoreDesc1Post": ". Dit onderzoek valideert Reflextry niet als een medische of intelligentietest.",
+    "betterScoreDesc2Pre": "We publiceren geen geverifieerde wereldwijde benchmarkdataset. Gebruik je eigen herhaalde resultaten als oefenbaseline. Ga voor achtergrondinformatie en referenties naar ",
+    "theSciencePage": "de wetenschapspagina",
+    "betterScoreDesc2Post": ".",
+    "faqTitle": "Veelgestelde vragen",
+    "faq1Q": "Werkt hersentraining eigenlijk wel?",
+    "faq1A": "Oefenen kan de prestaties verbeteren op de taak die je traint. Een betere gamescore betekent niet dat je intelligentie verbetert, dat je veiliger gaat autorijden of dat cognitieve achteruitgang wordt voorkomen. Reflextry-tests zijn oefentools, geen klinische beoordelingen.",
+    "faq2Q": "Hoe vaak moet ik oefenen?",
+    "faq2A": "Begin met een korte sessie die in je schema past en stoppen als je moe of oncomfortabel bent. Vergelijk dezelfde test en moeilijkheidsgraad op hetzelfde apparaat. Er is geen gevalideerde Reflextry-trainingsdosis of gegarandeerd tijdlijn voor verbetering.",
+    "faq3Q": "Kan ik Reflextry gebruiken als esports-warm-up?",
+    "faq3A": "Je kunt de aim-, tracking- en reactiegames gebruiken als browsergebaseerde warm-up. Hun scores meten de prestaties in deze oefeningen, niet je rang of waarschijnlijke prestaties in een andere game.",
+    "faq4Q": "Is Reflextry gratis?",
+    "faq4A": "De tests zijn gratis te spelen in je browser. Je kunt een test starten zonder een account aan te maken.",
+    "aboutTheLab": "Over het lab",
+    "aboutTheLabDesc": "Wie Reflextry bouwt, onze methodologie en hoe je contact met ons kunt opnemen.",
+    "allGuides": "Alle handleidingen",
+    "allGuidesDesc": "Artikelen over geheugen, reflex, snelheid en nauwkeurigheid uit het Cognitive Journal.",
+    "faqCardTitle": "FAQ",
+    "faqCardDesc": "Trainingsfrequentie, privacy, scoring en veelgestelde vragen over het product.",
+    "whatReflextryMeasures": "Wat Reflextry meet",
+    "whatReflextryMeasuresDesc": "Gratis browsertests voor reactietijd, werkgeheugen, kiksnelheid, aim en nauwkeurigheid. Meet een baseline, oefen in korte sessies en volg de voortgang op de statistiekenpagina — geen account vereist voor de kerntools.",
+    "journalBadge": "Cognitief Laboratorium Journaal",
+    "journalTitle": "Meet eerst. Oefen kort. Lees de methode.",
+    "journalDesc": "Reflextry is een gratis browserlab voor reactietijd, werkgeheugen, snelheid en nauwkeurigheid. Scores zijn transparant (milliseconden, spans, nauwkeurigheid)—geen klinische diagnoses of verzonnen percentielen. Begin met een basislijn, train in sessies van 10–15 minuten en gebruik onze gidsen voor de wetenschap achter de cijfers.",
+    "scoreGuideTitle": "Hoe we tests scoren",
+    "scoreGuideDesc": "Wat milliseconden, spans en nauwkeurigheid betekenen—en wat we weigeren te beweren.",
+    "reactionTimeGuideTitle": "Wat is een goede reactietijd?",
+    "reactionTimeGuideDesc": "Realistische bereiken, hardware-ruis en hoe u uw eigen scores interpreteert.",
+    "choiceReactionGuideTitle": "Keuzereactie versus eenvoudige reactie",
+    "choiceReactionGuideDesc": "Waarom meer opties vertragen en hoe u elk afzonderlijk traint."
+  },
+  "categoryHub": {
+    "reflex": {
+      "heroTitle": "Reflextraining & reactiegames",
+      "heroSubtitle": "Meet je visuele en auditieve reactietijden tot op de milliseconde nauwkeurig.",
+      "heroDesc": "In de professionele sport, esports en autorijden is de refuxtijd cruciaal. Onze reflexsuite isoleert verschillende zintuiglijke paden — visueel, auditief en directioneel — zodat je je snelste reactietijden kunt achterhalen en kunt trainen om je latentie te verlagen.",
+      "whatItCovers": "Wat deze arena dekt",
+      "whatItCoversDesc": "Visuele en auditieve reactietests getimed in milliseconden — simpele reactie, geluidssignalen, rasterkliks, perifere doelen en keuzes met meerdere stimuli. Gemaakt om stimulus-naar-respons-latentie te isoleren voor oefening en warm-ups.",
+      "benefit1Title": "Visuele reflex",
+      "benefit1Desc": "Reageer op kleuren",
+      "benefit2Title": "Audioreflex",
+      "benefit2Desc": "Reageer op geluiden",
+      "benefit3Title": "Ruimtelijke reflex",
+      "benefit3Desc": "Reageer over het hele scherm"
+    },
+    "memory": {
+      "heroTitle": "Geheugentrainingsgames & cognitieve herroeping",
+      "heroSubtitle": "Versterk je werkgeheugencapaciteit, cijferspanwijdte en ruimtelijk geheugen.",
+      "heroDesc": "Het werkgeheugen is de mentale werkruimte die je gebruikt bij het opvolgen van instructies of het oplossen van problemen. Onze geheugengames maken gebruik van adaptieve moeilijkheidsgraad: naarmate je verbetert, wordt de uitdaging groter om je retentiegrenzen te verleggen.",
+      "whatItCovers": "Wat deze arena dekt",
+      "whatItCoversDesc": "Ruimtelijke patronen, numerieke reeksen, verbale herkenning en tracking van meerdere objecten. Gemaakt om je werkgeheugenbuffer te trainen via opeenvolgende uitdagingsniveaus.",
+      "benefit1Title": "Ruimtelijk geheugen",
+      "benefit1Desc": "Geheugen voor tegelindeling",
+      "benefit2Title": "Cijferspanwijdte",
+      "benefit2Desc": "Retentie van numeriek geheugen",
+      "benefit3Title": "Patroonreeks",
+      "benefit3Desc": "Uitbreidende flitspatronen"
+    },
+    "speed": {
+      "heroTitle": "Snelheidstests & snelheidsbenchmarks",
+      "heroSubtitle": "Verhoog je klikken per seconde (CPS), typsnelheid (WPM) en rekenvaardigheid.",
+      "heroDesc": "Snelheidsbenchmarks meten de rauwe doorvoer van je neuromusculaire systeem — hoeveel nauwkeurige acties je per tijdseenheid kunt uitvoeren via muis- en toetsenbordinvoer.",
+      "whatItCovers": "Wat deze arena dekt",
+      "whatItCoversDesc": "Muiskliksnelheid over meerdere intervallen, typwoorden per minuut, snel hoofdrekenen en visueel scannen op Schulte-tabellen.",
+      "benefit1Title": "Kliksnelheid",
+      "benefit1Desc": "Meet rauwe CPS",
+      "benefit2Title": "Typsnelheid",
+      "benefit2Desc": "Benchmark WPM",
+      "benefit3Title": "Hoofdrekenen",
+      "benefit3Desc": "Snelle berekeningen"
+    },
+    "accuracy": {
+      "heroTitle": "Aim- & precisietraining",
+      "heroSubtitle": "Verfijn de nauwkeurigheid van je micro-doelwitten, hand-oogcoördinatie en visuele schatting.",
+      "heroDesc": "Snelheid betekent niets zonder precisie. Onze nauwkeurigheidsmodules trainen je om te focussen en doelen zuiver te raken met minimale foutmarges.",
+      "whatItCovers": "Wat deze arena dekt",
+      "whatItCoversDesc": "Precisie micro-klikken, hoekschatting, patroonmatching, kleurendiscriminatie en nauwkeurigheid bij gegevensinvoer.",
+      "benefit1Title": "Precisie-aim",
+      "benefit1Desc": "Micro-doelwitkliks",
+      "benefit2Title": "Ruimtelijke hoeken",
+      "benefit2Desc": "Hoekschatting",
+      "benefit3Title": "Visuele match",
+      "benefit3Desc": "Patroonherkenning"
+    },
+    "gaming": {
+      "heroTitle": "Esports warm-up & aim-arena",
+      "heroSubtitle": "Kalibreer muis-flick-shots, doelwit-tracking en gevechtsreflexen voor competitieve games.",
+      "heroDesc": "Speciaal gebouwd voor gamers in Counter-Strike, Valorant, Apex Legends en Overwatch om mechanisch spiergeheugen op te warmen voordat ze aan ranked games beginnen.",
+      "whatItCovers": "Wat deze arena dekt",
+      "whatItCoversDesc": "Flick-shot-aim, continue doelwit-tracking, gevechtsreflexen in een split-second en het ontwijken van obstakelstromen.",
+      "benefit1Title": "Flick Shots",
+      "benefit1Desc": "Doelwitherkenning",
+      "benefit2Title": "Tracking",
+      "benefit2Desc": "Vloeiend doelwit volgen",
+      "benefit3Title": "Gevechtsreflex",
+      "benefit3Desc": "Snelle besluitvorming"
+    },
+    "exploreOther": "Ontdek andere categorieën",
+    "toolNameCol": "Toolnaam",
+    "bestForCol": "Beste voor (Toepassing)",
+    "coreBenefitCol": "Belangrijkste voordeel"
+  },
+  "allTools": {
+    "title": "Alle trainingstools",
+    "subtitle": "Ontdek onze volledige suite van cognitieve en psychomotorische tests. Filter op arena of blader hieronder om te beginnen met benchen.",
+    "filterAll": "Alle tools",
+    "filterMemory": "Geheugen",
+    "filterReflex": "Reflex",
+    "filterSpeed": "Snelheid",
+    "filterAccuracy": "Nauwkeurigheid",
+    "filterGaming": "Gaming",
+    "startTest": "Test starten"
+  },
+  "about": {
+    "identityProfile": "Identiteitsprofiel",
+    "heroTitle": "Over",
+    "heroTitleHighlight": "Ons",
+    "heroSubtitle": "Een no-nonsense platform voor het meten en verleggen van je mechanische grenzen. Gebouwd door competitieve spelers voor iedereen die scherper wil worden.",
+    "missionLabel": "Missieverklaring",
+    "missionTitle": "Onze Missie",
+    "missionDesc": "Onze missie is simpel: exact dezelfde high-level reactie- en cognitieve testtools die door professionele esporsteams worden gebruikt, voor iedereen toegankelijk maken. Verbetering begint met rauwe, eerlijke data. We hebben Reflextry gebouwd zodat jij je exacte baseline kunt vinden, kunt focussen en deze kunt verbreken.",
+    "originLabel": "Oorsprong",
+    "originTitle": "Ons Verhaal",
+    "originP1": "Reflextry begon als een klein zijproject: een browserscript om kliklatentie te meten zonder dat je een andere desktoptrainer hoeft te installeren. Die ene tool mondde uit in een vraag die we bleven horen—kunnen we geheugen, reflex, snelheid, nauwkeurigheid en aim-oefeningen op één plek samenbrengen, gratis te proberen, met scores die je zelf kunt bijhouden?",
+    "originP2": "We hebben de site gebouwd in Surat, India, als een klein team van twee personen. Elke module werkt als een echte interactieve test in de browser—geen downloadmuur, geen betaalde 'premium batterij'. Vooruitgang bewaar je in je sessie- en statisticstools, zodat je trends kunt zien zonder een account aan te maken voor de basistraining.",
+    "originP3": "Vandaag de dag wordt Reflextry gebruikt door gamers die zich opwarmen voor ranked matches, studenten die hun werkgeheugen trainen en nieuwsgierige bezoekers die hun reactietijd of kleurenvisie testen. We breiden de suite zorgvuldig uit: nieuwe tests worden pas toegevoegd als de score-regels helder zijn en de UI uitlegt wat het getal betekent.",
+    "coreValuesLabel": "Kernwaarden",
+    "valAccuracyTitle": "Nauwkeurigheid",
+    "valAccuracyDesc": "Geen onzin, gewoon nauwkeurige metingen en betrouwbare tests om je echte mechanische baseline te volgen.",
+    "valInnovationTitle": "Innovatie",
+    "valInnovationDesc": "Voortdurend nieuwe modules toevoegen om de absolute grenzen van de menselijke reactietijd te testen.",
+    "valAccessibilityTitle": "Toegankelijkheid",
+    "valAccessibilityDesc": "Professionele tests en prestatie-trackingtools, volledig gratis voor iedereen.",
+    "valUserFirstTitle": "Gebruiker Eerst",
+    "valUserFirstDesc": "We bouwen wat de community vraagt. Als een spelmodus niet werkt, lossen we het op.",
+    "whatWeOfferLabel": "Wat We Aanbieden",
+    "offerBrainTitle": "Brain Training Games",
+    "offerBrainDesc": "Pushe je werkgeheugen en patroonherkenning met cognitieve belasting die neuroplasticiteit stimuleert.",
+    "offerReflexTitle": "Reactie- & Snelheidstests",
+    "offerReflexDesc": "Meet je fysieke latentie tot op de milliseconde nauwkeurig in onze aim-, klik- en reactie-arena's.",
+    "offerTrackingTitle": "Voortgang bijhouden",
+    "offerTrackingDesc": "Log automatisch je sessiedata en zie je prestatiecurve na verloop van tijd stijgen.",
+    "offerLeaderboardTitle": "Prestaties & Leaderboards",
+    "offerLeaderboardDesc": "Ontgrendel rangen, grind dagelijkse uitdagingen en zie hoe je scoort tegen spelers over de hele wereld.",
+    "ctaTitle": "Klaar om je Baseline te Vinden?",
+    "ctaDesc": "Geen account nodig. Kies gewoon een tool, focus en test je snelheid.",
+    "ctaStart": "Start Reactietest",
+    "ctaExplore": "Verken alle tools"
+  },
+  "faqPage": {
+    "heroTitle": "Veelgestelde Vragen",
+    "heroSubtitle": "Alles wat je moet weten over de tests, trainingsvoordelen en scores.",
+    "catGettingStarted": "Aan de Slag",
+    "catBrainTraining": "Brain Training",
+    "catMemoryTraining": "Geheugentraining",
+    "catReactionTime": "Reactietijd",
+    "catSpeedAim": "Snelheid & Aim",
+    "catPrivacyScores": "Privacy & Scores",
+    "q1": "Wat is Reflextry precies?",
+    "a1": "Het is een gratis platform gebouwd om je rauwe mechanische vaardigheden te meten en te verbeteren—dingen zoals reactietijd, werkgeheugen en kliknauwkeurigheid. Geen downloads of aanmeldingen vereist. Kies gewoon een tool en test je grenzen.",
+    "q2": "Moet ik een account aanmaken?",
+    "a2": "Nee. Alles is direct volledig gratis en toegankelijk. We voegen later optionele accounts toe als je je voortgang wilt opslaan op verschillende apparaten of wilt concurreren op wereldwijde leaderboards, maar de basistools blijven altijd open.",
+    "q3": "Waar moet ik beginnen?",
+    "a3": "Als je shooters speelt, probeer dan de Aim Trainer of Reactietijdtest. Ben je hier voor cognitieve training, probeer dan Sequence Memory of Number Memory. We raden aan om er gewoon een paar uit te proberen om te zien waar je baseline ligt.",
+    "q4": "Helpt breintraining eigenlijk ergens voor?",
+    "a4": "Ja, in de neurowetenschappen heet dit 'near transfer' (nabije overdracht). Als je dagelijks oefent met het onthouden van getallenreeksen, past je brein zich fysiek aan (neuroplasticiteit) en word je beter in het vastthouden van informatie in je kortetermijngeheugen. Het is alsof je naar de sportschool gaat, maar dan voor je centrale zenuwstelsel.",
+    "q5": "Hoe lang duurt het voordat ik resultaat zie?",
+    "a5": "Als je 10 tot 20 minuten per dag grindt, zie je binnen 2 tot 3 weken je scores omhooggaan. Consistentie is vele malen belangrijker dan één keer per week een enorme sessie van 2 uur doen.",
+    "q6": "Hoe zorg ik dat ik dingen niet meteen weer vergeet?",
+    "a6": "De snelste truc is 'chunking'—items groeperen (zoals een telefoonnummer onthouden in blokken in plaats van losse cijfers). Daarnaast wist je brein dingen die het nutteloos acht, dus je moet actief focussen en herinnering forceren om het te laten beklijven.",
+    "q7": "Werkgeheugen versus langetermijngeheugen?",
+    "a7": "Het werkgeheugen is het RAM-geheugen van je brein: het onthoudt waar je nu aan denkt. Het langetermijngeheugen is de harde schijf. Onze tools trainen specifiek je RAM, zodat je meer dingen tegelijk kunt verwerken zonder de bal laten vallen.",
+    "q8": "Wat is een 'goede' reactietijd?",
+    "a8": "Het wereldwijde gemiddelde voor visuele reactietijd ligt rond de 200–250ms. Competitieve gamers klokken vaak tussen de 150–190ms. Alles onder de 150ms behoort tot de top 1% van menselijke capaciteiten.",
+    "q9": "Veroorzaken mijn monitor of muis input lag?",
+    "a9": "Ja. Een 60Hz-monitor voegt ongeveer 16ms framedelay toe in vergelijking met een 144Hz (~7ms) of 240Hz (~4ms) paneel. Draadloze muizen met slechte polling rates kunnen ook latentie toevoegen. Gebruik voor pure testnauwkeurigheid een gamingmuis en een display met een hoge verversingssnelheid.",
+    "q10": "Kan ik mijn CPS (Clicks Per Second) trainen?",
+    "a10": "Ja. Standaard klikken piekt meestal rond de 6–8 CPS. Technieken zoals jitter klikken of butterfly klikken kunnen je voorbij de 12–16 CPS helpen.",
+    "q11": "Wordt mijn score opgeslagen als ik de browser sluit?",
+    "a11": "Je scores en sessierecords worden lokaal opgeslagen in de lokale opslag van je browser. Ze blijven behouden bij herlaadbeurten op hetzelfde apparaat en in dezelfde browser.",
+    "q12": "Verkopen of verzamelen jullie mijn persoonlijke gegevens?",
+    "a12": "Nee. We volgen of verkopen geen persoonlijk identificeerbare gegevens. Alle meetwaarden van cognitieve en reactietests zijn van jou."
+  },
+  "contact": {
+    "heroTitle": "Neem",
+    "heroTitleHighlight": "Contact Op",
+    "heroSubtitle": "Vragen, functiesuggesties, partnerschapsverzoeken of bugrapporten? We lezen elk bericht.",
+    "generalInquiries": "Algemene Vragen",
+    "generalInquiriesDesc": "Voor algemene vragen, partnerschappen en pers.",
+    "technicalSupport": "Technische Ondersteuning",
+    "technicalSupportDesc": "Voor bugrapporten, apparaatproblemen of scorevragen.",
+    "feedbackTitle": "Feedback & Ideeën",
+    "feedbackDesc": "Stel een nieuwe module voor of verbeteringen voor bestaande games.",
+    "formName": "Jouw Naam",
+    "formNamePlaceholder": "bijv. Alex Chen",
+    "formEmail": "E-mailadres",
+    "formEmailPlaceholder": "jij@voorbeeld.nl",
+    "formSubject": "Onderwerp",
+    "formSubjectPlaceholder": "Hoe kunnen we helpen?",
+    "formMessage": "Bericht",
+    "formMessagePlaceholder": "Vertel ons wat je bezighoudt...",
+    "formSubmit": "Verstuur Bericht",
+    "formSending": "Verzenden...",
+    "successMsg": "Bericht succesvol verzonden!",
+    "errorMsg": "Verzenden mislukt. Probeer het opnieuw."
+  },
+  "leaderboard": {
+    "heroTitle": "Wereldwijd Leaderboard",
+    "heroSubtitle": "Neem het op tegen spelers over de hele wereld en volg je voortgang in alle Reflextry-uitdagingen. Bepaal je baseline en ga voor de top.",
+    "personalBests": "Persoonlijke Records",
+    "personalBestsDesc": "Je topscores lokaal",
+    "globalRankings": "Wereldwijde Ranglijst",
+    "globalRankingsDesc": "Wereldwijd vergelijken",
+    "trackProgress": "Volg Voortgang",
+    "trackProgressDesc": "Zie je verbeteringen",
+    "myScores": "Mijn Scores",
+    "global": "Wereldwijd",
+    "rank": "Rang",
+    "player": "Speler",
+    "score": "Score",
+    "date": "Datum",
+    "testNow": "Test Nu",
+    "noScoresYet": "Nog geen scores geregistreerd. Voltooi een test om je ranking te zien!"
+  },
+  "statistics": {
+    "heroTitle": "Persoonlijke Statistieken",
+    "heroSubtitle": "Volg je historische prestatiecurves, consistentiescores en persoonlijke records.",
+    "totalSessions": "Totaal aantal sessies",
+    "bestPerformance": "Beste Prestatie",
+    "averageScore": "Gemiddelde Score",
+    "scoreTrend": "Score Trend",
+    "noData": "Nog geen sessiedata geregistreerd. Speel een game om je statistieken te bekijken!",
+    "downloadData": "Exporteer Data",
+    "selectTest": "Selecteer Test",
+    "clearHistory": "Geschiedenis Wissen"
+  },
+  "challenges": {
+    "heroTitle": "Dagelijkse Uitdagingen",
+    "heroSubtitle": "Voltooi je dagelijkse cognitieve oefeningen om consistentie op te bouwen, streak-beloningen te verdienen en in level te stijgen.",
+    "streak": "Huidige Streak",
+    "days": "Dagen",
+    "todayChallenge": "Uitdaging van Vandaag",
+    "target": "Doel:",
+    "completed": "Voltooid!",
+    "startChallenge": "Start Uitdaging",
+    "streakReward": "Streak Multiplier",
+    "howItWorks": "Hoe Dagelijkse Uitdagingen Werken",
+    "howItWorksP1": "Elke 24 uur wordt er een nieuwe uitdaging gegenereerd. Behaal het doel om je dagelijkse streak te behouden.",
+    "howItWorksP2": "Consistente dagelijkse training stimuleert neuroplastische aanpassing en voorkomt dat je cognitief stilvalt."
+  },
+  "achievements": {
+    "heroTitle": "Prestaties & Trofeeën",
+    "heroSubtitle": "Ontgrendel prestigieuze medailles terwijl je reactiesnelheidsbarrières doorbreekt en cognitieve mijlpalen bereikt.",
+    "totalUnlocked": "Totaal Ontgrendeld",
+    "unlocked": "Ontgrendeld",
+    "locked": "Vergrendeld",
+    "rarityCommon": "Vaak",
+    "rarityRare": "Zeldzaam",
+    "rarityEpic": "Episch",
+    "rarityLegendary": "Legendarisch"
+  },
+  "categorySeo": {
+    "reflex": {
+      "sec0Heading": "Hoe reactietijd werkt",
+      "sec0Text": "Jouw reactietijd wordt bepaald door drie fasen: perceptie (het detecteren van de stimulus), cognitie (beslissen wat te doen) en motorische uitvoering (het uitvoeren van de actie). Elke fase kan onafhankelijk worden getraind. Perceptiesnelheid verbetert naarmate je meer bekend raakt met de stimulus: hoe vaker je oefent op een groen flitslicht, hoe sneller je visuele cortex dit herkent. Cognitieve verwerking versnelt wanneer besluitvorming automatisch wordt. Motorische uitvoering verbetert door myelinisatie van veelgebruikte neurale paden, wat letterlijk de snelheid van signaaloverdracht vergroot.",
+      "sec1Heading": "Factoren die de reactietijd beïnvloeden",
+      "sec1Text": "Verschillende variabelen beïnvloeden op een gegeven dag je reactietijd. Slaapgebrek kan 20–50 ms toevoegen aan je baseline — studies tonen aan dat 24 uur niet slapen de reactietijd meer aantast dan een bloedalcoholgehalte van 0,10%. Coffeïne verlaagt de reactietijd doorgaans met 10–20 ms gedurende 3–5 uur. Fysieke fitheid correleert met een snellere verwerkingssnelheid. Leeftijd speelt een rol: de reactietijd piekt tussen de 18 en 25 jaar en vertraagt daarna geleidelijk, hoewel training deze achteruitgang aanzienlijk kan compenseren.",
+      "sec2Heading": "Toepassingen in de echte wereld",
+      "sec2Text": "Een snelle reactietijd is cruciaal in het verkeer, waar een verschil van 100 ms bij 96 km/u neerkomt op 2,7 extra meter remweg. In competitieve esports behalen professionele Counter-Strike-spelers met reactietijden onder de 170 ms een meetbaar voordeel in aim duels. Atleten in sporten zoals tafeltennis, boksen en motorsport ondergaan gerichte reactietraining als onderdeel van hun conditioneringsprogramma."
+    },
+    "memory": {
+      "sec0Heading": "De wetenschap achter geheugentraining",
+      "sec0Text": "Onderzoek in de cognitieve neurowetenschap heeft aangetoond dat de capaciteit van het werkgeheugen niet vaststaat. Een baanbrekende studie gepubliceerd in PNAS toonde aan dat intensieve werkgeheugentraining kan leiden tot verbeteringen in fluïde intelligentie — het vermogen om te redeneren en nieuwe problemen op te lossen. Onze geheugenspellen maken gebruik van adaptieve moeilijkheidsgraad: naarmate je verbetert, schaal je de uitdaging op, waardoor je brein zich continu moet aanpassen door neuroplasticiteit.",
+      "sec1Heading": "Soorten geheugen die we trainen",
+      "sec1Text": "Onze Memory Arena richt zich op meerdere geheugensystemen. Visueel-ruimtelijk geheugen wordt getest via spellen zoals Visual Memory en Sequence Memory. Mentaal geheugen wordt uitgedaagd in onze Verbal Memory-test, waarbij je onderscheid moet maken tussen geziene en nieuwe woorden. Numeriek geheugen wordt op de proef gesteld in Number Memory, waar je steeds langere cijferreeksen reproduceert. Elk systeem spreekt andere hersengebieden aan.",
+      "sec2Heading": "Wie profiteert van geheugentraining?",
+      "sec2Text": "Studenten die zich voorbereiden op examens merken dat een sterker werkgeheugen direct samenhangt met een beter leesbegrip en wiskundig probleemoplossend vermogen. Ouderen gebruiken geheugentraining om een cognitieve reserve op te bouwen tegen leeftijdsgebonden achteruitgang. Competitieve gamers vertrouwen op ruimtelijk geheugen om vijandelijke posities en cooldowns tegelijkertijd bij te houden."
+    },
+    "speed": {
+      "sec0Heading": "CPS (Clicks Per Second) begrijpen",
+      "sec0Text": "De gemiddelde ongetrainde persoon klikt 5–7 CPS. Competitieve gamers halen regelmatig 10–14 CPS met technieken zoals jitter clicking of butterfly clicking. De vingerhandvaardigheid en fijne motoriek die ze ontwikkelen, zijn toepasbaar op elke precisietoepassing met de muis. Onze Click Speed-test meet jouw CPS over meerdere tijdsintervallen.",
+      "sec1Heading": "Typessnelheid en professionele impact",
+      "sec1Text": "De gemiddelde volwassene typt 40 WPM, terwijl professionele typisten 65–75 WPM halen. Het bereiken van 80–100 WPM elimineert typen als knelpunt in kenniswerk, waardoor vingers gelijke tred kunnen houden met je gedachten. Onze typetests meten zowel de bruto WPM als de netto nauwkeurigheid.",
+      "sec2Heading": "Snelheid van hoofdrekenen",
+      "sec2Text": "Onze Math Speed-test daagt numerieke verwerking en hoofdrekenen uit. Het vermogen om snelle berekeningen te maken doet een beroep op het werkgeheugen, procedurele regels en de verwerkingssnelheid. Regelmatige oefening verbetert je intuïtieve gevoel voor getallen."
+    },
+    "accuracy": {
+      "sec0Heading": "Visueel-ruimtelijke intelligentie",
+      "sec0Text": "Visueel-ruimtelijke intelligentie is je vermogen om visuele informatie waar te nemen, te analyseren en mentaal te manipuleren. Pattern Matching-tests evalueren je vermogen om regelmatigheden in visuele data te identificeren. Mental Rotation daagt je vermogen uit om 3D-objecten in je geestesoog te manipuleren.",
+      "sec1Heading": "Fijne motoriek en precisie",
+      "sec1Text": "Precision Click-tests meten je vermogen om nauwkeurig een cursor op kleine doelen te positioneren. Fijne motoriek hangt af van het cerebellum, de motorische cortex en proprioceptieve feedback. Regelmatige oefening bouwt spiergeheugen op zodat nauwkeurige bewegingen automatisch worden.",
+      "sec2Heading": "Kleurperceptie en schatting",
+      "sec2Text": "Onze Color Match- en Angle Estimation-tools trainen perceptuele kalibratie — de nauwkeurigheid waarmee je visuele eigenschappen beoordeelt. Hoekschatting ontwikkelt het ruimtelijk redeneren dat wordt gebruikt bij meetkunde en navigatie. Onmiddellijke feedback herkalibreert interne cognitieve modellen."
+    },
+    "gaming": {
+      "sec0Heading": "Mechanica van Aim Training",
+      "sec0Text": "Aim in FPS-games valt uiteen in duidelijke onderdelen. Tracking is het vermogen om je crosshair op een bewegend doel te houden. Flicking is de snelle klikbeweging van je crosshair naar plotselinge doelen. Grid click richt zich op het vermogen om snel doelen op verschillende afstanden opnieuw te verwerven.",
+      "sec1Heading": "De wetenschap van prestaties in esports",
+      "sec1Text": "Onderzoek gepubliceerd in PLOS ONE ontdekte dat professionele gamers aanzienlijk snellere visuomotorische verwerkingssnelheden vertonen in vergelijking met niet-gamers. Actieve videogamespelers vertonen een verbeterde toewijzing van aandacht en perceptuele besluitvorming die is ontwikkeld door doelbewust te oefenen.",
+      "sec2Heading": "Optimaal opwarmprotocol",
+      "sec2Text": "Een opwarming van 5–10 minuten verbetert de prestaties en vermindert het risico op blessures. Ga geleidelijk over van langzame, gecontroleerde bewegingen naar reacties op game-snelheid: begin met 2 minuten Grid Click, 3 minuten Aim Trainer, gevolgd door 2 minuten Flick Shot op maximale snelheid."
+    }
+  },
+  "categoryGuide": {
+    "reflex": {
+      "whatIsTitle": "Wat is reflex- en reactietraining?",
+      "whatIsDesc": "Reflextraining meet de totale verstreken tijd tussen de presentatie van een zintuiglijke prikkel en de daaropvolgende motorische respons. Hoewel aangeboren fysiologische factoren een rol spelen, helpt regelmatige training om twijfel en besluitvormingsmoeheid te verminderen, waardoor je centrale zenuwstelsel motorische neuronen direct laat vuren bij ontvangst van een specifiek signaal.",
+      "howToTitle": "Hoe verbeter je je reactietijd?",
+      "howToStep1Title": "Elimineer afleidingen",
+      "howToStep1Desc": "Concentreer je volledig op het middelste ankerpunt van je scherm.",
+      "howToStep2Title": "Gebruik optimale hardware",
+      "howToStep2Desc": "Zorg ervoor dat je een monitor met een hoge verversingssnelheid (144 Hz+) en een muis met lage latentie en een draad gebruikt.",
+      "howToStep3Title": "Blijf gehydrateerd en uitgerust",
+      "howToStep3Desc": "Slaapgebrek kan de reactietijd met meer dan 50 milliseconden verhogen.",
+      "howToStep4Title": "Oefen dagelijks",
+      "howToStep4Desc": "Slechts 5 minuten per dag reactietijd- en geluidsflextests kunnen je basislijn aanscherpen.",
+      "shouldPracticeTitle": "Moet ik dagelijks oefenen?",
+      "shouldPracticeDesc": "Ja. Frequent, korte trainingssessies conditioneren je brein om complexe cognitieve verwerking voor eenvoudige taken te omzeilen, en in plaats daarvan te vertrouwen op snellere, geautomatiseerde motorische paden.",
+      "comparisonTitle": "Vergelijking van reflekstools",
+      "row1Tool": "Reactietijd",
+      "row1BestFor": "Gamers, algemeen publiek",
+      "row1Benefit": "Meet de visuele reflexsnelheid in milliseconden als basislijn.",
+      "row2Tool": "Geluidsreflex",
+      "row2BestFor": "Atleten (atletiek/zwemmen)",
+      "row2Benefit": "Isoleert auditieve paden, die sneller verwerken dan visuele.",
+      "row3Tool": "Directionele reflex",
+      "row3BestFor": "Bestuurders, doelmannen",
+      "row3Benefit": "Traint de cognitieve vertaling van een richtingsaanwijzing naar een fysieke beweging.",
+      "benchmarksTitle": "Benchmarks & Wetenschappelijk bewijs",
+      "benchmarksDesc": "Volgens menselijke factoren-studies is de gemiddelde menselijke reactietijd ongeveer 250 milliseconden voor visuele prikkels en 170 milliseconden voor auditieve prikkels. Door actieve herhaling en neurologische aanpassing kunnen topatleten en gamers hun visuele reactietijden onder de 150 milliseconden krijgen. Een studie van het Journal of Sports Sciences concludeerde dat gespecialiseerde visueel-motorische training de reactielatentie in competitieve omgevingen aanzienlijk kan verminderen.",
+      "faqTitle": "Veelgestelde vragen",
+      "faq1Q": "Kun je je reactietijd daadwerkelijk trainen?",
+      "faq1A": "Hoewel je ruwe genetische reactietijd een harde limiet heeft, kun je je hersenen zeker trainen om die limiet consistent te benaderen. Onze tools helpen twijfel en besluitvormingsmoeheid te verminderen en trainen je zenuwstelsel om direct te reageren bij ontvangst van een specifiek signaal.",
+      "faq2Q": "Waarom is de audioreactietijd sneller dan de visuele?",
+      "faq2A": "Het kost minder tijd voordat een auditieve prikkel de hersenen bereikt dan een visuele. De auditieve cortex verwerkt geluid aanzienlijk sneller dan de visuele cortex complexe visuele informatie verwerkt. Dit is waarom een hardloper reageert op een startpistool in plaats van op een knipperend licht."
+    },
+    "memory": {
+      "whatIsTitle": "Wat is geheugentraining & cognitief terughalen?",
+      "whatIsDesc": "Werkgeheugen is de mentale werkruimte die wordt gebruikt om tijdelijk informatie vast te houden en te manipuleren. In tegenstelling tot het langetermijngeheugen heeft het werkgeheugen een beperkte capaciteit. Training met gevarieerde ophaaloefeningen conditioneert de hersenen om de cognitieve belasting te beheersen, patronen sneller te herkennen en informatie onder druk effectiever te onthouden.",
+      "howToTitle": "Hoe verbeter je je werkgeheugen?",
+      "howToStep1Title": "Gebruik chunking",
+      "howToStep1Desc": "Breek lange getallen of complexe patronen op in kleinere, hapklare stukjes.",
+      "howToStep2Title": "Visualiseer ruimtelijk",
+      "howToStep2Desc": "Associeer abstracte getallen of patronen met fysieke vormen of rastercoördinaten.",
+      "howToStep3Title": "Elimineer afleidingen",
+      "howToStep3Desc": "Het werkgeheugen vervalt snel als je focus zelfs maar voor één seconde verslapt.",
+      "howToStep4Title": "Traint progressief",
+      "howToStep4Desc": "Begin op lagere moeilijkheidsgraden totdat je nauwkeurigheid bij het terughalen consistent hoog is.",
+      "shouldPracticeTitle": "Moet ik dagelijks oefenen?",
+      "shouldPracticeDesc": "Ja. Consistente dagelijkse stimulatie is de sleutel tot het bevorderen van neuroplasticiteit, wat het vermogen van de hersenen is om zichzelf te reorganiseren door nieuwe neurale verbindingen te vormen.",
+      "comparisonTitle": "Vergelijking van geheugentools",
+      "row1Tool": "Getallengeheugen",
+      "row1BestFor": "Wiskundestudenten, programmeurs",
+      "row1Benefit": "Traint de fonologische lus van de hersenen om lange numerieke reeksen vast te houden.",
+      "row2Tool": "Visueel geheugen",
+      "row2BestFor": "Ontwerpers, architecten",
+      "row2Benefit": "Verbetert de visuospatiale schetspad voor ruimtelijke coördinatie.",
+      "row3Tool": "Reeksgeheugen",
+      "row3BestFor": "Muzikanten, algemene cognitie",
+      "row3Benefit": "Verbetert sequentiële patroonherkenning en focusuithoudingsvermogen.",
+      "benchmarksTitle": "Benchmarks & Wetenschappelijk bewijs",
+      "benchmarksDesc": "Klassiek werk van George A. Miller populariseerde het idee dat mensen vaak ruwweg 7±2 brokken in het onmiddellijke geheugen bewaren. Technieken zoals chunking verminderen hoeveel onafhankelijke items je moet opslaan. Onderzoek besproken via de National Institutes of Health (NIH) onderzoekt werkgeheugentraining. Houd op Reflextry je eigen cijferreeks en ophaaltrends bij onder dezelfde moeilijkheidsgraad.",
+      "faqTitle": "Veelgestelde vragen",
+      "faq1Q": "Kun je je geheugen daadwerkelijk verbeteren?",
+      "faq1A": "Ja. Hoewel je je langetermijngeheugencapaciteit niet zomaar kunt veranderen, kun je je werkgeheugen (kortetermijngeheugen) aanzienlijk verbeteren. Consistent oefenen met tools zoals onze Getallengeheugen- of Visueel Geheugen-tests traint je hersenen om informatie efficiënter in brokken te verdelen, waardoor het gemakkelijker wordt om meer data tegelijk te onthouden.",
+      "faq2Q": "Wat is de 'Chunking'-techniek?",
+      "faq2A": "Chunking is een mnemotechnische strategie waarbij je kleinere, individuele stukjes data groepeert in grotere, zinvolle eenheden (chunks). In plaats van de reeks 4-7-1-9-2-8 als zes afzonderlijke cijfers te onthouden, kan je brein ze bijvoorbeeld groeperen als 471 en 928, wat de cognitieve belasting effectief vermindert van zes items tot slechts twee."
+    },
+    "speed": {
+      "whatIsTitle": "Wat is snelheid & neuromusculaire snelheid?",
+      "whatIsDesc": "Snelheidstests meten je ruwe neuromusculaire doorvoer: hoe snel je centrale zenuwstelsel herhalende motorische signalen naar je vingers, polsen en handen kan sturen. High-speed prestaties vereisen een balans tussen het snel vuren van spiertrekkingen en precieze fysieke controle.",
+      "howToTitle": "Hoe verbeter je je klik- en typsnelheid?",
+      "howToStep1Title": "Optimaliseer de handpositie",
+      "howToStep1Desc": "Houd polsen enigszins verheven van je bureau om de vloeibaarheid te behouden.",
+      "howToStep2Title": "Leer alternatieve technieken",
+      "howToStep2Desc": "Oefen jitter clicking of butterfly clicking om fysieke limieten te doorbreken.",
+      "howToStep3Title": "Focus eerst op nauwkeurigheid",
+      "howToStep3Desc": "De typsnelheid daalt drastisch wanneer je tijd besteedt aan het corrigeren van typefouten.",
+      "howToStep4Title": "Warm vooraf op",
+      "howToStep4Desc": "Koude vingers hebben tragere transmissiesnelheden van motorische neuronen.",
+      "shouldPracticeTitle": "Moet ik dagelijks oefenen?",
+      "shouldPracticeDesc": "Ja. Korte snelheidssessies van 10 minuten bouwen snelle spiervezeluithoudingsvermogen op in handen en onderarmen zonder RSI te veroorzaken.",
+      "comparisonTitle": "Vergelijking van snelheidstools",
+      "row1Tool": "Kliksnelheid (CPS)",
+      "row1BestFor": "Minecraft PvP, MOBA-gamers",
+      "row1Benefit": "Verhoogt het ruwe uithoudingsvermogen en de snelheid van het vingerklikken.",
+      "row2Tool": "Typetest (WPM)",
+      "row2BestFor": "Schrijvers, programmeurs, gegevensinvoer",
+      "row2Benefit": "Meet en stimuleert woorden-per-minuut-snelheid en toetsaanslag-nauwkeurigheid.",
+      "row3Tool": "Snelheidswiskunde",
+      "row3BestFor": "Studenten, financieel analisten",
+      "row3Benefit": "Traint snelle rekenkundige verwerking onder tijdsdruk.",
+      "benchmarksTitle": "Benchmarks & Wetenschappelijk bewijs",
+      "benchmarksDesc": "De gemiddelde internetgebruiker typt ongeveer 40 woorden per minuut (WPM), terwijl professionele typisten en programmeurs regelmatig de 90 WPM overschrijden. Evenzo schommelen de gemiddelde kliksnelheden rond de 6 CPS, terwijl competitieve gamers 10-14 CPS bereiken. Volgens studies over menselijke motorische prestaties gepubliceerd op PubMed, is gerichte herhaling gecombineerd met directe feedback de meest effectieve manier om de snelheid van motorische acties permanent te verhogen.",
+      "faqTitle": "Veelgestelde vragen",
+      "faq1Q": "Hoe kan ik mijn CPS verhogen?",
+      "faq1A": "Het verhogen van je klikken per seconde vereist het ontwikkelen van specifieke snelle spiervezels in je vingers en onderarmen. Technieken zoals jitter clicking en butterfly clicking kunnen onmiddellijke verbeteringen opleveren, maar verbetering op de lange termijn vereist consistente, dagelijkse uithoudingstraining om stamina op te bouwen en vermoeidheid te voorkomen.",
+      "faq2Q": "Waarom zit mijn WPM (Words Per Minute) vast?",
+      "faq2A": "Plateaus in typsnelheid worden meestal veroorzaakt door een gebrek aan nauwkeurigheid, niet door een gebrek aan vingersnelheid. Als je voortdurend de backspace-toets gebruikt, zal je WPM aanzienlijk dalen. Onze Typetest en Woordnauwkeurigheidstools leggen de nadruk op precisie, wat na verloop van tijd op natuurlijke wijze leidt tot hogere ruwe snelheden."
+    },
+    "accuracy": {
+      "whatIsTitle": "Wat is nauwkeurigheids- en precisiemeting?",
+      "whatIsDesc": "Nauwkeurigheid vertegenwoordigt de afwijking tussen een beoogd doel en je daadwerkelijke fysieke uitvoering. Snelheid zonder precisie leidt tot kostbare fouten, verspilde inspanning en hoge foutpercentages. Het ontwikkelen van pixel-niveau nauwkeurigheid zorgt voor consistentie in scenario's onder hoge druk.",
+      "howToTitle": "Hoe verbeter je je nauwkeurigheidsscore?",
+      "howToStep1Title": "Doe rustig aan",
+      "howToStep1Desc": "Snelheid is een bijproduct van precisie. Beweeg in een tempo waarin je nul fouten maakt.",
+      "howToStep2Title": "Pas DPI/Gevoeligheid aan",
+      "howToStep2Desc": "Voor gamers zorgen lagere muisgevoeligheden vaak voor een grotere precisie in aim trainers.",
+      "howToStep3Title": "Focus op het centrum",
+      "howToStep3Desc": "Bij visuele taken zoals hoekschatting fixeer je je ogen op het centrale hoekpunt voordat je naar buiten scant.",
+      "howToStep4Title": "Adem",
+      "howToStep4Desc": "Haasten veroorzaakt spanning. Blijf fysiek ontspannen om micro-aanpassingen mogelijk te maken.",
+      "shouldPracticeTitle": "Moet ik dagelijks oefenen?",
+      "shouldPracticeDesc": "Ja, maar houd de sessies kort. Taken met hoge precisie zijn cognitief uitputtend. 5 tot 10 minuten per dag is voldoende om nauwkeurige neurale paden te versterken zonder vermoeidheidsgerelateerde fouten te veroorzaken.",
+      "comparisonTitle": "Vergelijking van nauwkeurigheidstools",
+      "row1Tool": "Precisieklikken",
+      "row1BestFor": "Grafisch ontwerpers, gamers",
+      "row1Benefit": "Verbetert de fijne motorische controle voor het klikken op kleine, sub-pixeldoelen.",
+      "row2Tool": "Gegevensinvoernauwkeurigheid",
+      "row2BestFor": "Programmeurs, typisten",
+      "row2Benefit": "Vermindert toetsaanslagfouten bij het typen van complexe syntax of alfanumerieke reeksen.",
+      "row3Tool": "Hoekschatting",
+      "row3BestFor": "Architecten, kunstenaars",
+      "row3Benefit": "Ontwikkelt cognitieve visueel-spatiale intelligentie en geometrische perceptie.",
+      "benchmarksTitle": "Benchmarks & Wetenschappelijk bewijs",
+      "benchmarksDesc": "Het concept van prioriteit geven aan nauwkeurigheid boven snelheid is een fundamenteel principe van motorisch leren, vaak samengevat in het militaire adagium 'slow is smooth, smooth is fast.' Volgens het Journal of Experimental Psychology zorgt puur focussen op precisie er aanvankelijk voor dat de hersenen de exacte neurale paden kunnen myeliniseren die nodig zijn, waardoor vertragingen in foutcorrectie bij hogere snelheden worden voorkomen.",
+      "faqTitle": "Veelgestelde vragen",
+      "faq1Q": "Moet ik eerst snelheid of nauwkeurigheid trainen?",
+      "faq1A": "Train altijd eerst de nauwkeurigheid. Wanneer je oefent met het snel maken van fouten, worden je hersenen letterlijk beter in het maken van fouten. Door 100% nauwkeurigheid in een langzaam tempo te erzwingen, garandeer je dat de bewegingspatronen die je opbouwt feilloos zijn. Zodra het patroon is ingesleten, volgt de snelheid vanzelf.",
+      "faq2Q": "Hoe helpt dit bij mijn typewerk?",
+      "faq2A": "De grootste flessenhals voor een hoge WPM (Words Per Minute) is de tijd die wordt besteed aan het indrukken van de backspace-toets. Door tools te gebruiken zoals Gegevensinvoernauwkeurigheid, bouw je vertrouwen op in je toetsaanslagen, wat de cognitieve aarzeling die gemiddelde typisten vertraagt aanzienlijk vermindert."
+    },
+    "gaming": {
+      "whatIsTitle": "Wat is esports aim- en warm-up-training?",
+      "whatIsDesc": "Competitief gamen vereist een mix van visuele reactie, micro-flick precisie en soepele doelvolgvaardigheid. Professionele esportspelers gebruiken toegewijde warm-uproutines voor competitieve wedstrijden om piek-cognitieve activatie te bereiken en misstappen in de early game te voorkomen.",
+      "howToTitle": "Hoe verbeter je je in-game aim?",
+      "howToStep1Title": "Begin langzaam",
+      "howToStep1Desc": "Focus op 100% nauwkeurigheid voordat je probeert je snelheid te verhogen.",
+      "howToStep2Title": "Gebruik de juiste tools",
+      "howToStep2Desc": "Gebruik Target Tracking voor soepel richten en Flick Shot voor snelle flick-reflexen.",
+      "howToStep3Title": "Handhaaf de juiste houding",
+      "howToStep3Desc": "Zorg ervoor dat je arm en pols goed worden ondersteund om vermoeidheid en blessures te voorkomen.",
+      "howToStep4Title": "Warm dagelijks op",
+      "howToStep4Desc": "Een routine van 10 minuten voordat je aan ranked matchmaking begint, maakt een wereld van verschil.",
+      "shouldPracticeTitle": "Moet ik dagelijks oefenen?",
+      "shouldPracticeDesc": "Ja. Consistente dagelijkse oefening van 15-20 minuten levert betere resultaten op voor neuroplasticiteit en spiergeheugen dan een enkele sessie van 2 uur per week.",
+      "comparisonTitle": "Vergelijking van gamingtools",
+      "row1Tool": "Aim Trainer",
+      "row1BestFor": "FPS-gamers (Valorant, CS2)",
+      "row1Benefit": "Verbetert het klikken op statische doelen en de algehele muisbesturing.",
+      "row2Tool": "Flick Shot",
+      "row2BestFor": "Sniper-rollen, snelle shooters",
+      "row2Benefit": "Bouwt snel spiergeheugen op voor plotselinge crosshair-snaps.",
+      "row3Tool": "Target Tracking",
+      "row3BestFor": "Apex Legends-, Overwatch-spelers",
+      "row3Benefit": "Verbetert soepele oogbewegingen en continue muisvolging.",
+      "benchmarksTitle": "Benchmarks & Wetenschappelijk bewijs",
+      "benchmarksDesc": "Competitieve spelers tonen vaak snellere sensorimotorische reacties dan casual gebruikers, en onderzoek dat is gecatalogiseerd door het National Center for Biotechnology Information (NCBI) koppelt actiegame-oefeningen aan winst in visuele aandacht en motorische controle. Behandel op Reflextry Flick Shot and Target Tracking als geïsoleerde mechanica-oefeningen: leg je eigen baselines vast op dezelfde muis en moeilijkheidsgraad, en let vervolgens over weken op een stabielere nauwkeurigheid en schonere tijd-tot-doel.",
+      "faqTitle": "Veelgestelde vragen",
+      "faq1Q": "Verbetert aim training daadwerkelijk mijn spel?",
+      "faq1A": "Ja. Aim trainers isoleren de fysieke mechanica van het gebruik van een muis, zoals tracking en flicking. Door deze te scheiden van gamesense, map awareness en strategie, kun je veel sneller ruwe mechanische spiergeheugen opbouwen dan wanneer je alleen de game speelt.",
+      "faq2Q": "Wat is de beste manier om op te warmen voor een ranked match?",
+      "faq2A": "Een gedegen pre-game warm-up moet 5-10 minuten duren en bestaan uit progressief snellere bewegingen. We raden deze volgorde aan: 2 minuten Aim Trainer om de basisnauwkeurigheid vast te stellen, 3 minuten Target Tracking voor soepele bewegingen en 2 minuten Flick Shot om je snelheidslimieten op te zoeken."
+    }
+  }
+}

@@ -3,15 +3,46 @@ import { Metadata } from "next";
 import { generateSEOMetadata } from "@/components/SEO";
 import { SEO_CONFIGS } from "@/config/seo-config";
 
-export function getToolMetadata(toolId: string, url: string): Metadata {
-    const config = SEO_CONFIGS[toolId as keyof typeof SEO_CONFIGS];
+const seoTranslationsCache: Record<string, Record<string, any>> = {};
 
-    if (!config) {
-        return {
-            title: "Tool Not Found | Reflextry",
-            description: "Free online cognitive test and reflex benchmark on Reflextry.",
-        };
+export function getToolSEOConfig(toolId: string, locale?: string): { title: string; description: string; keywords: string[] } {
+    if (locale && locale !== 'en') {
+        if (!seoTranslationsCache[locale]) {
+            try {
+                const fs = eval('require("fs")');
+                const path = eval('require("path")');
+                const transPath = path.join(process.cwd(), 'content', 'translations', locale, 'seo-config.json');
+                if (fs.existsSync(transPath)) {
+                    seoTranslationsCache[locale] = JSON.parse(fs.readFileSync(transPath, 'utf8'));
+                }
+            } catch (_) {}
+            if (!seoTranslationsCache[locale]) seoTranslationsCache[locale] = {};
+        }
+
+        const localized = seoTranslationsCache[locale]?.[toolId];
+        if (localized && localized.title && localized.description) {
+            return {
+                title: localized.title,
+                description: localized.description,
+                keywords: localized.keywords || (SEO_CONFIGS[toolId as keyof typeof SEO_CONFIGS]?.keywords ?? []),
+            };
+        }
     }
+
+    const fallback = SEO_CONFIGS[toolId as keyof typeof SEO_CONFIGS];
+    if (fallback) {
+        return fallback;
+    }
+
+    return {
+        title: "Brain Training Benchmark | Reflextry",
+        description: "Free online cognitive test and reflex benchmark on Reflextry.",
+        keywords: ["brain training", "reaction test"],
+    };
+}
+
+export function getToolMetadata(toolId: string, url: string, locale?: string): Metadata {
+    const config = getToolSEOConfig(toolId, locale);
 
     return generateSEOMetadata({
         title: config.title,
@@ -22,10 +53,31 @@ export function getToolMetadata(toolId: string, url: string): Metadata {
     });
 }
 
-export function getHomeMetadata(): Metadata {
+export function getHomeMetadata(locale?: string): Metadata {
+    const isEn = !locale || locale === 'en';
+    let title = "Brain Training Games & Reaction Time Benchmark | Reflextry";
+    let description = "Train cognitive skills with free brain training games. Test reaction time (ms), working memory, CPS click speed, typing WPM, and FPS aim precision online.";
+
+    if (!isEn) {
+        try {
+            const fs = eval('require("fs")');
+            const path = eval('require("path")');
+            const dictPath = path.join(process.cwd(), 'lib', 'i18n', 'dictionaries', `${locale}.json`);
+            if (fs.existsSync(dictPath)) {
+                const dict = JSON.parse(fs.readFileSync(dictPath, 'utf8'));
+                if (dict?.home?.heroTitle) {
+                    title = `${dict.home.heroTitle} ${dict.home.heroTitleHighlight || ''} | Reflextry`.trim();
+                }
+                if (dict?.home?.heroSubtitle) {
+                    description = dict.home.heroSubtitle;
+                }
+            }
+        } catch (_) {}
+    }
+
     return generateSEOMetadata({
-        title: "Brain Training Games & Reaction Time Benchmark | Reflextry",
-        description: "Train cognitive skills with free brain training games. Test reaction time (ms), working memory, CPS click speed, typing WPM, and FPS aim precision online.",
+        title,
+        description,
         keywords: [
             "reaction time test",
             "cps test",

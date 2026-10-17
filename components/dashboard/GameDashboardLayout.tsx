@@ -1,5 +1,8 @@
+"use client";
+
 import React, { ReactNode } from "react";
 import { Volume2, VolumeX } from "lucide-react";
+import { useTranslation } from "@/lib/i18n/context";
 
 interface GameDashboardLayoutProps {
   title: string;
@@ -26,6 +29,7 @@ export function GameDashboardLayout({
   onToggleSound,
   telemetryLogs,
 }: GameDashboardLayoutProps) {
+  const { t } = useTranslation();
   return (
     <div className="w-full bg-[#f8fafc] dark:bg-slate-800 text-slate-800 dark:text-white font-sans relative overflow-hidden py-8 px-4 sm:px-6 lg:px-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm mb-8">
       {/* Background Gradients and Effects */}
@@ -57,7 +61,7 @@ export function GameDashboardLayout({
             {/* Difficulty Selector */}
             <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 shadow-sm">
               <div className="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-3">
-                Difficulty Level
+                {t("game.difficultyLevel", "Difficulty Level")}
               </div>
               <div className="flex flex-col gap-2">
                 {difficultySelector}
@@ -67,7 +71,7 @@ export function GameDashboardLayout({
             {/* Stats Panel */}
             <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 shadow-sm">
               <div className="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-3">
-                Session Stats
+                {t("game.sessionStats", "Session Stats")}
               </div>
               
               <div className="grid grid-cols-2 gap-3 mb-4">
@@ -85,7 +89,7 @@ export function GameDashboardLayout({
               >
                 {!soundEnabled ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
                 <span className="text-[9px] font-mono uppercase tracking-widest">
-                  {!soundEnabled ? "Unmute" : "Sound On"}
+                  {!soundEnabled ? t("game.unmute", "Unmute") : t("game.soundOn", "Sound On")}
                 </span>
               </button>
             </div>
@@ -121,7 +125,7 @@ export function GameDashboardLayout({
               {/* Telemetry Log (Optional) */}
               {telemetryLogs && (
                 <div className="border-t border-slate-100 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-800/80 px-6 py-3 font-mono text-[9px] text-slate-600 dark:text-slate-400 overflow-hidden relative">
-                  <div className="absolute top-2 right-4 text-[8px] text-slate-400 tracking-wider">TELEMETRY_STREAM</div>
+                  <div className="absolute top-2 right-4 text-[8px] text-slate-400 tracking-wider">{t("game.telemetryStream", "TELEMETRY_STREAM")}</div>
                   <div className="h-20 overflow-y-auto flex flex-col gap-1 pr-2">
                     {telemetryLogs.map((log, idx) => (
                       <div key={idx} className={`${idx === 0 ? "text-violet-700 dark:text-violet-400 font-bold" : "opacity-50"} transition-opacity duration-200`}>

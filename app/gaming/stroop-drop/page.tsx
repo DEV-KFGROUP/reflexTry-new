@@ -1,6 +1,7 @@
+import { headers } from 'next/headers';
 import { Metadata } from 'next';
 import StroopDropClient from './StroopDropClient';
-import { getToolMetadata } from '@/lib/seo-utils';
+import { getToolMetadata, getToolSEOConfig } from '@/lib/seo-utils';
 import { SchemaInjector } from '@/components/SchemaInjector';
 import { generateToolStructuredData, generateBreadcrumbStructuredData, generateWebPageSchema } from '@/lib/structured-data';
 import { SEO_CONFIGS } from '@/config/seo-config';
@@ -8,12 +9,16 @@ import { ToolContent } from '@/components/ToolContent';
 import { getToolContent } from '@/lib/tool-content';
 
 export async function generateMetadata(): Promise<Metadata> {
-    return getToolMetadata('stroop-drop', '/gaming/stroop-drop');
+    const headersList = await headers();
+    const locale = headersList.get('x-locale') || 'en';
+    return getToolMetadata('stroop-drop', '/gaming/stroop-drop', locale);
 }
 
-export default function Page() {
-    const config = SEO_CONFIGS['stroop-drop'];
-    const content = getToolContent('stroop-drop', config.title);
+export default async function Page() {
+    const headersList = await headers();
+    const locale = headersList.get('x-locale') || 'en';
+    const config = getToolSEOConfig('stroop-drop', locale);
+    const content = getToolContent('stroop-drop', config.title, locale);
     const structuredData = generateToolStructuredData(
         'stroop-drop',
         config.title,

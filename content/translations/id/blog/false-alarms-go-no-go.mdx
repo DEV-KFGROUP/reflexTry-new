@@ -1,0 +1,79 @@
+---
+title: 'False Alarms pada Go/No-Go: Mengapa "Cepat" Bisa Berarti Gagal'
+description: >-
+  Cara membaca skor Go/No-Go dan inhibisi di Reflextry: false alarm, Go yang
+  terlewat, dan mengapa rata-rata Go RT tanpa akurasi menahan diri adalah metrik
+  semu.
+publishedAt: '2026-07-25'
+author:
+  name: Kaushik Rabadiya
+category: Reflex
+tags:
+  - go-no-go
+  - inhibition
+  - false-alarms
+  - training
+readingTime: 9 min read
+---
+Go/No-Go terlihat sederhana: tekan saat Go, tahan saat No-Go. Metrik yang pertama kali dilihat orang biasanya adalah waktu reaksi (Go reaction time / RT). Padahal, metrik yang benar-benar menunjukkan apakah Anda menguasai tugas tersebut sering kali adalah **false alarm**—menekan tombol saat Anda seharusnya diam.
+
+## Dua jenis kesalahan
+
+- **Miss (kelalaian):** Target Go muncul; Anda gagal menekan tombol tepat waktu.
+- **False alarm (komisi):** Target No-Go muncul; Anda tetap menekan tombol.
+
+Go RT yang memukau dengan banyak false alarm berarti Anda sedang menebak-nebak dan berjudi. Itu mungkin terasa cepat, tetapi itu bukanlah performa yang terkontrol.
+
+## Mengapa false alarm meningkat
+
+- Uji coba Go yang dominan menciptakan "bias menekan".
+- Kelelahan dan gangguan mengurangi kemampuan rem lebih besar daripada tenaga.
+- Target kecepatan tanpa batasan akurasi justru menghargai impulsivitas.
+- Stimulus yang terlihat mirip hingga akhir jendela kilatan memicu koreksi terlambat yang berujung pada penekanan tombol.
+
+## Cara melatih rem
+
+1. **Mulai dengan target akurasi.** Contoh: jaga agar false alarm berada di bawah ambang batas pribadi sebelum mengejar milidetik (ms).
+2. **Gunakan blok singkat.** Inhibisi akan menurun drastis jika Anda bermain dengan emosi.
+3. **Bernapaslah saat No-Go.** Respon menahan diri yang disengaja adalah satu repetisi latihan keterampilan.
+4. **Selingi dengan Flanker.** Tugas konflik juga menghukum respons impulsif yang mengabaikan bagian tengah—lihat [Penjelasan Go/No-Go dan Flanker](/blog/go-no-go-and-flanker-explained).
+5. **Periksa ulang reaksi sederhana secara terpisah.** Kecepatan deteksi dan inhibisi saling berkaitan tetapi tidak identik—[Reaksi Pilihan vs Sederhana](/blog/choice-reaction-vs-simple-reaction).
+
+## Membaca Go/No-Go Reflextry
+
+Perlakukan sesi ini sebagai pasangan: Go RT pada hit yang benar **dan** tingkat false alarm. Peningkatan ditunjukkan dengan:
+
+- Akurasi menahan diri yang stabil atau lebih baik, lalu
+- Go RT yang lebih rendah tanpa mengorbankan akurasi tersebut.
+
+Mode kesulitan yang meningkatkan frekuensi No-Go atau memperketat waktu akan mengubah eksperimen—catat modenya.
+
+## Analogi dunia nyata (tanpa berlebihan)
+
+Menyetir, game tembak-tembakan kompetitif, dan mengetik semuanya menghukum tindakan impulsif: pindah lajur tanpa mengecek, menembak membabi buta, mengirim pesan sebelum dibaca ulang. Go/No-Go adalah alat laboratorium yang bersih untuk melatih rem tersebut. Ini bukanlah diagnosis kepribadian.
+
+## Sesi mikro inhibisi 10 menit
+
+- 4 menit Go/No-Go — fokus utama pada akurasi
+- 3 menit Flanker — kesadaran antara kongruen vs inkongruen
+- 3 menit reaksi sederhana — deteksi bersih, klik awal minimal
+
+Berhenti jika false alarm melonjak. Lanjutkan kembali besok.
+
+## Kesimpulan
+
+Go yang cepat dengan banyak false alarm bukanlah sebuah penguasaan. Latih kemampuan menahan diri, baru kemudian pangkas waktunya. Berlatihlah di [Go/No-Go](/reflex/go-no-go) dan baca konteks penilaian di [Cara Kami Menilai Tes Reflextry](/blog/how-we-score-reflextry-tests).
+
+## Catatan mengenai desain "Predatory Go"
+
+Beberapa game kasual membuat hampir setiap uji coba menjadi Go dan menyelipkan sedikit No-Go. Desain tersebut menciptakan kebiasaan menekan yang kuat, yang cukup edukatif—tetapi itu juga berarti sesi awal Anda akan terlihat buruk. Harapkan adanya false alarm di awal. Kurva pembelajaran adalah proses di mana rem Anda akhirnya menyusul kecepatan.
+
+Jika suatu mode terasa sangat berat di sisi Go secara tidak adil, jadikan itu sebagai latihan rem alih-alih berhenti karena marah. Catat tingkat false alarm sebagai KPI utama Anda selama seminggu, baru kemudian perkenalkan kembali target kecepatan.
+
+## Kombinasi dengan tidur dan stimulan
+
+Kurang tidur meningkatkan kesalahan komisi bagi banyak orang. Kafein berlebih dapat membantu kewaspadaan hingga tangan gemetar dan antisipasi memicu penekanan dini. Jika grafik false alarm Anda melonjak setelah tidur larut malam, percayai grafik tersebut: pulihkan tidur Anda sebelum menyalahkan alatnya.
+
+## Membagikan skor kepada pelatih atau rekan setim
+
+Saat Anda membagikan hasil Go/No-Go, sertakan: tingkat kesulitan, rata-rata Go RT, jumlah atau tingkat false alarm, jumlah miss, perangkat yang digunakan, dan waktu pengujian. Tangkapan layar yang hanya berisi "Saya mendapat 210 ms" tanpa statistik penahan diri adalah hal yang tidak lengkap—dan para pelatih harus menanyakan bagian yang kurang tersebut.

@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import { headers } from "next/headers";
 import HomeClient from "./HomeClient";
 import { HeroSection } from "./HeroSection";
 import { HomeSEOContent } from "./HomeSEOContent";
@@ -10,7 +11,9 @@ import { generateWebsiteStructuredData, generateFAQPageSchema, generateBreadcrum
 import { HOME_FAQS } from "@/lib/site-faqs";
 
 export async function generateMetadata(): Promise<Metadata> {
-    return getHomeMetadata();
+    const headerList = await headers();
+    const locale = headerList.get("x-locale") || "en";
+    return getHomeMetadata(locale);
 }
 
 export default function Home() {

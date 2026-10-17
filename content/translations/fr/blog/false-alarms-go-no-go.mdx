@@ -1,0 +1,81 @@
+---
+title: >-
+  Fausses alarmes dans le test Go/No-Go : pourquoi « rapide » peut signifier
+  échec
+description: >-
+  Apprenez à interpréter les scores Go/No-Go et d'inhibition sur Reflextry :
+  fausses alarmes, Go manqués, et pourquoi un temps de réaction Go moyen sans
+  précision d'inhibition est une mesure illusoire.
+publishedAt: '2026-07-25'
+author:
+  name: Kaushik Rabadiya
+category: Reflex
+tags:
+  - go-no-go
+  - inhibition
+  - false-alarms
+  - training
+readingTime: 9 min read
+---
+Le test Go/No-Go a l'air simple : appuyez sur Go, ne faites rien sur No-Go. La métrique que tout le monde regarde en premier est le temps de réaction (RT) Go. Pourtant, celle qui indique réellement si vous avez maîtrisé la tâche est souvent la **fausse alarme** — appuyer alors que vous auriez dû rester immobile.
+
+## Les deux types d'erreurs
+
+- **Oubli (omission) :** Le signal Go est apparu ; vous n'avez pas appuyé à temps.
+- **Fausse alarme (commission) :** Le signal No-Go est apparu ; vous avez appuyé quand même.
+
+Un temps de réaction Go impressionnant combiné à une montagne de fausses alarmes signifie que vous anticipez et que vous jouez aux devinettes. Cela peut donner une impression de vitesse, mais ce n'est pas une performance maîtrisée.
+
+## Pourquoi les fausses alarmes augmentent
+
+- Les essais Go prédominants créent un « biais d'impulsion ».
+- La fatigue et la distraction réduisent l'efficacité des freins plus que celle du moteur.
+- Les objectifs de vitesse sans contrainte de précision récompensent l'impulsivité.
+- Des stimuli qui se ressemblent jusqu'à la fin de la fenêtre d'affichage invitent à des corrections tardives qui se traduisent par des pressions.
+
+## Comment entraîner le frein
+
+1. **Commencez par des objectifs de précision.** Exemple : maintenir les fausses alarmes sous un seuil personnel avant de chercher à gagner des millisecondes.
+2. **Utilisez des séries courtes.** L'inhibition s'effondre lorsque vous vous obstinez avec frustration.
+3. **Respirez sur les No-Go.** Une non-réponse délibérée est un exercice de musculation cognitive.
+4. **Alternez avec le test Flanker.** Les tâches de conflit sanctionnent également les réponses impulsives ignorant le centre — voir [Explication des tests Go/No-Go et Flanker](/blog/go-no-go-and-flanker-explained).
+5. **Vérifiez à nouveau la réaction simple séparément.** La vitesse de détection et l'inhibition sont liées mais pas identiques — [Réaction au choix vs réaction simple](/blog/choice-reaction-vs-simple-reaction).
+
+## Lire les résultats Go/No-Go de Reflextry
+
+considérez la session comme un duo : le RT Go sur les réussites **et** le taux de fausses alarmes. L'amélioration se traduit par :
+
+- Une précision de retenue stable ou améliorée, puis
+- Un RT Go plus bas sans sacrifier cette précision.
+
+Les modes de difficulté qui augmentent la fréquence des No-Go ou réduisent le temps de réaction modifient l'expérience — pensez à noter le mode utilisé.
+
+## Analogie avec le monde réel (sans exagération)
+
+La conduite, les jeux de tir compétitifs et la dactylographie sanctionnent tous les actions impulsives : changer de voie sans vérifier, tirer par anticipation, envoyer un message sans relecture. Le test Go/No-Go est un outil de laboratoire idéal pour travailler ce frein. Ce n'est pas un diagnostic de personnalité.
+
+## Une micro-session d'inhibition de 10 minutes
+
+- 4 min Go/No-Go — priorité à la précision
+- 3 min Flanker — conscience des stimuli congruents vs incongruents
+- 3 min de réaction simple — détection propre, clics anticipés minimisés
+
+Arrêtez-vous si les fausses alarmes augmentent en flèche. Reprenez demain.
+
+## Ce qu'il faut retenir
+
+Un Go rapide accompagné de nombreuses fausses alarmes n'est pas de la maîtrise. Entraînez la retenue, puis gagnez du temps. Entraînez-vous sur [Go/No-Go](/reflex/go-no-go) et lisez le contexte de notation dans [Comment nous notons les tests Reflextry](/blog/how-we-score-reflextry-tests).
+
+## Une note sur les conceptions « Go prédatrices »
+
+Certains jeux occasionnels font de presque chaque essai un Go tout en saupoudrant de rares No-Go. Cette conception crée une forte habitude d'appuyer, ce qui est formateur — mais cela signifie également que vos premières sessions auront l'air chaotiques. Attendez-vous à de nombreuses fausses alarmes au début. La courbe d'apprentissage correspond précisément au frein qui rattrape le moteur.
+
+Si un mode semble injustement axé sur les Go, considérez-le comme un entraînement au freinage plutôt que d'abandonner de frustration. Notez votre taux de fausses alarmes comme KPI principal pendant une semaine, puis réintroduisez les objectifs de vitesse.
+
+## Association avec le sommeil et les stimulants
+
+La dette de sommeil augmente les erreurs de commission pour de nombreuses personnes. Un supplément de caféine peut améliorer la vigilance jusqu'à ce que les tremblements et l'anticipation provoquent des pressions prématurées. Si votre graphique de fausses alarmes monte en flèche après une nuit blanche, faites-lui confiance : récupérez du sommeil avant de blâmer l'outil.
+
+## Partager ses scores avec un entraîneur ou un coéquipier
+
+Lorsque vous partagez un résultat Go/No-Go, incluez : la difficulté, la moyenne du RT Go, le nombre ou le taux de fausses alarmes, le nombre d'oublis, l'appareil utilisé et l'heure de la journée. Une simple capture d'écran « J'ai obtenu 210 ms » sans les statistiques de retenue est incomplète — et les entraîneurs devraient exiger les données manquantes.

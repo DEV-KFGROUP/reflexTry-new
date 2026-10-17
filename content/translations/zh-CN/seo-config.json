@@ -1,0 +1,954 @@
+{
+  "sequence-memory": {
+    "title": "序列记忆测试 - 图案回忆基准测试 | Reflextry",
+    "description": "使用我们免费的序列记忆测试，练习回忆不断扩展的空间亮光图案。阅读评分规则并对比你自己的每次测试表现。",
+    "keywords": [
+      "sequence memory test",
+      "sequence memory game",
+      "human benchmark sequence memory",
+      "simon game online free",
+      "simon says memory game",
+      "pattern sequence test",
+      "visual sequence memory test",
+      "play sequence memory online",
+      "sequence memory practice",
+      "sequence memory training",
+      "improve sequence memory",
+      "sequence memory world record",
+      "free sequence memory test",
+      "short term sequence memory",
+      "cognitive sequence test",
+      "corsi block tapping test online",
+      "spatial sequence recall game",
+      "sequence memory score average",
+      "brain training sequence memory"
+    ]
+  },
+  "number-memory": {
+    "title": "数字记忆测试 - 内存数字广度基准测试 | Reflextry",
+    "description": "通过我们免费的数字记忆测试来衡量工作记忆和数字广度容量。记住不断增加的数字序列并对你的回忆得分进行基准测试。",
+    "keywords": [
+      "number memory test",
+      "digit span test online",
+      "number memory human benchmark",
+      "forward digit span test",
+      "reverse digit span test",
+      "digit memory game",
+      "memorize numbers test",
+      "short term number memory",
+      "number memory practice",
+      "human benchmark number memory record",
+      "number recall test",
+      "sequence number memory",
+      "free digit span test online",
+      "how to improve number memory",
+      "brain training number recall",
+      "memory span test",
+      "wais digit span benchmark",
+      "working memory capacity test",
+      "average number memory score"
+    ]
+  },
+  "visual-memory": {
+    "title": "视觉记忆测试 - 空间网格回忆游戏 | Reflextry",
+    "description": "增强视觉保持力和空间图案识别能力。通过在不断扩展的矩阵上回忆闪烁的网格图案来测试你的视觉记忆。免费的人类基准测试工具。",
+    "keywords": [
+      "visual memory test",
+      "visual memory game",
+      "human benchmark visual memory",
+      "grid memory test free",
+      "short term visual memory test",
+      "visual working memory test",
+      "visual spatial memory test",
+      "improve visual memory",
+      "photographic memory test online",
+      "visual recall test",
+      "pattern memory test",
+      "visual memory practice",
+      "free visual memory game",
+      "eidetic memory test",
+      "visual cognition test",
+      "matrix memory test",
+      "remember the squares game",
+      "visual pattern recognition test"
+    ]
+  },
+  "color-memory": {
+    "title": "颜色记忆测试 - 视觉序列回忆游戏 | Reflextry",
+    "description": "挑战你的色彩记忆和视觉注意力。通过我们免费的颜色记忆测试，记住快速切换的颜色序列并训练认知灵活性。",
+    "keywords": [
+      "color memory test",
+      "color recall test",
+      "color memory game",
+      "simon color memory game",
+      "short term color memory",
+      "memorize colors test",
+      "visual color memory",
+      "sequence color memory test",
+      "online color memory game",
+      "color brain training",
+      "simon says color test",
+      "color sequence practice",
+      "exact color recall",
+      "color memory human benchmark",
+      "chromatic memory test",
+      "hue retention game",
+      "visual color span benchmark"
+    ]
+  },
+  "shape-memory": {
+    "title": "形状记忆测试 - 几何图案回忆 | Reflextry",
+    "description": "训练几何形状辨别能力和空间记忆。记住抽象的形状和符号，以增强非语言视���推理和专注力。",
+    "keywords": [
+      "shape memory test",
+      "shape matching memory game",
+      "geometric shape memory test",
+      "visual shape memory",
+      "remember the shape test",
+      "shape recall game",
+      "shape sequence memory",
+      "cognitive shape test",
+      "3d shape memory test",
+      "pattern and shape memory",
+      "free shape memory game online",
+      "polygon memory test",
+      "visual reasoning shapes",
+      "abstract shape recall",
+      "spatial shape memory test"
+    ]
+  },
+  "symbol-memory": {
+    "title": "符号记忆测试 - 关联图标回忆 | Reflextry",
+    "description": "提升抽象模式识别和联想记忆能力。通过匹配神秘符号和图标，来增强你的精神专注力和视觉处理速度。",
+    "keywords": [
+      "符号记忆测试",
+      "外星符号记忆游戏",
+      "视觉符号测试",
+      "抽象符号记忆",
+      "符号回忆测试",
+      "人类基准符号记忆",
+      "短期符号记忆",
+      "符号匹配记忆测试",
+      "符号记忆游戏",
+      "模式符号记忆",
+      "认���符号测试",
+      "奇怪符号记忆",
+      "图标记忆游戏",
+      "符号数字模态测试在线",
+      "字形回忆测试"
+    ]
+  },
+  "word-recall": {
+    "title": "单词回忆记忆测试 - 言语保持游戏 | Reflextry",
+    "description": "评估你的言语记忆保持能力和词汇识别能力。测试单词是新出现的还是之前见过的，以衡量短期语言记忆。",
+    "keywords": [
+      "单词回忆测试",
+      "言语记忆测试",
+      "免费单词记忆测试",
+      "人类基准言语记忆",
+      "短期单词回忆",
+      "记忆测试单词列表",
+      "即时单词回忆测试",
+      "列表学习单词测试",
+      "单词回忆大脑游戏",
+      "记忆游戏单词",
+      "单词序列回忆",
+      "在线免费单词回忆测试",
+      "回忆单词记忆练习",
+      "认知单词回忆",
+      "已见或新单词测试",
+      "言语记忆广度测试",
+      "听觉言语学习测试在线"
+    ]
+  },
+  "card-match": {
+    "title": "翻牌配对记忆游戏 - 专注力对对碰 | Reflextry",
+    "description": "通过我们的免费在线翻牌配对记忆游戏训练空间记忆和视觉模式回忆。翻开卡片，用最少的步数完成配对，挑战计时极限。",
+    "keywords": [
+      "翻牌配对记忆游戏",
+      "在线记忆卡片游戏",
+      "配对卡片测试",
+      "翻卡记忆游戏",
+      "对对碰卡片游戏",
+      "玩卡片配对",
+      "图片卡片记忆测试",
+      "经典记忆卡片游戏",
+      "免费记忆配对游戏",
+      "卡片专注力游戏",
+      "大脑训练卡片匹配",
+      "视觉卡片匹配",
+      "在线培尔曼主义游戏",
+      "免费记忆配对对子"
+    ]
+  },
+  "chimp-test": {
+    "title": "黑猩猩测试 - 工作记忆基准游戏 | Reflextry",
+    "description": "你比黑猩猩更聪明吗？参加著名的黑猩猩测试来测量你的视觉空间工作记忆。在数字网格消失前记住它们的位置。",
+    "keywords": [
+      "黑猩猩测试",
+      "人类基准黑猩猩测试",
+      "黑猩猩记忆测试",
+      "黑猩猩记忆游戏",
+      "你比黑猩猩聪明吗测试",
+      "在线猴子记忆测试",
+      "黑猩猩测试世界纪录",
+      "玩黑猩猩测试",
+      "人类对黑猩猩记忆测试",
+      "黑猩猩大脑测试",
+      "数字记忆猴子游戏",
+      "灵长类动物记忆测试",
+      "黑猩猩测试练习",
+      "阿尤姆黑猩猩记忆测试",
+      "空间工作记忆测试"
+    ]
+  },
+  "verbal-memory": {
+    "title": "言语记忆测试 - 单词识别基准 | Reflextry",
+    "description": "通过我们的免费言语记忆测试来测试言语工作记忆。通过识别已见过与新出现的单词，来衡量语言保留能力和认知处理速度。",
+    "keywords": [
+      "言语记忆测试",
+      "人类基准言语记忆",
+      "言语记忆游戏",
+      "短期言语记忆测试",
+      "提升言语记忆",
+      "言语记忆练习",
+      "言语工作记忆测试",
+      "言语记忆广度测试",
+      "人类基准言语",
+      "言语回忆测试",
+      "在线免费言语记忆测试",
+      "单词记忆测试",
+      "言语认知测试",
+      "已见或新单词测试",
+      "词汇保留��试"
+    ]
+  },
+  "object-tracking": {
+    "title": "多目标追踪 - 视觉专注力测试 | Reflextry",
+    "description": "测试动态视觉注意力和空间追踪能力。在这项有科学依据的认知测试中，从干扰项中追踪多个移动的目标球。",
+    "keywords": [
+      "目标追踪测试",
+      "多目标追踪测试",
+      "视觉目标追踪游戏",
+      "human benchmark 目标追踪",
+      "眼动追踪记忆测试",
+      "多目标追踪认知测试",
+      "目标追踪练习",
+      "视觉追踪测试在线",
+      "移动目标追踪游戏",
+      "3D 目标追踪测试",
+      "提高视觉追踪",
+      "MOT 认知测试",
+      "视觉注意力追踪测试"
+    ]
+  },
+  "n-back": {
+    "title": "N-Back 测试 - 工作记忆容量基准测试 | Reflextry",
+    "description": "通过经典的 N-Back 任务训练工作记忆。匹配 N 步之前出现的字母，追踪命中率和准确度，挑战从 1-back 到 3-back。",
+    "keywords": [
+      "n-back 测试",
+      "n back 工作记忆",
+      "2-back 测试在线",
+      "3-back 认知测试",
+      "双 n-back 免费",
+      "工作记忆 n-back 游戏",
+      "n-back 大脑训练",
+      "持续表现 n-back",
+      "字母匹配记忆测试",
+      "n-back 准确度测试",
+      "认知 n-back 基准",
+      "human benchmark n-back",
+      "提高工作记忆 n-back"
+    ]
+  },
+  "reaction-time": {
+    "title": "反应时间测试 - 毫秒级基准测试 (ms) | Reflextry",
+    "description": "测试并提升你的毫秒级视觉反应时间。进行我们的免费毫秒级反应测试，与职业玩家进行基准对比，并追踪你的反射能力进度。",
+    "keywords": [
+      "反应时间测试",
+      "反应测试 ms",
+      "human benchmark 反应时间",
+      "绿灯反应时间测试",
+      "屏幕变绿时点击测试",
+      "平均反应时间测试",
+      "瓦罗兰特反应时间测试",
+      "F1 反应时间测试在线",
+      "CS2 反应测试",
+      "反应时间毫秒基准",
+      "快速反应测试在线",
+      "免费测试我的反射",
+      "司机反应时间测试在线",
+      "144hz 反应时间测试",
+      "240hz 反应时间测试",
+      "显示器输入延迟测试",
+      "如何提高反应时间",
+      "职业玩家反应时间平均值"
+    ]
+  },
+  "sound-reaction": {
+    "title": "听觉反应时间测试 - 声音反射 (ms) | Reflextry",
+    "description": "以毫秒为单位测量你的听觉反应速度。通过即时音频提示测试听觉反射，并对比你的声音反应与视觉反应时间。",
+    "keywords": [
+      "声音反射测试",
+      "音频反应时间测试",
+      "音频反射测试",
+      "听觉反应时间",
+      "声音反应游戏",
+      "human benchmark ���频反应",
+      "听觉反应时间测试",
+      "声音反射练习",
+      "蜂鸣声反应测试",
+      "快速声音点击测试",
+      "声学反射测试在线",
+      "基于声音的反应时间",
+      "听觉反射速度",
+      "听觉与视觉反应时间",
+      "耳朵反应测试 ms"
+    ]
+  },
+  "grid-shot": {
+    "title": "Grid Shot 瞄准训练器 - 鼠标精准反射 | Reflextry",
+    "description": "通过 Grid Shot 热身你的瞄准和鼠标速度。点击网格中快速出现的目标，提升针对 Valorant 和 CS2 等 FPS 游戏的手眼协调能力。",
+    "keywords": [
+      "网格反射测试",
+      "grid shot 瞄准训练器",
+      "瞄准网格测试",
+      "网格点击反应",
+      "反射网格游戏",
+      "human benchmark 网格",
+      "网格点击速度测试",
+      "快速网格点击器",
+      "反应网格练习",
+      "浏览器版瓦罗兰特 gridshot",
+      "FPS 瞄准热身网格",
+      "方块反射测试",
+      "网格敲击速度",
+      "blazepod 反应在线",
+      "手眼协调网格测试"
+    ]
+  },
+  "peripheral-vision": {
+    "title": "周边视力测试 - 视野感知能力 | Reflextry",
+    "description": "训练周边视觉感知与侧向反应速度。通过捕捉并点击偏离中心的刺激源，扩大视觉焦点，适用于驾驶、体育运动和竞技游戏。",
+    "keywords": [
+      "周边反射测试",
+      "在线周边视力测试",
+      "周边反应游戏",
+      "视野反射测试",
+      "周边感知测试",
+      "侧向视觉反应测试",
+      "周边瞄准训练器",
+      "点击周边目标",
+      "宽屏反射测试",
+      "周边���力点击测试",
+      "偏离中心反射测试",
+      "空间意识反射",
+      "运动周边视力测试",
+      "电竞周边感知"
+    ]
+  },
+  "directional-reflex": {
+    "title": "方向反射测试 - 方向键速度游戏 | Reflextry",
+    "description": "测试键盘响应速度与空间决策能力。通过按下与快速方向提示相匹配的方向键，提升认知处理能力与反射灵敏度。",
+    "keywords": [
+      "方向反射测试",
+      "箭头反应测试",
+      "方向点击游戏",
+      "键盘方向反射",
+      "箭头键反应游戏",
+      "空间方向反射",
+      "快速方向测试",
+      "认知方向测试",
+      "箭头匹配反射",
+      "左右反应测试",
+      "方向速度测试",
+      "快速箭头按下反射",
+      "选择方向反应测试"
+    ]
+  },
+  "multi-stimulus": {
+    "title": "多重刺激反应测试 - 选择反应时游戏 | Reflextry",
+    "description": "测试选择反应时间与选择性注意力。同时处理多个视觉和听觉刺激，测量电光石火间的决策速度。",
+    "keywords": [
+      "多重刺激反应测试",
+      "在线选择反应时间测试",
+      "多重刺激反射游戏",
+      "复杂反应时间测试",
+      "认知刺激测试",
+      "多任务反射测试",
+      "席克定律反应测试",
+      "唐德斯选择反应测试",
+      "多重刺激人类基准测试",
+      "可变反应时间测试",
+      "复杂反射训练器",
+      "决策反应基准测试"
+    ]
+  },
+  "sequence-reaction": {
+    "title": "序列反应测试 - 快速连击反射 | Reflextry",
+    "description": "将记忆提取与快速运动反射相结合。跟随快节奏的灯光序列并执行快速连击，训练有节奏的响应时间和速度。",
+    "keywords": [
+      "序列反应测试",
+      "西蒙说反应时间",
+      "模式反射测试",
+      "序列反应时间任务",
+      "连续点击测试",
+      "反射序列游戏",
+      "记忆与反应测试",
+      "快速序列点击器",
+      "认知序列反应",
+      "快速序列测试",
+      "连续轻击测试",
+      "快速连击反射游戏"
+    ]
+  },
+  "whack-a-mole": {
+    "title": "在线打地鼠 - 手眼反应游戏 | Reflextry",
+    "description": "免费在线玩经典打地鼠游戏。尽可能快地点击冒出来的地鼠，测量反应速度、精准点击与运动灵敏度。",
+    "keywords": [
+      "在线打地鼠",
+      "免费玩打地鼠",
+      "打地鼠反应测试",
+      "虚拟打地鼠",
+      "点击地鼠游戏",
+      "鼠标打地鼠",
+      "打地鼠反射游戏",
+      "极速打地鼠",
+      "打地鼠瞄准",
+      "浏览器打地鼠游戏",
+      "弹出反射测试",
+      "目标弹出反应游戏",
+      "手眼协调游戏"
+    ]
+  },
+  "color-switch": {
+    "title": "颜色切换反应测试 - 视觉反应时间 | Reflextry",
+    "description": "训练颜色反应时间和选择性反应速度。面对屏幕颜色突变和闪烁信号，立即做出反应，决不犹豫。",
+    "keywords": [
+      "颜色切换反应测试",
+      "颜色改变反射测试",
+      "红绿反应测试",
+      "红绿灯反应时间",
+      "屏幕颜色改变测试",
+      "快速颜色点击测试",
+      "人类基准颜色改变",
+      "视觉颜色切换反射",
+      "颜色闪烁反应",
+      "简单颜色反应时间",
+      "颜色改变点击器",
+      "视觉刺激颜色测试"
+    ]
+  },
+  "time-perception": {
+    "title": "时间感知测试 - 内在时钟基准 | Reflextry",
+    "description": "测试你的内在时钟和时间估算能力。按住并释放按钮，精准把控目标时间间隔，精确到毫秒。",
+    "keywords": [
+      "时间感知测试",
+      "人类基准时间感知",
+      "内在时钟测试",
+      "时间估算测试",
+      "猜时间测试",
+      "时间感知游戏",
+      "时间准确度测试",
+      "认知时间感知",
+      "秒数估算测试",
+      "时间持续测试",
+      "在线盲掐时间测试",
+      "时间感知测试",
+      "内在起搏器基准"
+    ]
+  },
+  "go-no-go": {
+    "title": "Go / No-Go 测试 - 冲动与反应控制 | Reflextry",
+    "description": "通过 Go/No-Go 任务测量反应抑制能力。绿色 Go 信号时点击，红色 No-Go 信号时克制，追踪准确率与反应时间。",
+    "keywords": [
+      "go no go 测试",
+      "在线 go nogo 任务",
+      "抑制控制测试",
+      "反应抑制游戏",
+      "go no-go 反应测试",
+      "冲动控制认知测试",
+      "绿红通行停止测试",
+      "执行功能 go nogo",
+      "虚报抑制测试",
+      "持续性操作 go nogo",
+      "大脑训练抑制"
+    ]
+  },
+  "flanker": {
+    "title": "Flanker 测试 - 选择性注意力基准 | Reflextry",
+    "description": "在线进行埃里克森 Flanker 任务（Eriksen Flanker）。通过对中央箭头做出反应，同时忽略一致或不一致的干扰项，来测量注意力控制能力。",
+    "keywords": [
+      "在线 flanker 任务",
+      "埃里克森 flanker 测试",
+      "选择性注意力测试",
+      "箭头 flanker 游戏",
+      "不一致 flanker 任务",
+      "注意力冲突测试",
+      "认知控制 flanker",
+      "中央箭头反应测试",
+      "执行注意力基准",
+      "flanker 效应免费测试"
+    ]
+  },
+  "choice-reaction": {
+    "title": "选择反应时间测试 - 多选 RT (ms) | Reflextry",
+    "description": "测量 2-4 个彩色目标的选择反应时间。以最快速度点击亮起的方块，突破你的平均毫秒 (ms) 反应时间。",
+    "keywords": [
+      "选择反应时间测试",
+      "多选 RT 测试",
+      "4选择反应时间",
+      "彩色方块反应测试",
+      "选择性反应时间",
+      "选择 RT 毫秒基准",
+      "复杂反应时间在线",
+      "多重刺激反应测试",
+      "认知选择反应",
+      "人类基准选择反应"
+    ]
+  },
+  "cps-test": {
+    "title": "CPS 测试 - 每秒点击次数速度基准测试 | Reflextry",
+    "description": "使用我们的免费 CPS 测试来测量您的点击速度。测试 1秒、5秒、10秒、30秒和 60秒 模式，支持普通点击、抖动点击（jitter clicking）、蝴蝶点击（butterfly clicking）和拖拽点击（drag clicking）。",
+    "keywords": [
+      "cps测试",
+      "每秒点击次数测试",
+      "点击速度测试",
+      "1秒cps测试",
+      "5秒cps测试",
+      "10秒cps测试",
+      "30秒点击测试",
+      "60秒点击速度测���",
+      "抖动点击测试",
+      "蝴蝶点击测试",
+      "拖拽点击测试",
+      "我的世界pvp cps测试",
+      "kohi点击测试",
+      "空格键计数器测试",
+      "鼠标连点器速度测试",
+      "cps人类基准",
+      "最快点击速度纪录"
+    ]
+  },
+  "speed-math": {
+    "title": "心算速度测试 - 快速计算小测验 | Reflextry",
+    "description": "磨练心算和计算速度。在计时器下快速解决加、减、乘、除法运算，以提升数学流利度。",
+    "keywords": [
+      "速算测试",
+      "心算速度测试",
+      "快速算术测试",
+      "心算游戏",
+      "在线免费快速数学测试",
+      "计算速度测试",
+      "快速数学计算游戏",
+      "1分钟数学速度测试",
+      "数学反应测试",
+      "60秒数学冲刺测试",
+      "认知数学测试",
+      "乘法速度测试",
+      "成人心算训练",
+      "算术速度挑战"
+    ]
+  },
+  "math-speed": {
+    "title": "心算速度测试 - 快速计算小测验 | Reflextry",
+    "description": "磨练心算和计算速度。在计时器下快速解决加、减、乘、除法运算，以提升数学流利度。",
+    "keywords": [
+      "速算测试",
+      "心算速度测试",
+      "快速算术测试",
+      "心算游戏",
+      "在线免费快速数学测试",
+      "计算速度测试",
+      "快速数学计算游戏",
+      "1分钟数学速度测试",
+      "数学反应测试",
+      "60秒数学冲刺测试",
+      "认知数学测试",
+      "乘法速度测试",
+      "成人心算训练",
+      "算术速度挑战"
+    ]
+  },
+  "typing-speed": {
+    "title": "打字速度测试 - 免费在线 WPM 基准测试 | Reflextry",
+    "description": "通过我们的免费 1 分钟打字速度测试，测试您的每分钟字数 (WPM) 和准确率。评估您的键盘输入速度，跟踪错误率，并提高盲打水平。",
+    "keywords": [
+      "打字速度测试",
+      "在线免费wpm测试",
+      "每分钟字数测试",
+      "1分钟打字测试",
+      "60秒打字速度测试",
+      "打字准确率测试",
+      "盲打速度测试",
+      "10fastfingers打字测试",
+      "monkeytype在线替代",
+      "人类基准打字测试",
+      "快速打字练习",
+      "键盘速度测试",
+      "带wpm和准确率的打字测试",
+      "打字速度检查器",
+      "免费打字速度测试"
+    ]
+  },
+  "word-accuracy": {
+    "title": "单词准确率测试 - 快速打字精度 | Reflextry",
+    "description": "提高打字精度，消除按键错误。以 100% 的准确率输入高速提示词，在时间压力下掌握零失误打字。",
+    "keywords": [
+      "单词准确率测试",
+      "单词速度测试",
+      "精确打字测试",
+      "零失误打字测试",
+      "快速单词打字游戏",
+      "在线打字准确率测试",
+      "拼写速度测试",
+      "快速单词打字练习",
+      "按键准确率测试",
+      "数据录入打字精度",
+      "单词识别打字速度"
+    ]
+  },
+  "word-speed": {
+    "title": "速读测试 - 单词识别 WPM | Reflextry",
+    "description": "测试阅读速度和单词识别能力。通过我们的交互式单词速度工具，测量每分钟阅读字数（WPM）的流畅度以及快速视觉辨识能力。",
+    "keywords": [
+      "单词速度测试",
+      "在线免费速读测试",
+      "快速单词识别测试",
+      "每分钟阅读字数测试",
+      "RSVP速读测试",
+      "我能读多快测试",
+      "闪现单词阅读速度",
+      "视觉单词速度测试",
+      "认知单词速度基准测试"
+    ]
+  },
+  "grid-selection": {
+    "title": "数字方格速度测试 - 5x5 数字搜寻游戏 | Reflextry",
+    "description": "通过舒尔特方格训练视觉扫描和边缘阅读速度。在 5x5 的方格中按升序寻找数字，以拓展你的视觉搜索速度。",
+    "keywords": [
+      "在线舒尔特方格",
+      "舒尔特方格测试",
+      "方格速度测试",
+      "1到25数字寻找速度测试",
+      "用于速读的舒尔特方格",
+      "方格选择测试",
+      "视觉搜索速度测试",
+      "5x5数字方格速度游戏",
+      "矩阵视觉扫描测试",
+      "周边视力舒尔特方格",
+      "按顺序点击数字测试"
+    ]
+  },
+  "grid-speed": {
+    "title": "数字方格速度测试 - 5x5 数字搜寻游戏 | Reflextry",
+    "description": "通过舒尔特方格训练视觉扫描和边缘阅读速度。在 5x5 的方格中按升序寻找数字，以拓展你的视觉搜索速度。",
+    "keywords": [
+      "在线舒尔特方格",
+      "舒尔特方格测试",
+      "方格速度测试",
+      "1到25数字寻找速度测试",
+      "��于速读的舒尔特方格",
+      "方格选择测试",
+      "视觉搜索速度测试",
+      "5x5数字方格速度游戏",
+      "矩阵视觉扫描测试",
+      "周边视力舒尔特方格",
+      "按顺序点击数字测试"
+    ]
+  },
+  "schulte-table": {
+    "title": "舒尔特方格测试 - 视觉扫描速度 | Reflextry",
+    "description": "经典舒尔特方格挑战。从 3×3 到 7×7 的方格中按顺序点击打乱的数字。在倒计时下训练周边视力、视觉搜索速度以及专注力。",
+    "keywords": [
+      "在线免费舒尔特方格",
+      "舒尔特方格测试",
+      "5x5舒尔特方格",
+      "7x7舒尔特方格",
+      "视觉扫描速度测试",
+      "周边视力训练舒尔特",
+      "按顺序找数字游戏",
+      "速读舒尔特方格",
+      "数字方格注意力测试",
+      "舒尔特方格大脑训练",
+      "升序数字方格挑战"
+    ]
+  },
+  "number-rush": {
+    "title": "数字冲刺速度测试 - 升序连点大作战 | Reflextry",
+    "description": "测试快速数字识别与点击速度。以人类极限的��度搜寻并点击升序数字，测试你的认知处理速率基准。",
+    "keywords": [
+      "数字冲刺游戏",
+      "速度数字测试",
+      "快速数字点击",
+      "按顺序点击数字速度测试",
+      "升序数字点击器测试",
+      "在线1到50数字游戏",
+      "快速数字点击挑战",
+      "数字冲刺世界纪录",
+      "快速数字寻找游戏",
+      "数字排序速度测试"
+    ]
+  },
+  "quick-sort": {
+    "title": "快速排序反应游戏 - 极速分类测试 | Reflextry",
+    "description": "挑战认知分类与快速决策速度。在严格的时间限制下，将源源不断的目标物品归类到正确的类别中。",
+    "keywords": [
+      "快速排序速度测试",
+      "极速分类游戏",
+      "在线速度分类测试",
+      "认知分类测试",
+      "快速排序游戏",
+      "视觉排序速度",
+      "类别排序测试",
+      "左右分类在线游戏",
+      "快速分拣速度测试",
+      "决策速度排序游戏"
+    ]
+  },
+  "pattern-matching": {
+    "title": "图形匹配测试 - 视觉矩阵准确度 | Reflextry",
+    "description": "提升视觉模式识别与非语言推理能力。匹配复杂的矩阵图案与几何序列，测试视觉敏锐度与分析思维。",
+    "keywords": [
+      "在线图形匹配测试",
+      "免费模式识别测试",
+      "矩阵推理测试",
+      "在线IQ图形测试",
+      "视觉图形解谜游戏",
+      "找规律测试",
+      "抽象模式匹配测试",
+      "瑞文标准渐进矩阵免费练习",
+      "图形完成测试",
+      "逻辑模式识别"
+    ]
+  },
+  "precision-click": {
+    "title": "精准点击测试 - 鼠标目标准确度 | Reflextry",
+    "description": "打磨鼠标精准度与微操目标准确率。精准点击极小的目标且不失误，为游戏训练精细运动控制与光标精度。",
+    "keywords": [
+      "精准点击测试",
+      "鼠标精准度测试",
+      "微操目标点击测试",
+      "鼠标光标准确度测试",
+      "微小目标点击速度",
+      "像素级精准点击游戏",
+      "FPS鼠标精准度测试",
+      "瞄准准确率百分比测试",
+      "手眼协调点击测试",
+      "精细光标控制基准测试"
+    ]
+  },
+  "data-entry": {
+    "title": "数据录入准确度测试 - 键盘敲击基准测试 | Reflextry",
+    "description": "测量数据录入速度、字母数字输入精度以及错误率。通过真实数字和代码基准测试每小时击键次数 (KPH)。",
+    "keywords": [
+      "在线数据录入测试",
+      "免费数据录入速度测试",
+      "字母数字数据录入测试",
+      "10键数据录入练习",
+      "在线数据打字测试",
+      "文职数据录入测试",
+      "KPH数据录入测试",
+      "击键准确度测试",
+      "数据录入准确率百分比",
+      "在线细节注意力测试"
+    ]
+  },
+  "image-recognition": {
+    "title": "图像识别测试 - 视觉细节准确度 | Reflextry",
+    "description": "测试视觉感知与快速图像鉴别能力。以极高速度识别微小的视觉差异并匹配目标物体，训练观察力。",
+    "keywords": [
+      "在线图像识别测试",
+      "视觉识别游戏",
+      "快速图像记忆测试",
+      "图片识别速度测试",
+      "找不同速度测试",
+      "视觉鉴别测试",
+      "认知图像测试",
+      "视觉搜索任务测试",
+      "Human Benchmark图像识别"
+    ]
+  },
+  "angle-estimation": {
+    "title": "角度估计测试 - 空间几何敏锐度 | Reflextry",
+    "description": "测试你对几何与空间估计的直觉。准确猜测给定角度的度数，基准测试视觉角度敏锐度与空间判断力。",
+    "keywords": [
+      "angle estimation test online",
+      "guess the angle game",
+      "angle measuring test online",
+      "estimate angle degrees game",
+      "protractor angle estimation game",
+      "spatial angle acuity test",
+      "geometry angle test game online",
+      "how accurate is your eye for angles",
+      "human benchmark angle"
+    ]
+  },
+  "color-match": {
+    "title": "色彩匹配测试 - RGB 色调辨别 | Reflextry",
+    "description": "通过我们的色彩匹配测试，测试你的色彩感知能力和微妙色调辨别力。在时间压力下匹配目标 RGB 色调，并基准测试视觉精确度。",
+    "keywords": [
+      "color match test",
+      "color discrimination test",
+      "hue matching test",
+      "color acuity test",
+      "color perception test",
+      "shade match test online",
+      "rgb color test",
+      "visual color discrimination",
+      "color matching game online",
+      "subtle color difference test",
+      "farnsworth munsell alternative",
+      "color sensitivity test",
+      "chromatic acuity test"
+    ]
+  },
+  "color-blindness": {
+    "title": "色盲测试 - 石原氏色盲检查图筛查 | Reflextry",
+    "description": "在免费的寓教于乐的色彩视觉游戏中体验石原氏风格的程序化圆点图。显示器设置会影响结果；本测试并非诊断评估。",
+    "keywords": [
+      "color blindness test",
+      "color vision test online",
+      "ishihara test online free",
+      "red green color blindness test",
+      "color blind test plates",
+      "protanopia test",
+      "deuteranopia test",
+      "online ishihara plates",
+      "color vision deficiency test",
+      "free color blind check",
+      "color deficiency screening",
+      "ishihara chart test",
+      "color blindness assessment"
+    ]
+  },
+  "mental-rotation": {
+    "title": "心理旋转测试 - 3D 空间推理 | Reflextry",
+    "description": "基准测试 3D 空间可视化与认知旋转速度。实时判断复杂的几何形状是完全相同还是镜像反转。",
+    "keywords": [
+      "mental rotation test",
+      "shepard metzler test online",
+      "spatial reasoning test free",
+      "3d spatial visualization test",
+      "spatial intelligence test",
+      "cognitive rotation test",
+      "spatial ability benchmark",
+      "3d object rotation test",
+      "spatial relations test",
+      "vandenberg mental rotation",
+      "spatial cognition test",
+      "mental rotation practice"
+    ]
+  },
+  "aim-trainer": {
+    "title": "FPS 瞄准训练器 - 鼠标瞄准与急停甩枪热身 | Reflextry",
+    "description": "提升你在《瓦洛兰特》(Valorant)、《CS2》和《Apex英雄》等 FPS 游戏中的鼠标准确度、目标追踪和甩枪速度。直接在网页浏览器中畅玩免费的 3D 瞄准训练器。",
+    "keywords": [
+      "aim trainer online free",
+      "fps aim trainer in browser",
+      "mouse aim test",
+      "valorant aim trainer free",
+      "cs2 aim training online",
+      "aim lab browser alternative",
+      "3d aim trainer online",
+      "gridshot aim trainer online",
+      "mouse accuracy aim test",
+      "fps mouse sensitivity test",
+      "daily aim warmup browser",
+      "aim reflex game"
+    ]
+  },
+  "rpg-reaction": {
+    "title": "电竞玩家反应测试 - 战斗反射神经 | Reflextry",
+    "description": "在精确到毫秒的模拟战斗场景中，测试你的竞技战斗反射神经、QTE（快速反应事件）招架时机以及电竞反应速度。",
+    "keywords": [
+      "玩家反应时间测试",
+      "电竞反应速度测试",
+      "RPG反应测试",
+      "在线QTE反应游戏",
+      "游戏反射神经测试",
+      "职业玩家平均反应时间",
+      "CS2 窥视者优势反应测试",
+      "Valorant反应时间基准",
+      "命中确认反��测试",
+      "动作游戏招架时机测试"
+    ]
+  },
+  "endless-dodge": {
+    "title": "无尽闪避游戏 - 弹幕规避敏捷度 | Reflextry",
+    "description": "测试你的闪避反射神经与空间规避敏捷度。在这款高强度的反射生存游戏中，操控你的光标穿梭于无限移动的障碍物群中。",
+    "keywords": [
+      "在线无尽闪避游戏",
+      "闪避反应测试",
+      "弹幕地狱闪避练习",
+      "鼠标光标闪避游戏",
+      "在线规避反射游戏",
+      "躲避障碍物反射游戏",
+      "弹幕闪避热身游戏",
+      "光标规避速度测试",
+      "微操规避敏捷训练器"
+    ]
+  },
+  "stroop-drop": {
+    "title": "斯特鲁普效应测试 - 冲动与注意力游戏 | Reflextry",
+    "description": "通过互动的 Stroop Drop（斯特鲁普下落）游戏挑战你的抑制控制能力。解决下落的颜色词汇与其墨水色调之间的认知冲突。",
+    "keywords": [
+      "在线免费斯特鲁普效应测试",
+      "斯特鲁普色词测试游戏",
+      "认知冲突测试",
+      "在线 stroop drop 游戏",
+      "抑制控制测试游戏",
+      "颜色词不匹配测试",
+      "心理学斯特鲁普效应测试",
+      "大脑冲突反应游戏",
+      "执行功能斯特鲁普测试"
+    ]
+  },
+  "target-tracking": {
+    "title": "目标追踪瞄准训练器 - 鼠标瞄准热身 | Reflextry",
+    "description": "为竞技 FPS 游戏掌握流畅的鼠标追踪技巧。在零鼠标平滑度的条件下，对着飘忽不定的移动目标练习持续精准瞄准。",
+    "keywords": [
+      "平滑追踪瞄准训练器",
+      "在线目标追踪瞄准测试",
+      "FPS平滑追踪练习",
+      "APEX英雄追踪训练器在线",
+      "鼠标追踪精准度测试",
+      "移动目标瞄准测试",
+      "准星追踪测试",
+      "持续瞄准追踪练习",
+      "反应式追踪游戏在线"
+    ]
+  },
+  "flick-shot": {
+    "title": "甩枪瞄准训练器 - 快速甩枪鼠标瞄准 | Reflextry",
+    "description": "使用我们的甩枪训练器训练肌肉记忆和快速瞄准。为战术射击游戏校准快速微调和目标捕获能力。",
+    "keywords": [
+      "在��甩枪瞄准训练器",
+      "免费甩枪瞄准测试",
+      "CS2在线甩枪练习",
+      "Valorant甩枪热身",
+      "微甩枪瞄准训练器",
+      "快速甩枪鼠标精准度测试",
+      "Gridshot甩枪训练器",
+      "反射甩枪游戏",
+      "目标甩枪精准度测试",
+      "单发点射甩枪训练器"
+    ]
+  },
+  "rhythm-tap": {
+    "title": "节奏敲击游戏 - 视听节拍计时测试 | Reflextry",
+    "description": "测试您的音乐计时准确度与毫秒级节奏感知。跟随逐渐加快的 BPM 节拍进行同步敲击，并追踪偏离节拍的延迟误差。",
+    "keywords": [
+      "在线节奏计时测试",
+      "节拍敲击反应测试",
+      "视听节奏测试",
+      "浏览器版 osu 节奏热身",
+      "跟随节拍准确度测试",
+      "免费节奏反应游戏",
+      "在线音乐计时测试",
+      "毫秒级音频同步测试",
+      "bpm 敲击准��度游戏",
+      "节奏反射训练器"
+    ]
+  }
+}

@@ -1,0 +1,84 @@
+---
+title: Cómo puntuamos en las pruebas de Reflextry (Y qué significan los números)
+description: >-
+  Una guía clara sobre las puntuaciones de Reflextry: milisegundos, rangos,
+  precisión y tiempos de finalización, además de lo que no afirmamos sobre
+  percentiles o diagnósticos clínicos.
+publishedAt: '2026-08-01'
+author:
+  name: Kaushik Rabadiya
+category: Methodology
+tags:
+  - scoring
+  - methodology
+  - benchmarks
+  - transparency
+readingTime: 8 min read
+---
+Si un sitio de entrenamiento publica una puntuación sin explicar la regla, el número es marketing, no medición. Este artículo documenta cómo Reflextry puntúa sus principales familias de pruebas, cómo la dificultad cambia la tarea y qué afirmaciones nos negamos a hacer sin datos controlados.
+
+## Un principio: mismo dispositivo, misma dificultad
+
+Las pruebas de navegador heredan el ruido del hardware: tasa de refresco, sondeo del ratón (polling rate), latencia táctil, estrangulamiento térmico (thermal throttling) y pestañas en segundo plano. Eso no hace que las puntuaciones sean inútiles; significa que **las comparaciones deben hacerse dentro de tu propia configuración**. Un tiempo de reacción de 220 ms en un portátil de 60 Hz no es el mismo experimento que 180 ms en una pantalla de esports de 240 Hz. Anota siempre el modo de dificultad junto a tus marcas personales.
+
+## Reacción y reacción de elección (milisegundos)
+
+Las puntuaciones de **reacción simple** suelen ser la latencia promedio desde el inicio del estímulo hasta una respuesta válida, en milisegundos. Cuanto menor sea, mejor. Los clics tempranos (antes de la señal) son errores, no una anticipación heroica.
+
+La **reacción de elección** añade alternativas. El RT (tiempo de reacción) promedio sigue siendo la métrica principal, pero solo los aciertos correctos deben alimentar ese promedio. Los clics en casillas erróneas y los clics prematuros cuentan como errores. Debido a que más opciones generalmente ralentizan las decisiones (la intuición de la ley de Hick), no compares el promedio de 2 casillas con el de 4 casillas como si fueran pruebas idénticas.
+
+## Rangos de memoria y rondas de reconocimiento
+
+Las herramientas de tipo **Chimp / secuencia / dígitos** normalmente puntúan el rango limpio más largo o la etapa alcanzada bajo las reglas de vidas y desaparición del modo. Cuanto mayor sea, mejor.
+
+La **memoria verbal** suele puntuar hasta dónde llegas antes de acumular fallos en los juicios VISTO/NUEVO (SEEN/NEW). La interferencia aumenta hacia el final de una ronda; eso es de esperar, no una prueba defectuosa.
+
+Cuando las vidas varían según la dificultad, una "puntuación alta" en Principiante no es intercambiable con Profesional. Trata cada dificultad como su propia tabla de clasificación en tus notas.
+
+## Precisión, inhibición y tareas de conflicto
+
+**Go/No-Go** premia los aciertos correctos en Go **y** las inhibiciones correctas. Un RT de Go llamativo con muchas falsas alarmas no es maestría.
+
+**Flanker** puntúa las respuestas correctas a la flecha central; los ensayos incongruentes son más lentos y propensos a errores por diseño. Haz un seguimiento primero de la precisión y luego del RT promedio en los aciertos.
+
+La **asociación de patrones / clic de precisión** priorizan la corrección (y la calidad del acierto) por encima de la velocidad imprudente. El CPS (clics por segundo) o la velocidad de finalización sin precisión es una métrica de vanidad.
+
+## Despejes basados en tiempo (Schulte y similares)
+
+Las cuadrículas al estilo Schulte puntúan el **tiempo de finalización**; cuanto menor sea, mejor. Los clics incorrectos no deben "tener éxito" en silencio; hacen perder tiempo. Los modos de cuenta regresiva inversa son una tarea diferente a los despejes ascendentes.
+
+## Lo que no afirmamos
+
+No inventamos estadísticas globales en el sitio del tipo "el usuario promedio mejora un X% en 14 días" sin una muestra publicada y controlada. No presentamos láminas al estilo Ishihara como un diagnóstico médico. No equiparamos la puntuación alta en un juego con el coeficiente intelectual (CI), una evaluación clínica de TDAH o la preparación para firmar un contrato en los esports.
+
+Cuando citamos investigaciones externas (NIH, NCBI, artículos clásicos de psicología), esa investigación describe **fenómenos generales**. Tu curva personal en Reflextry sigue siendo un experimento de n=1: útil para practicar, no un informe clínico.
+
+## Cómo mantener un registro honesto
+
+1. Registra la fecha, la dificultad, el dispositivo y notas sobre sueño/cafeína si te importan las tendencias.
+2. Prefiere las medianas semanales móviles en lugar de una sesión afortunada.
+3. Cambia una sola variable a la vez cuando pruebes si "esto ayudó".
+4. Detén las sesiones cuando la fatiga aumente los errores; las puntuaciones obtenidas con cansancio enseñan la lección incorrecta.
+
+## Por qué importa esta transparencia
+
+Los sitios web de la era AdSense a veces pegan textos idénticos de "mejora del 12-15%" debajo de cada herramienta. Eso daña la confianza y enseña a los usuarios a ignorar los números. El objetivo de Reflextry es todo lo contrario: **una regla clara por herramienta**, límites honestos y puntuaciones que puedas defender cuando las compartas con un compañero de equipo o un entrenador.
+
+Si la descripción de la puntuación en la página de una herramienta alguna vez difiere de este artículo, considera la interfaz en vivo de la herramienta como la fuente de verdad y envía un correo a support@reflextry.com para que podamos corregir la documentación.
+
+## Cómo concebimos los "datos originales" en un laboratorio gratuito
+
+No publicamos percentiles falsos en las tablas de clasificación obtenidos de sesiones anónimas y disfrazados de ciencia. Si alguna vez publicamos distribuciones agregadas (por ejemplo, histogramas de promedios de reacción simple en una clase de dispositivo declarada), indicaremos:
+
+- reglas de inclusión (ensayos mínimos, dificultad, exclusión de spam de clics tempranos)
+- tamaño de muestra aproximado y rango de fechas
+- advertencias sobre el dispositivo
+- lo que el gráfico *no* es (normas clínicas)
+
+Hasta que exista ese tipo de informe, trata tu propio registro como el conjunto de datos principal. Sigue siendo valioso: los experimentos personales son la forma en que funciona la práctica.
+
+## Guías relacionadas
+
+- [Lo que las pruebas de reacción en el navegador pueden y no pueden medir](/blog/browser-reaction-time-limits)
+- [Reacción de elección vs. Reacción simple](/blog/choice-reaction-vs-simple-reaction)
+- [¿Qué es un buen tiempo de reacción?](/blog/what-is-a-good-reaction-time)

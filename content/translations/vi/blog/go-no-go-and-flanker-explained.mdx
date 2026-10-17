@@ -1,0 +1,92 @@
+---
+title: >-
+  Bài tập Go/No-Go và Flanker: Rèn luyện khả năng ức chế và sự chú ý trong xung
+  đột
+description: >-
+  Hướng dẫn dễ hiểu về các lỗi báo động giả trong Go/No-Go, các thử nghiệm đồng
+  nhất và không đồng nhất trong Flanker, cùng cách luyện tập cả hai trên
+  Reflextry mà không cần đuổi theo tốc độ liều lĩnh.
+publishedAt: '2026-07-08'
+author:
+  name: Reflextry Editorial
+category: Reflex
+tags:
+  - go-no-go
+  - flanker
+  - inhibition
+  - attention
+readingTime: 8 min read
+---
+Hai bài tập phòng thí nghiệm kinh điển xuất hiện trong đấu trường phản xạ của Reflextry có lý do chính đáng: **Go/No-Go** nhấn mạnh việc dừng một hành động đã được chuẩn bị sẵn, và **Flanker** nhấn mạnh việc chọn một mục tiêu trong khi bỏ qua các hàng xóm xung đột. Cả hai đều phạt tốc độ liều lĩnh.
+
+## Go/No-Go trong một đoạn văn
+
+Phần lớn các lượt yêu cầu Go (nhấn). Một số ít yêu cầu No-Go (không nhấn). Tỷ lệ Go cao tạo ra thói quen nhấn chiếm ưu thế—vì vậy lượt dừng hiếm hoi trở thành bài kiểm tra thực sự. Ghi điểm các cú đánh Go chính xác **và** việc kìm giữ thành công. Báo động giả (nhấn vào No-Go) cho thấy tính bốc đồng dưới áp lực thời gian.
+
+### Mẹo luyện tập
+
+- Giữ ngón tay sẵn sàng, không căng cứng.
+- Sau một chuỗi Go dài, hãy dự đoán một lượt No-Go.
+- Các cú đánh Go sạch chậm hơn một chút sẽ tốt hơn các cú đánh siêu nhanh nhưng liên tục có báo động giả.
+
+## Flanker trong một đoạn văn
+
+Năm mũi tên xuất hiện. Chỉ phản hồi hướng **ở giữa**. Các thử nghiệm đồng nhất có cùng hướng; các thử nghiệm không đồng nhất đặt các mũi tên xung quanh (flanker) ngược hướng. Xung đột làm chậm bạn lại và dẫn đến lỗi vì hai kế hoạch phản hồi kích hoạt cùng lúc và một kế hoạch phải bị ức chế.
+
+### Mẹo luyện tập
+
+- Tập trung vào ký tự ở giữa trước khi chuỗi ký tự "bỏ phiếu" như một đám đông.
+- Đừng bầu theo số đông với các mũi tên xung quanh.
+- Nâng cao độ chính xác ở các lượt không đồng nhất trước khi săn tìm thời gian phản hồi (RT) trung bình.
+
+## Chúng khác nhau như thế nào
+
+| Bài tập | Nhu cầu cốt lõi | Lỗi điển hình |
+|---------|-----------------|---------------|
+| Go/No-Go | Ấc chế một cú nhấn đã chuẩn bị | Báo động giả sau các chuỗi Go |
+| Flanker | Lựa chọn giữa xung đột không gian | Làm theo hướng của các mũi tên xung quanh |
+
+Nếu bạn liên tục báo động giả, hãy bắt đầu với Go/No-Go. Nếu bạn chính xác ở các lượt dừng nhưng sụp đổ khi các ký tự xung đột, hãy nhấn mạnh vào Flanker.
+
+## Phản hồi lựa chọn nằm ngay bên cạnh
+
+Phản hồi lựa chọn (Choice RT) bổ sung nhiều mục tiêu sáng đèn mà không có quy tắc kìm giữ. Đó là độ trễ quyết định giữa các lựa chọn thay thế. Nhiều người chơi cần cả ba: RT đơn giản, RT lựa chọn, và các bài tập ức chế/xung đột.
+
+## Thiết kế phiên tập luyện
+
+1. Khởi động nhẹ nhàng trong hai phút (RT đơn giản hoặc Go chậm).
+2. Một khối Go/No-Go tập trung với mục tiêu không có báo động giả.
+3. Một khối Flanker nhấn mạnh độ chính xác ở phần không đồng nhất.
+4. Dừng lại ở phút 12–15 khi chất lượng vẫn còn cao.
+
+## Sự cải thiện trông như thế nào
+
+- Ít báo động giả hơn ở cùng một mức RT Go
+- Độ chính xác Flanker không đồng nhất cao hơn
+- Phương sai RT hẹp hơn ở các lượt đúng
+
+Không phải là một thước phim "mở khóa bộ não" mang tính điện ảnh.
+
+## Sự trung thực về tính chuyển giao
+
+Các mô hình này được sử dụng trong khoa học thần kinh nhận thức có lý do—chúng cô lập các thành phần điều khiển điều hành. Luyện tập trên trình duyệt có thể làm sắc bén các thành phần đó trong bài tập. Khả năng kiểm soát xung động trong thế giới thực vẫn phụ thuộc vào giấc ngủ, căng thẳng và bối cảnh. Sử dụng các công cụ như các bài tập chính xác, sau đó áp dụng thói quen "dừng lại trước khi hành động" tương tự ở những nơi quan trọng.
+
+## Các bước tiếp theo trên Reflextry
+
+Mở Go/No-Go và Flanker từ đấu trường Phản xạ, đọc phần Câu hỏi thường gặp (FAQ) của mỗi công cụ một lần, và ghi lại độ khó bên cạnh điểm số. Kết hợp với bài viết [phương pháp tính điểm](/blog/how-we-score-reflextry-tests) để bạn biết mình đang tối ưu hóa con số nào.
+
+## Khởi động bảo vệ khả năng ức chế
+
+Khởi động lạnh gây ra báo động giả. Dành một phút cho các phản hồi chỉ Go chậm (nếu chế độ của bạn cho phép luyện tập) hoặc phản ứng đơn giản, sau đó b���t đầu Go/No-Go có tính điểm. Đối với Flanker, hãy thực hiện mười lần nhẩm trong đầu chỉ với các lượt đồng nhất: "chỉ ở giữa" như một gợi ý bằng lời nói trước khối không đồng nhất đầu tiên.
+
+## Giải thích kết quả hỗn hợp
+
+RT Go nhanh + nhiều báo động giả → tính bốc đồng chiếm ưu thế.
+RT Go chậm + kìm giữ sạch → quá thận trọng; cẩn thận nâng cao sự sẵn sàng mà không cần bấm liên hồi.
+Flanker đồng nhất ổn / Flanker không đồng nhất kém → kiểm soát xung đột là điểm nghẽn, không phải tầm nhìn.
+
+Viết một câu chẩn đoán sau mỗi phiên. Thói quen đó tốt hơn việc chụp màn hình điểm số khoe khoang.
+
+## Hướng dẫn trẻ em hoặc đồng đội
+
+Giữ hướng dẫn ngắn gọn: "Xanh là đi. Đỏ là đứng hình." Đối với Flanker: "Chỉ mũi tên ở giữa." Hãy ca ngợi việc kìm giữ sạch sẽ lớn tiếng bằng các cú đánh nhanh—nếu không, người học sẽ tối ưu hóa sai con số.

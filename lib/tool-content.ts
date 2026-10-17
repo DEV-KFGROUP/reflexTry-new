@@ -4303,10 +4303,43 @@ const relatedToolsMap: Record<string, Array<{ id: string; title: string; href: s
 
 };
 
-// Helper function to get content for any tool with unique fallback
-export function getToolContent(toolId: string, toolName: string) {
-    const content = toolContent[toolId as keyof typeof toolContent];
+const toolTranslationsCache: Record<string, Record<string, any>> = {};
+
+function getLocaleTranslation(locale: string): Record<string, any> {
+    if (typeof window !== 'undefined') return {};
+    if (toolTranslationsCache[locale]) return toolTranslationsCache[locale];
+
+    try {
+        const fs = eval('require("fs")');
+        const path = eval('require("path")');
+        const transPath = path.join(process.cwd(), 'content', 'translations', locale, 'tool-content.json');
+        if (fs.existsSync(transPath)) {
+            toolTranslationsCache[locale] = JSON.parse(fs.readFileSync(transPath, 'utf8'));
+            return toolTranslationsCache[locale];
+        }
+    } catch (_) {}
+
+    toolTranslationsCache[locale] = {};
+    return {};
+}
+
+// Helper function to get content for any tool with multi-language and fallback support
+export function getToolContent(toolId: string, toolName: string, locale?: string) {
     const relatedTools = relatedToolsMap[toolId] || [];
+
+    // Check localized content first if non-English locale is requested
+    if (locale && locale !== 'en') {
+        const translations = getLocaleTranslation(locale);
+        const localized = translations[toolId];
+        if (localized) {
+            return {
+                ...localized,
+                relatedTools,
+            };
+        }
+    }
+
+    const content = toolContent[toolId as keyof typeof toolContent];
     if (content) {
         return {
             ...content,

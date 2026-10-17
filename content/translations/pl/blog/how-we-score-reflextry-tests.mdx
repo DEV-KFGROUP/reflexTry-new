@@ -1,0 +1,84 @@
+---
+title: Jak oceniamy testy w Reflextry (i co oznaczają te liczby)
+description: >-
+  Przejrzysty przewodnik po systemie punktacji Reflextry: milisekundy,
+  rozpiętości, dokładność i czasy ukończenia – oraz to, czego nie twierdzimy na
+  temat percentyli czy diagnoz klinicznych.
+publishedAt: '2026-08-01'
+author:
+  name: Kaushik Rabadiya
+category: Methodology
+tags:
+  - scoring
+  - methodology
+  - benchmarks
+  - transparency
+readingTime: 8 min read
+---
+Jeśli serwis treningowy publikuje wynik bez wyjaśnienia reguły, ta liczba to marketing, a nie pomiar. W tym artykule opisujemy, jak Reflextry ocenia swoje główne grupy testów, jak stopień trudności wpływa na zadanie oraz jakich twierdzeń odmawiamy bez kontrolowanych danych.
+
+## Jedna zasada: to samo urządzenie, ten sam poziom trudności
+
+Testy przeglądarkowe dziedziczą szum sprzętowy: częstotliwość odświeżania, częstotliwość odpytywania myszy (polling rate), opóźnienie dotyku, thermal throttling (obniżanie wydajności z przegrzania) oraz karty w tle. Nie sprawia to, że wyniki są bezużyteczne – oznacza to jedynie, że **porównania należy prowadzić w obrębie swojej konfiguracji**. Czas reakcji 220 ms na laptopie 60 Hz to nie ten sam eksperyment co 180 ms na monitorze esportowym 240 Hz. Zawsze zapisuj tryb trudności obok swoich rekordów osobistych.
+
+## Reakcja prosta i reakcja z wyborem (milisekundy)
+
+Wyniki **reakcji prostej** to zazwyczaj średnie opóźnienie od pojawienia się bodźca do prawidłowej odpowiedzi, wyrażone w milisekundach. Mniejsza wartość oznacza lepszy wynik. Wczesne kliknięcia (przed sygnałem) są błędami, a nie heroicznym antycypowaniem.
+
+**Reakcja z wyborem** wprowadza alternatywy. Średni czas reakcji (RT) nadal jest główną metryką, ale do średniej powinny wliczać się wyłącznie poprawne trafienia. Kliknięcia w złe pole oraz kliknięcia przed Czasem są zliczane jako błędy. Ponieważ większa liczba wyborów zazwyczaj spowalnia podejmowanie decyzji (zgodnie z prawem Hicka), nie porównuj średniej dla 2 pól ze średnią dla 4 pól tak, jakby były to identyczne testy.
+
+## Rozpiętości pamięci i serie rozpoznawania
+
+Narzędzia w stylu **szympansa / sekwencji / cyfr** zazwyczaj oceniają najdłuższy czysty ciąg lub etap osiągnięty przy zachowaniu zasad limitu żyć i znikania elementów dla danego trybu. Wyższa wartość oznacza lepszy wynik.
+
+**Pamięć werbalna** zazwyczaj mierzy, jak daleko zajdziesz przed popełnieniem błędu przy ocenach SEEN/NEW (WIDZIANE/NOWE). Pod koniec serii narasta interferencja; jest to zjawisko oczekiwane, a nie dowód na zepsuty test.
+
+Jeśli liczba żyć różni się w zależności od trudności, „wysoki wynik” na poziomie Początkującym nie jest wymienialny na poziom Profesjonalny. W swoich notatkach traktuj każdy poziom trudności jako osobną tablicę wyników.
+
+## Dokładność, hamowanie i zadania z konfliktami
+
+Test **Go/No-Go** nagradza poprawne trafienia Go **oraz** poprawne powstrzymania się od reakcji. Efektowny czas reakcji Go z wieloma fałszywymi alarmami to nie mistrzostwo.
+
+Test **Flankera** ocenia poprawne odpowiedzi na środkową strzałkę; próby nieprzystające (incongruent) są z założenia wolniejsze i bardziej podatne na błędy. Najpierw śledź dokładność, a dopiero potem średni czas reakcji dla poprawnych odpowiedzi.
+
+**Dopasowywanie wzorców / precyzyjne klikanie** przedkładają poprawność (i jakość trafień) nad bezmyślną szybkość. CPS (kliknięcia na sekundę) lub prędkość ukończenia bez dokładności to metryka próżności.
+
+## Czasy ukończenia (Schulte i podobne)
+
+Siatki w stylu Schultego oceniają **czas ukończenia** – im mniejszy, tym lepiej. Błędne kliknięcia nie powinny po cichu „zaliczać się”; marnują one czas. Tryby z odliczaniem wstecz to zupełnie inne zadanie niż rosnące sekwencje.
+
+## Czego nie twierdzimy
+
+Nie wymyślamy ogólno-witrynowych statystyk typu „przeciętny użytkownik poprawia wynik o X% w 14 dni” bez opublikowanej, kontrolowanej próby. Nie prezentujemy tablic w stylu Ishihary jako diagnozy medycznej. Nie zrównujemy wysokiego wyniku w grze z IQ, kliniczną oceną ADHD czy gotowością do podpisania kontraktu esportowego.
+
+Kiedy cytujemy zewnętrzne badania (NIH, NCBI, klasyczne prace z psychologii), badania te opisują **ogólne zjawiska**. Twoja osobista krzywa postępów w Reflextry to nadal eksperyment o liczności n=1 – przydatny do treningu, a nie raport z kliniki.
+
+## Jak prowadzić uczciwy dziennik
+
+1. Zapisuj datę, poziom trudności, urządzenie oraz uwagi dotyczące snu/kofeiny, jeśli zależy Ci na śledzeniu trendów.
+2. Przedkładaj ruchome mediany z tygodnia nad jedną szczęśliwą sesję.
+3. Zmieniaj tylko jedną zmienną naraz, gdy testujesz hipotezę „czy to pomogło?”.
+4. Kończ sesje, gdy zmęczenie gwałtownie zwiększa liczbę błędów – zmęczone wyniki uczą niewłaściwych nawyków.
+
+## Dlaczego ta przejrzystość ma znaczenie
+
+Strony z epoki AdSense czasami wklejają identyczną treść o „12–15% poprawie” pod każdym narzędziem. To niszczy zaufanie i uczy użytkowników ignorowania liczb. Celem Reflextry jest coś zupełnie odwrotnego: **jedna jasna zasada dla każdego narzędzia**, uczciwe granice i wyniki, których możesz bronić, dzieląc się nimi z kolegą z drużyny lub trenerem.
+
+Jeśli opis punktacji na stronie narzędzia kiedykolwiek będzie sprzeczny z tym artykułem, traktuj interfejs działającego narzędzia jako źródło prawdy i napisz na adres support@reflextry.com, abyśmy mogli poprawić dokumentację.
+
+## Jak podchodzimy do „oryginalnych danych” w darmowym laboratorium
+
+Nie publikujemy fałszywych percentyli tabel wyników zebranych z anonimowych sesji i ubranych w szaty nauki. Jeśli kiedykolwiek wydamy zagregowane dystrybucje (na przykład histogramy średnich reakcji prostych dla zadeklarowanej klasy urządzenia), określimy:
+
+- zasady włączenia do próby (minimalna liczba prób, trudność, odrzucenie spamu wczesnymi kliknięciami)
+- przybliżoną wielkość próby i zakres dat
+- zastrzeżenia dotyczące sprzętu
+- czym ten wykres *nie jest* (normami klinicznymi)
+
+Dopóki taki raport nie powstanie, traktuj swój własny dziennik jako główny zestaw danych. To nadal cenne: osobiste eksperymenty to istota treningu.
+
+## Powiązane poradniki
+
+- [Co przeglądarkowe testy reakcji mogą, a czego nie mogą zmierzyć](/blog/browser-reaction-time-limits)
+- [Reakcja z wyborem a reakcja prosta](/blog/choice-reaction-vs-simple-reaction)
+- [Jaki jest dobry czas reakcji?](/blog/what-is-a-good-reaction-time)

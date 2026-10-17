@@ -1,6 +1,7 @@
+import { headers } from 'next/headers';
 import { Metadata } from 'next';
 import ClickGame from './ClickGame';
-import { getToolMetadata } from '@/lib/seo-utils';
+import { getToolMetadata, getToolSEOConfig } from '@/lib/seo-utils';
 import { SchemaInjector } from '@/components/SchemaInjector';
 import { generateToolStructuredData, generateBreadcrumbStructuredData, generateWebPageSchema } from '@/lib/structured-data';
 import { SEO_CONFIGS } from '@/config/seo-config';
@@ -11,12 +12,16 @@ import { AEOAnswerBlock } from '@/components/AEOAnswerBlock';
 import { AEO_DEFINITIONS } from '@/lib/aeo-definitions';
 
 export async function generateMetadata(): Promise<Metadata> {
-    return getToolMetadata('cps-test', '/speed/click');
+    const headersList = await headers();
+    const locale = headersList.get('x-locale') || 'en';
+    return getToolMetadata('cps-test', '/speed/click', locale);
 }
 
-export default function Page() {
-    const config = SEO_CONFIGS['cps-test'];
-    const content = getToolContent('cps-test', config.title);
+export default async function Page() {
+    const headersList = await headers();
+    const locale = headersList.get('x-locale') || 'en';
+    const config = getToolSEOConfig('cps-test', locale);
+    const content = getToolContent('cps-test', config.title, locale);
     const cpsDef = AEO_DEFINITIONS['cps-speed'];
 
     const structuredData = generateToolStructuredData(

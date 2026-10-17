@@ -37,7 +37,8 @@
     "globalBenchmarks": "Global Benchmarks",
     "howToPlay": "How to Play",
     "faq": "Frequently Asked Questions",
-    "switchLanguage": "Language"
+    "switchLanguage": "Language",
+    "tools": "free tools"
   },
   "home": {
     "heroBadge": "Cognitive Performance Benchmark",
@@ -47,7 +48,12 @@
     "startTesting": "Start First Test",
     "exploreTools": "Explore 40+ Tools",
     "popularTests": "Popular Tests",
-    "categories": "Categories"
+    "categories": "Categories",
+    "statReaction": "Reaction Time Scores",
+    "statTools": "Interactive Tools",
+    "statFree": "Free & In-Browser",
+    "enterArena": "Enter Arena",
+    "startQuest": "Start Quest"
   },
   "categories": {
     "reflex": {
@@ -81,6 +87,858 @@
     "cookies": "Cookie Policy",
     "contact": "Contact Us",
     "about": "About Us",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "features": "Features",
+    "achievements": "Achievements",
+    "research": "Research",
+    "methodology": "Methodology",
+    "trainingPrograms": "Training Programs",
+    "faq": "FAQ",
+    "cookiePreferences": "Cookie preferences",
+    "platformMethodology": "About Reflextry Platform & Methodology",
+    "brainTrainingTitle": "Brain Training:",
+    "brainTrainingText": "We built Reflextry to give gamers and competitive players a raw, unfiltered look at their baseline mechanics. No fluff, just pure performance tracking. By pushing your working memory and visual pattern recognition to the limit every day, you force your brain to build faster, stronger neural pathways—a process known as neuroplasticity. We isolate specific cognitive loads (like spatial recall and sequence memory) so you can train exactly what you're weak at.",
+    "esportsTitle": "Esports Latency:",
+    "esportsText": "In competitive gaming, 50 milliseconds is the difference between clicking a head and getting sent back to the lobby. Our Speed and Reflex arenas strip away all external game mechanics to measure your raw biological reaction time. We track your Click-Per-Second (CPS), flick-shot accuracy, and raw tracking speed. We heavily optimized our testing environment to cut out browser-level input lag, giving you a true measurement of your hardware and nervous system working together. Use these tools to warm up your fast-twitch muscles before jumping into ranked.",
+    "accuracyTitle": "Accuracy:",
+    "accuracyText": "Speed means nothing if you miss. The Accuracy Hub forces you to lock in and prioritize precision over raw velocity. Through spatial grids, angle estimation, and color matching, you refine your fine motor control. Training speed and accuracy simultaneously teaches your central nervous system to hit complex mechanical movements efficiently. We save all your session data so you can actually see your performance curve go up over time. 10 minutes of focused practice here beats 5 hours of mindless grinding.",
+    "clinicalRef": "Clinical Ref:",
+    "brainTrainingResearch": "brain training research",
+    "allRightsReserved": "ALL RIGHTS RESERVED.",
+    "lastUpdate": "LST UPDATE: JUL 2026",
+    "builtWith": "BUILT WITH",
+    "forGamers": "FOR GAMERS"
+  },
+  "guide": {
+    "howItWorks": "How It Works & Tips",
+    "subtitle": "Master the game with our comprehensive guide and improvement strategies.",
+    "jumpTo": "Jump to",
+    "about": "About",
+    "howToPlay": "How to Play",
+    "proTips": "Pro Tips",
+    "faq": "FAQ",
+    "aboutTest": "About This Test",
+    "trains": "What This Test Trains",
+    "instructions": "Instructions & Mechanics",
+    "quickSetup": "Quick Setup",
+    "keyRules": "Key Rules:",
+    "strategies": "Expert Strategies",
+    "faqs": "Frequently Asked Questions",
+    "continueTraining": "Continue Your Training"
+  },
+  "game": {
+    "difficultyLevel": "Difficulty Level",
+    "sessionStats": "Session Stats",
+    "active": "Active",
+    "soundOn": "Sound On",
+    "unmute": "Unmute",
+    "arena": "ARENA",
+    "initializeTest": "Initialize Test",
+    "calibrationComplete": "Calibration Complete",
+    "finalScore": "Final Score:",
+    "newRecord": "New Record!",
+    "recalibrate": "Recalibrate",
+    "menu": "Menu",
+    "seen": "Seen",
+    "new": "New",
+    "diffBeginner": "Beginner",
+    "diffEasy": "Easy",
+    "diffNormal": "Normal",
+    "diffHard": "Hard",
+    "diffProfessional": "Professional",
+    "diffExpert": "Expert",
+    "telemetryStream": "TELEMETRY_STREAM"
+  },
+  "stats": {
+    "score": "Score",
+    "best": "Best",
+    "lives": "Lives",
+    "timeleft": "Time Left",
+    "time": "Time",
+    "trial": "Trial",
+    "rt": "RT",
+    "avgrt": "Avg RT",
+    "bestrt": "Best RT",
+    "attempt": "Attempt",
+    "errors": "Errors",
+    "round": "Round",
+    "averageerr": "Average Err",
+    "besterr": "Best Err",
+    "targetmargin": "Target Margin",
+    "level": "Level",
+    "objects": "Objects",
+    "target": "Target",
+    "grid": "Grid",
+    "avgspeed": "Avg Speed",
+    "bestclick": "Best Click",
+    "failpenalty": "Fail Penalty"
+  },
+  "verbalMemory": {
+    "title": "VERBAL MEMORY",
+    "subtitle": "LEXICAL RECOGNITION",
+    "arenaGoal": "IDENTIFY NOVEL STIMULI",
+    "testTitle": "Verbal Memory Test",
+    "testDesc": "Test your verbal memory. Keep track of which words you've seen and which are new.",
+    "beginnerDesc": "50 Words · 5 Lives",
+    "easyDesc": "100 Words · 3 Lives",
+    "normalDesc": "300 Words · 3 Lives",
+    "hardDesc": "500 Words · 1 Life",
+    "proDesc": "1000 Words · 3s Limit"
+  },
+  "homeContent": {
+    "whatIsReflextryTitle": "What is Reflextry?",
+    "whatIsReflextryDesc1": "Reflextry offers 50+ free browser games for reaction time, memory, typing, clicking, accuracy, and aim practice. Each test records a score for that task so you can compare your own sessions.",
+    "whatIsReflextryDesc2": "A browser score includes the effects of your screen, input device, browser, and test settings. It is not a direct measurement of biological latency or a clinical assessment.",
+    "comparableSessionsTitle": "Make your practice sessions comparable",
+    "comparableStep1": "Choose the same test, difficulty, and input device each time.",
+    "comparableStep2": "Read the scoring rules before starting. Milliseconds, accuracy, span length, and words per minute describe different tasks.",
+    "comparableStep3": "Repeat several trials and compare trends rather than one unusually good score.",
+    "comparableStep4": "Take a break if you feel tired or uncomfortable.",
+    "comparableFooterPre": "Read our ",
+    "testingMethodology": "testing methodology",
+    "comparableFooterMid": " for scoring formulas and hardware limitations. Your ",
+    "personalStatistics": "personal statistics",
+    "comparableFooterPost": " show your own recorded progress, not population norms.",
+    "betterScoreTitle": "What a better score means",
+    "betterScoreDesc1Pre": "Practice gains are strongest on trained tasks; broad benefits in everyday cognition are less established. See ",
+    "simonsReview": "Simons and colleagues’ review of brain-training research",
+    "betterScoreDesc1Post": ". This research does not validate Reflextry as a medical or intelligence test.",
+    "betterScoreDesc2Pre": "We do not publish a verified global benchmark dataset. Use your own repeated results as a practice baseline. For background and references, visit ",
+    "theSciencePage": "the science page",
+    "betterScoreDesc2Post": ".",
+    "faqTitle": "Frequently asked questions",
+    "faq1Q": "Does brain training actually work?",
+    "faq1A": "Practice can improve performance on the task you train. A better game score does not establish improved intelligence, safer driving, or prevention of cognitive decline. Reflextry tests are practice tools, not clinical assessments.",
+    "faq2Q": "How often should I practice?",
+    "faq2A": "Start with a short session that fits your schedule and stop when tired or uncomfortable. Compare the same test and difficulty on the same device. There is no validated Reflextry training dose or guaranteed improvement timeline.",
+    "faq3Q": "Can I use Reflextry for an esports warmup?",
+    "faq3A": "You can use the aim, tracking, and reaction games for a browser-based warmup. Their scores measure performance in these exercises, not your rank or likely performance in another game.",
+    "faq4Q": "Is Reflextry free?",
+    "faq4A": "The tests are free to play in your browser. You can start a test without creating an account.",
+    "aboutTheLab": "About the lab",
+    "aboutTheLabDesc": "Who builds Reflextry, our methodology, and how to contact us.",
+    "allGuides": "All guides",
+    "allGuidesDesc": "Memory, reflex, speed, and accuracy articles from the Cognitive Journal.",
+    "faqCardTitle": "FAQ",
+    "faqCardDesc": "Training frequency, privacy, scoring, and common product questions.",
+    "whatReflextryMeasures": "What Reflextry Measures",
+    "whatReflextryMeasuresDesc": "Free browser tests for reaction time, working memory, click speed, aim, and accuracy. Measure a baseline, practice in short sessions, and track progress on the statistics page—no account required for core tools.",
+    "journalBadge": "Cognitive Lab Journal",
+    "journalTitle": "Measure first. Practice short. Read the method.",
+    "journalDesc": "Reflextry is a free browser lab for reaction time, working memory, speed, and accuracy. Scores are transparent (milliseconds, spans, accuracy)—not clinical diagnoses or invented percentiles. Start with a baseline, train in 10–15 minute sessions, and use our guides when you want the science behind the number.",
+    "scoreGuideTitle": "How we score tests",
+    "scoreGuideDesc": "What milliseconds, spans, and accuracy mean—and what we refuse to claim.",
+    "reactionTimeGuideTitle": "What is a good reaction time?",
+    "reactionTimeGuideDesc": "Realistic ranges, hardware noise, and how to read your own scores.",
+    "choiceReactionGuideTitle": "Choice vs simple reaction",
+    "choiceReactionGuideDesc": "Why more options slow you down, and how to train each separately."
+  },
+  "categoryHub": {
+    "reflex": {
+      "heroTitle": "Reflex Training & Reaction Games",
+      "heroSubtitle": "Measure your visual and auditory reaction times down to the millisecond.",
+      "heroDesc": "In professional sports, esports, and driving, reflex time is critical. Our reflex suite isolates different sensory pathways—visual, auditory, and directional—so you can pinpoint your fastest response times and train to lower your latency.",
+      "whatItCovers": "What This Arena Covers",
+      "whatItCoversDesc": "Visual and auditory reaction tests timed in milliseconds—simple reaction, sound cues, grid clicks, peripheral targets, and multi-stimulus choices. Built to isolate stimulus-to-response latency for practice and warm-ups.",
+      "benefit1Title": "Visual Reflex",
+      "benefit1Desc": "React to colors",
+      "benefit2Title": "Audio Reflex",
+      "benefit2Desc": "React to sounds",
+      "benefit3Title": "Spatial Reflex",
+      "benefit3Desc": "React across screen"
+    },
+    "memory": {
+      "heroTitle": "Memory Training Games & Cognitive Recall",
+      "heroSubtitle": "Strengthen your working memory capacity, digit span, and spatial recall.",
+      "heroDesc": "Working memory is the mental workspace you use when following directions or solving problems. Our memory games leverage adaptive difficulty: as you improve, the challenge scales up to push your retention limits.",
+      "whatItCovers": "What This Arena Covers",
+      "whatItCoversDesc": "Spatial patterns, numeric sequences, verbal recognition, and multi-object tracking. Built to exercise your working memory buffer through progressive challenge levels.",
+      "benefit1Title": "Spatial Recall",
+      "benefit1Desc": "Tile layout memory",
+      "benefit2Title": "Digit Span",
+      "benefit2Desc": "Numeric memory retention",
+      "benefit3Title": "Pattern Sequence",
+      "benefit3Desc": "Expanding flash patterns"
+    },
+    "speed": {
+      "heroTitle": "Speed Tests & Velocity Benchmarks",
+      "heroSubtitle": "Push your clicks per second (CPS), typing speed (WPM), and calculation agility.",
+      "heroDesc": "Speed benchmarks measure the raw throughput of your neuromuscular system—how many precise actions you can execute per unit of time across mouse and keyboard inputs.",
+      "whatItCovers": "What This Arena Covers",
+      "whatItCoversDesc": "Mouse clicking speed across multiple intervals, typing words per minute, rapid mental math, and visual scanning on Schulte tables.",
+      "benefit1Title": "Click Speed",
+      "benefit1Desc": "Measure raw CPS",
+      "benefit2Title": "Typing Speed",
+      "benefit2Desc": "Benchmark WPM",
+      "benefit3Title": "Mental Math",
+      "benefit3Desc": "Rapid calculations"
+    },
+    "accuracy": {
+      "heroTitle": "Aim & Precision Training",
+      "heroSubtitle": "Refine your micro-target accuracy, hand-eye coordination, and visual estimation.",
+      "heroDesc": "Speed means nothing without precision. Our accuracy modules train you to lock in and hit targets cleanly with minimal error margins.",
+      "whatItCovers": "What This Arena Covers",
+      "whatItCoversDesc": "Precision micro-clicking, angle estimation, pattern matching, color discrimination, and data entry accuracy.",
+      "benefit1Title": "Precision Aim",
+      "benefit1Desc": "Micro-target clicks",
+      "benefit2Title": "Spatial Angles",
+      "benefit2Desc": "Angle estimation",
+      "benefit3Title": "Visual Match",
+      "benefit3Desc": "Pattern recognition"
+    },
+    "gaming": {
+      "heroTitle": "Esports Warmup & Aim Arena",
+      "heroSubtitle": "Calibrate mouse flick shots, target tracking, and combat reflexes for competitive games.",
+      "heroDesc": "Built specifically for gamers in Counter-Strike, Valorant, Apex Legends, and Overwatch to warm up mechanical muscle memory before jumping into ranked games.",
+      "whatItCovers": "What This Arena Covers",
+      "whatItCoversDesc": "Flick shot aim, continuous target tracking, split-second combat reflexes, and dodging obstacle streams.",
+      "benefit1Title": "Flick Shots",
+      "benefit1Desc": "Target acquisition",
+      "benefit2Title": "Tracking",
+      "benefit2Desc": "Smooth target follow",
+      "benefit3Title": "Combat Reflex",
+      "benefit3Desc": "Rapid decision making"
+    },
+    "exploreOther": "Explore Other Categories",
+    "toolNameCol": "Tool Name",
+    "bestForCol": "Best For (Use Case)",
+    "coreBenefitCol": "Core Benefit"
+  },
+  "allTools": {
+    "title": "All Training Tools",
+    "subtitle": "Explore our complete suite of cognitive and psychomotor tests. Filter by arena or browse below to start benchmarking.",
+    "filterAll": "All Tools",
+    "filterMemory": "Memory",
+    "filterReflex": "Reflex",
+    "filterSpeed": "Speed",
+    "filterAccuracy": "Accuracy",
+    "filterGaming": "Gaming",
+    "startTest": "Start Test"
+  },
+  "tools": {
+    "sequence-memory": {
+      "title": "Sequence Memory Test",
+      "desc": "Practice recalling expanding spatial light patterns with our free Sequence Memory Test. Read the scoring rules and compare your own sessions."
+    },
+    "sequence": {
+      "title": "Sequence Memory Test",
+      "desc": "Practice recalling expanding spatial light patterns with our free Sequence Memory Test. Read the scoring rules and compare your own sessions."
+    },
+    "number-memory": {
+      "title": "Number Memory Test",
+      "desc": "Measure working memory and digit span capacity with our free Number Memory Test. Memorize expanding numeric sequences and benchmark your recall score."
+    },
+    "number": {
+      "title": "Number Memory Test",
+      "desc": "Measure working memory and digit span capacity with our free Number Memory Test. Memorize expanding numeric sequences and benchmark your recall score."
+    },
+    "visual-memory": {
+      "title": "Visual Memory Test",
+      "desc": "Enhance visual retention and spatial pattern recognition. Test your visual memory by recalling flash grid patterns on an expanding matrix. Free human benchmark tool."
+    },
+    "visual": {
+      "title": "Visual Memory Test",
+      "desc": "Enhance visual retention and spatial pattern recognition. Test your visual memory by recalling flash grid patterns on an expanding matrix. Free human benchmark tool."
+    },
+    "color-memory": {
+      "title": "Color Memory Test",
+      "desc": "Challenge your chromatic memory and visual attention. Memorize fast-shifting color sequences and train cognitive flexibility with our free Color Memory Test."
+    },
+    "color": {
+      "title": "Color Memory Test",
+      "desc": "Challenge your chromatic memory and visual attention. Memorize fast-shifting color sequences and train cognitive flexibility with our free Color Memory Test."
+    },
+    "shape-memory": {
+      "title": "Shape Memory Test",
+      "desc": "Train geometric shape discrimination and spatial memory. Memorize abstract shapes and symbols to enhance non-verbal visual reasoning and focus."
+    },
+    "shape": {
+      "title": "Shape Memory Test",
+      "desc": "Train geometric shape discrimination and spatial memory. Memorize abstract shapes and symbols to enhance non-verbal visual reasoning and focus."
+    },
+    "symbol-memory": {
+      "title": "Symbol Memory Test",
+      "desc": "Improve abstract pattern recognition and associative memory. Match cryptic symbols and icons to sharpen mental focus and visual processing speed."
+    },
+    "symbol": {
+      "title": "Symbol Memory Test",
+      "desc": "Improve abstract pattern recognition and associative memory. Match cryptic symbols and icons to sharpen mental focus and visual processing speed."
+    },
+    "word-recall": {
+      "title": "Word Recall Memory Test",
+      "desc": "Evaluate your verbal memory retention and vocabulary recognition. Test whether words are new or previously seen to measure short-term linguistic memory."
+    },
+    "card-match": {
+      "title": "Card Match Memory Game",
+      "desc": "Train spatial memory and visual pattern recall with our free online Card Match Memory Game. Flip cards, match pairs with fewest moves, and beat the clock."
+    },
+    "chimp-test": {
+      "title": "Chimp Test",
+      "desc": "Are you smarter than a chimpanzee? Take the famous Chimp Test to measure your visuospatial working memory. Memorize the number grid before it disappears."
+    },
+    "verbal-memory": {
+      "title": "Verbal Memory Test",
+      "desc": "Test verbal working memory with our free Verbal Memory Test. Identify seen words vs new words to measure linguistic retention and cognitive processing speed."
+    },
+    "object-tracking": {
+      "title": "Multiple Object Tracking",
+      "desc": "Test dynamic visual attention and spatial tracking. Follow multiple moving target spheres among distractors in this science-backed cognitive test."
+    },
+    "n-back": {
+      "title": "N",
+      "desc": "Train working memory with the classic N-Back task. Match letters that appeared N steps ago, track hits and accuracy, and push from 1-back to 3-back."
+    },
+    "reaction-time": {
+      "title": "Reaction Time Test",
+      "desc": "Test and improve your visual reaction time in milliseconds. Take our free millisecond reaction test, benchmark against pro gamers, and track your reflex progress."
+    },
+    "reaction": {
+      "title": "Esports Gamer Reaction Test",
+      "desc": "Test competitive combat reflexes, quick-time event (QTE) parry timing, and esports reaction speeds in millisecond-accurate simulated combat scenarios."
+    },
+    "sound-reaction": {
+      "title": "Audio Reaction Time Test",
+      "desc": "Measure your auditory reaction speed in milliseconds. Test hearing reflexes with instant audio cues and compare your sound reaction vs visual reaction times."
+    },
+    "sound": {
+      "title": "Audio Reaction Time Test",
+      "desc": "Measure your auditory reaction speed in milliseconds. Test hearing reflexes with instant audio cues and compare your sound reaction vs visual reaction times."
+    },
+    "grid-shot": {
+      "title": "Grid Shot Aim Trainer",
+      "desc": "Warm up your aim and mouse speed with Grid Shot. Click rapidly appearing targets across the grid to boost hand-eye coordination for FPS games like Valorant and CS2."
+    },
+    "grid": {
+      "title": "Grid Speed Test",
+      "desc": "Train visual scanning and peripheral reading speed with Schulte Tables. Find numbers in ascending order on a 5x5 grid to expand visual search speed."
+    },
+    "peripheral-vision": {
+      "title": "Peripheral Vision Test",
+      "desc": "Train peripheral vision awareness and side reaction speed. Spot and click off-center stimuli to expand visual focus for driving, sports, and competitive gaming."
+    },
+    "peripheral": {
+      "title": "Peripheral Vision Test",
+      "desc": "Train peripheral vision awareness and side reaction speed. Spot and click off-center stimuli to expand visual focus for driving, sports, and competitive gaming."
+    },
+    "directional-reflex": {
+      "title": "Directional Reflex Test",
+      "desc": "Test keyboard response speed and spatial decision-making. Press arrow keys matching rapid directional prompts to improve cognitive processing and reflex agility."
+    },
+    "direction": {
+      "title": "Directional Reflex Test",
+      "desc": "Test keyboard response speed and spatial decision-making. Press arrow keys matching rapid directional prompts to improve cognitive processing and reflex agility."
+    },
+    "multi-stimulus": {
+      "title": "Multi",
+      "desc": "Test choice reaction time and selective attention. Process multiple visual and audio stimuli simultaneously to measure split-second decision-making speed."
+    },
+    "sequence-reaction": {
+      "title": "Sequence Reaction Test",
+      "desc": "Combine memory recall with rapid motor reflexes. Follow fast-paced light sequences and execute rapid combos to train rhythmic response times and speed."
+    },
+    "whack-a-mole": {
+      "title": "Whack",
+      "desc": "Play classic Whack-a-Mole online for free. Tap popping moles as fast as possible to measure reaction speed, precision clicking, and motor agility."
+    },
+    "color-switch": {
+      "title": "Color Switch Reflex Test",
+      "desc": "Train color reaction time and selective response speed. React immediately to screen color shifts and flash signals with zero hesitation."
+    },
+    "time-perception": {
+      "title": "Time Perception Test",
+      "desc": "Test your internal clock and temporal estimation. Hold and release the button to accurately produce target time intervals down to the millisecond."
+    },
+    "go-no-go": {
+      "title": "Go / No",
+      "desc": "Measure response inhibition with a Go/No-Go task. Press on green Go trials, withhold on red No-Go trials, and track accuracy plus reaction time."
+    },
+    "flanker": {
+      "title": "Flanker Test",
+      "desc": "Take the Eriksen Flanker task online. Respond to the center arrow while ignoring congruent or incongruent flankers to measure attention control."
+    },
+    "choice-reaction": {
+      "title": "Choice Reaction Time Test",
+      "desc": "Measure choice reaction time across 2–4 colored targets. Click the lit box as fast as possible and beat your average RT in milliseconds."
+    },
+    "cps-test": {
+      "title": "CPS Test",
+      "desc": "Measure your clicking speed with our free CPS Test. Test 1s, 5s, 10s, 30s, and 60s modes for normal clicking, jitter clicking, butterfly clicking, and drag clicking."
+    },
+    "click": {
+      "title": "CPS Test",
+      "desc": "Measure your clicking speed with our free CPS Test. Test 1s, 5s, 10s, 30s, and 60s modes for normal clicking, jitter clicking, butterfly clicking, and drag clicking."
+    },
+    "speed-math": {
+      "title": "Mental Math Speed Test",
+      "desc": "Sharpen mental arithmetic and calculation speed. Solve rapid addition, subtraction, multiplication, and division under the timer to boost math fluency."
+    },
+    "math": {
+      "title": "Mental Math Speed Test",
+      "desc": "Sharpen mental arithmetic and calculation speed. Solve rapid addition, subtraction, multiplication, and division under the timer to boost math fluency."
+    },
+    "math-speed": {
+      "title": "Mental Math Speed Test",
+      "desc": "Sharpen mental arithmetic and calculation speed. Solve rapid addition, subtraction, multiplication, and division under the timer to boost math fluency."
+    },
+    "typing-speed": {
+      "title": "Typing Speed Test",
+      "desc": "Test words per minute (WPM) and accuracy with our free 1-minute Typing Speed Test. Benchmark your keyboarding speed, track error rates, and improve touch typing."
+    },
+    "typing": {
+      "title": "Typing Speed Test",
+      "desc": "Test words per minute (WPM) and accuracy with our free 1-minute Typing Speed Test. Benchmark your keyboarding speed, track error rates, and improve touch typing."
+    },
+    "word-accuracy": {
+      "title": "Word Accuracy Test",
+      "desc": "Improve typing precision and eliminate keystroke errors. Type high-speed prompt words with 100% accuracy to master error-free typing under time pressure."
+    },
+    "words": {
+      "title": "Speed Reading Test",
+      "desc": "Test reading speed and word recognition. Measure words per minute reading fluency and rapid visual identification with our interactive Speed Words tool."
+    },
+    "word-speed": {
+      "title": "Speed Reading Test",
+      "desc": "Test reading speed and word recognition. Measure words per minute reading fluency and rapid visual identification with our interactive Speed Words tool."
+    },
+    "grid-selection": {
+      "title": "Grid Speed Test",
+      "desc": "Train visual scanning and peripheral reading speed with Schulte Tables. Find numbers in ascending order on a 5x5 grid to expand visual search speed."
+    },
+    "grid-speed": {
+      "title": "Grid Speed Test",
+      "desc": "Train visual scanning and peripheral reading speed with Schulte Tables. Find numbers in ascending order on a 5x5 grid to expand visual search speed."
+    },
+    "number-rush": {
+      "title": "Number Rush Speed Test",
+      "desc": "Test rapid number recognition and tap speed. Hunt and click ascending numbers as fast as humanly possible to benchmark your cognitive processing rate."
+    },
+    "quick-sort": {
+      "title": "Quick Sort Speed Game",
+      "desc": "Challenge cognitive categorization and rapid decision speed. Sort incoming items into corresponding categories under strict time constraints."
+    },
+    "schulte-table": {
+      "title": "Schulte Table Test",
+      "desc": "Classic Schulte Table challenge. Click shuffled numbers in order on 3×3 to 7×7 grids. Train peripheral vision, visual search speed, and focus under the clock."
+    },
+    "aim-trainer": {
+      "title": "FPS Aim Trainer",
+      "desc": "Improve your mouse accuracy, target tracking, and flick speed for FPS games like Valorant, CS2, and Apex. Free 3D aim trainer directly in your web browser."
+    },
+    "aim": {
+      "title": "FPS Aim Trainer",
+      "desc": "Improve your mouse accuracy, target tracking, and flick speed for FPS games like Valorant, CS2, and Apex. Free 3D aim trainer directly in your web browser."
+    },
+    "rpg-reaction": {
+      "title": "Esports Gamer Reaction Test",
+      "desc": "Test competitive combat reflexes, quick-time event (QTE) parry timing, and esports reaction speeds in millisecond-accurate simulated combat scenarios."
+    },
+    "endless-dodge": {
+      "title": "Endless Dodge Game",
+      "desc": "Test dodging reflexes and spatial evasion agility. Navigate your cursor through infinite swarms of moving obstacles in this high-intensity reflex survival game."
+    },
+    "stroop-drop": {
+      "title": "Stroop Effect Test",
+      "desc": "Challenge your inhibitory control with the interactive Stroop Drop game. Resolve cognitive interference between falling color words and their ink hues."
+    },
+    "target-tracking": {
+      "title": "Target Tracking Aim Trainer",
+      "desc": "Master smooth mouse tracking for competitive FPS games. Practice continuous precision aim against evasive moving targets with zero mouse smoothing."
+    },
+    "flick-shot": {
+      "title": "Flick Shot Aim Trainer",
+      "desc": "Train muscle memory and snap aiming with our Flick Shot trainer. Calibrate rapid micro-adjustments and target acquisition for tactical shooters."
+    },
+    "rhythm-tap": {
+      "title": "Rhythm Tap Game",
+      "desc": "Benchmark your musical timing accuracy and millisecond rhythm perception. Tap in sync with increasing BPM tempos and track off-beat latency errors."
+    },
+    "image-recognition": {
+      "title": "Image Recognition Test",
+      "desc": "Test visual perception and fast image discrimination. Identify subtle visual differences and match target objects at high speed to train observation skills."
+    },
+    "data-entry": {
+      "title": "Data Entry Accuracy Test",
+      "desc": "Measure data entry speed, alphanumeric typing precision, and error rates. Test clerical keystrokes per hour (KPH) with realistic numeric and code benchmarks."
+    },
+    "data": {
+      "title": "Data Entry Accuracy Test",
+      "desc": "Measure data entry speed, alphanumeric typing precision, and error rates. Test clerical keystrokes per hour (KPH) with realistic numeric and code benchmarks."
+    },
+    "pattern-matching": {
+      "title": "Pattern Matching Test",
+      "desc": "Improve visual pattern recognition and non-verbal reasoning. Match complex matrix patterns and geometric sequences to test visual acuity and analytical thinking."
+    },
+    "precision-click": {
+      "title": "Precision Clicking Test",
+      "desc": "Sharpen mouse precision and micro-target accuracy. Click small, pinpoint targets without missing to refine fine motor control and cursor accuracy for gaming."
+    },
+    "angle-estimation": {
+      "title": "Angle Estimation Test",
+      "desc": "Test your eye for geometry and spatial estimation. Guess degrees of given angles accurately to benchmark visual angle acuity and spatial judgment."
+    },
+    "color-match": {
+      "title": "Color Match Test",
+      "desc": "Test color perception and subtle shade discrimination with our Color Match Test. Match target RGB hues under time pressure and benchmark visual precision."
+    },
+    "color-blindness": {
+      "title": "Color Blindness Test",
+      "desc": "Explore Ishihara-style procedural dot plates in a free educational color-vision game. Screen settings affect results; this is not a diagnostic assessment."
+    },
+    "mental-rotation": {
+      "title": "Mental Rotation Test",
+      "desc": "Benchmark 3D spatial visualization and cognitive rotation speed. Determine whether complex geometric shapes are identical or mirror-reversed in real time."
+    }
+  },
+  "about": {
+    "identityProfile": "Identity Profile",
+    "heroTitle": "About",
+    "heroTitleHighlight": "Us",
+    "heroSubtitle": "A no-nonsense platform for measuring and pushing your mechanical limits. Built by competitive players for anyone who wants to get sharper.",
+    "missionLabel": "Mission Statement",
+    "missionTitle": "Our Mission",
+    "missionDesc": "Our mission is simple: democratize the exact same high-level reaction and cognitive testing tools used by pro esports teams. Improvement starts with raw, honest data. We built Reflextry so you can find your exact baseline, lock in, and beat it.",
+    "originLabel": "Origin Log",
+    "originTitle": "Our Story",
+    "originP1": "Reflextry began as a small side project: a browser script to measure click latency without installing another desktop trainer. That one tool turned into a question we kept hearing—can we put memory, reflex, speed, accuracy, and aim drills in one place, free to try, with scores you can track yourself?",
+    "originP2": "We built the site in Surat, India, as a small two-person team. Every module ships as a real interactive test in the browser—not a download wall, not a paywalled “premium battery.” Progress lives in your session and statistics tools so you can see trends without creating an account for core practice.",
+    "originP3": "Today Reflextry is used by gamers warming up before ranked, students drilling working memory, and curious visitors checking reaction time or color vision. We keep expanding the suite carefully: new tests only ship when scoring rules are clear and the UI explains what the number means.",
+    "coreValuesLabel": "Core Values",
+    "valAccuracyTitle": "Accuracy",
+    "valAccuracyDesc": "No fluff, just precise measurements and reliable testing to track your true mechanical baseline.",
+    "valInnovationTitle": "Innovation",
+    "valInnovationDesc": "Constantly pushing new modules to test the absolute limits of human reaction time.",
+    "valAccessibilityTitle": "Accessibility",
+    "valAccessibilityDesc": "Professional-grade testing and performance tracking tools, completely free for everyone.",
+    "valUserFirstTitle": "User First",
+    "valUserFirstDesc": "We build what the community asks for. If a game mode sucks, we fix it.",
+    "whatWeOfferLabel": "What We Offer",
+    "offerBrainTitle": "Brain Training Games",
+    "offerBrainDesc": "Push your working memory and pattern recognition with cognitive loads designed to force neuroplasticity.",
+    "offerReflexTitle": "Reaction & Speed Tests",
+    "offerReflexDesc": "Measure your raw physical latency down to the exact millisecond in our aim, click, and reaction arenas.",
+    "offerTrackingTitle": "Progress Tracking",
+    "offerTrackingDesc": "Automatically log your session data and watch your performance curve go up over time.",
+    "offerLeaderboardTitle": "Achievements & Leaderboards",
+    "offerLeaderboardDesc": "Unlock ranks, grind daily challenges, and see where you stack up against players worldwide.",
+    "ctaTitle": "Ready to Find Your Baseline?",
+    "ctaDesc": "No account needed. Just pick a tool, lock in, and test your speed.",
+    "ctaStart": "Start Reaction Test",
+    "ctaExplore": "Explore All Tools"
+  },
+  "faqPage": {
+    "heroTitle": "Frequently Asked Questions",
+    "heroSubtitle": "Everything you need to know about the tests, training benefits, and scoring.",
+    "catGettingStarted": "Getting Started",
+    "catBrainTraining": "Brain Training",
+    "catMemoryTraining": "Memory Training",
+    "catReactionTime": "Reaction Time",
+    "catSpeedAim": "Speed & Aim",
+    "catPrivacyScores": "Privacy & Scores",
+    "q1": "What exactly is Reflextry?",
+    "a1": "It's a free platform built to measure and improve your raw mechanical skills—things like reaction time, working memory, and clicking accuracy. No downloads or sign-ups required. Just pick a tool and start testing your limits.",
+    "q2": "Do I have to create an account?",
+    "a2": "Nope. Everything is completely free and accessible right now. We'll be adding optional accounts later if you want to save your progress across devices or compete on global leaderboards, but the core tools will always be open.",
+    "q3": "Where should I start?",
+    "a3": "If you play shooters, hit the Aim Trainer or Reaction Time Test. If you're here for cognitive training, try Sequence Memory or Number Memory. We recommend just trying a few out to see where your baseline is at.",
+    "q4": "Does brain training actually do anything?",
+    "a4": "Yes, it's called 'near transfer' in neuroscience. If you practice remembering number sequences daily, your brain physically adapts (neuroplasticity) and you get better at holding information in your short-term memory. It's like going to the gym, but for your central nervous system.",
+    "q5": "How long until I see results?",
+    "a5": "If you grind for 10-20 minutes a day, you'll start seeing your scores go up within 2 to 3 weeks. Consistency matters way more than doing a massive 2-hour session once a week.",
+    "q6": "How do I stop forgetting things immediately?",
+    "a6": "The quickest hack is 'chunking'—grouping items together (like remembering a phone number in blocks rather than single digits). Also, your brain deletes things it thinks are useless, so you have to actively focus and force recall to make it stick.",
+    "q7": "Working memory vs long-term memory?",
+    "a7": "Working memory is your brain's RAM—it holds what you're thinking about right now. Long-term memory is the hard drive. Our tools strictly train your RAM, so you can process more things simultaneously without dropping the ball.",
+    "q8": "What is a 'good' reaction time?",
+    "a8": "The global average visual reaction time sits around 200–250ms. Competitive gamers frequently clock in at 150–190ms. Anything under 150ms is top 1% human capability.",
+    "q9": "Does my monitor or mouse cause input lag?",
+    "a9": "Yes. A 60Hz monitor adds ~16ms of frame delay compared to a 144Hz (~7ms) or 240Hz (~4ms) panel. Wireless mice with poor polling rates can also add latency. For pure test accuracy, use a gaming mouse and high-refresh display.",
+    "q10": "Can I train my CPS (Clicks Per Second)?",
+    "a10": "Yes. Standard clicking usually caps around 6–8 CPS. Techniques like jitter clicking or butterfly clicking can push you past 12–16 CPS.",
+    "q11": "Is my score saved if I close the browser?",
+    "a11": "Your scores and session records are stored locally in your browser's local storage. They persist across reloads on the same device and browser.",
+    "q12": "Do you sell or collect my personal data?",
+    "a12": "No. We do not track or sell personal identifying data. All cognitive and reaction test metrics belong to you."
+  },
+  "contact": {
+    "heroTitle": "Get in",
+    "heroTitleHighlight": "Touch",
+    "heroSubtitle": "Questions, feature suggestions, partnership requests, or bug reports? We read every message.",
+    "generalInquiries": "General Inquiries",
+    "generalInquiriesDesc": "For general inquiries, partnerships, and press.",
+    "technicalSupport": "Technical Support",
+    "technicalSupportDesc": "For bug reports, device issues, or scoring questions.",
+    "feedbackTitle": "Feedback & Ideas",
+    "feedbackDesc": "Suggest a new module or improvements to existing games.",
+    "formName": "Your Name",
+    "formNamePlaceholder": "e.g. Alex Chen",
+    "formEmail": "Email Address",
+    "formEmailPlaceholder": "you@example.com",
+    "formSubject": "Subject",
+    "formSubjectPlaceholder": "How can we help?",
+    "formMessage": "Message",
+    "formMessagePlaceholder": "Tell us what's on your mind...",
+    "formSubmit": "Send Message",
+    "formSending": "Sending...",
+    "successMsg": "Message sent successfully!",
+    "errorMsg": "Failed to send message. Please try again."
+  },
+  "leaderboard": {
+    "heroTitle": "Global Leaderboard",
+    "heroSubtitle": "Compete against players worldwide and track your progress across all Reflextry challenges. Establish your baseline and reach for the top tier.",
+    "personalBests": "Personal Bests",
+    "personalBestsDesc": "Your top scores locally",
+    "globalRankings": "Global Rankings",
+    "globalRankingsDesc": "Compare worldwide",
+    "trackProgress": "Track Progress",
+    "trackProgressDesc": "See your improvements",
+    "myScores": "My Scores",
+    "global": "Global",
+    "rank": "Rank",
+    "player": "Player",
+    "score": "Score",
+    "date": "Date",
+    "testNow": "Test Now",
+    "noScoresYet": "No scores recorded yet. Complete a test to see your ranking!"
+  },
+  "statistics": {
+    "heroTitle": "Personal Statistics",
+    "heroSubtitle": "Track your historical performance curves, consistency scores, and personal bests.",
+    "totalSessions": "Total Sessions",
+    "bestPerformance": "Best Performance",
+    "averageScore": "Average Score",
+    "scoreTrend": "Score Trend",
+    "noData": "No session data recorded yet. Play a game to view your stats!",
+    "downloadData": "Export Data",
+    "selectTest": "Select Test",
+    "clearHistory": "Clear History"
+  },
+  "challenges": {
+    "heroTitle": "Daily Challenges",
+    "heroSubtitle": "Complete your daily cognitive exercises to build consistency, earn streak rewards, and level up.",
+    "streak": "Current Streak",
+    "days": "Days",
+    "todayChallenge": "Today's Challenge",
+    "target": "Target:",
+    "completed": "Completed!",
+    "startChallenge": "Start Challenge",
+    "streakReward": "Streak Multiplier",
+    "howItWorks": "How Daily Challenges Work",
+    "howItWorksP1": "A new challenge is generated every 24 hours. Clear the objective to maintain your daily streak.",
+    "howItWorksP2": "Consistent daily training promotes neuroplastic adaptation and prevents cognitive plateauing."
+  },
+  "achievements": {
+    "heroTitle": "Achievements & Trophies",
+    "heroSubtitle": "Unlock prestigious medals as you break reaction speed barriers and achieve cognitive milestones.",
+    "totalUnlocked": "Total Unlocked",
+    "unlocked": "Unlocked",
+    "locked": "Locked",
+    "rarityCommon": "Common",
+    "rarityRare": "Rare",
+    "rarityEpic": "Epic",
+    "rarityLegendary": "Legendary"
+  },
+  "categorySeo": {
+    "reflex": {
+      "sec0Heading": "How Reaction Time Works",
+      "sec0Text": "Your reaction time is governed by three stages: perception (detecting the stimulus), cognition (deciding what to do), and motor execution (performing the action). Each stage can be trained independently. Perception speed improves with stimulus familiarity — the more you practice reacting to a green flash, the faster your visual cortex recognizes it. Cognitive processing accelerates when decision-making becomes automatic. Motor execution improves through myelination of frequently used neural pathways, which literally increases the speed of signal transmission.",
+      "sec1Heading": "Factors That Affect Reaction Time",
+      "sec1Text": "Several variables influence your reaction time on any given day. Sleep deprivation can add 20–50ms to your baseline — studies show that 24 hours without sleep impairs reaction time more than a blood alcohol level of 0.10%. Caffeine typically reduces reaction time by 10–20ms for 3–5 hours. Physical fitness correlates with faster processing speed. Age plays a role: reaction time peaks between ages 18–25 and gradually slows thereafter, though training can significantly offset this decline.",
+      "sec2Heading": "Real-World Applications",
+      "sec2Text": "Fast reaction time is critical in driving, where a 100ms difference at 60 mph translates to 8.8 additional feet of stopping distance. In competitive esports, professional Counter-Strike players with sub-170ms reaction times gain a measurable advantage in aim duels. Athletes in sports like table tennis, boxing, and motorsport undergo dedicated reaction training as part of their conditioning programs."
+    },
+    "memory": {
+      "sec0Heading": "The Science Behind Memory Training",
+      "sec0Text": "Research in cognitive neuroscience has demonstrated that working memory capacity is not fixed. A landmark study published in PNAS showed that intensive working memory training can lead to improvements in fluid intelligence — the ability to reason and solve new problems. Our memory games leverage adaptive difficulty: as you improve, the challenge scales up, forcing your brain to continuously adapt through neuroplasticity.",
+      "sec1Heading": "Types of Memory We Train",
+      "sec1Text": "Our Memory Arena targets multiple memory systems. Visuospatial memory is tested through games like Visual Memory and Sequence Memory. Verbal memory is challenged in our Verbal Memory test, requiring you to distinguish between seen and novel words. Numeric memory is pushed in Number Memory, where you reproduce increasingly long digit strings. Each system engages different brain regions.",
+      "sec2Heading": "Who Benefits from Memory Training?",
+      "sec2Text": "Students preparing for exams find that stronger working memory directly correlates with better reading comprehension and mathematical problem-solving. Older adults use memory training to build cognitive reserve against age-related decline. Competitive gamers rely on spatial memory to track enemy positions and cooldowns simultaneously."
+    },
+    "speed": {
+      "sec0Heading": "Understanding CPS (Clicks Per Second)",
+      "sec0Text": "The average untrained person clicks at 5–7 CPS. Competitive gamers regularly achieve 10–14 CPS using techniques like jitter clicking or butterfly clicking. The finger dexterity and fine motor control they develop transfer to any precision mouse task. Our Click Speed test measures your CPS across multiple time intervals.",
+      "sec1Heading": "Typing Speed and Professional Impact",
+      "sec1Text": "The average adult types at 40 WPM, while professional typists achieve 65–75 WPM. Reaching 80–100 WPM eliminates typing as a bottleneck in knowledge work, allowing fingers to keep up with thoughts. Our typing tests measure both gross WPM and net accuracy.",
+      "sec2Heading": "Mental Math Speed",
+      "sec2Text": "Our Math Speed test challenges numerical processing and mental arithmetic. The ability to perform rapid calculations draws on working memory, procedural rules, and processing speed. Regular practice improves your intuitive feel for numbers."
+    },
+    "accuracy": {
+      "sec0Heading": "Visual-Spatial Intelligence",
+      "sec0Text": "Visual-spatial intelligence is your ability to perceive, analyze, and mentally manipulate visual information. Pattern Matching tests evaluate your capacity to identify regularities in visual data. Mental Rotation challenges your ability to manipulate 3D objects in your mind's eye.",
+      "sec1Heading": "Fine Motor Control and Precision",
+      "sec1Text": "Precision Click tests measure your ability to accurately position a cursor on small targets. Fine motor control depends on the cerebellum, motor cortex, and proprioceptive feedback. Regular practice builds muscle memory so precise movements become automatic.",
+      "sec2Heading": "Color Perception and Estimation",
+      "sec2Text": "Our Color Match and Angle Estimation tools train perceptual calibration — the accuracy with which you judge visual properties. Angle estimation develops spatial reasoning used in geometry and navigation. Immediate feedback recalibrates internal cognitive models."
+    },
+    "gaming": {
+      "sec0Heading": "Aim Training Mechanics",
+      "sec0Text": "Aim in FPS games breaks down into distinct mechanics. Tracking is the ability to keep your crosshair on a moving target. Flicking is the rapid snap of your crosshair to sudden targets. Grid click targets the ability to rapidly reacquire targets at varying distances.",
+      "sec1Heading": "The Science of Esports Performance",
+      "sec1Text": "Research published in PLOS ONE found that professional gamers demonstrate significantly faster visuomotor processing speeds compared to non-gamers. Action video game players exhibit enhanced attention allocation and perceptual decision-making developed through deliberate practice.",
+      "sec2Heading": "Optimal Warm-Up Protocol",
+      "sec2Text": "A 5–10 minute warm-up improves performance and reduces injury risk. Progress from slow, controlled movements to game-speed reactions: start with 2 minutes of Grid Click, 3 minutes of Aim Trainer, followed by 2 minutes of Flick Shot at maximum speed."
+    }
+  },
+  "categoryGuide": {
+    "reflex": {
+      "whatIsTitle": "What is Reflex and Reaction Training?",
+      "whatIsDesc": "Reflex training measures the total elapsed time between the presentation of a sensory stimulus and the subsequent motor response. While innate physiological factors play a role, regular training helps strip away hesitation and decision-fatigue, training your central nervous system to fire motor neurons instantly upon receiving a specific cue.",
+      "howToTitle": "How to Improve Your Reaction Time?",
+      "howToStep1Title": "Eliminate Distractions",
+      "howToStep1Desc": "Focus entirely on the center anchor point of your screen.",
+      "howToStep2Title": "Use Optimal Hardware",
+      "howToStep2Desc": "Ensure you are using a high refresh rate monitor (144Hz+) and a low-latency wired mouse.",
+      "howToStep3Title": "Stay Hydrated and Rested",
+      "howToStep3Desc": "Sleep deprivation can increase reaction times by over 50 milliseconds.",
+      "howToStep4Title": "Practice Daily",
+      "howToStep4Desc": "Just 5 minutes of Reaction Time and Sound Reflex tests daily can sharpen your baseline.",
+      "shouldPracticeTitle": "Should I Practice Daily?",
+      "shouldPracticeDesc": "Yes. Frequent, brief training sessions condition your brain to bypass complex cognitive processing for simple tasks, relying instead on faster, automated motor pathways.",
+      "comparisonTitle": "Reflex Tools Comparison",
+      "row1Tool": "Reaction Time",
+      "row1BestFor": "Gamers, General Population",
+      "row1Benefit": "Measures baseline visual reflex speed in milliseconds.",
+      "row2Tool": "Sound Reflex",
+      "row2BestFor": "Athletes (Track/Swimming)",
+      "row2Benefit": "Isolates auditory pathways, which process faster than visual ones.",
+      "row3Tool": "Directional Reflex",
+      "row3BestFor": "Drivers, Goalkeepers",
+      "row3Benefit": "Trains cognitive translation of a directional cue into a physical swipe.",
+      "benchmarksTitle": "Benchmarks & Scientific Proof",
+      "benchmarksDesc": "According to human factor studies, average human reaction time is around 250 milliseconds for visual cues and 170 milliseconds for audio cues. Through active repetition and neurological adaptation, elite athletes and gamers can bring their visual reaction times below 150 milliseconds. A study by the Journal of Sports Sciences concluded that specialized visual-motor training can significantly reduce reaction latency in competitive environments.",
+      "faqTitle": "Frequently Asked Questions",
+      "faq1Q": "Can you actually train your reaction time?",
+      "faq1A": "While your raw genetic reaction time has a hard limit, you can definitely train your brain to approach that limit consistently. Our tools help strip away hesitation and decision-fatigue, training your nervous system to fire instantly upon receiving a specific cue.",
+      "faq2Q": "Why is audio reaction time faster than visual?",
+      "faq2A": "It takes less time for an auditory stimulus to reach the brain than a visual one. The auditory cortex processes sound significantly faster than the visual cortex processes complex visual information. This is why a runner reacts to a starting pistol rather than a flashing light."
+    },
+    "memory": {
+      "whatIsTitle": "What is Memory Training & Cognitive Recall?",
+      "whatIsDesc": "Working memory is the mental workspace used for temporarily holding and manipulating information. Unlike long-term memory, working memory has a limited capacity. Training with varied recall exercises conditions the brain to manage cognitive load, recognize patterns faster, and retain information more effectively under pressure.",
+      "howToTitle": "How to Improve Your Working Memory?",
+      "howToStep1Title": "Use Chunking",
+      "howToStep1Desc": "Break long numbers or complex patterns into smaller, bite-sized pieces.",
+      "howToStep2Title": "Visualize Spatially",
+      "howToStep2Desc": "Associate abstract numbers or patterns with physical shapes or grid coordinates.",
+      "howToStep3Title": "Eliminate Distractions",
+      "howToStep3Desc": "Working memory decays rapidly if your focus shifts for even a single second.",
+      "howToStep4Title": "Train Progressively",
+      "howToStep4Desc": "Start at lower difficulty levels until your recall accuracy is consistently high.",
+      "shouldPracticeTitle": "Should I Practice Daily?",
+      "shouldPracticeDesc": "Yes. Consistent daily stimulation is key to promoting neuroplasticity, which is the brain's ability to reorganize itself by forming new neural connections.",
+      "comparisonTitle": "Memory Tools Comparison",
+      "row1Tool": "Number Memory",
+      "row1BestFor": "Math students, programmers",
+      "row1Benefit": "Trains the brain's phonological loop to hold long numeric strings.",
+      "row2Tool": "Visual Memory",
+      "row2BestFor": "Designers, architects",
+      "row2Benefit": "Improves the visuospatial sketchpad for spatial coordination.",
+      "row3Tool": "Sequence Memory",
+      "row3BestFor": "Musicians, general cognition",
+      "row3Benefit": "Enhances sequential pattern recognition and focus endurance.",
+      "benchmarksTitle": "Benchmarks & Scientific Proof",
+      "benchmarksDesc": "Classic work by George A. Miller popularized the idea that people often hold roughly 7±2 chunks in immediate memory. Techniques like chunking reduce how many independent items you must store. Research discussed via the National Institutes of Health (NIH) explores working-memory training. On Reflextry, track your own digit-span and recall trends under the same difficulty.",
+      "faqTitle": "Frequently Asked Questions",
+      "faq1Q": "Can you actually improve your memory?",
+      "faq1A": "Yes. While you cannot easily change your long-term memory capacity, you can significantly enhance your working (short-term) memory. Consistent practice with tools like our Number Memory or Visual Memory tests trains your brain to chunk information more efficiently, making it easier to hold more data simultaneously.",
+      "faq2Q": "What is the 'Chunking' technique?",
+      "faq2A": "Chunking is a mnemonic strategy where you group smaller, individual pieces of data into larger, meaningful units (chunks). For example, rather than remembering the sequence 4-7-1-9-2-8 as six distinct digits, your brain can group them as 471 and 928, effectively reducing the cognitive load from six items to just two."
+    },
+    "speed": {
+      "whatIsTitle": "What is Speed & Neuromuscular Velocity?",
+      "whatIsDesc": "Speed tests measure your raw neuromuscular throughput—how rapidly your central nervous system can send repetitive motor signals to your fingers, wrists, and hands. High-speed performance requires balancing rapid twitch-muscle firing with precise physical control.",
+      "howToTitle": "How to Improve Your Clicking & Typing Speed?",
+      "howToStep1Title": "Optimize Hand Position",
+      "howToStep1Desc": "Keep wrists elevated slightly off your desk to maintain fluidity.",
+      "howToStep2Title": "Learn Alternative Techniques",
+      "howToStep2Desc": "Practice jitter clicking or butterfly clicking to surpass physical limits.",
+      "howToStep3Title": "Focus on Accuracy First",
+      "howToStep3Desc": "Typing speed drops drastically when you spend time correcting typos.",
+      "howToStep4Title": "Warm Up Beforehand",
+      "howToStep4Desc": "Cold fingers have slower motor neuron transmission rates.",
+      "shouldPracticeTitle": "Should I Practice Daily?",
+      "shouldPracticeDesc": "Yes. Short 10-minute speed sessions build fast-twitch muscle endurance in hands and forearms without causing repetitive strain injury.",
+      "comparisonTitle": "Speed Tools Comparison",
+      "row1Tool": "Click Speed (CPS)",
+      "row1BestFor": "Minecraft PvP, MOBA Gamers",
+      "row1Benefit": "Increases raw finger clicking stamina and speed.",
+      "row2Tool": "Typing Test (WPM)",
+      "row2BestFor": "Writers, Coders, Data Entry",
+      "row2Benefit": "Measures and boosts words-per-minute rate and keystroke accuracy.",
+      "row3Tool": "Speed Math",
+      "row3BestFor": "Students, Financial Analysts",
+      "row3Benefit": "Trains rapid arithmetic processing under time pressure.",
+      "benchmarksTitle": "Benchmarks & Scientific Proof",
+      "benchmarksDesc": "The average internet user types at roughly 40 Words Per Minute (WPM), whereas professional typists and coders regularly exceed 90 WPM. Similarly, average clicking speeds hover around 6 CPS, while competitive gamers achieve 10-14 CPS. According to studies on human motor performance published on PubMed, targeted repetition combined with immediate feedback is the most effective way to permanently increase motor action speeds.",
+      "faqTitle": "Frequently Asked Questions",
+      "faq1Q": "How can I increase my CPS?",
+      "faq1A": "Increasing your Clicks Per Second requires developing specific twitch muscle fibers in your fingers and forearms. Techniques like jitter clicking and butterfly clicking can yield immediate boosts, but long-term improvement requires consistent, daily endurance training to build stamina and prevent fatigue.",
+      "faq2Q": "Why is my WPM (Words Per Minute) stuck?",
+      "faq2A": "Plateaus in typing speed are usually caused by a lack of accuracy, not a lack of finger speed. If you are constantly backspacing, your WPM will drop significantly. Our Typing Test and Word Accuracy tools emphasize precision first, which naturally translates to higher raw speeds over time."
+    },
+    "accuracy": {
+      "whatIsTitle": "What is Accuracy & Precision Training?",
+      "whatIsDesc": "Accuracy represents the deviation between an intended target and your actual physical execution. Speed without precision leads to costly errors, wasted effort, and high error rates. Developing pixel-level accuracy ensures consistency under high-pressure scenarios.",
+      "howToTitle": "How to Improve Your Accuracy Score?",
+      "howToStep1Title": "Slow Down",
+      "howToStep1Desc": "Speed is a byproduct of precision. Move at a pace where you make zero mistakes.",
+      "howToStep2Title": "Adjust DPI/Sensitivity",
+      "howToStep2Desc": "For gamers, lower mouse sensitivities often yield higher precision in aim trainers.",
+      "howToStep3Title": "Focus on Center",
+      "howToStep3Desc": "In visual tasks like Angle Estimation, fixate your eyes on the central vertex before scanning outward.",
+      "howToStep4Title": "Breathe",
+      "howToStep4Desc": "Rushing causes tension. Stay physically relaxed to allow for micro-adjustments.",
+      "shouldPracticeTitle": "Should I Practice Daily?",
+      "shouldPracticeDesc": "Yes, but keep sessions short. High-precision tasks are cognitively draining. 5-10 minutes a day is sufficient to reinforce accurate neural pathways without causing fatigue-induced errors.",
+      "comparisonTitle": "Accuracy Tools Comparison",
+      "row1Tool": "Precision Clicking",
+      "row1BestFor": "Graphic Designers, Gamers",
+      "row1Benefit": "Enhances fine motor control for clicking tiny, sub-pixel targets.",
+      "row2Tool": "Data Entry Accuracy",
+      "row2BestFor": "Programmers, Typists",
+      "row2Benefit": "Reduces keystroke errors when typing complex syntax or alphanumeric strings.",
+      "row3Tool": "Angle Estimation",
+      "row3BestFor": "Architects, Artists",
+      "row3Benefit": "Develops cognitive visual-spatial intelligence and geometric perception.",
+      "benchmarksTitle": "Benchmarks & Scientific Proof",
+      "benchmarksDesc": "The concept of prioritizing accuracy over speed is a fundamental principle of motor learning, often summarized in the military maxim 'slow is smooth, smooth is fast.' According to the Journal of Experimental Psychology, focusing purely on precision initially allows the brain to myelinate the exact neural pathways required, preventing error correction delays from surfacing at higher speeds.",
+      "faqTitle": "Frequently Asked Questions",
+      "faq1Q": "Should I train speed or accuracy first?",
+      "faq1A": "Always train accuracy first. When you practice making mistakes quickly, your brain literally gets better at making mistakes. By forcing 100% accuracy at a slow pace, you guarantee that the movement patterns you build are flawless. Once the pattern is ingrained, speed will naturally follow.",
+      "faq2Q": "How does this help my typing?",
+      "faq2A": "The biggest bottleneck to high WPM (Words Per Minute) is the time spent pressing the backspace key. By using tools like Data Entry Accuracy, you build confidence in your keystrokes, significantly reducing the cognitive hesitation that slows down average typists."
+    },
+    "gaming": {
+      "whatIsTitle": "What is Esports Aim & Warmup Training?",
+      "whatIsDesc": "Competitive gaming requires a blend of visual reaction, micro-flick precision, and smooth target tracking. Professional esports players use dedicated warmup routines before competitive matches to reach peak cognitive activation and avoid early-game misplays.",
+      "howToTitle": "How to Improve Your In-Game Aim?",
+      "howToStep1Title": "Start slow",
+      "howToStep1Desc": "Focus on 100% accuracy before trying to increase your speed.",
+      "howToStep2Title": "Use the right tools",
+      "howToStep2Desc": "Use Target Tracking for smooth aim, and Flick Shot for fast flick reflexes.",
+      "howToStep3Title": "Maintain posture",
+      "howToStep3Desc": "Ensure your arm and wrist are properly supported to prevent fatigue and injury.",
+      "howToStep4Title": "Warm up daily",
+      "howToStep4Desc": "A 10-minute routine before jumping into ranked matchmaking makes a huge difference.",
+      "shouldPracticeTitle": "Should I Practice Daily?",
+      "shouldPracticeDesc": "Yes. Consistent daily practice of 15-20 minutes yields better results for neuroplasticity and muscle memory than a single 2-hour session once a week.",
+      "comparisonTitle": "Gaming Tools Comparison",
+      "row1Tool": "Aim Trainer",
+      "row1BestFor": "FPS Gamers (Valorant, CS2)",
+      "row1Benefit": "Improves static target clicking and overall mouse control.",
+      "row2Tool": "Flick Shot",
+      "row2BestFor": "Sniper roles, fast-paced shooters",
+      "row2Benefit": "Builds fast-twitch muscle memory for sudden crosshair snaps.",
+      "row3Tool": "Target Tracking",
+      "row3BestFor": "Apex Legends, Overwatch players",
+      "row3Benefit": "Enhances smooth pursuit eye movements and continuous mouse tracking.",
+      "benchmarksTitle": "Benchmarks & Scientific Proof",
+      "benchmarksDesc": "Competitive players often show faster sensorimotor responses than casual users, and research cataloged by the National Center for Biotechnology Information (NCBI) links action-game practice with gains in visual attention and motor control. On Reflextry, treat Flick Shot and Target Tracking as isolated mechanics drills: log your own baselines on the same mouse and difficulty, then look for steadier accuracy and cleaner time-to-target over weeks.",
+      "faqTitle": "Frequently Asked Questions",
+      "faq1Q": "Does aim training actually improve my game?",
+      "faq1A": "Yes. Aim trainers isolate the physical mechanics of using a mouse, such as tracking and flicking. By separating these from game sense, map awareness, and strategy, you can build raw mechanical muscle memory much faster than just playing the game alone.",
+      "faq2Q": "What is the best way to warm up before a ranked match?",
+      "faq2A": "A solid pre-game warmup should last 5-10 minutes and involve progressively faster movements. We recommend this sequence: 2 minutes of Aim Trainer to establish base accuracy, 3 minutes of Target Tracking for smooth movements, and 2 minutes of Flick Shot to push your speed limits."
+    }
   }
 }

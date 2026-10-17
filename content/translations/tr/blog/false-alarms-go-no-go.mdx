@@ -1,0 +1,81 @@
+---
+title: >-
+  Go/No-Go Testinde Yanlış Alarm: Neden "Hızlı" Olmak Başarısızlık Anlamına
+  Gelebilir?
+description: >-
+  Reflextry'de Go/No-Go ve inhibisyon (baskılama) skorları nasıl okunur: Yanlış
+  alarmlar, kaçırılan Go'lar ve neden baskılama doğruluğu hesaba katılamayan
+  ortalama Go RT'nin bir kibir metriği olduğu.
+publishedAt: '2026-07-25'
+author:
+  name: Kaushik Rabadiya
+category: Reflex
+tags:
+  - go-no-go
+  - inhibition
+  - false-alarms
+  - training
+readingTime: 9 min read
+---
+Go/No-Go testi basit görünür: Go'da bas, No-Go'da basma. İnsanların ilk baktığı metrik genellikle Go reaksiyon süresidir (RT). Ancak görevi gerçekten öğrenip öğrenmediğinizi söyleyen metrik çoğunlukla **yanlış alarmdır (false alarm)**—sabit kalmanız gerekirken tuşa basmaktır.
+
+## İki hata türü
+
+- **Kaçırma (Atlama - Omission):** Go göründü; zamanında basamadınız.
+- **Yanlış alarm (Komisyon - Commission):** No-Go göründü; yine de bastınız.
+
+Bir sürü yanlış alarmın eşlik ettiği gösterişli bir Go RT, tahmin yürütüyor ve kumar oynuyorsunuz demektir. Bu hızlı hissettirebilir. Ancak kontrollü bir performans değildir.
+
+## Yanlış alarmlar neden artar?
+
+- Ağırlıklı Go denemeleri bir "basma eğilimi" yaratır.
+- Yorgunluk ve dikkat dağınıklığı, motorlardan çok frenleri zayıflatır.
+- Doğruluk kısıtlamaları olmaksızın belirlenen hız hedefleri dürtüselliği ödüllendirir.
+- Flaş penceresinin sonuna kadar birbirine benzeyen uyarılar, basış olarak gelen son dakika düzeltmelerine davetiye çıkarır.
+
+## Freni nasıl eğitirsiniz?
+
+1. **Doğruluk hedefleriyle başlayın.** Örnek: milisaniyelerin peşine düşmeden önce yanlış alarmları kişisel bir eşiğin altında tutun.
+2. **Kısa bloklar kullanın.** Sinirlenip üstüne gittikçe inhibisyon çöker.
+3. **No-Go'da nefes alın.** Bilinçli bir tepki vermeme durumu bir beceri tekrarıdır.
+4. **Flanker ile değiştirin.** Çatışma görevleri de dürtüsel, merkezi görmezden gelen yanıtları cezalandırır; bkz. [Go/No-Go ve Flanker Açıklandı](/blog/go-no-go-and-flanker-explained).
+5. **Basit reaksiyonu ayrıca yeniden kontrol edin.** Algılama hızı ve inhibisyon birbiriyle ilişkilidir ancak aynı şey değildir; bkz. [Seçim vs Basit Reaksiyon](/blog/choice-reaction-vs-simple-reaction).
+
+## Reflextry Go/No-Go Testini Okumak
+
+Oturumu bir ikili olarak ele alın: Doğru vuruşlardaki Go RT **ve** yanlış alarm oranı. Gelişme şöyledir:
+
+- İstikrarlı veya daha iyi bir baskılama doğruluğu, ardından
+- Bu doğruluğu feda etmeden daha düşük Go RT.
+
+No-Go sıklığını artıran veya zamanlamayı sıkılaştıran zorluk modları deneyimi değiştirir; modu not edin.
+
+## Gerçek dünya analojisi (abartmadan)
+
+Sürüş, dereceli nişancılık ve yazı yazma, dürtüsel eylemleri cezalandırır: kontrolsüz şerit değiştirmeler, önceden ateş etme, son okumayı yapmadan gönderme. Go/No-Go, bu fren için temiz bir laboratuvar oyuncağıdır. Bir kişilik te��hisi değildir.
+
+## 10 dakikalık inhibisyon mikro oturumu
+
+- 4 dk Go/No-Go — öncelik doğruluk
+- 3 dk Flanker — tutarlı vs tutarsız farkındalığı
+- 3 dk basit reaksiyon — temiz algılama, minimum erken tıklama
+
+Yanlış alarmlar tavan yaparsa durun. Yarın tekrar gelin.
+
+## Özet
+
+Yüksek yanlış alarmlara sahip hızlı Go bir ustalık değildir. Önce freni (baskılamayı) eğitin, ardından süreyi kısaltın. [Go/No-Go](/reflex/go-no-go) üzerinde pratik yapın ve puanlama bağlamını [Reflextry Testlerini Nasıl Puanlıyoruz](/blog/how-we-score-reflextry-tests) yazısında okuyun.
+
+## "Predatör Go" tasarımları üzerine bir not
+
+Bazı gündelik oyunlar neredeyse her denemeyi Go yapar ve araya nadir No-Go'lar serpiştirir. Bu tasarım güçlü bir basma alışkanlığı yaratır —ki bu öğreticidir— ancak aynı zamanda ilk oturumlarınızın kötü görüneceği anlamına gelir. Erken aşamada yanlış alarmlar bekleyin. Öğrenme eğrisi tam olarak frenin motoru yakalaması sürecidir.
+
+Bir mod haksız bir şekilde Go ağırlıklı hissettirirse, oyunu öfkeyle kapatmak (rage-quit) yerine fren pratiği olarak görün. Bir hafta boyunca yanlış alarm oranını birincil KPI'ınız olarak kaydedin, ardından hız hedeflerini tekrar devreye sokun.
+
+## Uyku ve uyarıcılarla eşleştirme
+
+Uyku borcu, birçok insan için komisyon hatalarını artırır. Ekstra kafein, titreme ve erken tahminler erken basışlar yaratana kadar uyanıklığa yardımcı olabilir. Geç bir gecenin ardından yanlış alarm grafiğiniz fırlarsa, grafiğe inanin: aracı suçlamadan önce uykunuzu telafi edin.
+
+## Skorları bir koç veya takım arkadaşı ile paylaşmak
+
+Bir Go/No-Go sonucunu paylaştığınızda şunları ekleyin: zorluk, Go RT ortalaması, yanlış alarm sayısı veya oranı, kaçırma sayısı, cihaz ve günün saati. Baskılama istatistikleri olmadan yalnız bir "210 ms aldım" ekran görüntüsü eksiktir ve koçlar eksik olan yarıyı sormalıdır.

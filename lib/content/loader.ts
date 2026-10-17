@@ -14,15 +14,31 @@ export async function getContentSlugs(type: ContentType) {
 
 export async function getContentBySlug<T = Article | TestContent>(
     type: ContentType,
-    slug: string
+    slug: string,
+    locale?: string
 ) {
     const realSlug = slug.replace(/\.mdx?$/, '');
-    const dir = path.join(CONTENT_DIR, type);
 
-    // Try .mdx then .md
-    let fullPath = path.join(dir, `${realSlug}.mdx`);
-    if (!fs.existsSync(fullPath)) {
-        fullPath = path.join(dir, `${realSlug}.md`);
+    // Check localized directory first if non-English locale
+    let fullPath = '';
+    if (locale && locale !== 'en') {
+        const transDir = path.join(CONTENT_DIR, 'translations', locale, type);
+        const transMdx = path.join(transDir, `${realSlug}.mdx`);
+        const transMd = path.join(transDir, `${realSlug}.md`);
+        if (fs.existsSync(transMdx)) {
+            fullPath = transMdx;
+        } else if (fs.existsSync(transMd)) {
+            fullPath = transMd;
+        }
+    }
+
+    // Fallback to primary English directory
+    if (!fullPath) {
+        const dir = path.join(CONTENT_DIR, type);
+        fullPath = path.join(dir, `${realSlug}.mdx`);
+        if (!fs.existsSync(fullPath)) {
+            fullPath = path.join(dir, `${realSlug}.md`);
+        }
     }
 
     if (!fs.existsSync(fullPath)) {
@@ -56,17 +72,26 @@ export async function getLatestBlogModifiedDate(): Promise<Date> {
     return latestMs === 0 ? new Date() : new Date(latestMs);
 }
 
-export async function getAllContent<T = Article>(type: ContentType) {
+export async function getAllContent<T = Article>(type: ContentType, locale?: string) {
     const slugs = await getContentSlugs(type);
-    const content = await Promise.all(
-        slugs.map((slug) => getContentBySlug<T>(type, slug))
+    const articles = await Promise.all(
+        slugs.map(async (file) => {
+            const slug = file.replace(/\.mdx?$/, '');
+            try {
+                return await getContentBySlug<T>(type, slug, locale);
+            } catch {
+                return null;
+            }
+        })
     );
 
     // Sort by date descending
-    return content.sort((a, b) => {
-        if ((a.meta as any).publishedAt && (b.meta as any).publishedAt) {
-            return (a.meta as any).publishedAt > (b.meta as any).publishedAt ? -1 : 1;
-        }
-        return 0;
-    });
+    return articles
+        .filter((a): a is NonNullable<typeof a> => a !== null)
+        .sort((a, b) => {
+            if ((a.meta as any).publishedAt && (b.meta as any).publishedAt) {
+                return (a.meta as any).publishedAt > (b.meta as any).publishedAt ? -1 : 1;
+            }
+            return 0;
+        });
 }

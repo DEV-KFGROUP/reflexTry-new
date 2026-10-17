@@ -1,0 +1,78 @@
+---
+title: 'Falsi allarmi nel Go/No-Go: perché "veloce" può significare fallimento'
+description: >-
+  Come interpretare i punteggi Go/No-Go e di inibizione su Reflextry: falsi
+  allarmi, Go mancati e perché il tempo di reazione Go medio senza la precisione
+  di inibizione è una metrica di vanità.
+publishedAt: '2026-07-25'
+author:
+  name: Kaushik Rabadiya
+category: Reflex
+tags:
+  - go-no-go
+  - inhibition
+  - false-alarms
+  - training
+readingTime: 9 min read
+---
+Il test Go/No-Go sembra semplice: premi su Go, trattieni su No-Go. La metrica che tutti guardano per prima è il tempo di reazione Go (Go RT). La metrica che dice realmente se hai imparato il compito è spesso il **falso allarme**: premere quando saresti dovuto rimanere immobile.
+
+## I due tipi di errore
+
+- **Miss (omissione):** È comparso Go; non hai fatto in tempo a premere.
+- **Falso allarme (commissione):** È comparso No-Go; hai premuto comunque.
+
+Un Go RT brillante accompagnato da una montagna di falsi allarmi significa che stai anticipando e andando d'azzardo. Può sembrare veloce, ma non è una prestazione controllata.
+
+## Perché aumentano i falsi allarmi
+- Le prove Go prevalenti creano un "bias di pressione".
+- La stanchezza e la distrazione riducono i freni più dei motori.
+- Gli obiettivi di velocità senza vincoli di precisione premono sull'impulsività.
+- Gli stimoli che sembrano uguali fino alla fine della finestra di lampeggio invitano a correzioni tardive che arrivano come pressioni.
+
+## Come allenare il freno
+
+1. **Inizia con obiettivi di precisione.** Esempio: mantieni i falsi allarmi sotto una soglia personale prima di inseguire i millisecondi.
+2. **Usa blocchi brevi.** L'inibizione crolla quando ti incunti e ti accanisci.
+3. **Respira sui No-Go.** Una mancata risposta deliberata è una ripetizione di abilità.
+4. **Alterna con il test Flanker.** I compiti di conflitto puniscono anche le risposte impulsive che ignorano il centro: vedi [Spiegazione di Go/No-Go e Flanker](/blog/go-no-go-and-flanker-explained).
+5. **Ricontrolla la reazione semplice separatamente.** La velocità di rilevamento e l'inibizione sono correlate ma non identiche: [Reazione a scelta vs reazione semplice](/blog/choice-reaction-vs-simple-reaction).
+
+## Leggere il Go/No-Go di Reflextry
+
+Tratta la sessione come un binomio: Go RT sui colpi corretti **e** tasso di falsi allarmi. Il miglioramento si ottiene così:
+
+- Precisione di inibizione stabile o migliore, poi
+- Minor Go RT senza sacrificare tale precisione.
+
+Le modalità di difficoltà che aumentano la frequenza dei No-Go o stringono i tempi cambiano l'esperimento: annota la modalità.
+
+## Analogia con il mondo reale (senza esagerare)
+
+Guidare, gli sparatutto competitivi e la digitazione puniscono tutti le azioni impulsive: cambi di corsia senza controllare, pre-firing, inviare messaggi senza rileggerli. Il Go/No-Go è un pulito giocattolo da laboratorio per quel freno. Non è una diagnosi di personalità.
+
+## Una micro-sessione di inibizione di 10 minuti
+
+- 4 min Go/No-Go — precisione al primo posto
+- 3 min Flanker — consapevolezza congruente vs incongruente
+- 3 min reazione semplice — rilevamento pulito, minimi clic anticipati
+
+Fermati se i falsi allarmi salgono alle stelle. Torna domani.
+
+## Punti chiave
+
+Un Go veloce con molti falsi allarmi non è padronanza. Allenare l'inibizione, poi limare il tempo. Fai pratica su [Go/No-Go](/reflex/go-no-go) e leggi il contesto di punteggio in [Come valutiamo i test di Reflextry](/blog/how-we-score-reflextry-tests).
+
+## Una nota sui design “Go predatori”
+
+Alcuni giochi casual rendono quasi ogni prova un Go e spargono rari No-Go. Questo design crea una forte abitudine a premere, il che è istruttivo, ma significa anche che le tue prime sessioni saranno brutte. Aspettati falsi allarmi all'inizio. La curva di apprendimento è precisamente il freno che si mette in pari con il motore.
+
+Se una modalità sembra ingiustamente incentrata sui Go, considerala come un allenamento per i freni piuttosto che chiudere per rabbia. Registra il tasso di falsi allarmi come KPI principale per una settimana, quindi reintroduci gli obiettivi di velocità.
+
+## Abbinamento con sonno e stimolanti
+
+Il debito di sonno aumenta gli errori di commissione per molte persone. Una dose extra di caffeina può aiutare l'allerta finché tremori e anticipazioni non creano pressioni precoci. Se il tuo grafico dei falsi allarmi subisce un picco dopo una notte fonda, credi al grafico: recupera il sonno prima di dare la colpa allo strumento.
+
+## Condividere i punteggi con un allenatore o un compagno di squadra
+
+Quando condividi un risultato Go/No-Go, includi: difficoltà, media del Go RT, conteggio o tasso dei falsi allarmi, conteggio dei miss, dispositivo e ora del giorno. Uno screenshot isolato con "ho fatto 210 ms" senza le statistiche di inibizione è incompleto, e gli allenatori dovrebbero chiedere la metà mancante.

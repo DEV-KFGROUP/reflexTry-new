@@ -7,6 +7,7 @@ import { Storage, Score } from "@/utils/storage";
 import Link from "next/link";
 import { db, LeaderboardEntry } from "@/lib/database";
 import { ShareButton } from "@/components/ShareButton";
+import { useTranslation } from "@/lib/i18n/context";
 
 const TOOLS = [
     { id: "sequence-memory", label: "Sequence Memory", category: "memory", path: "/memory/sequence", icon: "🧠" },
@@ -42,6 +43,7 @@ const FloatingBackground = () => {
 };
 
 export default function LeaderboardClient() {
+    const { t, getLocalizedHref } = useTranslation();
     const [scores, setScores] = useState<Record<string, Score | null>>({});
     const [globalLeaderboards, setGlobalLeaderboards] = useState<Record<string, LeaderboardEntry[]>>({});
     const [viewMode, setViewMode] = useState<"local" | "global">("local");
@@ -114,11 +116,11 @@ export default function LeaderboardClient() {
                             suppressHydrationWarning
                         >
                             <Sparkles className="w-10 h-10 text-amber-400" />
-                            Global Leaderboard
+                            {t("leaderboard.heroTitle", "Global Leaderboard")}
                         </h1>
                     </div>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-medium">
-                        Compete against players worldwide and track your progress across all Reflextry challenges. Establish your baseline and reach for the top tier.
+                        {t("leaderboard.heroSubtitle", "Compete against players worldwide and track your progress across all Reflextry challenges. Establish your baseline and reach for the top tier.")}
                     </p>
                 </motion.div>
 
@@ -133,18 +135,18 @@ export default function LeaderboardClient() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12 relative z-10">
                         <div className="p-6 rounded-2xl bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 text-center hover:bg-white/10 transition-colors">
                             <div className="text-3xl mb-2 drop-shadow-md">🏆</div>
-                            <h3 className="text-base font-bold text-foreground mb-1">Personal Bests</h3>
-                            <p className="text-sm text-muted-foreground">Your top scores locally</p>
+                            <h3 className="text-base font-bold text-foreground mb-1">{t("leaderboard.personalBests", "Personal Bests")}</h3>
+                            <p className="text-sm text-muted-foreground">{t("leaderboard.personalBestsDesc", "Your top scores locally")}</p>
                         </div>
                         <div className="p-6 rounded-2xl bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 text-center hover:bg-white/10 transition-colors">
                             <div className="text-3xl mb-2 drop-shadow-md">🌍</div>
-                            <h3 className="text-base font-bold text-foreground mb-1">Global Rankings</h3>
-                            <p className="text-sm text-muted-foreground">Compare worldwide</p>
+                            <h3 className="text-base font-bold text-foreground mb-1">{t("leaderboard.globalRankings", "Global Rankings")}</h3>
+                            <p className="text-sm text-muted-foreground">{t("leaderboard.globalRankingsDesc", "Compare worldwide")}</p>
                         </div>
                         <div className="p-6 rounded-2xl bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 text-center hover:bg-white/10 transition-colors">
                             <div className="text-3xl mb-2 drop-shadow-md">📊</div>
-                            <h3 className="text-base font-bold text-foreground mb-1">Track Progress</h3>
-                            <p className="text-sm text-muted-foreground">See your improvements</p>
+                            <h3 className="text-base font-bold text-foreground mb-1">{t("leaderboard.trackProgress", "Track Progress")}</h3>
+                            <p className="text-sm text-muted-foreground">{t("leaderboard.trackProgressDesc", "See your improvements")}</p>
                         </div>
                     </div>
 
@@ -155,13 +157,13 @@ export default function LeaderboardClient() {
                                 onClick={() => setViewMode("local")}
                                 className={`relative px-8 py-3 rounded-full text-sm font-bold uppercase tracking-wider transition-all duration-300 ${viewMode === "local" ? "text-amber-500 bg-white/10 shadow-[0_0_15px_rgba(245,158,11,0.2)] border border-amber-500/30" : "text-muted-foreground hover:text-foreground"}`}
                             >
-                                My Scores
+                                {t("leaderboard.myScores", "My Scores")}
                             </button>
                             <button
                                 onClick={() => setViewMode("global")}
                                 className={`relative flex items-center gap-2 px-8 py-3 rounded-full text-sm font-bold uppercase tracking-wider transition-all duration-300 ${viewMode === "global" ? "text-indigo-400 bg-white/10 shadow-[0_0_15px_rgba(99,102,241,0.2)] border border-indigo-500/30" : "text-muted-foreground hover:text-foreground"}`}
                             >
-                                <Globe className="w-4 h-4" /> Global
+                                <Globe className="w-4 h-4" /> {t("leaderboard.global", "Global")}
                             </button>
                         </div>
                     </div>
@@ -191,13 +193,13 @@ export default function LeaderboardClient() {
                                             <div className="space-y-4 h-full flex flex-col relative z-10">
                                                 <div className="flex items-center justify-between">
                                                     <h3 className="text-sm font-bold text-foreground uppercase tracking-wide flex items-center gap-2 group-hover:text-amber-500 transition-colors">
-                                                        <span>{tool.icon}</span> {tool.label}
+                                                        <span>{tool.icon}</span> {t(`tools.${tool.id}.title`, tool.label)}
                                                     </h3>
                                                 </div>
 
                                                 {score ? (
                                                     <div className="flex-1 flex flex-col justify-center space-y-1 my-4">
-                                                        <p className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest">Personal Best</p>
+                                                        <p className="text-[10px] font-mono text-muted-foreground uppercase tracking-widest">{t("leaderboard.personalBests", "Personal Best")}</p>
                                                         <p className={`text-3xl font-mono font-black ${getScoreColor(score, score.unit)} drop-shadow-sm`}>
                                                             {score.value.toLocaleString()} <span className="text-base text-muted-foreground">{score.unit}</span>
                                                         </p>
@@ -210,7 +212,7 @@ export default function LeaderboardClient() {
                                                 ) : (
                                                     <div className="flex-1 flex flex-col justify-center items-center py-6">
                                                         <Activity className="w-8 h-8 text-muted-foreground mb-2 opacity-50" />
-                                                        <p className="text-xs font-mono text-muted-foreground uppercase tracking-wide opacity-50">No Telemetry</p>
+                                                        <p className="text-xs font-mono text-muted-foreground uppercase tracking-wide opacity-50">{t("leaderboard.noScoresYet", "No Telemetry")}</p>
                                                     </div>
                                                 )}
 
@@ -223,10 +225,10 @@ export default function LeaderboardClient() {
                                                         <span />
                                                     )}
                                                     <Link
-                                                        href={tool.path}
+                                                        href={getLocalizedHref(tool.path)}
                                                         className="inline-flex items-center justify-center gap-1.5 px-4 py-1.5 rounded-full text-xs font-bold text-foreground bg-white/5 border border-black/10 dark:border-white/10 hover:border-amber-500 hover:text-amber-400 hover:bg-amber-500/10 transition-all z-10"
                                                     >
-                                                        PLAY <ArrowRight className="w-3 h-3" />
+                                                        {t("leaderboard.testNow", "PLAY")} <ArrowRight className="w-3 h-3" />
                                                     </Link>
                                                 </div>
                                             </div>
@@ -252,7 +254,7 @@ export default function LeaderboardClient() {
                                                 <div className="w-8 h-8 rounded-lg bg-indigo-500/10 flex items-center justify-center text-indigo-400">
                                                     <TrendingUp className="w-4 h-4" />
                                                 </div>
-                                                {tool.icon} {tool.label}
+                                                {tool.icon} {t(`tools.${tool.id}.title`, tool.label)}
                                             </h3>
                                             
                                             {!isLoaded ? (
@@ -298,7 +300,7 @@ export default function LeaderboardClient() {
                                                 <div className="text-center py-12 bg-white/5 rounded-2xl border border-black/10 dark:border-white/10">
                                                     <Trophy className="w-8 h-8 text-muted-foreground mx-auto mb-3 opacity-50" />
                                                     <p className="text-xs font-mono text-muted-foreground uppercase tracking-wide opacity-50">
-                                                        No global records yet. Set the baseline!
+                                                        {t("leaderboard.noScoresYet", "No global records yet. Set the baseline!")}
                                                     </p>
                                                 </div>
                                             )}

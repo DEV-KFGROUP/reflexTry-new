@@ -1,8 +1,13 @@
+"use client";
+
 import { TOOL_COUNT } from "@/config/tool-mapping";
 import Link from "next/link";
 import { ArrowRight, Gamepad2, Trophy, Zap } from "lucide-react";
+import { useTranslation } from "@/lib/i18n/context";
 
 export function HeroSection() {
+  const { t, getLocalizedHref } = useTranslation();
+
   const FLOATING_SHAPES = [
     { value: "🧠", x: "4%",  y: "18%", size: 64,  rotate: 15,  dur: 11, delay: 0   },
     { value: "⚡", x: "88%", y: "10%", size: 56,  rotate: -20, dur: 9,  delay: 0.8 },
@@ -62,12 +67,12 @@ export function HeroSection() {
               className="w-1.5 h-1.5 rounded-full bg-amber-500 flex-shrink-0"
               style={{ animation: "hud-blink 1.6s ease-in-out infinite" }}
             />
-            ⚡ Millisecond Reaction &amp; Reflex Benchmarks
+            ⚡ {t("home.heroBadge", "Millisecond Reaction & Reflex Benchmarks")}
           </div>
 
           {/* Headline */}
           <h1 className="text-4xl sm:text-6xl font-mono font-black tracking-tight text-slate-900 uppercase leading-[1.05]">
-            Test Your{" "}
+            {t("home.heroTitle", "Test Your")}{" "}
             <span
               style={{
                 background: "linear-gradient(110deg,#0891b2 0%,#2563eb 50%,#7c3aed 100%)",
@@ -76,22 +81,22 @@ export function HeroSection() {
                 backgroundClip: "text",
               }}
             >
-              Reaction Time
+              {t("home.heroTitleHighlight", "Reaction Time")}
             </span>{" "}
-            &amp; Reflexes
+            &amp; {t("nav.reflex", "Reflexes")}
           </h1>
 
           {/* Sub */}
           <p className="max-w-2xl text-slate-500 text-base sm:text-lg leading-relaxed">
-            <strong className="text-slate-700">{TOOL_COUNT} free tools</strong> to practice reaction time, memory, speed, and aim. Compare your scores across sessions on the same device.
+            <strong className="text-slate-700">{TOOL_COUNT} {t("common.tools", "free tools")}</strong> {t("home.heroSubtitle", "to practice reaction time, memory, speed, and aim. Compare your scores across sessions on the same device.")}
           </p>
 
           {/* Stats row */}
           <div className="flex flex-wrap items-center justify-center gap-3">
             {[
-              { val: "ms", label: "Reaction Time Scores" },
-              { val: String(TOOL_COUNT), label: "Interactive Tools" },
-              { val: "100%", label: "Free & In-Browser" },
+              { val: "ms", label: t("home.statReaction", "Reaction Time Scores") },
+              { val: String(TOOL_COUNT), label: t("home.statTools", "Interactive Tools") },
+              { val: "100%", label: t("home.statFree", "Free & In-Browser") },
             ].map((s) => (
               <div
                 key={s.label}
@@ -106,7 +111,7 @@ export function HeroSection() {
           {/* CTAs */}
           <div className="flex flex-wrap justify-center gap-3 pt-1">
             <Link
-              href="/reflex/reaction"
+              href={getLocalizedHref("/reflex/reaction")}
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm font-mono font-bold transition-all duration-150 active:translate-y-0.5"
               style={{
                 background: "linear-gradient(135deg,#0891b2 0%,#7c3aed 100%)",
@@ -115,15 +120,15 @@ export function HeroSection() {
               }}
             >
               <Zap className="w-4 h-4 text-amber-300" />
-              Test Reaction Time
+              {t("home.startTesting", "Test Reaction Time")}
               <ArrowRight className="w-4 h-4" />
             </Link>
             <Link
-              href="/tools"
+              href={getLocalizedHref("/tools")}
               className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl text-sm font-mono font-bold border border-slate-200 bg-white/80 backdrop-blur-sm text-slate-700 hover:border-cyan-300 hover:text-cyan-600 shadow-sm transition-all duration-150"
             >
               <Gamepad2 className="w-4 h-4" />
-              Explore All Tools
+              {t("home.exploreTools", "Explore All Tools")}
             </Link>
           </div>
 

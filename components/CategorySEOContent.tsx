@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useTranslation } from "@/lib/i18n/context";
 
 interface CategoryContentProps {
     category: "memory" | "reflex" | "speed" | "accuracy" | "gaming";
@@ -138,6 +141,7 @@ const CATEGORY_CONTENT: Record<string, {
 };
 
 export function CategorySEOContent({ category }: CategoryContentProps) {
+    const { t, getLocalizedHref } = useTranslation();
     const data = CATEGORY_CONTENT[category];
     if (!data) return null;
 
@@ -145,31 +149,52 @@ export function CategorySEOContent({ category }: CategoryContentProps) {
         <article className="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
             <div className="bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 shadow-sm rounded-3xl p-6 md:p-8 space-y-8">
                 <header>
-                    <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">{data.title}</h2>
-                    <p className="text-muted-foreground leading-relaxed text-base">{data.intro}</p>
+                    <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                        {t(`categoryHub.${category}.heroTitle`, data.title)}
+                    </h2>
+                    <p className="text-muted-foreground leading-relaxed text-base">
+                        {t(`categoryHub.${category}.heroDesc`, data.intro)}
+                    </p>
                 </header>
 
                 {data.sections.map((section, idx) => (
                     <section key={idx} className="space-y-3">
-                        <h2 className="text-xl md:text-2xl font-bold text-foreground">{section.heading}</h2>
-                        <p className="text-muted-foreground leading-relaxed">{section.text}</p>
+                        <h2 className="text-xl md:text-2xl font-bold text-foreground">
+                            {t(`categorySeo.${category}.sec${idx}Heading`, section.heading)}
+                        </h2>
+                        <p className="text-muted-foreground leading-relaxed">
+                            {t(`categorySeo.${category}.sec${idx}Text`, section.text)}
+                        </p>
                     </section>
                 ))}
 
                 <section className="space-y-4 pt-6 border-t border-slate-200 dark:border-slate-700">
-                    <h2 className="text-xl font-bold text-foreground">Available Tools</h2>
+                    <h2 className="text-xl font-bold text-foreground">
+                        {t("allTools.title", "Available Tools")}
+                    </h2>
                     <div className="grid sm:grid-cols-2 gap-3">
-                        {data.tools.map((tool) => (
-                            <Link
-                                key={tool.href}
-                                href={tool.href}
-                                prefetch={false}
-                                className="group p-4 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-600 transition-colors"
-                            >
-                                <h3 className="font-bold text-foreground group-hover:text-blue-600 transition-colors">{tool.name}</h3>
-                                <p className="text-sm text-muted-foreground mt-1">{tool.description}</p>
-                            </Link>
-                        ))}
+                        {data.tools.map((tool) => {
+                            const segments = tool.href.split('/').filter(Boolean);
+                            const shortSlug = segments[segments.length - 1];
+                            const localizedName = t(`tools.${shortSlug}.title`, tool.name);
+                            const localizedDesc = t(`tools.${shortSlug}.desc`, tool.description);
+
+                            return (
+                                <Link
+                                    key={tool.href}
+                                    href={getLocalizedHref(tool.href)}
+                                    prefetch={false}
+                                    className="group p-4 rounded-2xl border border-slate-200 dark:border-slate-700 hover:border-blue-300 dark:hover:border-blue-600 transition-colors"
+                                >
+                                    <h3 className="font-bold text-foreground group-hover:text-blue-600 transition-colors">
+                                        {localizedName}
+                                    </h3>
+                                    <p className="text-sm text-muted-foreground mt-1">
+                                        {localizedDesc}
+                                    </p>
+                                </Link>
+                            );
+                        })}
                     </div>
                 </section>
             </div>

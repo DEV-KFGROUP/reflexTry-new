@@ -7,6 +7,7 @@ import { ScoreHistory, ScoreHistoryEntry } from "@/utils/scoreHistory";
 import { Storage } from "@/utils/storage";
 import { Button } from "@/components/ui/Button";
 import { ShareButton } from "@/components/ShareButton";
+import { useTranslation } from "@/lib/i18n/context";
 
 const FloatingBackground = () => {
     return (
@@ -50,6 +51,7 @@ const FloatingBackground = () => {
 };
 
 export default function StatisticsClient() {
+    const { t } = useTranslation();
     const [history, setHistory] = useState<Record<string, ScoreHistoryEntry[]>>({});
     const [selectedTool, setSelectedTool] = useState<string | null>(null);
 
@@ -124,11 +126,11 @@ export default function StatisticsClient() {
                         <div className="absolute inset-0 bg-gradient-to-r from-teal-500 to-blue-500 blur-2xl opacity-30 animate-pulse" />
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-black bg-gradient-to-br from-slate-900 via-slate-800 to-slate-600 dark:from-teal-400 dark:via-blue-400 dark:to-blue-500 bg-clip-text text-transparent inline-flex items-center gap-3 relative z-10 drop-shadow-sm">
                             <Sparkles className="w-10 h-10 text-teal-400" />
-                            Your Statistics
+                            {t("statistics.heroTitle", "Your Statistics")}
                         </h1>
                     </div>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-medium">
-                        Track your progress, view performance trends, and analyze your improvement across all tools.
+                        {t("statistics.heroSubtitle", "Track your progress, view performance trends, and analyze your improvement across all tools.")}
                     </p>
                 </motion.div>
 
@@ -143,7 +145,7 @@ export default function StatisticsClient() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12 relative z-10">
                         <div className="p-6 rounded-2xl bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 text-center hover:bg-white/10 transition-colors">
                             <TrendingUp className="w-8 h-8 text-teal-400 mx-auto mb-3 drop-shadow-[0_0_10px_rgba(45,212,191,0.8)]" />
-                            <h3 className="text-base font-bold text-foreground mb-1">Track Trends</h3>
+                            <h3 className="text-base font-bold text-foreground mb-1">{t("statistics.scoreTrend", "Track Trends")}</h3>
                             <p className="text-sm text-muted-foreground">See improvements</p>
                         </div>
                         <div className="p-6 rounded-2xl bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 text-center hover:bg-white/10 transition-colors">
@@ -153,7 +155,7 @@ export default function StatisticsClient() {
                         </div>
                         <div className="p-6 rounded-2xl bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 text-center hover:bg-white/10 transition-colors">
                             <Download className="w-8 h-8 text-purple-400 mx-auto mb-3 drop-shadow-[0_0_10px_rgba(192,132,252,0.8)]" />
-                            <h3 className="text-base font-bold text-foreground mb-1">Export Data</h3>
+                            <h3 className="text-base font-bold text-foreground mb-1">{t("statistics.downloadData", "Export Data")}</h3>
                             <p className="text-sm text-muted-foreground">Save your stats</p>
                         </div>
                     </div>
@@ -169,7 +171,7 @@ export default function StatisticsClient() {
                                 <div className="bg-teal-500/20 p-3 rounded-2xl border border-teal-500/30">
                                     <Activity className="w-8 h-8 text-teal-500 dark:text-teal-400 drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]" />
                                 </div>
-                                <h3 className="text-2xl font-bold text-foreground">Total Games</h3>
+                                <h3 className="text-2xl font-bold text-foreground">{t("statistics.totalSessions", "Total Games")}</h3>
                             </div>
                             <p className="text-6xl font-black text-teal-600 dark:text-teal-400 drop-shadow-md relative z-10">{totalGames}</p>
                         </motion.div>
@@ -183,7 +185,7 @@ export default function StatisticsClient() {
                                 <div className="bg-yellow-500/20 p-3 rounded-2xl border border-yellow-500/30">
                                     <Trophy className="w-8 h-8 text-yellow-600 dark:text-yellow-400 drop-shadow-[0_0_8px_rgba(250,204,21,0.5)]" />
                                 </div>
-                                <h3 className="text-2xl font-bold text-foreground">Tools Used</h3>
+                                <h3 className="text-2xl font-bold text-foreground">{t("statistics.selectTest", "Tools Used")}</h3>
                             </div>
                             <p className="text-6xl font-black text-yellow-600 dark:text-yellow-400 drop-shadow-md relative z-10">{totalTools}</p>
                         </motion.div>
@@ -197,7 +199,7 @@ export default function StatisticsClient() {
                                 <div className="bg-green-500/20 p-3 rounded-2xl border border-green-500/30">
                                     <TrendingUp className="w-8 h-8 text-green-600 dark:text-green-400 drop-shadow-[0_0_8px_rgba(34,197,94,0.5)]" />
                                 </div>
-                                <h3 className="text-2xl font-bold text-foreground">Average Score</h3>
+                                <h3 className="text-2xl font-bold text-foreground">{t("statistics.averageScore", "Average Score")}</h3>
                             </div>
                             <p className="text-6xl font-black text-green-600 dark:text-green-400 drop-shadow-md relative z-10">
                                 {totalGames > 0 
@@ -216,7 +218,7 @@ export default function StatisticsClient() {
                         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
                             <div className="flex items-center gap-3">
                                 <Target className="w-8 h-8 text-teal-500 dark:text-teal-400" />
-                                <h2 className="text-3xl font-black text-foreground">Tool Performance</h2>
+                                <h2 className="text-3xl font-black text-foreground">{t("statistics.scoreTrend", "Tool Performance")}</h2>
                             </div>
                             <Button 
                                 variant="outline" 
@@ -224,7 +226,7 @@ export default function StatisticsClient() {
                                 className="flex items-center gap-2 rounded-full border-teal-500/50 text-teal-600 dark:text-teal-400 hover:bg-teal-500/10 hover:border-teal-400 transition-all shadow-[0_0_15px_rgba(45,212,191,0.2)]"
                             >
                                 <Download className="w-4 h-4" />
-                                Export Data
+                                {t("statistics.downloadData", "Export Data")}
                             </Button>
                         </div>
 
@@ -241,27 +243,27 @@ export default function StatisticsClient() {
                                         onClick={() => setSelectedTool(selectedTool === toolId ? null : toolId)}
                                     >
                                         <h3 className="text-xl font-bold text-foreground mb-6 capitalize border-b border-black/10 dark:border-white/10 pb-4 group-hover:border-teal-500/30 transition-colors">
-                                            {toolId.replace(/-/g, " ")}
+                                            {t(`tools.${toolId}.title`, toolId.replace(/-/g, " "))}
                                         </h3>
                                         <div className="space-y-4">
                                             <div className="flex justify-between items-center bg-black/5 dark:bg-black/20 p-3 rounded-xl border border-black/5 dark:border-white/5">
-                                                <span className="text-muted-foreground font-medium">Games Played:</span>
+                                                <span className="text-muted-foreground font-medium">{t("statistics.totalSessions", "Games Played")}:</span>
                                                 <span className="text-foreground font-black text-lg">{stats.count}</span>
                                             </div>
                                             <div className="flex justify-between items-center bg-teal-500/10 p-3 rounded-xl border border-teal-500/20">
-                                                <span className="text-teal-700 dark:text-teal-400 font-bold">Best Score:</span>
+                                                <span className="text-teal-700 dark:text-teal-400 font-bold">{t("statistics.bestPerformance", "Best Score")}:</span>
                                                 <span className="text-teal-600 dark:text-teal-400 font-black text-lg drop-shadow-[0_0_8px_rgba(45,212,191,0.3)]">
                                                     {stats.best.toLocaleString()}
                                                 </span>
                                             </div>
                                             <div className="flex justify-between items-center bg-black/5 dark:bg-black/20 p-3 rounded-xl border border-black/5 dark:border-white/5">
-                                                <span className="text-muted-foreground font-medium">Average:</span>
+                                                <span className="text-muted-foreground font-medium">{t("statistics.averageScore", "Average")}:</span>
                                                 <span className="text-foreground font-bold text-lg">
                                                     {Math.round(stats.average).toLocaleString()}
                                                 </span>
                                             </div>
                                             <div className="flex justify-between items-center bg-black/5 dark:bg-black/20 p-3 rounded-xl border border-black/5 dark:border-white/5">
-                                                <span className="text-muted-foreground font-medium">Trend:</span>
+                                                <span className="text-muted-foreground font-medium">{t("statistics.scoreTrend", "Trend")}:</span>
                                                 <span className={`font-black text-lg uppercase tracking-wider ${
                                                     stats.trend === "improving" ? "text-green-600 dark:text-green-400 drop-shadow-[0_0_8px_rgba(34,197,94,0.3)]" :
                                                     stats.trend === "declining" ? "text-red-600 dark:text-red-400" :
@@ -279,7 +281,7 @@ export default function StatisticsClient() {
                         {tools.length === 0 && (
                             <div className="text-center py-16 bg-white/5 rounded-3xl border border-black/10 dark:border-white/10 backdrop-blur-sm">
                                 <BarChart3 className="w-16 h-16 text-muted-foreground/30 mx-auto mb-4" />
-                                <p className="text-muted-foreground text-lg">No statistics yet. Start playing games to see your progress!</p>
+                                <p className="text-muted-foreground text-lg">{t("statistics.noData", "No statistics yet. Start playing games to see your progress!")}</p>
                             </div>
                         )}
                     </div>

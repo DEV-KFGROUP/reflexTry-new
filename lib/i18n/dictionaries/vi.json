@@ -1,0 +1,944 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "reflex": "Phản xạ",
+    "memory": "Trí nhớ",
+    "speed": "Tốc độ",
+    "accuracy": "Độ chính xác",
+    "gaming": "Chơi game",
+    "tools": "Tất cả công cụ",
+    "leaderboard": "Bảng xếp hạng",
+    "challenges": "Thử thách",
+    "statistics": "Thống kê",
+    "science": "Khoa học",
+    "blog": "Blog"
+  },
+  "common": {
+    "start": "Bắt đầu kiểm tra",
+    "restart": "Thử lại",
+    "next": "Tiếp theo",
+    "finish": "Hoàn thành",
+    "score": "Điểm số",
+    "time": "Thời gian",
+    "bestScore": "Điểm cao nhất",
+    "average": "Trung bình",
+    "ms": "ms",
+    "wpm": "WPM",
+    "cps": "CPS",
+    "percentile": "Phân vị",
+    "saveScore": "Lưu điểm",
+    "share": "Chia sẻ kết quả",
+    "instructions": "Hướng dẫn",
+    "difficulty": "Độ khó",
+    "easy": "Dễ",
+    "medium": "Trung bình",
+    "hard": "Khó",
+    "expert": "Chuyên gia",
+    "globalBenchmarks": "Tiêu chuẩn toàn cầu",
+    "howToPlay": "Cách chơi",
+    "faq": "Câu hỏi thường gặp",
+    "switchLanguage": "Ngôn ngữ",
+    "tools": "công cụ miễn phí"
+  },
+  "home": {
+    "heroBadge": "Tiêu chuẩn đánh giá hiệu suất nhận thức",
+    "heroTitle": "Đo lường và rèn luyện",
+    "heroTitleHighlight": "Tốc độ não bộ",
+    "heroSubtitle": "Các bài kiểm tra thời gian phản hồi chính xác đến từng mili-giây, trò chơi trí nhớ làm việc, tiêu chuẩn tốc độ gõ phím và công cụ khởi động tâm ngắm FPS hoàn toàn miễn phí.",
+    "startTesting": "Bắt đầu kiểm tra đầu tiên",
+    "exploreTools": "Khám phá hơn 40 công cụ",
+    "popularTests": "Kiểm tra phổ biến",
+    "categories": "Danh mục",
+    "statReaction": "Điểm thời gian phản xạ",
+    "statTools": "Công cụ tương tác",
+    "statFree": "Miễn phí & trên trình duyệt",
+    "enterArena": "Vào đấu trường",
+    "startQuest": "Bắt đầu nhiệm vụ"
+  },
+  "categories": {
+    "reflex": {
+      "title": "Phản xạ & Thời gian phản hồi",
+      "description": "Đo lường thời gian phản hồi thị giác và thính giác của bạn với độ chính xác đến từng mili-giây."
+    },
+    "memory": {
+      "title": "Trí nhớ làm việc",
+      "description": "Rèn luyện khả năng lưu giữ trí nhớ, mẫu trình tự và dung lượng khoảng nhớ thị giác."
+    },
+    "speed": {
+      "title": "Tốc độ vận động & CPS",
+      "description": "Kiểm tra số lần nhấp chuột mỗi giây (CPS), tốc độ gõ phím (WPM) và sự nhanh nhạy trong tính toán."
+    },
+    "accuracy": {
+      "title": "Tâm ngắm & Độ chính xác",
+      "description": "Tinh chỉnh độ chính xác khi nhắm mục tiêu nhỏ, nhận dạng mẫu và khả năng phối hợp tay - mắt."
+    },
+    "gaming": {
+      "title": "Khởi động thể thao điện tử",
+      "description": "Hiệu chỉnh cú vẩy chuột (flick shot), theo dõi mục tiêu và phản xạ chiến đấu cho các tựa game cạnh tranh."
+    }
+  },
+  "footer": {
+    "tagline": "Nền tảng huấn luyện nhận thức trực tuyến miễn phí cung cấp các tiêu chuẩn đánh giá thời gian phản hồi thị giác, trí nhớ làm việc, tốc độ gõ WPM và độ chính xác tâm ngắm.",
+    "quickLinks": "Liên kết nhanh",
+    "tools": "Danh mục",
+    "legal": "Pháp lý & Quyền riêng tư",
+    "privacy": "Chính sách bảo mật",
+    "terms": "Điều khoản dịch vụ",
+    "cookies": "Chính sách Cookie",
+    "contact": "Liên hệ với chúng tôi",
+    "about": "Về chúng tôi",
+    "rights": "Bản quyền được bảo lưu.",
+    "features": "Tính năng",
+    "achievements": "Thành tựu",
+    "research": "Nghiên cứu",
+    "methodology": "Phương pháp",
+    "trainingPrograms": "Chương trình luyện tập",
+    "faq": "Câu hỏi thường gặp",
+    "cookiePreferences": "Tùy chọn cookie",
+    "platformMethodology": "Giới thiệu Nền tảng & Phương pháp của Reflextry",
+    "brainTrainingTitle": "Rèn luyện não bộ:",
+    "brainTrainingText": "Chúng tôi xây dựng Reflextry để mang đến cho các game thủ và người chơi cạnh tranh một góc nhìn thô sơ, chân thực về cơ chế cơ bản của họ. Không có yếu tố thừa thãi, chỉ có theo dõi hiệu suất thuần túy. Bằng cách đẩy trí nhớ làm việc và khả năng nhận diện mẫu trực quan của bạn đến giới hạn mỗi ngày, bạn ép bộ não của mình xây dựng các đường dẫn thần kinh nhanh hơn, mạnh mẽ hơn—một quá trình được gọi là tính dẻo của não bộ. Chúng tôi cô lập các tải trọng nhận thức cụ thể (như khả năng gợi nhớ không gian và trí nhớ chuỗi) để bạn có thể luyện tập chính xác những điểm yếu của mình.",
+    "esportsTitle": "Độ trễ Thể thao điện tử:",
+    "esportsText": "Trong trò chơi cạnh tranh, 50 mili-giây là sự khác biệt giữa việc nhấp vào đầu đối thủ và việc bị đưa về sảnh chờ. Các đấu trường Tốc độ và Phản xạ của chúng tôi loại bỏ mọi cơ chế trò chơi bên ngoài để đo lường thời gian phản ứng sinh học thô của bạn. Chúng tôi theo dõi số lần nhấp mỗi giây (CPS), độ chính xác khi văng tâm (flick shot) và tốc độ theo dõi thô. Chúng tôi đã tối ưu hóa mạnh mẽ môi trường kiểm tra của mình để cắt giảm độ trễ đầu vào ở cấp độ trình duyệt, mang lại cho bạn phép đo chính xác về phần cứng và hệ thống thần kinh của bạn khi hoạt động cùng nhau. Sử dụng các công cụ này để làm nóng các cơ phản ứng nhanh trước khi bước vào đấu hạng.",
+    "accuracyTitle": "Độ chính xác:",
+    "accuracyText": "Tốc độ không có ý nghĩa gì nếu bạn bắn trượt. Trung tâm Độ chính xác buộc bạn phải tập trung cao độ và ưu tiên độ chính xác hơn tốc độ thô. Thông qua các lưới không gian, ước tính góc và khớp màu, bạn trau dồi khả năng kiểm soát vận động tinh. Việc luyện tập tốc độ và độ chính xác đồng thời dạy cho hệ thống thần kinh trung ương của bạn cách thực hiện các chuyển động cơ học phức tạp một cách hiệu quả. Chúng tôi lưu trữ tất cả dữ liệu phiên chơi của bạn để bạn có thể thực sự thấy đường cong hiệu suất của mình đi lên theo thời gian. 10 phút luyện tập tập trung ở đây đánh bại 5 giờ cày cuốc vô định.",
+    "clinicalRef": "Tham khảo lâm sàng:",
+    "brainTrainingResearch": "nghiên cứu rèn luyện não bộ",
+    "allRightsReserved": "MỌI QUYỀN ĐƯỢC BẢO LƯU.",
+    "lastUpdate": "CẬP NHẬT MỚI NHẤT: THÁNG 7 NĂM 2026",
+    "builtWith": "ĐƯỢC XÂY DỰNG BỞI",
+    "forGamers": "DÀNH CHO GAME THỦ"
+  },
+  "guide": {
+    "howItWorks": "Cách Hoạt Động & Mẹo",
+    "subtitle": "Làm chủ trò chơi với hướng dẫn toàn diện và chiến lược cải thiện của chúng tôi.",
+    "jumpTo": "Chuyển đến",
+    "about": "Giới thiệu",
+    "howToPlay": "Cách chơi",
+    "proTips": "Mẹo Pro",
+    "faq": "Hỏi & Đáp",
+    "aboutTest": "Về Bài Kiểm Tra Này",
+    "trains": "Kỹ Năng Được Rèn Luyện",
+    "instructions": "Hướng Dẫn & Cơ Chế",
+    "quickSetup": "Thiết Lập Nhanh",
+    "keyRules": "Quy Tắc Chính:",
+    "strategies": "Chiến Lược Chuyên Gia",
+    "faqs": "Câu Hỏi Thường Gặp",
+    "continueTraining": "Tiếp Tục Luyện Tập"
+  },
+  "game": {
+    "difficultyLevel": "Mức Độ Khó",
+    "sessionStats": "Thống Kê Phiên",
+    "active": "Đang chọn",
+    "soundOn": "Bật Âm Thanh",
+    "unmute": "Bật Tiếng",
+    "arena": "ĐẤU TRƯỜNG",
+    "initializeTest": "Bắt Đầu Test",
+    "calibrationComplete": "Đo Lường Hoàn Tất",
+    "finalScore": "Điểm Cuối Cùng:",
+    "newRecord": "Kỷ Lục Mới!",
+    "recalibrate": "Đo Lại",
+    "menu": "Menu",
+    "seen": "Đã Thấy",
+    "new": "Từ Mới",
+    "diffBeginner": "Người mới",
+    "diffEasy": "Dễ",
+    "diffNormal": "Bình thường",
+    "diffHard": "Khó",
+    "diffProfessional": "Chuyên nghiệp",
+    "diffExpert": "Chuyên gia",
+    "telemetryStream": "DÒNG_ĐO_LƯỜNG"
+  },
+  "stats": {
+    "score": "Điểm",
+    "best": "Tốt nhất",
+    "lives": "Mạng",
+    "timeleft": "Thời Gian Còn",
+    "time": "Thời Gian",
+    "trial": "Lượt",
+    "rt": "P/Ứ",
+    "avgrt": "P/Ứ TB",
+    "bestrt": "P/Ứ Tốt Nhất",
+    "attempt": "Lần Thử",
+    "errors": "Lỗi",
+    "round": "Vòng",
+    "averageerr": "Sai Số TB",
+    "besterr": "Sai Số Tốt Nhất",
+    "targetmargin": "Biên Độ Mục Tiêu",
+    "level": "Cấp Độ",
+    "objects": "Đối Tượng",
+    "target": "Mục Tiêu",
+    "grid": "Lưới",
+    "avgspeed": "Tốc Độ TB",
+    "bestclick": "Nhấp Chuột Tốt Nhất",
+    "failpenalty": "Phạt Lỗi"
+  },
+  "verbalMemory": {
+    "title": "TRÍ NHỚ NGÔN NGỮ",
+    "subtitle": "NHẬN DIỆN TỪ VỰNG",
+    "arenaGoal": "NHẬN BIẾT KÍCH THÍCH MỚI",
+    "testTitle": "Kiểm Tra Trí Nhớ Ngôn Ngữ",
+    "testDesc": "Kiểm tra trí nhớ ngôn ngữ của bạn. Hãy ghi nhớ từ nào bạn đã thấy và từ nào là từ mới xuất hiện.",
+    "beginnerDesc": "50 Từ · 5 Mạng",
+    "easyDesc": "100 Từ · 3 Mạng",
+    "normalDesc": "300 Từ · 3 Mạng",
+    "hardDesc": "500 Từ · 1 Mạng",
+    "proDesc": "1000 Từ · Giới hạn 3 giây"
+  },
+  "tools": {
+    "sequence-memory": {
+      "title": "Bài kiểm tra Trí nhớ Trình tự",
+      "desc": "Luyện tập ghi nhớ các mẫu ánh sáng không gian đang mở rộng với Bài kiểm tra Trí nhớ Trình tự miễn phí của chúng tôi. Đọc quy tắc tính điểm và so sánh kết quả của bạn."
+    },
+    "sequence": {
+      "title": "Bài kiểm tra Trí nhớ Trình tự",
+      "desc": "Luyện tập ghi nhớ các mẫu ánh sáng không gian đang mở rộng với Bài kiểm tra Trí nhớ Trình tự miễn phí của chúng tôi. Đọc quy tắc tính điểm và so sánh kết quả của bạn."
+    },
+    "number-memory": {
+      "title": "Bài kiểm tra Trí nhớ Số",
+      "desc": "Đo lường trí nhớ làm việc và dung lượng khoảng nhớ chữ số với Bài kiểm tra Trí nhớ Số miễn phí. Ghi nhớ các chuỗi số dài dần và đánh giá điểm ghi nhớ của bạn."
+    },
+    "number": {
+      "title": "Bài kiểm tra Trí nhớ Số",
+      "desc": "Đo lường trí nhớ làm việc và dung lượng khoảng nhớ chữ số với Bài kiểm tra Trí nhớ Số miễn phí. Ghi nhớ các chuỗi số dài dần và đánh giá điểm ghi nhớ của bạn."
+    },
+    "visual-memory": {
+      "title": "Bài kiểm tra Trí nhớ Thị giác",
+      "desc": "Nâng cao khả năng lưu giữ thị giác và nhận diện mẫu không gian. Kiểm tra trí nhớ thị giác bằng cách nhớ các mẫu lưới nhấp nháy trên ma trận mở rộng. Công cụ benchmark miễn phí."
+    },
+    "visual": {
+      "title": "Bài kiểm tra Trí nhớ Thị giác",
+      "desc": "Nâng cao khả năng lưu giữ thị giác và nhận diện mẫu không gian. Kiểm tra trí nhớ thị giác bằng cách nhớ các mẫu lưới nhấp nháy trên ma trận mở rộng. Công cụ benchmark miễn phí."
+    },
+    "color-memory": {
+      "title": "Bài kiểm tra Trí nhớ Màu sắc",
+      "desc": "Thách thức trí nhớ sắc độ và sự tập trung thị giác của bạn. Ghi nhớ các chuỗi màu thay đổi liên tục và rèn luyện sự linh hoạt nhận thức với Bài kiểm tra Trí nhớ Màu sắc miễn phí."
+    },
+    "color": {
+      "title": "Bài kiểm tra Trí nhớ Màu sắc",
+      "desc": "Thách thức trí nhớ sắc độ và sự tập trung thị giác của bạn. Ghi nhớ các chuỗi màu thay đổi liên tục và rèn luyện sự linh hoạt nhận thức với Bài kiểm tra Trí nhớ Màu sắc miễn phí."
+    },
+    "shape-memory": {
+      "title": "Bài kiểm tra Trí nhớ Hình khối",
+      "desc": "Rèn luyện khả năng phân biệt hình học và trí nhớ không gian. Ghi nhớ các hình khối và ký hiệu trừu tượng để nâng cao tư duy thị giác phi ngôn ngữ và sự tập trung."
+    },
+    "shape": {
+      "title": "Bài kiểm tra Trí nhớ Hình khối",
+      "desc": "Rèn luyện khả năng phân biệt hình học và trí nhớ không gian. Ghi nhớ các hình khối và ký hiệu trừu tượng để nâng cao tư duy thị giác phi ngôn ngữ và sự tập trung."
+    },
+    "symbol-memory": {
+      "title": "Bài Kiểm Tra Trí Nhớ Biểu Tượng",
+      "desc": "Cải thiện khả năng nhận dạng mẫu trừu tượng và trí nhớ liên kết. Ghép các biểu tượng và ký hiệu ẩn mã hóa để nâng cao sự tập trung tinh thần và tốc độ xử lý thị giác."
+    },
+    "symbol": {
+      "title": "Bài Kiểm Tra Trí Nhớ Biểu Tượng",
+      "desc": "Cải thiện khả năng nhận dạng mẫu trừu tượng và trí nhớ liên kết. Ghép các biểu tượng và ký hiệu ẩn mã hóa để nâng cao sự tập trung tinh thần và tốc độ xử lý thị giác."
+    },
+    "word-recall": {
+      "title": "Bài Kiểm Tra Ghi Nhớ Từ",
+      "desc": "Đánh giá khả năng lưu giữ trí nhớ ngôn ngữ và nhận dạng từ vựng của bạn. Kiểm tra xem các từ là mới hay đã thấy trước đó để đo lường trí nhớ ngôn ngữ ngắn hạn."
+    },
+    "card-match": {
+      "title": "Trò Chơi Ghép Thẻ Trí Nhớ",
+      "desc": "Rèn luyện trí nhớ không gian và khả năng ghi nhớ mẫu thị giác với Trò Chơi Ghép Thẻ Trí Nhớ trực tuyến miễn phí. Lật thẻ, ghép các cặp với số lần di chuyển ít nhất và vượt qua thời gian."
+    },
+    "chimp-test": {
+      "title": "Chimp Test",
+      "desc": "Bạn có thông minh hơn một con tinh tinh không? Tham gia Chimp Test nổi tiếng để đo lường trí nhớ làm việc không gian thị giác của bạn. Ghi nhớ lưới số trước khi nó biến mất."
+    },
+    "verbal-memory": {
+      "title": "Bài Kiểm Tra Trí Nhớ Ngôn Ngữ",
+      "desc": "Kiểm tra trí nhớ làm việc ngôn ngữ với Bài Kiểm Tra Trí Nhớ Ngôn Ngữ miễn phí của chúng tôi. Xác định các từ đã thấy so với từ mới để đo lường khả năng lưu giữ ngôn ngữ và tốc độ xử lý nhận thức."
+    },
+    "object-tracking": {
+      "title": "Multiple Object Tracking",
+      "desc": "Kiểm tra sự chú ý thị giác động và khả năng theo dõi không gian. Theo dõi nhiều hình cầu mục tiêu đang di chuyển giữa các vật cản trong bài kiểm tra nhận thức được khoa học chứng minh này."
+    },
+    "n-back": {
+      "title": "Kiểm Tra N",
+      "desc": "Luyện tập trí nhớ làm việc với bài kiểm tra N-Back cổ điển. Ghép các chữ cái xuất hiện từ N bước trước, theo dõi số lần đúng và độ chính xác, đồng thời nâng cấp từ 1-back lên 3-back."
+    },
+    "reaction-time": {
+      "title": "Kiểm Tra Thời Gian Phản Ứng",
+      "desc": "Kiểm tra và cải thiện thời gian phản ứng thị giác của bạn tính bằng mili giây. Tham gia bài kiểm tra phản xạ mili giây miễn phí của chúng tôi, so sánh với các game thủ chuyên nghiệp và theo dõi tiến độ phản xạ của bạn."
+    },
+    "reaction": {
+      "title": "Kiểm tra phản xạ game thủ Esports",
+      "desc": "Kiểm tra phản xạ chiến đấu cạnh tranh, thời gian đỡ đòn sự kiện thời gian thực (QTE) và tốc độ phản xạ esports trong các kịch bản chiến đấu mô phỏng chính xác đến từng mili-giây."
+    },
+    "sound-reaction": {
+      "title": "Kiểm Tra Thời Gian Phản Ứng Âm Thanh",
+      "desc": "Đo tốc độ phản ứng thính giác của bạn tính bằng mili giây. Kiểm tra phản xạ thính giác với tín hiệu âm thanh tức thì và so sánh thời gian phản ứng âm thanh với phản ứng thị giác của bạn."
+    },
+    "sound": {
+      "title": "Kiểm Tra Thời Gian Phản Ứng Âm Thanh",
+      "desc": "Đo tốc độ phản ứng thính giác của bạn tính bằng mili giây. Kiểm tra phản xạ thính giác với tín hiệu âm thanh tức thì và so sánh thời gian phản ứng âm thanh với phản ứng thị giác của bạn."
+    },
+    "grid-shot": {
+      "title": "Luyện Ngắm Grid Shot",
+      "desc": "Khởi động kỹ năng ngắm bắn và tốc độ chuột của bạn với Grid Shot. Nhấp vào các mục tiêu xuất hiện liên tục trên lưới để tăng cường khả năng phối hợp tay mắt cho các tựa game FPS như Valorant và CS2."
+    },
+    "grid": {
+      "title": "Kiểm tra tốc độ lưới",
+      "desc": "Luyện tập quét thị giác và tốc độ đọc ngoại biên với bảng Schulte. Tìm các số theo thứ tự tăng dần trên lưới 5x5 để mở rộng tốc độ tìm kiếm thị giác."
+    },
+    "peripheral-vision": {
+      "title": "Bài kiểm tra Tầm nhìn Ngoại vi",
+      "desc": "Luyện tập nhận thức tầm nhìn ngoại vi và tốc độ phản ứng hai bên. Phát hiện và nhấp vào các kích thích lệch tâm để mở rộng sự tập trung thị giác cho lái xe, thể thao và chơi game cạnh tranh."
+    },
+    "peripheral": {
+      "title": "Bài kiểm tra Tầm nhìn Ngoại vi",
+      "desc": "Luyện tập nhận thức tầm nhìn ngoại vi và tốc độ phản ứng hai bên. Phát hiện và nhấp vào các kích thích lệch tâm để mở rộng sự tập trung thị giác cho lái xe, thể thao và chơi game cạnh tranh."
+    },
+    "directional-reflex": {
+      "title": "Bài kiểm tra Phản xạ Theo hướng",
+      "desc": "Kiểm tra tốc độ phản hồi bàn phím và khả năng ra quyết định không gian. Nhấn các phím mũi tên khớp với các gợi ý hướng nhanh chóng để cải thiện khả năng xử lý nhận thức và độ nhanh nhạy của phản xạ."
+    },
+    "direction": {
+      "title": "Bài kiểm tra Phản xạ Theo hướng",
+      "desc": "Kiểm tra tốc độ phản hồi bàn phím và khả năng ra quyết định không gian. Nhấn các phím mũi tên khớp với các gợi ý hướng nhanh chóng để cải thiện khả năng xử lý nhận thức và độ nhanh nhạy của phản xạ."
+    },
+    "multi-stimulus": {
+      "title": "Bài kiểm tra Phản ứng Đa kích thích",
+      "desc": "Kiểm tra thời gian phản ứng lựa chọn và sự chú ý có chọn lọc. Xử lý đồng thời nhiều kích thích thị giác và thính giác để đo tốc độ ra quyết định trong tích tắc."
+    },
+    "sequence-reaction": {
+      "title": "Bài kiểm tra Phản ứng Theo chuỗi",
+      "desc": "Kết hợp khả năng ghi nhớ với phản xạ vận động nhanh chóng. Theo dõi các chuỗi ánh sáng nhịp độ nhanh và thực hiện các combo tốc độ để rèn luyện thời gian phản hồi nhịp nhàng và tốc độ."
+    },
+    "whack-a-mole": {
+      "title": "Đập chuột chũi Online",
+      "desc": "Chơi trò đập chuột chũi cổ điển trực tuyến miễn phí. Chạm vào những chú chuột chũi ngoi lên nhanh nhất có thể để đo tốc độ phản ứng, độ chính xác khi nhấp chuột và sự nhanh nhẹn của vận động."
+    },
+    "color-switch": {
+      "title": "Kiểm tra Phản xạ Đổi màu",
+      "desc": "Luyện tập tốc độ phản ứng màu sắc và tốc độ phản hồi có chọn lọc. Phản ứng ngay lập tức với sự thay đổi màu sắc trên màn hình và tín hiệu chớp sáng mà không do dự."
+    },
+    "time-perception": {
+      "title": "Kiểm tra Nhận thức Thời gian",
+      "desc": "Kiểm tra đồng hồ nội tại và khả năng ước lượng thời gian của bạn. Giữ và thả nút để tạo chính xác các khoảng thời gian mục tiêu đến từng mili-giây."
+    },
+    "go-no-go": {
+      "title": "Kiểm tra Go / No",
+      "desc": "Đo lường khả năng ức chế phản hồi với bài tập Go/No-Go. Nhấn vào các lượt Go màu xanh lá, dừng lại ở các lượt No-Go màu đỏ, và theo dõi độ chính xác kèm thời gian phản ứng."
+    },
+    "flanker": {
+      "title": "Kiểm tra Flanker",
+      "desc": "Thực hiện bài tập Eriksen Flanker trực tuyến. Phản hồi mũi tên ở giữa đồng thời phớt lờ các mũi tên phụ đồng hướng hoặc trái hướng để đo lường khả năng kiểm soát chú ý."
+    },
+    "choice-reaction": {
+      "title": "Kiểm tra Thời gian Phản ứng Lựa chọn",
+      "desc": "Đo lường thời gian phản ứng lựa chọn trên 2–4 mục tiêu có màu. Nhấp vào ô sáng nhanh nhất có thể và đánh bại điểm số RT trung bình của bạn tính bằng mili-giây."
+    },
+    "cps-test": {
+      "title": "Kiểm Tra CPS",
+      "desc": "Đo tốc độ click chuột của bạn với Bài kiểm tra CPS miễn phí. Thử nghiệm các chế độ 1 giây, 5 giây, 10 giây, 30 giây và 60 giây cho click thông thường, jitter click, butterfly click và drag click."
+    },
+    "click": {
+      "title": "Kiểm Tra CPS",
+      "desc": "Đo tốc độ click chuột của bạn với Bài kiểm tra CPS miễn phí. Thử nghiệm các chế độ 1 giây, 5 giây, 10 giây, 30 giây và 60 giây cho click thông thường, jitter click, butterfly click và drag click."
+    },
+    "speed-math": {
+      "title": "Kiểm Tra Tốc Độ Toán Nhẩm",
+      "desc": "Nâng cao khả năng tính nhẩm và tốc độ tính toán. Giải nhanh các bài toán cộng, trừ, nhân, chia trong thời gian giới hạn để cải thiện sự linh hoạt về toán học."
+    },
+    "math": {
+      "title": "Kiểm Tra Tốc Độ Toán Nhẩm",
+      "desc": "Nâng cao khả năng tính nhẩm và tốc độ tính toán. Giải nhanh các bài toán cộng, trừ, nhân, chia trong thời gian giới hạn để cải thiện sự linh hoạt về toán học."
+    },
+    "math-speed": {
+      "title": "Kiểm Tra Tốc Độ Toán Nhẩm",
+      "desc": "Nâng cao khả năng tính nhẩm và tốc độ tính toán. Giải nhanh các bài toán cộng, trừ, nhân, chia trong thời gian giới hạn để cải thiện sự linh hoạt về toán học."
+    },
+    "typing-speed": {
+      "title": "Kiểm Tra Tốc Độ Gõ Phím",
+      "desc": "Kiểm tra số từ trên phút (WPM) và độ chính xác với Bài kiểm tra tốc độ gõ phím 1 phút miễn phí. Đánh giá tốc độ gõ bàn phím, theo dõi tỷ lệ lỗi và cải thiện kỹ năng gõ 10 ngón."
+    },
+    "typing": {
+      "title": "Kiểm Tra Tốc Độ Gõ Phím",
+      "desc": "Kiểm tra số từ trên phút (WPM) và độ chính xác với Bài kiểm tra tốc độ gõ phím 1 phút miễn phí. Đánh giá tốc độ gõ bàn phím, theo dõi tỷ lệ lỗi và cải thiện kỹ năng gõ 10 ngón."
+    },
+    "word-accuracy": {
+      "title": "Kiểm Tra Độ Chính Xác Từ",
+      "desc": "Cải thiện độ chính xác khi gõ và loại bỏ lỗi gõ phím. Gõ các từ gợi ý tốc độ cao với độ chính xác 100% để làm chủ kỹ năng gõ không lỗi dưới áp lực thời gian."
+    },
+    "words": {
+      "title": "Kiểm tra tốc độ đọc",
+      "desc": "Kiểm tra tốc độ đọc và khả năng nhận diện từ. Đo lường số từ mỗi phút và khả năng xác định thị giác nhanh chóng với công cụ Speed Words tương tác."
+    },
+    "word-speed": {
+      "title": "Kiểm tra tốc độ đọc",
+      "desc": "Kiểm tra tốc độ đọc và khả năng nhận diện từ. Đo lường số từ mỗi phút và khả năng xác định thị giác nhanh chóng với công cụ Speed Words tương tác."
+    },
+    "grid-selection": {
+      "title": "Kiểm tra tốc độ lưới",
+      "desc": "Luyện tập quét thị giác và tốc độ đọc ngoại biên với bảng Schulte. Tìm các số theo thứ tự tăng dần trên lưới 5x5 để mở rộng tốc độ tìm kiếm thị giác."
+    },
+    "grid-speed": {
+      "title": "Kiểm tra tốc độ lưới",
+      "desc": "Luyện tập quét thị giác và tốc độ đọc ngoại biên với bảng Schulte. Tìm các số theo thứ tự tăng dần trên lưới 5x5 để mở rộng tốc độ tìm kiếm thị giác."
+    },
+    "number-rush": {
+      "title": "Kiểm tra tốc độ Number Rush",
+      "desc": "Kiểm tra khả năng nhận diện số nhanh và tốc độ chạm. Săn và nhấp vào các số tăng dần nhanh nhất có thể để đo lường tốc độ xử lý nhận thức của bạn."
+    },
+    "quick-sort": {
+      "title": "Trò chơi Tốc độ Sắp xếp Nhanh",
+      "desc": "Thử thách khả năng phân loại nhận thức và tốc độ ra quyết định nhanh chóng. Sắp xếp các vật phẩm xuất hiện vào các danh mục tương ứng dưới áp lực thời gian nghiêm ngặt."
+    },
+    "schulte-table": {
+      "title": "Kiểm tra bảng Schulte",
+      "desc": "Thử thách bảng Schulte cổ điển. Nhấp vào các số xáo trộn theo thứ tự trên lưới từ 3x3 đến 7x7. Luyện tập thị giác ngoại biên, tốc độ tìm kiếm thị giác và sự tập trung với thời gian."
+    },
+    "aim-trainer": {
+      "title": "Trình luyện tâm bắn FPS",
+      "desc": "Cải thiện độ chính xác của chuột, khả năng theo dõi mục tiêu và tốc độ flick cho các tựa game FPS như Valorant, CS2 và Apex. Trình luyện tâm bắn 3D miễn phí ngay trên trình duyệt web của bạn."
+    },
+    "aim": {
+      "title": "Trình luyện tâm bắn FPS",
+      "desc": "Cải thiện độ chính xác của chuột, khả năng theo dõi mục tiêu và tốc độ flick cho các tựa game FPS như Valorant, CS2 và Apex. Trình luyện tâm bắn 3D miễn phí ngay trên trình duyệt web của bạn."
+    },
+    "rpg-reaction": {
+      "title": "Kiểm tra phản xạ game thủ Esports",
+      "desc": "Kiểm tra phản xạ chiến đấu cạnh tranh, thời gian đỡ đòn sự kiện thời gian thực (QTE) và tốc độ phản xạ esports trong các kịch bản chiến đấu mô phỏng chính xác đến từng mili-giây."
+    },
+    "endless-dodge": {
+      "title": "Game Né Tránh Vô Tận",
+      "desc": "Kiểm tra phản xạ né tránh và sự nhanh nhẹn trong không gian. Điều khiển con trỏ của bạn vượt qua vô số bầy chướng ngại vật di chuyển trong trò chơi sinh tồn phản xạ cường độ cao này."
+    },
+    "stroop-drop": {
+      "title": "Kiểm tra Hiệu ứng Stroop",
+      "desc": "Thách thức khả năng kiểm soát ức chế của bạn với trò chơi Stroop Drop tương tác. Giải quyết sự can thiệp nhận thức giữa các từ chỉ màu sắc đang rơi và màu mực của chúng."
+    },
+    "target-tracking": {
+      "title": "Trình Huấn Luyện Ngắm Mục Tiêu Tracking",
+      "desc": "Làm chủ kỹ n��ng tracking chuột mượt mà cho các tựa game FPS cạnh tranh. Luyện tập ngắm bắn chính xác liên tục chống lại các mục tiêu di chuyển né tránh với độ mượt của chuột bằng không."
+    },
+    "flick-shot": {
+      "title": "Trình Huấn Luyện Ngắm Flick Shot",
+      "desc": "Rèn luyện trí nhớ cơ bắp và ngắm bắn chớp nhoáng với trình huấn luyện Flick Shot của chúng tôi. Hiệu chỉnh các thao tác vi tinh chỉnh và bắt mục tiêu nhanh chóng cho các tựa game bắn súng chiến thuật."
+    },
+    "rhythm-tap": {
+      "title": "Trò chơi Gõ Nhịp Điệu",
+      "desc": "Đánh giá độ chính xác về thời gian âm nhạc và khả năng cảm nhận nhịp điệu đến từng mili-giây. Gõ đồng bộ với nhịp BPM tăng dần và theo dõi các lỗi độ trễ lệch nhịp."
+    },
+    "image-recognition": {
+      "title": "Kiểm tra Nhận dạng Hình ảnh",
+      "desc": "Kiểm tra nhận thức thị giác và khả năng phân biệt hình ảnh nhanh chóng. Xác định các điểm khác biệt tinh tế về mặt trực quan và khớp các đối tượng mục tiêu ở tốc độ cao để rèn luyện kỹ năng quan sát."
+    },
+    "data-entry": {
+      "title": "Kiểm tra Độ chính xác Nhập liệu",
+      "desc": "Đo lường tốc độ nhập dữ liệu, độ chính xác gõ phím chữ số và tỷ lệ lỗi. Kiểm tra số lần gõ phím mỗi giờ (KPH) với các tiêu chuẩn mã và số thực tế."
+    },
+    "data": {
+      "title": "Kiểm tra Độ chính xác Nhập liệu",
+      "desc": "Đo lường tốc độ nhập dữ liệu, độ chính xác gõ phím chữ số và tỷ lệ lỗi. Kiểm tra số lần gõ phím mỗi giờ (KPH) với các tiêu chuẩn mã và số thực tế."
+    },
+    "pattern-matching": {
+      "title": "Kiểm tra Khớp mẫu",
+      "desc": "Cải thiện khả năng nhận dạng mẫu trực quan và suy luận phi ngôn ngữ. Khớp các mẫu ma trận phức tạp và chuỗi hình học để kiểm tra độ nhạy thị giác và tư duy phân tích."
+    },
+    "precision-click": {
+      "title": "Kiểm tra Nhấp chính xác",
+      "desc": "Nâng cao độ chính xác của chuột và độ chính xác của vi mục tiêu. Nhấp vào các mục tiêu nhỏ, chính xác mà không bỏ sót để tinh chỉnh khả năng kiểm soát vận động tinh và độ chính xác con trỏ khi chơi game."
+    },
+    "angle-estimation": {
+      "title": "Bài kiểm tra ước lượng góc",
+      "desc": "Kiểm tra khả năng nhìn nhận hình học và ước lượng không gian của bạn. Đoán chính xác số độ của các góc cho trước để đánh giá độ nhạy góc thị giác và phán đoán không gian."
+    },
+    "color-match": {
+      "title": "Bài kiểm tra khớp màu",
+      "desc": "Kiểm tra khả năng nhận diện màu sắc và phân biệt sắc thái tinh tế với Bài kiểm tra khớp màu của chúng tôi. Khớp các sắc thái RGB mục tiêu dưới áp lực thời gian và đánh giá độ chính xác thị giác."
+    },
+    "color-blindness": {
+      "title": "Bài kiểm tra mù màu",
+      "desc": "Khám phá các bảng chấm thủ tục theo phong cách Ishihara trong trò chơi giáo dục về thị lực màu miễn phí. Cài đặt màn hình ảnh hưởng đến kết quả; đây không phải là đánh giá chẩn đoán y tế."
+    },
+    "mental-rotation": {
+      "title": "Bài kiểm tra xoay tâm trí",
+      "desc": "Đánh giá trực quan hóa không gian 3D và tốc độ xoay nhận thức. Xác định xem các hình khối phức tạp có giống hệt nhau hay bị đảo ngược qua gương trong thời gian thực."
+    }
+  },
+  "homeContent": {
+    "whatIsReflextryTitle": "Reflextry là gì?",
+    "whatIsReflextryDesc1": "Reflextry cung cấp hơn 50 trò chơi trình duyệt miễn phí về thời gian phản ứng, trí nhớ, gõ phím, nhấp chuột, độ chính xác và luyện ngắm tâm. Mỗi bài kiểm tra ghi lại điểm số cho tác vụ đó để bạn có thể so sánh các phiên chơi của chính mình.",
+    "whatIsReflextryDesc2": "Điểm số trên trình duyệt bao gồm ảnh hưởng từ màn hình, thiết bị đầu vào, trình duyệt và cài đặt bài kiểm tra của bạn. Đây không phải là phép đo trực tiếp độ trễ sinh học hay đánh giá lâm sàng.",
+    "comparableSessionsTitle": "Làm cho các phiên luyện tập của bạn có thể so sánh được",
+    "comparableStep1": "Chọn cùng một bài kiểm tra, độ khó và thiết bị đầu vào mỗi lần.",
+    "comparableStep2": "Đọc các quy tắc tính điểm trước khi bắt đầu. Mili-giây, độ chính xác, độ dài chuỗi và từ trên phút mô tả các tác vụ khác nhau.",
+    "comparableStep3": "Lặp lại nhiều lần thử và so sánh xu hướng thay vì chỉ dựa vào một điểm số cao bất thường.",
+    "comparableStep4": "Nghỉ ngơi nếu bạn cảm thấy mệt mỏi hoặc không thoải mái.",
+    "comparableFooterPre": "Đọc ",
+    "testingMethodology": "phương pháp kiểm tra",
+    "comparableFooterMid": " của chúng tôi để biết công thức tính điểm và hạn chế phần cứng. Thống kê ",
+    "personalStatistics": "cá nhân",
+    "comparableFooterPost": " của bạn hiển thị tiến trình đã ghi nhận của chính b��n, không phải tiêu chuẩn của quần thể.",
+    "betterScoreTitle": "Điểm số cao hơn có ý nghĩa gì",
+    "betterScoreDesc1Pre": "Lợi ích luyện tập rõ rệt nhất trên các tác vụ đã luyện tập; lợi ích rộng hơn trong nhận thức hàng ngày ít được thiết lập hơn. Xem ",
+    "simonsReview": "bài đánh giá nghiên cứu rèn luyện não bộ của Simons và các cộng sự",
+    "betterScoreDesc1Post": ". Nghiên cứu này không xác thực Reflextry là một bài kiểm tra y tế hay trí thông minh.",
+    "betterScoreDesc2Pre": "Chúng tôi không công bố tập dữ liệu chuẩn toàn cầu đã được xác minh. Hãy sử dụng kết quả lặp lại của chính bạn làm cơ sở luyện tập. Để biết thông tin nền và tài liệu tham khảo, hãy truy cập ",
+    "theSciencePage": "trang khoa học",
+    "betterScoreDesc2Post": ".",
+    "faqTitle": "Các câu hỏi thường gặp",
+    "faq1Q": "Việc rèn luyện não bộ có thực sự hiệu quả không?",
+    "faq1A": "Luyện tập có thể cải thiện hiệu suất đối với tác vụ mà bạn tập luyện. Điểm số trò chơi tốt hơn không chứng minh được trí thông minh được cải thiện, lái xe an toàn hơn hoặc ngăn ngừa suy giảm nhận thức. Các bài kiểm tra Reflextry là công cụ luyện tập, không phải đánh giá lâm sàng.",
+    "faq2Q": "Tôi nên luyện tập thường xuyên như thế nào?",
+    "faq2A": "Bắt đầu với một phiên ngắn phù hợp với lịch trình của bạn và dừng lại khi mệt mỏi hoặc không thoải mái. So sánh cùng một bài kiểm tra và độ khó trên cùng một thiết bị. Không có liều lượng luyện tập Reflextry hay mốc thời gian cải thiện được đảm bảo nào được xác thực.",
+    "faq3Q": "Tôi có thể dùng Reflextry để khởi động cho thể thao điện tử không?",
+    "faq3A": "Bạn có thể sử dụng các trò chơi nhắm mục tiêu, theo dõi và phản ứng để khởi động trên trình duyệt. Điểm số của ch��ng đo lường hiệu suất trong các bài tập này, chứ không phải thứ hạng hoặc hiệu suất dự kiến của bạn trong một trò chơi khác.",
+    "faq4Q": "Reflextry có miễn phí không?",
+    "faq4A": "Các bài kiểm tra hoàn toàn miễn phí để chơi trực tiếp trên trình duyệt của bạn. Bạn có thể bắt đầu bài kiểm tra mà không cần tạo tài khoản.",
+    "aboutTheLab": "Giới thiệu phòng thí nghiệm",
+    "aboutTheLabDesc": "Ai đã xây dựng Reflextry, phương pháp của chúng tôi và cách liên hệ với chúng tôi.",
+    "allGuides": "Tất cả hướng dẫn",
+    "allGuidesDesc": "Các bài viết về trí nhớ, phản xạ, tốc độ và độ chính xác từ Tạp chí Nhận thức.",
+    "faqCardTitle": "Câu hỏi thường gặp",
+    "faqCardDesc": "Tần suất luyện tập, quyền riêng tư, cách tính điểm và các câu hỏi phổ biến về sản phẩm.",
+    "whatReflextryMeasures": "Reflextry đo lường những gì",
+    "whatReflextryMeasuresDesc": "Các bài kiểm tra trình duyệt miễn phí v�� thời gian phản ứng, trí nhớ làm việc, tốc độ nhấp chuột, ngắm tâm và độ chính xác. Đo lường mức cơ sở, luyện tập trong các phiên ngắn và theo dõi tiến độ trên trang thống kê—không cần tài khoản cho các công cụ cốt lõi.",
+    "journalBadge": "Nhật ký Phòng thí nghiệm Nhận thức",
+    "journalTitle": "Đo lường trước. Luyện tập ngắn. Đọc phương pháp.",
+    "journalDesc": "Reflextry là phòng thí nghiệm trực tuyến miễn phí để đo thời gian phản xạ, trí nhớ ngắn hạn, tốc độ và độ chính xác. Điểm số hoàn toàn minh bạch (mili-giây, dung lượng nhớ, độ chính xác)—không phải chẩn đoán y khoa hay bách phân vị suy diễn. Bắt đầu với điểm chuẩn, luyện tập trong các buổi 10–15 phút và tham khảo hướng dẫn để hiểu nền tảng khoa học đằng sau con số.",
+    "scoreGuideTitle": "Cách chúng tôi tính điểm các bài kiểm tra",
+    "scoreGuideDesc": "Ý nghĩa của mili-giây, dung lượng nhớ và độ chính xác—cùng những giới hạn khoa học.",
+    "reactionTimeGuideTitle": "Thời gian phản xạ thế nào là tốt?",
+    "reactionTimeGuideDesc": "Phạm vi thực tế, độ trễ phần cứng và cách đọc điểm số của chính bạn.",
+    "choiceReactionGuideTitle": "Phản xạ lựa chọn vs phản xạ đơn giản",
+    "choiceReactionGuideDesc": "Tại sao nhiều lựa chọn hơn làm chậm bạn và cách rèn luyện từng loại riêng biệt."
+  },
+  "categoryHub": {
+    "reflex": {
+      "heroTitle": "Luyện tập Phản xạ & Trò chơi Phản ứng",
+      "heroSubtitle": "Đo lường thời gian phản ứng thị giác và thính giác của bạn đến từng mili-giây.",
+      "heroDesc": "Trong thể thao chuyên nghiệp, thể thao điện tử và lái xe, thời gian phản xạ là vô cùng quan trọng. Bộ công cụ phản xạ của chúng tôi cô lập các đường dẫn giác quan khác nhau—thị giác, thính giác và định hướng—để bạn có thể xác định chính xác thời gian phản hồi nhanh nhất và luyện tập để giảm độ trễ của mình.",
+      "whatItCovers": "Đấu trường này bao gồm những gì",
+      "whatItCoversDesc": "Các bài kiểm tra phản ứng thị giác và thính giác được tính thời gian bằng mili-giây—phản ứng đơn giản, tín hiệu âm thanh, nhấp lưới, mục tiêu ngoại vi và lựa chọn đa kích thích. Được xây dựng để cô lập độ trễ từ kích thích đến phản hồi nhằm mục đích luyện tập và khởi động.",
+      "benefit1Title": "Phản xạ thị giác",
+      "benefit1Desc": "Phản ứng với màu sắc",
+      "benefit2Title": "Phản xạ thính giác",
+      "benefit2Desc": "Phản ứng với âm thanh",
+      "benefit3Title": "Phản xạ không gian",
+      "benefit3Desc": "Phản ứng trên toàn màn hình"
+    },
+    "memory": {
+      "heroTitle": "Trò chơi Luyện tập Trí nhớ & Gợi nhớ Nhận thức",
+      "heroSubtitle": "Củng cố dung lượng trí nhớ làm việc, khoảng nhớ chữ số và khả năng gợi nhớ không gian.",
+      "heroDesc": "Trí nhớ làm việc là không gian làm việc tinh thần bạn sử dụng khi làm theo hướng dẫn hoặc giải quyết vấn đề. Các trò chơi trí nhớ của chúng tôi tận dụng độ khó thích ứng: khi bạn tiến bộ, thử thách sẽ tăng cấp để đẩy giới hạn lưu giữ của bạn lên.",
+      "whatItCovers": "Đấu trường này bao gồm những gì",
+      "whatItCoversDesc": "Các mô hình không gian, chuỗi số, nhận diện ngôn ngữ và theo dõi đa đối tượng. Được xây dựng để rèn luyện bộ đệm trí nhớ làm việc của bạn thông qua các cấp độ thử thách tăng dần.",
+      "benefit1Title": "Gợi nhớ không gian",
+      "benefit1Desc": "Trí nhớ bố cục ô",
+      "benefit2Title": "Khoảng nhớ chữ số",
+      "benefit2Desc": "Khả năng lưu giữ trí nhớ số",
+      "benefit3Title": "Chuỗi mẫu",
+      "benefit3Desc": "Các mẫu nhấp nháy mở rộng"
+    },
+    "speed": {
+      "heroTitle": "Kiểm tra Tốc độ & Chuẩn mực Vận tốc",
+      "heroSubtitle": "Đẩy giới hạn số lần nhấp mỗi giây (CPS), tốc độ gõ phím (WPM) và sự nhanh nhẹn trong tính toán của bạn.",
+      "heroDesc": "Các chuẩn mực tốc độ đo lường thông lượng thô của hệ thống thần kinh cơ c��a bạn—số lượng hành động chính xác bạn có thể thực hiện trên mỗi đơn vị thời gian thông qua các đầu vào chuột và bàn phím.",
+      "whatItCovers": "Đấu trường này bao gồm những gì",
+      "whatItCoversDesc": "Tốc độ nhấp chuột qua nhiều khoảng thời gian, từ gõ mỗi phút, toán học nhanh và quét trực quan trên bảng Schulte.",
+      "benefit1Title": "Tốc độ nhấp chuột",
+      "benefit1Desc": "Đo lường CPS thô",
+      "benefit2Title": "Tốc độ gõ phím",
+      "benefit2Desc": "Chuẩn mực WPM",
+      "benefit3Title": "Toán nhẩm",
+      "benefit3Desc": "Tính toán nhanh chóng"
+    },
+    "accuracy": {
+      "heroTitle": "Luyện tập Ngắm tâm & Đội chính xác",
+      "heroSubtitle": "Trau dồi độ chính xác vi mục tiêu, phối hợp tay-mắt và khả năng ước tính trực quan.",
+      "heroDesc": "Tốc độ không có ý nghĩa gì nếu thiếu sự chính xác. Các mô-đun độ chính xác của chúng tôi rèn luyện bạn tập trung và đánh trúng mục tiêu một cách gọn gàng với biên độ sai sót tối thiểu.",
+      "whatItCovers": "Đấu trường này bao gồm những gì",
+      "whatItCoversDesc": "Nhấp chuột vi mô chính xác, ước tính góc, khớp mẫu, phân biệt màu sắc và độ chính xác khi nhập dữ liệu.",
+      "benefit1Title": "Ngắm tâm chính xác",
+      "benefit1Desc": "Nhấp vào vi mục tiêu",
+      "benefit2Title": "Góc không gian",
+      "benefit2Desc": "Ước tính góc",
+      "benefit3Title": "Khớp trực quan",
+      "benefit3Desc": "Nhận diện mẫu"
+    },
+    "gaming": {
+      "heroTitle": "Khởi động Thể thao điện tử & Đấu trường Ngắm tâm",
+      "heroSubtitle": "Hiệu chỉnh các cú văng tâm chuột (flick shot), theo dõi mục tiêu và phản xạ chiến đấu cho các trò chơi cạnh tranh.",
+      "heroDesc": "Được xây dựng dành riêng cho game thủ trong các tựa game Counter-Strike, Valorant, Apex Legends và Overwatch để làm nóng bộ nhớ cơ học trước khi bước vào các trận đấu xếp hạng.",
+      "whatItCovers": "Đấu trường này bao gồm những gì",
+      "whatItCoversDesc": "Ngắm bắn văng tâm (flick shot), theo dõi mục tiêu liên tục, phản xạ chiến đấu trong chớp mắt và né tránh các dòng chướng ngại vật.",
+      "benefit1Title": "Văng tâm (Flick Shots)",
+      "benefit1Desc": "Khả năng bắt mục tiêu",
+      "benefit2Title": "Theo dõi mục tiêu",
+      "benefit2Desc": "Bám sát mục tiêu mượt mà",
+      "benefit3Title": "Phản xạ chiến đấu",
+      "benefit3Desc": "Ra quyết định nhanh chóng"
+    },
+    "exploreOther": "Khám phá các danh mục khác",
+    "toolNameCol": "Tên công cụ",
+    "bestForCol": "Phù hợp nhất (Trường hợp sử dụng)",
+    "coreBenefitCol": "Lợi ích cốt lõi"
+  },
+  "allTools": {
+    "title": "Tất cả Công cụ Luyện tập",
+    "subtitle": "Khám phá bộ công cụ kiểm tra nhận thức và tâm vận động hoàn chỉnh của chúng tôi. Lọc theo đấu trường hoặc duyệt bên dưới để bắt đầu thiết lập chuẩn mực.",
+    "filterAll": "Tất cả công cụ",
+    "filterMemory": "Trí nhớ",
+    "filterReflex": "Phản xạ",
+    "filterSpeed": "Tốc độ",
+    "filterAccuracy": "Độ chính xác",
+    "filterGaming": "Gaming",
+    "startTest": "Bắt đầu kiểm tra"
+  },
+  "about": {
+    "identityProfile": "Hồ sơ Nhận diện",
+    "heroTitle": "Về",
+    "heroTitleHighlight": "Chúng tôi",
+    "heroSubtitle": "Một nền tảng thực tế giúp đo lường và đẩy giới hạn cơ học của bạn lên mức cao nhất. Được xây dựng bởi những game thủ thi đấu chuyên nghiệp dành cho bất kỳ ai muốn nâng cao kỹ năng.",
+    "missionLabel": "Tuyên ngôn Sứ mệnh",
+    "missionTitle": "Sứ mệnh của Chúng tôi",
+    "missionDesc": "Sứ mệnh của chúng tôi rất đơn giản: phổ biến hóa c��c công cụ kiểm tra phản xạ và nhận thức cấp độ cao y hệt như các đội tuyển esports chuyên nghiệp sử dụng. Sự cải thiện bắt đầu từ dữ liệu thô, trung thực. Chúng tôi xây dựng Reflextry để bạn có thể tìm ra mốc cơ sở chính xác của mình, tập trung cao độ và vượt qua nó.",
+    "originLabel": "Nhật ký Nguồn gốc",
+    "originTitle": "Câu chuyện của Chúng tôi",
+    "originP1": "Reflextry bắt đầu như một dự án phụ nhỏ: một kịch bản trình duyệt để đo độ trễ nhấp chuột mà không cần cài đặt thêm phần mềm huấn luyện trên máy tính. Công cụ duy nhất đó đã biến thành một câu hỏi mà chúng tôi liên tục nghe thấy—liệu chúng ta có thể đưa các bài tập trí nhớ, phản xạ, tốc độ, độ chính xác và ngắm bắn vào cùng một nơi, miễn phí dùng thử và có điểm số bạn có thể tự theo dõi không?",
+    "originP2": "Chúng tôi đã xây dựng trang web tại Surat, Ấn Độ, với tư cách là một nhóm nhỏ hai người. Mỗi mô-��un đều được phát hành dưới dạng bài kiểm tra tương tác thực tế ngay trên trình duyệt—không có bức tường tải xuống, không có “gói cao cấp” bị khóa trả phí. Tiến trình nằm trong phiên làm việc và các công cụ thống kê của bạn để bạn có thể xem các xu hướng mà không cần tạo tài khoản cho việc luyện tập cơ bản.",
+    "originP3": "Ngày nay, Reflextry được sử dụng bởi các game thủ khởi động trước khi đánh trận xếp hạng, học sinh rèn luyện trí nhớ làm việc và những khách tò mò muốn kiểm tra thời gian phản xạ hoặc thị lực màu sắc. Chúng tôi tiếp tục mở rộng bộ công cụ một cách cẩn thận: các bài kiểm tra mới chỉ được phát hành khi các quy tắc tính điểm rõ ràng và giao diện giải thích con số đó có ý nghĩa gì.",
+    "coreValuesLabel": "Giá trị cốt lõi",
+    "valAccuracyTitle": "Độ chính xác",
+    "valAccuracyDesc": "Không có điểm thừa, chỉ có các phép đo chính xác và bài kiểm tra đáng tin cậy để theo dõi mốc cơ sở cơ học thực sự của bạn.",
+    "valInnovationTitle": "Đổi mới",
+    "valInnovationDesc": "Liên tục đẩy ra các mô-đun mới để kiểm tra giới hạn tuyệt đối của thời gian phản xạ con người.",
+    "valAccessibilityTitle": "Khả năng tiếp cận",
+    "valAccessibilityDesc": "Các công cụ theo dõi hiệu suất và kiểm tra cấp độ chuyên nghiệp, hoàn toàn miễn phí cho tất cả mọi người.",
+    "valUserFirstTitle": "Lấy Người dùng làm trung tâm",
+    "valUserFirstDesc": "Chúng tôi xây dựng những gì cộng đồng yêu cầu. Nếu một chế độ trò chơi tệ, chúng tôi sẽ sửa nó.",
+    "whatWeOfferLabel": "Chúng tôi cung cấp gì",
+    "offerBrainTitle": "Trò chơi Huấn luyện Não bộ",
+    "offerBrainDesc": "Đẩy mạnh trí nhớ làm việc và khả năng nhận dạng mẫu hình của bạn với tải trọng nhận thức được thiết kế để ép tính dẻo của thần kinh.",
+    "offerReflexTitle": "Kiểm tra Tốc độ & Phản xạ",
+    "offerReflexDesc": "Đo lường độ trễ thể chất thô của bạn đến từng mili-giây chính xác trong các đấu trường ngắm bắn, nhấp chuột và phản xạ của chúng tôi.",
+    "offerTrackingTitle": "Theo dõi Tiến trình",
+    "offerTrackingDesc": "Tự động ghi lại dữ liệu phiên của bạn và xem đường cong hiệu suất tăng lên theo thời gian.",
+    "offerLeaderboardTitle": "Thành tựu & Bảng xếp hạng",
+    "offerLeaderboardDesc": "Mở khóa cấp bậc, cày các thử thách hàng ngày và xem vị trí của bạn so với người chơi trên toàn thế giới.",
+    "ctaTitle": "Sẵn sàng Tìm ra Mốc Cơ sở của Bạn?",
+    "ctaDesc": "Không cần tài khoản. Chỉ cần chọn một công cụ, tập trung và kiểm tra tốc độ của bạn.",
+    "ctaStart": "Bắt đầu Kiểm tra Phản xạ",
+    "ctaExplore": "Khám phá Tất cả Công cụ"
+  },
+  "faqPage": {
+    "heroTitle": "Các Câu hỏi Thường gặp",
+    "heroSubtitle": "Mọi thứ bạn cần biết về các bài kiểm tra, lợi ích luyện tập và cách tính đi��m.",
+    "catGettingStarted": "Bắt đầu",
+    "catBrainTraining": "Huấn luyện Não bộ",
+    "catMemoryTraining": "Huấn luyện Trí nhớ",
+    "catReactionTime": "Thời gian Phản xạ",
+    "catSpeedAim": "Tốc độ & Ngắm bắn",
+    "catPrivacyScores": "Quyền riêng tư & Điểm số",
+    "q1": "Reflextry chính xác là gì?",
+    "a1": "Đây là một nền tảng miễn phí được xây dựng để đo lường và cải thiện các kỹ năng cơ học thô của bạn—những thứ như thời gian phản xạ, trí nhớ làm việc và độ chính xác khi nhấp chuột. Không cần tải xuống hay đăng ký. Chỉ cần chọn một công cụ và bắt đầu kiểm tra giới hạn của bạn.",
+    "q2": "Tôi có phải tạo tài khoản không?",
+    "a2": "Không cần. Mọi thứ hoàn toàn miễn phí và có thể truy cập ngay bây giờ. Chúng tôi sẽ bổ sung tính năng tài khoản tùy chọn sau nếu bạn muốn lưu tiến trình của mình trên các thiết bị hoặc cạnh tranh trên bảng xếp hạng toàn cầu, nhưng các công c��� cốt lõi sẽ luôn mở.",
+    "q3": "Tôi nên bắt đầu từ đâu?",
+    "a3": "Nếu bạn chơi các tựa game bắn súng, hãy thử Trình luyện tập Ngắm bắn hoặc Kiểm tra Thời gian Phản xạ. Nếu bạn đến để huấn luyện nhận thức, hãy thử Trí nhớ Chuỗi hoặc Trí nhớ Số. Chúng tôi khuyên bạn nên thử một vài cái để xem mốc cơ sở của mình đang ở đâu.",
+    "q4": "Huấn luyện não bộ có thực sự mang lại tác dụng gì không?",
+    "a4": "Có, trong khoa học thần kinh người ta gọi đó là 'sự chuyển giao gần' (near transfer). Nếu bạn luyện tập ghi nhớ chuỗi số hàng ngày, não bộ của bạn sẽ thích ứng một cách vật lý (tính dẻo của thần kinh) và bạn sẽ giỏi hơn trong việc lưu trữ thông tin trong bộ nhớ ngắn hạn. Nó giống như việc đến phòng gym, nhưng là dành cho hệ thần kinh trung ương của bạn.",
+    "q5": "Mất bao lâu để tôi thấy kết quả?",
+    "a5": "Nếu bạn cày 10-20 phút mỗi ngày, bạn sẽ bắt đầu thấy đi��m số của mình tăng lên trong vòng 2 đến 3 tuần. Sự kiên trì quan trọng hơn rất nhiều so với việc làm một phiên kéo dài 2 tiếng đồng hồ một lần một tuần.",
+    "q6": "Làm thế nào để tôi ngừng việc quên mọi thứ ngay lập tức?",
+    "a6": "Mẹo nhanh nhất là 'chia nhỏ' (chunking)—nhóm các mục lại với nhau (như nhớ số điện thoại theo từng khối thay vì từng chữ số đơn lẻ. Ngoài ra, não bộ của bạn sẽ xóa những thứ nó cho là vô ích, vì vậy bạn phải chủ động tập trung và ép bản thân nhớ lại để giữ nó lại trong đầu.",
+    "q7": "Trí nhớ làm việc và trí nhớ dài hạn khác gì nhau?",
+    "a7": "Trí nhớ làm việc chính là RAM của não bộ—nó lưu giữ những gì bạn đang suy nghĩ ngay lúc này. Trí nhớ dài hạn chính là ổ cứng. Các công cụ của chúng tôi chỉ huấn luyện RAM của bạn, để bạn có thể xử lý nhiều thứ cùng một lúc mà không bị rơi rớt thông tin.",
+    "q8": "Thời gian phản xạ thế nào là 'tốt'?",
+    "a8": "Thời gian phản xạ thị giác trung bình trên toàn cầu nằm trong khoảng 200–250ms. Các game thủ thi đấu chuyên nghiệp thường đạt mốc 150–190ms. Bất kỳ kết quả nào dưới 150ms đều thuộc top 1% khả năng của con người.",
+    "q9": "Màn hình hoặc chuột của tôi có gây ra độ trễ đầu vào (input lag) không?",
+    "a9": "Có. Màn hình 60Hz tạo thêm ~16ms độ trễ khung hình so với tấm nền 144Hz (~7ms) hoặc 240Hz (~4ms). Chuột không dây có tần số phản hồi (polling rate) kém cũng có thể làm tăng độ trễ. Để kiểm tra độ chính xác thuần túy, hãy sử dụng chuột chơi game và màn hình có tần số quét cao.",
+    "q10": "Tôi có thể tập luyện CPS (Số lần Nhấp mỗi Giây) của mình không?",
+    "a10": "Có. Việc nhấp chuột tiêu chuẩn thường đạt giới hạn khoảng 6–8 CPS. Các kỹ thuật như jitter clicking hoặc butterfly clicking có thể đẩy bạn vượt qua 12–16 CPS.",
+    "q11": "Điểm số của tôi có được lưu lại nếu tôi đóng trình duyệt không?",
+    "a11": "Điểm số và hồ sơ phiên của bạn được lưu trữ cục bộ trong bộ nhớ cục bộ của trình duyệt. Chúng vẫn được giữ lại qua các lần tải lại trên cùng một thiết bị và trình duyệt.",
+    "q12": "Các bạn có bán hoặc thu thập dữ liệu cá nhân của tôi không?",
+    "a12": "Không. Chúng tôi không theo dõi hoặc bán dữ liệu nhận dạng cá nhân. Mọi số liệu kiểm tra phản xạ và nhận thức đều thuộc về bạn."
+  },
+  "contact": {
+    "heroTitle": "Liên",
+    "heroTitleHighlight": "hệ",
+    "heroSubtitle": "Câu hỏi, đề xuất tính năng, yêu cầu hợp tác hay báo cáo lỗi? Chúng tôi đọc mọi tin nhắn.",
+    "generalInquiries": "Yêu cầu Chung",
+    "generalInquiriesDesc": "Dành cho các thắc mắc chung, hợp tác và báo chí.",
+    "technicalSupport": "Hỗ trợ Kỹ thuật",
+    "technicalSupportDesc": "Dành cho báo cáo lỗi, vấn đề thiết bị hoặc câu hỏi về tính điểm.",
+    "feedbackTitle": "Phản hồi & Ý tưởng",
+    "feedbackDesc": "Đề xuất mô-đun mới hoặc các cải tiến cho trò chơi hiện có.",
+    "formName": "Tên của bạn",
+    "formNamePlaceholder": "ví dụ: Alex Chen",
+    "formEmail": "Địa chỉ Email",
+    "formEmailPlaceholder": "you@example.com",
+    "formSubject": "Chủ đề",
+    "formSubjectPlaceholder": "Chúng tôi có thể giúp gì cho bạn?",
+    "formMessage": "Tin nhắn",
+    "formMessagePlaceholder": "Hãy cho chúng tôi biết bạn đang nghĩ gì...",
+    "formSubmit": "Gửi Tin nhắn",
+    "formSending": "Đang gửi...",
+    "successMsg": "Đã gửi tin nhắn thành công!",
+    "errorMsg": "Gửi tin nhắn thất bại. Vui lòng thử lại."
+  },
+  "leaderboard": {
+    "heroTitle": "Bảng Xếp hạng Toàn cầu",
+    "heroSubtitle": "Cạnh tranh với người chơi trên toàn thế giới và theo dõi tiến trình của bạn qua tất cả các thử thách của Reflextry. Thiết lập mốc cơ sở của bạn và vươn lên top đầu.",
+    "personalBests": "Kỷ lục Cá nhân",
+    "personalBestsDesc": "Điểm số cao nhất của bạn cục bộ",
+    "globalRankings": "Xếp hạng Toàn cầu",
+    "globalRankingsDesc": "So sánh trên toàn thế giới",
+    "trackProgress": "Theo dõi Tiến trình",
+    "trackProgressDesc": "Xem các cải tiến của bạn",
+    "myScores": "Điểm số của Tôi",
+    "global": "Toàn cầu",
+    "rank": "Hạng",
+    "player": "Người chơi",
+    "score": "Điểm số",
+    "date": "Ngày",
+    "testNow": "Kiểm tra Ngay",
+    "noScoresYet": "Chưa có điểm số nào được ghi lại. Hãy hoàn thành một bài kiểm tra để xem thứ hạng của bạn!"
+  },
+  "statistics": {
+    "heroTitle": "Thống kê Cá nhân",
+    "heroSubtitle": "Theo dõi các đường cong hiệu suất lịch sử, điểm số ổn định và kỷ lục cá nhân của bạn.",
+    "totalSessions": "Tổng số Phiên",
+    "bestPerformance": "Hiệu suất Tốt nhất",
+    "averageScore": "Điểm số Trung bình",
+    "scoreTrend": "Xu hướng Điểm số",
+    "noData": "Chưa có dữ liệu phiên n��o được ghi lại. Hãy chơi một trò chơi để xem thống kê của bạn!",
+    "downloadData": "Xuất Dữ liệu",
+    "selectTest": "Chọn Bài kiểm tra",
+    "clearHistory": "Xóa Lịch sử"
+  },
+  "challenges": {
+    "heroTitle": "Thử thách Hàng ngày",
+    "heroSubtitle": "Hoàn thành các bài tập nhận thức hàng ngày của bạn để xây dựng sự ổn định, kiếm phần thưởng chuỗi ngày và thăng cấp.",
+    "streak": "Chuỗi Hiện tại",
+    "days": "Ngày",
+    "todayChallenge": "Thử thách Hôm nay",
+    "target": "Mục tiêu:",
+    "completed": "Đã hoàn thành!",
+    "startChallenge": "Bắt đầu Thử thách",
+    "streakReward": "Hệ số Nhân chuỗi",
+    "howItWorks": "Cách Thử thách Hàng ngày Hoạt động",
+    "howItWorksP1": "Một thử thách mới được tạo ra cứ sau 24 giờ. Hoàn thành mục tiêu để duy trì chuỗi ngày liên tục của bạn.",
+    "howItWorksP2": "Việc luyện tập hàng ngày một cách đều đặn thúc đẩy sự thích ứng dẻo dai của thần kinh và ngăn chặn tình trạng chững nhận thức."
+  },
+  "achievements": {
+    "heroTitle": "Thành tựu & Huy chương",
+    "heroSubtitle": "Mở khóa những huy chương danh giá khi bạn phá vỡ các rào cản tốc độ phản xạ và đạt được các cột mốc nhận thức.",
+    "totalUnlocked": "Tổng số đã Mở khóa",
+    "unlocked": "Đã mở khóa",
+    "locked": "Đã khóa",
+    "rarityCommon": "Phổ biến",
+    "rarityRare": "Hiếm",
+    "rarityEpic": "Sử thi",
+    "rarityLegendary": "Huyền thoại"
+  },
+  "categorySeo": {
+    "reflex": {
+      "sec0Heading": "Thời gian phản ứng hoạt động như thế nào",
+      "sec0Text": "Thời gian phản ứng của bạn được chi phối bởi ba giai đoạn: nhận thức (phát hiện kích thích), tư duy (quyết định phải làm gì) và thực thi vận động (thực hiện hành động). Mỗi giai đoạn có thể được rèn luyện độc lập. Tốc độ nhận thức cải thiện nhờ sự quen thuộc với kích thích — bạn càng luyện tập phản ứng với một tia chớp màu xanh lá cây, vỏ não thị giác của bạn càng nhận biết nó nhanh hơn. Quá trình xử lý nhận thức tăng tốc khi việc ra quyết định trở thành tự động. Việc thực thi vận động cải thiện thông qua quá trình myelin hóa các đường dẫn truyền thần kinh được sử dụng thường xuyên, điều này làm tăng theo nghĩa đen tốc độ truyền tín hiệu.",
+      "sec1Heading": "Các yếu tố ảnh hưởng đến thời gian phản ứng",
+      "sec1Text": "Một số biến số ảnh hưởng đến thời gian phản ứng của bạn vào bất kỳ ngày nào. Việc thiếu ngủ có thể cộng thêm 20–50ms vào mức cơ bản của bạn — các nghiên cứu cho thấy 24 giờ không ngủ làm suy giảm thời gian phản ứng nhiều hơn mức nồng độ cồn trong máu là 0.10%. Caffeine thường làm giảm thời gian phản ứng từ 10–20ms trong 3–5 giờ. Thể lực có mối tương quan với tốc độ xử lý nhanh hơn. Tuổi tác đóng một vai trò: thời gian phản ứng đạt đỉnh trong độ tuổi 18–25 và giảm dần sau đó, mặc dù việc luyện tập có thể bù đắp đáng kể sự suy giảm này.",
+      "sec2Heading": "Ứng dụng trong thế giới thực",
+      "sec2Text": "Thời gian phản ứng nhanh là tối quan trọng khi lái xe, nơi sự chênh lệch 100ms ở tốc độ 60 dặm/giờ tương đương với khoảng cách dừng xe thêm 8.8 feet. Trong thể thao điện tử cạnh tranh, các tuyển thủ Counter-Strike chuyên nghiệp có thời gian phản ứng dưới 170ms đạt được lợi thế có thể đo lường được trong các pha đấu súng. Các vận động viên trong các môn thể thao như bóng bàn, quyền Anh và thể thao tốc độ trải qua quá trình luyện tập phản phản ứng chuyên dụng như một phần trong chương trình thể lực của họ."
+    },
+    "memory": {
+      "sec0Heading": "Khoa học đằng sau việc rèn luyện trí nhớ",
+      "sec0Text": "Nghiên cứu trong lĩnh vực thần kinh học nhận thức đã chứng minh rằng dung lượng bộ nhớ làm việc không phải là cố định. Một nghiên cứu mang tính bước ngoặt được công bố trên PNAS cho thấy việc rèn luyện bộ nhớ làm việc cường độ cao có thể dẫn đến những cải thiện về trí thông minh linh hoạt — khả năng lập luận và giải quyết các vấn đề mới. Các trò chơi trí nhớ của chúng tôi tận dụng độ khó thích ứng: khi bạn tiến bộ, thử thách sẽ tăng lên, buộc bộ liên tục thích ứng thông qua tính dẻo của não bộ.",
+      "sec1Heading": "Các loại trí nhớ mà chúng tôi rèn luyện",
+      "sec1Text": "Đấu trường trí nhớ của chúng tôi nhắm đến nhiều hệ thống trí nhớ. Trí nhớ không gian thị giác được kiểm tra qua các trò chơi như Trí nhớ thị giác và Trí nhớ trình tự. Trí nhớ bằng lời nói được thử thách trong bài kiểm tra Trí nhớ bằng lời nói, yêu cầu bạn phân biệt giữa các từ ��ã thấy và từ mới. Trí nhớ bằng số được đẩy mạnh trong Trí nhớ số, nơi bạn tái tạo các chuỗi chữ số ngày càng dài. Mỗi hệ thống kích hoạt các vùng não khác nhau.",
+      "sec2Heading": "Ai được hưởng lợi từ việc rèn luyện trí nhớ?",
+      "sec2Text": "Học sinh sinh viên chuẩn bị cho các kỳ thi thấy rằng bộ nhớ làm việc mạnh mẽ hơn có mối tương quan trực tiếp với khả năng đọc hiểu tốt hơn và giải quyết vấn đề toán học. Người lớn tuổi sử dụng việc rèn luyện trí nhớ để xây dựng dự trữ nhận thức chống lại sự suy giảm theo tuổi tác. Các game thủ cạnh tranh dựa vào trí nhớ không gian để theo dõi vị trí của kẻ địch và thời gian hồi chiêu cùng một lúc."
+    },
+    "speed": {
+      "sec0Heading": "Hiểu về CPS (Số lần nhấp chuột mỗi giây)",
+      "sec0Text": "Một người bình thường chưa qua tập luyện nhấp chuột ở mức 5–7 CPS. Các game thủ cạnh tranh thường xuyên đạt 10–14 CPS bằng cách sử dụng các kỹ thuật như nhấp chuột rung (jitter clicking) hoặc nhấp chuột bướm (butterfly clicking). Sự khéo léo của ngón tay và khả năng kiểm soát vận động tinh mà họ phát triển được chuyển đổi sang bất kỳ tác vụ chuột chính xác nào. Bài kiểm tra Tốc độ nhấp chuột của chúng tôi đo lường CPS của bạn qua nhiều khoảng thời gian.",
+      "sec1Heading": "Tốc độ gõ phím và tác động chuyên nghiệp",
+      "sec1Text": "Người lớn bình thường gõ ở mức 40 WPM, trong khi những người đánh máy chuyên nghiệp đạt 65–75 WPM. Đạt 80–100 WPM loại bỏ việc gõ phím như một nút thắt cổ chai trong công việc tri thức, cho phép các ngón tay theo kịp suy nghĩ. Các bài kiểm tra gõ phím của chúng tôi đo lường cả WPM tổng và độ chính xác ròng.",
+      "sec2Heading": "Tốc độ tính toán nhẩm",
+      "sec2Text": "Bài kiểm tra Tốc độ toán học của chúng tôi thử thách khả năng xử lý số liệu và tính nhẩm. Khả năng thực hiện các phép tính nhanh chóng dựa trên bộ nhớ làm việc, các quy tắc thủ tục và tốc độ xử lý. Việc luyện tập thường xuyên cải thiện cảm giác trực 3 giác của bạn đối với các con số."
+    },
+    "accuracy": {
+      "sec0Heading": "Trí thông minh thị giác-không gian",
+      "sec0Text": "Trí thông minh thị giác-không gian là khả năng nhận thức, phân tích và thao tác tinh thần đối với thông tin thị giác. Bài kiểm tra Khớp mẫu đánh giá năng lực xác định các quy luật trong dữ liệu trực quan. Xoay trong tâm trí thử thách khả năng thao tác các đối tượng 3D trong tâm trí của bạn.",
+      "sec1Heading": "Kiểm soát vận động tinh và độ chính xác",
+      "sec1Text": "Bài kiểm tra Nhấp chuột chính xác đo lường khả năng định vị chính xác con trỏ trên các mục tiêu nhỏ. Kiểm soát vận động tinh phụ thuộc vào tiểu não, vỏ não vận động và phản hồi cảm giác bản thể. Việc luyện tập thường xuyên xây dựng trí nhớ cơ bắp để các chuyển động chính xác trở thành tự động.",
+      "sec2Heading": "Nhận thức màu sắc và ước tính",
+      "sec2Text": "Các công cụ Phối màu và Ước tính góc của chúng tôi rèn luyện khả năng hiệu chỉnh nhận thức — độ chính xác mà bạn đánh giá các thuộc tính trực quan. Ước tính góc phát triển lý luận không gian được sử dụng trong hình học và điều hướng. Phản hồi tức thì giúp hiệu chỉnh lại các mô hình nhận thức bên trong."
+    },
+    "gaming": {
+      "sec0Heading": "Kỹ thuật huấn luyện ngắm bắn (Aim Training)",
+      "sec0Text": "Ngắm bắn trong các trò chơi FPS được chia thành các cơ chế rõ rệt. Tracking (Theo dõi) là khả năng giữ tâm ngắm của bạn trên một mục tiêu di chuyển. Flicking (Vảy tâm) là thao tác chụp nhanh tâm ngắm của bạn vào các mục tiêu xuất hiện bất ngờ. Grid click nhắm vào khả năng nhanh chóng lấy lại mục tiêu ở các khoảng cách khác nhau.",
+      "sec1Heading": "Khoa học về hiệu suất trong Esports",
+      "sec1Text": "Nghiên cứu được công bố trên PLOS ONE cho thấy các game thủ chuyên nghiệp thể hiện tốc độ xử lý thị giác-vận động nhanh hơn đáng kể so với những người không chơi game. Người chơi trò chơi điện tử hành động thể hiện sự phân bổ sự chú ý nâng cao và ra quyết định trực quan được phát triển thông qua việc luyện tập có chủ đích.",
+      "sec2Heading": "Giao thức khởi động tối ưu",
+      "sec2Text": "Một buổi khởi động từ 5–10 phút giúp cải thiện hiệu suất và giảm nguy cơ chấn thương. Tiến triển từ các chuyển động chậm, được kiểm soát đến các phản ứng tốc độ trong trò chơi: bắt đầu với 2 phút Grid Click, 3 phút Aim Trainer, sau đó là 2 phút Flick Shot ở tốc độ tối đa."
+    }
+  },
+  "categoryGuide": {
+    "reflex": {
+      "whatIsTitle": "Phản xạ và Luyện tập Tốc độ Phản ứng là gì?",
+      "whatIsDesc": "Luyện tập phản xạ đo lường tổng thời gian trôi qua giữa việc xuất hiện kích thích giác quan và phản ứng vận động tiếp theo. Mặc dù các yếu tố sinh lý bẩm sinh đóng một vai trò nhất định, việc luyện tập thường xuyên giúp loại bỏ sự do dự và tình trạng mỏi mệt khi ra quyết định, huấn luyện hệ thần kinh trung ương của bạn kích hoạt các tế bào thần kinh vận động ngay lập tức khi nhận được một tín hiệu cụ thể.",
+      "howToTitle": "Làm thế nào để cải thiện thời gian phản ứng của bạn?",
+      "howToStep1Title": "Loại bỏ mọi xao lãng",
+      "howToStep1Desc": "Tập trung hoàn toàn vào điểm neo chính giữa màn hình của bạn.",
+      "howToStep2Title": "Sử dụng phần cứng tối ưu",
+      "howToStep2Desc": "Đảm bảo bạn đang sử dụng màn hình có tần số quét cao (144Hz+) và chuột có dây độ trễ thấp.",
+      "howToStep3Title": "Giữ cơ thể đủ nước và nghỉ ngơi",
+      "howToStep3Desc": "Thiếu ngủ có thể làm tăng thời gian phản ứng thêm hơn 50 mili giây.",
+      "howToStep4Title": "Luyện tập hàng ngày",
+      "howToStep4Desc": "Chỉ cần 5 phút kiểm tra Thời gian Phản ứng và Phản xạ Âm thanh mỗi ngày có thể làm sắc bén mức cơ sở của bạn.",
+      "shouldPracticeTitle": "Tôi có nên luyện tập hàng ngày không?",
+      "shouldPracticeDesc": "Có. Các buổi tập luyện thường xuyên, ngắn gọn sẽ điều kiện hóa bộ não của bạn để bỏ qua quá trình xử lý nhận thức phức tạp đối với các tác vụ đơn giản, thay vào đó dựa vào các đường dẫn vận động nhanh hơn và tự động hóa.",
+      "comparisonTitle": "So sánh các Công cụ Phản xạ",
+      "row1Tool": "Reaction Time",
+      "row1BestFor": "Game thủ, Đại đa số người dùng",
+      "row1Benefit": "Đo lường tốc độ phản xạ thị giác cơ bản tính bằng mili giây.",
+      "row2Tool": "Sound Reflex",
+      "row2BestFor": "Vận động viên (Chạy điền kinh/Bơi lội)",
+      "row2Benefit": "Cô lập các đường dẫn thính giác, xử lý nhanh hơn các đường dẫn thị giác.",
+      "row3Tool": "Directional Reflex",
+      "row3BestFor": "Tài xế, Thủ môn",
+      "row3Benefit": "Huấn luyện khả năng chuyển đổi nhận thức về một tín hiệu định hướng thành một cú vuốt tay vật lý.",
+      "benchmarksTitle": "Tiêu chuẩn & Bằng chứng Khoa học",
+      "benchmarksDesc": "Theo các nghiên cứu về nhân trắc học, thời gian phản ứng trung bình của con người là khoảng 250 mili giây đối với tín hiệu thị giác và 170 mili giây đối với tín hiệu âm thanh. Thông qua việc lặp lại chủ động và thích ứng thần kinh, các vận động viên và game thủ ưu tú có thể đưa thời gian phản ứng thị giác của họ xuống dưới 150 mili giây. Một nghiên cứu từ Tạp chí Khoa học Thể thao kết luận rằng việc luyện tập thị giác-vận động chuyên biệt có thể làm giảm đáng kể độ trễ phản ứng trong môi trường cạnh tranh.",
+      "faqTitle": "Các câu hỏi thường gặp",
+      "faq1Q": "Bạn có thực sự có thể rèn luyện thời gian phản ứng của mình không?",
+      "faq1A": "Mặc dù thời gian phản ứng di truyền thô của bạn có giới hạn cứng, bạn hoàn toàn có thể huấn luyện bộ não của mình tiếp cận giới hạn đó một cách nhất quán. Các công cụ của chúng tôi giúp loại bỏ sự do dự và tình trạng mỏi mệt khi ra quyết đ���nh, huấn luyện hệ thần kinh của bạn kích hoạt ngay lập tức khi nhận được một tín hiệu cụ thể.",
+      "faq2Q": "Tại sao thời gian phản ứng âm thanh nhanh hơn thị giác?",
+      "faq2A": "Kích thích thính giác mất ít thời gian hơn để đến não so với kích thích thị giác. Vỏ não thính giác xử lý âm thanh nhanh hơn đáng kể so với vỏ não thị giác xử lý thông tin hình ảnh phức tạp. Đây là lý do tại sao một vận động viên chạy phản ứng với tiếng súng lệnh thay vì một ánh đèn chớp."
+    },
+    "memory": {
+      "whatIsTitle": "Luyện tập Trí nhớ & Hồi tưởng Nhận thức là gì?",
+      "whatIsDesc": "Trí nhớ làm việc (working memory) là không gian làm việc tinh thần được sử dụng để tạm thời lưu trữ và thao tác với thông tin. Khác với trí nhớ dài hạn, trí nhớ làm việc có dung lượng hạn chế. Luyện tập với các bài tập hồi tưởng đa dạng sẽ điều kiện hóa bộ não quản lý tải trọng nhận thức, nhận diện các m��u nhanh hơn và giữ lại thông tin hiệu quả hơn dưới áp lực.",
+      "howToTitle": "Làm thế nào để cải thiện Trí nhớ Làm việc của bạn?",
+      "howToStep1Title": "Sử dụng phương pháp chia nhỏ (Chunking)",
+      "howToStep1Desc": "Chia các dãy số dài hoặc các mẫu phức tạp thành các phần nhỏ hơn, dễ nắm bắt hơn.",
+      "howToStep2Title": "Hình dung không gian",
+      "howToStep2Desc": "Liên kết các số hoặc mẫu trừu tượng với các hình khối vật lý hoặc tọa độ lưới.",
+      "howToStep3Title": "Loại bỏ mọi xao lãng",
+      "howToStep3Desc": "Trí nhớ làm việc suy giảm nhanh chóng nếu sự tập trung của bạn chuyển hướng dù chỉ trong một giây duy nhất.",
+      "howToStep4Title": "Luyện tập tiến bộ",
+      "howToStep4Desc": "Bắt đầu ở các mức độ khó thấp hơn cho đến khi độ chính xác hồi tưởng của bạn luôn ở mức cao.",
+      "shouldPracticeTitle": "Tôi có nên luyện tập hàng ngày không?",
+      "shouldPracticeDesc": "Có. Kích thích hàng ngày liên tục là chìa khóa để thúc đẩy tính dẻo của não bộ (neuroplasticity), đây là khả năng tự tổ chức lại của bộ não bằng cách hình thành các kết nối thần kinh mới.",
+      "comparisonTitle": "So sánh các Công cụ Trí nhớ",
+      "row1Tool": "Number Memory",
+      "row1BestFor": "Học sinh toán học, lập trình viên",
+      "row1Benefit": "Huấn luyện vòng lặp âm vị của não bộ để giữ các chuỗi số dài.",
+      "row2Tool": "Visual Memory",
+      "row2BestFor": "Nhà thiết kế, kiến trúc sư",
+      "row2Benefit": "Cải thiện bảng phác thảo không gian thị giác để phối hợp không gian.",
+      "row3Tool": "Sequence Memory",
+      "row3BestFor": "Nhạc sĩ, nhận thức chung",
+      "row3Benefit": "Nâng cao khả năng nhận diện mẫu tuần tự và độ bền sự tập trung.",
+      "benchmarksTitle": "Tiêu chuẩn & Bằng chứng Khoa học",
+      "benchmarksDesc": "Công trình kinh điển của George A. Miller đã phổ biến ý tưởng rằng mọi người thường giữ khoảng 7±2 khối thông tin trong trí nhớ tức thời. Các kỹ thuật như chia nhỏ giúp giảm số lượng mục độc lập mà bạn phải lưu trữ. Nghiên cứu được thảo luận qua Viện Y tế Quốc gia (NIH) khám phá việc luyện tập trí nhớ làm việc. Trên Reflextry, hãy theo dõi xu hướng nhớ chữ số và hồi tưởng của chính bạn dưới cùng một độ khó.",
+      "faqTitle": "Các câu hỏi thường gặp",
+      "faq1Q": "Bạn có thực sự có thể cải thiện trí nhớ của mình không?",
+      "faq1A": "Có. Mặc dù bạn không thể dễ dàng thay đổi dung lượng trí nhớ dài hạn của mình, bạn có thể nâng cao đáng kể trí nhớ làm việc (ngắn hạn). Việc luyện tập nhất quán với các công cụ như bài kiểm tra Number Memory hoặc Visual Memory giúp huấn luyện bộ não của bạn chia nhỏ thông tin hiệu quả hơn, giúp việc lưu giữ nhiều dữ liệu cùng lúc trở nên dễ dàng hơn.",
+      "faq2Q": "Kỹ thuật 'Chia nhỏ' (Chunking) là gì?",
+      "faq2A": "Chia nhỏ là một chiến lược ghi nhớ trong đó bạn nhóm các mẩu dữ liệu nhỏ hơn, riêng lẻ thành các đơn vị lớn hơn, có ý nghĩa (các khối). Ví dụ, thay vì ghi nhớ chuỗi 4-7-1-9-2-8 thành sáu chữ số riêng biệt, bộ não của bạn có thể nhóm chúng thành 471 và 928, qua đó làm giảm hiệu quả tải trọng nhận thức từ sáu mục xuống chỉ còn hai."
+    },
+    "speed": {
+      "whatIsTitle": "Tốc độ & Vận tốc Thần kinh Cơ bắp là gì?",
+      "whatIsDesc": "Các bài kiểm tra tốc độ đo lường thông lượng thần kinh cơ thô của bạn—hệ thống thần kinh trung ương của bạn có thể gửi các tín hiệu vận động lặp đi lặp lại đến các ngón tay, cổ tay và bàn tay của bạn nhanh đến mức nào. Hiệu suất tốc độ cao đòi hỏi sự cân bằng giữa việc kích hoạt cơ co giật nhanh với khả năng kiểm soát thể chất chính xác.",
+      "howToTitle": "Làm thế nào để cải thiện Tốc độ Click và Gõ phím của bạn?",
+      "howToStep1Title": "Tối ưu hóa vị trí đặt tay",
+      "howToStep1Desc": "Giữ cổ tay hơi nâng lên khỏi bàn của bạn để duy trì tính uyển chuyển.",
+      "howToStep2Title": "Học các kỹ thuật thay thế",
+      "howToStep2Desc": "Luyện tập jitter clicking hoặc butterfly clicking để vượt qua các giới hạn vật lý.",
+      "howToStep3Title": "Tập trung vào độ chính xác trước",
+      "howToStep3Desc": "Tốc độ gõ giảm đi đáng kể khi bạn dành thời gian để sửa lỗi chính tả.",
+      "howToStep4Title": "Khởi động trước",
+      "howToStep4Desc": "Những ngón tay lạnh có tốc độ truyền tín hiệu tế bào thần kinh vận động chậm hơn.",
+      "shouldPracticeTitle": "Tôi có nên luyện tập hàng ngày không?",
+      "shouldPracticeDesc": "Có. Các buổi tập tốc độ ngắn trong 10 phút xây dựng sứcδ bền của cơ co giật nhanh ở bàn tay và cẳng tay mà không gây ra chấn thương do căng cơ lặp đi lặp lại.",
+      "comparisonTitle": "So sánh các Công cụ Tốc độ",
+      "row1Tool": "Click Speed (CPS)",
+      "row1BestFor": "Game thủ Minecraft, MOBA",
+      "row1Benefit": "Làm tăng độ bền và tốc độ click ngón tay thô.",
+      "row2Tool": "Typing Test (WPM)",
+      "row2BestFor": "Nhà văn, Lập trình viên, Nhập liệu",
+      "row2Benefit": "Đo lường và thúc đẩy tỷ lệ từ trên phút và độ chính xác khi gõ phím.",
+      "row3Tool": "Speed Math",
+      "row3BestFor": "Học sinh, Chuyên viên phân tích tài chính",
+      "row3Benefit": "Huấn luyện xử lý số học nhanh chóng dưới áp lực thời gian.",
+      "benchmarksTitle": "Tiêu chuẩn & Bằng chứng Khoa học",
+      "benchmarksDesc": "Người dùng Internet trung bình gõ ở mức khoảng 40 Từ Trên Phút (WPM), trong khi các nhân viên đánh máy chuyên nghiệp và lập trình viên thường xuyên vượt quá 90 WPM. Tương tự, tốc độ click trung bình dao động quanh mức 6 CPS, trong khi các game thủ cạnh tranh đạt 10-14 CPS. Theo các nghiên cứu về hiệu suất vận động của con người được xuất bản trên PubMed, việc lặp lại có mục tiêu kết hợp với phản hồi tức thì là cách hiệu quả nhất để vĩnh viễn tăng tốc độ hành động vận động.",
+      "faqTitle": "Các câu hỏi thường gặp",
+      "faq1Q": "Làm cách nào tôi có thể tăng CPS của mình?",
+      "faq1A": "Tăng số Lần Nhấp Mỗi Giây (CPS) đòi hỏi việc phát triển các sợi cơ co giật cụ thể ở ngón tay và cẳng tay của bạn. Các kỹ thuật như jitter clicking và butterfly clicking có thể mang lại sự thúc đẩy tức thì, nhưng cải thiện lâu dài đòi hỏi việc luyện tập sức bền hàng ngày nhất quán để xây dựng thể lực và ngăn ngừa mệt mỏi.",
+      "faq2Q": "Tại sao WPM (Từ Trên Phút) của tôi bị chững lại?",
+      "faq2A": "Sự chững lại trong tốc độ gõ thường do thiếu độ chính xác, chứ không phải thiếu tốc độ ngón tay. Nếu bạn liên tục bấm phím backspace, WPM của bạn sẽ giảm đáng kể. Các công cụ Typing Test và Word Accuracy của chúng tôi nhấn mạnh độ chính xác lên trên hết, điều này tự nhiên chuyển hóa thành tốc độ thô cao hơn theo thời gian."
+    },
+    "accuracy": {
+      "whatIsTitle": "Độ chính xác & Luyện tập Sự chuẩn xác là gì?",
+      "whatIsDesc": "Độ chính xác thể hiện độ lệch giữa mục tiêu dự định và việc thực hiện thể chất thực tế của bạn. Tốc độ mà không có sự chuẩn xác sẽ dẫn đến các lỗi tốn kém, lãng phí công sức và tỷ lệ lỗi cao. Phát triển độ chính xác đến từng pixel đảm bảo tính nhất quán trong các kịch bản áp lực cao.",
+      "howToTitle": "Làm thế nào để cải thiện Điểm số Độ chính xác của bạn?",
+      "howToStep1Title": "Chậm lại",
+      "howToStep1Desc": "Tốc độ là sản phẩm phụ của sự chuẩn xác. Hãy di chuyển với nhịp độ mà bạn không mắc bất kỳ sai lầm nào.",
+      "howToStep2Title": "Điều chỉnh DPI/Độ nhạy",
+      "howToStep2Desc": "Đối với game thủ, độ nhạy chuột thấp hơn thường mang lại độ chuẩn xác cao hơn trong các aim trainer.",
+      "howToStep3Title": "Tập trung vào tâm",
+      "howToStep3Desc": "Trong các nhiệm vụ thị giác như Ước lượng Góc, hãy dán mắt vào đỉnh trung tâm trước khi quét ra phía ngoài.",
+      "howToStep4Title": "Hít thở",
+      "howToStep4Desc": "Việc vội vã gây ra căng thẳng. Hãy giữ cho cơ thể được thư giãn để cho phép các điều chỉnh vi mô.",
+      "shouldPracticeTitle": "Tôi có nên luyện tập hàng ngày không?",
+      "shouldPracticeDesc": "Có, nhưng hãy giữ các buổi tập ngắn. Các nhiệm vụ đòi hỏi độ chuẩn xác cao rất hao tổn nhận thức. 5-10 phút một ngày là đủ để củng cố các đường dẫn thần kinh chính xác mà không gây ra lỗi do mệt mỏi.",
+      "comparisonTitle": "So sánh các Công cụ Độ chính xác",
+      "row1Tool": "Precision Clicking",
+      "row1BestFor": "Nhà thiết kế đồ họa, Game thủ",
+      "row1Benefit": "Nâng cao khả năng kiểm soát vận động tinh để nhấp vào các mục tiêu nhỏ, siêu nhỏ.",
+      "row2Tool": "Data Entry Accuracy",
+      "row2BestFor": "Lập trình viên, Nhân viên đánh máy",
+      "row2Benefit": "Giảm lỗi gõ phím khi nhập cú pháp phức tạp hoặc chuỗi chữ và số.",
+      "row3Tool": "Angle Estimation",
+      "row3BestFor": "Kiến trúc sư, Nghệ sĩ",
+      "row3Benefit": "Phát triển trí thông minh không gian-thị giác nhận thức và nhận thức hình học.",
+      "benchmarksTitle": "Tiêu chuẩn & Bằng chứng Khoa học",
+      "benchmarksDesc": "Khái niệm ưu tiên độ chính xác hơn tốc độ là một nguyên tắc cơ bản của việc học tập vận động, thường được tóm tắt trong châm ngôn quân sự 'chậm là mượt, mượt là nhanh'. Theo Tạp chí Tâm lý học Thực nghiệm, việc tập trung hoàn toàn vào độ chuẩn xác ban đầu cho phép bộ não myelin hóa chính xác các đường dẫn thần kinh cần thiết, ngăn ngừa sự chậm trễ do sửa lỗi xuất hiện ở tốc độ cao hơn.",
+      "faqTitle": "Các câu hỏi thường gặp",
+      "faq1Q": "Tôi nên luyện tập tốc độ hay độ chính xác trước?",
+      "faq1A": "Luôn luôn luyện tập độ chính xác trước. Khi bạn luyện tập tạo ra sai lầm một cách nhanh chóng, bộ não của bạn thực sự trở nên giỏi hơn trong việc mắc lỗi. Bằng cách ép buộc độ chính xác 100% ở tốc độ chậm, bạn đảm bảo rằng các mô hình chuyển động bạn xây dựng là hoàn hảo. Một khi mô hình đã khắc sâu, tốc độ sẽ tự nhiên theo sau.",
+      "faq2Q": "Điều này giúp ích gì cho việc gõ phím của tôi?",
+      "faq2A": "Nút thắt cổ chai lớn nhất đối với WPM (Từ Trên Phút) cao là thời gian dành để nhấn phím backspace. Bằng cách sử dụng các công cụ như Data Entry Accuracy, bạn xây dựng sự tự tin vào các phím bấm của mình, làm giảm đáng kể sự do dự nhận thức vốn làm chậm các nhân viên đánh máy trung bình."
+    },
+    "gaming": {
+      "whatIsTitle": "Ngắm bắn Thể thao điện tử & Luyện tập Khởi động là gì?",
+      "whatIsDesc": "Gaming cạnh tranh đòi h���i sự kết hợp giữa phản ứng thị giác, độ chuẩn xác flick vi mô và theo dõi mục tiêu mượt mà. Các tuyển thủ esports chuyên nghiệp sử dụng các bài tập khởi động chuyên dụng trước các trận đấu cạnh tranh để đạt mức kích hoạt nhận thức đỉnh cao và tránh những pha xử lý lỗi ở đầu game.",
+      "howToTitle": "Làm thế nào để cải thiện Kỹ năng Ngắm bắn (Aim) trong game của bạn?",
+      "howToStep1Title": "Bắt đầu chậm",
+      "howToStep1Desc": "Tập trung vào độ chính xác 100% trước khi cố gắng tăng tốc độ của bạn.",
+      "howToStep2Title": "Sử dụng các công cụ phù hợp",
+      "howToStep2Desc": "Sử dụng Target Tracking cho aim mượt mà, và Flick Shot cho phản xạ flick nhanh.",
+      "howToStep3Title": "Duy trì tư thế",
+      "howToStep3Desc": "Đảm bảo cánh tay và cổ tay của bạn được hỗ trợ đúng cách để ngăn ngừa mệt mỏi và chấn thương.",
+      "howToStep4Title": "Khởi động hàng ngày",
+      "howToStep4Desc": "Một bài tập 10 phút trước khi bước vào đấu trường xếp hạng tạo ra sự khác biệt lớn.",
+      "shouldPracticeTitle": "Tôi có nên luyện tập hàng ngày không?",
+      "shouldPracticeDesc": "Có. Việc luyện tập hàng ngày nhất quán từ 15-20 phút mang lại kết quả tốt hơn cho tính dẻo của não bộ và trí nhớ cơ bắp so với một buổi tập dài 2 tiếng một lần một tuần.",
+      "comparisonTitle": "So sánh các Công cụ Gaming",
+      "row1Tool": "Aim Trainer",
+      "row1BestFor": "Game thủ FPS (Valorant, CS2)",
+      "row1Benefit": "Cải thiện việc nhấp mục tiêu tĩnh và kiểm soát chuột toàn diện.",
+      "row2Tool": "Flick Shot",
+      "row2BestFor": "Vai trò Sniper, game bắn súng nhịp độ nhanh",
+      "row2Benefit": "Xây dựng trí nhớ cơ bắp co giật nhanh cho các pha lia tâm ngắm đột ngột.",
+      "row3Tool": "Target Tracking",
+      "row3BestFor": "Người chơi Apex Legends, Overwatch",
+      "row3Benefit": "Nâng cao chuyển động mắt theo dõi mượt mà và theo dõi chuột liên tục.",
+      "benchmarksTitle": "Tiêu chuẩn & Bằng chứng Khoa học",
+      "benchmarksDesc": "Các tuyển thủ cạnh tranh thường thể hiện phản ứng cảm giác-vận động nhanh hơn so với người dùng thông thường, và nghiên cứu được lập danh mục bởi Trung tâm Thông tin Công nghệ Sinh học Quốc gia (NCBI) liên kết việc luyện tập game hành động với sự gia tăng về khả năng chú ý thị giác và kiểm soát vận động. Trên Reflextry, hãy coi Flick Shot và Target Tracking như các bài tập cơ học cô lập: ghi lại mức cơ sở của bạn trên cùng một con chuột và độ khó, sau đó tìm kiếm độ chính xác ổn định hơn và thời gian đến mục tiêu gọn gàng hơn qua các tuần.",
+      "faqTitle": "Các câu hỏi thường gặp",
+      "faq1Q": "Aim trainer có thực sự cải thiện trình độ chơi game của tôi không?",
+      "faq1A": "Có. Aim trainer cô lập các cơ chế vật lý khi sử dụng chuột, chẳng hạn như theo dõi và flick. Bằng cách tách biệt những điều này khỏi cảm giác trong game, nhận thức bản đồ và chiến lược, bạn có thể xây dựng trí nhớ cơ bắp cơ học thô nhanh hơn nhiều so với việc chỉ chơi game đơn thuần.",
+      "faq2Q": "Cách tốt nhất để khởi động trước một trận đấu xếp hạng là gì?",
+      "faq2A": "Một buổi khởi động trước trận đấu vững chắc nên kéo dài từ 5-10 phút và bao gồm các chuyển động nhanh dần đều. Chúng tôi khuyên dùng trình tự này: 2 phút Aim Trainer để thiết lập độ chính xác cơ bản, 3 phút Target Tracking cho các chuyển động mượt mà, và 2 phút Flick Shot để đẩy giới hạn tốc độ của bạn."
+    }
+  }
+}

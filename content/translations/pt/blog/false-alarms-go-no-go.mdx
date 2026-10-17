@@ -1,0 +1,79 @@
+---
+title: 'Falsos Alarmes no Go/No-Go: Por Que “Rápido” Pode Significar que Você Falhou'
+description: >-
+  Como ler os escores de Go/No-Go e inibição no Reflextry: falsos alarmes, Go
+  perdidos e por que o tempo de reação médio (Go RT) sem precisão de inibição é
+  uma métrica de vaidade.
+publishedAt: '2026-07-25'
+author:
+  name: Kaushik Rabadiya
+category: Reflex
+tags:
+  - go-no-go
+  - inhibition
+  - false-alarms
+  - training
+readingTime: 9 min read
+---
+O teste Go/No-Go parece simples: pressione no Go, iniba no No-Go. A métrica para a qual as pessoas olham primeiro é o tempo de reação do Go (Go RT). No entanto, a métrica que realmente indica se você aprendeu a tarefa costuma ser o **falso alarme**—pressionar quando deveria ter ficado parado.
+
+## Os dois tipos de erro
+
+- **Omissão (perda):** O Go apareceu; você falhou em pressionar a tempo.
+- **Comissão (falso alarme):** O No-Go apareceu; você pressionou mesmo assim.
+
+Um Go RT impressionante com uma pilha de falsos alarmes significa que você está antecipando e apostando. Isso pode parecer rápido, mas não é um desempenho controlado.
+
+## Por que os falsos alarmes aumentam
+
+- Ensaios predominantemente de Go criam um "viés de pressão".
+- Fadiga e distração reduzem os freios mais do que os motores.
+- Metas de velocidade sem restrições de precisão recompensam a impulsividade.
+- Estímulos parecidos até o final da janela de exibição convidam a correções tardias que chegam como cliques.
+
+## Como treinar o freio
+
+1. **Comece com metas de precisão.** Exemplo: mantenha os falsos alarmes abaixo de um limite pessoal antes de correr atrás de ms.
+2. **Use blocos curtos.** A inibição entra em colapso quando você joga com raiva.
+3. **Respire no No-Go.** Uma não-resposta deliberada é uma repetição de treino para a habilidade.
+4. **Alterne com o Flanker.** Tarefas de conflito também punem respostas impulsivas que ignoram o centro — veja [Explicação do Go/No-Go e Flanker](/blog/go-no-go-and-flanker-explained).
+5. **Reverifique a reação simples separadamente.** A velocidade de detecção e a inibição estão relacionadas, mas não são idênticas — [Reação de Escolha vs. Simples](/blog/choice-reaction-vs-simple-reaction).
+
+## Lendo o Go/No-Go do Reflextry
+
+Trate a sessão como um par: o Go RT em acertos corretos **e** a taxa de falsos alarmes. A melhoria é:
+
+- Precisão de inibição estável ou melhor, seguida por
+- Menor Go RT sem sacrificar essa precisão.
+
+Modos de dificuldade que aumentam a frequência de No-Go ou apertam o tempo alteram o experimento — registre o modo.
+
+## Analogia do mundo real (sem exageros)
+
+Dirigir, jogos de tiro competitivos e digitação punem ações impulsivas: mudanças de faixa sem olhar, disparar antes de ver o alvo, enviar mensagens sem revisar. O Go/No-Go é um laboratório limpo para treinar esse freio. Não é um diagnóstico de personalidade.
+
+## Uma microssessão de inibição de 10 minutos
+
+- 4 min de Go/No-Go — precisão em primeiro lugar
+- 3 min de Flanker — consciência de congruência vs. incongruência
+- 3 min de reação simples — detecção limpa, cliques antecipados mínimos
+
+Pare se os falsos alarmes dispararem. Volte amanhã.
+
+## Conclusão
+
+Um Go rápido com muitos falsos alarmes não é maestria. Treine a inibição e só depois reduza o tempo. Pratique no [Go/No-Go](/reflex/go-no-go) e leia o contexto de pontuação em [Como Pontuamos os Testes do Reflextry](/blog/how-we-score-reflextry-tests).
+
+## Uma nota sobre designs “Go predatórios”
+
+Alguns jogos casuais tornam quase todo ensaio um Go e polvilham raros No-Gos. Esse design cria um forte hábito de pressionar, o que é educativo — mas também significa que suas sessões iniciais parecerão ruins. Espere falsos alarmes no início. A curva de aprendizado é precisamente o freio alcançando o motor.
+
+Se um modo parecer injustamente pesado em Go, encare-o como treino de freio em vez de desistir com raiva. Registre a taxa de falsos alarmes como seu principal KPI por uma semana e, em seguida, reintroduza as metas de velocidade.
+
+## Emparelhamento com sono e estimulantes
+
+O déficit de sono aumenta os erros de comissão para muitas pessoas. O café extra pode ajudar no estado de alerta até que o tremor e a antecipação criem cliques precoces. Se o seu gráfico de falsos alarmes disparar após uma noite mal dormida, acredite no gráfico: recupere o sono antes de culpar a ferramenta.
+
+## Compartilhando pontuações com um treinador ou colega de equipe
+
+Ao compartilhar um resultado de Go/No-Go, inclua: dificuldade, média de Go RT, contagem ou taxa de falsos alarmes, contagem de perdas, dispositivo e horário do dia. Uma captura de tela isolada com "consigui 210 ms" sem as estatísticas de inibição está incompleta — e os treinadores devem pedir a metade que falta.

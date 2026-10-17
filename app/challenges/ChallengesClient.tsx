@@ -6,6 +6,7 @@ import { Calendar, Flame, Trophy, Target, ArrowRight, Sparkles, Gift } from "luc
 import { DailyChallenge } from "@/utils/dailyChallenge";
 import Link from "next/link";
 import { TOOL_MAPPING } from "@/config/tool-mapping";
+import { useTranslation } from "@/lib/i18n/context";
 
 const FloatingBackground = () => {
     return (
@@ -49,6 +50,7 @@ const FloatingBackground = () => {
 };
 
 export default function ChallengesClient() {
+    const { t, getLocalizedHref } = useTranslation();
     const [challenge, setChallenge] = useState<DailyChallenge | null>(null);
     const [isCompleted, setIsCompleted] = useState(false);
     const [streak, setStreak] = useState(0);
@@ -112,11 +114,11 @@ export default function ChallengesClient() {
                         <div className="absolute inset-0 bg-gradient-to-r from-teal-500 to-purple-500 blur-2xl opacity-30 animate-pulse" />
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-black bg-gradient-to-br from-slate-900 via-slate-800 to-slate-600 dark:from-white dark:via-white dark:to-white/50 bg-clip-text text-transparent inline-flex items-center gap-3 relative z-10 drop-shadow-sm">
                             <Sparkles className="w-10 h-10 text-teal-400" />
-                            Daily Challenge
+                            {t("challenges.heroTitle", "Daily Challenge")}
                         </h1>
                     </div>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-medium">
-                        Complete today's challenge to earn rewards, build your streak, and unlock new badges!
+                        {t("challenges.heroSubtitle", "Complete today's challenge to earn rewards, build your streak, and unlock new badges!")}
                     </p>
                 </motion.div>
 
@@ -131,12 +133,12 @@ export default function ChallengesClient() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 relative z-10">
                         <div className="p-6 rounded-2xl bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 text-center hover:bg-white/10 transition-colors">
                             <Gift className="w-8 h-8 text-purple-400 mx-auto mb-3 drop-shadow-[0_0_10px_rgba(192,132,252,0.8)]" />
-                            <h3 className="text-base font-bold text-foreground mb-1">Earn Rewards</h3>
+                            <h3 className="text-base font-bold text-foreground mb-1">{t("challenges.streakReward", "Earn Rewards")}</h3>
                             <p className="text-sm text-muted-foreground">Complete daily goals</p>
                         </div>
                         <div className="p-6 rounded-2xl bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 text-center hover:bg-white/10 transition-colors">
                             <Flame className="w-8 h-8 text-orange-400 mx-auto mb-3 drop-shadow-[0_0_10px_rgba(251,146,60,0.8)]" />
-                            <h3 className="text-base font-bold text-foreground mb-1">Build Streaks</h3>
+                            <h3 className="text-base font-bold text-foreground mb-1">{t("challenges.streak", "Build Streaks")}</h3>
                             <p className="text-sm text-muted-foreground">Stay consistent</p>
                         </div>
                         <div className="p-6 rounded-2xl bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 text-center hover:bg-white/10 transition-colors">
@@ -158,7 +160,7 @@ export default function ChallengesClient() {
                                 <Flame className="w-8 h-8 text-orange-400 drop-shadow-[0_0_10px_rgba(251,146,60,0.8)] animate-pulse" />
                                 <h2 className="text-4xl font-black text-foreground drop-shadow-md">{streak}</h2>
                             </div>
-                            <p className="text-muted-foreground font-bold text-lg relative z-10">Day Streak!</p>
+                            <p className="text-muted-foreground font-bold text-lg relative z-10">{t("challenges.streak", "Current Streak")}: {streak} {t("challenges.days", "Days")}</p>
                         </motion.div>
                     )}
 
@@ -177,10 +179,10 @@ export default function ChallengesClient() {
                             <div>
                                 <div className="flex items-center gap-3 mb-2">
                                     <Target className="w-8 h-8 text-teal-400 drop-shadow-[0_0_10px_rgba(45,212,191,0.8)]" />
-                                    <h2 className="text-3xl font-black text-foreground">Today's Mission</h2>
+                                    <h2 className="text-3xl font-black text-foreground">{t("challenges.todayChallenge", "Today's Mission")}</h2>
                                 </div>
                                 <p className="text-muted-foreground text-lg font-medium">
-                                    {new Date(challenge.date).toLocaleDateString("en-US", {
+                                    {new Date(challenge.date).toLocaleDateString(undefined, {
                                         weekday: "long",
                                         year: "numeric",
                                         month: "long",
@@ -203,14 +205,14 @@ export default function ChallengesClient() {
                             <div className="bg-black/5 dark:bg-black/20 rounded-2xl p-6 border border-black/10 dark:border-white/5">
                                 <h3 className="text-2xl font-bold text-foreground mb-3 capitalize flex items-center gap-2">
                                     <Sparkles className="w-5 h-5 text-purple-400" />
-                                    {challenge.toolId.replace(/-/g, " ")}
+                                    {t(`tools.${challenge.toolId}.title`, challenge.toolId.replace(/-/g, " "))}
                                 </h3>
                                 <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
                                     {challenge.description}
                                 </p>
                                 <div className="bg-gradient-to-r from-teal-500/10 to-purple-500/10 rounded-xl p-6 border border-teal-500/20">
                                     <div className="flex flex-col sm:flex-row items-baseline gap-3">
-                                        <span className="text-sm font-bold text-muted-foreground uppercase tracking-wider">Goal:</span>
+                                        <span className="text-sm font-bold text-muted-foreground uppercase tracking-wider">{t("challenges.target", "Goal:")}</span>
                                         <div className="flex items-baseline gap-2">
                                             <span className="text-4xl font-black text-teal-400 drop-shadow-[0_0_10px_rgba(45,212,191,0.5)]">
                                                 {challenge.target}
@@ -224,20 +226,20 @@ export default function ChallengesClient() {
                             <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-2xl p-6 shadow-inner">
                                 <div className="flex items-center gap-3 mb-2">
                                     <Trophy className="w-6 h-6 text-yellow-400 drop-shadow-[0_0_10px_rgba(250,204,21,0.8)]" />
-                                    <span className="font-bold text-yellow-500 dark:text-yellow-400 text-lg">Reward Pending:</span>
+                                    <span className="font-bold text-yellow-500 dark:text-yellow-400 text-lg">{t("challenges.streakReward", "Reward Pending:")}</span>
                                 </div>
                                 <p className="text-foreground font-medium text-lg ml-9">{challenge.reward}</p>
                             </div>
 
                             {!isCompleted && (
                                 <Link
-                                    href={toolPath}
+                                    href={getLocalizedHref(toolPath)}
                                     className="group relative flex items-center justify-center gap-3 px-8 py-5 text-lg rounded-2xl font-bold transition-all duration-300 w-full overflow-hidden"
                                 >
                                     <div className="absolute inset-0 bg-gradient-to-r from-teal-500 to-purple-500 opacity-90 group-hover:opacity-100 transition-opacity" />
                                     <div className="absolute inset-0 bg-gradient-to-r from-teal-400 to-purple-400 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-300 -z-10" />
                                     
-                                    <span className="relative z-10 text-white drop-shadow-md">Start Challenge</span>
+                                    <span className="relative z-10 text-white drop-shadow-md">{t("challenges.startChallenge", "Start Challenge")}</span>
                                     <ArrowRight className="w-6 h-6 relative z-10 text-white group-hover:translate-x-2 transition-transform duration-300" />
                                 </Link>
                             )}
@@ -248,7 +250,7 @@ export default function ChallengesClient() {
                                     animate={{ opacity: 1, y: 0 }}
                                     className="text-center py-8 bg-green-500/10 rounded-2xl border border-green-500/20"
                                 >
-                                    <p className="text-green-500 dark:text-green-400 font-black text-2xl mb-2 drop-shadow-[0_0_8px_rgba(34,197,94,0.5)]">Mission Accomplished! 🎉</p>
+                                    <p className="text-green-500 dark:text-green-400 font-black text-2xl mb-2 drop-shadow-[0_0_8px_rgba(34,197,94,0.5)]">{t("challenges.completed", "Mission Accomplished! 🎉")}</p>
                                     <p className="text-muted-foreground font-medium text-lg">
                                         You've earned today's reward. Come back tomorrow for a new challenge!
                                     </p>

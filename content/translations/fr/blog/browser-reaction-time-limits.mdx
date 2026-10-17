@@ -1,0 +1,78 @@
+---
+title: Ce que les tests de réaction sur navigateur peuvent et ne peuvent pas mesurer
+description: >-
+  Un guide pratique sur l'affichage, le décalage d'entrée et pourquoi les scores
+  Reflextry sont utiles pour le suivi personnel, mais pas pour des instruments
+  cliniques.
+publishedAt: '2026-08-04'
+author:
+  name: Kaushik Rabadiya
+category: Methodology
+tags:
+  - reaction-time
+  - browsers
+  - hardware
+  - limits
+readingTime: 11 min read
+---
+Les utilisateurs ouvrent un test de réaction, obtiennent un chiffre et se demandent : *Est-ce ma véritable vitesse neurologique ?* Dans un navigateur, la réponse honnête est : c'est votre vitesse **à travers toute cette chaîne** — yeux, cerveau, main, appareil, système d'exploitation, navigateur et code de la page — pour une journée donnée.
+
+Cette chaîne a tout de même de la valeur. Ce n'est pas un chronoscope de laboratoire étanche. Cet article trace la limite clairement afin que vous puissiez utiliser Reflextry sans superstition.
+
+## Ce qu'un essai sur navigateur chronomètre réellement
+
+Dans un essai de réaction simple et visuel typique :
+
+1. La page planifie un stimulus (changement de couleur, de forme, son).
+2. Votre écran finit par allumer les nouveaux pixels (limité par le taux de rafraîchissement).
+3. Vous détectez le changement et initiez une réponse motrice.
+4. Le périphérique d'entrée transmet le clic ou la touche.
+5. Le navigateur horodate l'événement et calcule la latence.
+
+Chaque étape peut ajouter des millisecondes. Une dalle à 60 Hz se met à jour environ toutes les 16,7 ms ; une dalle à 240 Hz, beaucoup plus rapidement. Les écrans tactiles et les souris Bluetooth ajoutent souvent plus de latence qu'une souris de jeu filaire. La régulation thermique et les onglets en arrière-plan génèrent de la variance.
+
+## À quoi servent les tests sur navigateur
+
+- **Les références personnelles** sur la même machine et avec la même difficulté.
+- **Les retours d'échauffement** avant des parties classées ou de l'entraînement.
+- **La création d'habitudes :** de courtes sessions quotidiennes valent mieux que de rares marathons.
+- **La comparaison des types de tâches** sur le même appareil (simple vs choix, Go vs No-Go).
+- **L'apprentissage d'une technique propre :** moins de clics anticipés, des moyennes plus stables.
+
+Si votre TR (temps de réaction) simple moyen passe de 280 ms à 230 ms en trois semaines sur le même ordinateur portable, c'est un signal d'entraînement réel pour *vous*, même si un laboratoire affichait un chiffre absolu légèrement différent.
+
+## Ce qu'ils ne sont pas
+
+- **Pas un diagnostic médical.** La fatigue, la caféine, l'humeur, le sommeil et la maladie modifient les scores. Les outils ne remplacent pas les cliniciens.
+- **Pas des examens professionnels certifiés** (vision des couleurs pour l'aviation, batteries de neuropsychologie clinique, etc.).
+- **Pas des déclarations de QI pour la population.** Nous refusons les percentiles inventés à partir de trafic web non contrôlé.
+- **Pas une vérité absolue pour comparer les appareils.** Un téléphone et un ordinateur de bureau constituent des expériences différentes.
+
+## Comment rendre vos chiffres plus fiables
+
+1. Utilisez un appareil principal pour votre suivi.
+2. Fermez les onglets lourds ; désactivez les filtres de nuit si la couleur ou le minutage ont de l'importance.
+3. Privilégiez les souris filaires pour les outils de réaction et de visée lorsque c'est possible.
+4. Effectuez 1 ou 2 blocs d'essai pour vous échauffer avant d'enregistrer une « vraie » moyenne.
+5. Notez le mode de difficulté à côté de chaque record personnel.
+6. Préférez les moyennes sur plusieurs essais à un unique clic chanceux.
+
+## Mises en garde concernant le son et les périphériques
+
+Les indices auditifs dépendent de la latence de la pile audio et du périphérique de sortie. Les tâches en vision périphérique dépendent de la distance de vision et de la taille de l'écran. Considérez ces scores comme des métriques propres à votre installation, et non comme une physiologie universelle.
+
+## Comment Reflextry conçoit ses tests pour plus d'honnêteté
+
+Nous affichons des unités transparentes (ms, portées, précision, temps de réalisation). La difficulté modifie la tâche — les modes Débutant et Professionnel ne sont donc pas le même test. Les articles sur notre méthodologie se trouvent dans le [Journal Cognitif](/blog), notamment [Comment nous notons les tests Reflextry](/blog/how-we-score-reflextry-tests).
+
+Si quelque chose semble anormal (des moyennes impossibles inférieures à 100 ms sur un écran 60 Hz avec du spam de clics anticipés), fiez-vous aux compteurs d'erreurs et à vos notes d'installation avant de faire confiance au chiffre lié à votre ego.
+
+## Un rythme d'utilisation hebdomadaire raisonnable
+
+- **2 à 4 jours par semaine :** 10 à 15 minutes réparties entre un test de réaction + un outil de mémoire ou de précision.
+- **Avant une session compétitive :** 5 minutes de test simple + un échauffement de visée ou de grille.
+- **Une fois par mois :** relisez vos notes ; ne changez qu'une seule variable à la fois (sommeil, appareil, difficulté).
+
+## En résumé
+
+Les tests de réaction sur navigateur mesurent une boucle de compétences réelle au milieu du bruit du monde réel. Utilisez-les pour vous entraîner et suivre vos progrès. Ne les traitez pas comme des preuves juridiques concernant votre système nerveux. Pour connaître les plages de valeurs généralement discutées, lisez [Qu'est-ce qu'un bon temps de réaction ?](/blog/what-is-a-good-reaction-time). Pour vous entraîner, rendez-vous sur [Temps de réaction](/reflex/reaction).

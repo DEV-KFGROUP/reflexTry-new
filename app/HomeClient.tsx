@@ -14,6 +14,7 @@ import {
   CheckCircle2,
   Sparkles,
 } from "lucide-react";
+import { useTranslation } from "@/lib/i18n/context";
 
 const FloatingBackground = () => {
     return (
@@ -25,6 +26,7 @@ const FloatingBackground = () => {
 };
 
 export default function HomeClient() {
+  const { t, getLocalizedHref } = useTranslation();
   const toolCategories = [
     {
       id: "reflex",
@@ -166,16 +168,13 @@ export default function HomeClient() {
         <section className="rounded-3xl border border-black/10 dark:border-white/10 bg-white/5 backdrop-blur-md p-6 sm:p-8 space-y-6">
           <div className="space-y-3 max-w-3xl">
             <p className="text-xs font-mono font-bold tracking-widest uppercase text-blue-700 dark:text-blue-400">
-              Cognitive Lab Journal
+              {t("homeContent.journalBadge", "Cognitive Lab Journal")}
             </p>
             <h2 className="text-2xl sm:text-3xl font-bold text-foreground leading-tight">
-              Measure first. Practice short. Read the method.
+              {t("homeContent.journalTitle", "Measure first. Practice short. Read the method.")}
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              Reflextry is a free browser lab for reaction time, working memory, speed, and
-              accuracy. Scores are transparent (milliseconds, spans, accuracy)—not clinical
-              diagnoses or invented percentiles. Start with a baseline, train in 10–15 minute
-              sessions, and use our guides when you want the science behind the number.
+              {t("homeContent.journalDesc", "Reflextry is a free browser lab for reaction time, working memory, speed, and accuracy. Scores are transparent (milliseconds, spans, accuracy)—not clinical diagnoses or invented percentiles. Start with a baseline, train in 10–15 minute sessions, and use our guides when you want the science behind the number.")}
             </p>
           </div>
 
@@ -183,38 +182,38 @@ export default function HomeClient() {
             {[
               {
                 href: "/blog/how-we-score-reflextry-tests",
-                title: "How we score tests",
-                desc: "What milliseconds, spans, and accuracy mean—and what we refuse to claim.",
+                title: t("homeContent.scoreGuideTitle", "How we score tests"),
+                desc: t("homeContent.scoreGuideDesc", "What milliseconds, spans, and accuracy mean—and what we refuse to claim."),
               },
               {
                 href: "/blog/what-is-a-good-reaction-time",
-                title: "What is a good reaction time?",
-                desc: "Realistic ranges, hardware noise, and how to read your own scores.",
+                title: t("homeContent.reactionTimeGuideTitle", "What is a good reaction time?"),
+                desc: t("homeContent.reactionTimeGuideDesc", "Realistic ranges, hardware noise, and how to read your own scores."),
               },
               {
                 href: "/blog/choice-reaction-vs-simple-reaction",
-                title: "Choice vs simple reaction",
-                desc: "Why more options slow you down, and how to train each separately.",
+                title: t("homeContent.choiceReactionGuideTitle", "Choice vs simple reaction"),
+                desc: t("homeContent.choiceReactionGuideDesc", "Why more options slow you down, and how to train each separately."),
               },
               {
                 href: "/about",
-                title: "About the lab",
-                desc: "Who builds Reflextry, our methodology, and how to contact us.",
+                title: t("homeContent.aboutTheLab", "About the lab"),
+                desc: t("homeContent.aboutTheLabDesc", "Who builds Reflextry, our methodology, and how to contact us."),
               },
               {
                 href: "/blog",
-                title: "All guides",
-                desc: "Memory, reflex, speed, and accuracy articles from the Cognitive Journal.",
+                title: t("homeContent.allGuides", "All guides"),
+                desc: t("homeContent.allGuidesDesc", "Memory, reflex, speed, and accuracy articles from the Cognitive Journal."),
               },
               {
                 href: "/faq",
-                title: "FAQ",
-                desc: "Training frequency, privacy, scoring, and common product questions.",
+                title: t("homeContent.faqCardTitle", "FAQ"),
+                desc: t("homeContent.faqCardDesc", "Training frequency, privacy, scoring, and common product questions."),
               },
             ].map((item) => (
               <Link
                 key={item.href}
-                href={item.href}
+                href={getLocalizedHref(item.href)}
                 prefetch={false}
                 className="group rounded-2xl border border-black/10 dark:border-white/10 bg-background/40 p-5 hover:border-blue-500/40 transition-colors"
               >
@@ -229,10 +228,10 @@ export default function HomeClient() {
 
         <section className="bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 p-6 rounded-3xl">
             <h2 className="text-xl font-bold text-foreground mb-2 flex items-center gap-2">
-                <Sparkles className="w-5 h-5 text-blue-500" /> What Reflextry Measures
+                <Sparkles className="w-5 h-5 text-blue-500" /> {t("homeContent.whatReflextryMeasures", "What Reflextry Measures")}
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-                Free browser tests for reaction time, working memory, click speed, aim, and accuracy. Measure a baseline, practice in short sessions, and track progress on the statistics page—no account required for core tools.
+                {t("homeContent.whatReflextryMeasuresDesc", "Free browser tests for reaction time, working memory, click speed, aim, and accuracy. Measure a baseline, practice in short sessions, and track progress on the statistics page—no account required for core tools.")}
             </p>
         </section>
 
@@ -258,15 +257,15 @@ export default function HomeClient() {
                     {category.tag}
                   </div>
                   <h2 className="text-2xl md:text-3xl font-bold text-foreground">
-                    {category.arenaName}
+                    {t(`categories.${category.id}.title`, category.arenaName)}
                   </h2>
                 </div>
               </div>
               <Link 
-                  href={`/${category.id}`}
+                  href={getLocalizedHref(`/${category.id}`)}
                   className={`hidden sm:flex items-center gap-2 px-4 py-2 rounded-xl border ${category.accentBorder} ${category.accentBg} hover:bg-opacity-20 transition-all font-bold text-sm ${category.accentText}`}
               >
-                  Enter Arena <ArrowRight className="w-4 h-4" />
+                  {t("home.enterArena", "Enter Arena")} <ArrowRight className="w-4 h-4" />
               </Link>
             </div>
 
@@ -283,7 +282,7 @@ export default function HomeClient() {
                 >
                   <div className={`absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300`} />
 
-                  <Link href={tool.href} prefetch={false} className="absolute inset-0 z-10" aria-label={`${tool.id} challenge`}>
+                  <Link href={getLocalizedHref(tool.href)} prefetch={false} className="absolute inset-0 z-10" aria-label={`${tool.id} challenge`}>
                     <span className="sr-only">Start {tool.id} challenge</span>
                   </Link>
 
@@ -295,22 +294,22 @@ export default function HomeClient() {
                         <tool.icon className={`w-6 h-6 ${category.accentText} drop-shadow-sm`} />
                       </div>
                       <span className={`text-[10px] font-bold px-2 py-1 rounded-full border ${difficultyColors[tool.difficulty]}`}>
-                        {tool.difficulty}
+                        {t(`common.${tool.difficulty.toLowerCase()}`, tool.difficulty)}
                       </span>
                     </div>
 
                     <div className="flex-1">
                       <h3 className="text-base font-bold text-foreground mb-1 capitalize group-hover:text-foreground/90 transition-colors">
-                        {tool.id.replace(/-/g, " ")}
+                        {t(`tools.${tool.id}.title`, tool.id.replace(/-/g, " "))}
                       </h3>
                       <p className="text-sm text-muted-foreground line-clamp-2 leading-relaxed">
-                        {tool.desc}
+                        {t(`tools.${tool.id}.desc`, tool.desc)}
                       </p>
                     </div>
 
                     <div className="flex items-center justify-between pt-3 border-t border-black/10 dark:border-white/10 mt-auto">
                       <span className="text-xs font-bold text-muted-foreground tracking-wider uppercase">
-                        Start Quest
+                        {t("home.startQuest", "Start Quest")}
                       </span>
                       <ArrowRight
                         className={`w-4 h-4 ${category.accentText} transform group-hover:translate-x-1 transition-transform`}
@@ -323,11 +322,11 @@ export default function HomeClient() {
             
             {/* Mobile Link */}
             <Link 
-                href={`/${category.id}`}
+                href={getLocalizedHref(`/${category.id}`)}
                 prefetch={false}
                 className={`sm:hidden flex justify-center items-center gap-2 mt-4 px-4 py-3 rounded-xl border ${category.accentBorder} ${category.accentBg} font-bold text-sm ${category.accentText}`}
             >
-                Enter {category.arenaName} <ArrowRight className="w-4 h-4" />
+                {t("home.enterArena", "Enter Arena")} <ArrowRight className="w-4 h-4" />
             </Link>
           </motion.div>
         ))}
