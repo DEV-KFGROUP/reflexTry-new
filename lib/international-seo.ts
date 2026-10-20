@@ -37,9 +37,11 @@ export function getHreflangAlternates(canonicalUrl: string): Record<string, stri
     const normalizedPath = cleanPath === '/' ? '' : cleanPath;
     const baseUrl = getBaseUrl();
 
+    const rootCanonical = normalizedPath ? `${baseUrl}${normalizedPath}` : baseUrl;
+
     const alternates: Record<string, string> = {
-        en: `${baseUrl}${normalizedPath || '/'}`,
-        'x-default': `${baseUrl}${normalizedPath || '/'}`,
+        en: rootCanonical,
+        'x-default': rootCanonical,
     };
 
     for (const target of TARGET_LOCALES) {

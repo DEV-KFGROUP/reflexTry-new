@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 import { getContentSlugs, getContentBySlug } from '@/lib/content/loader';
 import { getBaseUrl } from '@/lib/base-url';
-import { getHreflangAlternates } from '@/lib/international-seo';
+import { getHreflangAlternates, TARGET_LOCALES } from '@/lib/international-seo';
 import type { Article } from '@/lib/content/types';
 
 export const dynamic = 'force-static';
@@ -96,44 +96,53 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     for (const route of allRoutes) {
         const isHome = route === '';
         const priority = isHome ? 1.0 : route.split('/').length === 2 ? 0.9 : 0.8;
-        const pageUrl = `${siteUrl}${route}`;
+        const canonicalUrl = `${siteUrl}${route}`;
+        const alternates = {
+            languages: getHreflangAlternates(canonicalUrl),
+        };
 
-        entries.push({
-            url: pageUrl,
-            lastModified: CORE_PAGES_LASTMOD,
-            changeFrequency: isHome ? 'daily' : 'weekly',
-            priority,
-            alternates: {
-                languages: getHreflangAlternates(pageUrl),
-            },
-        });
+        for (const target of TARGET_LOCALES) {
+            const localizedUrl = target.lang === 'en'
+                ? canonicalUrl
+                : `${siteUrl}/${target.lang}${route}`;
+
+            entries.push({
+                url: localizedUrl,
+                lastModified: CORE_PAGES_LASTMOD,
+                changeFrequency: isHome ? 'daily' : 'weekly',
+                priority,
+                alternates,
+            });
+        }
     }
 
     const blogSlugs = await getContentSlugs('blog');
     for (const file of blogSlugs) {
         const cleanSlug = file.replace(/\.mdx?$/, '');
-        const blogUrl = `${siteUrl}/blog/${cleanSlug}`;
+        const canonicalBlogUrl = `${siteUrl}/blog/${cleanSlug}`;
+        let lastModified = CORE_PAGES_LASTMOD;
         try {
             const { meta } = await getContentBySlug<Article>('blog', cleanSlug);
-            const lastModified = new Date(meta.updatedAt ?? meta.publishedAt);
+            lastModified = new Date(meta.updatedAt ?? meta.publishedAt);
+        } catch {
+            // fallback to default lastmod
+        }
+
+        const alternates = {
+            languages: getHreflangAlternates(canonicalBlogUrl),
+        };
+
+        for (const target of TARGET_LOCALES) {
+            const localizedBlogUrl = target.lang === 'en'
+                ? canonicalBlogUrl
+                : `${siteUrl}/${target.lang}/blog/${cleanSlug}`;
+
             entries.push({
-                url: blogUrl,
+                url: localizedBlogUrl,
                 lastModified,
                 changeFrequency: 'weekly',
                 priority: 0.7,
-                alternates: {
-                    languages: getHreflangAlternates(blogUrl),
-                },
-            });
-        } catch {
-            entries.push({
-                url: blogUrl,
-                lastModified: CORE_PAGES_LASTMOD,
-                changeFrequency: 'weekly',
-                priority: 0.7,
-                alternates: {
-                    languages: getHreflangAlternates(blogUrl),
-                },
+                alternates,
             });
         }
     }
