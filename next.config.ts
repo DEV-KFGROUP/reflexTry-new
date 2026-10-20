@@ -84,10 +84,6 @@ const nextConfig: import('next').NextConfig = {
             value: 'camera=(), microphone=(), geolocation=()',
           },
           {
-            key: 'Content-Language',
-            value: 'en',
-          },
-          {
             key: 'Vary',
             value: 'Accept-Encoding',
           },
