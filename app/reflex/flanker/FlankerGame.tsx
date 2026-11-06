@@ -354,7 +354,7 @@ export default function FlankerGame() {
                   );
                 })}
               </div>
-              <p className="mt-3 text-center text-[9px] font-mono uppercase tracking-widest text-slate-400">
+              <p className="mt-3 text-center text-xs font-mono font-medium uppercase tracking-widest text-slate-400">
                 Flankers dim · Center highlighted
               </p>
             </motion.div>

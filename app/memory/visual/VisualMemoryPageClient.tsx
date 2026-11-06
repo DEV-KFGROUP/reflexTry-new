@@ -134,11 +134,11 @@ function DifficultyCard({ diffKey, selected, onSelect, highScore, disabled }: {
           <div className="flex items-center gap-2 flex-wrap">
             <span className="font-mono font-bold text-xs text-slate-800">{d.label}</span>
             {selected && (
-              <span className="text-[8px] font-mono px-1.5 py-0.5 rounded-full text-white" style={{ background: DIFF_GRADIENT[diffKey] }}>ACTIVE</span>
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded-full text-white" style={{ background: DIFF_GRADIENT[diffKey] }}>ACTIVE</span>
             )}
           </div>
-          <p className="text-[9px] text-slate-400 mt-0.5 leading-tight">{d.description}</p>
-          {highScore > 0 && <p className={`text-[9px] font-mono font-bold mt-1 ${d.textColor}`}>Best: Level {highScore}</p>}
+          <p className="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5 leading-tight">{d.description}</p>
+          {highScore > 0 && <p className={`text-[11px] font-mono font-bold mt-1 ${d.textColor}`}>Best: Level {highScore}</p>}
         </div>
       </div>
     </motion.button>
@@ -318,7 +318,7 @@ export default function VisualMemoryPageClient() {
           <h1 className="text-3xl md:text-5xl font-mono font-black tracking-widest text-slate-800">VISUAL MEMORY</h1>
           <div className="flex items-center justify-center gap-3 mt-1">
             <span className="h-[1px] w-8 bg-slate-300" />
-            <p className="text-[10px] font-mono text-slate-400 uppercase tracking-[0.25em]">SPATIAL PATTERN CALIBRATION</p>
+            <p className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-[0.2em]">SPATIAL PATTERN CALIBRATION</p>
             <span className="h-[1px] w-8 bg-slate-300" />
           </div>
         </motion.div>
@@ -331,7 +331,7 @@ export default function VisualMemoryPageClient() {
 
             {/* Difficulty Selector */}
             <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
-              <div className="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-3">Difficulty Level</div>
+              <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Difficulty Level</div>
               <div className="flex flex-col gap-2">
                 {DIFF_ORDER.map(key => (
                   <DifficultyCard
@@ -346,18 +346,18 @@ export default function VisualMemoryPageClient() {
 
             {/* Stats */}
             <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
-              <div className="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-3">Session Stats</div>
+              <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Session Stats</div>
               <div className="grid grid-cols-2 gap-3">
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Level</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Level</div>
                   <div className="text-2xl font-mono font-bold text-slate-800 mt-0.5">{level < 10 ? `0${level}` : level}</div>
                 </div>
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Grid</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Grid</div>
                   <div className={`text-2xl font-mono font-bold mt-0.5 ${diff.textColor}`}>{gridSize}×{gridSize}</div>
                 </div>
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Lives</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Lives</div>
                   <div className="flex gap-1 mt-1.5 flex-wrap">
                     {Array.from({ length: diff.lives }).map((_, i) => (
                       <Heart key={i} className={`w-4 h-4 ${i < livesLeft ? "text-rose-500 fill-rose-500" : "text-slate-200 fill-slate-200"}`} />
@@ -365,7 +365,7 @@ export default function VisualMemoryPageClient() {
                   </div>
                 </div>
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Streak</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Streak</div>
                   <div className={`text-xl font-mono font-bold mt-0.5 ${streak >= 3 ? "text-orange-500" : "text-slate-800"}`}>
                     {streak >= 3 ? `🔥x${streak}` : `x${streak}`}
                   </div>
@@ -376,7 +376,7 @@ export default function VisualMemoryPageClient() {
                 <div className="mt-3 bg-slate-50 border border-slate-100 rounded-xl p-3 flex items-center gap-2">
                   <Trophy className={`w-4 h-4 ${diff.textColor}`} />
                   <div>
-                    <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Best ({diff.label})</div>
+                    <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Best ({diff.label})</div>
                     <div className={`text-sm font-mono font-bold ${diff.textColor}`}>Level {highScores[diffId]}</div>
                   </div>
                 </div>
@@ -386,8 +386,8 @@ export default function VisualMemoryPageClient() {
               {phase === "input" && (
                 <div className="mt-3">
                   <div className="flex justify-between items-center mb-1">
-                    <span className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Found</span>
-                    <span className="text-[9px] font-mono text-slate-600 font-bold">{userPattern.length} / {pattern.length}</span>
+                    <span className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Found</span>
+                    <span className="text-[11px] font-mono text-slate-600 dark:text-slate-400 font-bold">{userPattern.length} / {pattern.length}</span>
                   </div>
                   <div className="h-2 bg-slate-100 rounded-full overflow-hidden">
                     <motion.div
@@ -404,7 +404,7 @@ export default function VisualMemoryPageClient() {
               {diff.hasInputTimer && phase === "input" && inputTimeLeft > 0 && (
                 <motion.div className="mt-3" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
                   <div className="flex justify-between items-center mb-1">
-                    <span className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Time Left</span>
+                    <span className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Time Left</span>
                     <span className={`text-sm font-mono font-bold ${inputTimeLeft <= 4 ? "text-red-500" : "text-slate-700"}`}>{inputTimeLeft}s</span>
                   </div>
                   <div className="h-2 bg-slate-100 rounded-full overflow-hidden">
@@ -424,7 +424,7 @@ export default function VisualMemoryPageClient() {
                 className={`mt-3 w-full p-2.5 rounded-xl border transition-all cursor-pointer flex items-center justify-center gap-2 ${muted ? "bg-red-50 border-red-200 text-red-600" : "bg-slate-50 border-slate-200 text-slate-500 hover:border-violet-200 hover:text-violet-600"}`}
               >
                 {muted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
-                <span className="text-[9px] font-mono uppercase tracking-widest">{muted ? "Unmute" : "Sound On"}</span>
+                <span className="text-xs font-mono font-medium uppercase tracking-widest">{muted ? "Unmute" : "Sound On"}</span>
               </button>
             </div>
           </motion.div>
@@ -437,10 +437,10 @@ export default function VisualMemoryPageClient() {
               <div className="absolute top-4 right-4 w-4 h-4 border-t-2 border-r-2 border-slate-200" />
               <div className="absolute bottom-4 left-4 w-4 h-4 border-b-2 border-l-2 border-slate-200" />
               <div className="absolute bottom-4 right-4 w-4 h-4 border-b-2 border-r-2 border-slate-200" />
-              <div className="absolute top-4 left-10 text-[8px] font-mono text-slate-400 tracking-widest hidden sm:block">
+              <div className="absolute top-4 left-10 text-[10px] font-mono text-slate-500 dark:text-slate-400 tracking-widest hidden sm:block">
                 DECK // {diff.label.toUpperCase()}
               </div>
-              <div className="absolute top-4 right-10 text-[8px] font-mono text-slate-400 tracking-widest hidden sm:block">
+              <div className="absolute top-4 right-10 text-[10px] font-mono text-slate-500 dark:text-slate-400 tracking-widest hidden sm:block">
                 {gridSize}×{gridSize} · {currentTiles} TILES
               </div>
               <div className="absolute inset-0 pointer-events-none opacity-[0.02] bg-[linear-gradient(rgba(148,163,184,0)_50%,rgba(148,163,184,0.15)_50%)] bg-[size:100%_4px]" />
@@ -460,7 +460,7 @@ export default function VisualMemoryPageClient() {
                       </div>
                       <div className="space-y-2">
                         <h2 className="text-xl md:text-2xl font-mono font-bold text-slate-800 uppercase tracking-wider">Retinal Calibration</h2>
-                        <p className="text-xs text-slate-400 max-w-xs mx-auto leading-relaxed">
+                        <p className="text-xs text-slate-600 dark:text-slate-400 max-w-xs mx-auto leading-relaxed">
                           Memorize the highlighted tiles on the grid, then click them from memory when the pattern hides.
                         </p>
                         <p className={`text-xs font-mono font-semibold ${diff.textColor} mt-1`}>{diff.label}: {diff.description}</p>
@@ -485,7 +485,7 @@ export default function VisualMemoryPageClient() {
                             [ MEMORIZE {currentTiles} TILES ]
                           </span>
                         ) : (
-                          <span className="text-[10px] font-mono text-slate-400 uppercase tracking-widest">
+                          <span className="text-xs font-mono text-slate-600 dark:text-slate-400 uppercase tracking-widest">
                             Click the {pattern.length - userPattern.length} remaining tiles
                           </span>
                         )}
@@ -584,7 +584,7 @@ export default function VisualMemoryPageClient() {
                           </motion.div>
                         )}
                       </div>
-                      <div className="bg-slate-50 border border-red-100 rounded-xl p-3 font-mono text-[9px] text-red-700/90 text-left space-y-1 w-full">
+                      <div className="bg-slate-50 border border-red-100 rounded-xl p-3 font-mono text-[11px] text-red-700 dark:text-red-400 text-left space-y-1 w-full">
                         <div>&gt; DIAG: RETINAL_SEQUENCE_DISRUPT</div>
                         <div>&gt; PATTERN BUFFER CLEARED</div>
                         <div>&gt; REBOOT TO RESTORE CONNECTION</div>
@@ -620,7 +620,7 @@ export default function VisualMemoryPageClient() {
               <div className="flex justify-end">
                 <button
                   onClick={() => { stopInputTimer(); saveHighScore(level); setPhase("gameover"); }}
-                  className="text-[10px] font-mono text-slate-400 hover:text-red-400 transition-colors cursor-pointer"
+                  className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 hover:text-red-500 transition-colors cursor-pointer"
                 >
                   Abort Session ×
                 </button>

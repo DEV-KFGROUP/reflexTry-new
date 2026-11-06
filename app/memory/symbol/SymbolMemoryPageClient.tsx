@@ -125,14 +125,14 @@ function DifficultyCard({
           <div className="flex items-center gap-2 flex-wrap">
             <span className="font-mono font-bold text-xs text-slate-800">{d.label}</span>
             {selected && (
-              <span className="text-[8px] font-mono px-1.5 py-0.5 rounded-full text-white" style={{ background: DIFF_GRADIENT[diffKey] }}>
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded-full text-white" style={{ background: DIFF_GRADIENT[diffKey] }}>
                 ACTIVE
               </span>
             )}
           </div>
-          <p className="text-[9px] text-slate-400 mt-0.5 leading-tight">{d.description}</p>
+          <p className="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5 leading-tight">{d.description}</p>
           {highScore > 0 && (
-            <p className={`text-[9px] font-mono font-bold mt-1 ${d.textColor}`}>
+            <p className={`text-[11px] font-mono font-bold mt-1 ${d.textColor}`}>
               Best: {highScore} {d.hasTimeLimit ? "s left" : "moves"}
             </p>
           )}
@@ -366,7 +366,7 @@ export default function SymbolMemoryPageClient() {
           <h1 className="text-3xl md:text-5xl font-mono font-black tracking-widest text-slate-800">SYMBOL PAIRS</h1>
           <div className="flex items-center justify-center gap-3 mt-1">
             <span className="h-[1px] w-8 bg-slate-300" />
-            <p className="text-[10px] font-mono text-slate-400 uppercase tracking-[0.25em]">TELEMETRY COGNITIVE PAIRING</p>
+            <p className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-[0.2em]">TELEMETRY COGNITIVE PAIRING</p>
             <span className="h-[1px] w-8 bg-slate-300" />
           </div>
         </motion.div>
@@ -379,7 +379,7 @@ export default function SymbolMemoryPageClient() {
 
             {/* Difficulty Selector */}
             <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
-              <div className="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-3">Difficulty Level</div>
+              <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Difficulty Level</div>
               <div className="flex flex-col gap-2">
                 {DIFF_ORDER.map(key => (
                   <DifficultyCard
@@ -396,30 +396,30 @@ export default function SymbolMemoryPageClient() {
 
             {/* Stats Panel */}
             <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
-              <div className="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-3">Session Stats</div>
+              <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Session Stats</div>
               <div className="grid grid-cols-2 gap-3">
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Moves</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Moves</div>
                   <div className="text-xl font-mono font-bold text-slate-800 mt-0.5">
                     {moves} {diff.hasMoveLimit && <span className="text-xs text-slate-400">/{diff.maxMoves}</span>}
                   </div>
                 </div>
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Pairs Match</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Pairs Match</div>
                   <div className="text-xl font-mono font-bold text-slate-800 mt-0.5">
                     {matchedPairs}/{totalPairs}
                   </div>
                 </div>
                 {diff.hasTimeLimit ? (
                   <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                    <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Timer</div>
+                    <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Timer</div>
                     <div className={`text-xl font-mono font-bold mt-0.5 ${timeLeft <= 10 ? "text-red-500" : "text-slate-800"}`}>
                       {timeLeft}s
                     </div>
                   </div>
                 ) : (
                   <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                    <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Dimension</div>
+                    <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Dimension</div>
                     <div className="text-xl font-mono font-bold text-slate-800 mt-0.5">
                       {diff.cols}×{diff.rows}
                     </div>
@@ -427,12 +427,12 @@ export default function SymbolMemoryPageClient() {
                 )}
                 {diff.hintCount > 0 ? (
                   <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                    <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Hints</div>
+                    <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Hints</div>
                     <div className="text-xl font-mono font-bold text-emerald-600 mt-0.5">{hintsLeft}</div>
                   </div>
                 ) : (
                   <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                    <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Lives Status</div>
+                    <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Lives Status</div>
                     <div className="text-xs font-mono font-bold text-emerald-600 mt-1">NOMINAL</div>
                   </div>
                 )}
@@ -443,7 +443,7 @@ export default function SymbolMemoryPageClient() {
                 <div className="mt-3 bg-slate-50 border border-slate-100 rounded-xl p-3 flex items-center gap-2">
                   <Trophy className={`w-4 h-4 ${diff.textColor}`} />
                   <div>
-                    <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Best Record</div>
+                    <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Best Record</div>
                     <div className={`text-sm font-mono font-bold ${diff.textColor}`}>
                       {diff.hasTimeLimit ? `${highScores[diffId]} seconds left` : `${highScores[diffId]} moves`}
                     </div>
@@ -454,11 +454,11 @@ export default function SymbolMemoryPageClient() {
               {/* Pro Shuffle alert counter */}
               {diff.hasShuffleDistortion && phase === "playing" && (
                 <div className="mt-3 bg-slate-50 border border-red-150 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-red-500 uppercase tracking-widest animate-pulse">SHUFFLE STREAK</div>
+                  <div className="text-[11px] font-mono text-red-600 dark:text-red-500 uppercase tracking-widest animate-pulse">SHUFFLE STREAK</div>
                   <div className="text-sm font-mono font-bold text-slate-700 mt-0.5">
                     {incorrectStreak} / {diff.shuffleEveryMisses} misses
                   </div>
-                  <p className="text-[8px] text-slate-400 leading-tight mt-1">Unmatched cards shuffle at max misses!</p>
+                  <p className="text-[10px] text-slate-600 dark:text-slate-400 leading-tight mt-1">Unmatched cards shuffle at max misses!</p>
                 </div>
               )}
 
@@ -468,7 +468,7 @@ export default function SymbolMemoryPageClient() {
                 className={`mt-3 w-full p-2.5 rounded-xl border transition-all cursor-pointer flex items-center justify-center gap-2 ${muted ? "bg-red-50 border-red-200 text-red-600" : "bg-slate-50 border-slate-200 text-slate-500 hover:border-violet-200 hover:text-violet-600"}`}
               >
                 {muted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
-                <span className="text-[9px] font-mono uppercase tracking-widest">{muted ? "Unmute" : "Sound On"}</span>
+                <span className="text-xs font-mono font-medium uppercase tracking-widest">{muted ? "Unmute" : "Sound On"}</span>
               </button>
             </div>
           </motion.div>
@@ -482,10 +482,10 @@ export default function SymbolMemoryPageClient() {
               <div className="absolute bottom-4 left-4 w-4 h-4 border-b-2 border-l-2 border-slate-200" />
               <div className="absolute bottom-4 right-4 w-4 h-4 border-b-2 border-r-2 border-slate-200" />
 
-              <div className="absolute top-4 left-10 text-[8px] font-mono text-slate-400 tracking-widest hidden sm:block">
+              <div className="absolute top-4 left-10 text-[10px] font-mono text-slate-500 dark:text-slate-400 tracking-widest hidden sm:block">
                 DECK // {diff.label.toUpperCase()}
               </div>
-              <div className="absolute top-4 right-10 text-[8px] font-mono text-slate-400 tracking-widest hidden sm:block">
+              <div className="absolute top-4 right-10 text-[10px] font-mono text-slate-500 dark:text-slate-400 tracking-widest hidden sm:block">
                 DIM: {diff.cols}×{diff.rows}
               </div>
 
@@ -504,7 +504,7 @@ export default function SymbolMemoryPageClient() {
                       </div>
                       <div className="space-y-2">
                         <h2 className="text-xl md:text-2xl font-mono font-bold text-slate-800 uppercase tracking-wider">Retinal Pair Calibration</h2>
-                        <p className="text-xs text-slate-400 max-w-xs mx-auto leading-relaxed">
+                        <p className="text-xs text-slate-600 dark:text-slate-400 max-w-xs mx-auto leading-relaxed">
                           Match identical symbol pairs by flipping cards. Complete the grid in minimal cycles before the session ends.
                         </p>
                         <p className={`text-xs font-mono font-semibold ${diff.textColor} mt-1`}>{diff.label}: {diff.description}</p>
@@ -526,7 +526,7 @@ export default function SymbolMemoryPageClient() {
                       {/* Hint Button (Beginner mode) */}
                       {diff.hintCount > 0 && (
                         <div className="flex justify-between items-center w-full max-w-md">
-                          <span className="text-[10px] font-mono text-slate-400 uppercase">[ HINTS ALLOWED ]</span>
+                          <span className="text-xs font-mono text-slate-600 dark:text-slate-400 uppercase">[ HINTS ALLOWED ]</span>
                           <button
                             onClick={triggerHint}
                             disabled={hintsLeft <= 0 || flippedCards.length !== 1}
@@ -608,7 +608,7 @@ export default function SymbolMemoryPageClient() {
                             <p className="text-xs font-mono text-slate-500">Board matched successfully!</p>
                           </div>
                           <div className="bg-slate-50 border border-slate-200 rounded-xl p-5 shadow-sm w-full">
-                            <div className="text-[10px] font-mono text-slate-400 uppercase mb-1">Total Moves</div>
+                            <div className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 uppercase mb-1">Total Moves</div>
                             <div className="text-4xl text-fuchsia-600 font-mono font-black">{moves}</div>
                             {diff.hasTimeLimit && (
                               <div className="text-xs font-mono text-slate-500 mt-1">Finished with {timeLeft}s left</div>
@@ -625,7 +625,7 @@ export default function SymbolMemoryPageClient() {
                             <p className="text-xs font-mono text-slate-500">Stability limit reached before matching board.</p>
                           </div>
                           <div className="bg-slate-50 border border-slate-200 rounded-xl p-5 shadow-sm w-full">
-                            <div className="text-[10px] font-mono text-slate-400 uppercase">Matches Cleared</div>
+                            <div className="text-xs font-mono text-slate-600 dark:text-slate-400 uppercase">Matches Cleared</div>
                             <div className="text-3xl text-slate-700 font-mono font-bold mt-1">{matchedPairs} / {totalPairs} Pairs</div>
                           </div>
                         </>
@@ -661,7 +661,7 @@ export default function SymbolMemoryPageClient() {
               <div className="flex justify-end">
                 <button
                   onClick={() => { if (timerRef.current) clearInterval(timerRef.current); setPhase("gameover"); }}
-                  className="text-[10px] font-mono text-slate-400 hover:text-red-400 transition-colors cursor-pointer"
+                  className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 hover:text-red-500 transition-colors cursor-pointer"
                 >
                   Abort Session ×
                 </button>

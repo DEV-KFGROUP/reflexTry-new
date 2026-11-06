@@ -98,14 +98,14 @@ function DifficultyCard({
           <div className="flex items-center gap-2 flex-wrap">
             <span className="font-mono font-bold text-xs text-slate-800">{d.label}</span>
             {selected && (
-              <span className="text-[8px] font-mono px-1.5 py-0.5 rounded-full text-white" style={{ background: DIFF_GRADIENT[diffKey] }}>
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded-full text-white" style={{ background: DIFF_GRADIENT[diffKey] }}>
                 ACTIVE
               </span>
             )}
           </div>
-          <p className="text-[9px] text-slate-400 mt-0.5 leading-tight">{d.description}</p>
+          <p className="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5 leading-tight">{d.description}</p>
           {highScore > 0 && (
-            <p className={`text-[9px] font-mono font-bold mt-1 ${d.textColor}`}>Best: {highScore.toFixed(2)}s</p>
+            <p className={`text-[11px] font-mono font-bold mt-1 ${d.textColor}`}>Best: {highScore.toFixed(2)}s</p>
           )}
         </div>
       </div>
@@ -350,7 +350,7 @@ export default function TargetTrackingClient() {
           <h1 className="text-3xl md:text-5xl font-mono font-black tracking-widest text-slate-800">TARGET TRACKING</h1>
           <div className="flex items-center justify-center gap-3 mt-1">
             <span className="h-[1px] w-8 bg-slate-300" />
-            <p className="text-[10px] font-mono text-slate-400 uppercase tracking-[0.25em]">precision smooth pursuit tracker</p>
+            <p className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-[0.2em]">precision smooth pursuit tracker</p>
             <span className="h-[1px] w-8 bg-slate-300" />
           </div>
         </motion.div>
@@ -363,7 +363,7 @@ export default function TargetTrackingClient() {
 
             {/* Difficulty Selector */}
             <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
-              <div className="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-3">Difficulty Level</div>
+              <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Difficulty Level</div>
               <div className="flex flex-col gap-2">
                 {DIFF_ORDER.map(key => (
                   <DifficultyCard
@@ -380,20 +380,20 @@ export default function TargetTrackingClient() {
 
             {/* Stats Panel */}
             <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
-              <div className="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-3">Session Stats</div>
+              <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Session Stats</div>
               <div className="grid grid-cols-2 gap-3">
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3 col-span-2">
-                  <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Tracked Duration</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Tracked Duration</div>
                   <div className="text-2xl font-mono font-black text-cyan-600 mt-0.5">{(trackedTime / 1000).toFixed(2)}s</div>
                 </div>
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Signal Locked</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Signal Locked</div>
                   <div className={`text-xs font-mono font-bold mt-1.5 ${isHovering ? "text-emerald-500 animate-pulse" : "text-red-500"}`}>
                     {isHovering ? "TRUE 🟢" : "FALSE 🔴"}
                   </div>
                 </div>
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Speed Scale</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Speed Scale</div>
                   <div className="text-sm font-mono font-bold text-slate-800 mt-1.5">
                     {difficultyMultiplierRef.current.toFixed(2)}x
                   </div>
@@ -405,7 +405,7 @@ export default function TargetTrackingClient() {
                 <div className="mt-3 bg-slate-50 border border-slate-100 rounded-xl p-3 flex items-center gap-2">
                   <Trophy className={`w-4 h-4 ${diff.textColor}`} />
                   <div>
-                    <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Best Duration ({diff.label})</div>
+                    <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Best Duration ({diff.label})</div>
                     <div className={`text-sm font-mono font-bold ${diff.textColor}`}>{highScores[diffId].toFixed(2)}s</div>
                   </div>
                 </div>
@@ -417,7 +417,7 @@ export default function TargetTrackingClient() {
                 className={`mt-3 w-full p-2.5 rounded-xl border transition-all cursor-pointer flex items-center justify-center gap-2 ${muted ? "bg-red-50 border-red-200 text-red-600" : "bg-slate-50 border-slate-200 text-slate-500 hover:border-violet-200 hover:text-violet-600"}`}
               >
                 {muted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
-                <span className="text-[9px] font-mono uppercase tracking-widest">{muted ? "Unmute" : "Sound On"}</span>
+                <span className="text-xs font-mono font-medium uppercase tracking-widest">{muted ? "Unmute" : "Sound On"}</span>
               </button>
             </div>
           </motion.div>
@@ -434,10 +434,10 @@ export default function TargetTrackingClient() {
               <div className="absolute bottom-4 left-4 w-4 h-4 border-b-2 border-l-2 border-slate-200" />
               <div className="absolute bottom-4 right-4 w-4 h-4 border-b-2 border-r-2 border-slate-200" />
 
-              <div className="absolute top-4 left-10 text-[8px] font-mono text-slate-400 tracking-widest hidden sm:block">
+              <div className="absolute top-4 left-10 text-[10px] font-mono text-slate-500 dark:text-slate-400 tracking-widest hidden sm:block">
                 ARENA // {diff.label.toUpperCase()}
               </div>
-              <div className="absolute top-4 right-10 text-[8px] font-mono text-slate-400 tracking-widest hidden sm:block">
+              <div className="absolute top-4 right-10 text-[10px] font-mono text-slate-500 dark:text-slate-400 tracking-widest hidden sm:block">
                 GLITCH CAPABLE: {diff.hasGlitchPhase ? "TRUE" : "FALSE"}
               </div>
 
@@ -456,7 +456,7 @@ export default function TargetTrackingClient() {
                       </div>
                       <div className="space-y-2">
                         <h2 className="text-xl md:text-2xl font-mono font-bold text-slate-800 uppercase tracking-wider">Smooth Pursuit</h2>
-                        <p className="text-xs text-slate-400 max-w-xs mx-auto leading-relaxed">
+                        <p className="text-xs text-slate-600 dark:text-slate-400 max-w-xs mx-auto leading-relaxed">
                           Keep your cursor locked onto the center target as it slides erratically. Losing locking drains the telemetry health bar.
                         </p>
                         <p className={`text-xs font-mono font-semibold ${diff.textColor} mt-1`}>{diff.label}: {diff.description}</p>
@@ -482,7 +482,7 @@ export default function TargetTrackingClient() {
                     >
                       {/* Health stability telemetry HUD */}
                       <div className="absolute top-4 inset-x-6 z-20 flex flex-col items-center">
-                        <div className="flex justify-between w-full text-[8px] font-mono text-slate-400 mb-1 max-w-xs">
+                        <div className="flex justify-between w-full text-[10px] font-mono text-slate-500 dark:text-slate-400 mb-1 max-w-xs">
                           <span>TELEMETRY STABILITY</span>
                           <span>{health.toFixed(1)}%</span>
                         </div>
@@ -522,7 +522,7 @@ export default function TargetTrackingClient() {
                       </div>
 
                       {isGlitching && (
-                        <div className="absolute bottom-4 text-[9px] font-mono text-red-400 uppercase tracking-widest animate-pulse">
+                        <div className="absolute bottom-4 text-[11px] font-mono text-red-500 dark:text-red-400 uppercase tracking-widest animate-pulse">
                           [ SIGNAL GLARE GLITCH DETECTED — TARGET TRANSPARENT ]
                         </div>
                       )}
@@ -548,11 +548,11 @@ export default function TargetTrackingClient() {
 
                       <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 shadow-sm w-full grid grid-cols-2 gap-3 text-left">
                         <div>
-                          <div className="text-[10px] font-mono text-slate-400 uppercase mb-1">Survives duration</div>
+                          <div className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 uppercase mb-1">Survives duration</div>
                           <div className="text-2xl text-fuchsia-600 font-mono font-black">{(trackedTime / 1000).toFixed(2)}s</div>
                         </div>
                         <div>
-                          <div className="text-[10px] font-mono text-slate-400 uppercase mb-1">Max Speed Mult</div>
+                          <div className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 uppercase mb-1">Max Speed Mult</div>
                           <div className="text-xl text-slate-700 font-mono font-bold">{difficultyMultiplierRef.current.toFixed(2)}x</div>
                         </div>
                       </div>
@@ -588,7 +588,7 @@ export default function TargetTrackingClient() {
               <div className="flex justify-end">
                 <button
                   onClick={stopGame}
-                  className="text-[10px] font-mono text-slate-400 hover:text-red-400 transition-colors cursor-pointer"
+                  className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 hover:text-red-500 transition-colors cursor-pointer"
                 >
                   Abort Session ×
                 </button>

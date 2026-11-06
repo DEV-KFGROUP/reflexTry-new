@@ -190,7 +190,7 @@ export default function ContactClient() {
                     <div className="lg:col-span-5 space-y-6">
 
                         <div className="flex flex-col space-y-4">
-                            <h2 className="text-xs font-mono font-bold tracking-widest text-slate-400 uppercase flex items-center gap-2">
+                            <h2 className="text-xs font-mono font-bold tracking-widest text-slate-600 dark:text-slate-400 uppercase flex items-center gap-2">
                                 <span className="w-1.5 h-1.5 rounded-full bg-cyan-500 shadow-[0_0_8px_rgba(6,182,212,0.6)]" />
                                 Transmission Channels
                             </h2>
@@ -212,7 +212,7 @@ export default function ContactClient() {
                                         </div>
                                         <div className="flex-1 space-y-1">
                                             <h3 className="text-base font-mono font-bold text-slate-800">{method.title}</h3>
-                                            <p className="text-xs text-slate-400 leading-relaxed pr-2">{method.description}</p>
+                                            <p className="text-xs text-slate-600 dark:text-slate-400 leading-relaxed pr-2">{method.description}</p>
                                             <div className="pt-2">
                                                 {method.email ? (
                                                     <a
@@ -242,7 +242,7 @@ export default function ContactClient() {
 
                         {/* Social Channels */}
                         <div className="space-y-3">
-                            <h2 className="text-xs font-mono font-bold tracking-widest text-slate-400 uppercase flex items-center gap-2">
+                            <h2 className="text-xs font-mono font-bold tracking-widest text-slate-600 dark:text-slate-400 uppercase flex items-center gap-2">
                                 <span className="w-1.5 h-1.5 rounded-full bg-violet-500 shadow-[0_0_8px_rgba(139,92,246,0.6)]" />
                                 Social Networks
                             </h2>

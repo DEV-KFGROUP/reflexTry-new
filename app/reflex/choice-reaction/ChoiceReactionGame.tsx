@@ -349,7 +349,7 @@ export default function ChoiceReactionGame() {
                 <p className="text-emerald-500 text-sm font-bold uppercase tracking-widest">{lastRt}ms</p>
               )}
             </div>
-            <p className="text-[10px] font-mono uppercase tracking-widest text-slate-400">
+            <p className="text-xs font-mono uppercase tracking-widest text-slate-600 dark:text-slate-400">
               Attempt {attempt}/{diff.attempts} · {diff.choices} choices
             </p>
           </motion.div>

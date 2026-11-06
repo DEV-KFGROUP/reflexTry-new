@@ -265,13 +265,13 @@ export default function SchulteTableGame() {
             className="w-full flex flex-col items-center justify-center p-2 max-w-2xl"
           >
             <div className="mb-5 flex items-center gap-3">
-              <span className="text-[10px] font-mono uppercase tracking-widest text-slate-400">
+              <span className="text-xs font-mono uppercase tracking-widest text-slate-600 dark:text-slate-400">
                 Next
               </span>
               <span className="inline-flex min-w-12 h-12 items-center justify-center rounded-2xl bg-indigo-600 text-white text-2xl font-black shadow-lg shadow-indigo-500/30">
                 {target}
               </span>
-              <span className="text-[10px] font-mono uppercase tracking-widest text-slate-400">
+              <span className="text-xs font-mono uppercase tracking-widest text-slate-600 dark:text-slate-400">
                 {formatTime(elapsed)}
               </span>
             </div>
@@ -300,7 +300,7 @@ export default function SchulteTableGame() {
                 );
               })}
             </div>
-            <p className="mt-4 text-[10px] font-mono uppercase tracking-widest text-slate-400">
+            <p className="mt-4 text-xs font-mono uppercase tracking-widest text-slate-600 dark:text-slate-400">
               {clicked.size}/{diff.size * diff.size} cleared · {diff.reverse ? "Descending" : "Ascending"}
             </p>
           </motion.div>

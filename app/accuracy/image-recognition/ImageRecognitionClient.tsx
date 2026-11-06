@@ -133,14 +133,14 @@ function DifficultyCard({
           <div className="flex items-center gap-2 flex-wrap">
             <span className="font-mono font-bold text-xs text-slate-800">{d.label}</span>
             {selected && (
-              <span className="text-[8px] font-mono px-1.5 py-0.5 rounded-full text-white" style={{ background: DIFF_GRADIENT[diffKey] }}>
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded-full text-white" style={{ background: DIFF_GRADIENT[diffKey] }}>
                 ACTIVE
               </span>
             )}
           </div>
-          <p className="text-[9px] text-slate-400 mt-0.5 leading-tight">{d.description}</p>
+          <p className="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5 leading-tight">{d.description}</p>
           {highScore > 0 && (
-            <p className={`text-[9px] font-mono font-bold mt-1 ${d.textColor}`}>Best: {highScore}% Acc</p>
+            <p className={`text-[11px] font-mono font-bold mt-1 ${d.textColor}`}>Best: {highScore}% Acc</p>
           )}
         </div>
       </div>
@@ -340,7 +340,7 @@ export default function ImageRecognitionClient() {
           <h1 className="text-3xl md:text-5xl font-mono font-black tracking-widest text-slate-800">IMAGE RECOGNITION</h1>
           <div className="flex items-center justify-center gap-3 mt-1">
             <span className="h-[1px] w-8 bg-slate-300" />
-            <p className="text-[10px] font-mono text-slate-400 uppercase tracking-[0.25em]">VISUAL PATTERN CALIBRATION</p>
+            <p className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-[0.2em]">VISUAL PATTERN CALIBRATION</p>
             <span className="h-[1px] w-8 bg-slate-300" />
           </div>
         </motion.div>
@@ -353,7 +353,7 @@ export default function ImageRecognitionClient() {
 
             {/* Difficulty Selector */}
             <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
-              <div className="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-3">Difficulty Level</div>
+              <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Difficulty Level</div>
               <div className="flex flex-col gap-2">
                 {DIFF_ORDER.map(key => (
                   <DifficultyCard
@@ -370,24 +370,24 @@ export default function ImageRecognitionClient() {
 
             {/* Stats Panel */}
             <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
-              <div className="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-3">Session Stats</div>
+              <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Session Stats</div>
               <div className="grid grid-cols-2 gap-3">
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Calibration Score</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Calibration Score</div>
                   <div className="text-xl font-mono font-bold text-slate-800 mt-0.5">{score}</div>
                 </div>
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest font-bold">Accuracy</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider font-bold">Accuracy</div>
                   <div className="text-xl font-mono font-bold text-slate-800 mt-0.5">{accuracy}%</div>
                 </div>
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Remaining Lives</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Remaining Lives</div>
                   <div className="text-sm font-mono font-bold text-red-500 mt-1.5 animate-pulse">
                     {diff.maxMistakes === 999 ? "∞" : `${diff.maxMistakes - mistakes} ❤️`}
                   </div>
                 </div>
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Round Progress</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Round Progress</div>
                   <div className="text-xl font-mono font-bold text-slate-800 mt-0.5">{round}/{diff.roundLimit}</div>
                 </div>
               </div>
@@ -397,7 +397,7 @@ export default function ImageRecognitionClient() {
                 <div className="mt-3 bg-slate-50 border border-slate-100 rounded-xl p-3 flex items-center gap-2">
                   <Trophy className={`w-4 h-4 ${diff.textColor}`} />
                   <div>
-                    <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Best Accuracy ({diff.label})</div>
+                    <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Best Accuracy ({diff.label})</div>
                     <div className={`text-sm font-mono font-bold ${diff.textColor}`}>{highScores[diffId]}% Acc</div>
                   </div>
                 </div>
@@ -409,7 +409,7 @@ export default function ImageRecognitionClient() {
                 className={`mt-3 w-full p-2.5 rounded-xl border transition-all cursor-pointer flex items-center justify-center gap-2 ${muted ? "bg-red-50 border-red-200 text-red-600" : "bg-slate-50 border-slate-200 text-slate-500 hover:border-violet-200 hover:text-violet-600"}`}
               >
                 {muted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
-                <span className="text-[9px] font-mono uppercase tracking-widest">{muted ? "Unmute" : "Sound On"}</span>
+                <span className="text-xs font-mono font-medium uppercase tracking-widest">{muted ? "Unmute" : "Sound On"}</span>
               </button>
             </div>
           </motion.div>
@@ -422,10 +422,10 @@ export default function ImageRecognitionClient() {
               <div className="absolute bottom-4 left-4 w-4 h-4 border-b-2 border-l-2 border-slate-200" />
               <div className="absolute bottom-4 right-4 w-4 h-4 border-b-2 border-r-2 border-slate-200" />
 
-              <div className="absolute top-4 left-10 text-[8px] font-mono text-slate-400 tracking-widest hidden sm:block">
+              <div className="absolute top-4 left-10 text-[10px] font-mono text-slate-500 dark:text-slate-400 tracking-widest hidden sm:block">
                 ARENA // {diff.label.toUpperCase()}
               </div>
-              <div className="absolute top-4 right-10 text-[8px] font-mono text-slate-400 tracking-widest hidden sm:block">
+              <div className="absolute top-4 right-10 text-[10px] font-mono text-slate-500 dark:text-slate-400 tracking-widest hidden sm:block">
                 TIMER: {diff.timeLimitSec ? `${diff.timeLimitSec}s` : "STATIC"}
               </div>
 
@@ -444,7 +444,7 @@ export default function ImageRecognitionClient() {
                       </div>
                       <div className="space-y-2">
                         <h2 className="text-xl md:text-2xl font-mono font-bold text-slate-800 uppercase tracking-wider">Visual Mapping</h2>
-                        <p className="text-xs text-slate-400 max-w-xs mx-auto leading-relaxed">
+                        <p className="text-xs text-slate-600 dark:text-slate-400 max-w-xs mx-auto leading-relaxed">
                           Identify distorted emojis projected inside the central LCD ring. Overcome extreme blurs, rotation tilts, and color inversions.
                         </p>
                         <p className={`text-xs font-mono font-semibold ${diff.textColor} mt-1`}>{diff.label}: {diff.description}</p>
@@ -471,7 +471,7 @@ export default function ImageRecognitionClient() {
                       {/* Round timer indicator */}
                       {diff.timeLimitSec && phase === "playing" && (
                         <div className="w-full max-w-xs flex flex-col items-center">
-                          <div className="flex justify-between w-full text-[8px] font-mono text-slate-400 mb-1">
+                          <div className="flex justify-between w-full text-[10px] font-mono text-slate-500 dark:text-slate-400 mb-1">
                             <span>OPTIC EXPOSURE BUFFER</span>
                             <span className={timeLeft <= 2 ? "text-red-500 font-bold" : ""}>{timeLeft}s</span>
                           </div>
@@ -511,7 +511,7 @@ export default function ImageRecognitionClient() {
                                     className="absolute inset-0 rounded-2xl border-2 bg-white border-slate-200 text-slate-700 font-mono font-black text-xs shadow-md flex flex-col items-center justify-center transition-all select-none cursor-pointer hover:bg-slate-50 active:translate-y-1"
                                   >
                                     <span>{opt.toUpperCase()}</span>
-                                    <span className="opacity-40 text-[9px] font-bold mt-0.5">[{i + 1}]</span>
+                                    <span className="opacity-40 text-[11px] font-bold mt-0.5">[{i + 1}]</span>
                                   </button>
                                 </div>
                               ))}
@@ -520,7 +520,7 @@ export default function ImageRecognitionClient() {
                             /* Simple Typing input well */
                             <form onSubmit={handleSubmit} className="space-y-6 w-full">
                               <div className="relative flex flex-col space-y-1.5">
-                                <div className="text-[10px] font-mono text-slate-400 uppercase tracking-widest pl-1">Identify Target Label</div>
+                                <div className="text-xs font-mono text-slate-600 dark:text-slate-400 uppercase tracking-widest pl-1">Identify Target Label</div>
                                 <input
                                   type="text"
                                   value={input}
@@ -590,11 +590,11 @@ export default function ImageRecognitionClient() {
 
                       <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 shadow-sm w-full grid grid-cols-2 gap-3 text-left">
                         <div>
-                          <div className="text-[10px] font-mono text-slate-400 uppercase mb-1">Total Score</div>
+                          <div className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 uppercase mb-1">Total Score</div>
                           <div className="text-2xl text-fuchsia-600 font-mono font-black">{score} pts</div>
                         </div>
                         <div>
-                          <div className="text-[10px] font-mono text-slate-400 uppercase mb-1">Accuracy Rating</div>
+                          <div className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 uppercase mb-1">Accuracy Rating</div>
                           <div className="text-xl text-slate-700 font-mono font-bold">{accuracy}% Acc</div>
                         </div>
                       </div>
@@ -630,7 +630,7 @@ export default function ImageRecognitionClient() {
               <div className="flex justify-end">
                 <button
                   onClick={() => { if (timerRef.current) clearInterval(timerRef.current); setPhase("gameover"); }}
-                  className="text-[10px] font-mono text-slate-400 hover:text-red-400 transition-colors cursor-pointer"
+                  className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 hover:text-red-500 transition-colors cursor-pointer"
                 >
                   Abort Session ×
                 </button>

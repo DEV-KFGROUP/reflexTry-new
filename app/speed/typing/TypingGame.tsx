@@ -121,14 +121,14 @@ function DifficultyCard({
           <div className="flex items-center gap-2 flex-wrap">
             <span className="font-mono font-bold text-xs text-slate-800">{d.label}</span>
             {selected && (
-              <span className="text-[8px] font-mono px-1.5 py-0.5 rounded-full text-white" style={{ background: DIFF_GRADIENT[diffKey] }}>
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded-full text-white" style={{ background: DIFF_GRADIENT[diffKey] }}>
                 ACTIVE
               </span>
             )}
           </div>
-          <p className="text-[9px] text-slate-400 mt-0.5 leading-tight">{d.description}</p>
+          <p className="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5 leading-tight">{d.description}</p>
           {highScore > 0 && (
-            <p className={`text-[9px] font-mono font-bold mt-1 ${d.textColor}`}>Best: {highScore} WPM</p>
+            <p className={`text-[11px] font-mono font-bold mt-1 ${d.textColor}`}>Best: {highScore} WPM</p>
           )}
         </div>
       </div>
@@ -284,7 +284,7 @@ export default function TypingGame() {
           <h1 className="text-3xl md:text-5xl font-mono font-black tracking-widest text-slate-800">TYPING ARENA</h1>
           <div className="flex items-center justify-center gap-3 mt-1">
             <span className="h-[1px] w-8 bg-slate-300" />
-            <p className="text-[10px] font-mono text-slate-400 uppercase tracking-[0.25em]">KEYSTROKE LATENCY COUNTER</p>
+            <p className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-[0.2em]">KEYSTROKE LATENCY COUNTER</p>
             <span className="h-[1px] w-8 bg-slate-300" />
           </div>
         </motion.div>
@@ -297,7 +297,7 @@ export default function TypingGame() {
 
             {/* Difficulty Selector */}
             <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
-              <div className="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-3">Difficulty Level</div>
+              <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Difficulty Level</div>
               <div className="flex flex-col gap-2">
                 {DIFF_ORDER.map(key => (
                   <DifficultyCard
@@ -314,24 +314,24 @@ export default function TypingGame() {
 
             {/* Stats Panel */}
             <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
-              <div className="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-3">Session Stats</div>
+              <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Session Stats</div>
               <div className="grid grid-cols-2 gap-3">
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">WPM Rate</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">WPM Rate</div>
                   <div className="text-xl font-mono font-bold text-slate-800 mt-0.5">{wpm}</div>
                 </div>
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Accuracy</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Accuracy</div>
                   <div className="text-xl font-mono font-bold text-slate-800 mt-0.5">{accuracy}%</div>
                 </div>
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Error Strikes</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Error Strikes</div>
                   <div className="text-sm font-mono font-bold text-red-500 mt-1.5">
                     {diff.maxErrors === 999 ? "∞" : `${errorCount}/${diff.maxErrors}`}
                   </div>
                 </div>
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Time Buffer</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Time Buffer</div>
                   <div className={`text-xl font-mono font-bold mt-0.5 ${timeLeft <= 5 ? "text-red-500" : "text-slate-800"}`}>
                     {timeLeft}s
                   </div>
@@ -343,7 +343,7 @@ export default function TypingGame() {
                 <div className="mt-3 bg-slate-50 border border-slate-100 rounded-xl p-3 flex items-center gap-2">
                   <Trophy className={`w-4 h-4 ${diff.textColor}`} />
                   <div>
-                    <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Best Speed ({diff.label})</div>
+                    <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Best Speed ({diff.label})</div>
                     <div className={`text-sm font-mono font-bold ${diff.textColor}`}>{highScores[diffId]} WPM</div>
                   </div>
                 </div>
@@ -355,7 +355,7 @@ export default function TypingGame() {
                 className={`mt-3 w-full p-2.5 rounded-xl border transition-all cursor-pointer flex items-center justify-center gap-2 ${muted ? "bg-red-50 border-red-200 text-red-600" : "bg-slate-50 border-slate-200 text-slate-500 hover:border-violet-200 hover:text-violet-600"}`}
               >
                 {muted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
-                <span className="text-[9px] font-mono uppercase tracking-widest">{muted ? "Unmute" : "Sound On"}</span>
+                <span className="text-xs font-mono font-medium uppercase tracking-widest">{muted ? "Unmute" : "Sound On"}</span>
               </button>
             </div>
           </motion.div>
@@ -368,10 +368,10 @@ export default function TypingGame() {
               <div className="absolute bottom-4 left-4 w-4 h-4 border-b-2 border-l-2 border-slate-200" />
               <div className="absolute bottom-4 right-4 w-4 h-4 border-b-2 border-r-2 border-slate-200" />
 
-              <div className="absolute top-4 left-10 text-[8px] font-mono text-slate-400 tracking-widest hidden sm:block">
+              <div className="absolute top-4 left-10 text-[10px] font-mono text-slate-500 dark:text-slate-400 tracking-widest hidden sm:block">
                 ARENA // {diff.label.toUpperCase()}
               </div>
-              <div className="absolute top-4 right-10 text-[8px] font-mono text-slate-400 tracking-widest hidden sm:block">
+              <div className="absolute top-4 right-10 text-[10px] font-mono text-slate-500 dark:text-slate-400 tracking-widest hidden sm:block">
                 KEYBOARD PROTOCOL: SYNCHRONIZED
               </div>
 
@@ -390,7 +390,7 @@ export default function TypingGame() {
                       </div>
                       <div className="space-y-2">
                         <h2 className="text-xl md:text-2xl font-mono font-bold text-slate-800 uppercase tracking-wider">Keystroke Calibration</h2>
-                        <p className="text-xs text-slate-400 max-w-xs mx-auto leading-relaxed">
+                        <p className="text-xs text-slate-600 dark:text-slate-400 max-w-xs mx-auto leading-relaxed">
                           Measure words per minute typing velocity and letter accuracy. Exceeding strike limits aborts the session.
                         </p>
                         <p className={`text-xs font-mono font-semibold ${diff.textColor} mt-1`}>{diff.label}: {diff.description}</p>
@@ -445,7 +445,7 @@ export default function TypingGame() {
                           spellCheck={false}
                         />
                       </div>
-                      <p className="text-center text-slate-400 font-mono text-[9px] animate-pulse tracking-widest uppercase">
+                      <p className="text-center text-slate-600 dark:text-slate-400 font-mono text-[11px] animate-pulse tracking-widest uppercase">
                         [ CLICK BOX TO FOCUS KEYBOARD INPUT ]
                       </p>
                     </motion.div>
@@ -470,11 +470,11 @@ export default function TypingGame() {
 
                       <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 shadow-sm w-full grid grid-cols-2 gap-3 text-left">
                         <div>
-                          <div className="text-[10px] font-mono text-slate-400 uppercase mb-1">Keystroke WPM</div>
+                          <div className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 uppercase mb-1">Keystroke WPM</div>
                           <div className="text-2xl text-fuchsia-600 font-mono font-black">{wpm} WPM</div>
                         </div>
                         <div>
-                          <div className="text-[10px] font-mono text-slate-400 uppercase mb-1">Accuracy</div>
+                          <div className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 uppercase mb-1">Accuracy</div>
                           <div className="text-xl text-slate-700 font-mono font-bold">{accuracy}% ACC</div>
                         </div>
                       </div>
@@ -510,7 +510,7 @@ export default function TypingGame() {
               <div className="flex justify-end">
                 <button
                   onClick={() => { if (timerRef.current) clearInterval(timerRef.current); setGameState("finished"); }}
-                  className="text-[10px] font-mono text-slate-400 hover:text-red-400 transition-colors cursor-pointer"
+                  className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 hover:text-red-500 transition-colors cursor-pointer"
                 >
                   Abort Session ×
                 </button>

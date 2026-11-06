@@ -55,7 +55,7 @@ export function Navbar() {
                             <span className="text-xl sm:text-2xl font-mono font-black tracking-tighter text-foreground group-hover:text-indigo-500 transition-colors">
                                 REFLEXTRY
                             </span>
-                            <span className="text-[8px] font-mono font-bold text-muted-foreground tracking-[0.25em] uppercase hidden sm:block">
+                            <span className="text-[10px] font-mono font-bold text-muted-foreground tracking-[0.2em] uppercase hidden sm:block">
                                 Cognitive Lab
                             </span>
                         </div>

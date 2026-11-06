@@ -104,14 +104,14 @@ function DifficultyCard({
           <div className="flex items-center gap-2 flex-wrap">
             <span className="font-mono font-bold text-xs text-slate-800">{d.label}</span>
             {selected && (
-              <span className="text-[8px] font-mono px-1.5 py-0.5 rounded-full text-white" style={{ background: DIFF_GRADIENT[diffKey] }}>
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded-full text-white" style={{ background: DIFF_GRADIENT[diffKey] }}>
                 ACTIVE
               </span>
             )}
           </div>
-          <p className="text-[9px] text-slate-600 mt-0.5 leading-tight">{d.description}</p>
+          <p className="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5 leading-tight">{d.description}</p>
           {highScore > 0 && highScore !== 999 && (
-            <p className={`text-[9px] font-mono font-bold mt-1 ${d.textColor}`}>Best Avg: {highScore}ms</p>
+            <p className={`text-[11px] font-mono font-bold mt-1 ${d.textColor}`}>Best Avg: {highScore}ms</p>
           )}
         </div>
       </div>
@@ -314,7 +314,7 @@ export default function ReactionGame() {
 
             {/* Difficulty Selector */}
             <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
-              <div className="text-[10px] font-mono text-slate-600 uppercase tracking-widest mb-3">Difficulty Level</div>
+              <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Difficulty Level</div>
               <div className="flex flex-col gap-2">
                 {DIFF_ORDER.map(key => (
                   <DifficultyCard
@@ -331,28 +331,28 @@ export default function ReactionGame() {
 
             {/* Stats Panel */}
             <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
-              <div className="text-[10px] font-mono text-slate-600 uppercase tracking-widest mb-3">Session Stats</div>
+              <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Session Stats</div>
               <div className="grid grid-cols-2 gap-3">
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-600 uppercase tracking-widest">Attempt</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Attempt</div>
                   <div className="text-xl font-mono font-bold text-slate-800 mt-0.5">
                     {currentAttempt}/{diff.attemptsCount}
                   </div>
                 </div>
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-600 uppercase tracking-widest">Avg Speed</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Avg Speed</div>
                   <div className="text-xl font-mono font-bold text-slate-800 mt-0.5">
                     {averageScore > 0 ? `${averageScore}ms` : "—"}
                   </div>
                 </div>
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-600 uppercase tracking-widest">Best Click</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Best Click</div>
                   <div className="text-xl font-mono font-bold text-emerald-600 mt-0.5">
                     {bestScore > 0 ? `${bestScore}ms` : "—"}
                   </div>
                 </div>
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-600 uppercase tracking-widest">Fail Penalty</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Fail Penalty</div>
                   <div className="text-xs font-mono font-bold text-red-700 mt-1">
                     {diff.earlyClickPenalty ? "1000ms" : "NONE"}
                   </div>
@@ -364,7 +364,7 @@ export default function ReactionGame() {
                 <div className="mt-3 bg-slate-50 border border-slate-100 rounded-xl p-3 flex items-center gap-2">
                   <Trophy className={`w-4 h-4 ${diff.textColor}`} />
                   <div>
-                    <div className="text-[9px] font-mono text-slate-600 uppercase tracking-widest">Best Avg ({diff.label})</div>
+                    <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Best Avg ({diff.label})</div>
                     <div className={`text-sm font-mono font-bold ${diff.textColor}`}>{highScores[diffId]}ms</div>
                   </div>
                 </div>
@@ -376,7 +376,7 @@ export default function ReactionGame() {
                 className={`mt-3 w-full p-2.5 rounded-xl border transition-all cursor-pointer flex items-center justify-center gap-2 ${muted ? "bg-red-50 border-red-200 text-red-600" : "bg-slate-50 border-slate-200 text-slate-500 hover:border-violet-200 hover:text-violet-600"}`}
               >
                 {muted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
-                <span className="text-[9px] font-mono uppercase tracking-widest">{muted ? "Unmute" : "Sound On"}</span>
+                <span className="text-xs font-mono font-medium uppercase tracking-widest">{muted ? "Unmute" : "Sound On"}</span>
               </button>
             </div>
           </motion.div>
@@ -389,10 +389,10 @@ export default function ReactionGame() {
               <div className="absolute bottom-4 left-4 w-4 h-4 border-b-2 border-l-2 border-slate-200" />
               <div className="absolute bottom-4 right-4 w-4 h-4 border-b-2 border-r-2 border-slate-200" />
 
-              <div className="absolute top-4 left-10 text-[8px] font-mono text-slate-600 tracking-widest hidden sm:block">
+              <div className="absolute top-4 left-10 text-[10px] font-mono text-slate-500 dark:text-slate-400 tracking-widest hidden sm:block">
                 DECK // {diff.label.toUpperCase()}
               </div>
-              <div className="absolute top-4 right-10 text-[8px] font-mono text-slate-600 tracking-widest hidden sm:block">
+              <div className="absolute top-4 right-10 text-[10px] font-mono text-slate-500 dark:text-slate-400 tracking-widest hidden sm:block">
                 MODE: {diff.targetMode.toUpperCase()}
               </div>
 
@@ -465,14 +465,14 @@ export default function ReactionGame() {
                         <div className="text-center space-y-4">
                           <span className="inline-block w-4 h-4 rounded-full bg-amber-500 animate-ping" />
                           <h3 className="text-sm font-mono font-bold text-amber-600 uppercase tracking-widest">[ CALIBRATING TIMING STACK ]</h3>
-                          <p className="text-[9px] font-mono text-slate-600">DO NOT CLICK UNTIL GREEN LIGHT FIRES</p>
+                          <p className="text-[11px] font-mono text-slate-600 dark:text-slate-400">DO NOT CLICK UNTIL GREEN LIGHT FIRES</p>
                         </div>
                       )}
 
                       {phase === "faux" && (
                         <div className="text-center space-y-3">
                           <h3 className="text-lg font-mono font-black text-slate-900 uppercase tracking-wider">HOLD...</h3>
-                          <p className="text-[9px] font-mono text-slate-700">[ FAUX SIGNAL FLASH DETECTED ]</p>
+                          <p className="text-[11px] font-mono text-slate-700 dark:text-slate-300">[ FAUX SIGNAL FLASH DETECTED ]</p>
                         </div>
                       )}
 
@@ -514,11 +514,11 @@ export default function ReactionGame() {
 
                       {phase === "result" && (
                         <div className="text-center space-y-4">
-                          <div className="text-[9px] font-mono text-slate-600 uppercase tracking-widest">Reaction speed</div>
+                          <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Reaction speed</div>
                           <div className="bg-white border border-slate-200 p-4 px-8 rounded-2xl shadow-sm inline-block">
                             <span className="text-4xl font-mono font-black text-fuchsia-600">{reactionTime}ms</span>
                           </div>
-                          <p className="text-[9px] font-mono text-slate-600">[ TAP ANYWHERE TO CONTINUE ]</p>
+                          <p className="text-[11px] font-mono text-slate-600 dark:text-slate-400">[ TAP ANYWHERE TO CONTINUE ]</p>
                         </div>
                       )}
 
@@ -538,18 +538,18 @@ export default function ReactionGame() {
 
                       <div className="grid grid-cols-2 gap-4 text-left max-w-sm mx-auto">
                         <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 shadow-sm">
-                          <div className="text-[9px] font-mono text-slate-600 uppercase mb-1">Average Response</div>
+                          <div className="text-[11px] font-mono text-slate-600 dark:text-slate-400 uppercase mb-1">Average Response</div>
                           <div className="text-2xl text-fuchsia-600 font-mono font-black">{averageScore}ms</div>
                         </div>
                         <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 shadow-sm">
-                          <div className="text-[9px] font-mono text-slate-600 uppercase mb-1">Fastest Peak</div>
+                          <div className="text-[11px] font-mono text-slate-600 dark:text-slate-400 uppercase mb-1">Fastest Peak</div>
                           <div className="text-2xl text-emerald-600 font-mono font-black">{bestScore}ms</div>
                         </div>
                       </div>
 
                       {/* Display attempt lists */}
                       <div className="bg-slate-50 border border-slate-250 rounded-xl p-3 text-left">
-                        <div className="text-[9px] font-mono text-slate-600 uppercase mb-2">calibration log</div>
+                        <div className="text-[11px] font-mono text-slate-600 dark:text-slate-400 uppercase mb-2">calibration log</div>
                         <div className="grid grid-cols-5 gap-2 text-center">
                           {attempts.slice(0, 5).map((time, idx) => (
                             <div key={idx} className="bg-white border border-slate-200 p-2 rounded-lg font-mono text-xs text-slate-700">

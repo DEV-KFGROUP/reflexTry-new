@@ -46,7 +46,7 @@ export function GameDashboardLayout({
           </h1>
           <div className="flex items-center justify-center gap-3 mt-1">
             <span className="h-[1px] w-8 bg-slate-300 dark:bg-slate-600" />
-            <p className="text-[10px] font-mono text-slate-400 uppercase tracking-[0.25em]">
+            <p className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-[0.2em]">
               {subtitle}
             </p>
             <span className="h-[1px] w-8 bg-slate-300 dark:bg-slate-600" />
@@ -60,7 +60,7 @@ export function GameDashboardLayout({
           <div className="flex flex-col gap-4">
             {/* Difficulty Selector */}
             <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 shadow-sm">
-              <div className="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-3">
+              <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">
                 {t("game.difficultyLevel", "Difficulty Level")}
               </div>
               <div className="flex flex-col gap-2">
@@ -70,7 +70,7 @@ export function GameDashboardLayout({
 
             {/* Stats Panel */}
             <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 shadow-sm">
-              <div className="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-3">
+              <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">
                 {t("game.sessionStats", "Session Stats")}
               </div>
               
@@ -84,11 +84,11 @@ export function GameDashboardLayout({
                 className={`w-full p-2.5 rounded-xl border transition-all cursor-pointer flex items-center justify-center gap-2 ${
                   !soundEnabled 
                     ? "bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800 text-red-600 dark:text-red-400" 
-                    : "bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-500 dark:text-slate-400 hover:text-violet-600 dark:hover:text-violet-400 hover:border-violet-200 dark:hover:border-violet-800"
+                    : "bg-slate-50 dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:text-violet-600 dark:hover:text-violet-400 hover:border-violet-200 dark:hover:border-violet-800"
                 }`}
               >
                 {!soundEnabled ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
-                <span className="text-[9px] font-mono uppercase tracking-widest">
+                <span className="text-xs font-mono font-medium uppercase tracking-widest">
                   {!soundEnabled ? t("game.unmute", "Unmute") : t("game.soundOn", "Sound On")}
                 </span>
               </button>
@@ -108,10 +108,10 @@ export function GameDashboardLayout({
               <div className="absolute bottom-4 left-4 w-4 h-4 border-b-2 border-l-2 border-slate-200 dark:border-slate-700" />
               <div className="absolute bottom-4 right-4 w-4 h-4 border-b-2 border-r-2 border-slate-200 dark:border-slate-700" />
               
-              <div className="absolute top-4 left-10 text-[8px] font-mono text-slate-400 tracking-widest hidden sm:block">
+              <div className="absolute top-4 left-10 text-[10px] font-mono text-slate-500 dark:text-slate-400 tracking-widest hidden sm:block">
                 {arenaHeaderLeft}
               </div>
-              <div className="absolute top-4 right-10 text-[8px] font-mono text-slate-400 tracking-widest hidden sm:block">
+              <div className="absolute top-4 right-10 text-[10px] font-mono text-slate-500 dark:text-slate-400 tracking-widest hidden sm:block">
                 {arenaHeaderRight}
               </div>
               
@@ -124,8 +124,8 @@ export function GameDashboardLayout({
 
               {/* Telemetry Log (Optional) */}
               {telemetryLogs && (
-                <div className="border-t border-slate-100 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-800/80 px-6 py-3 font-mono text-[9px] text-slate-600 dark:text-slate-400 overflow-hidden relative">
-                  <div className="absolute top-2 right-4 text-[8px] text-slate-400 tracking-wider">{t("game.telemetryStream", "TELEMETRY_STREAM")}</div>
+                <div className="border-t border-slate-100 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-800/80 px-6 py-3 font-mono text-[11px] text-slate-700 dark:text-slate-300 overflow-hidden relative">
+                  <div className="absolute top-2 right-4 text-[10px] text-slate-500 dark:text-slate-400 tracking-wider">{t("game.telemetryStream", "TELEMETRY_STREAM")}</div>
                   <div className="h-20 overflow-y-auto flex flex-col gap-1 pr-2">
                     {telemetryLogs.map((log, idx) => (
                       <div key={idx} className={`${idx === 0 ? "text-violet-700 dark:text-violet-400 font-bold" : "opacity-50"} transition-opacity duration-200`}>

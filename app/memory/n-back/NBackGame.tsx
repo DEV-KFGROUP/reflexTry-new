@@ -317,7 +317,7 @@ export default function NBackGame() {
             className="w-full flex flex-col items-center justify-center p-4 max-w-2xl"
           >
             <div className="w-full max-w-xs mb-6">
-              <div className="flex justify-between text-[10px] font-mono uppercase tracking-widest text-slate-400 mb-2">
+              <div className="flex justify-between text-xs font-mono uppercase tracking-widest text-slate-600 dark:text-slate-400 mb-2">
                 <span>{diff.n}-Back</span>
                 <span>{trial}/{diff.trials}</span>
               </div>
@@ -344,7 +344,7 @@ export default function NBackGame() {
                     : "bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900 border-slate-200 dark:border-slate-700 shadow-[0_12px_40px_rgba(15,23,42,0.08)]"
               }`}
             >
-              <span className="absolute top-3 left-4 text-[8px] font-mono text-slate-400 tracking-widest">STIM</span>
+              <span className="absolute top-3 left-4 text-[10px] font-mono text-slate-500 dark:text-slate-400 tracking-widest">STIM</span>
               <span className="text-7xl md:text-8xl font-black text-slate-900 dark:text-white tracking-tight tabular-nums">
                 {currentLetter || "·"}
               </span>

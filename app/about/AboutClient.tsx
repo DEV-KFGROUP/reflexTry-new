@@ -173,7 +173,7 @@ export default function AboutClient() {
                             <Sparkles className="w-7 h-7 text-amber-500" />
                         </div>
                         <div>
-                            <div className="text-xs font-mono text-slate-400 tracking-widest uppercase mb-1">{t("about.missionLabel", "Mission Statement")}</div>
+                            <div className="text-xs font-mono text-slate-600 dark:text-slate-400 tracking-widest uppercase mb-1">{t("about.missionLabel", "Mission Statement")}</div>
                             <h2 className="text-2xl font-mono font-bold text-slate-900 mb-3">{t("about.missionTitle", "Our Mission")}</h2>
                             <p className="text-slate-600 leading-relaxed">
                                 {t("about.missionDesc", "Our mission is simple: democratize the exact same high-level reaction and cognitive testing tools used by pro esports teams. Improvement starts with raw, honest data. We built Reflextry so you can find your exact baseline, lock in, and beat it.")}
@@ -198,7 +198,7 @@ export default function AboutClient() {
                             <Globe className="w-7 h-7 text-violet-500" />
                         </div>
                         <div className="w-full">
-                            <div className="text-xs font-mono text-slate-400 tracking-widest uppercase mb-1">{t("about.originLabel", "Origin Log")}</div>
+                            <div className="text-xs font-mono text-slate-600 dark:text-slate-400 tracking-widest uppercase mb-1">{t("about.originLabel", "Origin Log")}</div>
                             <h2 className="text-2xl font-mono font-bold text-slate-900 mb-4">{t("about.originTitle", "Our Story")}</h2>
                             <div className="space-y-3 text-slate-600 leading-relaxed">
                                 <p>{t("about.originP1", "Reflextry began as a small side project: a browser script to measure click latency without installing another desktop trainer. That one tool turned into a question we kept hearing—can we put memory, reflex, speed, accuracy, and aim drills in one place, free to try, with scores you can track yourself?")}</p>
@@ -217,7 +217,7 @@ export default function AboutClient() {
                     className="space-y-6"
                 >
                     <div className="flex items-center gap-3">
-                        <div className="text-xs font-mono text-slate-400 tracking-widest uppercase">Core Values</div>
+                        <div className="text-xs font-mono text-slate-600 dark:text-slate-400 tracking-widest uppercase">Core Values</div>
                         <div className="flex-1 h-px bg-slate-200" />
                         <div className="text-xs font-mono text-cyan-500 tracking-widest">04 MODULES</div>
                     </div>
@@ -258,7 +258,7 @@ export default function AboutClient() {
                     className="space-y-6"
                 >
                     <div className="flex items-center gap-3">
-                        <div className="text-xs font-mono text-slate-400 tracking-widest uppercase">Platform Modules</div>
+                        <div className="text-xs font-mono text-slate-600 dark:text-slate-400 tracking-widest uppercase">Platform Modules</div>
                         <div className="flex-1 h-px bg-slate-200" />
                         <div className="text-xs font-mono text-violet-500 tracking-widest">04 FEATURES</div>
                     </div>
@@ -300,7 +300,7 @@ export default function AboutClient() {
                     className="space-y-6"
                 >
                     <div className="flex items-center gap-3">
-                        <div className="text-xs font-mono text-slate-400 tracking-widest uppercase">Personnel</div>
+                        <div className="text-xs font-mono text-slate-600 dark:text-slate-400 tracking-widest uppercase">Personnel</div>
                         <div className="flex-1 h-px bg-slate-200" />
                         <div className="text-xs font-mono text-cyan-500 tracking-widest">02 AGENTS</div>
                     </div>
@@ -310,7 +310,7 @@ export default function AboutClient() {
                         <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.02)_1px,transparent_1px)] bg-[size:20px_20px] pointer-events-none" />
 
                         <div className="relative">
-                            <div className="text-xs font-mono text-slate-400 tracking-widest uppercase mb-6">Meet the Team</div>
+                            <div className="text-xs font-mono text-slate-600 dark:text-slate-400 tracking-widest uppercase mb-6">Meet the Team</div>
 
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                                 {/* Rabadiya Kaushik */}
@@ -365,7 +365,7 @@ export default function AboutClient() {
                 >
                     <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-emerald-400/60 to-transparent" />
                     <div className="relative">
-                        <div className="text-xs font-mono text-slate-400 tracking-widest uppercase mb-1">Methodology</div>
+                        <div className="text-xs font-mono text-slate-600 dark:text-slate-400 tracking-widest uppercase mb-1">Methodology</div>
                         <h2 className="text-2xl font-mono font-bold text-slate-900 mb-4">How We Build &amp; Score Tests</h2>
                         <div className="space-y-3 text-slate-600 leading-relaxed text-sm">
                             <p>Each tool has an explicit scoring rule (for example reaction time in milliseconds, span length, accuracy %, or completion time). We document difficulty changes in the on-page guide so Beginner and Professional are not the same task wearing a different label.</p>
@@ -384,7 +384,7 @@ export default function AboutClient() {
                 >
                     <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-400/60 to-transparent" />
                     <div className="relative">
-                        <div className="text-xs font-mono text-slate-400 tracking-widest uppercase mb-1">Contact</div>
+                        <div className="text-xs font-mono text-slate-600 dark:text-slate-400 tracking-widest uppercase mb-1">Contact</div>
                         <h2 className="text-2xl font-mono font-bold text-slate-900 mb-4">Reach the Team</h2>
                         <ul className="space-y-2 text-slate-600 text-sm leading-relaxed">
                             <li><span className="font-semibold text-slate-800">Email:</span>{" "}
@@ -445,7 +445,7 @@ export default function AboutClient() {
                         <div className="flex items-center gap-3 mb-6">
                             <Shield className="w-5 h-5 text-slate-400" />
                             <div>
-                                <div className="text-xs font-mono text-slate-400 tracking-widest uppercase">Compliance</div>
+                                <div className="text-xs font-mono text-slate-600 dark:text-slate-400 tracking-widest uppercase">Compliance</div>
                                 <h2 className="text-xl font-mono font-bold text-slate-900">Legal Information</h2>
                             </div>
                         </div>

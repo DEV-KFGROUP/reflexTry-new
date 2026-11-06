@@ -98,14 +98,14 @@ function DifficultyCard({
           <div className="flex items-center gap-2 flex-wrap">
             <span className="font-mono font-bold text-xs text-slate-800">{d.label}</span>
             {selected && (
-              <span className="text-[8px] font-mono px-1.5 py-0.5 rounded-full text-white" style={{ background: DIFF_GRADIENT[diffKey] }}>
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded-full text-white" style={{ background: DIFF_GRADIENT[diffKey] }}>
                 ACTIVE
               </span>
             )}
           </div>
-          <p className="text-[9px] text-slate-400 mt-0.5 leading-tight">{d.description}</p>
+          <p className="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5 leading-tight">{d.description}</p>
           {highScore > 0 && (
-            <p className={`text-[9px] font-mono font-bold mt-1 ${d.textColor}`}>Best: {highScore}/10 Match</p>
+            <p className={`text-[11px] font-mono font-bold mt-1 ${d.textColor}`}>Best: {highScore}/10 Match</p>
           )}
         </div>
       </div>
@@ -275,7 +275,7 @@ export default function PatternMatchingGame() {
           <h1 className="text-3xl md:text-5xl font-mono font-black tracking-widest text-slate-800">PATTERN MATCHING</h1>
           <div className="flex items-center justify-center gap-3 mt-1">
             <span className="h-[1px] w-8 bg-slate-300" />
-            <p className="text-[10px] font-mono text-slate-400 uppercase tracking-[0.25em]">SPATIAL PRECISION CALIBRATION</p>
+            <p className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-[0.2em]">SPATIAL PRECISION CALIBRATION</p>
             <span className="h-[1px] w-8 bg-slate-300" />
           </div>
         </motion.div>
@@ -288,7 +288,7 @@ export default function PatternMatchingGame() {
 
             {/* Difficulty Selector */}
             <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
-              <div className="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-3">Difficulty Level</div>
+              <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Difficulty Level</div>
               <div className="flex flex-col gap-2">
                 {DIFF_ORDER.map(key => (
                   <DifficultyCard
@@ -305,24 +305,24 @@ export default function PatternMatchingGame() {
 
             {/* Stats Panel */}
             <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
-              <div className="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-3">Session Stats</div>
+              <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Session Stats</div>
               <div className="grid grid-cols-2 gap-3">
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Matched Rounds</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Matched Rounds</div>
                   <div className="text-xl font-mono font-bold text-slate-800 mt-0.5">{score}/10</div>
                 </div>
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest font-bold">Accuracy</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider font-bold">Accuracy</div>
                   <div className="text-xl font-mono font-bold text-slate-800 mt-0.5">{accuracy}%</div>
                 </div>
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Remaining Lives</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Remaining Lives</div>
                   <div className="text-sm font-mono font-bold text-red-500 mt-1.5 animate-pulse">
                     {diff.maxMistakes === 999 ? "∞" : `${diff.maxMistakes - mistakes} ❤️`}
                   </div>
                 </div>
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest font-bold">Exposure Speed</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider font-bold">Exposure Speed</div>
                   <div className="text-xl font-mono font-bold text-slate-800 mt-0.5">{diff.exposureMs}ms</div>
                 </div>
               </div>
@@ -332,7 +332,7 @@ export default function PatternMatchingGame() {
                 <div className="mt-3 bg-slate-50 border border-slate-100 rounded-xl p-3 flex items-center gap-2">
                   <Trophy className={`w-4 h-4 ${diff.textColor}`} />
                   <div>
-                    <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Best Score ({diff.label})</div>
+                    <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Best Score ({diff.label})</div>
                     <div className={`text-sm font-mono font-bold ${diff.textColor}`}>{highScores[diffId]}/10 match</div>
                   </div>
                 </div>
@@ -344,7 +344,7 @@ export default function PatternMatchingGame() {
                 className={`mt-3 w-full p-2.5 rounded-xl border transition-all cursor-pointer flex items-center justify-center gap-2 ${muted ? "bg-red-50 border-red-200 text-red-600" : "bg-slate-50 border-slate-200 text-slate-500 hover:border-violet-200 hover:text-violet-600"}`}
               >
                 {muted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
-                <span className="text-[9px] font-mono uppercase tracking-widest">{muted ? "Unmute" : "Sound On"}</span>
+                <span className="text-xs font-mono font-medium uppercase tracking-widest">{muted ? "Unmute" : "Sound On"}</span>
               </button>
             </div>
           </motion.div>
@@ -357,10 +357,10 @@ export default function PatternMatchingGame() {
               <div className="absolute bottom-4 left-4 w-4 h-4 border-b-2 border-l-2 border-slate-200" />
               <div className="absolute bottom-4 right-4 w-4 h-4 border-b-2 border-r-2 border-slate-200" />
 
-              <div className="absolute top-4 left-10 text-[8px] font-mono text-slate-400 tracking-widest hidden sm:block">
+              <div className="absolute top-4 left-10 text-[10px] font-mono text-slate-500 dark:text-slate-400 tracking-widest hidden sm:block">
                 ARENA // {diff.label.toUpperCase()}
               </div>
-              <div className="absolute top-4 right-10 text-[8px] font-mono text-slate-400 tracking-widest hidden sm:block">
+              <div className="absolute top-4 right-10 text-[10px] font-mono text-slate-500 dark:text-slate-400 tracking-widest hidden sm:block">
                 SYMBOLS COUNT: {diff.symbols.length}
               </div>
 
@@ -379,7 +379,7 @@ export default function PatternMatchingGame() {
                       </div>
                       <div className="space-y-2">
                         <h2 className="text-xl md:text-2xl font-mono font-bold text-slate-800 uppercase tracking-wider">Pattern Matching</h2>
-                        <p className="text-xs text-slate-400 max-w-xs mx-auto leading-relaxed">
+                        <p className="text-xs text-slate-600 dark:text-slate-400 max-w-xs mx-auto leading-relaxed">
                           A spatial symbol pattern will appear briefly. Memorize and select the matching configuration among similar distractors.
                         </p>
                         <p className={`text-xs font-mono font-semibold ${diff.textColor} mt-1`}>{diff.label}: {diff.description}</p>
@@ -405,7 +405,7 @@ export default function PatternMatchingGame() {
                     >
                       <div className="space-y-1 text-center">
                         <div className="text-[10px] font-mono text-cyan-600 uppercase tracking-[0.25em] font-bold">Calibration Code Projection</div>
-                        <h2 className="text-[9px] text-slate-400 font-mono tracking-widest uppercase">MEMORIZE CONFIG</h2>
+                        <h2 className="text-[11px] text-slate-600 dark:text-slate-400 font-mono tracking-widest uppercase">MEMORIZE CONFIG</h2>
                       </div>
 
                       {/* Prompt well */}
@@ -470,10 +470,10 @@ export default function PatternMatchingGame() {
                               >
                                 <span className="tracking-wide">{option}</span>
                                 {showResult && isCorrect && (
-                                  <span className="text-[8px] font-mono text-white/90 uppercase tracking-widest mt-1">✓ Correct</span>
+                                  <span className="text-[10px] font-mono text-white/90 uppercase tracking-widest mt-1">✓ Correct</span>
                                 )}
                                 {showResult && isSelected && !isCorrect && (
-                                  <span className="text-[8px] font-mono text-white/90 uppercase tracking-widest mt-1">✗ Fail</span>
+                                  <span className="text-[10px] font-mono text-white/90 uppercase tracking-widest mt-1">✗ Fail</span>
                                 )}
                               </button>
                             </div>
@@ -502,11 +502,11 @@ export default function PatternMatchingGame() {
 
                       <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 shadow-sm w-full grid grid-cols-2 gap-3 text-left">
                         <div>
-                          <div className="text-[10px] font-mono text-slate-400 uppercase mb-1">Cleared Matches</div>
+                          <div className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 uppercase mb-1">Cleared Matches</div>
                           <div className="text-2xl text-fuchsia-600 font-mono font-black">{score}/10</div>
                         </div>
                         <div>
-                          <div className="text-[10px] font-mono text-slate-400 uppercase mb-1">Accuracy Rating</div>
+                          <div className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 uppercase mb-1">Accuracy Rating</div>
                           <div className="text-xl text-slate-700 font-mono font-bold">{accuracy}% Acc</div>
                         </div>
                       </div>
@@ -546,11 +546,11 @@ export default function PatternMatchingGame() {
 
                       <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 shadow-sm w-full grid grid-cols-2 gap-3 text-left">
                         <div>
-                          <div className="text-[10px] font-mono text-slate-400 uppercase mb-1">Final Score</div>
+                          <div className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 uppercase mb-1">Final Score</div>
                           <div className="text-2xl text-slate-805 font-mono font-bold">{score}/10</div>
                         </div>
                         <div>
-                          <div className="text-[10px] font-mono text-slate-400 uppercase mb-1">Accuracy Rating</div>
+                          <div className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 uppercase mb-1">Accuracy Rating</div>
                           <div className="text-xl text-slate-700 font-mono font-bold">{accuracy}% Acc</div>
                         </div>
                       </div>
@@ -586,7 +586,7 @@ export default function PatternMatchingGame() {
               <div className="flex justify-end">
                 <button
                   onClick={() => setPhase("idle")}
-                  className="text-[10px] font-mono text-slate-400 hover:text-red-400 transition-colors cursor-pointer"
+                  className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 hover:text-red-500 transition-colors cursor-pointer"
                 >
                   Abort Session ×
                 </button>

@@ -46,12 +46,12 @@ export function DashboardDifficultyCard({
             {displayLabel}
           </span>
           {selected && (
-            <span className="text-[7px] font-black uppercase tracking-wider px-1.5 py-0.5 rounded-full bg-indigo-500 text-white leading-none">
+            <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-indigo-500 text-white leading-none">
               {t("game.active", "Active")}
             </span>
           )}
         </div>
-        <p className="text-[9px] font-medium text-slate-500 dark:text-slate-400 mt-1 leading-tight pr-2">
+        <p className="text-xs font-normal text-slate-600 dark:text-slate-300 mt-1 leading-tight pr-2">
           {description}
         </p>
       </div>

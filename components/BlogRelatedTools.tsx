@@ -230,7 +230,7 @@ export function BlogRelatedTools({ slug, category }: BlogRelatedToolsProps) {
                                         <div className={`p-2 rounded-xl ${tool.bgClass} ${tool.colorClass} border ${tool.borderClass}`}>
                                             <Icon className="w-4 h-4" />
                                         </div>
-                                        <span className="text-xs font-mono font-bold text-slate-400 uppercase tracking-widest">
+                                        <span className="text-xs font-mono font-bold text-slate-600 dark:text-slate-400 uppercase tracking-widest">
                                             {tool.category}
                                         </span>
                                     </div>

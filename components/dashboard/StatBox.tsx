@@ -18,7 +18,7 @@ export function StatBox({ label, value, highlight = false }: StatBoxProps) {
     <div className={`bg-slate-50 border border-slate-100 rounded-xl p-3 ${
       highlight ? "ring-1 ring-violet-200" : ""
     }`}>
-      <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">
+      <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-wider">
         {displayLabel}
       </div>
       <div className={`text-2xl font-mono font-bold mt-0.5 ${

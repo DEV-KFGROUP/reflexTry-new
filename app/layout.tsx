@@ -127,9 +127,9 @@ export default async function RootLayout({
                 --reflex: 221 39% 34%;
                 --speed: 215 25% 27%;
                 --accuracy: 199 18% 40%;
-                --memory: 215 16% 47%;
+                --memory: 215 18% 42%;
                 --wisdom: 220 9% 46%;
-                --info: 217 91% 60%;
+                --info: 217 85% 46%;
               }
               html {
                 color-scheme: light;

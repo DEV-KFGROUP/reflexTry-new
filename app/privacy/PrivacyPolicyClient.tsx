@@ -83,7 +83,7 @@ export default function PrivacyPolicyClient() {
                         </span>
                     </h1>
 
-                    <p className="text-xs font-mono text-slate-400 max-w-xl mx-auto leading-relaxed">
+                    <p className="text-xs font-mono text-slate-600 dark:text-slate-400 max-w-xl mx-auto leading-relaxed">
                         Last Calibrated / Updated: February 2024
                     </p>
                 </motion.div>

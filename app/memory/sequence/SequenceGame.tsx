@@ -194,14 +194,14 @@ function DifficultyCard({
           <div className="flex items-center gap-2 flex-wrap">
             <span className="font-mono font-bold text-xs text-slate-800">{d.label}</span>
             {selected && (
-              <span className="text-[8px] font-mono px-1.5 py-0.5 rounded-full text-white" style={{ background: DIFF_GRADIENT[diffKey] }}>
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded-full text-white" style={{ background: DIFF_GRADIENT[diffKey] }}>
                 ACTIVE
               </span>
             )}
           </div>
-          <p className="text-[9px] text-slate-400 mt-0.5 leading-tight">{d.description}</p>
+          <p className="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5 leading-tight">{d.description}</p>
           {highScore > 0 && (
-            <p className={`text-[9px] font-mono font-bold mt-1 ${d.textColor}`}>Best: {highScore}</p>
+            <p className={`text-[11px] font-mono font-bold mt-1 ${d.textColor}`}>Best: {highScore}</p>
           )}
         </div>
       </div>
@@ -406,7 +406,7 @@ export default function SequenceGame() {
           <h1 className="text-3xl md:text-5xl font-mono font-black tracking-widest text-slate-800">MEMORY SEQUENCE</h1>
           <div className="flex items-center justify-center gap-3 mt-1">
             <span className="h-[1px] w-8 bg-slate-300" />
-            <p className="text-[10px] font-mono text-slate-400 uppercase tracking-[0.25em]">COGNITIVE CALIBRATION SYSTEM</p>
+            <p className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-[0.2em]">COGNITIVE CALIBRATION SYSTEM</p>
             <span className="h-[1px] w-8 bg-slate-300" />
           </div>
         </motion.div>
@@ -417,7 +417,7 @@ export default function SequenceGame() {
           <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 }} className="flex flex-col gap-4">
             {/* Difficulty Selector */}
             <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
-              <div className="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-3">Difficulty Level</div>
+              <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Difficulty Level</div>
               <div className="flex flex-col gap-2">
                 {(Object.keys(DIFFICULTIES) as DifficultyId[]).map(key => (
                   <DifficultyCard
@@ -434,18 +434,18 @@ export default function SequenceGame() {
 
             {/* Stats Panel */}
             <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
-              <div className="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-3">Session Stats</div>
+              <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Session Stats</div>
               <div className="grid grid-cols-2 gap-3">
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Stage</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Stage</div>
                   <div className="text-2xl font-mono font-bold text-slate-800 mt-0.5">{score < 10 ? `0${score}` : score}</div>
                 </div>
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Best</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Best</div>
                   <div className={`text-2xl font-mono font-bold mt-0.5 ${diff.textColor}`}>{highScores[diffId]}</div>
                 </div>
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Lives</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Lives</div>
                   <div className="flex gap-1 mt-1.5 flex-wrap">
                     {Array.from({ length: diff.lives }).map((_, i) => (
                       <Heart key={i} className={`w-4 h-4 ${i < livesLeft ? "text-rose-500 fill-rose-500" : "text-slate-200 fill-slate-200"}`} />
@@ -453,7 +453,7 @@ export default function SequenceGame() {
                   </div>
                 </div>
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Combo</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Combo</div>
                   <div className={`text-xl font-mono font-bold mt-0.5 ${combo >= 3 ? "text-orange-500" : "text-slate-800"}`}>
                     {combo >= 3 ? `🔥x${combo}` : `x${combo}`}
                   </div>
@@ -463,7 +463,7 @@ export default function SequenceGame() {
               {diff.hasTimer && phase === "playing" && !isShowingSequence && timerLeft > 0 && (
                 <motion.div className="mt-3" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
                   <div className="flex justify-between items-center mb-1">
-                    <span className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Time Left</span>
+                    <span className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Time Left</span>
                     <span className={`text-sm font-mono font-bold ${timerLeft <= 3 ? "text-red-500" : "text-slate-700"}`}>{timerLeft}s</span>
                   </div>
                   <div className="h-2 bg-slate-100 rounded-full overflow-hidden">
@@ -482,7 +482,7 @@ export default function SequenceGame() {
                 className={`mt-3 w-full p-2.5 rounded-xl border transition-all cursor-pointer flex items-center justify-center gap-2 ${muted ? "bg-red-50 border-red-200 text-red-600" : "bg-slate-50 border-slate-200 text-slate-500 hover:text-violet-600 hover:border-violet-200"}`}
               >
                 {muted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
-                <span className="text-[9px] font-mono uppercase tracking-widest">{muted ? "Unmute" : "Sound On"}</span>
+                <span className="text-xs font-mono font-medium uppercase tracking-widest">{muted ? "Unmute" : "Sound On"}</span>
               </button>
             </div>
           </motion.div>
@@ -495,10 +495,10 @@ export default function SequenceGame() {
               <div className="absolute top-4 right-4 w-4 h-4 border-t-2 border-r-2 border-slate-200" />
               <div className="absolute bottom-4 left-4 w-4 h-4 border-b-2 border-l-2 border-slate-200" />
               <div className="absolute bottom-4 right-4 w-4 h-4 border-b-2 border-r-2 border-slate-200" />
-              <div className="absolute top-4 left-10 text-[8px] font-mono text-slate-400 tracking-widest hidden sm:block">
+              <div className="absolute top-4 left-10 text-[10px] font-mono text-slate-500 dark:text-slate-400 tracking-widest hidden sm:block">
                 DECK // {diff.label.toUpperCase()}
               </div>
-              <div className="absolute top-4 right-10 text-[8px] font-mono text-slate-400 tracking-widest hidden sm:block">
+              <div className="absolute top-4 right-10 text-[10px] font-mono text-slate-500 dark:text-slate-400 tracking-widest hidden sm:block">
                 GRID_{diff.gridSize}
               </div>
               <div className="absolute inset-0 pointer-events-none opacity-[0.02] bg-[linear-gradient(rgba(148,163,184,0)_50%,rgba(148,163,184,0.15)_50%)] bg-[size:100%_4px]" />
@@ -528,7 +528,7 @@ export default function SequenceGame() {
                       </div>
                       <div className="space-y-2">
                         <h2 className="text-xl md:text-2xl font-mono font-bold text-slate-800 uppercase tracking-wider">Neural Lock Standby</h2>
-                        <p className="text-xs text-slate-400 max-w-xs mx-auto leading-relaxed">
+                        <p className="text-xs text-slate-600 dark:text-slate-400 max-w-xs mx-auto leading-relaxed">
                           Select a difficulty on the left, then press Initialize to begin.
                         </p>
                         <p className={`text-xs font-mono font-semibold ${diff.textColor} mt-1`}>{diff.label}: {diff.description}</p>
@@ -553,10 +553,10 @@ export default function SequenceGame() {
                   {phase === "playing" && (
                     <motion.div key="playing" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="w-full flex flex-col items-center gap-4">
                       <div className="w-full flex items-center justify-between">
-                        <span className="text-[10px] font-mono text-slate-400 uppercase tracking-widest">
+                        <span className="text-xs font-mono text-slate-600 dark:text-slate-400 uppercase tracking-widest">
                           {isShowingSequence ? "Watch carefully…" : "Your turn!"}
                         </span>
-                        <span className="text-[10px] font-mono text-slate-400">{userSequence.length}/{sequence.length}</span>
+                        <span className="text-xs font-mono text-slate-600 dark:text-slate-400">{userSequence.length}/{sequence.length}</span>
                       </div>
                       <div className="w-full h-1.5 bg-slate-100 rounded-full overflow-hidden">
                         <motion.div
@@ -586,7 +586,7 @@ export default function SequenceGame() {
                               >
                                 {!isSmall && (
                                   <div className="flex justify-between items-start w-full">
-                                    <span className="text-[8px] font-mono tracking-wider opacity-50">{String(i + 1).padStart(2, "0")}</span>
+                                    <span className="text-[10px] font-mono tracking-wider opacity-60">{String(i + 1).padStart(2, "0")}</span>
                                     <div className={`w-1.5 h-1.5 rounded-full ${isActive ? "bg-white animate-ping" : "bg-current opacity-25"}`} />
                                   </div>
                                 )}
@@ -595,7 +595,7 @@ export default function SequenceGame() {
                                 </div>
                                 {!isSmall && (
                                   <div className="flex justify-between items-end w-full">
-                                    <span className="text-[9px] font-mono font-bold tracking-wider opacity-70">S{String(i + 1).padStart(2, "0")}</span>
+                                    <span className="text-[11px] font-mono font-bold tracking-wider opacity-80">S{String(i + 1).padStart(2, "0")}</span>
                                   </div>
                                 )}
                                 {isActive && <div className="absolute inset-0 bg-white/20 blur-md rounded-xl pointer-events-none" />}
@@ -625,7 +625,7 @@ export default function SequenceGame() {
                           </motion.div>
                         )}
                       </div>
-                      <div className="bg-slate-50 border border-red-100 rounded-xl p-3 font-mono text-[9px] text-red-700/90 text-left space-y-1 w-full">
+                      <div className="bg-slate-50 border border-red-100 rounded-xl p-3 font-mono text-[11px] text-red-700 dark:text-red-400 text-left space-y-1 w-full">
                         <div>&gt; DIAG: SEQ_MISMATCH_REGISTERED</div>
                         <div>&gt; SECTOR RECEPTOR ECHO COMPROMISED</div>
                         <div>&gt; SYSTEM STATE: REBOOT_REQUIRED</div>
@@ -657,8 +657,8 @@ export default function SequenceGame() {
               </div>
 
               {/* Telemetry Log */}
-              <div className="border-t border-slate-100 bg-slate-50/80 px-6 py-3 font-mono text-[9px] text-slate-600 overflow-hidden relative">
-                <div className="absolute top-2 right-4 text-[8px] text-slate-400 tracking-wider">TELEMETRY_STREAM</div>
+              <div className="border-t border-slate-100 bg-slate-50/80 px-6 py-3 font-mono text-[11px] text-slate-600 dark:text-slate-400 overflow-hidden relative">
+                <div className="absolute top-2 right-4 text-[10px] text-slate-600 dark:text-slate-400 tracking-wider">TELEMETRY_STREAM</div>
                 <div className="h-20 overflow-y-auto flex flex-col gap-1 pr-2">
                   {logs.map((log, idx) => (
                     <div key={idx} className={`${idx === 0 ? "text-violet-700 font-bold" : "opacity-50"} transition-opacity duration-200`}>{log}</div>
@@ -671,7 +671,7 @@ export default function SequenceGame() {
               <div className="flex justify-end">
                 <button
                   onClick={() => { gameOverRef.current = true; stopTimer(); setPhase("gameover"); addLog("!! MANUAL ABORT !!"); }}
-                  className="text-[10px] font-mono text-slate-400 hover:text-red-400 transition-colors cursor-pointer"
+                  className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 hover:text-red-500 transition-colors cursor-pointer"
                 >
                   Abort Session ×
                 </button>

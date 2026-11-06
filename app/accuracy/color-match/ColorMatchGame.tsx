@@ -127,14 +127,14 @@ function DifficultyCard({
           <div className="flex items-center gap-2 flex-wrap">
             <span className="font-mono font-bold text-xs text-slate-800">{d.label}</span>
             {selected && (
-              <span className="text-[8px] font-mono px-1.5 py-0.5 rounded-full text-white" style={{ background: DIFF_GRADIENT[diffKey] }}>
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded-full text-white" style={{ background: DIFF_GRADIENT[diffKey] }}>
                 ACTIVE
               </span>
             )}
           </div>
-          <p className="text-[9px] text-slate-400 mt-0.5 leading-tight">{d.description}</p>
+          <p className="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5 leading-tight">{d.description}</p>
           {highScore > 0 && (
-            <p className={`text-[9px] font-mono font-bold mt-1 ${d.textColor}`}>Best: {highScore} pts</p>
+            <p className={`text-[11px] font-mono font-bold mt-1 ${d.textColor}`}>Best: {highScore} pts</p>
           )}
         </div>
       </div>
@@ -305,7 +305,7 @@ export default function ColorMatchGame() {
           <h1 className="text-3xl md:text-5xl font-mono font-black tracking-widest text-slate-800">COLOR MATCH</h1>
           <div className="flex items-center justify-center gap-3 mt-1">
             <span className="h-[1px] w-8 bg-slate-300" />
-            <p className="text-[10px] font-mono text-slate-400 uppercase tracking-[0.25em]">CHROMATIC SPECTRUM CALIBRATION</p>
+            <p className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-[0.2em]">CHROMATIC SPECTRUM CALIBRATION</p>
             <span className="h-[1px] w-8 bg-slate-300" />
           </div>
         </motion.div>
@@ -318,7 +318,7 @@ export default function ColorMatchGame() {
 
             {/* Difficulty Selector */}
             <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
-              <div className="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-3">Difficulty Level</div>
+              <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Difficulty Level</div>
               <div className="flex flex-col gap-2">
                 {DIFF_ORDER.map(key => (
                   <DifficultyCard
@@ -335,26 +335,26 @@ export default function ColorMatchGame() {
 
             {/* Stats Panel */}
             <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
-              <div className="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-3">Session Stats</div>
+              <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Session Stats</div>
               <div className="grid grid-cols-2 gap-3">
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Average Points</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Average Points</div>
                   <div className="text-xl font-mono font-bold text-slate-800 mt-0.5">{avgScore} pts</div>
                 </div>
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Visual Lock</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Visual Lock</div>
                   <div className="text-xs font-mono font-bold text-slate-850 mt-1.5 uppercase">
                     {diff.flashDurationMs ? `${diff.flashDurationMs}ms Flash` : "Static View"}
                   </div>
                 </div>
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Remaining Lives</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Remaining Lives</div>
                   <div className="text-sm font-mono font-bold text-red-500 mt-1.5 animate-pulse">
                     {diff.maxMistakesAllowed === 999 ? "∞" : `${diff.maxMistakesAllowed - mistakes} ❤️`}
                   </div>
                 </div>
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Round Progress</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Round Progress</div>
                   <div className="text-xl font-mono font-bold text-slate-800 mt-0.5">
                     {Math.min(round + 1, TOTAL_ROUNDS)}/{TOTAL_ROUNDS}
                   </div>
@@ -366,7 +366,7 @@ export default function ColorMatchGame() {
                 <div className="mt-3 bg-slate-50 border border-slate-100 rounded-xl p-3 flex items-center gap-2">
                   <Trophy className={`w-4 h-4 ${diff.textColor}`} />
                   <div>
-                    <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Best Average ({diff.label})</div>
+                    <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Best Average ({diff.label})</div>
                     <div className={`text-sm font-mono font-bold ${diff.textColor}`}>{highScores[diffId]} pts</div>
                   </div>
                 </div>
@@ -378,7 +378,7 @@ export default function ColorMatchGame() {
                 className={`mt-3 w-full p-2.5 rounded-xl border transition-all cursor-pointer flex items-center justify-center gap-2 ${muted ? "bg-red-50 border-red-200 text-red-600" : "bg-slate-50 border-slate-200 text-slate-500 hover:border-violet-200 hover:text-violet-600"}`}
               >
                 {muted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
-                <span className="text-[9px] font-mono uppercase tracking-widest">{muted ? "Unmute" : "Sound On"}</span>
+                <span className="text-xs font-mono font-medium uppercase tracking-widest">{muted ? "Unmute" : "Sound On"}</span>
               </button>
             </div>
           </motion.div>
@@ -391,10 +391,10 @@ export default function ColorMatchGame() {
               <div className="absolute bottom-4 left-4 w-4 h-4 border-b-2 border-l-2 border-slate-200" />
               <div className="absolute bottom-4 right-4 w-4 h-4 border-b-2 border-r-2 border-slate-200" />
 
-              <div className="absolute top-4 left-10 text-[8px] font-mono text-slate-400 tracking-widest hidden sm:block">
+              <div className="absolute top-4 left-10 text-[10px] font-mono text-slate-500 dark:text-slate-400 tracking-widest hidden sm:block">
                 ARENA // {diff.label.toUpperCase()}
               </div>
-              <div className="absolute top-4 right-10 text-[8px] font-mono text-slate-400 tracking-widest hidden sm:block">
+              <div className="absolute top-4 right-10 text-[10px] font-mono text-slate-500 dark:text-slate-400 tracking-widest hidden sm:block">
                 SNAP STEPS: {diff.snapInterval === 1 ? "SMOOTH" : `${diff.snapInterval}-STEP`}
               </div>
 
@@ -413,7 +413,7 @@ export default function ColorMatchGame() {
                       </div>
                       <div className="space-y-2">
                         <h2 className="text-xl md:text-2xl font-mono font-bold text-slate-800 uppercase tracking-wider">Color Match</h2>
-                        <p className="text-xs text-slate-400 max-w-xs mx-auto leading-relaxed">
+                        <p className="text-xs text-slate-600 dark:text-slate-400 max-w-xs mx-auto leading-relaxed">
                           Match target color tones using RGB sliders. Pro difficulty limits time, hides slider numbers, and flashes target colors briefly in visual memory.
                         </p>
                         <p className={`text-xs font-mono font-semibold ${diff.textColor} mt-1`}>{diff.label}: {diff.description}</p>
@@ -440,7 +440,7 @@ export default function ColorMatchGame() {
                       {/* Round timer countdown bar */}
                       {diff.timeLimitSec && !feedback && (
                         <div className="w-full max-w-xs flex flex-col items-center">
-                          <div className="flex justify-between w-full text-[8px] font-mono text-slate-400 mb-1">
+                          <div className="flex justify-between w-full text-[10px] font-mono text-slate-500 dark:text-slate-400 mb-1">
                             <span>CHROMATIC STABILITY TIME</span>
                             <span className={timeLeft <= 2 ? "text-red-500 font-bold" : ""}>{timeLeft}s</span>
                           </div>
@@ -458,13 +458,13 @@ export default function ColorMatchGame() {
                       {/* Color circles panel */}
                       <div className="flex gap-8 justify-center">
                         <div className="text-center space-y-2">
-                          <p className="text-[9px] text-slate-400 font-mono uppercase tracking-widest">Target Color</p>
+                          <p className="text-[11px] text-slate-600 dark:text-slate-400 font-mono uppercase tracking-widest">Target Color</p>
                           <div className="relative w-28 h-28 md:w-36 md:h-36 rounded-[2rem] border border-slate-200 shadow-[0_4px_16px_rgba(0,0,0,0.06)] overflow-hidden flex items-center justify-center bg-slate-200 transition-colors duration-300">
                             {showTargetColor ? (
                               <div className="absolute inset-0" style={{ backgroundColor: toHex(target) }} />
                             ) : (
-                              <div className="absolute inset-0 bg-slate-400 flex flex-col items-center justify-center text-slate-600 font-mono text-[9px] uppercase tracking-wider gap-1">
-                                <Lock className="w-5 h-5 text-slate-500" />
+                              <div className="absolute inset-0 bg-slate-300 dark:bg-slate-800 flex flex-col items-center justify-center text-slate-800 dark:text-slate-200 font-mono text-xs uppercase tracking-wider gap-1">
+                                <Lock className="w-5 h-5 text-slate-700 dark:text-slate-300" />
                                 Memory Locked
                               </div>
                             )}
@@ -472,7 +472,7 @@ export default function ColorMatchGame() {
                         </div>
 
                         <div className="text-center space-y-2">
-                          <p className="text-[9px] text-slate-400 font-mono uppercase tracking-widest">User Mix</p>
+                          <p className="text-[11px] text-slate-600 dark:text-slate-400 font-mono uppercase tracking-widest">User Mix</p>
                           <div className="relative w-28 h-28 md:w-36 md:h-36 rounded-[2rem] border border-slate-200 shadow-[0_4px_16px_rgba(0,0,0,0.06)] overflow-hidden">
                             <div className="absolute inset-0" style={{ backgroundColor: toHex(userColor) }} />
                             {diff.hasOverlay && (
@@ -497,7 +497,7 @@ export default function ColorMatchGame() {
                             }`}>
                               {feedback.points >= 90 ? "🎯 EXCELLENT MATCH!" : feedback.points >= diff.minPointsThreshold ? "👍 ACCURATE!" : "😬 STRIKE OUT!"}
                             </p>
-                            <p className="text-slate-400 text-xs font-mono">
+                            <p className="text-slate-600 dark:text-slate-400 text-xs font-mono">
                               Target HEX: <span className="text-slate-800 font-bold uppercase">{toHex(feedback.correct)}</span> | Mix: <span className="text-slate-850 font-bold uppercase">{toHex(userColor)}</span>
                             </p>
                             <p className="text-[10px] text-slate-400 font-mono">Spectrum Offset distance: {feedback.diff} | Received {feedback.points} pts</p>
@@ -532,7 +532,7 @@ export default function ColorMatchGame() {
                                     }}
                                     className={`flex-1 h-1.5 bg-slate-200 rounded-lg appearance-none cursor-ew-resize ${color}`}
                                   />
-                                  <span className="text-[10px] font-mono text-slate-400 w-8 text-right">
+                                  <span className="text-xs font-mono text-slate-600 dark:text-slate-400 w-8 text-right">
                                     {diff.showNumbers ? userColor[idx] : "??"}
                                   </span>
                                 </div>
@@ -574,11 +574,11 @@ export default function ColorMatchGame() {
 
                       <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 shadow-sm w-full grid grid-cols-2 gap-3 text-left">
                         <div>
-                          <div className="text-[10px] font-mono text-slate-400 uppercase mb-1">Average Score</div>
+                          <div className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 uppercase mb-1">Average Score</div>
                           <div className="text-2xl text-fuchsia-600 font-mono font-black">{avgScore} pts</div>
                         </div>
                         <div>
-                          <div className="text-[10px] font-mono text-slate-400 uppercase mb-1">Highest Average</div>
+                          <div className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 uppercase mb-1">Highest Average</div>
                           <div className="text-xl text-slate-700 font-mono font-bold">{highScores[diffId]} pts</div>
                         </div>
                       </div>
@@ -618,11 +618,11 @@ export default function ColorMatchGame() {
 
                       <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 shadow-sm w-full grid grid-cols-2 gap-3 text-left">
                         <div>
-                          <div className="text-[10px] font-mono text-slate-400 uppercase mb-1">Rounds Finished</div>
+                          <div className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 uppercase mb-1">Rounds Finished</div>
                           <div className="text-2xl text-slate-800 font-mono font-bold">{round}/{TOTAL_ROUNDS}</div>
                         </div>
                         <div>
-                          <div className="text-[10px] font-mono text-slate-400 uppercase mb-1">Average Points</div>
+                          <div className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 uppercase mb-1">Average Points</div>
                           <div className="text-xl text-slate-700 font-mono font-bold">{avgScore} pts</div>
                         </div>
                       </div>
@@ -658,7 +658,7 @@ export default function ColorMatchGame() {
               <div className="flex justify-end">
                 <button
                   onClick={() => setPhase("idle")}
-                  className="text-[10px] font-mono text-slate-400 hover:text-red-400 transition-colors cursor-pointer"
+                  className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 hover:text-red-500 transition-colors cursor-pointer"
                 >
                   Abort Session ×
                 </button>

@@ -149,14 +149,14 @@ function DifficultyCard({
           <div className="flex items-center gap-2 flex-wrap">
             <span className="font-mono font-bold text-xs text-slate-800">{d.label}</span>
             {selected && (
-              <span className="text-[8px] font-mono px-1.5 py-0.5 rounded-full text-white" style={{ background: DIFF_GRADIENT[diffKey] }}>
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded-full text-white" style={{ background: DIFF_GRADIENT[diffKey] }}>
                 ACTIVE
               </span>
             )}
           </div>
-          <p className="text-[9px] text-slate-400 mt-0.5 leading-tight">{d.description}</p>
+          <p className="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5 leading-tight">{d.description}</p>
           {highScore > 0 && (
-            <p className={`text-[9px] font-mono font-bold mt-1 ${d.textColor}`}>Best: {highScore} digits</p>
+            <p className={`text-[11px] font-mono font-bold mt-1 ${d.textColor}`}>Best: {highScore} digits</p>
           )}
         </div>
       </div>
@@ -347,7 +347,7 @@ export default function NumberMemoryPageClient() {
           <h1 className="text-3xl md:text-5xl font-mono font-black tracking-widest text-slate-800">NUMBER MEMORY</h1>
           <div className="flex items-center justify-center gap-3 mt-1">
             <span className="h-[1px] w-8 bg-slate-300" />
-            <p className="text-[10px] font-mono text-slate-400 uppercase tracking-[0.25em]">COGNITIVE DIGIT CALIBRATION</p>
+            <p className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-[0.2em]">COGNITIVE DIGIT CALIBRATION</p>
             <span className="h-[1px] w-8 bg-slate-300" />
           </div>
         </motion.div>
@@ -360,7 +360,7 @@ export default function NumberMemoryPageClient() {
 
             {/* Difficulty Selector */}
             <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
-              <div className="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-3">Difficulty Level</div>
+              <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Difficulty Level</div>
               <div className="flex flex-col gap-2">
                 {DIFF_ORDER.map(key => (
                   <DifficultyCard
@@ -377,18 +377,18 @@ export default function NumberMemoryPageClient() {
 
             {/* Stats Panel */}
             <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
-              <div className="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-3">Session Stats</div>
+              <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Session Stats</div>
               <div className="grid grid-cols-2 gap-3">
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Level</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Level</div>
                   <div className="text-2xl font-mono font-bold text-slate-800 mt-0.5">{level < 10 ? `0${level}` : level}</div>
                 </div>
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Digits</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Digits</div>
                   <div className={`text-2xl font-mono font-bold mt-0.5 ${diff.textColor}`}>{currentDigits}</div>
                 </div>
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Lives</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Lives</div>
                   <div className="flex gap-1 mt-1.5 flex-wrap">
                     {Array.from({ length: diff.lives }).map((_, i) => (
                       <Heart key={i} className={`w-4 h-4 ${i < livesLeft ? "text-rose-500 fill-rose-500" : "text-slate-200 fill-slate-200"}`} />
@@ -396,7 +396,7 @@ export default function NumberMemoryPageClient() {
                   </div>
                 </div>
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Streak</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Streak</div>
                   <div className={`text-xl font-mono font-bold mt-0.5 ${streak >= 3 ? "text-orange-500" : "text-slate-800"}`}>
                     {streak >= 3 ? `🔥x${streak}` : `x${streak}`}
                   </div>
@@ -408,7 +408,7 @@ export default function NumberMemoryPageClient() {
                 <div className="mt-3 bg-slate-50 border border-slate-100 rounded-xl p-3 flex items-center gap-2">
                   <Trophy className={`w-4 h-4 ${diff.textColor}`} />
                   <div>
-                    <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Best ({diff.label})</div>
+                    <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Best ({diff.label})</div>
                     <div className={`text-sm font-mono font-bold ${diff.textColor}`}>{highScores[diffId]} digits</div>
                   </div>
                 </div>
@@ -418,7 +418,7 @@ export default function NumberMemoryPageClient() {
               {diff.hasInputTimer && phase === "input" && inputTimeLeft > 0 && (
                 <motion.div className="mt-3" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
                   <div className="flex justify-between items-center mb-1">
-                    <span className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Time Left</span>
+                    <span className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Time Left</span>
                     <span className={`text-sm font-mono font-bold ${inputTimeLeft <= 4 ? "text-red-500" : "text-slate-700"}`}>{inputTimeLeft}s</span>
                   </div>
                   <div className="h-2 bg-slate-100 rounded-full overflow-hidden">
@@ -438,7 +438,7 @@ export default function NumberMemoryPageClient() {
                 className={`mt-3 w-full p-2.5 rounded-xl border transition-all cursor-pointer flex items-center justify-center gap-2 ${muted ? "bg-red-50 border-red-200 text-red-600" : "bg-slate-50 border-slate-200 text-slate-500 hover:border-violet-200 hover:text-violet-600"}`}
               >
                 {muted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
-                <span className="text-[9px] font-mono uppercase tracking-widest">{muted ? "Unmute" : "Sound On"}</span>
+                <span className="text-xs font-mono font-medium uppercase tracking-widest">{muted ? "Unmute" : "Sound On"}</span>
               </button>
             </div>
           </motion.div>
@@ -451,10 +451,10 @@ export default function NumberMemoryPageClient() {
               <div className="absolute top-4 right-4 w-4 h-4 border-t-2 border-r-2 border-slate-200" />
               <div className="absolute bottom-4 left-4 w-4 h-4 border-b-2 border-l-2 border-slate-200" />
               <div className="absolute bottom-4 right-4 w-4 h-4 border-b-2 border-r-2 border-slate-200" />
-              <div className="absolute top-4 left-10 text-[8px] font-mono text-slate-400 tracking-widest hidden sm:block">
+              <div className="absolute top-4 left-10 text-[10px] font-mono text-slate-500 dark:text-slate-400 tracking-widest hidden sm:block">
                 DECK // {diff.label.toUpperCase()}
               </div>
-              <div className="absolute top-4 right-10 text-[8px] font-mono text-slate-400 tracking-widest hidden sm:block">
+              <div className="absolute top-4 right-10 text-[10px] font-mono text-slate-500 dark:text-slate-400 tracking-widest hidden sm:block">
                 {currentDigits} DIGITS
               </div>
               <div className="absolute inset-0 pointer-events-none opacity-[0.02] bg-[linear-gradient(rgba(148,163,184,0)_50%,rgba(148,163,184,0.15)_50%)] bg-[size:100%_4px]" />
@@ -474,7 +474,7 @@ export default function NumberMemoryPageClient() {
                       </div>
                       <div className="space-y-2">
                         <h2 className="text-xl md:text-2xl font-mono font-bold text-slate-800 uppercase tracking-wider">Digit Calibration</h2>
-                        <p className="text-xs text-slate-400 max-w-xs mx-auto leading-relaxed">
+                        <p className="text-xs text-slate-600 dark:text-slate-400 max-w-xs mx-auto leading-relaxed">
                           A number will flash on screen. Memorize it, then type it back. Select your difficulty on the left.
                         </p>
                         <p className={`text-xs font-mono font-semibold ${diff.textColor} mt-1`}>{diff.label}: {diff.description}</p>
@@ -527,7 +527,7 @@ export default function NumberMemoryPageClient() {
                             transition={{ duration: displayMs / 1000, ease: "linear" }}
                           />
                         </div>
-                        <p className="text-[9px] font-mono text-slate-400">{currentDigits} digit{currentDigits !== 1 ? "s" : ""} · Level {level}</p>
+                        <p className="text-[11px] font-mono text-slate-600 dark:text-slate-400">{currentDigits} digit{currentDigits !== 1 ? "s" : ""} · Level {level}</p>
                       </div>
                     </motion.div>
                   )}
@@ -537,7 +537,7 @@ export default function NumberMemoryPageClient() {
                     <motion.form key="input" onSubmit={handleSubmit} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0 }} className="space-y-6 w-full max-w-md text-center">
                       <div className="space-y-1">
                         <label className="text-lg font-mono font-bold text-slate-700 block uppercase tracking-wider">Type the Number</label>
-                        <span className="text-[9px] font-mono text-slate-400 uppercase tracking-widest block">
+                        <span className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider block">
                           {currentDigits} digits · {diff.hasInputTimer ? `${diff.inputTimerSec}s limit` : "no time limit"}
                         </span>
                       </div>
@@ -602,7 +602,7 @@ export default function NumberMemoryPageClient() {
                             <p className="text-xs text-slate-500 font-mono">Level {level} cleared · {currentDigits} digits</p>
                           </div>
                           <div className="bg-emerald-50 border border-emerald-100 rounded-xl p-4">
-                            <div className="text-[9px] font-mono text-slate-400 uppercase mb-1">You recalled</div>
+                            <div className="text-[11px] font-mono text-slate-600 dark:text-slate-400 uppercase mb-1">You recalled</div>
                             <div className="text-2xl font-mono font-bold text-emerald-600 break-all tracking-widest">{currentNumber}</div>
                           </div>
                           <motion.button whileHover={{ translateY: -2 }} whileTap={{ translateY: 6 }} onClick={handleProceed} className="relative group cursor-pointer focus:outline-none select-none w-full">
@@ -628,7 +628,7 @@ export default function NumberMemoryPageClient() {
                           {/* Comparison */}
                           <div className="grid grid-cols-2 gap-3 text-left">
                             <div className="bg-emerald-50 border border-emerald-100 rounded-xl p-3">
-                              <div className="text-[9px] font-mono text-slate-400 uppercase mb-1">Correct</div>
+                              <div className="text-[11px] font-mono text-slate-600 dark:text-slate-400 uppercase mb-1">Correct</div>
                               <div
                                 className="font-mono font-bold break-all leading-tight"
                                 style={{ fontSize: currentNumber.length > 10 ? "1rem" : "1.25rem", color: "#059669" }}
@@ -637,7 +637,7 @@ export default function NumberMemoryPageClient() {
                               </div>
                             </div>
                             <div className="bg-red-50 border border-red-100 rounded-xl p-3">
-                              <div className="text-[9px] font-mono text-red-400 uppercase mb-1">Your Answer</div>
+                              <div className="text-[11px] font-mono text-red-500 dark:text-red-400 uppercase mb-1">Your Answer</div>
                               <div
                                 className="font-mono font-bold break-all text-red-500 line-through leading-tight"
                                 style={{ fontSize: (userInput || "—").length > 10 ? "1rem" : "1.25rem" }}
@@ -651,7 +651,7 @@ export default function NumberMemoryPageClient() {
                           {diff.id === "beginner" && (
                             <button
                               onClick={() => setShowReveal(r => !r)}
-                              className="flex items-center gap-1.5 text-[10px] font-mono text-slate-400 hover:text-violet-500 transition-colors cursor-pointer mx-auto"
+                              className="flex items-center gap-1.5 text-xs font-mono text-slate-600 dark:text-slate-400 hover:text-violet-500 transition-colors cursor-pointer mx-auto"
                             >
                               {showReveal ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
                               {showReveal ? "Hide" : "Show"} correct number
@@ -729,7 +729,7 @@ export default function NumberMemoryPageClient() {
               <div className="flex justify-end">
                 <button
                   onClick={() => { stopInputTimer(); setPhase("gameover"); }}
-                  className="text-[10px] font-mono text-slate-400 hover:text-red-400 transition-colors cursor-pointer"
+                  className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 hover:text-red-500 transition-colors cursor-pointer"
                 >
                   Abort Session ×
                 </button>

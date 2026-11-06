@@ -98,7 +98,7 @@ export default function BlogHubClient({ posts }: { posts: BlogPost[] }) {
             </h1>
             <div className="flex items-center justify-center gap-3 mt-1.5">
               <span className="h-[1px] w-8 bg-slate-300" />
-              <p className="text-[10px] font-mono text-slate-400 uppercase tracking-[0.25em]">Expert insights & research articles</p>
+              <p className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-[0.2em]">Expert insights & research articles</p>
               <span className="h-[1px] w-8 bg-slate-300" />
             </div>
           </div>
@@ -138,7 +138,7 @@ export default function BlogHubClient({ posts }: { posts: BlogPost[] }) {
                         <span className={`px-3 py-1 rounded-full text-[10px] font-mono font-bold border uppercase tracking-wider ${catStyle.bg} ${catStyle.text} ${catStyle.border} ${catStyle.glow}`}>
                           {post.category}
                         </span>
-                        <div className="flex items-center gap-1 text-[10px] font-mono text-slate-400">
+                        <div className="flex items-center gap-1 text-xs font-mono text-slate-600 dark:text-slate-400">
                           <Clock className="w-3.5 h-3.5" />
                           {post.readTime}
                         </div>
@@ -157,7 +157,7 @@ export default function BlogHubClient({ posts }: { posts: BlogPost[] }) {
 
                     {/* Bottom Actions Row */}
                     <div className="flex items-center justify-between border-t border-slate-100 pt-4 mt-6">
-                      <div className="flex items-center gap-1.5 text-[10px] font-mono text-slate-400">
+                      <div className="flex items-center gap-1.5 text-xs font-mono text-slate-600 dark:text-slate-400">
                         <Calendar className="w-3.5 h-3.5" />
                         <span>
                           {new Date(post.date).toLocaleDateString("en-US", {

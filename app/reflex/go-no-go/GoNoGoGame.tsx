@@ -327,7 +327,7 @@ export default function GoNoGoGame() {
                 <p className="text-emerald-500 text-sm font-bold uppercase tracking-widest">{lastRt}ms</p>
               )}
             </div>
-            <p className="text-[10px] font-mono uppercase tracking-widest text-slate-400">
+            <p className="text-xs font-mono uppercase tracking-widest text-slate-600 dark:text-slate-400">
               Space or tap · Trial {trial}/{diff.trials}
             </p>
           </motion.div>

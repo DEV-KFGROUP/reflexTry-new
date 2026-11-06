@@ -107,14 +107,14 @@ function DifficultyCard({
           <div className="flex items-center gap-2 flex-wrap">
             <span className="font-mono font-bold text-xs text-slate-800">{d.label}</span>
             {selected && (
-              <span className="text-[8px] font-mono px-1.5 py-0.5 rounded-full text-white" style={{ background: DIFF_GRADIENT[diffKey] }}>
+              <span className="text-[10px] font-mono px-2 py-0.5 rounded-full text-white" style={{ background: DIFF_GRADIENT[diffKey] }}>
                 ACTIVE
               </span>
             )}
           </div>
-          <p className="text-[9px] text-slate-400 mt-0.5 leading-tight">{d.description}</p>
+          <p className="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5 leading-tight">{d.description}</p>
           {highScore > 0 && (
-            <p className={`text-[9px] font-mono font-bold mt-1 ${d.textColor}`}>Best: {highScore} pts</p>
+            <p className={`text-[11px] font-mono font-bold mt-1 ${d.textColor}`}>Best: {highScore} pts</p>
           )}
         </div>
       </div>
@@ -363,7 +363,7 @@ export default function AngleEstimationGame() {
           <h1 className="text-3xl md:text-5xl font-mono font-black tracking-widest text-slate-800">ANGLE ESTIMATION</h1>
           <div className="flex items-center justify-center gap-3 mt-1">
             <span className="h-[1px] w-8 bg-slate-300" />
-            <p className="text-[10px] font-mono text-slate-400 uppercase tracking-[0.25em]">VISUAL GEOMETRY CALIBRATION</p>
+            <p className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-[0.2em]">VISUAL GEOMETRY CALIBRATION</p>
             <span className="h-[1px] w-8 bg-slate-300" />
           </div>
         </motion.div>
@@ -376,7 +376,7 @@ export default function AngleEstimationGame() {
 
             {/* Difficulty Selector */}
             <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
-              <div className="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-3">Difficulty Level</div>
+              <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Difficulty Level</div>
               <div className="flex flex-col gap-2">
                 {DIFF_ORDER.map(key => (
                   <DifficultyCard
@@ -393,26 +393,26 @@ export default function AngleEstimationGame() {
 
             {/* Stats Panel */}
             <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
-              <div className="text-[10px] font-mono text-slate-400 uppercase tracking-widest mb-3">Session Stats</div>
+              <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Session Stats</div>
               <div className="grid grid-cols-2 gap-3">
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Average Points</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Average Points</div>
                   <div className="text-xl font-mono font-bold text-slate-800 mt-0.5">{avgScore} pts</div>
                 </div>
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Base Rotation</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Base Rotation</div>
                   <div className="text-xs font-mono font-bold text-slate-850 mt-1.5 uppercase">
                     {diff.hasTilt ? `${baseOffsetAngle}° Tilted` : "Horizontal"}
                   </div>
                 </div>
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Remaining Lives</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Remaining Lives</div>
                   <div className="text-sm font-mono font-bold text-red-500 mt-1.5 animate-pulse">
                     {diff.maxMistakesAllowed === 999 ? "∞" : `${diff.maxMistakesAllowed - mistakes} ❤️`}
                   </div>
                 </div>
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Round Progress</div>
+                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Round Progress</div>
                   <div className="text-xl font-mono font-bold text-slate-800 mt-0.5">
                     {Math.min(round + 1, TOTAL_ROUNDS)}/{TOTAL_ROUNDS}
                   </div>
@@ -424,7 +424,7 @@ export default function AngleEstimationGame() {
                 <div className="mt-3 bg-slate-50 border border-slate-100 rounded-xl p-3 flex items-center gap-2">
                   <Trophy className={`w-4 h-4 ${diff.textColor}`} />
                   <div>
-                    <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest">Best Average ({diff.label})</div>
+                    <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Best Average ({diff.label})</div>
                     <div className={`text-sm font-mono font-bold ${diff.textColor}`}>{highScores[diffId]} pts</div>
                   </div>
                 </div>
@@ -436,7 +436,7 @@ export default function AngleEstimationGame() {
                 className={`mt-3 w-full p-2.5 rounded-xl border transition-all cursor-pointer flex items-center justify-center gap-2 ${muted ? "bg-red-50 border-red-200 text-red-600" : "bg-slate-50 border-slate-200 text-slate-500 hover:border-violet-200 hover:text-violet-600"}`}
               >
                 {muted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
-                <span className="text-[9px] font-mono uppercase tracking-widest">{muted ? "Unmute" : "Sound On"}</span>
+                <span className="text-xs font-mono font-medium uppercase tracking-widest">{muted ? "Unmute" : "Sound On"}</span>
               </button>
             </div>
           </motion.div>
@@ -449,10 +449,10 @@ export default function AngleEstimationGame() {
               <div className="absolute bottom-4 left-4 w-4 h-4 border-b-2 border-l-2 border-slate-200" />
               <div className="absolute bottom-4 right-4 w-4 h-4 border-b-2 border-r-2 border-slate-200" />
 
-              <div className="absolute top-4 left-10 text-[8px] font-mono text-slate-400 tracking-widest hidden sm:block">
+              <div className="absolute top-4 left-10 text-[10px] font-mono text-slate-500 dark:text-slate-400 tracking-widest hidden sm:block">
                 ARENA // {diff.label.toUpperCase()}
               </div>
-              <div className="absolute top-4 right-10 text-[8px] font-mono text-slate-400 tracking-widest hidden sm:block">
+              <div className="absolute top-4 right-10 text-[10px] font-mono text-slate-500 dark:text-slate-400 tracking-widest hidden sm:block">
                 GUIDES: {diff.showGuides.toUpperCase()}
               </div>
 
@@ -471,7 +471,7 @@ export default function AngleEstimationGame() {
                       </div>
                       <div className="space-y-2">
                         <h2 className="text-xl md:text-2xl font-mono font-bold text-slate-800 uppercase tracking-wider">Angle Estimation</h2>
-                        <p className="text-xs text-slate-400 max-w-xs mx-auto leading-relaxed">
+                        <p className="text-xs text-slate-600 dark:text-slate-400 max-w-xs mx-auto leading-relaxed">
                           Estimate geometric angles drawn relative to base lines. Pro presets tilt the base lines and draw distractor lines on guides.
                         </p>
                         <p className={`text-xs font-mono font-semibold ${diff.textColor} mt-1`}>{diff.label}: {diff.description}</p>
@@ -519,7 +519,7 @@ export default function AngleEstimationGame() {
                             }`}>
                               {feedback.points >= 90 ? "🎯 EXCELLENT!" : feedback.points >= diff.minPointsThreshold ? "👍 ACCURATE!" : "😬 STRIKE OUT!"}
                             </p>
-                            <p className="text-slate-400 text-xs font-mono">
+                            <p className="text-slate-600 dark:text-slate-400 text-xs font-mono">
                               Correct Angle: <span className="text-slate-800 font-bold">{feedback.correct}°</span> | Guess: <span className="text-slate-850 font-bold">{userAngle}°</span>
                             </p>
                             <p className="text-[10px] text-slate-400 font-mono">Off by {feedback.diff}° — Received {feedback.points} points</p>
@@ -533,7 +533,7 @@ export default function AngleEstimationGame() {
                             className="w-full flex flex-col items-center space-y-4 h-28"
                           >
                             <div className="text-center">
-                              <div className="text-[9px] font-mono text-slate-400 uppercase tracking-widest mb-0.5">Estimated Guess</div>
+                              <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider mb-0.5">Estimated Guess</div>
                               <div className="text-4xl font-mono font-bold text-slate-850">{userAngle}°</div>
                             </div>
 
@@ -580,11 +580,11 @@ export default function AngleEstimationGame() {
 
                       <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 shadow-sm w-full grid grid-cols-2 gap-3 text-left">
                         <div>
-                          <div className="text-[10px] font-mono text-slate-400 uppercase mb-1">Average Score</div>
+                          <div className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 uppercase mb-1">Average Score</div>
                           <div className="text-2xl text-fuchsia-600 font-mono font-black">{avgScore} pts</div>
                         </div>
                         <div>
-                          <div className="text-[10px] font-mono text-slate-400 uppercase mb-1">Highest Average</div>
+                          <div className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 uppercase mb-1">Highest Average</div>
                           <div className="text-xl text-slate-700 font-mono font-bold">{highScores[diffId]} pts</div>
                         </div>
                       </div>
@@ -624,11 +624,11 @@ export default function AngleEstimationGame() {
 
                       <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 shadow-sm w-full grid grid-cols-2 gap-3 text-left">
                         <div>
-                          <div className="text-[10px] font-mono text-slate-400 uppercase mb-1">Rounds Finished</div>
+                          <div className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 uppercase mb-1">Rounds Finished</div>
                           <div className="text-2xl text-slate-800 font-mono font-bold">{round}/{TOTAL_ROUNDS}</div>
                         </div>
                         <div>
-                          <div className="text-[10px] font-mono text-slate-400 uppercase mb-1">Average Points</div>
+                          <div className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 uppercase mb-1">Average Points</div>
                           <div className="text-xl text-slate-700 font-mono font-bold">{avgScore} pts</div>
                         </div>
                       </div>
@@ -664,7 +664,7 @@ export default function AngleEstimationGame() {
               <div className="flex justify-end">
                 <button
                   onClick={() => setPhase("idle")}
-                  className="text-[10px] font-mono text-slate-400 hover:text-red-400 transition-colors cursor-pointer"
+                  className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 hover:text-red-500 transition-colors cursor-pointer"
                 >
                   Abort Session ×
                 </button>

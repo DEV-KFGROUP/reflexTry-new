@@ -175,7 +175,7 @@ export default function FAQClient() {
                     aria-label="FAQ categories"
                     className="rounded-3xl border border-slate-200 bg-white/90 backdrop-blur-md p-6 shadow-sm"
                 >
-                    <h2 className="text-xs font-mono font-bold tracking-widest text-slate-400 uppercase mb-4 flex items-center gap-2">
+                    <h2 className="text-xs font-mono font-bold tracking-widest text-slate-600 dark:text-slate-400 uppercase mb-4 flex items-center gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-cyan-500" />
                         {t("guide.jumpTo", "Jump to Category")}
                     </h2>

@@ -103,7 +103,7 @@ export function HeroSection() {
                 className="flex items-center gap-2 px-4 py-2 rounded-xl border border-slate-200 bg-white/80 backdrop-blur-sm shadow-sm"
               >
                 <span className="text-lg font-mono font-black text-slate-900">{s.val}</span>
-                <span className="text-xs font-mono text-slate-400 tracking-widest uppercase">{s.label}</span>
+                <span className="text-xs font-mono text-slate-600 dark:text-slate-400 tracking-widest uppercase">{s.label}</span>
               </div>
             ))}
           </div>
