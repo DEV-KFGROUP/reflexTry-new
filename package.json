@@ -7,7 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "postinstall": "prisma generate"
+    "postinstall": "prisma generate",
+    "index:submit": "node scripts/bulk-indexing.mjs submit",
+    "index:inspect": "node scripts/bulk-indexing.mjs inspect",
+    "index:dry-run": "node scripts/bulk-indexing.mjs submit --dry-run",
+    "index:languages": "node scripts/bulk-indexing.mjs languages"
   },
   "browserslist": [
     ">0.3%",

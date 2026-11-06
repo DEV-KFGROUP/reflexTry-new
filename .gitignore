@@ -25,6 +25,13 @@
 *.pem
 *.xlsx
 *.xls
+service_account*.json
+!service_account.sample.json
+oauth_credentials*.json
+.google-token*.json
+credentials*.json
+reports/
+*Performance-on-Search*
 
 # debug
 npm-debug.log*

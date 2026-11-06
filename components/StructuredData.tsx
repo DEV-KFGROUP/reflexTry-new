@@ -1,6 +1,8 @@
 // Server Component - No "use client" needed
 // This component just renders JSON-LD structured data
 
+import { safeJsonLdStringify } from "@/lib/structured-data";
+
 interface StructuredDataProps {
     type: "WebApplication" | "Game" | "Article" | "WebSite" | "BreadcrumbList" | "Organization" | "WebPage" | "FAQPage" | "SoftwareApplication";
     data: any;
@@ -17,7 +19,7 @@ export function StructuredData({ type, data }: StructuredDataProps) {
         <script
             id={`structured-data-${type.toLowerCase()}`}
             type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+            dangerouslySetInnerHTML={{ __html: safeJsonLdStringify(structuredData) }}
             suppressHydrationWarning
         />
     );
@@ -25,6 +27,7 @@ export function StructuredData({ type, data }: StructuredDataProps) {
 
 // Re-export generator functions from lib for convenience
 export { 
+    safeJsonLdStringify,
     generateToolStructuredData, 
     generateWebsiteStructuredData, 
     generateBreadcrumbStructuredData,

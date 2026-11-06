@@ -12,6 +12,32 @@ interface SEOProps {
     robots?: { index?: boolean; follow?: boolean };
 }
 
+const TITLE_RANGE = { min: 50, max: 60 };
+
+/**
+ * Calculates distance from the optimal 50-60 character SEO title range.
+ */
+function titleDistance(length: number): number {
+    return Math.max(TITLE_RANGE.min - length, length - TITLE_RANGE.max, 0);
+}
+
+/**
+ * Selects the candidate title closest to the 50-60 character range,
+ * guaranteeing brand suffix formatting and preventing double-suffixing.
+ */
+export function fitTitle(candidates: string[], siteName = "Reflextry"): string {
+    if (!candidates || candidates.length === 0) return siteName;
+    const brandSuffix = ` | ${siteName}`;
+    const allCandidates = candidates.map((t) => {
+        const clean = t.replace(new RegExp(`\\s*\\|?\\s*${siteName}$`), "").trim();
+        return `${clean}${brandSuffix}`;
+    });
+    return allCandidates.reduce((best, current) =>
+        titleDistance(current.length) < titleDistance(best.length) ? current : best,
+        allCandidates[0]
+    );
+}
+
 export function generateSEOMetadata({
     title,
     description,

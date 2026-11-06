@@ -1,0 +1,13 @@
+# Add one URL per line to submit or inspect
+# Lines starting with # are ignored
+
+https://www.reflextry.com/
+https://www.reflextry.com/memory
+https://www.reflextry.com/reflex
+https://www.reflextry.com/speed
+https://www.reflextry.com/accuracy
+https://www.reflextry.com/gaming
+https://www.reflextry.com/reflex/reaction
+https://www.reflextry.com/speed/typing
+https://www.reflextry.com/speed/click
+

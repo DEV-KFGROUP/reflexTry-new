@@ -6,7 +6,7 @@ import { MDXContent } from '@/components/content/mdx-components';
 import { Article } from '@/lib/content/types';
 import { getBaseUrl, getBaseUrlObject } from '@/lib/base-url';
 import { getHreflangAlternates, PRIMARY_OG_LOCALE } from '@/lib/international-seo';
-import { generateArticleStructuredData } from '@/lib/structured-data';
+import { generateArticleStructuredData, safeJsonLdStringify } from '@/lib/structured-data';
 import ArticleClient from './ArticleClient';
 
 interface Props {
@@ -109,7 +109,7 @@ export default async function BlogPostPage({ params }: Props) {
             <>
                 <script
                     type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }}
+                    dangerouslySetInnerHTML={{ __html: safeJsonLdStringify(articleLd) }}
                 />
                 <ArticleClient article={articleData}>
                     <MDXContent source={content} />

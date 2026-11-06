@@ -93,43 +93,25 @@ const nextConfig: import('next').NextConfig = {
       // Cache-Control on /_next/static breaks Turbopack HMR (stale chunks → "module factory is not available").
       ...(isProd
         ? [
-            {
-              source: '/:path*.(ico|png|jpg|jpeg|svg|gif|webp|woff|woff2|ttf|eot|avif)',
-              headers: [
-                {
-                  key: 'Cache-Control',
-                  value: 'public, max-age=31536000, immutable',
-                },
-              ],
-            },
-            {
-              source: '/_next/static/:path*',
-              headers: [
-                {
-                  key: 'Cache-Control',
-                  value: 'public, max-age=31536000, immutable',
-                },
-              ],
-            },
-            {
-              source: '/_next/static/:path*.css',
-              headers: [
-                {
-                  key: 'Cache-Control',
-                  value: 'public, max-age=31536000, immutable',
-                },
-              ],
-            },
-            {
-              source: '/:path*(manifest.json|robots.txt|sitemap.xml|ads.txt|llms.txt|llms-full.txt|ai.txt)',
-              headers: [
-                {
-                  key: 'Cache-Control',
-                  value: 'public, max-age=86400, must-revalidate',
-                },
-              ],
-            },
-          ]
+          {
+            source: '/:path*.(ico|png|jpg|jpeg|svg|gif|webp|woff|woff2|ttf|eot|avif)',
+            headers: [
+              {
+                key: 'Cache-Control',
+                value: 'public, max-age=31536000, immutable',
+              },
+            ],
+          },
+          {
+            source: '/:path*(manifest.json|robots.txt|sitemap.xml|ads.txt|llms.txt|llms-full.txt|ai.txt)',
+            headers: [
+              {
+                key: 'Cache-Control',
+                value: 'public, max-age=86400, must-revalidate',
+              },
+            ],
+          },
+        ]
         : []),
       {
         // Short cache for API routes - 5 minutes

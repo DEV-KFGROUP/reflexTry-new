@@ -1,4 +1,5 @@
 import React from "react";
+import { safeJsonLdStringify } from "@/lib/structured-data";
 
 interface SchemaInjectorProps {
     schemas: any[];
@@ -16,7 +17,7 @@ export function SchemaInjector({ schemas }: SchemaInjectorProps) {
                         id={`schema-injector-${schemaType}-${index}`}
                         key={`schema-${index}`}
                         type="application/ld+json"
-                        dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+                        dangerouslySetInnerHTML={{ __html: safeJsonLdStringify(schema) }}
                         suppressHydrationWarning
                     />
                 );

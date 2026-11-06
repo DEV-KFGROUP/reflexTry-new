@@ -1,7 +1,9 @@
 import { TOOL_COUNT } from "@/config/tool-mapping";
 import { Metadata } from "next";
-import { generateSEOMetadata } from "@/components/SEO";
+import { generateSEOMetadata, fitTitle } from "@/components/SEO";
 import { SEO_CONFIGS } from "@/config/seo-config";
+
+export { fitTitle };
 
 const seoTranslationsCache: Record<string, Record<string, any>> = {};
 

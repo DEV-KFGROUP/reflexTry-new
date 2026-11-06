@@ -5,6 +5,14 @@ import { getBaseUrl } from '@/lib/base-url';
 import { AVAILABLE_LANGUAGES, GEO_TARGET_COUNTRIES } from '@/lib/international-seo';
 import type { Article } from '@/lib/content/types';
 
+/**
+ * Safely serializes structured data into a JSON string suitable for inline <script> tags.
+ * Escapes `<` to `\u003c` so strings containing `</script>` cannot prematurely terminate the tag.
+ */
+export function safeJsonLdStringify(data: any): string {
+    return JSON.stringify(data).replace(/</g, '\\u003c');
+}
+
 /** Standardized SpeakableSpecification CSS selectors used across all schemas */
 const SPEAKABLE_SELECTORS = ["h1", ".hero-subtitle", ".aeo-answer", "article p:first-of-type"];
 

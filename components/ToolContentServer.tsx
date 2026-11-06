@@ -1,4 +1,5 @@
 import { ContentSection, StepSection } from "./ToolContentBase";
+import { safeJsonLdStringify } from "@/lib/structured-data";
 
 interface ToolContentServerProps {
     title: string;
@@ -64,13 +65,13 @@ export function ToolContentServer({
             {faqSchema ? (
                 <script
                     type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+                    dangerouslySetInnerHTML={{ __html: safeJsonLdStringify(faqSchema) }}
                 />
             ) : null}
             {howToSchema ? (
                 <script
                     type="application/ld+json"
-                    dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
+                    dangerouslySetInnerHTML={{ __html: safeJsonLdStringify(howToSchema) }}
                 />
             ) : null}
         </>
