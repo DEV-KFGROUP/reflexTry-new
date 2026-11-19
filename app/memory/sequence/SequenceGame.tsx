@@ -1,29 +1,15 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import {
-  Play,
-  RotateCcw,
-  Brain,
-  Cpu,
-  Workflow,
-  Gauge,
-  Atom,
-  Volume2,
-  VolumeX,
-  AlertTriangle,
-  Trophy,
-  Zap,
-  Heart,
-  Star,
-  Flame,
-  Clock,
-  Grid,
-  Layers,
-  Shield,
-} from "lucide-react";
+import { GameProgressFeedback } from "@/components/GameProgressFeedback";
+import { useGameTimers } from "@/hooks/useGameTimers";
+import { useLatestCallback } from "@/hooks/useLatestCallback";
+import { useToolProgress } from "@/hooks/useToolProgress";
+import { safeStorage } from "@/utils/safeStorage";
+
 import { useGameSound } from "@/hooks/useGameSound";
+import { AnimatePresence, motion } from "framer-motion";
+import { AlertTriangle, Atom, Brain, Clock, Cpu, Flame, Gauge, Grid, Heart, Layers, Play, RotateCcw, Shield, Star, Trophy, Volume2, VolumeX, Workflow, Zap, } from "lucide-react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 /* ─────────────────────────────────────────────
    INLINE GRADIENT STYLES
@@ -178,6 +164,8 @@ function DifficultyCard({
     <motion.button
       whileHover={disabled ? {} : { scale: 1.02, y: -2 }}
       whileTap={disabled ? {} : { scale: 0.98 }}
+      disabled={disabled}
+      aria-pressed={selected}
       onClick={disabled ? undefined : onSelect}
       className={`relative w-full text-left rounded-2xl border-2 p-3 transition-all focus:outline-none overflow-hidden ${
         disabled ? "opacity-60 cursor-not-allowed" : "cursor-pointer"
@@ -187,7 +175,7 @@ function DifficultyCard({
         <div className="absolute inset-0 opacity-5" style={{ background: DIFF_GRADIENT[diffKey] }} />
       )}
       <div className="relative z-10 flex items-start gap-3">
-        <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: DIFF_GRADIENT[diffKey] }}>
+        <div className="difficulty-icon w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: DIFF_GRADIENT[diffKey] }}>
           <Icon className="w-4 h-4 text-white" />
         </div>
         <div className="flex-1 min-w-0">
@@ -210,6 +198,8 @@ function DifficultyCard({
 }
 
 export default function SequenceGame() {
+  const { setTimeout, setInterval, clearInterval, cancelTimers } = useGameTimers();
+
   
   const [phase, setPhase] = useState<"select" | "playing" | "gameover">("select");
   const [diffId, setDiffId] = useState<DifficultyId>("normal");
@@ -234,9 +224,9 @@ export default function SequenceGame() {
   const diff = DIFFICULTIES[diffId];
   const cols = Math.round(Math.sqrt(diff.gridSize));
 
-  const playSound = useCallback((type: Parameters<typeof play>[0]) => {
+  const playSound = useLatestCallback((type: Parameters<typeof play>[0]) => {
     if (!muted) play(type);
-  }, [muted, play]);
+  });
 
   const addLog = useCallback((text: string) => {
     const time = new Date().toLocaleTimeString("en-US", { hour12: false, hour: "2-digit", minute: "2-digit", second: "2-digit" });
@@ -246,8 +236,8 @@ export default function SequenceGame() {
   useEffect(() => {
     const saved: Record<DifficultyId, number> = { beginner: 0, easy: 0, normal: 0, hard: 0, professional: 0 };
     (Object.keys(DIFFICULTIES) as DifficultyId[]).forEach(k => {
-      const v = localStorage.getItem(`sequence-hs-${k}`);
-      if (v) saved[k] = parseInt(v);
+      const v = safeStorage.getItem(`reflextry_v2_sequence-hs-${k}`);
+      if (v !== null && Number.isFinite(Number(v))) saved[k] = Number(v);
     });
     setHighScores(saved);
   }, []);
@@ -268,7 +258,7 @@ export default function SequenceGame() {
     addLog("!! TIME EXPIRED — REACTION TOO SLOW !!");
   }, [stopTimer, playSound, addLog]);
 
-  const startInputTimer = useCallback((d: typeof diff) => {
+  const startInputTimer = useLatestCallback((d: typeof diff) => {
     if (!d.hasTimer) return;
     if (timerRef.current) clearInterval(timerRef.current);
     setTimerLeft(d.timerSeconds);
@@ -282,7 +272,7 @@ export default function SequenceGame() {
         return t - 1;
       });
     }, 1000);
-  }, [diff, triggerGameOver]);
+  });
 
   const activateButton = useCallback((index: number, flashMs: number) => {
     setActiveButton(index);
@@ -309,6 +299,7 @@ export default function SequenceGame() {
   }, [activateButton, addLog, stopTimer]);
 
   const startGame = useCallback(() => {
+    cancelTimers();
     const d = DIFFICULTIES[diffId];
     gameOverRef.current = false;
     const initialSeq: number[] = Array.from({ length: d.startLength }, () =>
@@ -356,15 +347,6 @@ export default function SequenceGame() {
         playSound("error");
         setPhase("gameover");
         addLog(`!! PHASE DISRUPT — FAILED AT STAGE ${score} !!`);
-        setHighScores(prev => {
-          if (score > prev[diffId]) {
-            const updated = { ...prev, [diffId]: score };
-            localStorage.setItem(`sequence-hs-${diffId}`, score.toString());
-            addLog(`[NEW RECORD] ${score} stages on ${diff.label}`);
-            return updated;
-          }
-          return prev;
-        });
       } else {
         setLivesLeft(newLives);
         setCombo(0);
@@ -394,13 +376,23 @@ export default function SequenceGame() {
     }
   }, [phase, isShowingSequence, activateButton, diff, playSound, stopTimer, userSequence, sequence, livesLeft, score, diffId, combo, advanceSequence, playSequenceAnim, startInputTimer, addLog]);
 
+
+  const progress = useToolProgress({
+    toolId: "sequence-memory", phase: phase, difficulty: diffId,
+    value: score, unit: "pts", higherIsBetter: true,
+    terminal: ["gameover"], idle: ["select"], recordKey: "reflextry_v2_sequence-hs-",
+    setHighScores, cancelTimers, reset: () => setPhase("select"),
+    eligible: true,
+  });
+
   return (
-    <div className="w-full bg-[#f8fafc] dark:bg-slate-800 text-slate-800 dark:text-white font-sans relative overflow-hidden py-8 px-4 sm:px-6 lg:px-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm mb-8">
+    <div data-idle={phase === "select"} className="game-tool w-full bg-[#f8fafc] dark:bg-slate-800 text-slate-800 dark:text-white font-sans relative overflow-hidden py-8 px-4 sm:px-6 lg:px-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm mb-8">
+      <GameProgressFeedback result={progress} />
       <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.04)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none z-0" />
       <div className="absolute top-[-5%] left-[5%] w-[600px] h-[600px] bg-violet-500/[0.03] blur-[140px] rounded-full pointer-events-none z-0" />
       <div className="absolute bottom-[-5%] right-[5%] w-[500px] h-[500px] bg-cyan-500/[0.03] blur-[120px] rounded-full pointer-events-none z-0" />
 
-      <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center space-y-8 pt-8">
+      <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center space-y-6 pt-0">
         {/* Header */}
         <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="text-center w-full">
           <h1 className="text-3xl md:text-5xl font-mono font-black tracking-widest text-slate-800">MEMORY SEQUENCE</h1>
@@ -412,11 +404,11 @@ export default function SequenceGame() {
         </motion.div>
 
         {/* Layout */}
-        <div className="w-full grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-6 items-start">
+        <div className="game-columns w-full grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-6 items-start">
           {/* Left Panel */}
-          <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 }} className="flex flex-col gap-4">
+          <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 }} className="game-settings flex flex-col gap-4">
             {/* Difficulty Selector */}
-            <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+            <div className="game-difficulty bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
               <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Difficulty Level</div>
               <div className="flex flex-col gap-2">
                 {(Object.keys(DIFFICULTIES) as DifficultyId[]).map(key => (
@@ -433,7 +425,7 @@ export default function SequenceGame() {
             </div>
 
             {/* Stats Panel */}
-            <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+            <div className="game-stats bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
               <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Session Stats</div>
               <div className="grid grid-cols-2 gap-3">
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
@@ -488,7 +480,7 @@ export default function SequenceGame() {
           </motion.div>
 
           {/* Right Panel: Game Console */}
-          <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.15 }} className="flex flex-col gap-4">
+          <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.15 }} className="game-arena flex flex-col gap-4">
             <div className="relative bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-[0_8px_40px_rgba(15,23,42,0.07)]">
               {/* Corner decals */}
               <div className="absolute top-4 left-4 w-4 h-4 border-t-2 border-l-2 border-slate-200" />
@@ -518,8 +510,8 @@ export default function SequenceGame() {
 
                   {/* SELECT SCREEN */}
                   {phase === "select" && (
-                    <motion.div key="select" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.95 }} className="flex flex-col items-center justify-center space-y-8 text-center w-full max-w-md">
-                      <div className="relative w-24 h-24 mx-auto flex items-center justify-center">
+                    <motion.div key="select" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, transition: { duration: 0 } }} className="flex flex-col items-center justify-center space-y-8 text-center w-full max-w-md">
+                      <div className="game-start-icon relative w-24 h-24 mx-auto flex items-center justify-center">
                         <div className="absolute inset-0 border border-dashed border-violet-400/20 rounded-full animate-[spin_20s_linear_infinite]" />
                         <div className="absolute inset-2 border border-dashed border-violet-400/30 rounded-full animate-[spin_12s_linear_infinite_reverse]" />
                         <div className="absolute inset-4 border border-violet-400/10 rounded-full animate-pulse bg-violet-400/[0.04] flex items-center justify-center">
@@ -531,7 +523,7 @@ export default function SequenceGame() {
                         <p className="text-xs text-slate-600 dark:text-slate-400 max-w-xs mx-auto leading-relaxed">
                           Select a difficulty on the left, then press Initialize to begin.
                         </p>
-                        <p className={`text-xs font-mono font-semibold ${diff.textColor} mt-1`}>{diff.label}: {diff.description}</p>
+                        <p className={`game-level-description text-xs font-mono font-semibold ${diff.textColor} mt-1`}>{diff.label}: {diff.description}</p>
                       </div>
                       <motion.button whileHover={{ translateY: -2 }} whileTap={{ translateY: 6 }} onClick={startGame} className="relative group cursor-pointer focus:outline-none select-none">
                         <div
@@ -543,7 +535,7 @@ export default function SequenceGame() {
                           style={{ background: DIFF_GRADIENT[diffId] }}
                         >
                           <Play className="w-4 h-4 fill-current" />
-                          Initialize
+                          Play
                         </div>
                       </motion.button>
                     </motion.div>
@@ -551,7 +543,7 @@ export default function SequenceGame() {
 
                   {/* PLAYING SCREEN */}
                   {phase === "playing" && (
-                    <motion.div key="playing" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="w-full flex flex-col items-center gap-4">
+                    <motion.div key="playing" initial={false} animate={{ opacity: 1 }} exit={{ opacity: 0, transition: { duration: 0 } }} className="w-full flex flex-col items-center gap-4">
                       <div className="w-full flex items-center justify-between">
                         <span className="text-xs font-mono text-slate-600 dark:text-slate-400 uppercase tracking-widest">
                           {isShowingSequence ? "Watch carefully…" : "Your turn!"}
@@ -609,7 +601,7 @@ export default function SequenceGame() {
 
                   {/* GAME OVER SCREEN */}
                   {phase === "gameover" && (
-                    <motion.div key="gameover" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} className="flex flex-col items-center justify-center text-center space-y-6 w-full max-w-sm">
+                    <motion.div key="gameover" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, transition: { duration: 0 } }} className="flex flex-col items-center justify-center text-center space-y-6 w-full max-w-sm">
                       <div className="relative w-16 h-16 mx-auto flex items-center justify-center bg-red-50 border border-red-100 rounded-2xl animate-pulse">
                         <AlertTriangle className="w-8 h-8 text-red-500" />
                       </div>
@@ -669,11 +661,11 @@ export default function SequenceGame() {
 
             {phase === "playing" && (
               <div className="flex justify-end">
-                <button
+                <button onClickCapture={() => window.dispatchEvent(new Event("game_abort_requested"))}
                   onClick={() => { gameOverRef.current = true; stopTimer(); setPhase("gameover"); addLog("!! MANUAL ABORT !!"); }}
                   className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 hover:text-red-500 transition-colors cursor-pointer"
                 >
-                  Abort Session ×
+                  End round ×
                 </button>
               </div>
             )}

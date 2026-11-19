@@ -119,6 +119,7 @@ export default function ChallengesClient() {
                     </div>
                     <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-medium">
                         {t("challenges.heroSubtitle", "Complete today's challenge to earn rewards, build your streak, and unlock new badges!")}
+                        <span className="block mt-2 text-sm">Resets at midnight in your local timezone.</span>
                     </p>
                 </motion.div>
 

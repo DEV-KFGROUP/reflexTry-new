@@ -1,3 +1,6 @@
+import { safeStorage } from "./safeStorage";
+import { ScoreHistory } from "./scoreHistory";
+
 export interface Score {
     value: number;
     unit: string; // 'ms', 'score', 'wpm'
@@ -22,9 +25,9 @@ export const Storage = {
 
         if (isBetter) {
             // Get player name from parameter or localStorage
-            const name = playerName || localStorage.getItem("reflextry_player_name") || undefined;
+            const name = playerName || safeStorage.getItem("reflextry_player_name") || undefined;
             const newScore: Score = { value, unit, timestamp: Date.now(), playerName: name };
-            localStorage.setItem(key, JSON.stringify(newScore));
+            safeStorage.setItem(key, JSON.stringify(newScore));
             return true; // New high score!
         }
         return false;
@@ -32,8 +35,10 @@ export const Storage = {
 
     getScore: (toolId: string): Score | null => {
         if (typeof window === 'undefined') return null;
+        const stats = ScoreHistory.getStats(toolId);
+        if (stats) return { value: stats.best, unit: stats.unit, timestamp: stats.recent.at(-1)?.timestamp || 0 };
         const key = `reflexhub_score_${toolId}`;
-        const str = localStorage.getItem(key);
-        return str ? JSON.parse(str) : null;
+        const str = safeStorage.getItem(key);
+        try { return str ? JSON.parse(str) : null; } catch { return null; }
     }
 };

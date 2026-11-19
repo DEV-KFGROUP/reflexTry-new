@@ -1,0 +1,48 @@
+[
+  {
+    "test": "CPS exact hits, deadline, latest score and one saved result",
+    "result": {
+      "higherIsBetter": true,
+      "inputMethod": "touch",
+      "configuration": "easy:touch:332x474:v2",
+      "duration": 5.013899999976158,
+      "eligible": true,
+      "outcome": "completed",
+      "version": 2,
+      "toolId": "cps-test",
+      "value": 2,
+      "unit": "cps",
+      "timestamp": 1795072411465,
+      "difficulty": "easy"
+    }
+  },
+  {
+    "test": "Replay starts; ending early does not add history or earn rewards",
+    "passed": true
+  },
+  {
+    "test": "Ten pattern rounds: repeated clicks score once and produce one final record",
+    "result": {
+      "higherIsBetter": true,
+      "inputMethod": "unknown",
+      "configuration": "professional:unknown:332x474:v2",
+      "duration": 17.614299999952316,
+      "eligible": true,
+      "outcome": "completed",
+      "version": 2,
+      "toolId": "pattern-matching",
+      "value": 10,
+      "unit": "pts",
+      "timestamp": 1795072430947,
+      "difficulty": "professional"
+    }
+  },
+  {
+    "test": "Stroop timeout advances without stale round closure",
+    "stats": "SESSION STATS\nROUND\n3/20\nCORRECT / WRONG\n0 / 2\nAVG LATENCY\n0ms\nACCURACY\n0%\nSOUND ON"
+  },
+  {
+    "test": "Hidden tab resets the attempt and cancels timers without recording a result",
+    "passed": true
+  }
+]

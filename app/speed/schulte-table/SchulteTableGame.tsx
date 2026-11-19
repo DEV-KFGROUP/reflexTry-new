@@ -1,12 +1,17 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
-import { Grid3X3, Play, RotateCcw, Trophy, Shield, Star, Zap, Flame, Brain } from "lucide-react";
-import { useGameSound } from "@/hooks/useGameSound";
-import { GameDashboardLayout } from "@/components/dashboard/GameDashboardLayout";
+import { GameProgressFeedback } from "@/components/GameProgressFeedback";
+import { useGameTimers } from "@/hooks/useGameTimers";
+import { useToolProgress } from "@/hooks/useToolProgress";
+import { safeStorage } from "@/utils/safeStorage";
+
 import { DashboardDifficultyCard } from "@/components/dashboard/DashboardDifficultyCard";
+import { GameDashboardLayout } from "@/components/dashboard/GameDashboardLayout";
 import { StatBox } from "@/components/dashboard/StatBox";
-import { motion, AnimatePresence } from "framer-motion";
+import { useGameSound } from "@/hooks/useGameSound";
+import { AnimatePresence, motion } from "framer-motion";
+import { Brain, Flame, Grid3X3, Play, RotateCcw, Shield, Star, Trophy, Zap } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 type DiffId = "beginner" | "easy" | "normal" | "hard" | "professional";
 
@@ -68,6 +73,8 @@ function formatTime(ms: number): string {
 }
 
 export default function SchulteTableGame() {
+  const { setTimeout, cancelTimers } = useGameTimers();
+
   const [gameState, setGameState] = useState<GameState>("select");
   const [diffId, setDiffId] = useState<DiffId>("normal");
 
@@ -93,23 +100,13 @@ export default function SchulteTableGame() {
   useEffect(() => {
     const saved: Record<DiffId, number> = { beginner: 0, easy: 0, normal: 0, hard: 0, professional: 0 };
     DIFF_ORDER.forEach(k => {
-      const v = localStorage.getItem(`schulte-hs-${k}`);
-      if (v) saved[k] = parseInt(v, 10);
+      const v = safeStorage.getItem(`reflextry_v2_schulte-hs-${k}`);
+      if (v !== null && Number.isFinite(Number(v))) saved[k] = Number(v);
     });
     setHighScores(saved);
   }, []);
 
-  useEffect(() => {
-    if (gameState !== "gameover" || finalTime <= 0) return;
-    setHighScores(prev => {
-      // Lower time is better; 0 means unset
-      if (prev[diffId] === 0 || finalTime < prev[diffId]) {
-        localStorage.setItem(`schulte-hs-${diffId}`, finalTime.toString());
-        return { ...prev, [diffId]: finalTime };
-      }
-      return prev;
-    });
-  }, [gameState, finalTime, diffId]);
+
 
   useEffect(() => {
     return () => {
@@ -123,6 +120,7 @@ export default function SchulteTableGame() {
   };
 
   const startGame = () => {
+    cancelTimers();
     play("click");
     if (rafRef.current) cancelAnimationFrame(rafRef.current);
 
@@ -217,8 +215,17 @@ export default function SchulteTableGame() {
     diff.size <= 5 ? "text-xl md:text-2xl" :
     "text-sm md:text-lg";
 
+
+  const progress = useToolProgress({
+    toolId: "schulte-table", phase: gameState, difficulty: diffId,
+    value: finalTime, unit: "ms", higherIsBetter: false,
+    terminal: ["gameover"], idle: ["select"], recordKey: "reflextry_v2_schulte-hs-",
+    setHighScores, cancelTimers, reset: () => setGameState("select"),
+    eligible: true,
+  });
+
   return (
-    <GameDashboardLayout
+    <GameDashboardLayout isIdle={gameState === "select"}
       title="SCHULTE TABLE"
       subtitle="VISUAL SCANNING"
       difficultySelector={difficultySelector}
@@ -228,16 +235,17 @@ export default function SchulteTableGame() {
       soundEnabled={!isMuted}
       onToggleSound={toggleMute}
     >
+      <GameProgressFeedback result={progress} />
       <AnimatePresence mode="wait">
         {gameState === "select" && (
           <motion.div
             key="start"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
+            exit={{ opacity: 0, transition: { duration: 0 } }}
             className="flex flex-col items-center justify-center text-center max-w-md"
           >
-            <div className="w-20 h-20 bg-indigo-50 dark:bg-indigo-900/20 rounded-full flex items-center justify-center mb-6">
+            <div className="game-start-icon w-20 h-20 bg-indigo-50 dark:bg-indigo-900/20 rounded-full flex items-center justify-center mb-6">
               <Grid3X3 className="w-10 h-10 text-indigo-500" />
             </div>
             <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-wider mb-4">
@@ -251,7 +259,7 @@ export default function SchulteTableGame() {
               className="w-full sm:w-auto px-12 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold uppercase tracking-widest text-sm transition-all shadow-lg hover:shadow-indigo-500/20 flex items-center justify-center gap-3"
             >
               <Play className="w-4 h-4 fill-current" />
-              Initialize Test
+              Play
             </button>
           </motion.div>
         )}
@@ -259,9 +267,9 @@ export default function SchulteTableGame() {
         {gameState === "playing" && (
           <motion.div
             key="game"
-            initial={{ opacity: 0 }}
+            initial={false}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            exit={{ opacity: 0, transition: { duration: 0 } }}
             className="w-full flex flex-col items-center justify-center p-2 max-w-2xl"
           >
             <div className="mb-5 flex items-center gap-3">

@@ -1,12 +1,17 @@
 "use client";
 
-import { useState, useRef, useEffect, useCallback } from "react";
-import { Layers, Play, RotateCcw, Trophy, Shield, Star, Zap, Flame, Brain } from "lucide-react";
-import { useGameSound } from "@/hooks/useGameSound";
-import { GameDashboardLayout } from "@/components/dashboard/GameDashboardLayout";
+import { GameProgressFeedback } from "@/components/GameProgressFeedback";
+import { useGameTimers } from "@/hooks/useGameTimers";
+import { useToolProgress } from "@/hooks/useToolProgress";
+import { safeStorage } from "@/utils/safeStorage";
+
 import { DashboardDifficultyCard } from "@/components/dashboard/DashboardDifficultyCard";
+import { GameDashboardLayout } from "@/components/dashboard/GameDashboardLayout";
 import { StatBox } from "@/components/dashboard/StatBox";
-import { motion, AnimatePresence } from "framer-motion";
+import { useGameSound } from "@/hooks/useGameSound";
+import { AnimatePresence, motion } from "framer-motion";
+import { Brain, Flame, Layers, Play, RotateCcw, Shield, Star, Trophy, Zap } from "lucide-react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 type DiffId = "beginner" | "easy" | "normal" | "hard" | "professional";
 
@@ -57,6 +62,8 @@ const LETTERS = ["A", "B", "C", "D", "E", "F", "G", "H"];
 type GameState = "select" | "playing" | "gameover";
 
 export default function NBackGame() {
+  const { setTimeout, clearTimeout, cancelTimers } = useGameTimers();
+
   const [gameState, setGameState] = useState<GameState>("select");
   const [diffId, setDiffId] = useState<DiffId>("normal");
 
@@ -89,22 +96,13 @@ export default function NBackGame() {
   useEffect(() => {
     const saved: Record<DiffId, number> = { beginner: 0, easy: 0, normal: 0, hard: 0, professional: 0 };
     DIFF_ORDER.forEach(k => {
-      const v = localStorage.getItem(`nback-hs-${k}`);
-      if (v) saved[k] = parseInt(v, 10);
+      const v = safeStorage.getItem(`reflextry_v2_nback-hs-${k}`);
+      if (v !== null && Number.isFinite(Number(v))) saved[k] = Number(v);
     });
     setHighScores(saved);
   }, []);
 
-  useEffect(() => {
-    if (gameState !== "gameover") return;
-    setHighScores(prev => {
-      if (score > prev[diffId]) {
-        localStorage.setItem(`nback-hs-${diffId}`, score.toString());
-        return { ...prev, [diffId]: score };
-      }
-      return prev;
-    });
-  }, [gameState, score, diffId]);
+
 
   const clearTimer = () => {
     if (timerRef.current) {
@@ -145,6 +143,10 @@ export default function NBackGame() {
       if (loseLife()) return;
     }
 
+    if (!respondedRef.current && !isMatchRef.current && trialRef.current > DIFFICULTIES[diffId].n) {
+      responsesRef.current += 1;
+      correctRef.current += 1;
+    }
     const d = DIFFICULTIES[diffId];
     const next = trialRef.current + 1;
 
@@ -205,6 +207,7 @@ export default function NBackGame() {
   useEffect(() => {
     if (gameState !== "playing") return;
     const onKey = (e: KeyboardEvent) => {
+      if (e.repeat) return;
       if (e.code === "Space" || e.key === " ") {
         e.preventDefault();
         handleMatch();
@@ -215,6 +218,7 @@ export default function NBackGame() {
   }, [gameState, handleMatch]);
 
   const startGame = () => {
+    cancelTimers();
     play("click");
     clearTimer();
     sequenceRef.current = [];
@@ -269,8 +273,17 @@ export default function NBackGame() {
     </>
   );
 
+
+  const progress = useToolProgress({
+    toolId: "n-back", phase: gameState, difficulty: diffId,
+    value: score, unit: "pts", higherIsBetter: true,
+    terminal: ["gameover"], idle: ["select"], recordKey: "reflextry_v2_nback-hs-",
+    setHighScores, cancelTimers, reset: () => setGameState("select"),
+    eligible: true,
+  });
+
   return (
-    <GameDashboardLayout
+    <GameDashboardLayout isIdle={gameState === "select"}
       title="N-BACK"
       subtitle="WORKING MEMORY"
       difficultySelector={difficultySelector}
@@ -280,16 +293,17 @@ export default function NBackGame() {
       soundEnabled={!isMuted}
       onToggleSound={toggleMute}
     >
+      <GameProgressFeedback result={progress} />
       <AnimatePresence mode="wait">
         {gameState === "select" && (
           <motion.div
             key="start"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
+            exit={{ opacity: 0, transition: { duration: 0 } }}
             className="flex flex-col items-center justify-center text-center max-w-md"
           >
-            <div className="w-20 h-20 bg-indigo-50 dark:bg-indigo-900/20 rounded-full flex items-center justify-center mb-6">
+            <div className="game-start-icon w-20 h-20 bg-indigo-50 dark:bg-indigo-900/20 rounded-full flex items-center justify-center mb-6">
               <Layers className="w-10 h-10 text-indigo-500" />
             </div>
             <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-wider mb-4">
@@ -303,7 +317,7 @@ export default function NBackGame() {
               className="w-full sm:w-auto px-12 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold uppercase tracking-widest text-sm transition-all shadow-lg hover:shadow-indigo-500/20 flex items-center justify-center gap-3"
             >
               <Play className="w-4 h-4 fill-current" />
-              Initialize Test
+              Play
             </button>
           </motion.div>
         )}
@@ -311,9 +325,9 @@ export default function NBackGame() {
         {gameState === "playing" && (
           <motion.div
             key="game"
-            initial={{ opacity: 0 }}
+            initial={false}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            exit={{ opacity: 0, transition: { duration: 0 } }}
             className="w-full flex flex-col items-center justify-center p-4 max-w-2xl"
           >
             <div className="w-full max-w-xs mb-6">

@@ -1,0 +1,14 @@
+{
+  "before": [
+    "4",
+    "3",
+    "2",
+    "1"
+  ],
+  "after": [
+    "4",
+    "3",
+    "2"
+  ],
+  "expected": "After clicking 1 in Normal, other numbers should be hidden."
+}

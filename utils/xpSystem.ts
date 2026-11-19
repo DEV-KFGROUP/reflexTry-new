@@ -1,3 +1,4 @@
+import { safeStorage } from "./safeStorage";
 import { XP_REWARDS } from "./achievements";
 import { getLevel, getXPProgress, getRank } from "./achievements";
 
@@ -27,7 +28,7 @@ export const XPSystem = {
         const oldLevel = getLevel(currentXP);
         const newXP = currentXP + amount;
 
-        localStorage.setItem(XP_STORAGE_KEY, newXP.toString());
+        safeStorage.setItem(XP_STORAGE_KEY, newXP.toString());
 
         const newLevel = getLevel(newXP);
         const progress = getXPProgress(newXP);
@@ -35,7 +36,7 @@ export const XPSystem = {
 
         // Check if level up
         if (newLevel > oldLevel) {
-            localStorage.setItem(LAST_LEVEL_STORAGE_KEY, newLevel.toString());
+            safeStorage.setItem(LAST_LEVEL_STORAGE_KEY, newLevel.toString());
             // Dispatch level up event
             window.dispatchEvent(new CustomEvent('level_up', {
                 detail: { level: newLevel, oldLevel, reason }
@@ -59,8 +60,8 @@ export const XPSystem = {
      */
     getTotalXP: (): number => {
         if (typeof window === "undefined") return 0;
-        const stored = localStorage.getItem(XP_STORAGE_KEY);
-        return stored ? parseInt(stored, 10) : 0;
+        const stored = safeStorage.getItem(XP_STORAGE_KEY);
+        return stored && Number.isFinite(Number(stored)) ? Number(stored) : 0;
     },
 
     /**
@@ -125,8 +126,8 @@ export const XPSystem = {
      */
     reset: (): void => {
         if (typeof window === "undefined") return;
-        localStorage.removeItem(XP_STORAGE_KEY);
-        localStorage.removeItem(LAST_LEVEL_STORAGE_KEY);
+        safeStorage.removeItem(XP_STORAGE_KEY);
+        safeStorage.removeItem(LAST_LEVEL_STORAGE_KEY);
     },
 };
 

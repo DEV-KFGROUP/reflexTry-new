@@ -1,12 +1,17 @@
 "use client";
 
-import { useState, useCallback, useRef, useEffect } from "react";
-import { Brain, Play, RotateCcw, Heart, Trophy, Shield, Star, Zap, Flame } from "lucide-react";
-import { useGameSound } from "@/hooks/useGameSound";
-import { GameDashboardLayout } from "@/components/dashboard/GameDashboardLayout";
+import { GameProgressFeedback } from "@/components/GameProgressFeedback";
+import { useGameTimers } from "@/hooks/useGameTimers";
+import { useToolProgress } from "@/hooks/useToolProgress";
+import { safeStorage } from "@/utils/safeStorage";
+
 import { DashboardDifficultyCard } from "@/components/dashboard/DashboardDifficultyCard";
+import { GameDashboardLayout } from "@/components/dashboard/GameDashboardLayout";
 import { StatBox } from "@/components/dashboard/StatBox";
-import { motion, AnimatePresence } from "framer-motion";
+import { useGameSound } from "@/hooks/useGameSound";
+import { AnimatePresence, motion } from "framer-motion";
+import { Brain, Flame, Play, RotateCcw, Shield, Star, Trophy, Zap } from "lucide-react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 type DiffId = "beginner" | "easy" | "normal" | "hard" | "professional";
 
@@ -66,6 +71,9 @@ interface CellData {
 }
 
 export default function ChimpTestGame() {
+  const { setTimeout, clearTimeout, cancelTimers } = useGameTimers();
+
+  const roundLocked = useRef(false);
   const [gameState, setGameState] = useState<GameState>("select");
   const [diffId, setDiffId] = useState<DiffId>("normal");
   
@@ -86,31 +94,23 @@ export default function ChimpTestGame() {
   useEffect(() => {
     const saved: Record<DiffId, number> = { beginner: 0, easy: 0, normal: 0, hard: 0, professional: 0 };
     DIFF_ORDER.forEach(k => {
-      const v = localStorage.getItem(`chimp-hs-${k}`);
-      if (v) saved[k] = parseInt(v, 10);
+      const v = safeStorage.getItem(`reflextry_v2_chimp-hs-${k}`);
+      if (v !== null && Number.isFinite(Number(v))) saved[k] = Number(v);
     });
     setHighScores(saved);
   }, []);
 
-  useEffect(() => {
-    if (gameState !== "gameover") return;
-    setHighScores(prev => {
-      if (score > prev[diffId]) {
-        localStorage.setItem(`chimp-hs-${diffId}`, score.toString());
-        return { ...prev, [diffId]: score };
-      }
-      return prev;
-    });
-  }, [gameState, score, diffId]);
+
 
   const generateGrid = useCallback((currentLevel: number, d: DiffConfig) => {
+    roundLocked.current = false;
     const totalCells = d.rows * d.cols;
     const numTargets = Math.min(d.startingNumbers + currentLevel - 1, totalCells);
     
     const newGrid: CellData[] = Array(totalCells).fill(null).map((_, i) => ({
       id: i,
       number: null,
-      isRevealed: true,
+      isRevealed: false,
       isClicked: false,
       isWrong: false
     }));
@@ -138,6 +138,7 @@ export default function ChimpTestGame() {
   }, []);
 
   const startGame = () => {
+    cancelTimers();
     play("click");
     setGameState("playing");
     setLevel(1);
@@ -156,7 +157,7 @@ export default function ChimpTestGame() {
   };
 
   const handleCellClick = (cellIndex: number) => {
-    if (gameState !== "playing") return;
+    if (gameState !== "playing" || roundLocked.current) return;
 
     const cell = grid[cellIndex];
     if (cell.number === null || cell.isClicked) return;
@@ -182,6 +183,7 @@ export default function ChimpTestGame() {
         setCurrentStep(currentStep + 1);
       }
     } else {
+      roundLocked.current = true;
       play("error");
       if (hideTimerRef.current) clearTimeout(hideTimerRef.current);
       
@@ -235,8 +237,17 @@ export default function ChimpTestGame() {
     </>
   );
 
+
+  const progress = useToolProgress({
+    toolId: "chimp-test", phase: gameState, difficulty: diffId,
+    value: score, unit: "pts", higherIsBetter: true,
+    terminal: ["gameover"], idle: ["select"], recordKey: "reflextry_v2_chimp-hs-",
+    setHighScores, cancelTimers, reset: () => setGameState("select"),
+    eligible: true,
+  });
+
   return (
-    <GameDashboardLayout
+    <GameDashboardLayout isIdle={gameState === "select"}
       title="CHIMP TEST"
       subtitle="WORKING MEMORY CALIBRATION"
       difficultySelector={difficultySelector}
@@ -246,16 +257,17 @@ export default function ChimpTestGame() {
       soundEnabled={!isMuted}
       onToggleSound={toggleMute}
     >
+      <GameProgressFeedback result={progress} />
       <AnimatePresence mode="wait">
         {gameState === "select" && (
           <motion.div
             key="start"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
+            exit={{ opacity: 0, transition: { duration: 0 } }}
             className="flex flex-col items-center justify-center text-center max-w-md"
           >
-            <div className="w-20 h-20 bg-indigo-50 dark:bg-indigo-900/20 rounded-full flex items-center justify-center mb-6">
+            <div className="game-start-icon w-20 h-20 bg-indigo-50 dark:bg-indigo-900/20 rounded-full flex items-center justify-center mb-6">
               <Brain className="w-10 h-10 text-indigo-500" />
             </div>
             <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-wider mb-4">
@@ -269,7 +281,7 @@ export default function ChimpTestGame() {
               className="w-full sm:w-auto px-12 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold uppercase tracking-widest text-sm transition-all shadow-lg hover:shadow-indigo-500/20 flex items-center justify-center gap-3"
             >
               <Play className="w-4 h-4 fill-current" />
-              Initialize Test
+              Play
             </button>
           </motion.div>
         )}
@@ -277,9 +289,9 @@ export default function ChimpTestGame() {
         {(gameState === "playing" || gameState === "level_complete") && (
           <motion.div
             key="game"
-            initial={{ opacity: 0 }}
+            initial={false}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            exit={{ opacity: 0, transition: { duration: 0 } }}
             className="w-full flex items-center justify-center p-4"
           >
             <div 
@@ -297,6 +309,7 @@ export default function ChimpTestGame() {
                   <button
                     key={cell.id}
                     disabled={!isVisible || gameState !== "playing"}
+                    aria-label={`Row ${Math.floor(cell.id / diff.cols) + 1}, column ${cell.id % diff.cols + 1}${showNumber ? `, ${cell.number}` : ", hidden number"}`}
                     onClick={() => handleCellClick(cell.id)}
                     className={`
                       relative w-full h-full rounded-lg sm:rounded-xl transition-all duration-200 flex items-center justify-center font-bold text-xl sm:text-3xl

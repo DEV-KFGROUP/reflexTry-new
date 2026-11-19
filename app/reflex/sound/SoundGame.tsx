@@ -1,12 +1,16 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import {
-  RotateCcw, Volume2, ShieldAlert, Shield, Star, Zap, Flame, Trophy,
-  VolumeX, Brain, Play, Target
-} from "lucide-react";
+import { GameProgressFeedback } from "@/components/GameProgressFeedback";
+import { useGameTimers } from "@/hooks/useGameTimers";
+import { useLatestCallback } from "@/hooks/useLatestCallback";
+import { useReactionTone } from "@/hooks/useReactionTone";
+import { useToolProgress } from "@/hooks/useToolProgress";
+import { safeStorage } from "@/utils/safeStorage";
+
 import { useGameSound } from "@/hooks/useGameSound";
+import { AnimatePresence, motion } from "framer-motion";
+import { Brain, Flame, Play, RotateCcw, Shield, ShieldAlert, Star, Trophy, Volume2, VolumeX, Zap } from "lucide-react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 /* ─────────────────────────────────────────────
    INLINE GRADIENT MAP (avoids Tailwind purging)
@@ -88,6 +92,8 @@ function DifficultyCard({
     <motion.button
       whileHover={disabled ? {} : { scale: 1.02, y: -2 }}
       whileTap={disabled ? {} : { scale: 0.98 }}
+      disabled={disabled}
+      aria-pressed={selected}
       onClick={disabled ? undefined : onSelect}
       className={`relative w-full text-left rounded-2xl border-2 p-3 transition-all focus:outline-none overflow-hidden ${
         disabled ? "opacity-60 cursor-not-allowed" : "cursor-pointer"
@@ -97,7 +103,7 @@ function DifficultyCard({
         <div className="absolute inset-0 opacity-5" style={{ background: DIFF_GRADIENT[diffKey] }} />
       )}
       <div className="relative z-10 flex items-start gap-3">
-        <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: DIFF_GRADIENT[diffKey] }}>
+        <div className="difficulty-icon w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: DIFF_GRADIENT[diffKey] }}>
           <Icon className="w-4 h-4 text-white" />
         </div>
         <div className="flex-1 min-w-0">
@@ -123,6 +129,8 @@ function DifficultyCard({
    MAIN COMPONENT
 ───────────────────────────────────────────── */
 export default function SoundReactionGame() {
+  const { setTimeout, clearTimeout, cancelTimers } = useGameTimers();
+
     const { play } = useGameSound();
 
   const [phase, setPhase] = useState<"select" | "idle" | "waiting" | "ready" | "early" | "result" | "summary">("select");
@@ -144,33 +152,19 @@ export default function SoundReactionGame() {
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const diff = DIFFICULTIES[diffId];
 
-  const playSound = useCallback((type: Parameters<typeof play>[0]) => {
+  const playSound = useLatestCallback((type: Parameters<typeof play>[0]) => {
     if (!muted) play(type);
-  }, [muted, play]);
+  });
 
-  // Audio Context Synthesizer beep
-  const playBeep = useCallback((frequency: number) => {
-    try {
-      const ctx = new (window.AudioContext || (window as any).webkitAudioContext)();
-      const osc = ctx.createOscillator();
-      const gain = ctx.createGain();
-      osc.connect(gain);
-      gain.connect(ctx.destination);
-      osc.frequency.setValueAtTime(frequency, ctx.currentTime);
-      gain.gain.setValueAtTime(0.25, ctx.currentTime);
-      osc.start();
-      osc.stop(ctx.currentTime + 0.12);
-    } catch (e) {
-      console.error("Audio Context initialization error", e);
-    }
-  }, []);
+  const { prepare: prepareAudio, beep: playBeep } = useReactionTone();
+  const [audioUnavailable, setAudioUnavailable] = useState(false);
 
   // Load scores
   useEffect(() => {
     const saved: Record<DiffId, number> = { beginner: 999, easy: 999, normal: 999, hard: 999, professional: 999 };
     DIFF_ORDER.forEach(k => {
-      const v = localStorage.getItem(`sound-hs-${k}`);
-      if (v) saved[k] = parseInt(v);
+      const v = safeStorage.getItem(`reflextry_v2_sound-hs-${k}`);
+      if (v !== null && Number.isFinite(Number(v))) saved[k] = Number(v);
     });
     setHighScores(saved);
   }, []);
@@ -180,10 +174,16 @@ export default function SoundReactionGame() {
   }, []);
 
   const triggerBeep = useCallback((freq: number) => {
+    const onset = playBeep(freq);
+    if (onset === null) {
+      setAudioUnavailable(true);
+      setPhase("idle");
+      return;
+    }
+    setAudioUnavailable(false);
     setSoundFrequency(freq);
     setPhase("ready");
-    setStartTime(Date.now());
-    playBeep(freq);
+    setStartTime(onset);
   }, [playBeep]);
 
   const startWaiting = useCallback(() => {
@@ -191,12 +191,8 @@ export default function SoundReactionGame() {
     setPhase("waiting");
     playSound("hover");
 
-    // Randomize Professional dual-task matching rule
-    if (d.dualTaskInstruction) {
-      setActiveTaskTone(Math.random() > 0.5 ? "high" : "low");
-    } else {
-      setActiveTaskTone("high");
-    }
+    const nextTaskTone = d.dualTaskInstruction && Math.random() > 0.5 ? "low" : "high";
+    setActiveTaskTone(nextTaskTone);
 
     const delay = Math.floor(Math.random() * (d.maxDelayMs - d.minDelayMs + 1)) + d.minDelayMs;
 
@@ -205,25 +201,26 @@ export default function SoundReactionGame() {
       const fauxDelay = delay / 2;
       timerRef.current = setTimeout(() => {
         // Play low frequency beep (350Hz)
-        playBeep(350);
+        playBeep(nextTaskTone === "low" ? 880 : 350);
 
         // Schedule true green light after remaining delay
         timerRef.current = setTimeout(() => {
           // If Pro mode, can play low or high frequency beep as target
-          const targetFreq = d.dualTaskInstruction && Math.random() > 0.5 ? 350 : 880;
+          const targetFreq = nextTaskTone === "low" ? 350 : 880;
           triggerBeep(targetFreq);
         }, delay - fauxDelay);
 
       }, fauxDelay);
     } else {
       timerRef.current = setTimeout(() => {
-        const targetFreq = d.dualTaskInstruction && Math.random() > 0.5 ? 350 : 880;
+        const targetFreq = nextTaskTone === "low" ? 350 : 880;
         triggerBeep(targetFreq);
       }, delay);
     }
   }, [diffId, playSound, triggerBeep, playBeep]);
 
   const handleAction = useCallback(() => {
+    prepareAudio();
     if (phase === "select") {
       setPhase("idle");
       setCurrentAttempt(1);
@@ -245,7 +242,7 @@ export default function SoundReactionGame() {
     }
 
     if (phase === "ready") {
-      const duration = Date.now() - startTime;
+      const duration = Math.max(0, performance.now() - startTime);
 
       // Verify if they matched correct task instructions
       let isCorrect = true;
@@ -293,14 +290,6 @@ export default function SoundReactionGame() {
       setPhase("summary");
       const sum = attempts.reduce((a, b) => a + b, 0) + (phase === "early" && diff.earlyClickPenalty ? 1000 : 0);
       const avg = Math.round(sum / diff.attemptsCount);
-
-      setHighScores(hs => {
-        if (avg < hs[diffId] || hs[diffId] === 999) {
-          localStorage.setItem(`sound-hs-${diffId}`, avg.toString());
-          return { ...hs, [diffId]: avg };
-        }
-        return hs;
-      });
     } else {
       setCurrentAttempt(nextAttempt);
       startWaiting();
@@ -310,14 +299,25 @@ export default function SoundReactionGame() {
   const averageScore = attempts.length > 0 ? Math.round(attempts.reduce((a, b) => a + b, 0) / attempts.length) : 0;
   const bestScore = attempts.length > 0 ? Math.min(...attempts) : 0;
 
+
+  const progress = useToolProgress({
+    toolId: "sound-reaction", phase: phase, difficulty: diffId,
+    value: averageScore, unit: "ms", higherIsBetter: false,
+    terminal: ["summary"], idle: ["select"], recordKey: "reflextry_v2_sound-hs-",
+    setHighScores, cancelTimers, reset: () => setPhase("select"),
+    eligible: true,
+  });
+
   return (
-    <div className="w-full bg-[#f8fafc] dark:bg-slate-800 text-slate-800 dark:text-white font-sans relative overflow-hidden py-8 px-4 sm:px-6 lg:px-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm mb-8">
+    <div data-idle={phase === "select"} className="game-tool w-full bg-[#f8fafc] dark:bg-slate-800 text-slate-800 dark:text-white font-sans relative overflow-hidden py-8 px-4 sm:px-6 lg:px-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm mb-8">
+      <GameProgressFeedback result={progress} />
+      {audioUnavailable && <p role="status" className="game-progress-feedback">Sound is not ready. Tap the play area again to enable audio, then start your attempt.</p>}
       {/* Background grids */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.04)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none z-0" />
       <div className="absolute top-[-5%] left-[5%] w-[600px] h-[600px] bg-violet-500/[0.03] blur-[140px] rounded-full pointer-events-none z-0" />
       <div className="absolute bottom-[-5%] right-[5%] w-[500px] h-[500px] bg-cyan-500/[0.03] blur-[120px] rounded-full pointer-events-none z-0" />
 
-      <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center space-y-8 pt-8">
+      <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center space-y-6 pt-0">
 
         {/* Header */}
         <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="text-center w-full">
@@ -330,13 +330,13 @@ export default function SoundReactionGame() {
         </motion.div>
 
         {/* Main Layout */}
-        <div className="w-full grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-6 items-start">
+        <div className="game-columns w-full grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-6 items-start">
 
           {/* ═══ LEFT PANEL ═══ */}
-          <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 }} className="flex flex-col gap-4">
+          <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 }} className="game-settings flex flex-col gap-4">
 
             {/* Difficulty Selector */}
-            <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+            <div className="game-difficulty bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
               <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Difficulty Level</div>
               <div className="flex flex-col gap-2">
                 {DIFF_ORDER.map(key => (
@@ -353,7 +353,7 @@ export default function SoundReactionGame() {
             </div>
 
             {/* Stats Panel */}
-            <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+            <div className="game-stats bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
               <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Session Stats</div>
               <div className="grid grid-cols-2 gap-3">
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
@@ -405,7 +405,7 @@ export default function SoundReactionGame() {
           </motion.div>
 
           {/* ═══ RIGHT PANEL: Game Console ═══ */}
-          <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.15 }} className="flex flex-col gap-4">
+          <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.15 }} className="game-arena flex flex-col gap-4">
             <div className="relative bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-[0_8px_40px_rgba(15,23,42,0.07)]">
               <div className="absolute top-4 left-4 w-4 h-4 border-t-2 border-l-2 border-slate-200" />
               <div className="absolute top-4 right-4 w-4 h-4 border-t-2 border-r-2 border-slate-200" />
@@ -424,8 +424,8 @@ export default function SoundReactionGame() {
 
                   {/* ── 1. SELECT SCREEN ── */}
                   {phase === "select" && (
-                    <motion.div key="select" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.95 }} className="flex flex-col items-center justify-center space-y-8 text-center w-full max-w-md">
-                      <div className="relative w-24 h-24 mx-auto flex items-center justify-center">
+                    <motion.div key="select" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, transition: { duration: 0 } }} className="flex flex-col items-center justify-center space-y-8 text-center w-full max-w-md">
+                      <div className="game-start-icon relative w-24 h-24 mx-auto flex items-center justify-center">
                         <div className="absolute inset-0 border border-dashed border-violet-400/20 rounded-full animate-[spin_20s_linear_infinite]" />
                         <div className="absolute inset-2 border border-dashed border-violet-400/30 rounded-full animate-[spin_12s_linear_infinite_reverse]" />
                         <div className="absolute inset-4 border border-violet-400/10 rounded-full animate-pulse bg-violet-400/[0.04] flex items-center justify-center">
@@ -437,13 +437,13 @@ export default function SoundReactionGame() {
                         <p className="text-xs text-slate-600 dark:text-slate-400 max-w-xs mx-auto leading-relaxed">
                           Listen carefully and tap immediately when the target audio tone plays. Use headphones for best results.
                         </p>
-                        <p className={`text-xs font-mono font-semibold ${diff.textColor} mt-1`}>{diff.label}: {diff.description}</p>
+                        <p className={`game-level-description text-xs font-mono font-semibold ${diff.textColor} mt-1`}>{diff.label}: {diff.description}</p>
                       </div>
                       <motion.button whileHover={{ translateY: -2 }} whileTap={{ translateY: 6 }} onClick={handleAction} className="relative group cursor-pointer focus:outline-none select-none">
                         <div className="absolute inset-0 rounded-xl translate-y-1.5 opacity-70 blur-sm" style={{ background: DIFF_GRADIENT[diffId] }} />
                         <div className="relative px-10 py-4 rounded-xl text-white font-mono font-bold tracking-widest text-sm flex items-center justify-center gap-2 group-active:translate-y-1.5 shadow-lg" style={{ background: DIFF_GRADIENT[diffId] }}>
                           <Play className="w-4 h-4 fill-current" />
-                          Initialize Audio
+                          Play
                         </div>
                       </motion.button>
                     </motion.div>
@@ -456,7 +456,9 @@ export default function SoundReactionGame() {
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
-                      onClick={handleAction}
+                      onPointerDown={handleAction}
+                      onKeyDown={(event) => { if (!event.repeat && (event.key === " " || event.key === "Enter")) { event.preventDefault(); handleAction(); } }}
+                      role="button" tabIndex={0}
                       className={`relative w-full h-[400px] rounded-3xl flex flex-col items-center justify-center border transition-all duration-150 select-none cursor-pointer ${
                         phase === "idle" ? "bg-slate-50 border-slate-200 hover:bg-slate-100/50" : ""
                       } ${
@@ -546,7 +548,7 @@ export default function SoundReactionGame() {
 
                   {/* ── 3. SUMMARY SCREEN ── */}
                   {phase === "summary" && (
-                    <motion.div key="summary" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} className="text-center space-y-6 w-full max-w-md">
+                    <motion.div key="summary" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, transition: { duration: 0 } }} className="text-center space-y-6 w-full max-w-md">
                       <div className="relative w-16 h-16 mx-auto flex items-center justify-center bg-emerald-50 border border-emerald-100 rounded-2xl animate-pulse">
                         <Trophy className="w-8 h-8 text-emerald-500" />
                       </div>
@@ -610,11 +612,11 @@ export default function SoundReactionGame() {
             {/* Abort */}
             {phase !== "select" && phase !== "summary" && (
               <div className="flex justify-end">
-                <button
+                <button onClickCapture={() => window.dispatchEvent(new Event("game_abort_requested"))}
                   onClick={() => { if (timerRef.current) clearTimeout(timerRef.current); setPhase("summary"); }}
                   className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 hover:text-red-500 transition-colors cursor-pointer"
                 >
-                  Abort Session ×
+                  End round ×
                 </button>
               </div>
             )}

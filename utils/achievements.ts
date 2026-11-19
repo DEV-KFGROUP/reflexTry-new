@@ -1,3 +1,7 @@
+import { safeStorage } from "./safeStorage";
+import { ScoreHistory } from "./scoreHistory";
+import { TOOL_COUNT } from "@/config/tool-mapping";
+
 export interface Achievement {
     id: string;
     name: string;
@@ -63,10 +67,15 @@ export const Achievements = {
         }
 
         // Memory master
-        if (toolId.includes("memory") && score >= 10 && !current.find(a => a.id === "memory_master")) {
+        if ((["sequence-memory", "number-memory", "visual-memory"].includes(toolId)) && score >= 10 && !current.find(a => a.id === "memory_master")) {
             unlocked.push({ ...ACHIEVEMENTS.find(a => a.id === "memory_master")!, unlockedAt: Date.now() });
         }
 
+        const history = ScoreHistory.getAll();
+        const gameCount = Object.values(history).reduce((sum, entries) => sum + entries.length, 0);
+        for (const [id, eligible] of [["century_club", gameCount >= 100], ["all_tools", Object.keys(history).length >= TOOL_COUNT]] as const) {
+            if (eligible && !current.some(a => a.id === id)) unlocked.push({ ...ACHIEVEMENTS.find(a => a.id === id)!, unlockedAt: Date.now() });
+        }
         // Save unlocked achievements
         unlocked.forEach(achievement => {
             Achievements.unlock(achievement.id);
@@ -78,7 +87,7 @@ export const Achievements = {
     unlock: (id: string) => {
         if (typeof window === "undefined") return;
         const key = `reflexhub_achievement_${id}`;
-        localStorage.setItem(key, JSON.stringify({ unlockedAt: Date.now() }));
+        safeStorage.setItem(key, JSON.stringify({ unlockedAt: Date.now() }));
     },
 
     getUnlocked: (): Achievement[] => {
@@ -86,13 +95,13 @@ export const Achievements = {
         
         return ACHIEVEMENTS.filter(achievement => {
             const key = `reflexhub_achievement_${achievement.id}`;
-            return localStorage.getItem(key) !== null;
+            return safeStorage.getItem(key) !== null;
         }).map(achievement => {
             const key = `reflexhub_achievement_${achievement.id}`;
-            const data = localStorage.getItem(key);
+            const data = safeStorage.getItem(key);
             return {
                 ...achievement,
-                unlockedAt: data ? JSON.parse(data).unlockedAt : undefined,
+                unlockedAt: (() => { try { return data ? JSON.parse(data).unlockedAt : undefined; } catch { return undefined; } })(),
             };
         });
     },

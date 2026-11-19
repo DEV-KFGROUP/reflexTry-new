@@ -1,12 +1,16 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import {
-  Trophy, Play, RotateCcw, Shield, Star, Zap, Flame,
-  Volume2, VolumeX, ArrowRight, Brain, Hash
-} from "lucide-react";
+import { generateTilePositions, type NumberTile } from "@/lib/gaming/number-layout";
+import { GameProgressFeedback } from "@/components/GameProgressFeedback";
+import { useGameTimers } from "@/hooks/useGameTimers";
+import { useLatestCallback } from "@/hooks/useLatestCallback";
+import { useToolProgress } from "@/hooks/useToolProgress";
+import { safeStorage } from "@/utils/safeStorage";
+
 import { useGameSound } from "@/hooks/useGameSound";
+import { AnimatePresence, motion } from "framer-motion";
+import { Brain, Flame, Hash, Play, RotateCcw, Shield, Star, Trophy, Volume2, VolumeX, Zap } from "lucide-react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 /* ─────────────────────────────────────────────
    INLINE GRADIENT MAP (avoids Tailwind purging)
@@ -67,50 +71,9 @@ const DIFFICULTIES: Record<DiffId, DiffConfig> = {
 
 const DIFF_ORDER: DiffId[] = ["beginner", "easy", "normal", "hard", "professional"];
 
-interface NumberTile {
-  id: number;
-  value: number;
-  x: number; // percentage left
-  y: number; // percentage top
-  found: boolean;
-  isDecoy: boolean;
-}
-
 /* ─────────────────────────────────────────────
    TILE COORDINATE GENERATOR (prevents overlap)
 ───────────────────────────────────────────── */
-function generateTilePositions(count: number, decoysCount: number): NumberTile[] {
-  const tiles: NumberTile[] = [];
-  const used: { x: number; y: number }[] = [];
-
-  const totalItems = count + decoysCount;
-  for (let i = 1; i <= totalItems; i++) {
-    const isDecoy = i > count;
-    let x = 0, y = 0;
-    let attempts = 0;
-
-    do {
-      x = 5 + Math.random() * 85;
-      y = 5 + Math.random() * 85;
-      attempts++;
-    } while (
-      attempts < 80 &&
-      used.some(p => Math.abs(p.x - x) < 11 && Math.abs(p.y - y) < 11)
-    );
-
-    used.push({ x, y });
-    tiles.push({
-      id: i,
-      value: isDecoy ? -99 : i, // decoy value placeholder
-      x,
-      y,
-      found: false,
-      isDecoy
-    });
-  }
-  return tiles;
-}
-
 /* ─────────────────────────────────────────────
    DIFFICULTY CARD
 ───────────────────────────────────────────── */
@@ -125,6 +88,8 @@ function DifficultyCard({
     <motion.button
       whileHover={disabled ? {} : { scale: 1.02, y: -2 }}
       whileTap={disabled ? {} : { scale: 0.98 }}
+      disabled={disabled}
+      aria-pressed={selected}
       onClick={disabled ? undefined : onSelect}
       className={`relative w-full text-left rounded-2xl border-2 p-3 transition-all focus:outline-none overflow-hidden ${
         disabled ? "opacity-60 cursor-not-allowed" : "cursor-pointer"
@@ -134,7 +99,7 @@ function DifficultyCard({
         <div className="absolute inset-0 opacity-5" style={{ background: DIFF_GRADIENT[diffKey] }} />
       )}
       <div className="relative z-10 flex items-start gap-3">
-        <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: DIFF_GRADIENT[diffKey] }}>
+        <div className="difficulty-icon w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: DIFF_GRADIENT[diffKey] }}>
           <Icon className="w-4 h-4 text-white" />
         </div>
         <div className="flex-1 min-w-0">
@@ -160,6 +125,10 @@ function DifficultyCard({
    MAIN COMPONENT
 ───────────────────────────────────────────── */
 export default function NumberRushGame() {
+  const stageRef = useRef<HTMLDivElement>(null);
+  const [boardHeight, setBoardHeight] = useState(440);
+  const { setInterval, clearInterval, cancelTimers } = useGameTimers();
+
     const { play } = useGameSound();
 
   const [phase, setPhase] = useState<"idle" | "playing" | "result">("idle");
@@ -179,64 +148,54 @@ export default function NumberRushGame() {
     beginner: 0, easy: 0, normal: 0, hard: 0, professional: 0,
   });
 
-  const playSound = useCallback((type: Parameters<typeof play>[0]) => {
+  const playSound = useLatestCallback((type: Parameters<typeof play>[0]) => {
     if (!muted) play(type);
-  }, [muted, play]);
+  });
 
   // Load scores
   useEffect(() => {
     const saved: Record<DiffId, number> = { beginner: 0, easy: 0, normal: 0, hard: 0, professional: 0 };
     DIFF_ORDER.forEach(k => {
-      const v = localStorage.getItem(`numrush-hs-${k}`);
-      if (v) saved[k] = parseInt(v);
+      const v = safeStorage.getItem(`reflextry_v2_numrush-hs-${k}`);
+      if (v !== null && Number.isFinite(Number(v))) saved[k] = Number(v);
     });
     setHighScores(saved);
   }, []);
 
   useEffect(() => {
     if (phase !== "playing") return;
-    timerRef.current = setInterval(() => setTimer(Date.now() - startTimeRef.current), 50);
+    timerRef.current = setInterval(() => setTimer(performance.now() - startTimeRef.current), 50);
     return () => { if (timerRef.current) clearInterval(timerRef.current); };
   }, [phase]);
 
   const startGame = useCallback(() => {
+    cancelTimers();
     const decoyCount = diff.hasDecoys ? 5 : 0;
-    const newTiles = generateTilePositions(diff.totalNumbers, decoyCount);
-    
-    setTiles(newTiles);
+    const stage = stageRef.current;
+    const padding = stage ? getComputedStyle(stage) : null;
+    const width = Math.max(180, (stage?.clientWidth || 332) - (parseFloat(padding?.paddingLeft || "0") + parseFloat(padding?.paddingRight || "0")) - 2);
+    const board = generateTilePositions(diff.totalNumbers, decoyCount, width);
+    setBoardHeight(board.height);
+    setTiles(board.tiles);
     setNextNumber(1);
     setWrongClicks(0);
-    startTimeRef.current = Date.now();
+    startTimeRef.current = performance.now();
     setTimer(0);
     setPhase("playing");
     playSound("start");
   }, [diff, playSound]);
 
-  const shuffleRemainingTiles = useCallback((currentFoundVal: number) => {
+  const shuffleRemainingTiles = useLatestCallback((currentFoundVal: number) => {
     setTiles(prev => {
-      // Find remaining unfound tiles
-      const unfound = prev.filter(t => !t.found && t.value !== currentFoundVal);
-      const used: { x: number; y: number }[] = [];
-      
-      return prev.map(t => {
-        if (t.found || t.value === currentFoundVal) return t;
-        
-        let x = 0, y = 0;
-        let attempts = 0;
-        do {
-          x = 5 + Math.random() * 85;
-          y = 5 + Math.random() * 85;
-          attempts++;
-        } while (
-          attempts < 80 &&
-          used.some(p => Math.abs(p.x - x) < 11 && Math.abs(p.y - y) < 11)
-        );
-        
-        used.push({ x, y });
-        return { ...t, x, y };
-      });
+      const remaining = prev.filter(tile => !tile.found && tile.value !== currentFoundVal);
+      const stage = stageRef.current;
+      const padding = stage ? getComputedStyle(stage) : null;
+      const width = Math.max(180, (stage?.clientWidth || 332) - (parseFloat(padding?.paddingLeft || "0") + parseFloat(padding?.paddingRight || "0")) - 2);
+      const positions = generateTilePositions(remaining.length, 0, width, boardHeight).tiles;
+      let index = 0;
+      return prev.map(tile => tile.found || tile.value === currentFoundVal ? tile : { ...tile, x: positions[index].x, y: positions[index++].y });
     });
-  }, []);
+  });
 
   const handleTileClick = useCallback((tile: NumberTile, e: React.MouseEvent) => {
     e.stopPropagation();
@@ -276,20 +235,10 @@ export default function NumberRushGame() {
     setTiles(prev => prev.map(t => t.id === tile.id ? { ...t, found: true } : t));
 
     if (tile.value === diff.totalNumbers) {
-      const finalTime = Date.now() - startTimeRef.current;
+      const finalTime = performance.now() - startTimeRef.current;
       setTimer(finalTime);
       playSound("success");
       setPhase("result");
-
-      // Save high score (lowest time in ms)
-      setHighScores(hs => {
-        const prevHs = hs[diffId];
-        if (prevHs === 0 || finalTime < prevHs) {
-          localStorage.setItem(`numrush-hs-${diffId}`, finalTime.toString());
-          return { ...hs, [diffId]: finalTime };
-        }
-        return hs;
-      });
     } else {
       setNextNumber(tile.value + 1);
       if (diff.hasShuffling) {
@@ -318,14 +267,24 @@ export default function NumberRushGame() {
     return s.toFixed(2);
   };
 
+
+  const progress = useToolProgress({
+    toolId: "number-rush", phase: phase, difficulty: diffId,
+    value: timer, unit: "ms", higherIsBetter: false,
+    terminal: ["result"], idle: ["idle"], recordKey: "reflextry_v2_numrush-hs-",
+    setHighScores, cancelTimers, reset: () => setPhase("idle"),
+    eligible: nextNumber >= diff.totalNumbers,
+  });
+
   return (
-    <div className="w-full bg-[#f8fafc] dark:bg-slate-800 text-slate-800 dark:text-white font-sans relative overflow-hidden py-8 px-4 sm:px-6 lg:px-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm mb-8">
+    <div data-idle={phase === "idle"} className="game-tool w-full bg-[#f8fafc] dark:bg-slate-800 text-slate-800 dark:text-white font-sans relative overflow-hidden py-8 px-4 sm:px-6 lg:px-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm mb-8">
+      <GameProgressFeedback result={progress} />
       {/* Background Grids */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.04)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none z-0" />
       <div className="absolute top-[-5%] left-[5%] w-[600px] h-[600px] bg-violet-500/[0.03] blur-[140px] rounded-full pointer-events-none z-0" />
       <div className="absolute bottom-[-5%] right-[5%] w-[500px] h-[500px] bg-cyan-500/[0.03] blur-[120px] rounded-full pointer-events-none z-0" />
 
-      <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center space-y-8 pt-8">
+      <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center space-y-6 pt-0">
 
         {/* Header */}
         <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="text-center w-full">
@@ -338,13 +297,13 @@ export default function NumberRushGame() {
         </motion.div>
 
         {/* Main Layout */}
-        <div className="w-full grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-6 items-start">
+        <div className="game-columns w-full grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-6 items-start">
 
           {/* ═══ LEFT PANEL ═══ */}
-          <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 }} className="flex flex-col gap-4">
+          <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 }} className="game-settings flex flex-col gap-4">
 
             {/* Difficulty Selector */}
-            <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+            <div className="game-difficulty bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
               <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Difficulty Level</div>
               <div className="flex flex-col gap-2">
                 {DIFF_ORDER.map(key => (
@@ -361,7 +320,7 @@ export default function NumberRushGame() {
             </div>
 
             {/* Stats Panel */}
-            <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+            <div className="game-stats bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
               <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Session Stats</div>
               <div className="grid grid-cols-2 gap-3">
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
@@ -407,7 +366,7 @@ export default function NumberRushGame() {
           </motion.div>
 
           {/* ═══ RIGHT PANEL: Game Console ═══ */}
-          <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.15 }} className="flex flex-col gap-4">
+          <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.15 }} className="game-arena flex flex-col gap-4">
             <div className="relative bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-[0_8px_40px_rgba(15,23,42,0.07)]">
               <div className="absolute top-4 left-4 w-4 h-4 border-t-2 border-l-2 border-slate-200" />
               <div className="absolute top-4 right-4 w-4 h-4 border-t-2 border-r-2 border-slate-200" />
@@ -421,13 +380,13 @@ export default function NumberRushGame() {
                 COORDINATE DECK: SHUFFLING {diff.hasShuffling ? "ACTIVE" : "FALSE"}
               </div>
 
-              <div className="p-6 md:p-8 min-h-[480px] flex flex-col items-center justify-center relative z-10">
+              <div ref={stageRef} className="p-6 md:p-8 min-h-[480px] flex flex-col items-center justify-center relative z-10">
                 <AnimatePresence mode="wait">
 
                   {/* ── 1. SELECT SCREEN ── */}
                   {phase === "idle" && (
-                    <motion.div key="select" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.95 }} className="flex flex-col items-center justify-center space-y-8 text-center w-full max-w-md">
-                      <div className="relative w-24 h-24 mx-auto flex items-center justify-center">
+                    <motion.div key="select" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, transition: { duration: 0 } }} className="flex flex-col items-center justify-center space-y-8 text-center w-full max-w-md">
+                      <div className="game-start-icon relative w-24 h-24 mx-auto flex items-center justify-center">
                         <div className="absolute inset-0 border border-dashed border-violet-400/20 rounded-full animate-[spin_20s_linear_infinite]" />
                         <div className="absolute inset-2 border border-dashed border-violet-400/30 rounded-full animate-[spin_12s_linear_infinite_reverse]" />
                         <div className="absolute inset-4 border border-violet-400/10 rounded-full animate-pulse bg-violet-400/[0.04] flex items-center justify-center">
@@ -439,13 +398,13 @@ export default function NumberRushGame() {
                         <p className="text-xs text-slate-600 dark:text-slate-400 max-w-xs mx-auto leading-relaxed">
                           Locate and tap numbers sequentially starting from 1 to {diff.totalNumbers}. Do not click out of order or hit bomb decoys!
                         </p>
-                        <p className={`text-xs font-mono font-semibold ${diff.textColor} mt-1`}>{diff.label}: {diff.description}</p>
+                        <p className={`game-level-description text-xs font-mono font-semibold ${diff.textColor} mt-1`}>{diff.label}: {diff.description}</p>
                       </div>
                       <motion.button whileHover={{ translateY: -2 }} whileTap={{ translateY: 6 }} onClick={startGame} className="relative group cursor-pointer focus:outline-none select-none">
                         <div className="absolute inset-0 rounded-xl translate-y-1.5 opacity-70 blur-sm" style={{ background: DIFF_GRADIENT[diffId] }} />
                         <div className="relative px-10 py-4 rounded-xl text-white font-mono font-bold tracking-widest text-sm flex items-center justify-center gap-2 group-active:translate-y-1.5 shadow-lg" style={{ background: DIFF_GRADIENT[diffId] }}>
                           <Play className="w-4 h-4 fill-current" />
-                          Initialize Scanner Board
+                          Play
                         </div>
                       </motion.button>
                     </motion.div>
@@ -455,11 +414,12 @@ export default function NumberRushGame() {
                   {phase === "playing" && (
                     <motion.div
                       key="playing"
-                      initial={{ opacity: 0 }}
+                      initial={false}
                       animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
+                      exit={{ opacity: 0, transition: { duration: 0 } }}
                       onClick={handleBoardMiss}
-                      className="relative w-full h-[440px] bg-slate-900 border border-slate-800 shadow-inner rounded-[2.5rem] overflow-hidden"
+                      style={{ height: boardHeight }}
+                      className="relative w-full bg-slate-900 border border-slate-800 shadow-inner rounded-xl overflow-hidden"
                     >
                       {/* Technical visual scan lines */}
                       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none" />
@@ -481,7 +441,7 @@ export default function NumberRushGame() {
                             key={tile.id}
                             layout
                             className="absolute"
-                            style={{ left: `${tile.x}%`, top: `${tile.y}%`, transform: "translate(-50%, -50%)" }}
+                            style={{ left: `${tile.x}%`, top: `${tile.y}%`, translate: "-50% -50%", pointerEvents: tile.found ? "none" : "auto" }}
                             initial={{ scale: 0, opacity: 0 }}
                             animate={{
                               scale: tile.found ? 0 : 1,
@@ -494,6 +454,8 @@ export default function NumberRushGame() {
                               <div className={`absolute inset-0 rounded-xl translate-y-1 border-b-2 border-black/20 ${depthStyles}`} />
                               {/* Keycap */}
                               <button
+                                disabled={tile.found}
+                                aria-label={tile.isDecoy ? "Decoy bomb" : `Number ${tile.value}`}
                                 onClick={(e) => handleTileClick(tile, e)}
                                 className={`absolute inset-0 rounded-xl border-2 font-mono font-black text-[11px] sm:text-xs flex items-center justify-center select-none cursor-pointer active:translate-y-1 transition-all ${activeStyles}`}
                               >
@@ -508,13 +470,13 @@ export default function NumberRushGame() {
 
                   {/* ── 3. SUMMARY SCREEN ── */}
                   {phase === "result" && (
-                    <motion.div key="result" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} className="flex flex-col items-center justify-center text-center space-y-6 w-full max-w-sm mx-auto">
+                    <motion.div key="result" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, transition: { duration: 0 } }} className="flex flex-col items-center justify-center text-center space-y-6 w-full max-w-sm mx-auto">
                       <div className="relative w-16 h-16 mx-auto flex items-center justify-center bg-emerald-50 border border-emerald-100 rounded-2xl animate-pulse">
                         <Trophy className="w-8 h-8 text-emerald-500" />
                       </div>
                       <div className="space-y-1">
                         <div className="text-2xl font-mono font-black text-emerald-600 tracking-wider">
-                          {nextNumber - 1 >= diff.totalNumbers ? "CALIBRATION_COMPLETE" : "CALIBRATION_FAILED"}
+                          {nextNumber - 1 >= diff.totalNumbers ? "Round complete" : "CALIBRATION_FAILED"}
                         </div>
                         <p className="text-xs font-mono text-slate-500">
                           {nextNumber - 1 >= diff.totalNumbers
@@ -544,7 +506,7 @@ export default function NumberRushGame() {
                           <div className="absolute inset-0 rounded-xl bg-red-700 translate-y-1.5" />
                           <div className="relative py-3 rounded-xl bg-red-500 text-white font-mono font-bold tracking-widest text-xs border border-red-400 group-active:translate-y-1.5 flex items-center justify-center gap-2 shadow-md">
                             <RotateCcw className="w-4 h-4" />
-                            Retry Arena
+                            Play again
                           </div>
                         </motion.button>
                         <motion.button
@@ -568,11 +530,11 @@ export default function NumberRushGame() {
             {/* Abort */}
             {phase === "playing" && (
               <div className="flex justify-end">
-                <button
+                <button onClickCapture={() => window.dispatchEvent(new Event("game_abort_requested"))}
                   onClick={() => { if (timerRef.current) clearInterval(timerRef.current); setPhase("result"); }}
                   className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 hover:text-red-500 transition-colors cursor-pointer"
                 >
-                  Abort Session ×
+                  End round ×
                 </button>
               </div>
             )}

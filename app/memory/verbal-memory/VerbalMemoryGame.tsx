@@ -1,14 +1,19 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
-import { BookA, Play, RotateCcw, Trophy, Shield, Star, Zap, Flame, Brain } from "lucide-react";
-import { useGameSound } from "@/hooks/useGameSound";
-import { WORD_DICTIONARY } from "./dictionary";
-import { GameDashboardLayout } from "@/components/dashboard/GameDashboardLayout";
+import { GameProgressFeedback } from "@/components/GameProgressFeedback";
+import { useGameTimers } from "@/hooks/useGameTimers";
+import { useToolProgress } from "@/hooks/useToolProgress";
+import { safeStorage } from "@/utils/safeStorage";
+
 import { DashboardDifficultyCard } from "@/components/dashboard/DashboardDifficultyCard";
+import { GameDashboardLayout } from "@/components/dashboard/GameDashboardLayout";
 import { StatBox } from "@/components/dashboard/StatBox";
-import { motion, AnimatePresence } from "framer-motion";
+import { useGameSound } from "@/hooks/useGameSound";
 import { useTranslation } from "@/lib/i18n/context";
+import { AnimatePresence, motion } from "framer-motion";
+import { BookA, Brain, Flame, Play, RotateCcw, Shield, Star, Trophy, Zap } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { WORD_DICTIONARY } from "./dictionary";
 
 type DiffId = "beginner" | "easy" | "normal" | "hard" | "professional";
 
@@ -57,6 +62,8 @@ const DIFF_ORDER: DiffId[] = ["beginner", "easy", "normal", "hard", "professiona
 type GameState = "select" | "playing" | "gameover";
 
 export default function VerbalMemoryGame() {
+  const { setInterval, clearInterval, cancelTimers } = useGameTimers();
+
   const [gameState, setGameState] = useState<GameState>("select");
   const [diffId, setDiffId] = useState<DiffId>("normal");
   
@@ -77,22 +84,13 @@ export default function VerbalMemoryGame() {
   useEffect(() => {
     const saved: Record<DiffId, number> = { beginner: 0, easy: 0, normal: 0, hard: 0, professional: 0 };
     DIFF_ORDER.forEach(k => {
-      const v = localStorage.getItem(`verbal-hs-${k}`);
-      if (v) saved[k] = parseInt(v, 10);
+      const v = safeStorage.getItem(`reflextry_v2_verbal-hs-${k}`);
+      if (v !== null && Number.isFinite(Number(v))) saved[k] = Number(v);
     });
     setHighScores(saved);
   }, []);
 
-  useEffect(() => {
-    if (gameState !== "gameover") return;
-    setHighScores(prev => {
-      if (score > prev[diffId]) {
-        localStorage.setItem(`verbal-hs-${diffId}`, score.toString());
-        return { ...prev, [diffId]: score };
-      }
-      return prev;
-    });
-  }, [gameState, score, diffId]);
+
 
   const getNextWord = (currentSeen: Set<string>) => {
     const workingDictSize = Math.min(diff.wordBankSize, WORD_DICTIONARY.length);
@@ -154,6 +152,7 @@ export default function VerbalMemoryGame() {
   };
 
   const startGame = () => {
+    cancelTimers();
     play("click");
     setGameState("playing");
     setScore(0);
@@ -233,8 +232,17 @@ export default function VerbalMemoryGame() {
 
   const diffLabel = t(`game.diff${diff.id.charAt(0).toUpperCase() + diff.id.slice(1)}`, diff.label).toUpperCase();
 
+
+  const progress = useToolProgress({
+    toolId: "verbal-memory", phase: gameState, difficulty: diffId,
+    value: score, unit: "words", higherIsBetter: true,
+    terminal: ["gameover"], idle: ["select"], recordKey: "reflextry_v2_verbal-hs-",
+    setHighScores, cancelTimers, reset: () => setGameState("select"),
+    eligible: true,
+  });
+
   return (
-    <GameDashboardLayout
+    <GameDashboardLayout isIdle={gameState === "select"}
       title={t("verbalMemory.title", "VERBAL MEMORY")}
       subtitle={t("verbalMemory.subtitle", "LEXICAL RECOGNITION")}
       difficultySelector={difficultySelector}
@@ -244,16 +252,17 @@ export default function VerbalMemoryGame() {
       soundEnabled={!isMuted}
       onToggleSound={toggleMute}
     >
+      <GameProgressFeedback result={progress} />
       <AnimatePresence mode="wait">
         {gameState === "select" && (
           <motion.div
             key="start"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
+            exit={{ opacity: 0, transition: { duration: 0 } }}
             className="flex flex-col items-center justify-center text-center max-w-md"
           >
-            <div className="w-20 h-20 bg-indigo-50 dark:bg-indigo-900/20 rounded-full flex items-center justify-center mb-6">
+            <div className="game-start-icon w-20 h-20 bg-indigo-50 dark:bg-indigo-900/20 rounded-full flex items-center justify-center mb-6">
               <BookA className="w-10 h-10 text-indigo-500" />
             </div>
             <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-wider mb-4">
@@ -275,9 +284,9 @@ export default function VerbalMemoryGame() {
         {gameState === "playing" && (
           <motion.div
             key="game"
-            initial={{ opacity: 0 }}
+            initial={false}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            exit={{ opacity: 0, transition: { duration: 0 } }}
             className="w-full flex flex-col items-center justify-center p-4 max-w-2xl"
           >
             <div className="w-full mb-12 flex flex-col items-center">

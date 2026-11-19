@@ -1,12 +1,15 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import {
-  Trophy, Play, RotateCcw, Shield, Star, Zap, Flame,
-  Volume2, VolumeX, ArrowRight, Brain, Music
-} from "lucide-react";
+import { GameProgressFeedback } from "@/components/GameProgressFeedback";
+import { useGameTimers } from "@/hooks/useGameTimers";
+import { useLatestCallback } from "@/hooks/useLatestCallback";
+import { useToolProgress } from "@/hooks/useToolProgress";
+import { safeStorage } from "@/utils/safeStorage";
+
 import { useGameSound } from "@/hooks/useGameSound";
+import { AnimatePresence, motion } from "framer-motion";
+import { Brain, Flame, Music, Play, RotateCcw, Shield, Star, Trophy, Volume2, VolumeX, Zap } from "lucide-react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 /* ─────────────────────────────────────────────
    INLINE GRADIENT MAP (avoids Tailwind purging)
@@ -77,11 +80,12 @@ interface Note {
   hit: boolean;
   judged: boolean;
   judgment?: "perfect" | "good" | "miss";
+  judgedAt?: number;
 }
 
 const HIT_ZONE_Y = 82; // Hit zone alignment line % from top
-const PERFECT_THRESHOLD = 4.5;
-const GOOD_THRESHOLD = 11.5;
+const PERFECT_WINDOW_MS = 90;
+const GOOD_WINDOW_MS = 180;
 
 /* ─────────────────────────────────────────────
    DIFFICULTY CARD
@@ -97,6 +101,8 @@ function DifficultyCard({
     <motion.button
       whileHover={disabled ? {} : { scale: 1.02, y: -2 }}
       whileTap={disabled ? {} : { scale: 0.98 }}
+      disabled={disabled}
+      aria-pressed={selected}
       onClick={disabled ? undefined : onSelect}
       className={`relative w-full text-left rounded-2xl border-2 p-3 transition-all focus:outline-none overflow-hidden ${
         disabled ? "opacity-60 cursor-not-allowed" : "cursor-pointer"
@@ -106,7 +112,7 @@ function DifficultyCard({
         <div className="absolute inset-0 opacity-5" style={{ background: DIFF_GRADIENT[diffKey] }} />
       )}
       <div className="relative z-10 flex items-start gap-3">
-        <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: DIFF_GRADIENT[diffKey] }}>
+        <div className="difficulty-icon w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: DIFF_GRADIENT[diffKey] }}>
           <Icon className="w-4 h-4 text-white" />
         </div>
         <div className="flex-1 min-w-0">
@@ -132,6 +138,8 @@ function DifficultyCard({
    MAIN COMPONENT
 ───────────────────────────────────────────── */
 export default function RhythmTapGame() {
+  const { setTimeout, setInterval, clearInterval, cancelTimers } = useGameTimers();
+
     const { play } = useGameSound();
 
   const [phase, setPhase] = useState<"idle" | "playing" | "result">("idle");
@@ -151,7 +159,12 @@ export default function RhythmTapGame() {
   const noteIdRef = useRef(0);
   const animFrameRef = useRef<number>(0);
   const beatIndexRef = useRef(0);
-  const startTimeRef = useRef(0);
+  const lastFrameRef = useRef(0);
+  const runningRef = useRef(false);
+  const notesRef = useRef<Note[]>([]);
+  const missesRef = useRef(0);
+  const comboRef = useRef(0);
+  const [resultReason, setResultReason] = useState<"completed" | "failed" | "ended">("completed");
 
   const spawnTimerRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const diff = DIFFICULTIES[diffId];
@@ -160,38 +173,31 @@ export default function RhythmTapGame() {
     beginner: 0, easy: 0, normal: 0, hard: 0, professional: 0,
   });
 
-  const playSound = useCallback((type: Parameters<typeof play>[0]) => {
+  const playSound = useLatestCallback((type: Parameters<typeof play>[0]) => {
     if (!muted) play(type);
-  }, [muted, play]);
+  });
 
   // Load scores
   useEffect(() => {
     const saved: Record<DiffId, number> = { beginner: 0, easy: 0, normal: 0, hard: 0, professional: 0 };
     DIFF_ORDER.forEach(k => {
-      const v = localStorage.getItem(`rhythm-hs-${k}`);
-      if (v) saved[k] = parseInt(v);
+      const v = safeStorage.getItem(`reflextry_v2_rhythm-hs-${k}`);
+      if (v !== null && Number.isFinite(Number(v))) saved[k] = Number(v);
     });
     setHighScores(saved);
   }, []);
 
-  const stopGame = useCallback(() => {
-    if (animFrameRef.current) cancelAnimationFrame(animFrameRef.current);
-    if (spawnTimerRef.current) clearInterval(spawnTimerRef.current);
-
-    playSound("success");
+  const stopGame = useLatestCallback((reason: "completed" | "failed" | "ended" = "completed") => {
+    if (!runningRef.current) return;
+    runningRef.current = false;
+    cancelAnimationFrame(animFrameRef.current);
+    cancelTimers();
+    setResultReason(reason);
+    playSound(reason === "completed" ? "success" : "error");
     setPhase("result");
+  });
 
-    // Save high score
-    setHighScores(hs => {
-      if (score > hs[diffId]) {
-        localStorage.setItem(`rhythm-hs-${diffId}`, score.toString());
-        return { ...hs, [diffId]: score };
-      }
-      return hs;
-    });
-  }, [diffId, score, playSound]);
-
-  const spawnNotes = useCallback(() => {
+  const spawnNotes = useLatestCallback(() => {
     const d = DIFFICULTIES[diffId];
 
     if (beatIndexRef.current >= d.gameBeats) {
@@ -200,6 +206,7 @@ export default function RhythmTapGame() {
     }
 
     beatIndexRef.current++;
+    playSound("tick");
 
     // Decide notes count on this beat
     let notesCount = 1;
@@ -234,98 +241,71 @@ export default function RhythmTapGame() {
       });
     });
 
-    setNotes(prev => [...prev, ...newNotes]);
-  }, [diffId]);
+    notesRef.current = [...notesRef.current, ...newNotes];
+    setNotes(notesRef.current);
+  });
 
-  const updateLoop = useCallback(() => {
-    const d = DIFFICULTIES[diffId];
-    if (phase !== "playing") return;
-
-    setNotes(prev => {
-      const updated = prev.map(n => {
-        if (n.hit || n.judged) return n;
-        // speed falling rate
-        return { ...n, y: n.y + n.speed };
-      });
-
-      // Check missed notes
-      const judged = updated.map(n => {
-        if (!n.judged && !n.hit && n.y > HIT_ZONE_Y + GOOD_THRESHOLD) {
-          return { ...n, judged: true, judgment: "miss" as const };
-        }
-        return n;
-      });
-
-      // Handle new misses
-      const newMisses = judged.filter(n => n.judgment === "miss" && !prev.find(p => p.id === n.id && p.judged));
-      if (newMisses.length > 0) {
-        playSound("error");
-        setCombo(0);
-        setMisses(m => {
-          const nextM = m + newMisses.length;
-          if (nextM >= d.maxMisses) {
-            stopGame();
-          }
-          return nextM;
-        });
+  const updateLoop = useLatestCallback((time: number) => {
+    if (!runningRef.current || phase !== "playing") return;
+    const dt = lastFrameRef.current ? Math.min(0.05, (time - lastFrameRef.current) / 1000) : 0;
+    lastFrameRef.current = time;
+    let newlyMissed = 0;
+    notesRef.current = notesRef.current.map(note => {
+      if (note.judged) return note;
+      const y = note.y + note.speed * 60 * dt;
+      const lateMs = (y - HIT_ZONE_Y) / (note.speed * 60) * 1000;
+      if (lateMs > GOOD_WINDOW_MS) {
+        newlyMissed++;
+        return { ...note, y, judged: true, judgment: "miss" as const, judgedAt: time };
       }
-
-      const cleaned = judged.filter(n => n.y < 115);
-
-      // Check completion
-      if (beatIndexRef.current >= d.gameBeats && cleaned.filter(n => !n.judged && !n.hit).length === 0) {
-        setTimeout(() => stopGame(), 600);
+      return { ...note, y };
+    }).filter(note => !note.judgedAt || time - note.judgedAt < 450);
+    if (newlyMissed) {
+      missesRef.current += newlyMissed;
+      comboRef.current = 0;
+      setMisses(missesRef.current);
+      setCombo(0);
+      playSound("error");
+      if (missesRef.current >= diff.maxMisses) {
+        stopGame("failed");
+        return;
       }
-
-      return cleaned;
-    });
-
+    }
+    setNotes(notesRef.current);
+    if (beatIndexRef.current >= diff.gameBeats && notesRef.current.length === 0) {
+      stopGame("completed");
+      return;
+    }
     animFrameRef.current = requestAnimationFrame(updateLoop);
-  }, [phase, diffId, stopGame, playSound]);
+  });
 
-  const hitLane = useCallback((laneIndex: number) => {
-    if (phase !== "playing") return;
-
+  const hitLane = useLatestCallback((laneIndex: number) => {
+    if (!runningRef.current || phase !== "playing") return;
     setFlashLane(laneIndex);
     setTimeout(() => setFlashLane(null), 100);
-
-    setNotes(prev => {
-      const hittable = prev
-        .filter(n => n.lane === laneIndex && !n.hit && !n.judged)
-        .sort((a, b) => Math.abs(a.y - HIT_ZONE_Y) - Math.abs(b.y - HIT_ZONE_Y));
-
-      if (hittable.length === 0) return prev;
-
-      const closest = hittable[0];
-      const dist = Math.abs(closest.y - HIT_ZONE_Y);
-
-      if (dist <= PERFECT_THRESHOLD) {
-        playSound("click");
-        setScore(s => s + 100);
-        setPerfects(p => p + 1);
-        setCombo(c => {
-          const nc = c + 1;
-          setMaxCombo(mc => Math.max(mc, nc));
-          return nc;
-        });
-        return prev.map(n => n.id === closest.id ? { ...n, hit: true, judged: true, judgment: "perfect" as const } : n);
-      } else if (dist <= GOOD_THRESHOLD) {
-        playSound("click");
-        setScore(s => s + 50);
-        setGoods(g => g + 1);
-        setCombo(c => {
-          const nc = c + 1;
-          setMaxCombo(mc => Math.max(mc, nc));
-          return nc;
-        });
-        return prev.map(n => n.id === closest.id ? { ...n, hit: true, judged: true, judgment: "good" as const } : n);
-      }
-
-      return prev;
-    });
-  }, [phase, playSound]);
+    const note = notesRef.current.filter(n => n.lane === laneIndex && !n.judged)
+      .sort((a, b) => Math.abs(a.y - HIT_ZONE_Y) - Math.abs(b.y - HIT_ZONE_Y))[0];
+    if (!note) return;
+    const errorMs = Math.abs(note.y - HIT_ZONE_Y) / (note.speed * 60) * 1000;
+    if (errorMs > GOOD_WINDOW_MS) return;
+    const perfect = errorMs <= PERFECT_WINDOW_MS;
+    note.hit = true;
+    note.judged = true;
+    note.judgment = perfect ? "perfect" : "good";
+    note.judgedAt = performance.now();
+    comboRef.current++;
+    setScore(value => value + (perfect ? 100 : 50));
+    if (perfect) setPerfects(value => value + 1);
+    else setGoods(value => value + 1);
+    setCombo(comboRef.current);
+    setMaxCombo(value => Math.max(value, comboRef.current));
+    playSound("click");
+    setNotes([...notesRef.current]);
+  });
 
   const startGame = useCallback(() => {
+    cancelTimers();
+    cancelAnimationFrame(animFrameRef.current);
     setScore(0);
     setCombo(0);
     setMaxCombo(0);
@@ -333,30 +313,34 @@ export default function RhythmTapGame() {
     setGoods(0);
     setMisses(0);
     setNotes([]);
+    notesRef.current = [];
+    missesRef.current = 0;
+    comboRef.current = 0;
     noteIdRef.current = 0;
     beatIndexRef.current = 0;
-    startTimeRef.current = Date.now();
-
+    lastFrameRef.current = 0;
+    runningRef.current = true;
+    setResultReason("completed");
     setPhase("playing");
     playSound("start");
+  }, [cancelTimers, playSound]);
 
-    // Spawn notes periodically based on BPM
-    if (spawnTimerRef.current) clearInterval(spawnTimerRef.current);
-    const intervalMs = 60000 / diff.bpm;
-    spawnTimerRef.current = setInterval(() => {
-      spawnNotes();
-    }, intervalMs);
-
-    setTimeout(() => {
-      animFrameRef.current = requestAnimationFrame(updateLoop);
-    }, 50);
-
-  }, [diff, playSound, spawnNotes, updateLoop]);
+  useEffect(() => {
+    if (phase !== "playing") return;
+    runningRef.current = true;
+    spawnTimerRef.current = setInterval(spawnNotes, 60000 / diff.bpm);
+    animFrameRef.current = requestAnimationFrame(updateLoop);
+    return () => {
+      runningRef.current = false;
+      clearInterval(spawnTimerRef.current);
+      cancelAnimationFrame(animFrameRef.current);
+    };
+  }, [phase, diff.bpm, spawnNotes, updateLoop, setInterval, clearInterval]);
 
   // Keyboard controls listener
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (phase !== "playing") return;
+      if (phase !== "playing" || e.repeat) return;
       const key = e.key.toLowerCase();
       const d = DIFFICULTIES[diffId];
 
@@ -403,14 +387,24 @@ export default function RhythmTapGame() {
     };
   }, []);
 
+
+  const progress = useToolProgress({
+    toolId: "rhythm-tap", phase: phase, difficulty: diffId,
+    value: score, unit: "pts", higherIsBetter: true,
+    terminal: ["result"], idle: ["idle"], recordKey: "reflextry_v2_rhythm-hs-",
+    setHighScores, cancelTimers, reset: () => { runningRef.current = false; setPhase("idle"); },
+    eligible: resultReason !== "ended",
+  });
+
   return (
-    <div className="w-full bg-[#f8fafc] dark:bg-slate-800 text-slate-800 dark:text-white font-sans relative overflow-hidden py-8 px-4 sm:px-6 lg:px-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm mb-8">
+    <div data-idle={phase === "idle"} className="game-tool w-full bg-[#f8fafc] dark:bg-slate-800 text-slate-800 dark:text-white font-sans relative overflow-hidden py-8 px-4 sm:px-6 lg:px-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm mb-8">
+      <GameProgressFeedback result={progress} />
       {/* Background Grids */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.04)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none z-0" />
       <div className="absolute top-[-5%] left-[5%] w-[600px] h-[600px] bg-violet-500/[0.03] blur-[140px] rounded-full pointer-events-none z-0" />
       <div className="absolute bottom-[-5%] right-[5%] w-[500px] h-[500px] bg-cyan-500/[0.03] blur-[120px] rounded-full pointer-events-none z-0" />
 
-      <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center space-y-8 pt-8">
+      <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center space-y-6 pt-0">
 
         {/* Header */}
         <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="text-center w-full">
@@ -423,13 +417,13 @@ export default function RhythmTapGame() {
         </motion.div>
 
         {/* Main Layout */}
-        <div className="w-full grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-6 items-start">
+        <div className="game-columns w-full grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-6 items-start">
 
           {/* ═══ LEFT PANEL ═══ */}
-          <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 }} className="flex flex-col gap-4">
+          <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 }} className="game-settings flex flex-col gap-4">
 
             {/* Difficulty Selector */}
-            <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+            <div className="game-difficulty bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
               <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Difficulty Level</div>
               <div className="flex flex-col gap-2">
                 {DIFF_ORDER.map(key => (
@@ -446,7 +440,7 @@ export default function RhythmTapGame() {
             </div>
 
             {/* Stats Panel */}
-            <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+            <div className="game-stats bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
               <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Session Stats</div>
               <div className="grid grid-cols-2 gap-3">
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
@@ -494,7 +488,7 @@ export default function RhythmTapGame() {
           </motion.div>
 
           {/* ═══ RIGHT PANEL: Game Console ═══ */}
-          <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.15 }} className="flex flex-col gap-4">
+          <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.15 }} className="game-arena flex flex-col gap-4">
             <div className="relative bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-[0_8px_40px_rgba(15,23,42,0.07)]">
               <div className="absolute top-4 left-4 w-4 h-4 border-t-2 border-l-2 border-slate-200" />
               <div className="absolute top-4 right-4 w-4 h-4 border-t-2 border-r-2 border-slate-200" />
@@ -513,8 +507,8 @@ export default function RhythmTapGame() {
 
                   {/* ── 1. SELECT SCREEN ── */}
                   {phase === "idle" && (
-                    <motion.div key="select" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.95 }} className="flex flex-col items-center justify-center space-y-8 text-center w-full max-w-md">
-                      <div className="relative w-24 h-24 mx-auto flex items-center justify-center">
+                    <motion.div key="select" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, transition: { duration: 0 } }} className="flex flex-col items-center justify-center space-y-8 text-center w-full max-w-md">
+                      <div className="game-start-icon relative w-24 h-24 mx-auto flex items-center justify-center">
                         <div className="absolute inset-0 border border-dashed border-violet-400/20 rounded-full animate-[spin_20s_linear_infinite]" />
                         <div className="absolute inset-2 border border-dashed border-violet-400/30 rounded-full animate-[spin_12s_linear_infinite_reverse]" />
                         <div className="absolute inset-4 border border-violet-400/10 rounded-full animate-pulse bg-violet-400/[0.04] flex items-center justify-center">
@@ -524,15 +518,15 @@ export default function RhythmTapGame() {
                       <div className="space-y-2">
                         <h2 className="text-xl md:text-2xl font-mono font-bold text-slate-800 uppercase tracking-wider">Rhythm Tap</h2>
                         <p className="text-xs text-slate-600 dark:text-slate-400 max-w-xs mx-auto leading-relaxed">
-                          Tap the scrolling calibration bars as they cross the neon threshold alignment line. Time clicks to earn Perfect ratings.
+                          Press {diff.laneKeys.join(" / ")} or tap a lane when its notes reach the blue line. Follow the beat and build your combo.
                         </p>
-                        <p className={`text-xs font-mono font-semibold ${diff.textColor} mt-1`}>{diff.label}: {diff.description}</p>
+                        <p className={`game-level-description text-xs font-mono font-semibold ${diff.textColor} mt-1`}>{diff.label}: {diff.description}</p>
                       </div>
                       <motion.button whileHover={{ translateY: -2 }} whileTap={{ translateY: 6 }} onClick={startGame} className="relative group cursor-pointer focus:outline-none select-none">
                         <div className="absolute inset-0 rounded-xl translate-y-1.5 opacity-70 blur-sm" style={{ background: DIFF_GRADIENT[diffId] }} />
                         <div className="relative px-10 py-4 rounded-xl text-white font-mono font-bold tracking-widest text-sm flex items-center justify-center gap-2 group-active:translate-y-1.5 shadow-lg" style={{ background: DIFF_GRADIENT[diffId] }}>
                           <Play className="w-4 h-4 fill-current" />
-                          Initialize Rhythm Board
+                          Play
                         </div>
                       </motion.button>
                     </motion.div>
@@ -542,9 +536,9 @@ export default function RhythmTapGame() {
                   {phase === "playing" && (
                     <motion.div
                       key="playing"
-                      initial={{ opacity: 0 }}
+                      initial={false}
                       animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
+                      exit={{ opacity: 0, transition: { duration: 0 } }}
                       className="absolute inset-0 w-full h-full flex flex-col justify-between bg-slate-900 border border-slate-800 shadow-inner rounded-[2.5rem] overflow-hidden"
                     >
                       {/* Bounding fall viewport */}
@@ -554,8 +548,8 @@ export default function RhythmTapGame() {
                           {Array.from({ length: diff.lanesCount }).map((_, i) => (
                             <div
                               key={i}
-                              onClick={() => hitLane(i)}
-                              className={`flex-1 border-r border-slate-800/80 cursor-pointer last:border-none transition-colors duration-100 ${
+                              onPointerDown={(event) => { event.preventDefault(); hitLane(i); }}
+                              className={`touch-none flex-1 border-r border-slate-800/80 cursor-pointer last:border-none transition-colors duration-100 ${
                                 flashLane === i ? "bg-cyan-500/10" : ""
                               }`}
                             />
@@ -631,8 +625,9 @@ export default function RhythmTapGame() {
                           <div key={i} className="relative flex-1 h-full">
                             <div className="absolute inset-0 rounded-lg bg-slate-800 translate-y-0.5 border-b border-black/25" />
                             <button
-                              onClick={() => hitLane(i)}
-                              className={`absolute inset-0 rounded-lg border font-mono font-bold text-xs flex items-center justify-center transition-all duration-100 select-none cursor-pointer ${
+                              onPointerDown={(event) => { event.preventDefault(); hitLane(i); }}
+                              aria-label={`Tap lane ${i + 1}: ${k}`}
+                              className={`touch-none absolute inset-0 rounded-lg border font-mono font-bold text-xs flex items-center justify-center transition-all duration-100 select-none cursor-pointer ${
                                 flashLane === i
                                   ? "translate-y-0.5 bg-cyan-500 text-white border-cyan-400 shadow-md"
                                   : "bg-slate-900 border-slate-700 text-slate-400 active:translate-y-0.5 hover:text-white"
@@ -648,12 +643,12 @@ export default function RhythmTapGame() {
 
                   {/* ── 3. SUMMARY SCREEN ── */}
                   {phase === "result" && (
-                    <motion.div key="result" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} className="flex flex-col items-center justify-center text-center space-y-6 w-full max-w-sm mx-auto">
+                    <motion.div key="result" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, transition: { duration: 0 } }} className="flex flex-col items-center justify-center text-center space-y-6 w-full max-w-sm mx-auto">
                       <div className="relative w-16 h-16 mx-auto flex items-center justify-center bg-emerald-50 border border-emerald-100 rounded-2xl animate-pulse">
                         <Trophy className="w-8 h-8 text-emerald-500" />
                       </div>
                       <div className="space-y-1">
-                        <div className="text-2xl font-mono font-black text-emerald-600 tracking-wider">CALIBRATION_COMPLETE</div>
+                        <div className="text-2xl font-mono font-black text-emerald-600 tracking-wider">{resultReason === "completed" ? "Round complete" : resultReason === "failed" ? "Out of lives" : "Round ended"}</div>
                         <p className="text-xs font-mono text-slate-500">{diff.label} rhythm trial complete.</p>
                         {score >= highScores[diffId] && score > 0 && (
                           <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} className="inline-flex items-center gap-1.5 bg-amber-50 border border-amber-200 text-amber-700 rounded-full px-3 py-1 text-[11px] font-mono font-bold">
@@ -683,7 +678,7 @@ export default function RhythmTapGame() {
                           <div className="absolute inset-0 rounded-xl bg-red-700 translate-y-1.5" />
                           <div className="relative py-3 rounded-xl bg-red-500 text-white font-mono font-bold tracking-widest text-xs border border-red-400 group-active:translate-y-1.5 flex items-center justify-center gap-2 shadow-md">
                             <RotateCcw className="w-4 h-4" />
-                            Retry Arena
+                            Play again
                           </div>
                         </motion.button>
                         <motion.button
@@ -707,11 +702,11 @@ export default function RhythmTapGame() {
             {/* Abort */}
             {phase === "playing" && (
               <div className="flex justify-end">
-                <button
-                  onClick={stopGame}
+                <button onClickCapture={() => window.dispatchEvent(new Event("game_abort_requested"))}
+                  onClick={() => stopGame("ended")}
                   className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 hover:text-red-500 transition-colors cursor-pointer"
                 >
-                  Abort Session ×
+                  End round ×
                 </button>
               </div>
             )}

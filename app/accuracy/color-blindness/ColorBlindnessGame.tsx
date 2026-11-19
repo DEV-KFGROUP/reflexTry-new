@@ -1,12 +1,17 @@
 "use client";
 
-import { useState, useEffect, useCallback, useRef } from "react";
-import { Eye, Play, Shield, Star, Zap, Flame, Brain, SkipForward, Trophy, RotateCcw } from "lucide-react";
-import { useGameSound } from "@/hooks/useGameSound";
-import { GameDashboardLayout } from "@/components/dashboard/GameDashboardLayout";
+import { GameProgressFeedback } from "@/components/GameProgressFeedback";
+import { useGameTimers } from "@/hooks/useGameTimers";
+import { useToolProgress } from "@/hooks/useToolProgress";
+import { safeStorage } from "@/utils/safeStorage";
+
 import { DashboardDifficultyCard } from "@/components/dashboard/DashboardDifficultyCard";
+import { GameDashboardLayout } from "@/components/dashboard/GameDashboardLayout";
 import { StatBox } from "@/components/dashboard/StatBox";
-import { motion, AnimatePresence } from "framer-motion";
+import { useGameSound } from "@/hooks/useGameSound";
+import { AnimatePresence, motion } from "framer-motion";
+import { Brain, Eye, Flame, Play, RotateCcw, Shield, SkipForward, Star, Trophy, Zap } from "lucide-react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 type DiffId = "beginner" | "easy" | "normal" | "hard" | "professional";
 
@@ -58,6 +63,8 @@ const RED_GREEN_PALETTES = {
 };
 
 export default function ColorBlindnessGame() {
+  const { setTimeout, cancelTimers } = useGameTimers();
+
   const [gameState, setGameState] = useState<GameState>("select");
   const [diffId, setDiffId] = useState<DiffId>("normal");
   const [score, setScore] = useState(0);
@@ -78,22 +85,13 @@ export default function ColorBlindnessGame() {
   useEffect(() => {
     const saved: Record<DiffId, number> = { beginner: 0, easy: 0, normal: 0, hard: 0, professional: 0 };
     DIFF_ORDER.forEach(k => {
-      const v = localStorage.getItem(`colorblind-hs-${k}`);
-      if (v) saved[k] = parseInt(v, 10);
+      const v = safeStorage.getItem(`reflextry_v2_colorblind-hs-${k}`);
+      if (v !== null && Number.isFinite(Number(v))) saved[k] = Number(v);
     });
     setHighScores(saved);
   }, []);
 
-  useEffect(() => {
-    if (gameState !== "gameover") return;
-    setHighScores(prev => {
-      if (score > prev[diffId]) {
-        localStorage.setItem(`colorblind-hs-${diffId}`, score.toString());
-        return { ...prev, [diffId]: score };
-      }
-      return prev;
-    });
-  }, [gameState, score, diffId]);
+
 
   const generatePlate = useCallback((num: number, contrast: number) => {
     if (!canvasRef.current) return;
@@ -205,6 +203,7 @@ export default function ColorBlindnessGame() {
   }, []);
 
   const startGame = () => {
+    cancelTimers();
     play("click");
     setLevel(1);
     setScore(0);
@@ -279,6 +278,7 @@ export default function ColorBlindnessGame() {
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.repeat) return;
       if (gameState !== "playing" || isGenerating.current) return;
       if (e.key >= '0' && e.key <= '9') {
         handleInput(e.key);
@@ -322,49 +322,52 @@ export default function ColorBlindnessGame() {
     </>
   );
 
+
+  const progress = useToolProgress({
+    toolId: "color-blindness", phase: gameState, difficulty: diffId,
+    value: score, unit: "pts", higherIsBetter: true,
+    terminal: ["gameover"], idle: ["select"], recordKey: "reflextry_v2_colorblind-hs-",
+    setHighScores, cancelTimers, reset: () => setGameState("select"),
+    eligible: true,
+  });
+
   return (
-    <GameDashboardLayout
-      title="COLOR BLINDNESS"
-      subtitle="ISHIHARA VISUAL ACUITY"
+    <GameDashboardLayout isIdle={gameState === "select"}
+      title="COLOR VISION PRACTICE"
+      subtitle="GENERATED COLOR PATTERNS"
       difficultySelector={difficultySelector}
       stats={stats}
       arenaHeaderLeft={`ARENA // ${diff.label.toUpperCase()}`}
-      arenaHeaderRight="PERCEPTION DIAGNOSTIC"
+      arenaHeaderRight="NUMBER RECOGNITION"
       soundEnabled={!isMuted}
       onToggleSound={toggleMute}
     >
+      <GameProgressFeedback result={progress} />
       <AnimatePresence mode="wait">
         {gameState === "select" && (
           <motion.div
             key="start"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
+            exit={{ opacity: 0, transition: { duration: 0 } }}
             className="flex flex-col items-center justify-center text-center max-w-md"
           >
-            <div className="w-20 h-20 bg-rose-50 dark:bg-rose-900/20 rounded-full flex items-center justify-center mb-6">
+            <div className="game-start-icon w-20 h-20 bg-rose-50 dark:bg-rose-900/20 rounded-full flex items-center justify-center mb-6">
               <Eye className="w-10 h-10 text-rose-500" />
             </div>
             <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-wider mb-2">
-              Color Blindness Test
+              Color Vision Practice
             </h2>
             <p className="text-sm text-slate-500 dark:text-slate-400 mb-4 leading-relaxed">
-              Screen your red-green color contrast perception by identifying the numbers hidden within procedural dot plates.
+              Identify numbers in generated color-dot patterns. This is a practice game, not a diagnostic vision test.
             </p>
             
-            <div className="p-3 rounded-xl bg-amber-500/10 border border-amber-500/20 text-xs text-amber-700 dark:text-amber-300 flex items-start gap-2 text-left mb-6">
-              <Shield className="w-4 h-4 text-amber-500 flex-shrink-0 mt-0.5" />
-              <p className="leading-relaxed">
-                <strong>Educational Screening Only:</strong> This test is for personal screening and does not replace a formal clinical examination by an eye care professional.
-              </p>
-            </div>
-
             <button
               onClick={startGame}
               className="w-full sm:w-auto px-12 py-4 bg-rose-600 hover:bg-rose-700 text-white rounded-xl font-bold uppercase tracking-widest text-sm transition-all shadow-lg hover:shadow-rose-500/20 flex items-center justify-center gap-3"
             >
               <Play className="w-4 h-4 fill-current" />
-              Initialize Screening
+              Play
             </button>
           </motion.div>
         )}
@@ -372,9 +375,9 @@ export default function ColorBlindnessGame() {
         {(gameState !== "select" && gameState !== "gameover") && (
           <motion.div
             key="game"
-            initial={{ opacity: 0 }}
+            initial={false}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            exit={{ opacity: 0, transition: { duration: 0 } }}
             className="w-full h-full flex flex-col items-center justify-center p-2"
           >
             {/* Canvas Container */}
@@ -451,7 +454,7 @@ export default function ColorBlindnessGame() {
             animate={{ opacity: 1, scale: 1 }}
             className="flex flex-col items-center justify-center text-center"
           >
-            <div className="w-20 h-20 bg-rose-50 dark:bg-rose-900/20 rounded-full flex items-center justify-center mb-6">
+            <div className="game-start-icon w-20 h-20 bg-rose-50 dark:bg-rose-900/20 rounded-full flex items-center justify-center mb-6">
               <Trophy className="w-10 h-10 text-rose-500" />
             </div>
             <h2 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-widest mb-2">

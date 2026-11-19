@@ -1,12 +1,18 @@
 "use client";
 
-import { useState, useRef, useEffect, useCallback } from "react";
-import { ArrowLeftRight, Play, RotateCcw, Trophy, Shield, Star, Zap, Flame, Brain, ChevronLeft, ChevronRight } from "lucide-react";
-import { useGameSound } from "@/hooks/useGameSound";
-import { GameDashboardLayout } from "@/components/dashboard/GameDashboardLayout";
+import { GameProgressFeedback } from "@/components/GameProgressFeedback";
+import { useGameTimers } from "@/hooks/useGameTimers";
+import { useStimulusClock } from "@/hooks/useStimulusClock";
+import { useToolProgress } from "@/hooks/useToolProgress";
+import { safeStorage } from "@/utils/safeStorage";
+
 import { DashboardDifficultyCard } from "@/components/dashboard/DashboardDifficultyCard";
+import { GameDashboardLayout } from "@/components/dashboard/GameDashboardLayout";
 import { StatBox } from "@/components/dashboard/StatBox";
-import { motion, AnimatePresence } from "framer-motion";
+import { useGameSound } from "@/hooks/useGameSound";
+import { AnimatePresence, motion } from "framer-motion";
+import { ArrowLeftRight, Brain, ChevronLeft, ChevronRight, Flame, Play, RotateCcw, Shield, Star, Trophy, Zap } from "lucide-react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 type DiffId = "beginner" | "easy" | "normal" | "hard" | "professional";
 
@@ -57,6 +63,8 @@ type GameState = "select" | "playing" | "gameover";
 type Direction = "left" | "right";
 
 export default function FlankerGame() {
+  const { setTimeout, clearTimeout, cancelTimers } = useGameTimers();
+
   const [gameState, setGameState] = useState<GameState>("select");
   const [diffId, setDiffId] = useState<DiffId>("normal");
 
@@ -84,27 +92,19 @@ export default function FlankerGame() {
   });
 
   const { play, isMuted, toggleMute } = useGameSound();
+  const stimulusClock = useStimulusClock(trial, gameState === "playing" && !!arrows);
   const diff = DIFFICULTIES[diffId];
 
   useEffect(() => {
     const saved: Record<DiffId, number> = { beginner: 0, easy: 0, normal: 0, hard: 0, professional: 0 };
     DIFF_ORDER.forEach(k => {
-      const v = localStorage.getItem(`flanker-hs-${k}`);
-      if (v) saved[k] = parseInt(v, 10);
+      const v = safeStorage.getItem(`reflextry_v2_flanker-hs-${k}`);
+      if (v !== null && Number.isFinite(Number(v))) saved[k] = Number(v);
     });
     setHighScores(saved);
   }, []);
 
-  useEffect(() => {
-    if (gameState !== "gameover") return;
-    setHighScores(prev => {
-      if (score > prev[diffId]) {
-        localStorage.setItem(`flanker-hs-${diffId}`, score.toString());
-        return { ...prev, [diffId]: score };
-      }
-      return prev;
-    });
-  }, [gameState, score, diffId]);
+
 
   const clearTimer = () => {
     if (timerRef.current) {
@@ -182,7 +182,7 @@ export default function FlankerGame() {
     awaitingRef.current = false;
     clearTimer();
 
-    const rt = Math.round(performance.now() - stimulusStartRef.current);
+    const rt = Math.round(performance.now() - stimulusClock.current);
     const correct = dir === centerRef.current;
 
     if (correct) {
@@ -210,6 +210,7 @@ export default function FlankerGame() {
   useEffect(() => {
     if (gameState !== "playing") return;
     const onKey = (e: KeyboardEvent) => {
+      if (e.repeat) return;
       if (e.key === "ArrowLeft" || e.key === "a" || e.key === "A") {
         e.preventDefault();
         handleResponse("left");
@@ -223,6 +224,7 @@ export default function FlankerGame() {
   }, [gameState, handleResponse]);
 
   const startGame = () => {
+    cancelTimers();
     play("click");
     clearTimer();
     trialRef.current = 0;
@@ -275,8 +277,17 @@ export default function FlankerGame() {
     </>
   );
 
+
+  const progress = useToolProgress({
+    toolId: "flanker", phase: gameState, difficulty: diffId,
+    value: score, unit: "pts", higherIsBetter: true,
+    terminal: ["gameover"], idle: ["select"], recordKey: "reflextry_v2_flanker-hs-",
+    setHighScores, cancelTimers, reset: () => setGameState("select"),
+    eligible: true,
+  });
+
   return (
-    <GameDashboardLayout
+    <GameDashboardLayout isIdle={gameState === "select"}
       title="FLANKER"
       subtitle="ATTENTION CONTROL"
       difficultySelector={difficultySelector}
@@ -286,16 +297,17 @@ export default function FlankerGame() {
       soundEnabled={!isMuted}
       onToggleSound={toggleMute}
     >
+      <GameProgressFeedback result={progress} />
       <AnimatePresence mode="wait">
         {gameState === "select" && (
           <motion.div
             key="start"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
+            exit={{ opacity: 0, transition: { duration: 0 } }}
             className="flex flex-col items-center justify-center text-center max-w-md"
           >
-            <div className="w-20 h-20 bg-indigo-50 dark:bg-indigo-900/20 rounded-full flex items-center justify-center mb-6">
+            <div className="game-start-icon w-20 h-20 bg-indigo-50 dark:bg-indigo-900/20 rounded-full flex items-center justify-center mb-6">
               <ArrowLeftRight className="w-10 h-10 text-indigo-500" />
             </div>
             <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-wider mb-4">
@@ -309,7 +321,7 @@ export default function FlankerGame() {
               className="w-full sm:w-auto px-12 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold uppercase tracking-widest text-sm transition-all shadow-lg hover:shadow-indigo-500/20 flex items-center justify-center gap-3"
             >
               <Play className="w-4 h-4 fill-current" />
-              Initialize Test
+              Play
             </button>
           </motion.div>
         )}
@@ -317,9 +329,9 @@ export default function FlankerGame() {
         {gameState === "playing" && (
           <motion.div
             key="game"
-            initial={{ opacity: 0 }}
+            initial={false}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            exit={{ opacity: 0, transition: { duration: 0 } }}
             className="w-full flex flex-col items-center justify-center p-4 max-w-2xl"
           >
             <div className="mb-5 text-xs font-bold uppercase tracking-widest text-slate-400">
@@ -327,9 +339,9 @@ export default function FlankerGame() {
             </div>
             <motion.div
               key={arrows + String(trial)}
-              initial={{ opacity: 0, y: 6 }}
+              initial={false}
               animate={{ opacity: 1, y: 0 }}
-              className={`mb-10 px-6 py-5 rounded-2xl border transition-colors ${
+              className={`mb-10 px-6 py-5 rounded-2xl border ${
                 feedback === "correct"
                   ? "bg-emerald-50 dark:bg-emerald-900/30 border-emerald-300 dark:border-emerald-700"
                   : feedback === "wrong"

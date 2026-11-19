@@ -199,16 +199,10 @@ export default function StatisticsClient() {
                                 <div className="bg-green-500/20 p-3 rounded-2xl border border-green-500/30">
                                     <TrendingUp className="w-8 h-8 text-green-600 dark:text-green-400 drop-shadow-[0_0_8px_rgba(34,197,94,0.5)]" />
                                 </div>
-                                <h3 className="text-2xl font-bold text-foreground">{t("statistics.averageScore", "Average Score")}</h3>
+                                <h3 className="text-2xl font-bold text-foreground">Practice time</h3>
                             </div>
                             <p className="text-6xl font-black text-green-600 dark:text-green-400 drop-shadow-md relative z-10">
-                                {totalGames > 0 
-                                    ? Math.round(
-                                        Object.values(history).flat()
-                                            .reduce((sum, entry) => sum + entry.value, 0) / totalGames
-                                    )
-                                    : 0
-                                }
+                                {Math.round(Object.values(history).flat().reduce((sum, entry) => sum + (entry.duration || 0), 0) / 60)} min
                             </p>
                         </motion.div>
                     </div>
@@ -245,6 +239,7 @@ export default function StatisticsClient() {
                                         <h3 className="text-xl font-bold text-foreground mb-6 capitalize border-b border-black/10 dark:border-white/10 pb-4 group-hover:border-teal-500/30 transition-colors">
                                             {t(`tools.${toolId}.title`, toolId.replace(/-/g, " "))}
                                         </h3>
+                                        <p className="mb-4 text-sm text-muted-foreground">Comparing {stats.difficulty || "standard"} · {stats.inputMethod || "legacy input"} · {stats.unit}. Same setup only.</p>
                                         <div className="space-y-4">
                                             <div className="flex justify-between items-center bg-black/5 dark:bg-black/20 p-3 rounded-xl border border-black/5 dark:border-white/5">
                                                 <span className="text-muted-foreground font-medium">{t("statistics.totalSessions", "Games Played")}:</span>
@@ -253,7 +248,7 @@ export default function StatisticsClient() {
                                             <div className="flex justify-between items-center bg-teal-500/10 p-3 rounded-xl border border-teal-500/20">
                                                 <span className="text-teal-700 dark:text-teal-400 font-bold">{t("statistics.bestPerformance", "Best Score")}:</span>
                                                 <span className="text-teal-600 dark:text-teal-400 font-black text-lg drop-shadow-[0_0_8px_rgba(45,212,191,0.3)]">
-                                                    {stats.best.toLocaleString()}
+                                                    {stats.best.toLocaleString()} {stats.unit}
                                                 </span>
                                             </div>
                                             <div className="flex justify-between items-center bg-black/5 dark:bg-black/20 p-3 rounded-xl border border-black/5 dark:border-white/5">

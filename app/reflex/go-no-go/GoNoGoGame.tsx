@@ -1,12 +1,18 @@
 "use client";
 
-import { useState, useRef, useEffect, useCallback } from "react";
-import { CircleDot, Play, RotateCcw, Trophy, Shield, Star, Zap, Flame, Brain } from "lucide-react";
-import { useGameSound } from "@/hooks/useGameSound";
-import { GameDashboardLayout } from "@/components/dashboard/GameDashboardLayout";
+import { GameProgressFeedback } from "@/components/GameProgressFeedback";
+import { useGameTimers } from "@/hooks/useGameTimers";
+import { useStimulusClock } from "@/hooks/useStimulusClock";
+import { useToolProgress } from "@/hooks/useToolProgress";
+import { safeStorage } from "@/utils/safeStorage";
+
 import { DashboardDifficultyCard } from "@/components/dashboard/DashboardDifficultyCard";
+import { GameDashboardLayout } from "@/components/dashboard/GameDashboardLayout";
 import { StatBox } from "@/components/dashboard/StatBox";
-import { motion, AnimatePresence } from "framer-motion";
+import { useGameSound } from "@/hooks/useGameSound";
+import { AnimatePresence, motion } from "framer-motion";
+import { Brain, CircleDot, Flame, Play, RotateCcw, Shield, Star, Trophy, Zap } from "lucide-react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 type DiffId = "beginner" | "easy" | "normal" | "hard" | "professional";
 
@@ -56,6 +62,8 @@ type GameState = "select" | "playing" | "gameover";
 type Stimulus = "go" | "nogo" | "blank";
 
 export default function GoNoGoGame() {
+  const { setTimeout, clearTimeout, cancelTimers } = useGameTimers();
+
   const [gameState, setGameState] = useState<GameState>("select");
   const [diffId, setDiffId] = useState<DiffId>("normal");
 
@@ -79,27 +87,19 @@ export default function GoNoGoGame() {
   });
 
   const { play, isMuted, toggleMute } = useGameSound();
+  const stimulusClock = useStimulusClock(trial, stimulus !== "blank");
   const diff = DIFFICULTIES[diffId];
 
   useEffect(() => {
     const saved: Record<DiffId, number> = { beginner: 0, easy: 0, normal: 0, hard: 0, professional: 0 };
     DIFF_ORDER.forEach(k => {
-      const v = localStorage.getItem(`gonogo-hs-${k}`);
-      if (v) saved[k] = parseInt(v, 10);
+      const v = safeStorage.getItem(`reflextry_v2_gonogo-hs-${k}`);
+      if (v !== null && Number.isFinite(Number(v))) saved[k] = Number(v);
     });
     setHighScores(saved);
   }, []);
 
-  useEffect(() => {
-    if (gameState !== "gameover") return;
-    setHighScores(prev => {
-      if (score > prev[diffId]) {
-        localStorage.setItem(`gonogo-hs-${diffId}`, score.toString());
-        return { ...prev, [diffId]: score };
-      }
-      return prev;
-    });
-  }, [gameState, score, diffId]);
+
 
   const clearTimer = () => {
     if (timerRef.current) {
@@ -169,7 +169,7 @@ export default function GoNoGoGame() {
     if (stimulusRef.current === "blank" || respondedRef.current) return;
 
     respondedRef.current = true;
-    const rt = Math.round(performance.now() - stimulusStartRef.current);
+    const rt = Math.round(performance.now() - stimulusClock.current);
 
     if (stimulusRef.current === "go") {
       play("success");
@@ -187,6 +187,7 @@ export default function GoNoGoGame() {
   useEffect(() => {
     if (gameState !== "playing") return;
     const onKey = (e: KeyboardEvent) => {
+      if (e.repeat) return;
       if (e.code === "Space" || e.key === " ") {
         e.preventDefault();
         handlePress();
@@ -197,6 +198,7 @@ export default function GoNoGoGame() {
   }, [gameState, handlePress]);
 
   const startGame = () => {
+    cancelTimers();
     play("click");
     clearTimer();
     trialRef.current = 0;
@@ -245,8 +247,17 @@ export default function GoNoGoGame() {
     </>
   );
 
+
+  const progress = useToolProgress({
+    toolId: "go-no-go", phase: gameState, difficulty: diffId,
+    value: score, unit: "pts", higherIsBetter: true,
+    terminal: ["gameover"], idle: ["select"], recordKey: "reflextry_v2_gonogo-hs-",
+    setHighScores, cancelTimers, reset: () => setGameState("select"),
+    eligible: true,
+  });
+
   return (
-    <GameDashboardLayout
+    <GameDashboardLayout isIdle={gameState === "select"}
       title="GO / NO-GO"
       subtitle="INHIBITORY CONTROL"
       difficultySelector={difficultySelector}
@@ -256,16 +267,17 @@ export default function GoNoGoGame() {
       soundEnabled={!isMuted}
       onToggleSound={toggleMute}
     >
+      <GameProgressFeedback result={progress} />
       <AnimatePresence mode="wait">
         {gameState === "select" && (
           <motion.div
             key="start"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
+            exit={{ opacity: 0, transition: { duration: 0 } }}
             className="flex flex-col items-center justify-center text-center max-w-md"
           >
-            <div className="w-20 h-20 bg-indigo-50 dark:bg-indigo-900/20 rounded-full flex items-center justify-center mb-6">
+            <div className="game-start-icon w-20 h-20 bg-indigo-50 dark:bg-indigo-900/20 rounded-full flex items-center justify-center mb-6">
               <CircleDot className="w-10 h-10 text-indigo-500" />
             </div>
             <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-wider mb-4">
@@ -279,7 +291,7 @@ export default function GoNoGoGame() {
               className="w-full sm:w-auto px-12 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold uppercase tracking-widest text-sm transition-all shadow-lg hover:shadow-indigo-500/20 flex items-center justify-center gap-3"
             >
               <Play className="w-4 h-4 fill-current" />
-              Initialize Test
+              Play
             </button>
           </motion.div>
         )}
@@ -287,9 +299,9 @@ export default function GoNoGoGame() {
         {gameState === "playing" && (
           <motion.div
             key="game"
-            initial={{ opacity: 0 }}
+            initial={false}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            exit={{ opacity: 0, transition: { duration: 0 } }}
             className="w-full flex flex-col items-center justify-center p-4 max-w-2xl"
           >
             <div className="flex gap-3 mb-8">
@@ -302,12 +314,13 @@ export default function GoNoGoGame() {
             </div>
             <motion.button
               type="button"
-              onClick={handlePress}
+              onPointerDown={handlePress}
+              onClick={(event) => { if (event.detail === 0) handlePress(); }}
               key={stimulus + String(trial)}
-              initial={{ scale: 0.9, opacity: 0.7 }}
+              initial={false}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ duration: 0.18, ease: [0.16, 1, 0.3, 1] }}
-              className={`w-48 h-48 md:w-56 md:h-56 rounded-full flex items-center justify-center transition-colors active:scale-95 focus:outline-none focus-visible:ring-4 focus-visible:ring-indigo-300 ${
+              className={`w-48 h-48 md:w-56 md:h-56 rounded-full flex items-center justify-center active:scale-95 focus:outline-none focus-visible:ring-4 focus-visible:ring-indigo-300 ${
                 stimulus === "go"
                   ? "bg-emerald-500 shadow-[0_0_50px_rgba(34,197,94,0.45)]"
                   : stimulus === "nogo"

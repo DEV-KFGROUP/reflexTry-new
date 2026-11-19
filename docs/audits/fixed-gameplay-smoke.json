@@ -1,0 +1,518 @@
+[
+  {
+    "route": "/gaming/rhythm-tap",
+    "before": {
+      "start": {
+        "x": 123.328125,
+        "y": 474.59375,
+        "width": 143.328125,
+        "height": 52,
+        "top": 474.59375,
+        "right": 266.65625,
+        "bottom": 526.59375,
+        "left": 123.328125
+      },
+      "text": "RHYTHM TAP\nBeginner\nEasy\nNormal\nHard\nProfessional\nSESSION STATS\nSCORE\n0\nCOMBO / MAX\n0x / 0x\nREMAINING STRIKES\n10 ❤️\nSONG PROGRESS\n0/60\nSOUND ON\n\nPress the shown keys or tap a lane when its notes reach"
+    },
+    "first": {
+      "text": "RHYTHM TAP\nBeginner\nEasy\nNormal\nHard\nProfessional\nSESSION STATS\nSCORE\n0\nCOMBO / MAX\n0x / 0x\nREMAINING STRIKES\n10 ❤️\nSONG PROGRESS\n4/60\nSOUND ON\nHIT ZONE THRESHOLD\nD\nF\nJ\nK\nEnd round ×",
+      "notes": [
+        {
+          "top": "72.3466%",
+          "left": "1.5%"
+        },
+        {
+          "top": "46.8517%",
+          "left": "76.5%"
+        },
+        {
+          "top": "21.3517%",
+          "left": "51.5%"
+        },
+        {
+          "top": "-5%",
+          "left": "1.5%"
+        }
+      ],
+      "buttons": [
+        "Beginner2 Lanes (F/J) · Slow 90 BPM tempo · 30 beats · Unlimited strikes allowed",
+        "Easy3 Lanes (D/F/J) · 105 BPM tempo · 40 beats · Unlimited strikes",
+        "NormalACTIVE4 Lanes (D/F/J/K) · 120 BPM tempo · 60 beats · 10 strikes limit",
+        "Hard4 Lanes · High 145 BPM tempo · Dynamic speed changes · 5 strikes limit",
+        "Professional5 Lanes (adds Spacebar!) · Hyper 170 BPM tempo · Speed variations · 3 strikes limit",
+        "Sound On",
+        "D",
+        "F",
+        "J",
+        "K",
+        "End round ×"
+      ]
+    },
+    "second": {
+      "text": "RHYTHM TAP\nBeginner\nEasy\nNormal\nHard\nProfessional\nSESSION STATS\nSCORE\n0\nCOMBO / MAX\n0x / 0x\nREMAINING STRIKES\n8 ❤️\nSONG PROGRESS\n6/60\nSOUND ON\nHIT ZONE THRESHOLD\nD\nF\nJ\nK\nEnd round ×",
+      "notes": [
+        {
+          "top": "91.9%",
+          "left": "76.5%"
+        },
+        {
+          "top": "82.5517%",
+          "left": "51.5%"
+        },
+        {
+          "top": "56.2%",
+          "left": "1.5%"
+        },
+        {
+          "top": "31.5568%",
+          "left": "51.5%"
+        },
+        {
+          "top": "5.2051%",
+          "left": "1.5%"
+        }
+      ],
+      "buttons": [
+        "Beginner2 Lanes (F/J) · Slow 90 BPM tempo · 30 beats · Unlimited strikes allowed",
+        "Easy3 Lanes (D/F/J) · 105 BPM tempo · 40 beats · Unlimited strikes",
+        "NormalACTIVE4 Lanes (D/F/J/K) · 120 BPM tempo · 60 beats · 10 strikes limit",
+        "Hard4 Lanes · High 145 BPM tempo · Dynamic speed changes · 5 strikes limit",
+        "Professional5 Lanes (adds Spacebar!) · Hyper 170 BPM tempo · Speed variations · 3 strikes limit",
+        "Sound On",
+        "D",
+        "F",
+        "J",
+        "K",
+        "End round ×"
+      ]
+    },
+    "errors": []
+  },
+  {
+    "route": "/gaming/endless-dodge",
+    "before": {
+      "start": {
+        "x": 123.328125,
+        "y": 474.59375,
+        "width": 143.328125,
+        "height": 52,
+        "top": 474.59375,
+        "right": 266.65625,
+        "bottom": 526.59375,
+        "left": 123.328125
+      },
+      "text": "ENDLESS DODGE\nBeginner\nEasy\nNormal\nHard\nProfessional\nSESSION STATS\nSURVIVES DURATION\n0.00s\nLIVES REMAINING\n1 ❤️\nDODGE SPEED\n1.00x\nSOUND ON\n\nMove your mouse, or drag your finger inside the arena, to do"
+    },
+    "first": {
+      "text": "ENDLESS DODGE\nBeginner\nEasy\nNormal\nHard\nProfessional\nSESSION STATS\nSURVIVES DURATION\n1.93s\nLIVES REMAINING\n1 ❤️\nDODGE SPEED\n1.28x\nSOUND ON\nEnd round ×",
+      "notes": [
+        {
+          "top": "-129.373px",
+          "left": "2.06642px"
+        },
+        {
+          "top": "219.951px",
+          "left": "331.078px"
+        },
+        {
+          "top": "76.4078px",
+          "left": "287.648px"
+        },
+        {
+          "top": "-9px",
+          "left": "-9px"
+        }
+      ],
+      "buttons": [
+        "BeginnerSlow spawn · Fixed 45s trial duration · Unlimited lives (hit counter)",
+        "EasyModerate speed · 5 lives limit · Survive as long as possible",
+        "NormalACTIVEStandard speed · 1 life limit (Sudden Death) · Fast acceleration",
+        "HardFast speed · Yellow homing missiles chase your cursor · 1 life limit",
+        "ProfessionalUltra speed · Homing missiles + Purple expanding pulse bombs · 1 life",
+        "Sound On",
+        "End round ×"
+      ]
+    },
+    "second": {
+      "text": "ENDLESS DODGE\nBeginner\nEasy\nNormal\nHard\nProfessional\nSESSION STATS\nSURVIVES DURATION\n3.15s\nLIVES REMAINING\n1 ❤️\nDODGE SPEED\n1.45x\nSOUND ON\nEnd round ×",
+      "notes": [
+        {
+          "top": "-53.872px",
+          "left": "459.355px"
+        },
+        {
+          "top": "367.73px",
+          "left": "281.072px"
+        },
+        {
+          "top": "250.894px",
+          "left": "187.998px"
+        },
+        {
+          "top": "431.554px",
+          "left": "177.072px"
+        },
+        {
+          "top": "1.54926px",
+          "left": "202.011px"
+        },
+        {
+          "top": "-9px",
+          "left": "-9px"
+        }
+      ],
+      "buttons": [
+        "BeginnerSlow spawn · Fixed 45s trial duration · Unlimited lives (hit counter)",
+        "EasyModerate speed · 5 lives limit · Survive as long as possible",
+        "NormalACTIVEStandard speed · 1 life limit (Sudden Death) · Fast acceleration",
+        "HardFast speed · Yellow homing missiles chase your cursor · 1 life limit",
+        "ProfessionalUltra speed · Homing missiles + Purple expanding pulse bombs · 1 life",
+        "Sound On",
+        "End round ×"
+      ]
+    },
+    "errors": []
+  },
+  {
+    "route": "/gaming/stroop-drop",
+    "before": {
+      "start": {
+        "x": 123.328125,
+        "y": 495.59375,
+        "width": 143.328125,
+        "height": 52,
+        "top": 495.59375,
+        "right": 266.65625,
+        "bottom": 547.59375,
+        "left": 123.328125
+      },
+      "text": "STROOP DROP\nBeginner\nEasy\nNormal\nHard\nProfessional\nSESSION STATS\nCLEARED\n0\nACTIVE KEYS\nR\nB\nG\nY\nREMAINING LIVES\n1 ❤️\nSPEED SCALE\n1.00x\nSOUND ON\n\nIdentify the FONT COLOR of the falling words, ignoring t"
+    },
+    "first": {
+      "text": "STROOP DROP\nBeginner\nEasy\nNormal\nHard\nProfessional\nSESSION STATS\nCLEARED\n0\nACTIVE KEYS\nR\nB\nG\nY\nREMAINING LIVES\n3 ❤️\nSPEED SCALE\n1.00x\nSOUND ON\nDROP BOUNDARY LIMIT\nBLUE\nRED\n[R]\nBLUE\n[B]\nGREEN\n[G]\nYELLOW\n[Y]\nEnd round ×",
+      "notes": [],
+      "buttons": [
+        "Beginner2 colors (Red/Blue) · 80% congruent · 15 word trial · Unlimited lives",
+        "Easy3 colors (Red/Blue/Green) · 60% congruent · 20 word trial · Unlimited lives",
+        "NormalACTIVE4 colors (Red/Blue/Green/Yellow) · 40% congruent · 3 lives limit",
+        "Hard5 colors (adds Purple [P]) · 20% congruent · Word rotations · Sudden Death (1 life)",
+        "Professional6 colors (adds Orange [O]) · 10% congruent · Rotations + Blurs · Sudden Death (1 life)",
+        "Sound On",
+        "RED[R]",
+        "BLUE[B]",
+        "GREEN[G]",
+        "YELLOW[Y]",
+        "End round ×"
+      ]
+    },
+    "second": {
+      "text": "STROOP DROP\nBeginner\nEasy\nNormal\nHard\nProfessional\nSESSION STATS\nCLEARED\n0\nACTIVE KEYS\nR\nB\nG\nY\nREMAINING LIVES\n3 ❤️\nSPEED SCALE\n1.00x\nSOUND ON\nDROP BOUNDARY LIMIT\nBLUE\nGREEN\nRED\n[R]\nBLUE\n[B]\nGREEN\n[G]\nYELLOW\n[Y]\nEnd round ×",
+      "notes": [],
+      "buttons": [
+        "Beginner2 colors (Red/Blue) · 80% congruent · 15 word trial · Unlimited lives",
+        "Easy3 colors (Red/Blue/Green) · 60% congruent · 20 word trial · Unlimited lives",
+        "NormalACTIVE4 colors (Red/Blue/Green/Yellow) · 40% congruent · 3 lives limit",
+        "Hard5 colors (adds Purple [P]) · 20% congruent · Word rotations · Sudden Death (1 life)",
+        "Professional6 colors (adds Orange [O]) · 10% congruent · Rotations + Blurs · Sudden Death (1 life)",
+        "Sound On",
+        "RED[R]",
+        "BLUE[B]",
+        "GREEN[G]",
+        "YELLOW[Y]",
+        "End round ×"
+      ]
+    },
+    "errors": []
+  },
+  {
+    "route": "/gaming/target-tracking",
+    "before": {
+      "start": {
+        "x": 123.328125,
+        "y": 474.59375,
+        "width": 143.328125,
+        "height": 52,
+        "top": 474.59375,
+        "right": 266.65625,
+        "bottom": 526.59375,
+        "left": 123.328125
+      },
+      "text": "TARGET TRACKING\nBeginner\nEasy\nNormal\nHard\nProfessional\nSESSION STATS\nTRACKED DURATION\n0.00s\nSIGNAL LOCKED\nFALSE 🔴\nSPEED SCALE\n1.00x\nSOUND ON\n\nFollow the target with your mouse, or drag your finger ov"
+    },
+    "first": {
+      "text": "TARGET TRACKING\nBeginner\nEasy\nNormal\nHard\nProfessional\nSESSION STATS\nTRACKED DURATION\n0.00s\nSIGNAL LOCKED\nFALSE 🔴\nSPEED SCALE\n1.07x\nSOUND ON\nTELEMETRY STABILITY\n65.2%\nEnd round ×",
+      "notes": [],
+      "buttons": [
+        "BeginnerLarge target (72px) · Slow stable movement · Low damage rate · No glitches",
+        "EasyMedium target (60px) · Standard movement · Mild damage rate · No glitches",
+        "NormalACTIVEStandard target (48px) · Accelerates slowly · Survive as long as possible",
+        "HardSmall target (36px) · Periodically turns semi-invisible (Fades) · Rapid damage",
+        "ProfessionalTiny target (24px) · Periodic invisibility + heavy screen recoil jitter · Extreme drain",
+        "Sound On",
+        "End round ×"
+      ]
+    },
+    "second": {
+      "text": "TARGET TRACKING\nBeginner\nEasy\nNormal\nHard\nProfessional\nSESSION STATS\nTRACKED DURATION\n0.00s\nSIGNAL LOCKED\nFALSE 🔴\nSPEED SCALE\n1.12x\nSOUND ON\nTELEMETRY STABILITY\n39.0%\nEnd round ×",
+      "notes": [],
+      "buttons": [
+        "BeginnerLarge target (72px) · Slow stable movement · Low damage rate · No glitches",
+        "EasyMedium target (60px) · Standard movement · Mild damage rate · No glitches",
+        "NormalACTIVEStandard target (48px) · Accelerates slowly · Survive as long as possible",
+        "HardSmall target (36px) · Periodically turns semi-invisible (Fades) · Rapid damage",
+        "ProfessionalTiny target (24px) · Periodic invisibility + heavy screen recoil jitter · Extreme drain",
+        "Sound On",
+        "End round ×"
+      ]
+    },
+    "errors": []
+  },
+  {
+    "route": "/accuracy/precision-click",
+    "before": {
+      "start": {
+        "x": 123.328125,
+        "y": 495.59375,
+        "width": 143.328125,
+        "height": 52,
+        "top": 495.59375,
+        "right": 266.65625,
+        "bottom": 547.59375,
+        "left": 123.328125
+      },
+      "text": "PRECISION CLICK\nBeginner\nEasy\nNormal\nHard\nProfessional\nSESSION STATS\nTOTAL HITS\n0\nACCURACY\n100%\nERRORS / LIMIT\n0/6\nTIME BUFFER\n30s\nSOUND ON\n\nTest fine motor cursor positioning. Click target nodes. Pro"
+    },
+    "first": {
+      "text": "PRECISION CLICK\nBeginner\nEasy\nNormal\nHard\nProfessional\nSESSION STATS\nTOTAL HITS\n0\nACCURACY\n100%\nERRORS / LIMIT\n0/6\nTIME BUFFER\n28s\nSOUND ON\nTARGETS ON SCREEN: 2 | CLICKS RATE: 0.0/s\nEnd round ×",
+      "notes": [
+        {
+          "top": "307.472px",
+          "left": "115.496px"
+        },
+        {
+          "top": "274.575px",
+          "left": "192.958px"
+        }
+      ],
+      "buttons": [
+        "BeginnerLarge targets (65px) · 2.5s lifetime · Static placement · No strike limits",
+        "EasyMedium-large (52px) · 1.8s lifetime · Static placement · No strike limits",
+        "NormalACTIVEStandard targets (45px) · 1.2s lifetime · Up to 2 active targets · 6 lives limit",
+        "HardSmall targets (32px) · 850ms lifetime · Jittering vibrations · 4 lives limit",
+        "ProfessionalTiny targets (20px) · 600ms lifetime · Moving drift targets · 3 lives limit",
+        "Sound On",
+        "",
+        "",
+        "End round ×"
+      ]
+    },
+    "second": {
+      "text": "PRECISION CLICK\nBeginner\nEasy\nNormal\nHard\nProfessional\nSESSION STATS\nTOTAL HITS\n0\nACCURACY\n0%\nERRORS / LIMIT\n2/6\nTIME BUFFER\n27s\nSOUND ON\nTARGETS ON SCREEN: 2 | CLICKS RATE: 0.0/s\nEnd round ×",
+      "notes": [
+        {
+          "top": "307.472px",
+          "left": "115.496px"
+        },
+        {
+          "top": "274.575px",
+          "left": "192.958px"
+        },
+        {
+          "top": "348.352px",
+          "left": "79.4434px"
+        },
+        {
+          "top": "233.678px",
+          "left": "254.598px"
+        }
+      ],
+      "buttons": [
+        "BeginnerLarge targets (65px) · 2.5s lifetime · Static placement · No strike limits",
+        "EasyMedium-large (52px) · 1.8s lifetime · Static placement · No strike limits",
+        "NormalACTIVEStandard targets (45px) · 1.2s lifetime · Up to 2 active targets · 6 lives limit",
+        "HardSmall targets (32px) · 850ms lifetime · Jittering vibrations · 4 lives limit",
+        "ProfessionalTiny targets (20px) · 600ms lifetime · Moving drift targets · 3 lives limit",
+        "Sound On",
+        "",
+        "",
+        "",
+        "",
+        "End round ×"
+      ]
+    },
+    "errors": []
+  },
+  {
+    "route": "/memory/chimp-test",
+    "before": {
+      "start": {
+        "x": 46,
+        "y": 413.59375,
+        "width": 298,
+        "height": 52,
+        "top": 413.59375,
+        "right": 344,
+        "bottom": 465.59375,
+        "left": 46
+      },
+      "text": "CHIMP TEST\nBeginner\nEasy\nNormal\nHard\nProfessional\nSESSION STATS\nSCORE\n0\nBEST\n-\nLEVEL\n-\nLIVES\n3\nSOUND ON\n\nClick the squares in numerical order. Depending on the difficulty, numbers will hide after you "
+    },
+    "first": {
+      "text": "CHIMP TEST\nBeginner\nEasy\nNormal\nHard\nProfessional\nSESSION STATS\nSCORE\n0\nBEST\n-\nLEVEL\n1\nLIVES\n3\nSOUND ON\n4\n1\n3\n2",
+      "notes": [],
+      "buttons": [
+        "Beginner4x4 Grid · 3 Numbers · 5 Lives",
+        "Easy5x6 Grid · 4 Numbers · 3 Lives",
+        "NormalActive5x8 Grid · 4 Numbers · 3 Lives",
+        "Hard6x8 Grid · Auto hide (3s)",
+        "Professional8x8 Grid · Auto hide (1s)",
+        "Sound On",
+        "",
+        "",
+        "",
+        "",
+        "4",
+        "",
+        "1",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "3",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "2",
+        "",
+        "",
+        ""
+      ]
+    },
+    "second": {
+      "text": "CHIMP TEST\nBeginner\nEasy\nNormal\nHard\nProfessional\nSESSION STATS\nSCORE\n0\nBEST\n-\nLEVEL\n1\nLIVES\n3\nSOUND ON\n4\n1\n3\n2",
+      "notes": [],
+      "buttons": [
+        "Beginner4x4 Grid · 3 Numbers · 5 Lives",
+        "Easy5x6 Grid · 4 Numbers · 3 Lives",
+        "NormalActive5x8 Grid · 4 Numbers · 3 Lives",
+        "Hard6x8 Grid · Auto hide (3s)",
+        "Professional8x8 Grid · Auto hide (1s)",
+        "Sound On",
+        "",
+        "",
+        "",
+        "",
+        "4",
+        "",
+        "1",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "3",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "",
+        "2",
+        "",
+        "",
+        ""
+      ],
+      "afterClick": []
+    },
+    "errors": []
+  },
+  {
+    "route": "/accuracy/pattern-matching",
+    "before": {
+      "start": {
+        "x": 123.328125,
+        "y": 495.59375,
+        "width": 143.328125,
+        "height": 52,
+        "top": 495.59375,
+        "right": 266.65625,
+        "bottom": 547.59375,
+        "left": 123.328125
+      },
+      "text": "PATTERN MATCHING\nBeginner\nEasy\nNormal\nHard\nProfessional\nSESSION STATS\nMATCHED ROUNDS\n0/10\nACCURACY\n100%\nREMAINING LIVES\n3 ❤️\nEXPOSURE SPEED\n1400ms\nSOUND ON\n\nA spatial symbol pattern will appear briefl"
+    },
+    "first": {
+      "text": "PATTERN MATCHING\nBeginner\nEasy\nNormal\nHard\nProfessional\nSESSION STATS\nMATCHED ROUNDS\n0/10\nACCURACY\n100%\nREMAINING LIVES\n3 ❤️\nEXPOSURE SPEED\n1400ms\nSOUND ON\n\nSELECT MATCHING CONFIGURATION:\n\n●▲●▲○○\n○▲●▲○○\n●▲▲▲○○\n●▲●▲▲▲\nEnd round ×",
+      "notes": [],
+      "buttons": [
+        "Beginner4-length (●/○) · 2.2s visual exposure · 4 options · Unlimited lives",
+        "Easy5-length (●/○) · 1.8s exposure · 4 options · Unlimited lives",
+        "NormalACTIVE6-length (●/○/▲) · 1.4s exposure · 4 options · 3 lives limit",
+        "Hard7-length (●/○/▲/■) · 1.0s exposure · 6 options grid · 3 lives limit",
+        "Professional8-length (adds ◆) · 0.6s flash exposure · 8 options · 2 lives limitBest: 10/10 Match",
+        "Sound On",
+        "●▲●▲○○",
+        "○▲●▲○○",
+        "●▲▲▲○○",
+        "●▲●▲▲▲",
+        "End round ×"
+      ]
+    },
+    "second": {
+      "text": "PATTERN MATCHING\nBeginner\nEasy\nNormal\nHard\nProfessional\nSESSION STATS\nMATCHED ROUNDS\n0/10\nACCURACY\n100%\nREMAINING LIVES\n3 ❤️\nEXPOSURE SPEED\n1400ms\nSOUND ON\n\nSELECT MATCHING CONFIGURATION:\n\n●▲●▲○○\n○▲●▲○○\n●▲▲▲○○\n●▲●▲▲▲\nEnd round ×",
+      "notes": [],
+      "buttons": [
+        "Beginner4-length (●/○) · 2.2s visual exposure · 4 options · Unlimited lives",
+        "Easy5-length (●/○) · 1.8s exposure · 4 options · Unlimited lives",
+        "NormalACTIVE6-length (●/○/▲) · 1.4s exposure · 4 options · 3 lives limit",
+        "Hard7-length (●/○/▲/■) · 1.0s exposure · 6 options grid · 3 lives limit",
+        "Professional8-length (adds ◆) · 0.6s flash exposure · 8 options · 2 lives limitBest: 10/10 Match",
+        "Sound On",
+        "●▲●▲○○",
+        "○▲●▲○○",
+        "●▲▲▲○○",
+        "●▲●▲▲▲",
+        "End round ×"
+      ]
+    },
+    "errors": []
+  }
+]

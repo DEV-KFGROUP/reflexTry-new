@@ -1,12 +1,17 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
-import { Clock, Play, RotateCcw, Shield, Star, Zap, Flame, Brain, Trophy } from "lucide-react";
-import { useGameSound } from "@/hooks/useGameSound";
-import { GameDashboardLayout } from "@/components/dashboard/GameDashboardLayout";
+import { GameProgressFeedback } from "@/components/GameProgressFeedback";
+import { useGameTimers } from "@/hooks/useGameTimers";
+import { useToolProgress } from "@/hooks/useToolProgress";
+import { safeStorage } from "@/utils/safeStorage";
+
 import { DashboardDifficultyCard } from "@/components/dashboard/DashboardDifficultyCard";
+import { GameDashboardLayout } from "@/components/dashboard/GameDashboardLayout";
 import { StatBox } from "@/components/dashboard/StatBox";
-import { motion, AnimatePresence } from "framer-motion";
+import { useGameSound } from "@/hooks/useGameSound";
+import { AnimatePresence, motion } from "framer-motion";
+import { Brain, Clock, Flame, Play, RotateCcw, Shield, Star, Trophy, Zap } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 
 type DiffId = "beginner" | "easy" | "normal" | "hard" | "professional";
 
@@ -58,6 +63,8 @@ type GameState = "select" | "playing" | "holding" | "result" | "gameover";
 const ROUNDS = 3;
 
 export default function TimePerceptionGame() {
+  const { cancelTimers } = useGameTimers();
+
   const [gameState, setGameState] = useState<GameState>("select");
   const [diffId, setDiffId] = useState<DiffId>("normal");
   
@@ -68,7 +75,7 @@ export default function TimePerceptionGame() {
   const [isHolding, setIsHolding] = useState(false);
   const [failed, setFailed] = useState(false);
   const [highScores, setHighScores] = useState<Record<DiffId, number>>({
-    beginner: 0, easy: 0, normal: 0, hard: 0, professional: 0,
+    beginner: -1, easy: -1, normal: -1, hard: -1, professional: -1,
   });
   
   const startTimeRef = useRef<number>(0);
@@ -76,32 +83,22 @@ export default function TimePerceptionGame() {
   const diff = DIFFICULTIES[diffId];
 
   useEffect(() => {
-    const saved: Record<DiffId, number> = { beginner: 0, easy: 0, normal: 0, hard: 0, professional: 0 };
+    const saved: Record<DiffId, number> = { beginner: -1, easy: -1, normal: -1, hard: -1, professional: -1 };
     DIFF_ORDER.forEach(k => {
-      const v = localStorage.getItem(`timeperception-hs-${k}`);
-      if (v) saved[k] = parseInt(v, 10);
+      const v = safeStorage.getItem(`reflextry_v2_timeperception-hs-${k}`);
+      if (v !== null && Number.isFinite(Number(v))) saved[k] = Number(v);
     });
     setHighScores(saved);
   }, []);
 
-  useEffect(() => {
-    if (gameState !== "gameover" || scores.length === 0) return;
-    const avg = Math.round(scores.reduce((a, b) => a + b, 0) / scores.length);
-    setHighScores(prev => {
-      // Lower average error is better; 0 means unset
-      if (prev[diffId] === 0 || avg < prev[diffId]) {
-        localStorage.setItem(`timeperception-hs-${diffId}`, avg.toString());
-        return { ...prev, [diffId]: avg };
-      }
-      return prev;
-    });
-  }, [gameState, scores, diffId]);
+
 
   const getNewTarget = () => {
     return Math.floor(Math.random() * (diff.maxTarget - diff.minTarget + 1)) + diff.minTarget;
   };
 
   const startGame = () => {
+    cancelTimers();
     play("click");
     setGameState("playing");
     setRound(1);
@@ -193,13 +190,22 @@ export default function TimePerceptionGame() {
     <>
       <StatBox label="Round" value={gameState === "select" ? "-" : `${round}/${ROUNDS}`} />
       <StatBox label="Average Err" value={gameState === "select" || scores.length === 0 ? "-" : `${avgScore}ms`} highlight={scores.length > 0 && avgScore <= diff.marginMs} />
-      <StatBox label="Best Err" value={highScores[diffId] > 0 ? `${highScores[diffId]}ms` : "-"} highlight={highScores[diffId] > 0} />
+      <StatBox label="Best Err" value={highScores[diffId] >= 0 ? `${highScores[diffId]}ms` : "-"} highlight={highScores[diffId] >= 0} />
       <StatBox label="Target Margin" value={`±${diff.marginMs}ms`} />
     </>
   );
 
+
+  const progress = useToolProgress({
+    toolId: "time-perception", phase: gameState, difficulty: diffId,
+    value: avgScore, unit: "ms", higherIsBetter: false,
+    terminal: ["gameover"], idle: ["select"], recordKey: "reflextry_v2_timeperception-hs-",
+    setHighScores, cancelTimers, reset: () => setGameState("select"),
+    eligible: !failed,
+  });
+
   return (
-    <GameDashboardLayout
+    <GameDashboardLayout isIdle={gameState === "select"}
       title="TIME PERCEPTION"
       subtitle="INTERNAL CLOCK CALIBRATION"
       difficultySelector={difficultySelector}
@@ -209,16 +215,17 @@ export default function TimePerceptionGame() {
       soundEnabled={!isMuted}
       onToggleSound={toggleMute}
     >
+      <GameProgressFeedback result={progress} />
       <AnimatePresence mode="wait">
         {gameState === "select" && (
           <motion.div
             key="start"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
+            exit={{ opacity: 0, transition: { duration: 0 } }}
             className="flex flex-col items-center justify-center text-center max-w-md"
           >
-            <div className="w-20 h-20 bg-indigo-50 dark:bg-indigo-900/20 rounded-full flex items-center justify-center mb-6">
+            <div className="game-start-icon w-20 h-20 bg-indigo-50 dark:bg-indigo-900/20 rounded-full flex items-center justify-center mb-6">
               <Clock className="w-10 h-10 text-indigo-500" />
             </div>
             <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-wider mb-4">
@@ -232,7 +239,7 @@ export default function TimePerceptionGame() {
               className="w-full sm:w-auto px-12 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold uppercase tracking-widest text-sm transition-all shadow-lg hover:shadow-indigo-500/20 flex items-center justify-center gap-3"
             >
               <Play className="w-4 h-4 fill-current" />
-              Initialize Test
+              Play
             </button>
           </motion.div>
         )}
@@ -240,9 +247,9 @@ export default function TimePerceptionGame() {
         {(gameState === "playing" || gameState === "holding") && (
           <motion.div
             key="game"
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={false}
             animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
+            exit={{ opacity: 0, transition: { duration: 0 } }}
             className="w-full flex flex-col items-center justify-center"
           >
             <div className="text-slate-500 font-bold tracking-widest uppercase mb-4 text-sm">Target Time</div>
@@ -251,12 +258,18 @@ export default function TimePerceptionGame() {
             </div>
 
             <button
-              onMouseDown={handlePointerDown}
-              onMouseUp={handlePointerUp}
-              onMouseLeave={handlePointerUp}
-              onTouchStart={handlePointerDown}
-              onTouchEnd={handlePointerUp}
-              onTouchCancel={handlePointerUp}
+              onPointerDown={(event) => {
+                event.currentTarget.setPointerCapture(event.pointerId);
+                handlePointerDown(event);
+              }}
+              onPointerUp={handlePointerUp}
+              onPointerCancel={() => { setIsHolding(false); setGameState("playing"); }}
+              onKeyDown={(event) => {
+                if (!event.repeat && (event.key === " " || event.key === "Enter")) handlePointerDown(event);
+              }}
+              onKeyUp={(event) => {
+                if (event.key === " " || event.key === "Enter") handlePointerUp(event);
+              }}
               className={`
                 relative w-48 h-48 rounded-full flex items-center justify-center transition-all duration-300 touch-none select-none
                 ${isHolding 
@@ -282,7 +295,7 @@ export default function TimePerceptionGame() {
             key="result"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
+            exit={{ opacity: 0, transition: { duration: 0 } }}
             className="w-full flex flex-col items-center justify-center text-center max-w-lg"
           >
             <div className="text-slate-500 font-bold tracking-widest uppercase mb-2 text-sm">Target</div>
@@ -290,7 +303,7 @@ export default function TimePerceptionGame() {
 
             <div className="text-slate-500 font-bold tracking-widest uppercase mb-2 text-sm">You were</div>
             <div className={`text-6xl font-black mb-4 tabular-nums ${
-              lastResult && Math.abs(lastResult) <= diff.marginMs 
+              lastResult !== null && Math.abs(lastResult) <= diff.marginMs
                 ? "text-emerald-500" 
                 : "text-rose-500"
             }`}>
@@ -299,7 +312,7 @@ export default function TimePerceptionGame() {
             </div>
 
             <div className="text-slate-500 font-medium mb-12">
-              {lastResult && Math.abs(lastResult) <= diff.marginMs 
+              {lastResult !== null && Math.abs(lastResult) <= diff.marginMs
                 ? `Well done! Margin was ±${diff.marginMs}ms` 
                 : `Failed. You missed the ±${diff.marginMs}ms margin`}
             </div>
@@ -320,7 +333,7 @@ export default function TimePerceptionGame() {
             animate={{ opacity: 1, scale: 1 }}
             className="flex flex-col items-center justify-center text-center"
           >
-            <div className="w-20 h-20 bg-indigo-50 dark:bg-indigo-900/20 rounded-full flex items-center justify-center mb-6">
+            <div className="game-start-icon w-20 h-20 bg-indigo-50 dark:bg-indigo-900/20 rounded-full flex items-center justify-center mb-6">
               <Trophy className="w-10 h-10 text-indigo-500" />
             </div>
             <h2 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-widest mb-2">

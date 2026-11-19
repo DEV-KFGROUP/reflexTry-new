@@ -1,0 +1,17 @@
+[
+  {
+    "route": "/gaming/endless-dodge",
+    "gesture": "real emulated touch drag",
+    "position": [
+      {
+        "left": "186px",
+        "top": "257px"
+      }
+    ]
+  },
+  {
+    "route": "/gaming/target-tracking",
+    "gesture": "real emulated touch tracking",
+    "stats": "SESSION STATS\nTRACKED DURATION\n0.73s\nSIGNAL LOCKED\nFALSE 🔴\nSPEED SCALE\n1.07x\nSOUND ON"
+  }
+]

@@ -1,12 +1,15 @@
 "use client";
 
-import { useState, useEffect, useCallback, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import {
-  Play, RotateCcw, Trophy, Zap, Target, AlertTriangle,
-  Shield, Star, Flame, Volume2, VolumeX, ArrowRight, Brain
-} from "lucide-react";
+import { GameProgressFeedback } from "@/components/GameProgressFeedback";
+import { useGameTimers } from "@/hooks/useGameTimers";
+import { useLatestCallback } from "@/hooks/useLatestCallback";
+import { useToolProgress } from "@/hooks/useToolProgress";
+import { safeStorage } from "@/utils/safeStorage";
+
 import { useGameSound } from "@/hooks/useGameSound";
+import { AnimatePresence, motion } from "framer-motion";
+import { Brain, Flame, Play, RotateCcw, Shield, Star, Target, Trophy, Volume2, VolumeX, Zap } from "lucide-react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 /* ─────────────────────────────────────────────
    INLINE GRADIENT MAP (avoids Tailwind purging)
@@ -92,6 +95,8 @@ function DifficultyCard({
     <motion.button
       whileHover={disabled ? {} : { scale: 1.02, y: -2 }}
       whileTap={disabled ? {} : { scale: 0.98 }}
+      disabled={disabled}
+      aria-pressed={selected}
       onClick={disabled ? undefined : onSelect}
       className={`relative w-full text-left rounded-2xl border-2 p-3 transition-all focus:outline-none overflow-hidden ${
         disabled ? "opacity-60 cursor-not-allowed" : "cursor-pointer"
@@ -101,7 +106,7 @@ function DifficultyCard({
         <div className="absolute inset-0 opacity-5" style={{ background: DIFF_GRADIENT[diffKey] }} />
       )}
       <div className="relative z-10 flex items-start gap-3">
-        <div className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: DIFF_GRADIENT[diffKey] }}>
+        <div className="difficulty-icon w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: DIFF_GRADIENT[diffKey] }}>
           <Icon className="w-4 h-4 text-white" />
         </div>
         <div className="flex-1 min-w-0">
@@ -127,6 +132,8 @@ function DifficultyCard({
    MAIN GAME
 ───────────────────────────────────────────── */
 export default function WhackAMoleGame() {
+  const { setTimeout, setInterval, clearInterval, cancelTimers } = useGameTimers();
+
     const { play } = useGameSound();
 
   const [phase, setPhase] = useState<"idle" | "playing" | "result">("idle");
@@ -154,16 +161,16 @@ export default function WhackAMoleGame() {
   const expiryTimerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const diff = DIFFICULTIES[diffId];
-  const playSound = useCallback((type: Parameters<typeof play>[0]) => {
+  const playSound = useLatestCallback((type: Parameters<typeof play>[0]) => {
     if (!muted) play(type);
-  }, [muted, play]);
+  });
 
   // Load scores
   useEffect(() => {
     const saved: Record<DiffId, number> = { beginner: 0, easy: 0, normal: 0, hard: 0, professional: 0 };
     DIFF_ORDER.forEach(k => {
-      const v = localStorage.getItem(`whackamole-hs-${k}`);
-      if (v) saved[k] = parseInt(v);
+      const v = safeStorage.getItem(`reflextry_v2_whackamole-hs-${k}`);
+      if (v !== null && Number.isFinite(Number(v))) saved[k] = Number(v);
     });
     setHighScores(saved);
   }, []);
@@ -179,29 +186,19 @@ export default function WhackAMoleGame() {
   // Time buffer countdown loop
   useEffect(() => {
     if (phase !== "playing") return;
+    const deadline = performance.now() + 30000;
     timerRef.current = setInterval(() => {
-      setTimeLeft(prev => {
-        if (prev <= 1) {
-          clearInterval(timerRef.current!);
-          clearInterval(spawnTimerRef.current!);
-          playSound("levelUp");
-          setPhase("result");
-
-          // Save high score
-          setHighScores(hs => {
-            if (score > hs[diffId]) {
-              localStorage.setItem(`whackamole-hs-${diffId}`, score.toString());
-              return { ...hs, [diffId]: score };
-            }
-            return hs;
-          });
-          return 0;
-        }
-        return prev - 1;
-      });
-    }, 1000);
+      const remaining = Math.max(0, Math.ceil((deadline - performance.now()) / 1000));
+      setTimeLeft(remaining);
+      if (remaining === 0) {
+        clearInterval(timerRef.current);
+        clearInterval(spawnTimerRef.current);
+        setPhase("result");
+        playSound("levelUp");
+      }
+    }, 100);
     return () => clearInterval(timerRef.current!);
-  }, [phase, score, diffId, playSound]);
+  }, [phase, playSound, setInterval, clearInterval]);
 
   // Spawning moles loop
   useEffect(() => {
@@ -240,7 +237,7 @@ export default function WhackAMoleGame() {
           id: moleIdRef.current,
           hole,
           type,
-          appearedAt: Date.now(),
+          appearedAt: performance.now(),
           lifespan: activeLifespan
         };
         return [...prev, newMole];
@@ -255,7 +252,7 @@ export default function WhackAMoleGame() {
   useEffect(() => {
     if (phase !== "playing") return;
     expiryTimerRef.current = setInterval(() => {
-      const now = Date.now();
+      const now = performance.now();
       setMoles(prev => {
         const expired = prev.filter(m => now - m.appearedAt >= m.lifespan);
         
@@ -283,6 +280,7 @@ export default function WhackAMoleGame() {
   }, [phase, playSound]);
 
   const startGame = useCallback(() => {
+    cancelTimers();
     if (timerRef.current) clearInterval(timerRef.current);
     if (spawnTimerRef.current) clearInterval(spawnTimerRef.current);
     if (expiryTimerRef.current) clearInterval(expiryTimerRef.current);
@@ -359,14 +357,24 @@ export default function WhackAMoleGame() {
     return "grid-cols-5 max-w-lg"; // 25 holes
   };
 
+
+  const progress = useToolProgress({
+    toolId: "whack-a-mole", phase: phase, difficulty: diffId,
+    value: score, unit: "pts", higherIsBetter: true,
+    terminal: ["result"], idle: ["idle"], recordKey: "reflextry_v2_whackamole-hs-",
+    setHighScores, cancelTimers, reset: () => setPhase("idle"),
+    eligible: true,
+  });
+
   return (
-    <div className="w-full bg-[#f8fafc] dark:bg-slate-800 text-slate-800 dark:text-white font-sans relative overflow-hidden py-8 px-4 sm:px-6 lg:px-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm mb-8">
+    <div data-idle={phase === "idle"} className="game-tool w-full bg-[#f8fafc] dark:bg-slate-800 text-slate-800 dark:text-white font-sans relative overflow-hidden py-8 px-4 sm:px-6 lg:px-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm mb-8">
+      <GameProgressFeedback result={progress} />
       {/* Background Grids */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.04)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none z-0" />
       <div className="absolute top-[-5%] left-[5%] w-[600px] h-[600px] bg-violet-500/[0.03] blur-[140px] rounded-full pointer-events-none z-0" />
       <div className="absolute bottom-[-5%] right-[5%] w-[500px] h-[500px] bg-cyan-500/[0.03] blur-[120px] rounded-full pointer-events-none z-0" />
 
-      <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center space-y-8 pt-8">
+      <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center space-y-6 pt-0">
 
         {/* Header */}
         <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="text-center w-full">
@@ -379,13 +387,13 @@ export default function WhackAMoleGame() {
         </motion.div>
 
         {/* Main Layout */}
-        <div className="w-full grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-6 items-start">
+        <div className="game-columns w-full grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-6 items-start">
 
           {/* ═══ LEFT PANEL ═══ */}
-          <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 }} className="flex flex-col gap-4">
+          <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 }} className="game-settings flex flex-col gap-4">
 
             {/* Difficulty Selector */}
-            <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+            <div className="game-difficulty bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
               <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Difficulty Level</div>
               <div className="flex flex-col gap-2">
                 {DIFF_ORDER.map(key => (
@@ -402,7 +410,7 @@ export default function WhackAMoleGame() {
             </div>
 
             {/* Stats Panel */}
-            <div className="bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
+            <div className="game-stats bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
               <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Session Stats</div>
               <div className="grid grid-cols-2 gap-3">
                 <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
@@ -455,7 +463,7 @@ export default function WhackAMoleGame() {
           </motion.div>
 
           {/* ═══ RIGHT PANEL: Game Console ═══ */}
-          <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.15 }} className="flex flex-col gap-4">
+          <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.15 }} className="game-arena flex flex-col gap-4">
             <div className="relative bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-[0_8px_40px_rgba(15,23,42,0.07)]">
               <div className="absolute top-4 left-4 w-4 h-4 border-t-2 border-l-2 border-slate-200" />
               <div className="absolute top-4 right-4 w-4 h-4 border-t-2 border-r-2 border-slate-200" />
@@ -474,8 +482,8 @@ export default function WhackAMoleGame() {
 
                   {/* ── 1. SELECT SCREEN ── */}
                   {phase === "idle" && (
-                    <motion.div key="select" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.95 }} className="flex flex-col items-center justify-center space-y-8 text-center w-full max-w-md">
-                      <div className="relative w-24 h-24 mx-auto flex items-center justify-center">
+                    <motion.div key="select" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, transition: { duration: 0 } }} className="flex flex-col items-center justify-center space-y-8 text-center w-full max-w-md">
+                      <div className="game-start-icon relative w-24 h-24 mx-auto flex items-center justify-center">
                         <div className="absolute inset-0 border border-dashed border-violet-400/20 rounded-full animate-[spin_20s_linear_infinite]" />
                         <div className="absolute inset-2 border border-dashed border-violet-400/30 rounded-full animate-[spin_12s_linear_infinite_reverse]" />
                         <div className="absolute inset-4 border border-violet-400/10 rounded-full animate-pulse bg-violet-400/[0.04] flex items-center justify-center">
@@ -487,13 +495,13 @@ export default function WhackAMoleGame() {
                         <p className="text-xs text-slate-600 dark:text-slate-400 max-w-xs mx-auto leading-relaxed">
                           Whack the emerging molecular moles as fast as possible. Avoid hit bombs and empty holes.
                         </p>
-                        <p className={`text-xs font-mono font-semibold ${diff.textColor} mt-1`}>{diff.label}: {diff.description}</p>
+                        <p className={`game-level-description text-xs font-mono font-semibold ${diff.textColor} mt-1`}>{diff.label}: {diff.description}</p>
                       </div>
                       <motion.button whileHover={{ translateY: -2 }} whileTap={{ translateY: 6 }} onClick={startGame} className="relative group cursor-pointer focus:outline-none select-none">
                         <div className="absolute inset-0 rounded-xl translate-y-1.5 opacity-70 blur-sm" style={{ background: DIFF_GRADIENT[diffId] }} />
                         <div className="relative px-10 py-4 rounded-xl text-white font-mono font-bold tracking-widest text-sm flex items-center justify-center gap-2 group-active:translate-y-1.5 shadow-lg" style={{ background: DIFF_GRADIENT[diffId] }}>
                           <Play className="w-4 h-4 fill-current" />
-                          Initialize Gallery
+                          Play
                         </div>
                       </motion.button>
                     </motion.div>
@@ -503,9 +511,9 @@ export default function WhackAMoleGame() {
                   {phase === "playing" && (
                     <motion.div
                       key="playing"
-                      initial={{ opacity: 0 }}
+                      initial={false}
                       animate={{ opacity: 1 }}
-                      exit={{ opacity: 0 }}
+                      exit={{ opacity: 0, transition: { duration: 0 } }}
                       onClick={handleBoardMiss}
                       className={`grid gap-4.5 p-5 bg-slate-50 border border-slate-200 shadow-inner rounded-[2rem] w-full justify-center ${getGridColsClass()}`}
                     >
@@ -527,7 +535,7 @@ export default function WhackAMoleGame() {
                           >
                             <AnimatePresence>
                               {activeMole && (
-                                <motion.button
+                                <motion.button aria-label={`${activeMole.type} mole`}
                                   key={activeMole.id}
                                   initial={{ y: 55, scale: 0.7 }}
                                   animate={{ y: 0, scale: 1 }}
@@ -549,12 +557,12 @@ export default function WhackAMoleGame() {
 
                   {/* ── 3. SUMMARY SCREEN ── */}
                   {phase === "result" && (
-                    <motion.div key="gameover" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0 }} className="flex flex-col items-center justify-center text-center space-y-6 w-full max-w-sm">
+                    <motion.div key="gameover" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, transition: { duration: 0 } }} className="flex flex-col items-center justify-center text-center space-y-6 w-full max-w-sm">
                       <div className="relative w-16 h-16 mx-auto flex items-center justify-center bg-emerald-50 border border-emerald-100 rounded-2xl animate-pulse">
                         <Trophy className="w-8 h-8 text-emerald-500" />
                       </div>
                       <div className="space-y-1">
-                        <div className="text-2xl font-mono font-black text-emerald-600 tracking-wider">CALIBRATION_COMPLETE</div>
+                        <div className="text-2xl font-mono font-black text-emerald-600 tracking-wider">Round complete</div>
                         <p className="text-xs font-mono text-slate-500">{diff.label} mode whacking completed.</p>
                         {score >= highScores[diffId] && score > 0 && (
                           <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} className="inline-flex items-center gap-1.5 bg-amber-50 border border-amber-200 text-amber-700 rounded-full px-3 py-1 text-[11px] font-mono font-bold">
@@ -580,7 +588,7 @@ export default function WhackAMoleGame() {
                           <div className="absolute inset-0 rounded-xl bg-red-700 translate-y-1.5" />
                           <div className="relative py-3 rounded-xl bg-red-500 text-white font-mono font-bold tracking-widest text-xs border border-red-400 group-active:translate-y-1.5 flex items-center justify-center gap-2 shadow-md">
                             <RotateCcw className="w-4 h-4" />
-                            Retry Arena
+                            Play again
                           </div>
                         </motion.button>
                         <motion.button
@@ -604,7 +612,7 @@ export default function WhackAMoleGame() {
             {/* Abort */}
             {phase === "playing" && (
               <div className="flex justify-end">
-                <button
+                <button onClickCapture={() => window.dispatchEvent(new Event("game_abort_requested"))}
                   onClick={() => {
                     if (timerRef.current) clearInterval(timerRef.current);
                     if (spawnTimerRef.current) clearInterval(spawnTimerRef.current);
@@ -613,7 +621,7 @@ export default function WhackAMoleGame() {
                   }}
                   className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 hover:text-red-500 transition-colors cursor-pointer"
                 >
-                  Abort Session ×
+                  End round ×
                 </button>
               </div>
             )}

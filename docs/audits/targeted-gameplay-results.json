@@ -1,0 +1,224 @@
+[
+  {
+    "route": "/gaming/endless-dodge",
+    "btns": [
+      "BeginnerSlow spawn · Fixed 45s trial duration · Unlimited lives (hit counter)",
+      "EasyModerate speed · 5 lives limit · Survive as long as possible",
+      "NormalACTIVEStandard speed · 1 life limit (Sudden Death) · Fast acceleration",
+      "HardFast speed · Yellow homing missiles chase your cursor · 1 life limit",
+      "ProfessionalUltra speed · Homing missiles + Purple expanding pulse bombs · 1 life",
+      "Sound On",
+      "Commence Evasion Trial"
+    ],
+    "action": "Commence Evasion Trial",
+    "first": {
+      "text": "ENDLESS DODGE\n\nSPATIAL EVASION TELEMETRY\n\nDIFFICULTY LEVEL\nBeginner\n\nSlow spawn · Fixed 45s trial duration · Unlimited lives (hit counter)\n\nEasy\n\nModerate speed · 5 lives limit · Survive as long as possible\n\nNormal\nACTIVE\n\nStandard speed · 1 life limit (Sudden Death) · Fast acceleration\n\nHard\n\nFast speed · Yellow homing missiles chase your cursor · 1 life limit\n\nProfessional\n\nUltra speed · Homing missiles + Purple expanding pulse bombs · 1 life\n\nSESSION STATS\nSURVIVES DURATION\n0.00s\nLIVES REMAINING\n1 ❤️\nDODGE SPEED\n1.00x\nSOUND ON\nAbort Session ×\nHow It Works & Tips\n\nMaster the game with our comprehensive guide and improvement strategies.\n\nJUMP TO\nAbout\nHow to Play\nPro Tips\nFAQ\nAbout This Test\nAbout Endless Dodge Game - Bullet Evasion Agility | Reflextry\nEndless Dodge Game - Bullet Evasion Agility | Reflextry is an interactive testing module designed to evaluate your cognitive enhancement and skill development. The test provides standardized metric capture and immediate feedback on your mental agility, focus, and precision.\nWhat Endless Dodge Game - Bullet Evasion Agility | Reflextry Measures\nEndless Dodge Game - Bullet Evasion Agility | Reflextry isolates specific sensorimotor and cognitive parameters. By measuring your baseline performance under controlled visual conditions, you can track changes in speed, accuracy, and consistency across sessions.\nHow Scoring Works\nScores are recorded based on accuracy, response latency, and task completion time. Higher difficulty levels tighten timing tolerances and introduce visual distractors to test performance limits.\nHow to Perform the Test\nThe module requires improving your performance through consistent practice. Ensure your testing environment has minimal distraction and consistent lighting to establish reliable benchmark dat",
+      "notes": [
+        {
+          "top": "171px",
+          "left": "241px",
+          "width": "18px"
+        }
+      ],
+      "cells": []
+    },
+    "second": {
+      "text": "ENDLESS DODGE\n\nSPATIAL EVASION TELEMETRY\n\nDIFFICULTY LEVEL\nBeginner\n\nSlow spawn · Fixed 45s trial duration · Unlimited lives (hit counter)\n\nEasy\n\nModerate speed · 5 lives limit · Survive as long as possible\n\nNormal\nACTIVE\n\nStandard speed · 1 life limit (Sudden Death) · Fast acceleration\n\nHard\n\nFast speed · Yellow homing missiles chase your cursor · 1 life limit\n\nProfessional\n\nUltra speed · Homing missiles + Purple expanding pulse bombs · 1 life\n\nSESSION STATS\nSURVIVES DURATION\n0.00s\nLIVES REMAINING\n1 ❤️\nDODGE SPEED\n1.00x\nSOUND ON\nAbort Session ×\nHow It Works & Tips\n\nMaster the game with our comprehensive guide and improvement strategies.\n\nJUMP TO\nAbout\nHow to Play\nPro Tips\nFAQ\nAbout This Test\nAbout Endless Dodge Game - Bullet Evasion Agility | Reflextry\nEndless Dodge Game - Bullet Evasion Agility | Reflextry is an interactive testing module designed to evaluate your cognitive enhancement and skill development. The test provides standardized metric capture and immediate feedback on your mental agility, focus, and precision.\nWhat Endless Dodge Game - Bullet Evasion Agility | Reflextry Measures\nEndless Dodge Game - Bullet Evasion Agility | Reflextry isolates specific sensorimotor and cognitive parameters. By measuring your baseline performance under controlled visual conditions, you can track changes in speed, accuracy, and consistency across sessions.\nHow Scoring Works\nScores are recorded based on accuracy, response latency, and task completion time. Higher difficulty levels tighten timing tolerances and introduce visual distractors to test performance limits.\nHow to Perform the Test\nThe module requires improving your performance through consistent practice. Ensure your testing environment has minimal distraction and consistent lighting to establish reliable benchmark dat",
+      "notes": [
+        {
+          "top": "171px",
+          "left": "241px",
+          "width": "18px"
+        }
+      ],
+      "cells": []
+    }
+  },
+  {
+    "route": "/gaming/stroop-drop",
+    "btns": [
+      "Beginner2 colors (Red/Blue) · 80% congruent · 15 word trial · Unlimited lives",
+      "Easy3 colors (Red/Blue/Green) · 60% congruent · 20 word trial · Unlimited lives",
+      "NormalACTIVE4 colors (Red/Blue/Green/Yellow) · 40% congruent · 3 lives limit",
+      "Hard5 colors (adds Purple [P]) · 20% congruent · Word rotations · Sudden Death (1 life)",
+      "Professional6 colors (adds Orange [O]) · 10% congruent · Rotations + Blurs · Sudden Death (1 life)",
+      "Sound On",
+      "Commence Interference Test"
+    ],
+    "action": "Commence Interference Test",
+    "first": {
+      "text": "STROOP DROP\n\nINHIBITORY REFLEX CALIBRATION\n\nDIFFICULTY LEVEL\nBeginner\n\n2 colors (Red/Blue) · 80% congruent · 15 word trial · Unlimited lives\n\nEasy\n\n3 colors (Red/Blue/Green) · 60% congruent · 20 word trial · Unlimited lives\n\nNormal\nACTIVE\n\n4 colors (Red/Blue/Green/Yellow) · 40% congruent · 3 lives limit\n\nHard\n\n5 colors (adds Purple [P]) · 20% congruent · Word rotations · Sudden Death (1 life)\n\nProfessional\n\n6 colors (adds Orange [O]) · 10% congruent · Rotations + Blurs · Sudden Death (1 life)\n\nSESSION STATS\nCLEARED\n0\nACTIVE KEYS\nR\nB\nG\nY\nREMAINING LIVES\n3 ❤️\nSPEED SCALE\n1.00x\nSOUND ON\nDROP BOUNDARY LIMIT\nRED\n[R]\nBLUE\n[B]\nGREEN\n[G]\nYELLOW\n[Y]\nAbort Session ×\nHow It Works & Tips\n\nMaster the game with our comprehensive guide and improvement strategies.\n\nJUMP TO\nAbout\nHow to Play\nPro Tips\nFAQ\nAbout This Test\nAbout Stroop Effect Test - Impulse & Attention Game | Reflextry\nStroop Effect Test - Impulse & Attention Game | Reflextry is an interactive testing module designed to evaluate your cognitive enhancement and skill development. The test provides standardized metric capture and immediate feedback on your mental agility, focus, and precision.\nWhat Stroop Effect Test - Impulse & Attention Game | Reflextry Measures\nStroop Effect Test - Impulse & Attention Game | Reflextry isolates specific sensorimotor and cognitive parameters. By measuring your baseline performance under controlled visual conditions, you can track changes in speed, accuracy, and consistency across sessions.\nHow Scoring Works\nScores are recorded based on accuracy, response latency, and task completion time. Higher difficulty levels tighten timing tolerances and introduce visual distractors to test performance limits.\nHow to Perform the Test\nThe module requires improving your performance through consistent prac",
+      "notes": [],
+      "cells": []
+    },
+    "second": {
+      "text": "STROOP DROP\n\nINHIBITORY REFLEX CALIBRATION\n\nDIFFICULTY LEVEL\nBeginner\n\n2 colors (Red/Blue) · 80% congruent · 15 word trial · Unlimited lives\n\nEasy\n\n3 colors (Red/Blue/Green) · 60% congruent · 20 word trial · Unlimited lives\n\nNormal\nACTIVE\n\n4 colors (Red/Blue/Green/Yellow) · 40% congruent · 3 lives limit\n\nHard\n\n5 colors (adds Purple [P]) · 20% congruent · Word rotations · Sudden Death (1 life)\n\nProfessional\n\n6 colors (adds Orange [O]) · 10% congruent · Rotations + Blurs · Sudden Death (1 life)\n\nSESSION STATS\nCLEARED\n0\nACTIVE KEYS\nR\nB\nG\nY\nREMAINING LIVES\n3 ❤️\nSPEED SCALE\n1.00x\nSOUND ON\nDROP BOUNDARY LIMIT\nRED\n[R]\nBLUE\n[B]\nGREEN\n[G]\nYELLOW\n[Y]\nAbort Session ×\nHow It Works & Tips\n\nMaster the game with our comprehensive guide and improvement strategies.\n\nJUMP TO\nAbout\nHow to Play\nPro Tips\nFAQ\nAbout This Test\nAbout Stroop Effect Test - Impulse & Attention Game | Reflextry\nStroop Effect Test - Impulse & Attention Game | Reflextry is an interactive testing module designed to evaluate your cognitive enhancement and skill development. The test provides standardized metric capture and immediate feedback on your mental agility, focus, and precision.\nWhat Stroop Effect Test - Impulse & Attention Game | Reflextry Measures\nStroop Effect Test - Impulse & Attention Game | Reflextry isolates specific sensorimotor and cognitive parameters. By measuring your baseline performance under controlled visual conditions, you can track changes in speed, accuracy, and consistency across sessions.\nHow Scoring Works\nScores are recorded based on accuracy, response latency, and task completion time. Higher difficulty levels tighten timing tolerances and introduce visual distractors to test performance limits.\nHow to Perform the Test\nThe module requires improving your performance through consistent prac",
+      "notes": [],
+      "cells": []
+    }
+  },
+  {
+    "route": "/gaming/target-tracking",
+    "btns": [
+      "BeginnerLarge target (72px) · Slow stable movement · Low damage rate · No glitches",
+      "EasyMedium target (60px) · Standard movement · Mild damage rate · No glitches",
+      "NormalACTIVEStandard target (48px) · Accelerates slowly · Survive as long as possible",
+      "HardSmall target (36px) · Periodically turns semi-invisible (Fades) · Rapid damage",
+      "ProfessionalTiny target (24px) · Periodic invisibility + heavy screen recoil jitter · Extreme drain",
+      "Sound On",
+      "Commence Pursuit Calibration"
+    ],
+    "action": "Commence Pursuit Calibration",
+    "first": {
+      "text": "TARGET TRACKING\n\nPRECISION SMOOTH PURSUIT TRACKER\n\nDIFFICULTY LEVEL\nBeginner\n\nLarge target (72px) · Slow stable movement · Low damage rate · No glitches\n\nEasy\n\nMedium target (60px) · Standard movement · Mild damage rate · No glitches\n\nNormal\nACTIVE\n\nStandard target (48px) · Accelerates slowly · Survive as long as possible\n\nHard\n\nSmall target (36px) · Periodically turns semi-invisible (Fades) · Rapid damage\n\nProfessional\n\nTiny target (24px) · Periodic invisibility + heavy screen recoil jitter · Extreme drain\n\nSESSION STATS\nTRACKED DURATION\n0.00s\nSIGNAL LOCKED\nFALSE 🔴\nSPEED SCALE\n1.00x\nSOUND ON\nTELEMETRY STABILITY\n100.0%\nAbort Session ×\nHow It Works & Tips\n\nMaster the game with our comprehensive guide and improvement strategies.\n\nJUMP TO\nAbout\nHow to Play\nPro Tips\nFAQ\nAbout This Test\nAbout Target Tracking Aim Trainer - Mouse Aim Warmup | Reflextry\nTarget Tracking Aim Trainer - Mouse Aim Warmup | Reflextry is an interactive testing module designed to evaluate your cognitive enhancement and skill development. The test provides standardized metric capture and immediate feedback on your mental agility, focus, and precision.\nWhat Target Tracking Aim Trainer - Mouse Aim Warmup | Reflextry Measures\nTarget Tracking Aim Trainer - Mouse Aim Warmup | Reflextry isolates specific sensorimotor and cognitive parameters. By measuring your baseline performance under controlled visual conditions, you can track changes in speed, accuracy, and consistency across sessions.\nHow Scoring Works\nScores are recorded based on accuracy, response latency, and task completion time. Higher difficulty levels tighten timing tolerances and introduce visual distractors to test performance limits.\nHow to Perform the Test\nThe module requires improving your performance through consistent practice. Ensure your",
+      "notes": [],
+      "cells": []
+    },
+    "second": {
+      "text": "TARGET TRACKING\n\nPRECISION SMOOTH PURSUIT TRACKER\n\nDIFFICULTY LEVEL\nBeginner\n\nLarge target (72px) · Slow stable movement · Low damage rate · No glitches\n\nEasy\n\nMedium target (60px) · Standard movement · Mild damage rate · No glitches\n\nNormal\nACTIVE\n\nStandard target (48px) · Accelerates slowly · Survive as long as possible\n\nHard\n\nSmall target (36px) · Periodically turns semi-invisible (Fades) · Rapid damage\n\nProfessional\n\nTiny target (24px) · Periodic invisibility + heavy screen recoil jitter · Extreme drain\n\nSESSION STATS\nTRACKED DURATION\n0.00s\nSIGNAL LOCKED\nFALSE 🔴\nSPEED SCALE\n1.00x\nSOUND ON\nTELEMETRY STABILITY\n100.0%\nAbort Session ×\nHow It Works & Tips\n\nMaster the game with our comprehensive guide and improvement strategies.\n\nJUMP TO\nAbout\nHow to Play\nPro Tips\nFAQ\nAbout This Test\nAbout Target Tracking Aim Trainer - Mouse Aim Warmup | Reflextry\nTarget Tracking Aim Trainer - Mouse Aim Warmup | Reflextry is an interactive testing module designed to evaluate your cognitive enhancement and skill development. The test provides standardized metric capture and immediate feedback on your mental agility, focus, and precision.\nWhat Target Tracking Aim Trainer - Mouse Aim Warmup | Reflextry Measures\nTarget Tracking Aim Trainer - Mouse Aim Warmup | Reflextry isolates specific sensorimotor and cognitive parameters. By measuring your baseline performance under controlled visual conditions, you can track changes in speed, accuracy, and consistency across sessions.\nHow Scoring Works\nScores are recorded based on accuracy, response latency, and task completion time. Higher difficulty levels tighten timing tolerances and introduce visual distractors to test performance limits.\nHow to Perform the Test\nThe module requires improving your performance through consistent practice. Ensure your",
+      "notes": [],
+      "cells": []
+    }
+  },
+  {
+    "route": "/gaming/rhythm-tap",
+    "btns": [
+      "Beginner2 Lanes (F/J) · Slow 90 BPM tempo · 30 beats · Unlimited strikes allowed",
+      "Easy3 Lanes (D/F/J) · 105 BPM tempo · 40 beats · Unlimited strikes",
+      "NormalACTIVE4 Lanes (D/F/J/K) · 120 BPM tempo · 60 beats · 10 strikes limit",
+      "Hard4 Lanes · High 145 BPM tempo · Dynamic speed changes · 5 strikes limit",
+      "Professional5 Lanes (adds Spacebar!) · Hyper 170 BPM tempo · Speed variations · 3 strikes limit",
+      "Sound On",
+      "Initialize Rhythm Board"
+    ],
+    "action": "Initialize Rhythm Board",
+    "first": {
+      "text": "RHYTHM TAP\n\nBEAT PRECISION ALIGNMENT\n\nDIFFICULTY LEVEL\nBeginner\n\n2 Lanes (F/J) · Slow 90 BPM tempo · 30 beats · Unlimited strikes allowed\n\nEasy\n\n3 Lanes (D/F/J) · 105 BPM tempo · 40 beats · Unlimited strikes\n\nNormal\nACTIVE\n\n4 Lanes (D/F/J/K) · 120 BPM tempo · 60 beats · 10 strikes limit\n\nHard\n\n4 Lanes · High 145 BPM tempo · Dynamic speed changes · 5 strikes limit\n\nProfessional\n\n5 Lanes (adds Spacebar!) · Hyper 170 BPM tempo · Speed variations · 3 strikes limit\n\nSESSION STATS\nSCORE\n0\nCOMBO / MAX\n0x / 0x\nREMAINING STRIKES\n10 ❤️\nSONG PROGRESS\n4/60\nSOUND ON\nHIT ZONE THRESHOLD\nD\nF\nJ\nK\nAbort Session ×\nHow It Works & Tips\n\nMaster the game with our comprehensive guide and improvement strategies.\n\nJUMP TO\nAbout\nHow to Play\nPro Tips\nFAQ\nAbout This Test\nAbout Rhythm Tap Game - Audio-Visual Beat Timing Test | Reflextry\nRhythm Tap Game - Audio-Visual Beat Timing Test | Reflextry is an interactive testing module designed to evaluate your cognitive enhancement and skill development. The test provides standardized metric capture and immediate feedback on your mental agility, focus, and precision.\nWhat Rhythm Tap Game - Audio-Visual Beat Timing Test | Reflextry Measures\nRhythm Tap Game - Audio-Visual Beat Timing Test | Reflextry isolates specific sensorimotor and cognitive parameters. By measuring your baseline performance under controlled visual conditions, you can track changes in speed, accuracy, and consistency across sessions.\nHow Scoring Works\nScores are recorded based on accuracy, response latency, and task completion time. Higher difficulty levels tighten timing tolerances and introduce visual distractors to test performance limits.\nHow to Perform the Test\nThe module requires improving your performance through consistent practice. Ensure your testing environment has minimal dist",
+      "notes": [
+        {
+          "top": "-5%",
+          "left": "51.5%",
+          "width": "22%"
+        },
+        {
+          "top": "-5%",
+          "left": "1.5%",
+          "width": "22%"
+        },
+        {
+          "top": "-5%",
+          "left": "51.5%",
+          "width": "22%"
+        },
+        {
+          "top": "-5%",
+          "left": "1.5%",
+          "width": "22%"
+        },
+        {
+          "top": "-5%",
+          "left": "1.5%",
+          "width": "22%"
+        }
+      ],
+      "cells": []
+    },
+    "second": {
+      "text": "RHYTHM TAP\n\nBEAT PRECISION ALIGNMENT\n\nDIFFICULTY LEVEL\nBeginner\n\n2 Lanes (F/J) · Slow 90 BPM tempo · 30 beats · Unlimited strikes allowed\n\nEasy\n\n3 Lanes (D/F/J) · 105 BPM tempo · 40 beats · Unlimited strikes\n\nNormal\nACTIVE\n\n4 Lanes (D/F/J/K) · 120 BPM tempo · 60 beats · 10 strikes limit\n\nHard\n\n4 Lanes · High 145 BPM tempo · Dynamic speed changes · 5 strikes limit\n\nProfessional\n\n5 Lanes (adds Spacebar!) · Hyper 170 BPM tempo · Speed variations · 3 strikes limit\n\nSESSION STATS\nSCORE\n0\nCOMBO / MAX\n0x / 0x\nREMAINING STRIKES\n10 ❤️\nSONG PROGRESS\n6/60\nSOUND ON\nHIT ZONE THRESHOLD\nD\nF\nJ\nK\nAbort Session ×\nHow It Works & Tips\n\nMaster the game with our comprehensive guide and improvement strategies.\n\nJUMP TO\nAbout\nHow to Play\nPro Tips\nFAQ\nAbout This Test\nAbout Rhythm Tap Game - Audio-Visual Beat Timing Test | Reflextry\nRhythm Tap Game - Audio-Visual Beat Timing Test | Reflextry is an interactive testing module designed to evaluate your cognitive enhancement and skill development. The test provides standardized metric capture and immediate feedback on your mental agility, focus, and precision.\nWhat Rhythm Tap Game - Audio-Visual Beat Timing Test | Reflextry Measures\nRhythm Tap Game - Audio-Visual Beat Timing Test | Reflextry isolates specific sensorimotor and cognitive parameters. By measuring your baseline performance under controlled visual conditions, you can track changes in speed, accuracy, and consistency across sessions.\nHow Scoring Works\nScores are recorded based on accuracy, response latency, and task completion time. Higher difficulty levels tighten timing tolerances and introduce visual distractors to test performance limits.\nHow to Perform the Test\nThe module requires improving your performance through consistent practice. Ensure your testing environment has minimal dist",
+      "notes": [
+        {
+          "top": "-5%",
+          "left": "51.5%",
+          "width": "22%"
+        },
+        {
+          "top": "-5%",
+          "left": "1.5%",
+          "width": "22%"
+        },
+        {
+          "top": "-5%",
+          "left": "51.5%",
+          "width": "22%"
+        },
+        {
+          "top": "-5%",
+          "left": "1.5%",
+          "width": "22%"
+        },
+        {
+          "top": "-5%",
+          "left": "1.5%",
+          "width": "22%"
+        },
+        {
+          "top": "-5%",
+          "left": "76.5%",
+          "width": "22%"
+        },
+        {
+          "top": "-5%",
+          "left": "76.5%",
+          "width": "22%"
+        }
+      ],
+      "cells": []
+    }
+  },
+  {
+    "route": "/accuracy/precision-click",
+    "btns": [
+      "BeginnerLarge targets (65px) · 2.5s lifetime · Static placement · No strike limits",
+      "EasyMedium-large (52px) · 1.8s lifetime · Static placement · No strike limits",
+      "NormalACTIVEStandard targets (45px) · 1.2s lifetime · Up to 2 active targets · 6 lives limit",
+      "HardSmall targets (32px) · 850ms lifetime · Jittering vibrations · 4 lives limit",
+      "ProfessionalTiny targets (20px) · 600ms lifetime · Moving drift targets · 3 lives limit",
+      "Sound On",
+      "Initialize Precision Deck"
+    ],
+    "action": "Initialize Precision Deck",
+    "first": {
+      "text": "PRECISION CLICK\n\nSNAP CLICK CALIBRATION\n\nDIFFICULTY LEVEL\nBeginner\n\nLarge targets (65px) · 2.5s lifetime · Static placement · No strike limits\n\nEasy\n\nMedium-large (52px) · 1.8s lifetime · Static placement · No strike limits\n\nNormal\nACTIVE\n\nStandard targets (45px) · 1.2s lifetime · Up to 2 active targets · 6 lives limit\n\nHard\n\nSmall targets (32px) · 850ms lifetime · Jittering vibrations · 4 lives limit\n\nProfessional\n\nTiny targets (20px) · 600ms lifetime · Moving drift targets · 3 lives limit\n\nSESSION STATS\nTOTAL HITS\n0\nACCURACY\n100%\nERRORS / LIMIT\n0/6\nTIME BUFFER\n28s\nSOUND ON\nTARGETS ON SCREEN: 0 | CLICKS RATE: 0.0/s\nAbort Session ×\nHow It Works & Tips\n\nMaster the game with our comprehensive guide and improvement strategies.\n\nJUMP TO\nAbout\nHow to Play\nPro Tips\nFAQ\nAbout This Test\nAbout Precision Click\nSmall targets appear briefly; you must click them accurately. It measures pointer control, visual acquisition, and click discipline.\nSpeed–Accuracy Tradeoff\nRaw CPS means little if misses explode. High accuracy with solid pace is the training goal.\nFlow\nTargets spawn → click before timeout → targets shrink as you score → session clock ends the run.\nMetrics\nHits, accuracy (hits vs misses), and clicks/sec. Track all three.\nSetup Matters\nMouse DPI, polling, and surface friction change results—compare on one setup.\nWho Benefits\nGamers, designers, and anyone refining fine cursor control.\nMicro-corrections\nElite precision is mostly last-moment corrections, not raw flicks. Approach fast, decelerate, then micro-adjust onto the center.\nTension Management\nDeath-gripping the mouse increases overshoot. Shake out your hand between runs.\nMetric Triad\nWatch hits, accuracy, and CPS together. CPS up with accuracy down is not progress.\nWhat This Test Trains\nTrains cursor precision pointing s",
+      "notes": [],
+      "cells": []
+    },
+    "second": {
+      "text": "PRECISION CLICK\n\nSNAP CLICK CALIBRATION\n\nDIFFICULTY LEVEL\nBeginner\n\nLarge targets (65px) · 2.5s lifetime · Static placement · No strike limits\n\nEasy\n\nMedium-large (52px) · 1.8s lifetime · Static placement · No strike limits\n\nNormal\nACTIVE\n\nStandard targets (45px) · 1.2s lifetime · Up to 2 active targets · 6 lives limit\n\nHard\n\nSmall targets (32px) · 850ms lifetime · Jittering vibrations · 4 lives limit\n\nProfessional\n\nTiny targets (20px) · 600ms lifetime · Moving drift targets · 3 lives limit\n\nSESSION STATS\nTOTAL HITS\n0\nACCURACY\n100%\nERRORS / LIMIT\n0/6\nTIME BUFFER\n27s\nSOUND ON\nTARGETS ON SCREEN: 0 | CLICKS RATE: 0.0/s\nAbort Session ×\nHow It Works & Tips\n\nMaster the game with our comprehensive guide and improvement strategies.\n\nJUMP TO\nAbout\nHow to Play\nPro Tips\nFAQ\nAbout This Test\nAbout Precision Click\nSmall targets appear briefly; you must click them accurately. It measures pointer control, visual acquisition, and click discipline.\nSpeed–Accuracy Tradeoff\nRaw CPS means little if misses explode. High accuracy with solid pace is the training goal.\nFlow\nTargets spawn → click before timeout → targets shrink as you score → session clock ends the run.\nMetrics\nHits, accuracy (hits vs misses), and clicks/sec. Track all three.\nSetup Matters\nMouse DPI, polling, and surface friction change results—compare on one setup.\nWho Benefits\nGamers, designers, and anyone refining fine cursor control.\nMicro-corrections\nElite precision is mostly last-moment corrections, not raw flicks. Approach fast, decelerate, then micro-adjust onto the center.\nTension Management\nDeath-gripping the mouse increases overshoot. Shake out your hand between runs.\nMetric Triad\nWatch hits, accuracy, and CPS together. CPS up with accuracy down is not progress.\nWhat This Test Trains\nTrains cursor precision pointing s",
+      "notes": [],
+      "cells": []
+    }
+  },
+  {
+    "route": "/memory/chimp-test",
+    "btns": [
+      "Beginner4x4 Grid · 3 Numbers · 5 Lives",
+      "Easy5x6 Grid · 4 Numbers · 3 Lives",
+      "NormalActive5x8 Grid · 4 Numbers · 3 Lives",
+      "Hard6x8 Grid · Auto hide (3s)",
+      "Professional8x8 Grid · Auto hide (1s)",
+      "Sound On",
+      "Initialize Test"
+    ],
+    "action": "Initialize Test",
+    "first": {
+      "text": "CHIMP TEST\n\nWORKING MEMORY CALIBRATION\n\nDIFFICULTY LEVEL\nBeginner\n\n4x4 Grid · 3 Numbers · 5 Lives\n\nEasy\n\n5x6 Grid · 4 Numbers · 3 Lives\n\nNormal\nACTIVE\n\n5x8 Grid · 4 Numbers · 3 Lives\n\nHard\n\n6x8 Grid · Auto hide (3s)\n\nProfessional\n\n8x8 Grid · Auto hide (1s)\n\nSESSION STATS\nSCORE\n0\nBEST\n-\nLEVEL\n1\nLIVES\n3\nSOUND ON\n3\n4\n2\n1\nHow It Works & Tips\n\nMaster the game with our comprehensive guide and improvement strategies.\n\nJUMP TO\nAbout\nHow to Play\nPro Tips\nFAQ\nAbout This Test\nAbout the Chimp Test\nThe Chimp Test is a visuospatial working-memory challenge inspired by ape cognition studies. Numbers appear on a grid; after you tap 1, the rest hide and you must tap the blank cells in ascending order from memory.\nWhat It Measures\nSuccess depends on encoding spatial positions quickly, holding them after numbers vanish, and retrieving them without relying on leftover visual cues. Typical comfortable spans for adults often sit around 5–7 items; larger spans need strong chunking.\nHow a Round Works\nA set of numbered cells appears. Memorize locations. Tap 1 to begin recall—remaining digits hide. Tap the empty cells in order 2, 3, 4… A wrong cell costs a life (depending on difficulty).\nDifficulty Modes\nEasier modes use fewer numbers, slower vanish timing, and more lives. Harder modes enlarge the grid, hide numbers faster, and leave less forgiveness. Professional play is about encoding under time pressure, not casual browsing.\nStrategies That Help\nGroup numbers into shapes (triangle, L, diagonal). Rehearse a short path aloud. Do not stare at one cell—scan the whole set once, then lock a spatial story.\nScore Meaning\nHigher completed span (how many numbers you cleared) is better. Compare yourself across the same difficulty only—grid size changes the task.\nWhy Spatial Working Memory Matters\nVisuos",
+      "notes": [],
+      "cells": [
+        "3",
+        "4",
+        "2",
+        "1"
+      ]
+    },
+    "second": {
+      "text": "CHIMP TEST\n\nWORKING MEMORY CALIBRATION\n\nDIFFICULTY LEVEL\nBeginner\n\n4x4 Grid · 3 Numbers · 5 Lives\n\nEasy\n\n5x6 Grid · 4 Numbers · 3 Lives\n\nNormal\nACTIVE\n\n5x8 Grid · 4 Numbers · 3 Lives\n\nHard\n\n6x8 Grid · Auto hide (3s)\n\nProfessional\n\n8x8 Grid · Auto hide (1s)\n\nSESSION STATS\nSCORE\n0\nBEST\n-\nLEVEL\n1\nLIVES\n3\nSOUND ON\n3\n4\n2\n1\nHow It Works & Tips\n\nMaster the game with our comprehensive guide and improvement strategies.\n\nJUMP TO\nAbout\nHow to Play\nPro Tips\nFAQ\nAbout This Test\nAbout the Chimp Test\nThe Chimp Test is a visuospatial working-memory challenge inspired by ape cognition studies. Numbers appear on a grid; after you tap 1, the rest hide and you must tap the blank cells in ascending order from memory.\nWhat It Measures\nSuccess depends on encoding spatial positions quickly, holding them after numbers vanish, and retrieving them without relying on leftover visual cues. Typical comfortable spans for adults often sit around 5–7 items; larger spans need strong chunking.\nHow a Round Works\nA set of numbered cells appears. Memorize locations. Tap 1 to begin recall—remaining digits hide. Tap the empty cells in order 2, 3, 4… A wrong cell costs a life (depending on difficulty).\nDifficulty Modes\nEasier modes use fewer numbers, slower vanish timing, and more lives. Harder modes enlarge the grid, hide numbers faster, and leave less forgiveness. Professional play is about encoding under time pressure, not casual browsing.\nStrategies That Help\nGroup numbers into shapes (triangle, L, diagonal). Rehearse a short path aloud. Do not stare at one cell—scan the whole set once, then lock a spatial story.\nScore Meaning\nHigher completed span (how many numbers you cleared) is better. Compare yourself across the same difficulty only—grid size changes the task.\nWhy Spatial Working Memory Matters\nVisuos",
+      "notes": [],
+      "cells": [
+        "3",
+        "4",
+        "2",
+        "1"
+      ]
+    }
+  }
+]

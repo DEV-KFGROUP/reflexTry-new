@@ -40,7 +40,7 @@ export default function Page() {
     );
 
     return (
-        <div className="min-h-screen bg-slate-50 dark:bg-slate-900 pt-24 pb-12 px-4 sm:px-6 lg:px-8">
+        <div className="min-h-screen bg-slate-50 dark:bg-slate-900 pt-4 pb-12 px-4 sm:px-6 lg:px-8">
             <div className="max-w-7xl mx-auto space-y-8 flex flex-col items-center">
                 <SchemaInjector schemas={[structuredData, breadcrumbSchema, webPageSchema]} />
                 <PatternMatchingGame />

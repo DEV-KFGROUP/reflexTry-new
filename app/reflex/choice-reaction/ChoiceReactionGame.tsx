@@ -1,12 +1,18 @@
 "use client";
 
-import { useState, useRef, useEffect, useCallback } from "react";
-import { LayoutGrid, Play, RotateCcw, Trophy, Shield, Star, Zap, Flame, Brain } from "lucide-react";
-import { useGameSound } from "@/hooks/useGameSound";
-import { GameDashboardLayout } from "@/components/dashboard/GameDashboardLayout";
+import { GameProgressFeedback } from "@/components/GameProgressFeedback";
+import { useGameTimers } from "@/hooks/useGameTimers";
+import { useStimulusClock } from "@/hooks/useStimulusClock";
+import { useToolProgress } from "@/hooks/useToolProgress";
+import { safeStorage } from "@/utils/safeStorage";
+
 import { DashboardDifficultyCard } from "@/components/dashboard/DashboardDifficultyCard";
+import { GameDashboardLayout } from "@/components/dashboard/GameDashboardLayout";
 import { StatBox } from "@/components/dashboard/StatBox";
-import { motion, AnimatePresence } from "framer-motion";
+import { useGameSound } from "@/hooks/useGameSound";
+import { AnimatePresence, motion } from "framer-motion";
+import { Brain, Flame, LayoutGrid, Play, RotateCcw, Shield, Star, Trophy, Zap } from "lucide-react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 type DiffId = "beginner" | "easy" | "normal" | "hard" | "professional";
 
@@ -65,6 +71,8 @@ type GameState = "select" | "playing" | "gameover";
 type Phase = "wait" | "ready" | "result";
 
 export default function ChoiceReactionGame() {
+  const { setTimeout, clearTimeout, cancelTimers } = useGameTimers();
+
   const [gameState, setGameState] = useState<GameState>("select");
   const [diffId, setDiffId] = useState<DiffId>("normal");
 
@@ -90,13 +98,14 @@ export default function ChoiceReactionGame() {
   });
 
   const { play, isMuted, toggleMute } = useGameSound();
+  const stimulusClock = useStimulusClock(attempt, phase === "ready");
   const diff = DIFFICULTIES[diffId];
 
   useEffect(() => {
     const saved: Record<DiffId, number> = { beginner: 0, easy: 0, normal: 0, hard: 0, professional: 0 };
     DIFF_ORDER.forEach(k => {
-      const v = localStorage.getItem(`choicereaction-hs-${k}`);
-      if (v) saved[k] = parseInt(v, 10);
+      const v = safeStorage.getItem(`reflextry_v2_choicereaction-hs-${k}`);
+      if (v !== null && Number.isFinite(Number(v))) saved[k] = Number(v);
     });
     setHighScores(saved);
   }, []);
@@ -105,14 +114,6 @@ export default function ChoiceReactionGame() {
     if (gameState !== "gameover" || rtsRef.current.length === 0) return;
     const avg = Math.round(rtsRef.current.reduce((a, b) => a + b, 0) / rtsRef.current.length);
     setAvgRt(avg);
-    setHighScores(prev => {
-      // Lower avg RT is better; 0 means unset
-      if (prev[diffId] === 0 || avg < prev[diffId]) {
-        localStorage.setItem(`choicereaction-hs-${diffId}`, avg.toString());
-        return { ...prev, [diffId]: avg };
-      }
-      return prev;
-    });
   }, [gameState, diffId]);
 
   const clearTimer = () => {
@@ -187,7 +188,7 @@ export default function ChoiceReactionGame() {
 
     if (phaseRef.current !== "ready") return;
 
-    const rt = Math.round(performance.now() - stimulusStartRef.current);
+    const rt = Math.round(performance.now() - stimulusClock.current);
     phaseRef.current = "result";
     setPhase("result");
 
@@ -209,6 +210,7 @@ export default function ChoiceReactionGame() {
   };
 
   const startGame = () => {
+    cancelTimers();
     play("click");
     clearTimer();
     attemptRef.current = 0;
@@ -262,8 +264,17 @@ export default function ChoiceReactionGame() {
     </>
   );
 
+
+  const progress = useToolProgress({
+    toolId: "choice-reaction", phase: gameState, difficulty: diffId,
+    value: avgRt, unit: "ms", higherIsBetter: false,
+    terminal: ["gameover"], idle: ["select"], recordKey: "reflextry_v2_choicereaction-hs-",
+    setHighScores, cancelTimers, reset: () => setGameState("select"),
+    eligible: true,
+  });
+
   return (
-    <GameDashboardLayout
+    <GameDashboardLayout isIdle={gameState === "select"}
       title="CHOICE REACTION"
       subtitle="MULTI-CHOICE RT"
       difficultySelector={difficultySelector}
@@ -273,16 +284,17 @@ export default function ChoiceReactionGame() {
       soundEnabled={!isMuted}
       onToggleSound={toggleMute}
     >
+      <GameProgressFeedback result={progress} />
       <AnimatePresence mode="wait">
         {gameState === "select" && (
           <motion.div
             key="start"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
+            exit={{ opacity: 0, transition: { duration: 0 } }}
             className="flex flex-col items-center justify-center text-center max-w-md"
           >
-            <div className="w-20 h-20 bg-indigo-50 dark:bg-indigo-900/20 rounded-full flex items-center justify-center mb-6">
+            <div className="game-start-icon w-20 h-20 bg-indigo-50 dark:bg-indigo-900/20 rounded-full flex items-center justify-center mb-6">
               <LayoutGrid className="w-10 h-10 text-indigo-500" />
             </div>
             <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-wider mb-4">
@@ -296,7 +308,7 @@ export default function ChoiceReactionGame() {
               className="w-full sm:w-auto px-12 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold uppercase tracking-widest text-sm transition-all shadow-lg hover:shadow-indigo-500/20 flex items-center justify-center gap-3"
             >
               <Play className="w-4 h-4 fill-current" />
-              Initialize Test
+              Play
             </button>
           </motion.div>
         )}
@@ -304,9 +316,9 @@ export default function ChoiceReactionGame() {
         {gameState === "playing" && (
           <motion.div
             key="game"
-            initial={{ opacity: 0 }}
+            initial={false}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            exit={{ opacity: 0, transition: { duration: 0 } }}
             className="w-full flex flex-col items-center justify-center p-4 max-w-2xl"
           >
             <div className={`mb-6 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest border ${
@@ -326,9 +338,10 @@ export default function ChoiceReactionGame() {
                 return (
                   <motion.button
                     key={c.id}
-                    onClick={() => handleBoxClick(idx)}
+                    onPointerDown={() => handleBoxClick(idx)}
+                    onClick={(event) => { if (event.detail === 0) handleBoxClick(idx); }}
                     whileTap={{ scale: 0.96 }}
-                    className={`aspect-square rounded-2xl transition-all duration-150 border-4 focus:outline-none focus-visible:ring-4 focus-visible:ring-indigo-300 ${
+                    className={`aspect-square rounded-2xl border-4 focus:outline-none focus-visible:ring-4 focus-visible:ring-indigo-300 ${
                       isLit
                         ? `${c.bg} border-white scale-[1.03] shadow-xl ring-4 ${c.ring}`
                         : phase === "ready" && diff.decoys

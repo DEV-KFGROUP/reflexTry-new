@@ -92,7 +92,7 @@ const CATEGORIES: CategoryConfig[] = [
       { id: "schulte-table", href: "/speed/schulte-table", icon: Grid3X3, title: "Schulte Table", desc: "Click shuffled numbers in order to train visual scanning speed." },
       { id: "math", href: "/speed/math", icon: Calculator, title: "Math Speed", desc: "Solve modular arithmetic challenges before your time buffer expires." },
       { id: "typing", href: "/speed/typing", icon: Keyboard, title: "Typing Test", desc: "Test characters-per-minute (CPM) speed on paragraphs." },
-      { id: "word", href: "/speed/words", icon: Type, title: "Word Reading", desc: "Test reading speeds (WPM) under high-speed display settings." },
+      { id: "word", href: "/speed/words", icon: Type, title: "Word Typing", desc: "Type prompted words quickly and accurately." },
       { id: "grid", href: "/speed/grid", icon: Grid3X3, title: "Grid Speed", desc: "Locate and click matrix targets as fast as possible." },
       { id: "number-rush", href: "/speed/number-rush", icon: Hash, title: "Number Rush", desc: "Visual scanning test to locate numbers in sequential order." },
       { id: "quick-sort", href: "/speed/quick-sort", icon: ArrowRight, title: "Quick Sort", desc: "Categorize falling items under high speed before they overflow." },
@@ -133,6 +133,8 @@ const CATEGORIES: CategoryConfig[] = [
       { id: "precision-click", href: "/accuracy/precision-click", icon: MousePointer2, title: "Precision Click", desc: "Click tiny jittering targets that drift and bounce off walls." },
       { id: "angle-estimation", href: "/accuracy/angle-estimation", icon: Calculator, title: "Angle Estimation", desc: "Guess relative angles under tilted baseline setups." },
       { id: "color-match", href: "/accuracy/color-match", icon: Activity, title: "Color Match", desc: "Match target colors from memory after they fade grey." },
+      { id: "color-blindness", href: "/accuracy/color-blindness", icon: Eye, title: "Color Vision", desc: "Practice identifying numbers in generated color-dot patterns." },
+      { id: "mental-rotation", href: "/accuracy/mental-rotation", icon: Brain, title: "Mental Rotation", desc: "Compare rotated shapes and spot mirrored objects." },
     ]
   }
 ];

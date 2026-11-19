@@ -1,12 +1,18 @@
 "use client";
 
-import { useState, useCallback, useEffect } from "react";
-import { Brain, Play, Shield, Star, Zap, Flame, Box, Check, X, Trophy, RotateCcw } from "lucide-react";
-import { useGameSound } from "@/hooks/useGameSound";
-import { GameDashboardLayout } from "@/components/dashboard/GameDashboardLayout";
+import { GameProgressFeedback } from "@/components/GameProgressFeedback";
+import { useGameTimers } from "@/hooks/useGameTimers";
+import { useToolProgress } from "@/hooks/useToolProgress";
+import { rotationEquivalent } from "@/lib/gaming/rotation";
+import { safeStorage } from "@/utils/safeStorage";
+
 import { DashboardDifficultyCard } from "@/components/dashboard/DashboardDifficultyCard";
+import { GameDashboardLayout } from "@/components/dashboard/GameDashboardLayout";
 import { StatBox } from "@/components/dashboard/StatBox";
-import { motion, AnimatePresence } from "framer-motion";
+import { useGameSound } from "@/hooks/useGameSound";
+import { AnimatePresence, motion } from "framer-motion";
+import { Box, Brain, Check, Flame, Play, RotateCcw, Shield, Star, Trophy, X, Zap } from "lucide-react";
+import { useCallback, useEffect, useState } from "react";
 
 type DiffId = "beginner" | "easy" | "normal" | "hard" | "professional";
 
@@ -189,6 +195,8 @@ function BlockRender({ blocks, className }: { blocks: Vec3[], className?: string
 type GameState = "select" | "playing" | "result" | "gameover";
 
 export default function MentalRotationGame() {
+  const { setTimeout, cancelTimers } = useGameTimers();
+
   const [gameState, setGameState] = useState<GameState>("select");
   const [diffId, setDiffId] = useState<DiffId>("normal");
   const [score, setScore] = useState(0);
@@ -209,22 +217,13 @@ export default function MentalRotationGame() {
   useEffect(() => {
     const saved: Record<DiffId, number> = { beginner: 0, easy: 0, normal: 0, hard: 0, professional: 0 };
     DIFF_ORDER.forEach(k => {
-      const v = localStorage.getItem(`mentalrot-hs-${k}`);
-      if (v) saved[k] = parseInt(v, 10);
+      const v = safeStorage.getItem(`reflextry_v2_mentalrot-hs-${k}`);
+      if (v !== null && Number.isFinite(Number(v))) saved[k] = Number(v);
     });
     setHighScores(saved);
   }, []);
 
-  useEffect(() => {
-    if (gameState !== "gameover") return;
-    setHighScores(prev => {
-      if (score > prev[diffId]) {
-        localStorage.setItem(`mentalrot-hs-${diffId}`, score.toString());
-        return { ...prev, [diffId]: score };
-      }
-      return prev;
-    });
-  }, [gameState, score, diffId]);
+
 
   const generateLevel = useCallback((lvl: number, difficulty: DiffConfig) => {
     const extraBlocks = Math.floor(lvl / 3);
@@ -241,7 +240,7 @@ export default function MentalRotationGame() {
     setOriginalObj(base);
     
     const shouldBeSame = Math.random() > 0.5;
-    setIsSame(shouldBeSame);
+
     
     let target = [...base];
     
@@ -256,10 +255,13 @@ export default function MentalRotationGame() {
       target = target.map(v => rotateVec3(v, axis, turns));
     }
     
+    // A symmetric mirror may still be the same object under rotation.
+    setIsSame(shouldBeSame || rotationEquivalent(base, target));
     setTargetObj(target);
   }, []);
 
   const startGame = () => {
+    cancelTimers();
     play("click");
     setLevel(1);
     setScore(0);
@@ -331,8 +333,17 @@ export default function MentalRotationGame() {
     </>
   );
 
+
+  const progress = useToolProgress({
+    toolId: "mental-rotation", phase: gameState, difficulty: diffId,
+    value: score, unit: "pts", higherIsBetter: true,
+    terminal: ["gameover"], idle: ["select"], recordKey: "reflextry_v2_mentalrot-hs-",
+    setHighScores, cancelTimers, reset: () => setGameState("select"),
+    eligible: true,
+  });
+
   return (
-    <GameDashboardLayout
+    <GameDashboardLayout isIdle={gameState === "select"}
       title="MENTAL ROTATION"
       subtitle="SPATIAL INTELLIGENCE"
       difficultySelector={difficultySelector}
@@ -342,16 +353,17 @@ export default function MentalRotationGame() {
       soundEnabled={!isMuted}
       onToggleSound={toggleMute}
     >
+      <GameProgressFeedback result={progress} />
       <AnimatePresence mode="wait">
         {gameState === "select" && (
           <motion.div
             key="start"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
+            exit={{ opacity: 0, transition: { duration: 0 } }}
             className="flex flex-col items-center justify-center text-center max-w-md"
           >
-            <div className="w-20 h-20 bg-indigo-50 dark:bg-indigo-900/20 rounded-full flex items-center justify-center mb-6">
+            <div className="game-start-icon w-20 h-20 bg-indigo-50 dark:bg-indigo-900/20 rounded-full flex items-center justify-center mb-6">
               <Box className="w-10 h-10 text-indigo-500" />
             </div>
             <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-wider mb-4">
@@ -365,7 +377,7 @@ export default function MentalRotationGame() {
               className="w-full sm:w-auto px-12 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold uppercase tracking-widest text-sm transition-all shadow-lg hover:shadow-indigo-500/20 flex items-center justify-center gap-3"
             >
               <Play className="w-4 h-4 fill-current" />
-              Initialize Test
+              Play
             </button>
           </motion.div>
         )}
@@ -373,9 +385,9 @@ export default function MentalRotationGame() {
         {(gameState !== "select" && gameState !== "gameover") && (
           <motion.div
             key="game"
-            initial={{ opacity: 0 }}
+            initial={false}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            exit={{ opacity: 0, transition: { duration: 0 } }}
             className="w-full h-full flex flex-col items-center justify-center"
           >
             <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 w-full relative">

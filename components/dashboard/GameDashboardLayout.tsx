@@ -5,6 +5,7 @@ import { Volume2, VolumeX } from "lucide-react";
 import { useTranslation } from "@/lib/i18n/context";
 
 interface GameDashboardLayoutProps {
+  isIdle?: boolean;
   title: string;
   subtitle: string;
   difficultySelector: ReactNode;
@@ -18,6 +19,7 @@ interface GameDashboardLayoutProps {
 }
 
 export function GameDashboardLayout({
+  isIdle = false,
   title,
   subtitle,
   difficultySelector,
@@ -31,13 +33,13 @@ export function GameDashboardLayout({
 }: GameDashboardLayoutProps) {
   const { t } = useTranslation();
   return (
-    <div className="w-full bg-[#f8fafc] dark:bg-slate-800 text-slate-800 dark:text-white font-sans relative overflow-hidden py-8 px-4 sm:px-6 lg:px-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm mb-8">
+    <div data-idle={isIdle} className="game-tool w-full bg-[#f8fafc] dark:bg-slate-800 text-slate-800 dark:text-white font-sans relative overflow-hidden py-8 px-4 sm:px-6 lg:px-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm mb-8">
       {/* Background Gradients and Effects */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.04)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none z-0" />
       <div className="absolute top-[-5%] left-[5%] w-[600px] h-[600px] bg-violet-500/[0.03] blur-[140px] rounded-full pointer-events-none z-0" />
       <div className="absolute bottom-[-5%] right-[5%] w-[500px] h-[500px] bg-cyan-500/[0.03] blur-[120px] rounded-full pointer-events-none z-0" />
 
-      <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center space-y-8 pt-8">
+      <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center space-y-6 pt-0">
         
         {/* Header */}
         <div className="text-center w-full">
@@ -54,12 +56,12 @@ export function GameDashboardLayout({
         </div>
 
         {/* Layout Grid */}
-        <div className="w-full grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-6 items-start">
+        <div className="game-columns w-full grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-6 items-start">
           
           {/* Left Panel */}
-          <div className="flex flex-col gap-4">
+          <div className="game-settings flex flex-col gap-4">
             {/* Difficulty Selector */}
-            <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 shadow-sm">
+            <div className="game-difficulty bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 shadow-sm">
               <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">
                 {t("game.difficultyLevel", "Difficulty Level")}
               </div>
@@ -69,7 +71,7 @@ export function GameDashboardLayout({
             </div>
 
             {/* Stats Panel */}
-            <div className="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 shadow-sm">
+            <div className="game-stats bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 shadow-sm">
               <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">
                 {t("game.sessionStats", "Session Stats")}
               </div>
@@ -96,7 +98,7 @@ export function GameDashboardLayout({
           </div>
 
           {/* Right Panel: Game Console */}
-          <div className="flex flex-col gap-4 w-full h-full">
+          <div className="game-arena flex flex-col gap-4 w-full h-full">
             <div className="relative bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl overflow-hidden shadow-[0_8px_40px_rgba(15,23,42,0.07)] dark:shadow-none h-full min-h-[520px] flex flex-col">
               
               {/* Soft top accent */}

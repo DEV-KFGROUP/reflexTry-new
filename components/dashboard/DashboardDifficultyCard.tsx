@@ -25,6 +25,7 @@ export function DashboardDifficultyCard({
   return (
     <button
       onClick={disabled ? undefined : onSelect}
+      aria-pressed={selected}
       disabled={disabled}
       className={`relative w-full text-left rounded-2xl border p-3 transition-all focus:outline-none flex items-start gap-3 ${
         disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
@@ -35,7 +36,7 @@ export function DashboardDifficultyCard({
       }`}
     >
       {/* Icon Box */}
-      <div className={`w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 ${iconBgClass}`}>
+      <div className={`difficulty-icon w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 ${iconBgClass}`}>
         <Icon className={`w-4 h-4 ${iconColorClass}`} />
       </div>
 

@@ -1,12 +1,17 @@
 "use client";
 
-import { useState, useEffect, useCallback, useRef } from "react";
-import { Brain, Play, RotateCcw, Shield, Star, Zap, Flame, Target, Trophy } from "lucide-react";
-import { useGameSound } from "@/hooks/useGameSound";
-import { GameDashboardLayout } from "@/components/dashboard/GameDashboardLayout";
+import { GameProgressFeedback } from "@/components/GameProgressFeedback";
+import { useGameTimers } from "@/hooks/useGameTimers";
+import { useToolProgress } from "@/hooks/useToolProgress";
+import { safeStorage } from "@/utils/safeStorage";
+
 import { DashboardDifficultyCard } from "@/components/dashboard/DashboardDifficultyCard";
+import { GameDashboardLayout } from "@/components/dashboard/GameDashboardLayout";
 import { StatBox } from "@/components/dashboard/StatBox";
-import { motion, AnimatePresence } from "framer-motion";
+import { useGameSound } from "@/hooks/useGameSound";
+import { AnimatePresence, motion } from "framer-motion";
+import { Brain, Flame, Play, RotateCcw, Shield, Star, Target, Trophy, Zap } from "lucide-react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 type DiffId = "beginner" | "easy" | "normal" | "hard" | "professional";
 
@@ -67,6 +72,8 @@ interface Dot {
 }
 
 export default function ObjectTrackingGame() {
+  const { setTimeout, clearTimeout, cancelTimers } = useGameTimers();
+
   const [gameState, setGameState] = useState<GameState>("select");
   const [diffId, setDiffId] = useState<DiffId>("normal");
   const [score, setScore] = useState(0);
@@ -88,22 +95,13 @@ export default function ObjectTrackingGame() {
   useEffect(() => {
     const saved: Record<DiffId, number> = { beginner: 0, easy: 0, normal: 0, hard: 0, professional: 0 };
     DIFF_ORDER.forEach(k => {
-      const v = localStorage.getItem(`objecttrack-hs-${k}`);
-      if (v) saved[k] = parseInt(v, 10);
+      const v = safeStorage.getItem(`reflextry_v2_objecttrack-hs-${k}`);
+      if (v !== null && Number.isFinite(Number(v))) saved[k] = Number(v);
     });
     setHighScores(saved);
   }, []);
 
-  useEffect(() => {
-    if (gameState !== "gameover") return;
-    setHighScores(prev => {
-      if (score > prev[diffId]) {
-        localStorage.setItem(`objecttrack-hs-${diffId}`, score.toString());
-        return { ...prev, [diffId]: score };
-      }
-      return prev;
-    });
-  }, [gameState, score, diffId]);
+
 
   const clearAllTimers = () => {
     if (requestRef.current) cancelAnimationFrame(requestRef.current);
@@ -194,6 +192,7 @@ export default function ObjectTrackingGame() {
   }, []);
 
   const startGame = () => {
+    cancelTimers();
     play("click");
     setLevel(1);
     setScore(0);
@@ -269,8 +268,17 @@ export default function ObjectTrackingGame() {
     </>
   );
 
+
+  const progress = useToolProgress({
+    toolId: "object-tracking", phase: gameState, difficulty: diffId,
+    value: score, unit: "pts", higherIsBetter: true,
+    terminal: ["gameover"], idle: ["select"], recordKey: "reflextry_v2_objecttrack-hs-",
+    setHighScores, cancelTimers, reset: () => setGameState("select"),
+    eligible: true,
+  });
+
   return (
-    <GameDashboardLayout
+    <GameDashboardLayout isIdle={gameState === "select"}
       title="MULTIPLE OBJECT TRACKING"
       subtitle="DYNAMIC VISUAL ATTENTION"
       difficultySelector={difficultySelector}
@@ -280,16 +288,17 @@ export default function ObjectTrackingGame() {
       soundEnabled={!isMuted}
       onToggleSound={toggleMute}
     >
+      <GameProgressFeedback result={progress} />
       <AnimatePresence mode="wait">
         {gameState === "select" && (
           <motion.div
             key="start"
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.95 }}
+            exit={{ opacity: 0, transition: { duration: 0 } }}
             className="flex flex-col items-center justify-center text-center max-w-md"
           >
-            <div className="w-20 h-20 bg-indigo-50 dark:bg-indigo-900/20 rounded-full flex items-center justify-center mb-6">
+            <div className="game-start-icon w-20 h-20 bg-indigo-50 dark:bg-indigo-900/20 rounded-full flex items-center justify-center mb-6">
               <Target className="w-10 h-10 text-indigo-500" />
             </div>
             <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-wider mb-4">
@@ -303,7 +312,7 @@ export default function ObjectTrackingGame() {
               className="w-full sm:w-auto px-12 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold uppercase tracking-widest text-sm transition-all shadow-lg hover:shadow-indigo-500/20 flex items-center justify-center gap-3"
             >
               <Play className="w-4 h-4 fill-current" />
-              Initialize Test
+              Play
             </button>
           </motion.div>
         )}
@@ -311,9 +320,9 @@ export default function ObjectTrackingGame() {
         {(gameState !== "select" && gameState !== "gameover") && (
           <motion.div
             key="game"
-            initial={{ opacity: 0 }}
+            initial={false}
             animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
+            exit={{ opacity: 0, transition: { duration: 0 } }}
             className="w-full h-full flex flex-col items-center"
           >
             <div className="mb-4 text-center">
@@ -346,7 +355,7 @@ export default function ObjectTrackingGame() {
                 }
 
                 return (
-                  <motion.div
+                  <motion.button type="button" aria-label={`Object ${dot.id + 1}`} disabled={gameState !== "guess"}
                     key={dot.id}
                     onClick={() => handleDotClick(dot.id)}
                     className={`absolute rounded-full w-[8%] h-[8%] -ml-[4%] -mt-[4%] flex items-center justify-center transition-colors duration-200 ${bgClass}`}
@@ -361,7 +370,7 @@ export default function ObjectTrackingGame() {
                     {(dot.isGuessed || dot.isWrong) && (
                       <div className="w-2 h-2 bg-white rounded-full"></div>
                     )}
-                  </motion.div>
+                  </motion.button>
                 );
               })}
             </div>

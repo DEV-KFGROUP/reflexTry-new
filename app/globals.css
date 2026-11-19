@@ -798,3 +798,92 @@
   pointer-events: none;
   animation: scanline 8s linear infinite;
 }
+/* Shared game shell: compact controls, a stable arena and readable state feedback. */
+.game-tool { border-radius: 16px; }
+.game-tool h1 { letter-spacing: -.02em; text-wrap: balance; overflow-wrap: anywhere; }
+.game-tool .game-columns, .game-tool .game-arena { min-width: 0; }
+.game-tool button:focus-visible, .game-tool input:focus-visible,
+.game-tool textarea:focus-visible, .game-tool select:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 3px;
+}
+.game-tool button { -webkit-tap-highlight-color: transparent; }
+.game-tool .game-difficulty button { min-height: 44px; }
+.game-tool .game-difficulty p { font-size: .8125rem; line-height: 1.45; }
+.game-progress-feedback {
+  position: relative; z-index: 1; width: 100%; max-width: 64rem;
+  margin: 0 auto 1rem; padding: 1rem; border-radius: 12px;
+  background: #eff6ff; color: #1e3a8a; border: 1px solid #bfdbfe;
+}
+.dark .game-progress-feedback { background: #172554; color: #dbeafe; border-color: #1e40af; }
+/* Custom game panels share the same surface contract as the common dashboard. */
+.dark .game-tool .bg-white { background-color: #0f172a; }
+.dark .game-tool .bg-slate-50 { background-color: #1e293b; }
+.dark .game-tool .text-slate-800, .dark .game-tool .text-slate-900 { color: #f1f5f9; }
+.dark .game-tool .text-slate-700, .dark .game-tool .text-slate-600 { color: #cbd5e1; }
+.game-tool input, .game-tool textarea { max-width: 100%; }
+@media (max-width: 1023px) {
+  .game-tool { padding: 1rem .75rem; }
+  .game-tool h1 { font-size: 1.75rem; }
+  .game-tool .game-columns { display: flex; flex-direction: column; gap: 1rem; }
+  .game-tool .game-settings { display: contents; }
+  .game-tool .game-difficulty { order: 0; width: 100%; padding: 0; border: 0; background: transparent; box-shadow: none; }
+  .game-tool .game-difficulty > div:first-child { display: none; }
+  .game-tool .game-difficulty > div:last-child { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .375rem; }
+  .game-tool .game-difficulty button { padding: .5rem .25rem; border-width: 1px; border-radius: 8px; text-align: center; }
+  .game-tool .game-difficulty button p,
+  .game-tool .game-difficulty button span:not(:first-child),
+  .game-tool .game-difficulty button svg,
+  .game-tool .game-difficulty .difficulty-icon { display: none; }
+  .game-tool .game-difficulty button > div,
+  .game-tool .game-difficulty button > div > div,
+  .game-tool .game-difficulty button > div > div > div { display: block; padding: 0; }
+  .game-tool .game-difficulty button > div > div:last-child { display: block; }
+  .game-tool .game-difficulty button span { font-family: inherit; font-size: .75rem; letter-spacing: 0; }
+  .game-tool .game-arena { order: 1; width: 100%; }
+  .game-tool .game-stats { order: 2; width: 100%; }
+  .game-tool .game-arena > div:first-child { border-radius: 12px; min-height: min(440px, 66dvh); }
+  .game-tool .game-arena > div:first-child > div[class*="p-6"] { padding: 1rem; min-height: min(440px, 66dvh); }
+  .game-tool .game-arena [class*="min-w-[280px]"] { min-width: 0; width: 100%; }
+  .game-tool .game-arena [class*="text-6xl"] { font-size: 2.5rem; overflow-wrap: anywhere; }
+  .game-tool .game-arena button[class*="px-10"],
+  .game-tool .game-arena button[class*="px-12"] { padding-inline: 1rem; }
+  .game-tool textarea, .game-tool input[type="text"], .game-tool input[type="number"] { font-size: 16px; scroll-margin-block: 6rem; }
+}
+@media (max-height: 500px) and (orientation: landscape) {
+  .game-tool .game-arena > div:first-child,
+  .game-tool .game-arena > div:first-child > div[class*="p-6"] { min-height: 280px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+@media (max-width: 1023px) {
+  .game-tool h1 + div { display: none; }
+  .game-tool .game-arena .game-start-icon { display: none; }
+  .game-tool .game-arena .space-y-8 > :not(:first-child) { margin-top: 1rem; }
+  .game-tool .game-arena .game-progress-feedback { margin-bottom: .75rem; }
+}
+@media (max-width: 1023px) {
+  .game-tool[data-idle="true"] .game-arena > div:first-child,
+  .game-tool[data-idle="true"] .game-arena > div:first-child > div[class*="p-6"] { min-height: 0; }
+  .game-tool[data-idle="true"] .game-arena h2 { display: none; }
+  .game-tool[data-idle="true"] .game-arena p { font-size: .875rem; line-height: 1.5; }
+  .game-tool[data-idle="true"] .game-arena button { min-height: 44px; }
+}
+@media (max-height: 500px) and (orientation: landscape) {
+  .game-tool .game-difficulty > div:last-child { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}
+.dark .game-tool [class~="bg-white/70"] { background-color: #0f172a; }
+.dark .game-tool .text-violet-600 { color: #a78bfa; }
+.dark .game-tool .text-cyan-600, .dark .game-tool .text-sky-600 { color: #38bdf8; }
+.dark .game-tool .text-emerald-600 { color: #34d399; }
+.dark .game-tool .text-orange-600 { color: #fb923c; }
+.dark .game-tool .text-rose-600 { color: #fb7185; }
+@media (max-width: 639px) {
+  .game-tool[data-idle="true"] .game-level-description { display: none; }
+}
