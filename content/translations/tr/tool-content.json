@@ -5102,5 +5102,905 @@
         "answer": "Tıklamanız gereken bir sonraki sayı."
       }
     ]
+  },
+  "gravity-lab": {
+    "description": [
+      {
+        "title": "Hakkında: Yerçekimi ve Yörünge Labı",
+        "content": "Dünya, Ay, Mars ve Jüpiter serbest düşüşünü karşılaştırın veya yörünge fırlatın. Soyut fizik ve matematik denklemlerini etkileşimli deneylere dönüştürün. Serbest düşüş, yörünge fırlatma, lazer yansıma ve tahterevalli tork dengesini tarayıcınızda test edin."
+      },
+      {
+        "title": "Temel Mekanik ve Öğrenme Bilimi",
+        "content": "Yerçekimi serbest düşüşü, yörünge hızı, ayna yansıma yasası, eğik atış ve kaldıraç tork dengesini öğreten 2D görsel simülasyonlar. Canlı Denklemler: Değişkenleri oynattıkça formüllerin anlık değişimini izleyin. Görsel Sezgi: Vektörleri, yüzey normallerini ve izleri inceleyin."
+      },
+      {
+        "title": "Puanlama ve Canlı Metrikler",
+        "content": "Her simülasyon anlık görsel geri bildirimi şeffaf sayısal metriklerle birleştirir. Görev Modları: Puanlı öğrenci görevleriyle bilginizi ölçün."
+      },
+      {
+        "title": "Sınıf ve Günlük Kullanım",
+        "content": "Evet. Arayüz dizüstü bilgisayar, Chromebook, tablet ve akıllı tahtalara tam uyumludur. Haftada birkaç kez 10–15 dakikalık çalışma kalıcı sezgi ve tutarlı performans kazandırır."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Kurulum ve Kontroller",
+        "steps": [
+          "Mevcut hızınızı veya anlayışınızı dürüstçe görmek için standart ayarlarla başlayın.",
+          "Neden-sonuç ilişkisini net görmek için her seferinde tek bir ayarı değiştirin."
+        ]
+      },
+      {
+        "title": "Oturum Nasıl Çalışır",
+        "steps": [
+          "Dünya, Ay, Mars ve Jüpiter serbest düşüşünü karşılaştırın veya yörünge fırlatın.",
+          "Her turdan sonra formülleri, doğruluk oranını ve milisaniye verilerini kontrol edin."
+        ]
+      },
+      {
+        "title": "Sonuçlarınızı Analiz Edin",
+        "steps": [
+          "Evet. Tamamlanan testler tarayıcınızın yerel İstatistikler paneline otomatik kaydedilir.",
+          "Yorucu uzun seanslar yerine 10 dakikalık yüksek odaklı pratikler yapın."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Aynı Anda Tek Değişkeni Değiştirin",
+        "content": "Neden-sonuç ilişkisini net görmek için her seferinde tek bir ayarı değiştirin."
+      },
+      {
+        "title": "Hızdan Önce Doğruluğu Önceliklendirin",
+        "content": "Her turdan sonra formülleri, doğruluk oranını ve milisaniye verilerini kontrol edin."
+      },
+      {
+        "title": "Gelişiminizi Düzenli Takip Edin",
+        "content": "Haftada birkaç kez 10–15 dakikalık çalışma kalıcı sezgi ve tutarlı performans kazandırır."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Bu modül tamamen ücretsiz mi?",
+        "answer": "Evet. Reflextry üzerindeki tüm araçlar hesap veya indirme olmadan tarayıcıda ücretsiz çalışır."
+      },
+      {
+        "question": "Okul bilgisayarlarında ve tabletlerde çalışır mı?",
+        "answer": "Evet. Arayüz dizüstü bilgisayar, Chromebook, tablet ve akıllı tahtalara tam uyumludur."
+      },
+      {
+        "question": "En iyi skorlarım kaydediliyor mu?",
+        "answer": "Evet. Tamamlanan testler tarayıcınızın yerel İstatistikler paneline otomatik kaydedilir."
+      },
+      {
+        "question": "Ne sıklıkla pratik yapmalıyım?",
+        "answer": "Haftada 3–5 kez 10 dakikalık odaklı oturumlar kalıcı ve ölçülebilir gelişim sağlar."
+      }
+    ]
+  },
+  "laser-reflection": {
+    "description": [
+      {
+        "title": "Hakkında: Lazer Yansıma Optiği",
+        "content": "Aynaları döndürerek lazeri hedefe ulaştırın ve Yansıma Yasasını doğrulayın. Soyut fizik ve matematik denklemlerini etkileşimli deneylere dönüştürün. Serbest düşüş, yörünge fırlatma, lazer yansıma ve tahterevalli tork dengesini tarayıcınızda test edin."
+      },
+      {
+        "title": "Temel Mekanik ve Öğrenme Bilimi",
+        "content": "Yerçekimi serbest düşüşü, yörünge hızı, ayna yansıma yasası, eğik atış ve kaldıraç tork dengesini öğreten 2D görsel simülasyonlar. Canlı Denklemler: Değişkenleri oynattıkça formüllerin anlık değişimini izleyin. Görsel Sezgi: Vektörleri, yüzey normallerini ve izleri inceleyin."
+      },
+      {
+        "title": "Puanlama ve Canlı Metrikler",
+        "content": "Her simülasyon anlık görsel geri bildirimi şeffaf sayısal metriklerle birleştirir. Görev Modları: Puanlı öğrenci görevleriyle bilginizi ölçün."
+      },
+      {
+        "title": "Sınıf ve Günlük Kullanım",
+        "content": "Evet. Arayüz dizüstü bilgisayar, Chromebook, tablet ve akıllı tahtalara tam uyumludur. Haftada birkaç kez 10–15 dakikalık çalışma kalıcı sezgi ve tutarlı performans kazandırır."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Kurulum ve Kontroller",
+        "steps": [
+          "Mevcut hızınızı veya anlayışınızı dürüstçe görmek için standart ayarlarla başlayın.",
+          "Neden-sonuç ilişkisini net görmek için her seferinde tek bir ayarı değiştirin."
+        ]
+      },
+      {
+        "title": "Oturum Nasıl Çalışır",
+        "steps": [
+          "Aynaları döndürerek lazeri hedefe ulaştırın ve Yansıma Yasasını doğrulayın.",
+          "Her turdan sonra formülleri, doğruluk oranını ve milisaniye verilerini kontrol edin."
+        ]
+      },
+      {
+        "title": "Sonuçlarınızı Analiz Edin",
+        "steps": [
+          "Evet. Tamamlanan testler tarayıcınızın yerel İstatistikler paneline otomatik kaydedilir.",
+          "Yorucu uzun seanslar yerine 10 dakikalık yüksek odaklı pratikler yapın."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Aynı Anda Tek Değişkeni Değiştirin",
+        "content": "Neden-sonuç ilişkisini net görmek için her seferinde tek bir ayarı değiştirin."
+      },
+      {
+        "title": "Hızdan Önce Doğruluğu Önceliklendirin",
+        "content": "Her turdan sonra formülleri, doğruluk oranını ve milisaniye verilerini kontrol edin."
+      },
+      {
+        "title": "Gelişiminizi Düzenli Takip Edin",
+        "content": "Haftada birkaç kez 10–15 dakikalık çalışma kalıcı sezgi ve tutarlı performans kazandırır."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Bu modül tamamen ücretsiz mi?",
+        "answer": "Evet. Reflextry üzerindeki tüm araçlar hesap veya indirme olmadan tarayıcıda ücretsiz çalışır."
+      },
+      {
+        "question": "Okul bilgisayarlarında ve tabletlerde çalışır mı?",
+        "answer": "Evet. Arayüz dizüstü bilgisayar, Chromebook, tablet ve akıllı tahtalara tam uyumludur."
+      },
+      {
+        "question": "En iyi skorlarım kaydediliyor mu?",
+        "answer": "Evet. Tamamlanan testler tarayıcınızın yerel İstatistikler paneline otomatik kaydedilir."
+      },
+      {
+        "question": "Ne sıklıkla pratik yapmalıyım?",
+        "answer": "Haftada 3–5 kez 10 dakikalık odaklı oturumlar kalıcı ve ölçülebilir gelişim sağlar."
+      }
+    ]
+  },
+  "projectile-cannon": {
+    "description": [
+      {
+        "title": "Hakkında: Eğik Atış Top Fiziği",
+        "content": "Açı, hız, rüzgar ve yerçekimini ayarlayarak parabolik hedefleri vurun. Soyut fizik ve matematik denklemlerini etkileşimli deneylere dönüştürün. Serbest düşüş, yörünge fırlatma, lazer yansıma ve tahterevalli tork dengesini tarayıcınızda test edin."
+      },
+      {
+        "title": "Temel Mekanik ve Öğrenme Bilimi",
+        "content": "Yerçekimi serbest düşüşü, yörünge hızı, ayna yansıma yasası, eğik atış ve kaldıraç tork dengesini öğreten 2D görsel simülasyonlar. Canlı Denklemler: Değişkenleri oynattıkça formüllerin anlık değişimini izleyin. Görsel Sezgi: Vektörleri, yüzey normallerini ve izleri inceleyin."
+      },
+      {
+        "title": "Puanlama ve Canlı Metrikler",
+        "content": "Her simülasyon anlık görsel geri bildirimi şeffaf sayısal metriklerle birleştirir. Görev Modları: Puanlı öğrenci görevleriyle bilginizi ölçün."
+      },
+      {
+        "title": "Sınıf ve Günlük Kullanım",
+        "content": "Evet. Arayüz dizüstü bilgisayar, Chromebook, tablet ve akıllı tahtalara tam uyumludur. Haftada birkaç kez 10–15 dakikalık çalışma kalıcı sezgi ve tutarlı performans kazandırır."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Kurulum ve Kontroller",
+        "steps": [
+          "Mevcut hızınızı veya anlayışınızı dürüstçe görmek için standart ayarlarla başlayın.",
+          "Neden-sonuç ilişkisini net görmek için her seferinde tek bir ayarı değiştirin."
+        ]
+      },
+      {
+        "title": "Oturum Nasıl Çalışır",
+        "steps": [
+          "Açı, hız, rüzgar ve yerçekimini ayarlayarak parabolik hedefleri vurun.",
+          "Her turdan sonra formülleri, doğruluk oranını ve milisaniye verilerini kontrol edin."
+        ]
+      },
+      {
+        "title": "Sonuçlarınızı Analiz Edin",
+        "steps": [
+          "Evet. Tamamlanan testler tarayıcınızın yerel İstatistikler paneline otomatik kaydedilir.",
+          "Yorucu uzun seanslar yerine 10 dakikalık yüksek odaklı pratikler yapın."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Aynı Anda Tek Değişkeni Değiştirin",
+        "content": "Neden-sonuç ilişkisini net görmek için her seferinde tek bir ayarı değiştirin."
+      },
+      {
+        "title": "Hızdan Önce Doğruluğu Önceliklendirin",
+        "content": "Her turdan sonra formülleri, doğruluk oranını ve milisaniye verilerini kontrol edin."
+      },
+      {
+        "title": "Gelişiminizi Düzenli Takip Edin",
+        "content": "Haftada birkaç kez 10–15 dakikalık çalışma kalıcı sezgi ve tutarlı performans kazandırır."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Bu modül tamamen ücretsiz mi?",
+        "answer": "Evet. Reflextry üzerindeki tüm araçlar hesap veya indirme olmadan tarayıcıda ücretsiz çalışır."
+      },
+      {
+        "question": "Okul bilgisayarlarında ve tabletlerde çalışır mı?",
+        "answer": "Evet. Arayüz dizüstü bilgisayar, Chromebook, tablet ve akıllı tahtalara tam uyumludur."
+      },
+      {
+        "question": "En iyi skorlarım kaydediliyor mu?",
+        "answer": "Evet. Tamamlanan testler tarayıcınızın yerel İstatistikler paneline otomatik kaydedilir."
+      },
+      {
+        "question": "Ne sıklıkla pratik yapmalıyım?",
+        "answer": "Haftada 3–5 kez 10 dakikalık odaklı oturumlar kalıcı ve ölçülebilir gelişim sağlar."
+      }
+    ]
+  },
+  "torque-balance": {
+    "description": [
+      {
+        "title": "Hakkında: Tahterevalli Tork Dengesi",
+        "content": "Kaldıraç koluna ağırlıklar yerleştirerek tork eşitliğini sağlayın. Soyut fizik ve matematik denklemlerini etkileşimli deneylere dönüştürün. Serbest düşüş, yörünge fırlatma, lazer yansıma ve tahterevalli tork dengesini tarayıcınızda test edin."
+      },
+      {
+        "title": "Temel Mekanik ve Öğrenme Bilimi",
+        "content": "Yerçekimi serbest düşüşü, yörünge hızı, ayna yansıma yasası, eğik atış ve kaldıraç tork dengesini öğreten 2D görsel simülasyonlar. Canlı Denklemler: Değişkenleri oynattıkça formüllerin anlık değişimini izleyin. Görsel Sezgi: Vektörleri, yüzey normallerini ve izleri inceleyin."
+      },
+      {
+        "title": "Puanlama ve Canlı Metrikler",
+        "content": "Her simülasyon anlık görsel geri bildirimi şeffaf sayısal metriklerle birleştirir. Görev Modları: Puanlı öğrenci görevleriyle bilginizi ölçün."
+      },
+      {
+        "title": "Sınıf ve Günlük Kullanım",
+        "content": "Evet. Arayüz dizüstü bilgisayar, Chromebook, tablet ve akıllı tahtalara tam uyumludur. Haftada birkaç kez 10–15 dakikalık çalışma kalıcı sezgi ve tutarlı performans kazandırır."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Kurulum ve Kontroller",
+        "steps": [
+          "Mevcut hızınızı veya anlayışınızı dürüstçe görmek için standart ayarlarla başlayın.",
+          "Neden-sonuç ilişkisini net görmek için her seferinde tek bir ayarı değiştirin."
+        ]
+      },
+      {
+        "title": "Oturum Nasıl Çalışır",
+        "steps": [
+          "Kaldıraç koluna ağırlıklar yerleştirerek tork eşitliğini sağlayın.",
+          "Her turdan sonra formülleri, doğruluk oranını ve milisaniye verilerini kontrol edin."
+        ]
+      },
+      {
+        "title": "Sonuçlarınızı Analiz Edin",
+        "steps": [
+          "Evet. Tamamlanan testler tarayıcınızın yerel İstatistikler paneline otomatik kaydedilir.",
+          "Yorucu uzun seanslar yerine 10 dakikalık yüksek odaklı pratikler yapın."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Aynı Anda Tek Değişkeni Değiştirin",
+        "content": "Neden-sonuç ilişkisini net görmek için her seferinde tek bir ayarı değiştirin."
+      },
+      {
+        "title": "Hızdan Önce Doğruluğu Önceliklendirin",
+        "content": "Her turdan sonra formülleri, doğruluk oranını ve milisaniye verilerini kontrol edin."
+      },
+      {
+        "title": "Gelişiminizi Düzenli Takip Edin",
+        "content": "Haftada birkaç kez 10–15 dakikalık çalışma kalıcı sezgi ve tutarlı performans kazandırır."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Bu modül tamamen ücretsiz mi?",
+        "answer": "Evet. Reflextry üzerindeki tüm araçlar hesap veya indirme olmadan tarayıcıda ücretsiz çalışır."
+      },
+      {
+        "question": "Okul bilgisayarlarında ve tabletlerde çalışır mı?",
+        "answer": "Evet. Arayüz dizüstü bilgisayar, Chromebook, tablet ve akıllı tahtalara tam uyumludur."
+      },
+      {
+        "question": "En iyi skorlarım kaydediliyor mu?",
+        "answer": "Evet. Tamamlanan testler tarayıcınızın yerel İstatistikler paneline otomatik kaydedilir."
+      },
+      {
+        "question": "Ne sıklıkla pratik yapmalıyım?",
+        "answer": "Haftada 3–5 kez 10 dakikalık odaklı oturumlar kalıcı ve ölçülebilir gelişim sağlar."
+      }
+    ]
+  },
+  "solar-gravity-3d": {
+    "description": [
+      {
+        "title": "Hakkında: 3D Güneş Yerçekimi Simülatörü",
+        "content": "3D uzay-zaman yerçekimi kuyusunu keşfedin ve uydu fırlatın. WebGL 3D fizik motoruyla bükülmüş uzay-zaman ızgarasının etrafında gezinin, uyduları yörüngeye oturtun ve yakın, orta, uzak derinlikteki 3D dronları vurun."
+      },
+      {
+        "title": "Temel Mekanik ve Öğrenme Bilimi",
+        "content": "Tarayıcıda donanım hızlandırmalı 3D yörünge mekaniği ve Z-ekseni derinlik hedefleme simülasyonları. Gerçek Zamanlı WebGL 3D: Etkileşimli 3D kamera kontrolleri ve canlı aydınlatma. Derinlik Algısı: Yakın, orta ve uzak düzlemlerde uzamsal karar hızını geliştirin."
+      },
+      {
+        "title": "Puanlama ve Canlı Metrikler",
+        "content": "Her simülasyon anlık görsel geri bildirimi şeffaf sayısal metriklerle birleştirir. İndirme Gerektirmez: Dizüstü ve masaüstü cihazlarda akıcı adaptif grafik."
+      },
+      {
+        "title": "Sınıf ve Günlük Kullanım",
+        "content": "Evet. Arayüz dizüstü bilgisayar, Chromebook, tablet ve akıllı tahtalara tam uyumludur. Haftada birkaç kez 10–15 dakikalık çalışma kalıcı sezgi ve tutarlı performans kazandırır."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Kurulum ve Kontroller",
+        "steps": [
+          "Mevcut hızınızı veya anlayışınızı dürüstçe görmek için standart ayarlarla başlayın.",
+          "Neden-sonuç ilişkisini net görmek için her seferinde tek bir ayarı değiştirin."
+        ]
+      },
+      {
+        "title": "Oturum Nasıl Çalışır",
+        "steps": [
+          "3D uzay-zaman yerçekimi kuyusunu keşfedin ve uydu fırlatın.",
+          "Her turdan sonra formülleri, doğruluk oranını ve milisaniye verilerini kontrol edin."
+        ]
+      },
+      {
+        "title": "Sonuçlarınızı Analiz Edin",
+        "steps": [
+          "Evet. Tamamlanan testler tarayıcınızın yerel İstatistikler paneline otomatik kaydedilir.",
+          "Yorucu uzun seanslar yerine 10 dakikalık yüksek odaklı pratikler yapın."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Aynı Anda Tek Değişkeni Değiştirin",
+        "content": "Neden-sonuç ilişkisini net görmek için her seferinde tek bir ayarı değiştirin."
+      },
+      {
+        "title": "Hızdan Önce Doğruluğu Önceliklendirin",
+        "content": "Her turdan sonra formülleri, doğruluk oranını ve milisaniye verilerini kontrol edin."
+      },
+      {
+        "title": "Gelişiminizi Düzenli Takip Edin",
+        "content": "Haftada birkaç kez 10–15 dakikalık çalışma kalıcı sezgi ve tutarlı performans kazandırır."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Bu modül tamamen ücretsiz mi?",
+        "answer": "Evet. Reflextry üzerindeki tüm araçlar hesap veya indirme olmadan tarayıcıda ücretsiz çalışır."
+      },
+      {
+        "question": "Okul bilgisayarlarında ve tabletlerde çalışır mı?",
+        "answer": "Evet. Arayüz dizüstü bilgisayar, Chromebook, tablet ve akıllı tahtalara tam uyumludur."
+      },
+      {
+        "question": "En iyi skorlarım kaydediliyor mu?",
+        "answer": "Evet. Tamamlanan testler tarayıcınızın yerel İstatistikler paneline otomatik kaydedilir."
+      },
+      {
+        "question": "Ne sıklıkla pratik yapmalıyım?",
+        "answer": "Haftada 3–5 kez 10 dakikalık odaklı oturumlar kalıcı ve ölçülebilir gelişim sağlar."
+      }
+    ]
+  },
+  "spatial-aim-3d": {
+    "description": [
+      {
+        "title": "Hakkında: 3D Uzamsal Nişan Arenası",
+        "content": "Yakın, orta ve uzak derinlikteki 3D drone hedeflerini hızla vurun. WebGL 3D fizik motoruyla bükülmüş uzay-zaman ızgarasının etrafında gezinin, uyduları yörüngeye oturtun ve yakın, orta, uzak derinlikteki 3D dronları vurun."
+      },
+      {
+        "title": "Temel Mekanik ve Öğrenme Bilimi",
+        "content": "Tarayıcıda donanım hızlandırmalı 3D yörünge mekaniği ve Z-ekseni derinlik hedefleme simülasyonları. Gerçek Zamanlı WebGL 3D: Etkileşimli 3D kamera kontrolleri ve canlı aydınlatma. Derinlik Algısı: Yakın, orta ve uzak düzlemlerde uzamsal karar hızını geliştirin."
+      },
+      {
+        "title": "Puanlama ve Canlı Metrikler",
+        "content": "Her simülasyon anlık görsel geri bildirimi şeffaf sayısal metriklerle birleştirir. İndirme Gerektirmez: Dizüstü ve masaüstü cihazlarda akıcı adaptif grafik."
+      },
+      {
+        "title": "Sınıf ve Günlük Kullanım",
+        "content": "Evet. Arayüz dizüstü bilgisayar, Chromebook, tablet ve akıllı tahtalara tam uyumludur. Haftada birkaç kez 10–15 dakikalık çalışma kalıcı sezgi ve tutarlı performans kazandırır."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Kurulum ve Kontroller",
+        "steps": [
+          "Mevcut hızınızı veya anlayışınızı dürüstçe görmek için standart ayarlarla başlayın.",
+          "Neden-sonuç ilişkisini net görmek için her seferinde tek bir ayarı değiştirin."
+        ]
+      },
+      {
+        "title": "Oturum Nasıl Çalışır",
+        "steps": [
+          "Yakın, orta ve uzak derinlikteki 3D drone hedeflerini hızla vurun.",
+          "Her turdan sonra formülleri, doğruluk oranını ve milisaniye verilerini kontrol edin."
+        ]
+      },
+      {
+        "title": "Sonuçlarınızı Analiz Edin",
+        "steps": [
+          "Evet. Tamamlanan testler tarayıcınızın yerel İstatistikler paneline otomatik kaydedilir.",
+          "Yorucu uzun seanslar yerine 10 dakikalık yüksek odaklı pratikler yapın."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Aynı Anda Tek Değişkeni Değiştirin",
+        "content": "Neden-sonuç ilişkisini net görmek için her seferinde tek bir ayarı değiştirin."
+      },
+      {
+        "title": "Hızdan Önce Doğruluğu Önceliklendirin",
+        "content": "Her turdan sonra formülleri, doğruluk oranını ve milisaniye verilerini kontrol edin."
+      },
+      {
+        "title": "Gelişiminizi Düzenli Takip Edin",
+        "content": "Haftada birkaç kez 10–15 dakikalık çalışma kalıcı sezgi ve tutarlı performans kazandırır."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Bu modül tamamen ücretsiz mi?",
+        "answer": "Evet. Reflextry üzerindeki tüm araçlar hesap veya indirme olmadan tarayıcıda ücretsiz çalışır."
+      },
+      {
+        "question": "Okul bilgisayarlarında ve tabletlerde çalışır mı?",
+        "answer": "Evet. Arayüz dizüstü bilgisayar, Chromebook, tablet ve akıllı tahtalara tam uyumludur."
+      },
+      {
+        "question": "En iyi skorlarım kaydediliyor mu?",
+        "answer": "Evet. Tamamlanan testler tarayıcınızın yerel İstatistikler paneline otomatik kaydedilir."
+      },
+      {
+        "question": "Ne sıklıkla pratik yapmalıyım?",
+        "answer": "Haftada 3–5 kez 10 dakikalık odaklı oturumlar kalıcı ve ölçülebilir gelişim sağlar."
+      }
+    ]
+  },
+  "reaction-duel-2p": {
+    "description": [
+      {
+        "title": "Hakkında: 2 Oyunculu Refleks Düellosu",
+        "content": "Hatalı çıkış algılamalı, 5 rauntluk milisaniye tepki yarışı. Hesap veya bekleme sırası yok. Tek ekranı paylaşarak milisaniye refleks düellosu, matematik halat çekme ve rüzgarlı yerçekimi top savaşları oynayın."
+      },
+      {
+        "title": "Temel Mekanik ve Öğrenme Bilimi",
+        "content": "Sınıflar, çalışma grupları ve dostane rekabet için tasarlanmış yerel 2 oyunculu zeka ve fizik oyunları. Paylaşımlı Klavye ve Dokunmatik: Dizüstü ve tabletlerde sol-sağ bölünmüş kontrol. Sınıf Dostu: Çocuklar, öğrenciler ve profesyoneller için zorluk kademeleri."
+      },
+      {
+        "title": "Puanlama ve Canlı Metrikler",
+        "content": "Her simülasyon anlık görsel geri bildirimi şeffaf sayısal metriklerle birleştirir. Adil Milisaniye Ölçümü: Hatalı çıkış algılama ve anlık maç istatistikleri."
+      },
+      {
+        "title": "Sınıf ve Günlük Kullanım",
+        "content": "Evet. Arayüz dizüstü bilgisayar, Chromebook, tablet ve akıllı tahtalara tam uyumludur. Haftada birkaç kez 10–15 dakikalık çalışma kalıcı sezgi ve tutarlı performans kazandırır."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Kurulum ve Kontroller",
+        "steps": [
+          "Mevcut hızınızı veya anlayışınızı dürüstçe görmek için standart ayarlarla başlayın.",
+          "Neden-sonuç ilişkisini net görmek için her seferinde tek bir ayarı değiştirin."
+        ]
+      },
+      {
+        "title": "Oturum Nasıl Çalışır",
+        "steps": [
+          "Hatalı çıkış algılamalı, 5 rauntluk milisaniye tepki yarışı.",
+          "Her turdan sonra formülleri, doğruluk oranını ve milisaniye verilerini kontrol edin."
+        ]
+      },
+      {
+        "title": "Sonuçlarınızı Analiz Edin",
+        "steps": [
+          "Evet. Tamamlanan testler tarayıcınızın yerel İstatistikler paneline otomatik kaydedilir.",
+          "Yorucu uzun seanslar yerine 10 dakikalık yüksek odaklı pratikler yapın."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Aynı Anda Tek Değişkeni Değiştirin",
+        "content": "Neden-sonuç ilişkisini net görmek için her seferinde tek bir ayarı değiştirin."
+      },
+      {
+        "title": "Hızdan Önce Doğruluğu Önceliklendirin",
+        "content": "Her turdan sonra formülleri, doğruluk oranını ve milisaniye verilerini kontrol edin."
+      },
+      {
+        "title": "Gelişiminizi Düzenli Takip Edin",
+        "content": "Haftada birkaç kez 10–15 dakikalık çalışma kalıcı sezgi ve tutarlı performans kazandırır."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Bu modül tamamen ücretsiz mi?",
+        "answer": "Evet. Reflextry üzerindeki tüm araçlar hesap veya indirme olmadan tarayıcıda ücretsiz çalışır."
+      },
+      {
+        "question": "Okul bilgisayarlarında ve tabletlerde çalışır mı?",
+        "answer": "Evet. Arayüz dizüstü bilgisayar, Chromebook, tablet ve akıllı tahtalara tam uyumludur."
+      },
+      {
+        "question": "En iyi skorlarım kaydediliyor mu?",
+        "answer": "Evet. Tamamlanan testler tarayıcınızın yerel İstatistikler paneline otomatik kaydedilir."
+      },
+      {
+        "question": "Ne sıklıkla pratik yapmalıyım?",
+        "answer": "Haftada 3–5 kez 10 dakikalık odaklı oturumlar kalıcı ve ölçülebilir gelişim sağlar."
+      }
+    ]
+  },
+  "math-tug-of-war": {
+    "description": [
+      {
+        "title": "Hakkında: Matematik Halat Çekme",
+        "content": "Rakibinizden hızlı işlem çözerek halatı kendi çizginize çekin. Hesap veya bekleme sırası yok. Tek ekranı paylaşarak milisaniye refleks düellosu, matematik halat çekme ve rüzgarlı yerçekimi top savaşları oynayın."
+      },
+      {
+        "title": "Temel Mekanik ve Öğrenme Bilimi",
+        "content": "Sınıflar, çalışma grupları ve dostane rekabet için tasarlanmış yerel 2 oyunculu zeka ve fizik oyunları. Paylaşımlı Klavye ve Dokunmatik: Dizüstü ve tabletlerde sol-sağ bölünmüş kontrol. Sınıf Dostu: Çocuklar, öğrenciler ve profesyoneller için zorluk kademeleri."
+      },
+      {
+        "title": "Puanlama ve Canlı Metrikler",
+        "content": "Her simülasyon anlık görsel geri bildirimi şeffaf sayısal metriklerle birleştirir. Adil Milisaniye Ölçümü: Hatalı çıkış algılama ve anlık maç istatistikleri."
+      },
+      {
+        "title": "Sınıf ve Günlük Kullanım",
+        "content": "Evet. Arayüz dizüstü bilgisayar, Chromebook, tablet ve akıllı tahtalara tam uyumludur. Haftada birkaç kez 10–15 dakikalık çalışma kalıcı sezgi ve tutarlı performans kazandırır."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Kurulum ve Kontroller",
+        "steps": [
+          "Mevcut hızınızı veya anlayışınızı dürüstçe görmek için standart ayarlarla başlayın.",
+          "Neden-sonuç ilişkisini net görmek için her seferinde tek bir ayarı değiştirin."
+        ]
+      },
+      {
+        "title": "Oturum Nasıl Çalışır",
+        "steps": [
+          "Rakibinizden hızlı işlem çözerek halatı kendi çizginize çekin.",
+          "Her turdan sonra formülleri, doğruluk oranını ve milisaniye verilerini kontrol edin."
+        ]
+      },
+      {
+        "title": "Sonuçlarınızı Analiz Edin",
+        "steps": [
+          "Evet. Tamamlanan testler tarayıcınızın yerel İstatistikler paneline otomatik kaydedilir.",
+          "Yorucu uzun seanslar yerine 10 dakikalık yüksek odaklı pratikler yapın."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Aynı Anda Tek Değişkeni Değiştirin",
+        "content": "Neden-sonuç ilişkisini net görmek için her seferinde tek bir ayarı değiştirin."
+      },
+      {
+        "title": "Hızdan Önce Doğruluğu Önceliklendirin",
+        "content": "Her turdan sonra formülleri, doğruluk oranını ve milisaniye verilerini kontrol edin."
+      },
+      {
+        "title": "Gelişiminizi Düzenli Takip Edin",
+        "content": "Haftada birkaç kez 10–15 dakikalık çalışma kalıcı sezgi ve tutarlı performans kazandırır."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Bu modül tamamen ücretsiz mi?",
+        "answer": "Evet. Reflextry üzerindeki tüm araçlar hesap veya indirme olmadan tarayıcıda ücretsiz çalışır."
+      },
+      {
+        "question": "Okul bilgisayarlarında ve tabletlerde çalışır mı?",
+        "answer": "Evet. Arayüz dizüstü bilgisayar, Chromebook, tablet ve akıllı tahtalara tam uyumludur."
+      },
+      {
+        "question": "En iyi skorlarım kaydediliyor mu?",
+        "answer": "Evet. Tamamlanan testler tarayıcınızın yerel İstatistikler paneline otomatik kaydedilir."
+      },
+      {
+        "question": "Ne sıklıkla pratik yapmalıyım?",
+        "answer": "Haftada 3–5 kez 10 dakikalık odaklı oturumlar kalıcı ve ölçülebilir gelişim sağlar."
+      }
+    ]
+  },
+  "cannon-battle-2p": {
+    "description": [
+      {
+        "title": "Hakkında: Yerçekimi Top Savaşı",
+        "content": "Dağlık arazide değişen rüzgar ve gezegen yerçekimiyle sırayla top atışı. Hesap veya bekleme sırası yok. Tek ekranı paylaşarak milisaniye refleks düellosu, matematik halat çekme ve rüzgarlı yerçekimi top savaşları oynayın."
+      },
+      {
+        "title": "Temel Mekanik ve Öğrenme Bilimi",
+        "content": "Sınıflar, çalışma grupları ve dostane rekabet için tasarlanmış yerel 2 oyunculu zeka ve fizik oyunları. Paylaşımlı Klavye ve Dokunmatik: Dizüstü ve tabletlerde sol-sağ bölünmüş kontrol. Sınıf Dostu: Çocuklar, öğrenciler ve profesyoneller için zorluk kademeleri."
+      },
+      {
+        "title": "Puanlama ve Canlı Metrikler",
+        "content": "Her simülasyon anlık görsel geri bildirimi şeffaf sayısal metriklerle birleştirir. Adil Milisaniye Ölçümü: Hatalı çıkış algılama ve anlık maç istatistikleri."
+      },
+      {
+        "title": "Sınıf ve Günlük Kullanım",
+        "content": "Evet. Arayüz dizüstü bilgisayar, Chromebook, tablet ve akıllı tahtalara tam uyumludur. Haftada birkaç kez 10–15 dakikalık çalışma kalıcı sezgi ve tutarlı performans kazandırır."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Kurulum ve Kontroller",
+        "steps": [
+          "Mevcut hızınızı veya anlayışınızı dürüstçe görmek için standart ayarlarla başlayın.",
+          "Neden-sonuç ilişkisini net görmek için her seferinde tek bir ayarı değiştirin."
+        ]
+      },
+      {
+        "title": "Oturum Nasıl Çalışır",
+        "steps": [
+          "Dağlık arazide değişen rüzgar ve gezegen yerçekimiyle sırayla top atışı.",
+          "Her turdan sonra formülleri, doğruluk oranını ve milisaniye verilerini kontrol edin."
+        ]
+      },
+      {
+        "title": "Sonuçlarınızı Analiz Edin",
+        "steps": [
+          "Evet. Tamamlanan testler tarayıcınızın yerel İstatistikler paneline otomatik kaydedilir.",
+          "Yorucu uzun seanslar yerine 10 dakikalık yüksek odaklı pratikler yapın."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Aynı Anda Tek Değişkeni Değiştirin",
+        "content": "Neden-sonuç ilişkisini net görmek için her seferinde tek bir ayarı değiştirin."
+      },
+      {
+        "title": "Hızdan Önce Doğruluğu Önceliklendirin",
+        "content": "Her turdan sonra formülleri, doğruluk oranını ve milisaniye verilerini kontrol edin."
+      },
+      {
+        "title": "Gelişiminizi Düzenli Takip Edin",
+        "content": "Haftada birkaç kez 10–15 dakikalık çalışma kalıcı sezgi ve tutarlı performans kazandırır."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Bu modül tamamen ücretsiz mi?",
+        "answer": "Evet. Reflextry üzerindeki tüm araçlar hesap veya indirme olmadan tarayıcıda ücretsiz çalışır."
+      },
+      {
+        "question": "Okul bilgisayarlarında ve tabletlerde çalışır mı?",
+        "answer": "Evet. Arayüz dizüstü bilgisayar, Chromebook, tablet ve akıllı tahtalara tam uyumludur."
+      },
+      {
+        "question": "En iyi skorlarım kaydediliyor mu?",
+        "answer": "Evet. Tamamlanan testler tarayıcınızın yerel İstatistikler paneline otomatik kaydedilir."
+      },
+      {
+        "question": "Ne sıklıkla pratik yapmalıyım?",
+        "answer": "Haftada 3–5 kez 10 dakikalık odaklı oturumlar kalıcı ve ölçülebilir gelişim sağlar."
+      }
+    ]
+  },
+  "speed-reading": {
+    "description": [
+      {
+        "title": "Hakkında: Hızlı Okuma ve Anlama",
+        "content": "Vurgulu veya RSVP modda okuyup quiz ile Etkin WPM puanınızı öğrenin. Sınavlara hazırlanan öğrenciler ve verilerle çalışan profesyoneller için. Testli Etkin WPM, fatura 10-Key KPH ve Pomodoro sonrası bilişsel yorgunluk farkını ölçün."
+      },
+      {
+        "title": "Temel Mekanik ve Öğrenme Bilimi",
+        "content": "RSVP ve vurgulu hızlı okuma testleri, muhasebe 10-Key veri girişi ve tepki ölçümü destekli odak blokları. Doğrulanmış Anlama: Her hızlı okuma testi anlama sorularıyla puanlanır. İş Yeri KPH Metrikleri: Sayısal tuş takımında standart doğruluk ve KPH ölçümü."
+      },
+      {
+        "title": "Puanlama ve Canlı Metrikler",
+        "content": "Her simülasyon anlık görsel geri bildirimi şeffaf sayısal metriklerle birleştirir. Yorgunluk Telemetrisi: Çalışma bloğu öncesi ve sonrası tepki süresini kıyaslayın."
+      },
+      {
+        "title": "Sınıf ve Günlük Kullanım",
+        "content": "Evet. Arayüz dizüstü bilgisayar, Chromebook, tablet ve akıllı tahtalara tam uyumludur. Haftada birkaç kez 10–15 dakikalık çalışma kalıcı sezgi ve tutarlı performans kazandırır."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Kurulum ve Kontroller",
+        "steps": [
+          "Mevcut hızınızı veya anlayışınızı dürüstçe görmek için standart ayarlarla başlayın.",
+          "Neden-sonuç ilişkisini net görmek için her seferinde tek bir ayarı değiştirin."
+        ]
+      },
+      {
+        "title": "Oturum Nasıl Çalışır",
+        "steps": [
+          "Vurgulu veya RSVP modda okuyup quiz ile Etkin WPM puanınızı öğrenin.",
+          "Her turdan sonra formülleri, doğruluk oranını ve milisaniye verilerini kontrol edin."
+        ]
+      },
+      {
+        "title": "Sonuçlarınızı Analiz Edin",
+        "steps": [
+          "Evet. Tamamlanan testler tarayıcınızın yerel İstatistikler paneline otomatik kaydedilir.",
+          "Yorucu uzun seanslar yerine 10 dakikalık yüksek odaklı pratikler yapın."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Aynı Anda Tek Değişkeni Değiştirin",
+        "content": "Neden-sonuç ilişkisini net görmek için her seferinde tek bir ayarı değiştirin."
+      },
+      {
+        "title": "Hızdan Önce Doğruluğu Önceliklendirin",
+        "content": "Her turdan sonra formülleri, doğruluk oranını ve milisaniye verilerini kontrol edin."
+      },
+      {
+        "title": "Gelişiminizi Düzenli Takip Edin",
+        "content": "Haftada birkaç kez 10–15 dakikalık çalışma kalıcı sezgi ve tutarlı performans kazandırır."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Bu modül tamamen ücretsiz mi?",
+        "answer": "Evet. Reflextry üzerindeki tüm araçlar hesap veya indirme olmadan tarayıcıda ücretsiz çalışır."
+      },
+      {
+        "question": "Okul bilgisayarlarında ve tabletlerde çalışır mı?",
+        "answer": "Evet. Arayüz dizüstü bilgisayar, Chromebook, tablet ve akıllı tahtalara tam uyumludur."
+      },
+      {
+        "question": "En iyi skorlarım kaydediliyor mu?",
+        "answer": "Evet. Tamamlanan testler tarayıcınızın yerel İstatistikler paneline otomatik kaydedilir."
+      },
+      {
+        "question": "Ne sıklıkla pratik yapmalıyım?",
+        "answer": "Haftada 3–5 kez 10 dakikalık odaklı oturumlar kalıcı ve ölçülebilir gelişim sağlar."
+      }
+    ]
+  },
+  "ten-key": {
+    "description": [
+      {
+        "title": "Hakkında: 10-Key Sayısal Tuş Hız Testi",
+        "content": "Faturalar, tam sayılar ve SKU kodlarıyla KPH ve doğruluğunuzu ölçün. Sınavlara hazırlanan öğrenciler ve verilerle çalışan profesyoneller için. Testli Etkin WPM, fatura 10-Key KPH ve Pomodoro sonrası bilişsel yorgunluk farkını ölçün."
+      },
+      {
+        "title": "Temel Mekanik ve Öğrenme Bilimi",
+        "content": "RSVP ve vurgulu hızlı okuma testleri, muhasebe 10-Key veri girişi ve tepki ölçümü destekli odak blokları. Doğrulanmış Anlama: Her hızlı okuma testi anlama sorularıyla puanlanır. İş Yeri KPH Metrikleri: Sayısal tuş takımında standart doğruluk ve KPH ölçümü."
+      },
+      {
+        "title": "Puanlama ve Canlı Metrikler",
+        "content": "Her simülasyon anlık görsel geri bildirimi şeffaf sayısal metriklerle birleştirir. Yorgunluk Telemetrisi: Çalışma bloğu öncesi ve sonrası tepki süresini kıyaslayın."
+      },
+      {
+        "title": "Sınıf ve Günlük Kullanım",
+        "content": "Evet. Arayüz dizüstü bilgisayar, Chromebook, tablet ve akıllı tahtalara tam uyumludur. Haftada birkaç kez 10–15 dakikalık çalışma kalıcı sezgi ve tutarlı performans kazandırır."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Kurulum ve Kontroller",
+        "steps": [
+          "Mevcut hızınızı veya anlayışınızı dürüstçe görmek için standart ayarlarla başlayın.",
+          "Neden-sonuç ilişkisini net görmek için her seferinde tek bir ayarı değiştirin."
+        ]
+      },
+      {
+        "title": "Oturum Nasıl Çalışır",
+        "steps": [
+          "Faturalar, tam sayılar ve SKU kodlarıyla KPH ve doğruluğunuzu ölçün.",
+          "Her turdan sonra formülleri, doğruluk oranını ve milisaniye verilerini kontrol edin."
+        ]
+      },
+      {
+        "title": "Sonuçlarınızı Analiz Edin",
+        "steps": [
+          "Evet. Tamamlanan testler tarayıcınızın yerel İstatistikler paneline otomatik kaydedilir.",
+          "Yorucu uzun seanslar yerine 10 dakikalık yüksek odaklı pratikler yapın."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Aynı Anda Tek Değişkeni Değiştirin",
+        "content": "Neden-sonuç ilişkisini net görmek için her seferinde tek bir ayarı değiştirin."
+      },
+      {
+        "title": "Hızdan Önce Doğruluğu Önceliklendirin",
+        "content": "Her turdan sonra formülleri, doğruluk oranını ve milisaniye verilerini kontrol edin."
+      },
+      {
+        "title": "Gelişiminizi Düzenli Takip Edin",
+        "content": "Haftada birkaç kez 10–15 dakikalık çalışma kalıcı sezgi ve tutarlı performans kazandırır."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Bu modül tamamen ücretsiz mi?",
+        "answer": "Evet. Reflextry üzerindeki tüm araçlar hesap veya indirme olmadan tarayıcıda ücretsiz çalışır."
+      },
+      {
+        "question": "Okul bilgisayarlarında ve tabletlerde çalışır mı?",
+        "answer": "Evet. Arayüz dizüstü bilgisayar, Chromebook, tablet ve akıllı tahtalara tam uyumludur."
+      },
+      {
+        "question": "En iyi skorlarım kaydediliyor mu?",
+        "answer": "Evet. Tamamlanan testler tarayıcınızın yerel İstatistikler paneline otomatik kaydedilir."
+      },
+      {
+        "question": "Ne sıklıkla pratik yapmalıyım?",
+        "answer": "Haftada 3–5 kez 10 dakikalık odaklı oturumlar kalıcı ve ölçülebilir gelişim sağlar."
+      }
+    ]
+  },
+  "focus-sprint": {
+    "description": [
+      {
+        "title": "Hakkında: Odak Sprinti ve Yorgunluk",
+        "content": "Pomodoro sayacını çalışma öncesi/sonrası tepki testiyle birleştirin. Sınavlara hazırlanan öğrenciler ve verilerle çalışan profesyoneller için. Testli Etkin WPM, fatura 10-Key KPH ve Pomodoro sonrası bilişsel yorgunluk farkını ölçün."
+      },
+      {
+        "title": "Temel Mekanik ve Öğrenme Bilimi",
+        "content": "RSVP ve vurgulu hızlı okuma testleri, muhasebe 10-Key veri girişi ve tepki ölçümü destekli odak blokları. Doğrulanmış Anlama: Her hızlı okuma testi anlama sorularıyla puanlanır. İş Yeri KPH Metrikleri: Sayısal tuş takımında standart doğruluk ve KPH ölçümü."
+      },
+      {
+        "title": "Puanlama ve Canlı Metrikler",
+        "content": "Her simülasyon anlık görsel geri bildirimi şeffaf sayısal metriklerle birleştirir. Yorgunluk Telemetrisi: Çalışma bloğu öncesi ve sonrası tepki süresini kıyaslayın."
+      },
+      {
+        "title": "Sınıf ve Günlük Kullanım",
+        "content": "Evet. Arayüz dizüstü bilgisayar, Chromebook, tablet ve akıllı tahtalara tam uyumludur. Haftada birkaç kez 10–15 dakikalık çalışma kalıcı sezgi ve tutarlı performans kazandırır."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Kurulum ve Kontroller",
+        "steps": [
+          "Mevcut hızınızı veya anlayışınızı dürüstçe görmek için standart ayarlarla başlayın.",
+          "Neden-sonuç ilişkisini net görmek için her seferinde tek bir ayarı değiştirin."
+        ]
+      },
+      {
+        "title": "Oturum Nasıl Çalışır",
+        "steps": [
+          "Pomodoro sayacını çalışma öncesi/sonrası tepki testiyle birleştirin.",
+          "Her turdan sonra formülleri, doğruluk oranını ve milisaniye verilerini kontrol edin."
+        ]
+      },
+      {
+        "title": "Sonuçlarınızı Analiz Edin",
+        "steps": [
+          "Evet. Tamamlanan testler tarayıcınızın yerel İstatistikler paneline otomatik kaydedilir.",
+          "Yorucu uzun seanslar yerine 10 dakikalık yüksek odaklı pratikler yapın."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Aynı Anda Tek Değişkeni Değiştirin",
+        "content": "Neden-sonuç ilişkisini net görmek için her seferinde tek bir ayarı değiştirin."
+      },
+      {
+        "title": "Hızdan Önce Doğruluğu Önceliklendirin",
+        "content": "Her turdan sonra formülleri, doğruluk oranını ve milisaniye verilerini kontrol edin."
+      },
+      {
+        "title": "Gelişiminizi Düzenli Takip Edin",
+        "content": "Haftada birkaç kez 10–15 dakikalık çalışma kalıcı sezgi ve tutarlı performans kazandırır."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Bu modül tamamen ücretsiz mi?",
+        "answer": "Evet. Reflextry üzerindeki tüm araçlar hesap veya indirme olmadan tarayıcıda ücretsiz çalışır."
+      },
+      {
+        "question": "Okul bilgisayarlarında ve tabletlerde çalışır mı?",
+        "answer": "Evet. Arayüz dizüstü bilgisayar, Chromebook, tablet ve akıllı tahtalara tam uyumludur."
+      },
+      {
+        "question": "En iyi skorlarım kaydediliyor mu?",
+        "answer": "Evet. Tamamlanan testler tarayıcınızın yerel İstatistikler paneline otomatik kaydedilir."
+      },
+      {
+        "question": "Ne sıklıkla pratik yapmalıyım?",
+        "answer": "Haftada 3–5 kez 10 dakikalık odaklı oturumlar kalıcı ve ölçülebilir gelişim sağlar."
+      }
+    ]
   }
 }

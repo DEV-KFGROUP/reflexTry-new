@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { headers } from 'next/headers';
 import BlogHubClient, { type BlogPost } from './BlogHubClient';
 import { getAllContent } from '@/lib/content/loader';
 import type { Article } from '@/lib/content/types';
@@ -7,10 +8,10 @@ import { generateBreadcrumbStructuredData, generateWebPageSchema } from "@/lib/s
 import { getCategoryMetadata } from '@/lib/seo-utils';
 
 export async function generateMetadata(): Promise<Metadata> {
-    return getCategoryMetadata('blog');
+    const headersList = await headers();
+    const locale = headersList.get('x-locale') || 'en';
+    return getCategoryMetadata('blog', locale);
 }
-
-import { headers } from 'next/headers';
 
 export default async function Blog() {
     const headersList = await headers();
@@ -28,12 +29,13 @@ export default async function Blog() {
     const breadcrumbSchema = generateBreadcrumbStructuredData([
         { name: "Home", url: "/" },
         { name: "Blog", url: "/blog" },
-    ]);
+    ], locale);
     
     const webPageSchema = generateWebPageSchema(
         "Brain Training Articles & Guides Blog",
         "Discover expert insights on brain training, memory improvement, reaction time, and cognitive enhancement.",
-        "/blog"
+        "/blog",
+        locale
     );
 
     return (

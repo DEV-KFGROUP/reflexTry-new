@@ -950,5 +950,113 @@
       "gra na dokładność tapnięć bpm",
       "trener refleksu rytmicznego"
     ]
+  },
+  "gravity-lab": {
+    "title": "Laboratorium Grawitacji i Orbit - Laboratorium STEM i Fizyki | Reflextry",
+    "description": "Porównaj spadek swobodny na Ziemi, Księżycu, Marsie i Jowiszu lub wejdź na orbitę.",
+    "keywords": [
+      "laboratorium grawitacji i orbit",
+      "laboratorium stem i fizyki",
+      "reflextry"
+    ]
+  },
+  "laser-reflection": {
+    "title": "Optyka Odbicia Lasera - Laboratorium STEM i Fizyki | Reflextry",
+    "description": "Obracaj lustra, kieruj wiązkę lasera na czujnik i sprawdzaj prawo odbicia.",
+    "keywords": [
+      "optyka odbicia lasera",
+      "laboratorium stem i fizyki",
+      "reflextry"
+    ]
+  },
+  "projectile-cannon": {
+    "title": "Fizyka Działa Balistycznego - Laboratorium STEM i Fizyki | Reflextry",
+    "description": "Dobierz kąt, prędkość, wiatr i grawitację, by trafić cele po paraboli.",
+    "keywords": [
+      "fizyka działa balistycznego",
+      "laboratorium stem i fizyki",
+      "reflextry"
+    ]
+  },
+  "torque-balance": {
+    "title": "Równowaga Momentu i Dźwigni - Laboratorium STEM i Fizyki | Reflextry",
+    "description": "Równoważ ciężarki na huśtawce, stosując równania momentu siły.",
+    "keywords": [
+      "równowaga momentu i dźwigni",
+      "laboratorium stem i fizyki",
+      "reflextry"
+    ]
+  },
+  "solar-gravity-3d": {
+    "title": "Symulator 3D Grawitacji Słonecznej - Interaktywne Laboratorium 3D | Reflextry",
+    "description": "Badaj studnię grawitacyjną 3D i umieszczaj własne satelity na orbicie.",
+    "keywords": [
+      "symulator 3d grawitacji słonecznej",
+      "interaktywne laboratorium 3d",
+      "reflextry"
+    ]
+  },
+  "spatial-aim-3d": {
+    "title": "Arena Celności Przestrzennej 3D - Interaktywne Laboratorium 3D | Reflextry",
+    "description": "Trafiaj drony 3D pojawiające się na bliskim, średnim i dalekim planie.",
+    "keywords": [
+      "arena celności przestrzennej 3d",
+      "interaktywne laboratorium 3d",
+      "reflextry"
+    ]
+  },
+  "reaction-duel-2p": {
+    "title": "Pojedynek Refleksu 2 Graczy - Arena dla 2 Graczy | Reflextry",
+    "description": "Starcie do 3 wygranych z pomiarem w milisekundach i wykrywaniem falstartu.",
+    "keywords": [
+      "pojedynek refleksu 2 graczy",
+      "arena dla 2 graczy",
+      "reflextry"
+    ]
+  },
+  "math-tug-of-war": {
+    "title": "Matematyczne Przeciąganie Liny - Arena dla 2 Graczy | Reflextry",
+    "description": "Rozwiązuj działania szybciej niż rywal, aby przeciągnąć linę na swoją stronę.",
+    "keywords": [
+      "matematyczne przeciąganie liny",
+      "arena dla 2 graczy",
+      "reflextry"
+    ]
+  },
+  "cannon-battle-2p": {
+    "title": "Bitwa Dział Grawitacyjnych - Arena dla 2 Graczy | Reflextry",
+    "description": "Turowa artyleria 2D nad górami ze zmiennym wiatrem i grawitacją planet.",
+    "keywords": [
+      "bitwa dział grawitacyjnych",
+      "arena dla 2 graczy",
+      "reflextry"
+    ]
+  },
+  "speed-reading": {
+    "title": "Szybkie Czytanie i Zrozumienie - Pakiet Nauki i Pracy | Reflextry",
+    "description": "Czytaj z podświetleniem lub RSVP i zdaj quiz, aby poznać efektywne WPM.",
+    "keywords": [
+      "szybkie czytanie i zrozumienie",
+      "pakiet nauki i pracy",
+      "reflextry"
+    ]
+  },
+  "ten-key": {
+    "title": "Test Klawiatury Numerycznej 10-Key - Pakiet Nauki i Pracy | Reflextry",
+    "description": "Zmierz KPH i dokładność na fakturach, liczbach całkowitych i kodach SKU.",
+    "keywords": [
+      "test klawiatury numerycznej 10-key",
+      "pakiet nauki i pracy",
+      "reflextry"
+    ]
+  },
+  "focus-sprint": {
+    "title": "Sprint Skupienia i Zmęczenia - Pakiet Nauki i Pracy | Reflextry",
+    "description": "Połącz timer Pomodoro z testem czasu reakcji przed i po sesji pracy.",
+    "keywords": [
+      "sprint skupienia i zmęczenia",
+      "pakiet nauki i pracy",
+      "reflextry"
+    ]
   }
 }

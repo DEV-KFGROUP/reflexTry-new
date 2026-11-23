@@ -950,5 +950,113 @@
       "trò chơi gõ chính xác theo bpm",
       "trình huấn luyện phản xạ nhịp điệu"
     ]
+  },
+  "gravity-lab": {
+    "title": "Phòng Thí Nghiệm Trọng Lực & Quỹ Đạo - Phòng Thí Nghiệm STEM & Vật Lý | Reflextry",
+    "description": "So sánh rơi tự do trên Trái Đất, Mặt Trăng, Sao Hỏa, Sao Mộc hoặc phóng quỹ đạo.",
+    "keywords": [
+      "phòng thí nghiệm trọng lực & quỹ đạo",
+      "phòng thí nghiệm stem & vật lý",
+      "reflextry"
+    ]
+  },
+  "laser-reflection": {
+    "title": "Quang Học Phản Xạ Laser - Phòng Thí Nghiệm STEM & Vật Lý | Reflextry",
+    "description": "Xoay gương dẫn tia laser tới cảm biến và kiểm chứng Định luật Phản xạ.",
+    "keywords": [
+      "quang học phản xạ laser",
+      "phòng thí nghiệm stem & vật lý",
+      "reflextry"
+    ]
+  },
+  "projectile-cannon": {
+    "title": "Vật Lý Pháo Ném Xiên - Phòng Thí Nghiệm STEM & Vật Lý | Reflextry",
+    "description": "Điều chỉnh góc bắn, vận tốc, gió và trọng lực để bắn trúng mục tiêu parabol.",
+    "keywords": [
+      "vật lý pháo ném xiên",
+      "phòng thí nghiệm stem & vật lý",
+      "reflextry"
+    ]
+  },
+  "torque-balance": {
+    "title": "Cân Bằng Mô-Men Đòn Bẩy - Phòng Thí Nghiệm STEM & Vật Lý | Reflextry",
+    "description": "Đặt quả cân lên bập bênh theo phương trình mô-men ở chế độ tự do hoặc tính giờ.",
+    "keywords": [
+      "cân bằng mô-men đòn bẩy",
+      "phòng thí nghiệm stem & vật lý",
+      "reflextry"
+    ]
+  },
+  "solar-gravity-3d": {
+    "title": "Mô Phỏng Trọng Lực Hệ Mặt Trời 3D - Phòng Thí Nghiệm 3D Tương Tác | Reflextry",
+    "description": "Khám phá giếng trọng lực không-thời gian 3D và phóng vệ tinh quỹ đạo.",
+    "keywords": [
+      "mô phỏng trọng lực hệ mặt trời 3d",
+      "phòng thí nghiệm 3d tương tác",
+      "reflextry"
+    ]
+  },
+  "spatial-aim-3d": {
+    "title": "Đấu Trường Ngắm Không Gian 3D - Phòng Thí Nghiệm 3D Tương Tác | Reflextry",
+    "description": "Ngắm và bắn drone 3D xuất hiện ở các tầng độ sâu gần, trung và xa.",
+    "keywords": [
+      "đấu trường ngắm không gian 3d",
+      "phòng thí nghiệm 3d tương tác",
+      "reflextry"
+    ]
+  },
+  "reaction-duel-2p": {
+    "title": "Đấu Phản Xạ 2 Người Chơi - Đấu Trường 2 Người Chơi | Reflextry",
+    "description": "So tài 5 hiệp tính theo mili-giây trên cùng thiết bị có báo phạm quy bấm sớm.",
+    "keywords": [
+      "đấu phản xạ 2 người chơi",
+      "đấu trường 2 người chơi",
+      "reflextry"
+    ]
+  },
+  "math-tug-of-war": {
+    "title": "Kéo Co Toán Học 2 Người - Đấu Trường 2 Người Chơi | Reflextry",
+    "description": "Giải phép tính nhanh hơn đối thủ để kéo dây vượt vạch chiến thắng.",
+    "keywords": [
+      "kéo co toán học 2 người",
+      "đấu trường 2 người chơi",
+      "reflextry"
+    ]
+  },
+  "cannon-battle-2p": {
+    "title": "Đại Chiến Pháo Trọng Lực - Đấu Trường 2 Người Chơi | Reflextry",
+    "description": "Bắn pháo 2D theo lượt qua địa hình núi với gió đổi chiều và trọng lực hành tinh.",
+    "keywords": [
+      "đại chiến pháo trọng lực",
+      "đấu trường 2 người chơi",
+      "reflextry"
+    ]
+  },
+  "speed-reading": {
+    "title": "Đọc Nhanh & Đọc Hiểu - Bộ Công Cụ Học Tập & Làm Việc | Reflextry",
+    "description": "Đọc chế độ đánh dấu hoặc RSVP rồi làm trắc nghiệm để tính Effective WPM.",
+    "keywords": [
+      "đọc nhanh & đọc hiểu",
+      "bộ công cụ học tập & làm việc",
+      "reflextry"
+    ]
+  },
+  "ten-key": {
+    "title": "Kiểm Tra Bàn Phím Số 10-Key - Bộ Công Cụ Học Tập & Làm Việc | Reflextry",
+    "description": "Đo KPH và độ chính xác khi nhập hóa đơn, số nguyên và mã SKU.",
+    "keywords": [
+      "kiểm tra bàn phím số 10-key",
+      "bộ công cụ học tập & làm việc",
+      "reflextry"
+    ]
+  },
+  "focus-sprint": {
+    "title": "Phiên Tập Trung & Đo Mệt Mỏi - Bộ Công Cụ Học Tập & Làm Việc | Reflextry",
+    "description": "Kết hợp đồng hồ Pomodoro chuẩn với kiểm tra phản xạ trước và sau phiên học.",
+    "keywords": [
+      "phiên tập trung & đo mệt mỏi",
+      "bộ công cụ học tập & làm việc",
+      "reflextry"
+    ]
   }
 }

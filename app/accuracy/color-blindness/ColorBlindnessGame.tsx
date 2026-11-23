@@ -337,7 +337,7 @@ export default function ColorBlindnessGame() {
       subtitle="GENERATED COLOR PATTERNS"
       difficultySelector={difficultySelector}
       stats={stats}
-      arenaHeaderLeft={`ARENA // ${diff.label.toUpperCase()}`}
+      arenaHeaderLeft={`${diff.label} Mode`}
       arenaHeaderRight="NUMBER RECOGNITION"
       soundEnabled={!isMuted}
       onToggleSound={toggleMute}
@@ -355,16 +355,16 @@ export default function ColorBlindnessGame() {
             <div className="game-start-icon w-20 h-20 bg-rose-50 dark:bg-rose-900/20 rounded-full flex items-center justify-center mb-6">
               <Eye className="w-10 h-10 text-rose-500" />
             </div>
-            <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-wider mb-2">
+            <h2 className="text-2xl font-black text-[#161614] dark:text-white uppercase tracking-wider mb-2">
               Color Vision Practice
             </h2>
-            <p className="text-sm text-slate-500 dark:text-slate-400 mb-4 leading-relaxed">
+            <p className="text-sm text-[#78756C] dark:text-slate-400 mb-4 leading-relaxed">
               Identify numbers in generated color-dot patterns. This is a practice game, not a diagnostic vision test.
             </p>
             
             <button
               onClick={startGame}
-              className="w-full sm:w-auto px-12 py-4 bg-rose-600 hover:bg-rose-700 text-white rounded-xl font-bold uppercase tracking-widest text-sm transition-all shadow-lg hover:shadow-rose-500/20 flex items-center justify-center gap-3"
+              className="w-full sm:w-auto min-h-[52px] min-w-[200px] px-12 py-4 bg-rose-600 hover:bg-rose-700 text-white rounded-xl font-bold uppercase tracking-widest text-sm transition-all shadow-lg hover:shadow-rose-500/20 flex items-center justify-center gap-3 cursor-pointer touch-manipulation"
             >
               <Play className="w-4 h-4 fill-current" />
               Play
@@ -396,18 +396,18 @@ export default function ColorBlindnessGame() {
             </div>
 
             {/* Input Area */}
-            <div className="w-full max-w-[280px] flex flex-col gap-3">
-              <div className="w-full bg-slate-50 dark:bg-slate-900 rounded-xl h-14 flex items-center justify-center text-2xl font-black font-mono text-slate-800 dark:text-white border-2 border-slate-200 dark:border-slate-800 tracking-widest">
-                {inputValue || <span className="text-slate-300 dark:text-slate-700 font-sans text-sm tracking-widest uppercase font-bold">Input</span>}
+            <div className="w-full max-w-[320px] flex flex-col gap-3">
+              <div className="w-full bg-[#F3F1EB] rounded-xl h-14 flex items-center justify-center text-2xl font-black font-mono text-[#161614] border-2 border-[#E6E3DB] tracking-widest">
+                {inputValue || <span className="text-[#6A675F] font-sans text-sm tracking-widest uppercase font-bold">Input</span>}
               </div>
               
-              <div className="grid grid-cols-3 gap-2">
+              <div className="grid grid-cols-3 gap-2.5">
                 {[1, 2, 3, 4, 5, 6, 7, 8, 9].map(num => (
                   <button
                     key={num}
                     onClick={() => handleInput(num.toString())}
                     disabled={gameState !== "playing"}
-                    className="bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 h-12 rounded-xl text-xl font-black text-slate-700 dark:text-slate-200 hover:border-indigo-400 dark:hover:border-indigo-500 active:scale-95 transition-all disabled:opacity-50"
+                    className="bg-white dark:bg-slate-800 border-2 border-[#E6E3DB] dark:border-slate-700 min-h-[54px] sm:min-h-[50px] rounded-xl text-xl font-black text-[#3F3E39] dark:text-slate-200 hover:border-indigo-400 dark:hover:border-indigo-500 active:scale-95 transition-all disabled:opacity-50 cursor-pointer touch-manipulation"
                   >
                     {num}
                   </button>
@@ -415,21 +415,21 @@ export default function ColorBlindnessGame() {
                 <button
                   onClick={() => handleInput('del')}
                   disabled={gameState !== "playing" || inputValue.length === 0}
-                  className="bg-rose-50 dark:bg-rose-900/20 border-2 border-rose-200 dark:border-rose-800 h-12 rounded-xl text-xs uppercase tracking-widest font-bold text-rose-600 dark:text-rose-400 hover:bg-rose-100 dark:hover:bg-rose-900/40 active:scale-95 transition-all disabled:opacity-50"
+                  className="bg-rose-50 dark:bg-rose-900/20 border-2 border-rose-200 dark:border-rose-800 min-h-[54px] sm:min-h-[50px] rounded-xl text-xs uppercase tracking-widest font-bold text-rose-600 dark:text-rose-400 hover:bg-rose-100 dark:hover:bg-rose-900/40 active:scale-95 transition-all disabled:opacity-50 cursor-pointer touch-manipulation"
                 >
                   Del
                 </button>
                 <button
                   onClick={() => handleInput('0')}
                   disabled={gameState !== "playing"}
-                  className="bg-white dark:bg-slate-800 border-2 border-slate-200 dark:border-slate-700 h-12 rounded-xl text-xl font-black text-slate-700 dark:text-slate-200 hover:border-indigo-400 dark:hover:border-indigo-500 active:scale-95 transition-all disabled:opacity-50"
+                  className="bg-white dark:bg-slate-800 border-2 border-[#E6E3DB] dark:border-slate-700 min-h-[54px] sm:min-h-[50px] rounded-xl text-xl font-black text-[#3F3E39] dark:text-slate-200 hover:border-indigo-400 dark:hover:border-indigo-500 active:scale-95 transition-all disabled:opacity-50 cursor-pointer touch-manipulation"
                 >
                   0
                 </button>
                 <button
                   onClick={() => handleInput('enter')}
                   disabled={gameState !== "playing" || inputValue.length === 0}
-                  className="bg-emerald-500 border-2 border-emerald-600 h-12 rounded-xl text-xs uppercase tracking-widest font-black text-white hover:bg-emerald-600 active:scale-95 transition-all disabled:opacity-50"
+                  className="bg-emerald-500 border-2 border-emerald-600 min-h-[54px] sm:min-h-[50px] rounded-xl text-xs uppercase tracking-widest font-black text-white hover:bg-emerald-600 active:scale-95 transition-all disabled:opacity-50 cursor-pointer touch-manipulation"
                 >
                   Enter
                 </button>
@@ -438,9 +438,9 @@ export default function ColorBlindnessGame() {
               <button
                 onClick={() => handleInput('skip')}
                 disabled={gameState !== "playing"}
-                className="mt-2 py-3 flex items-center justify-center gap-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-300 font-bold text-[10px] uppercase tracking-widest transition-colors disabled:opacity-50 border border-transparent hover:border-slate-200 dark:hover:border-slate-700 rounded-xl"
+                className="mt-1 min-h-[48px] py-3 px-4 flex items-center justify-center gap-2 text-[#57554E] dark:text-slate-300 hover:text-[#161614] dark:hover:text-white bg-[#FAF9F6] dark:bg-slate-800/70 hover:bg-[#F3F1EB] font-bold text-xs uppercase tracking-widest transition-colors disabled:opacity-50 border border-[#E6E3DB] dark:border-slate-700 rounded-xl cursor-pointer touch-manipulation"
               >
-                <SkipForward className="w-3 h-3" />
+                <SkipForward className="w-4 h-4" />
                 Nothing Visible (Skip)
               </button>
             </div>
@@ -457,11 +457,11 @@ export default function ColorBlindnessGame() {
             <div className="game-start-icon w-20 h-20 bg-rose-50 dark:bg-rose-900/20 rounded-full flex items-center justify-center mb-6">
               <Trophy className="w-10 h-10 text-rose-500" />
             </div>
-            <h2 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-widest mb-2">
+            <h2 className="text-3xl font-black text-[#161614] dark:text-white uppercase tracking-widest mb-2">
               Calibration Complete
             </h2>
-            <div className="text-slate-500 mb-2 text-sm uppercase tracking-widest">
-              Final Score: <span className="text-xl font-black text-slate-900 dark:text-white ml-2">{score}</span>
+            <div className="text-[#78756C] mb-2 text-sm uppercase tracking-widest">
+              Final Score: <span className="text-xl font-black text-[#161614] dark:text-white ml-2">{score}</span>
             </div>
             {score > 0 && score >= highScores[diffId] ? (
               <p className="text-amber-500 font-bold text-xs uppercase tracking-widest mb-6">New Record!</p>
@@ -469,17 +469,17 @@ export default function ColorBlindnessGame() {
               <div className="mb-6" />
             )}
             
-            <div className="flex gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 w-full max-w-sm">
               <button
                 onClick={startGame}
-                className="flex items-center gap-2 px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold uppercase tracking-widest text-xs transition-all shadow-lg hover:shadow-indigo-500/20"
+                className="flex-1 min-h-[52px] flex items-center justify-center gap-2 px-8 py-4 bg-[#161614] hover:bg-[#2C2B27] text-[#FAF9F6] rounded-xl font-bold uppercase tracking-widest text-xs sm:text-sm transition-all shadow-lg hover: cursor-pointer touch-manipulation"
               >
                 <RotateCcw className="w-4 h-4" />
                 Recalibrate
               </button>
               <button
                 onClick={() => setGameState("select")}
-                className="flex items-center gap-2 px-8 py-4 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-900 dark:text-white rounded-xl font-bold uppercase tracking-widest text-xs transition-all"
+                className="flex-1 min-h-[52px] flex items-center justify-center gap-2 px-8 py-4 bg-[#F3F1EB] hover:bg-[#E6E3DB] dark:bg-slate-800 dark:hover:bg-slate-700 text-[#161614] dark:text-white rounded-xl font-bold uppercase tracking-widest text-xs sm:text-sm transition-all cursor-pointer touch-manipulation"
               >
                 Menu
               </button>

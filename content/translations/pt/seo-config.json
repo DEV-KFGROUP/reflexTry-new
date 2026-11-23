@@ -950,5 +950,113 @@
       "jogo de precisão de toque bpm",
       "treinador de reflexo de ritmo"
     ]
+  },
+  "gravity-lab": {
+    "title": "Laboratório de Gravidade e Órbitas - Laboratório STEM e Física | Reflextry",
+    "description": "Compare queda livre na Terra, Lua, Marte e Júpiter ou lance um satélite em órbita estável.",
+    "keywords": [
+      "laboratório de gravidade e órbitas",
+      "laboratório stem e física",
+      "reflextry"
+    ]
+  },
+  "laser-reflection": {
+    "title": "Óptica de Reflexão Laser - Laboratório STEM e Física | Reflextry",
+    "description": "Gire espelhos para refletir raios laser e comprovar a Lei da Reflexão.",
+    "keywords": [
+      "óptica de reflexão laser",
+      "laboratório stem e física",
+      "reflextry"
+    ]
+  },
+  "projectile-cannon": {
+    "title": "Física de Canhão de Projéteis - Laboratório STEM e Física | Reflextry",
+    "description": "Ajuste ângulo, velocidade, vento e gravidade para acertar alvos parabólicos.",
+    "keywords": [
+      "física de canhão de projéteis",
+      "laboratório stem e física",
+      "reflextry"
+    ]
+  },
+  "torque-balance": {
+    "title": "Balança de Torque e Alavanca - Laboratório STEM e Física | Reflextry",
+    "description": "Equilibre massas em uma gangorra usando equações de torque no modo livre ou desafio.",
+    "keywords": [
+      "balança de torque e alavanca",
+      "laboratório stem e física",
+      "reflextry"
+    ]
+  },
+  "solar-gravity-3d": {
+    "title": "Simulador 3D de Gravidade Solar - Laboratório 3D Interativo | Reflextry",
+    "description": "Explore um poço gravitacional 3D e lance satélites em órbitas keplerianas.",
+    "keywords": [
+      "simulador 3d de gravidade solar",
+      "laboratório 3d interativo",
+      "reflextry"
+    ]
+  },
+  "spatial-aim-3d": {
+    "title": "Arena de Mira Espacial 3D - Laboratório 3D Interativo | Reflextry",
+    "description": "Acerte drones 3D compostos em planos de profundidade próximo, médio e distante.",
+    "keywords": [
+      "arena de mira espacial 3d",
+      "laboratório 3d interativo",
+      "reflextry"
+    ]
+  },
+  "reaction-duel-2p": {
+    "title": "Duelo de Reflexo 2 Jogadores - Arena 2 Jogadores | Reflextry",
+    "description": "Melhor de 5 em milissegundos em um teclado ou tela com detecção de largada falsa.",
+    "keywords": [
+      "duelo de reflexo 2 jogadores",
+      "arena 2 jogadores",
+      "reflextry"
+    ]
+  },
+  "math-tug-of-war": {
+    "title": "Cabo de Guerra Matemático - Arena 2 Jogadores | Reflextry",
+    "description": "Resolva contas mais rápido que o rival para puxar a corda até sua linha de vitória.",
+    "keywords": [
+      "cabo de guerra matemático",
+      "arena 2 jogadores",
+      "reflextry"
+    ]
+  },
+  "cannon-battle-2p": {
+    "title": "Batalha de Canhões Gravitacionais - Arena 2 Jogadores | Reflextry",
+    "description": "Artilharia 2D por turnos sobre montanhas com vento variável e gravidade planetária.",
+    "keywords": [
+      "batalha de canhões gravitacionais",
+      "arena 2 jogadores",
+      "reflextry"
+    ]
+  },
+  "speed-reading": {
+    "title": "Leitura Dinâmica e Compreensão - Suíte de Estudo e Trabalho | Reflextry",
+    "description": "Leia no modo destaque ou RSVP e faça o quiz para descobrir seu PPM efetivo.",
+    "keywords": [
+      "leitura dinâmica e compreensão",
+      "suíte de estudo e trabalho",
+      "reflextry"
+    ]
+  },
+  "ten-key": {
+    "title": "Teste Numérico 10-Key - Suíte de Estudo e Trabalho | Reflextry",
+    "description": "Meça KPH e precisão numérica em faturas, números inteiros e códigos SKU.",
+    "keywords": [
+      "teste numérico 10-key",
+      "suíte de estudo e trabalho",
+      "reflextry"
+    ]
+  },
+  "focus-sprint": {
+    "title": "Sprint de Foco e Fadiga - Suíte de Estudo e Trabalho | Reflextry",
+    "description": "Combine timer Pomodoro real com testes de reação antes e depois da sessão.",
+    "keywords": [
+      "sprint de foco e fadiga",
+      "suíte de estudo e trabalho",
+      "reflextry"
+    ]
   }
 }

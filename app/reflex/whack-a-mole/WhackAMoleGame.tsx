@@ -1,5 +1,6 @@
 "use client";
 
+import { ToolIcon } from "@/components/ToolIcon";
 import { GameProgressFeedback } from "@/components/GameProgressFeedback";
 import { useGameTimers } from "@/hooks/useGameTimers";
 import { useLatestCallback } from "@/hooks/useLatestCallback";
@@ -100,7 +101,7 @@ function DifficultyCard({
       onClick={disabled ? undefined : onSelect}
       className={`relative w-full text-left rounded-2xl border-2 p-3 transition-all focus:outline-none overflow-hidden ${
         disabled ? "opacity-60 cursor-not-allowed" : "cursor-pointer"
-      } ${selected ? `${d.borderColor} bg-white shadow-lg` : "border-slate-200 bg-white/70 hover:border-slate-300"}`}
+      } ${selected ? `${d.borderColor} bg-white shadow-lg` : "border-[#E6E3DB] bg-white/70 hover:border-[#D8D4C9]"}`}
     >
       {selected && (
         <div className="absolute inset-0 opacity-5" style={{ background: DIFF_GRADIENT[diffKey] }} />
@@ -111,14 +112,14 @@ function DifficultyCard({
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 flex-wrap">
-            <span className="font-mono font-bold text-xs text-slate-800">{d.label}</span>
+            <span className="font-mono font-bold text-xs text-[#161614]">{d.label}</span>
             {selected && (
               <span className="text-[10px] font-mono px-2 py-0.5 rounded-full text-white" style={{ background: DIFF_GRADIENT[diffKey] }}>
                 ACTIVE
               </span>
             )}
           </div>
-          <p className="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5 leading-tight">{d.description}</p>
+          <p className="text-[11px] text-[#57554E] dark:text-slate-300 mt-0.5 leading-tight">{d.description}</p>
           {highScore > 0 && (
             <p className={`text-[11px] font-mono font-bold mt-1 ${d.textColor}`}>Best: {highScore} pts</p>
           )}
@@ -367,22 +368,21 @@ export default function WhackAMoleGame() {
   });
 
   return (
-    <div data-idle={phase === "idle"} className="game-tool w-full bg-[#f8fafc] dark:bg-slate-800 text-slate-800 dark:text-white font-sans relative overflow-hidden py-8 px-4 sm:px-6 lg:px-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm mb-8">
+    <div data-idle={phase === "idle"} className="game-tool w-full bg-[#FAF9F6] text-[#161614] font-sans relative overflow-hidden py-4 px-2 sm:px-4 lg:px-6 mb-4">
       <GameProgressFeedback result={progress} />
-      {/* Background Grids */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.04)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none z-0" />
-      <div className="absolute top-[-5%] left-[5%] w-[600px] h-[600px] bg-violet-500/[0.03] blur-[140px] rounded-full pointer-events-none z-0" />
-      <div className="absolute bottom-[-5%] right-[5%] w-[500px] h-[500px] bg-cyan-500/[0.03] blur-[120px] rounded-full pointer-events-none z-0" />
 
       <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center space-y-6 pt-0">
 
         {/* Header */}
         <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="text-center w-full">
-          <h1 className="text-3xl md:text-5xl font-mono font-black tracking-widest text-slate-800">GRID WHACK</h1>
-          <div className="flex items-center justify-center gap-3 mt-1">
-            <span className="h-[1px] w-8 bg-slate-300" />
-            <p className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-[0.2em]">SPATIAL TARGET ALIGNER</p>
-            <span className="h-[1px] w-8 bg-slate-300" />
+          <div className="inline-flex items-center justify-center gap-4 mb-1">
+            <ToolIcon toolId="/reflex/whack-a-mole" variant="3d-pedestal" size="md" interactive />
+            <div className="text-left">
+              <h1 className="font-serif text-3xl md:text-4xl font-semibold tracking-tight text-[#161614]">Grid Whack</h1>
+          <div className="flex items-center gap-2 mt-1">
+            <p className="text-xs font-mono font-medium text-[#57554E] dark:text-slate-400 uppercase tracking-[0.2em]">SPATIAL TARGET ALIGNER</p>
+          </div>
+            </div>
           </div>
         </motion.div>
 
@@ -393,8 +393,8 @@ export default function WhackAMoleGame() {
           <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 }} className="game-settings flex flex-col gap-4">
 
             {/* Difficulty Selector */}
-            <div className="game-difficulty bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
-              <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Difficulty Level</div>
+            <div className="game-difficulty bg-white border border-[#E6E3DB] rounded-2xl p-4">
+              <div className="text-xs font-mono font-semibold text-[#57554E] dark:text-slate-300 uppercase tracking-widest mb-3">Difficulty Level</div>
               <div className="flex flex-col gap-2">
                 {DIFF_ORDER.map(key => (
                   <DifficultyCard
@@ -410,23 +410,23 @@ export default function WhackAMoleGame() {
             </div>
 
             {/* Stats Panel */}
-            <div className="game-stats bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
-              <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Session Stats</div>
+            <div className="game-stats bg-white border border-[#E6E3DB] rounded-2xl p-4">
+              <div className="text-xs font-mono font-semibold text-[#57554E] dark:text-slate-300 uppercase tracking-widest mb-3">Session Stats</div>
               <div className="grid grid-cols-2 gap-3">
-                <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Score</div>
-                  <div className="text-xl font-mono font-bold text-slate-800 mt-0.5">{score}</div>
+                <div className="bg-[#F3F1EB] border border-[#E6E3DB] rounded-xl p-3">
+                  <div className="text-[11px] font-mono font-medium text-[#57554E] dark:text-slate-400 uppercase tracking-wider">Score</div>
+                  <div className="text-xl font-mono font-bold text-[#161614] mt-0.5">{score}</div>
                 </div>
-                <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Lives Remaining</div>
+                <div className="bg-[#F3F1EB] border border-[#E6E3DB] rounded-xl p-3">
+                  <div className="text-[11px] font-mono font-medium text-[#57554E] dark:text-slate-400 uppercase tracking-wider">Lives Remaining</div>
                   <div className="text-xl font-mono font-bold text-red-500 mt-0.5">{lives} ❤️</div>
                 </div>
-                <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Accuracy</div>
-                  <div className="text-xs font-mono font-bold text-slate-800 mt-1">{accuracyPercent}%</div>
+                <div className="bg-[#F3F1EB] border border-[#E6E3DB] rounded-xl p-3">
+                  <div className="text-[11px] font-mono font-medium text-[#57554E] dark:text-slate-400 uppercase tracking-wider">Accuracy</div>
+                  <div className="text-xs font-mono font-bold text-[#161614] mt-1">{accuracyPercent}%</div>
                 </div>
-                <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Time Remaining</div>
+                <div className="bg-[#F3F1EB] border border-[#E6E3DB] rounded-xl p-3">
+                  <div className="text-[11px] font-mono font-medium text-[#57554E] dark:text-slate-400 uppercase tracking-wider">Time Remaining</div>
                   <div className={`text-xl font-mono font-bold mt-0.5 ${timeLeft <= 5 ? "text-red-500" : "text-slate-850"}`}>
                     {timeLeft}s
                   </div>
@@ -442,10 +442,10 @@ export default function WhackAMoleGame() {
 
               {/* Best record displayed */}
               {highScores[diffId] > 0 && (
-                <div className="mt-3 bg-slate-50 border border-slate-100 rounded-xl p-3 flex items-center gap-2">
+                <div className="mt-3 bg-[#F3F1EB] border border-[#E6E3DB] rounded-xl p-3 flex items-center gap-2">
                   <Trophy className={`w-4 h-4 ${diff.textColor}`} />
                   <div>
-                    <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Best Score ({diff.label})</div>
+                    <div className="text-[11px] font-mono font-medium text-[#57554E] dark:text-slate-400 uppercase tracking-wider">Best Score ({diff.label})</div>
                     <div className={`text-sm font-mono font-bold ${diff.textColor}`}>{highScores[diffId]} pts</div>
                   </div>
                 </div>
@@ -454,7 +454,7 @@ export default function WhackAMoleGame() {
               {/* Mute */}
               <button
                 onClick={() => setMuted(m => !m)}
-                className={`mt-3 w-full p-2.5 rounded-xl border transition-all cursor-pointer flex items-center justify-center gap-2 ${muted ? "bg-red-50 border-red-200 text-red-600" : "bg-slate-50 border-slate-200 text-slate-500 hover:border-violet-200 hover:text-violet-600"}`}
+                className={`mt-3 w-full p-2.5 rounded-xl border transition-all cursor-pointer flex items-center justify-center gap-2 ${muted ? "bg-red-50 border-red-200 text-red-600" : "bg-[#FAF9F6] border-[#E6E3DB] text-[#78756C] hover:border-violet-200 hover:text-violet-600"}`}
               >
                 {muted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
                 <span className="text-xs font-mono font-medium uppercase tracking-widest">{muted ? "Unmute" : "Sound On"}</span>
@@ -464,16 +464,15 @@ export default function WhackAMoleGame() {
 
           {/* ═══ RIGHT PANEL: Game Console ═══ */}
           <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.15 }} className="game-arena flex flex-col gap-4">
-            <div className="relative bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-[0_8px_40px_rgba(15,23,42,0.07)]">
-              <div className="absolute top-4 left-4 w-4 h-4 border-t-2 border-l-2 border-slate-200" />
-              <div className="absolute top-4 right-4 w-4 h-4 border-t-2 border-r-2 border-slate-200" />
-              <div className="absolute bottom-4 left-4 w-4 h-4 border-b-2 border-l-2 border-slate-200" />
-              <div className="absolute bottom-4 right-4 w-4 h-4 border-b-2 border-r-2 border-slate-200" />
+            <div className="relative bg-white border border-[#E6E3DB] rounded-2xl overflow-hidden">
 
-              <div className="absolute top-4 left-10 text-[10px] font-mono text-slate-500 dark:text-slate-400 tracking-widest hidden sm:block">
-                ARENA // {diff.label.toUpperCase()}
+
+
+
+              <div className="absolute top-4 left-10 text-[10px] font-mono text-[#78756C] dark:text-slate-400 tracking-widest hidden sm:block">
+                {diff.label} Mode
               </div>
-              <div className="absolute top-4 right-10 text-[10px] font-mono text-slate-500 dark:text-slate-400 tracking-widest hidden sm:block">
+              <div className="absolute top-4 right-10 text-[10px] font-mono text-[#78756C] dark:text-slate-400 tracking-widest hidden sm:block">
                 DECK: {diff.holesCount} SLOTS
               </div>
 
@@ -491,8 +490,8 @@ export default function WhackAMoleGame() {
                         </div>
                       </div>
                       <div className="space-y-2">
-                        <h2 className="text-xl md:text-2xl font-mono font-bold text-slate-800 uppercase tracking-wider">Mole Calibration</h2>
-                        <p className="text-xs text-slate-600 dark:text-slate-400 max-w-xs mx-auto leading-relaxed">
+                        <h2 className="text-xl md:text-2xl font-mono font-bold text-[#161614] uppercase tracking-wider">Mole Calibration</h2>
+                        <p className="text-xs text-[#57554E] dark:text-slate-400 max-w-xs mx-auto leading-relaxed">
                           Whack the emerging molecular moles as fast as possible. Avoid hit bombs and empty holes.
                         </p>
                         <p className={`game-level-description text-xs font-mono font-semibold ${diff.textColor} mt-1`}>{diff.label}: {diff.description}</p>
@@ -515,7 +514,7 @@ export default function WhackAMoleGame() {
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0, transition: { duration: 0 } }}
                       onClick={handleBoardMiss}
-                      className={`grid gap-4.5 p-5 bg-slate-50 border border-slate-200 shadow-inner rounded-[2rem] w-full justify-center ${getGridColsClass()}`}
+                      className={`grid gap-4.5 p-5 bg-[#FAF9F6] border border-[#E6E3DB] shadow-inner rounded-[2rem] w-full justify-center ${getGridColsClass()}`}
                     >
                       {Array.from({ length: diff.holesCount }).map((_, holeIndex) => {
                         const activeMole = moles.find(m => m.hole === holeIndex);
@@ -563,7 +562,7 @@ export default function WhackAMoleGame() {
                       </div>
                       <div className="space-y-1">
                         <div className="text-2xl font-mono font-black text-emerald-600 tracking-wider">Round complete</div>
-                        <p className="text-xs font-mono text-slate-500">{diff.label} mode whacking completed.</p>
+                        <p className="text-xs font-mono text-[#78756C]">{diff.label} mode whacking completed.</p>
                         {score >= highScores[diffId] && score > 0 && (
                           <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} className="inline-flex items-center gap-1.5 bg-amber-50 border border-amber-200 text-amber-700 rounded-full px-3 py-1 text-[11px] font-mono font-bold">
                             <Trophy className="w-3.5 h-3.5" />
@@ -572,14 +571,14 @@ export default function WhackAMoleGame() {
                         )}
                       </div>
 
-                      <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 shadow-sm w-full grid grid-cols-2 gap-3 text-left">
+                      <div className="bg-[#FAF9F6] border border-[#E6E3DB] rounded-xl p-4 shadow-sm w-full grid grid-cols-2 gap-3 text-left">
                         <div>
-                          <div className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 uppercase mb-1">Final Score</div>
+                          <div className="text-xs font-mono font-medium text-[#57554E] dark:text-slate-400 uppercase mb-1">Final Score</div>
                           <div className="text-2xl text-fuchsia-600 font-mono font-black">{score}</div>
                         </div>
                         <div>
-                          <div className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 uppercase mb-1">Hits / Accuracy</div>
-                          <div className="text-base text-slate-700 font-mono font-bold">{hits} hits ({accuracyPercent}%)</div>
+                          <div className="text-xs font-mono font-medium text-[#57554E] dark:text-slate-400 uppercase mb-1">Hits / Accuracy</div>
+                          <div className="text-base text-[#3F3E39] font-mono font-bold">{hits} hits ({accuracyPercent}%)</div>
                         </div>
                       </div>
 
@@ -619,7 +618,7 @@ export default function WhackAMoleGame() {
                     if (expiryTimerRef.current) clearInterval(expiryTimerRef.current);
                     setPhase("result");
                   }}
-                  className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 hover:text-red-500 transition-colors cursor-pointer"
+                  className="text-xs font-mono font-medium text-[#57554E] dark:text-slate-400 hover:text-red-500 transition-colors cursor-pointer"
                 >
                   End round ×
                 </button>

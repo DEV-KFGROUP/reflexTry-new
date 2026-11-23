@@ -5303,5 +5303,905 @@
         "answer": "El siguiente número en el que debes hacer clic."
       }
     ]
+  },
+  "gravity-lab": {
+    "description": [
+      {
+        "title": "Acerca de Laboratorio de Gravedad y Órbitas",
+        "content": "Compara caída libre en la Tierra, Luna, Marte y Júpiter o lanza una órbita estable. Convierte fórmulas abstractas de física y matemáticas en experimentos interactivos. Ajusta controles, lanza órbitas, refleja láseres y equilibra palancas directamente en tu navegador."
+      },
+      {
+        "title": "Mecánica Principal y Base Científica",
+        "content": "Visualizadores 2D interactivos de caída libre gravitacional, velocidad orbital, reflexión óptica con espejos, tiro parabólico y equilibrio de torques. Ecuaciones en Vivo: Observa cómo se actualizan las fórmulas al cambiar variables. Intuición Visual: Inspecciona vectores, normales ópticas y trayectorias previas."
+      },
+      {
+        "title": "Puntuación y Métricas en Tiempo Real",
+        "content": "Cada simulación une retroalimentación visual inmediata con métricas cuantitativas transparentes. Modos Desafío: Pon a prueba tu dominio con misiones puntuadas."
+      },
+      {
+        "title": "Aplicaciones en el Aula y el Trabajo",
+        "content": "Sí. La interfaz se adapta automáticamente a computadoras, Chromebooks, tablets y pizarras digitales. Diez a quince minutos varias veces por semana consolidan la intuición visual y el rendimiento."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Configuración y Controles",
+        "steps": [
+          "Comienza con la configuración estándar para medir tu nivel real actual.",
+          "Cambia un control o nivel cada vez para observar claramente causa y efecto."
+        ]
+      },
+      {
+        "title": "Cómo Realizar una Sesión",
+        "steps": [
+          "Compara caída libre en la Tierra, Luna, Marte y Júpiter o lanza una órbita estable.",
+          "Revisa ecuaciones, porcentajes de precisión y tiempos en milisegundos tras cada ronda."
+        ]
+      },
+      {
+        "title": "Análisis de Resultados",
+        "steps": [
+          "Sí. Cada sesión completada guarda automáticamente tus métricas en el panel local de Estadísticas.",
+          "Practica en sesiones de 10 minutos con alta concentración en lugar de sesiones fatigantes."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Modifica Una Variable a la Vez",
+        "content": "Cambia un control o nivel cada vez para observar claramente causa y efecto."
+      },
+      {
+        "title": "Prioriza la Precisión Antes que la Velocidad",
+        "content": "Revisa ecuaciones, porcentajes de precisión y tiempos en milisegundos tras cada ronda."
+      },
+      {
+        "title": "Registra Tu Progreso Semanal",
+        "content": "Diez a quince minutos varias veces por semana consolidan la intuición visual y el rendimiento."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "¿Es completamente gratuito este módulo?",
+        "answer": "Sí. Todas las herramientas de Reflextry funcionan en el navegador sin cuentas, descargas ni pagos."
+      },
+      {
+        "question": "¿Funciona en portátiles escolares o tablets?",
+        "answer": "Sí. La interfaz se adapta automáticamente a computadoras, Chromebooks, tablets y pizarras digitales."
+      },
+      {
+        "question": "¿Se guardan mis mejores puntuaciones?",
+        "answer": "Sí. Cada sesión completada guarda automáticamente tus métricas en el panel local de Estadísticas."
+      },
+      {
+        "question": "¿Con qué frecuencia conviene practicar?",
+        "answer": "Sesiones enfocadas de 10 minutos, de tres a cinco veces por semana, generan mejoras constantes y medibles."
+      }
+    ]
+  },
+  "laser-reflection": {
+    "description": [
+      {
+        "title": "Acerca de Óptica de Reflexión Láser",
+        "content": "Gira espejos para dirigir haces láser y comprobar la Ley de Reflexión. Convierte fórmulas abstractas de física y matemáticas en experimentos interactivos. Ajusta controles, lanza órbitas, refleja láseres y equilibra palancas directamente en tu navegador."
+      },
+      {
+        "title": "Mecánica Principal y Base Científica",
+        "content": "Visualizadores 2D interactivos de caída libre gravitacional, velocidad orbital, reflexión óptica con espejos, tiro parabólico y equilibrio de torques. Ecuaciones en Vivo: Observa cómo se actualizan las fórmulas al cambiar variables. Intuición Visual: Inspecciona vectores, normales ópticas y trayectorias previas."
+      },
+      {
+        "title": "Puntuación y Métricas en Tiempo Real",
+        "content": "Cada simulación une retroalimentación visual inmediata con métricas cuantitativas transparentes. Modos Desafío: Pon a prueba tu dominio con misiones puntuadas."
+      },
+      {
+        "title": "Aplicaciones en el Aula y el Trabajo",
+        "content": "Sí. La interfaz se adapta automáticamente a computadoras, Chromebooks, tablets y pizarras digitales. Diez a quince minutos varias veces por semana consolidan la intuición visual y el rendimiento."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Configuración y Controles",
+        "steps": [
+          "Comienza con la configuración estándar para medir tu nivel real actual.",
+          "Cambia un control o nivel cada vez para observar claramente causa y efecto."
+        ]
+      },
+      {
+        "title": "Cómo Realizar una Sesión",
+        "steps": [
+          "Gira espejos para dirigir haces láser y comprobar la Ley de Reflexión.",
+          "Revisa ecuaciones, porcentajes de precisión y tiempos en milisegundos tras cada ronda."
+        ]
+      },
+      {
+        "title": "Análisis de Resultados",
+        "steps": [
+          "Sí. Cada sesión completada guarda automáticamente tus métricas en el panel local de Estadísticas.",
+          "Practica en sesiones de 10 minutos con alta concentración en lugar de sesiones fatigantes."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Modifica Una Variable a la Vez",
+        "content": "Cambia un control o nivel cada vez para observar claramente causa y efecto."
+      },
+      {
+        "title": "Prioriza la Precisión Antes que la Velocidad",
+        "content": "Revisa ecuaciones, porcentajes de precisión y tiempos en milisegundos tras cada ronda."
+      },
+      {
+        "title": "Registra Tu Progreso Semanal",
+        "content": "Diez a quince minutos varias veces por semana consolidan la intuición visual y el rendimiento."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "¿Es completamente gratuito este módulo?",
+        "answer": "Sí. Todas las herramientas de Reflextry funcionan en el navegador sin cuentas, descargas ni pagos."
+      },
+      {
+        "question": "¿Funciona en portátiles escolares o tablets?",
+        "answer": "Sí. La interfaz se adapta automáticamente a computadoras, Chromebooks, tablets y pizarras digitales."
+      },
+      {
+        "question": "¿Se guardan mis mejores puntuaciones?",
+        "answer": "Sí. Cada sesión completada guarda automáticamente tus métricas en el panel local de Estadísticas."
+      },
+      {
+        "question": "¿Con qué frecuencia conviene practicar?",
+        "answer": "Sesiones enfocadas de 10 minutos, de tres a cinco veces por semana, generan mejoras constantes y medibles."
+      }
+    ]
+  },
+  "projectile-cannon": {
+    "description": [
+      {
+        "title": "Acerca de Física de Cañón de Proyectiles",
+        "content": "Ajusta ángulo, velocidad, viento y gravedad para impactar objetivos parabólicos. Convierte fórmulas abstractas de física y matemáticas en experimentos interactivos. Ajusta controles, lanza órbitas, refleja láseres y equilibra palancas directamente en tu navegador."
+      },
+      {
+        "title": "Mecánica Principal y Base Científica",
+        "content": "Visualizadores 2D interactivos de caída libre gravitacional, velocidad orbital, reflexión óptica con espejos, tiro parabólico y equilibrio de torques. Ecuaciones en Vivo: Observa cómo se actualizan las fórmulas al cambiar variables. Intuición Visual: Inspecciona vectores, normales ópticas y trayectorias previas."
+      },
+      {
+        "title": "Puntuación y Métricas en Tiempo Real",
+        "content": "Cada simulación une retroalimentación visual inmediata con métricas cuantitativas transparentes. Modos Desafío: Pon a prueba tu dominio con misiones puntuadas."
+      },
+      {
+        "title": "Aplicaciones en el Aula y el Trabajo",
+        "content": "Sí. La interfaz se adapta automáticamente a computadoras, Chromebooks, tablets y pizarras digitales. Diez a quince minutos varias veces por semana consolidan la intuición visual y el rendimiento."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Configuración y Controles",
+        "steps": [
+          "Comienza con la configuración estándar para medir tu nivel real actual.",
+          "Cambia un control o nivel cada vez para observar claramente causa y efecto."
+        ]
+      },
+      {
+        "title": "Cómo Realizar una Sesión",
+        "steps": [
+          "Ajusta ángulo, velocidad, viento y gravedad para impactar objetivos parabólicos.",
+          "Revisa ecuaciones, porcentajes de precisión y tiempos en milisegundos tras cada ronda."
+        ]
+      },
+      {
+        "title": "Análisis de Resultados",
+        "steps": [
+          "Sí. Cada sesión completada guarda automáticamente tus métricas en el panel local de Estadísticas.",
+          "Practica en sesiones de 10 minutos con alta concentración en lugar de sesiones fatigantes."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Modifica Una Variable a la Vez",
+        "content": "Cambia un control o nivel cada vez para observar claramente causa y efecto."
+      },
+      {
+        "title": "Prioriza la Precisión Antes que la Velocidad",
+        "content": "Revisa ecuaciones, porcentajes de precisión y tiempos en milisegundos tras cada ronda."
+      },
+      {
+        "title": "Registra Tu Progreso Semanal",
+        "content": "Diez a quince minutos varias veces por semana consolidan la intuición visual y el rendimiento."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "¿Es completamente gratuito este módulo?",
+        "answer": "Sí. Todas las herramientas de Reflextry funcionan en el navegador sin cuentas, descargas ni pagos."
+      },
+      {
+        "question": "¿Funciona en portátiles escolares o tablets?",
+        "answer": "Sí. La interfaz se adapta automáticamente a computadoras, Chromebooks, tablets y pizarras digitales."
+      },
+      {
+        "question": "¿Se guardan mis mejores puntuaciones?",
+        "answer": "Sí. Cada sesión completada guarda automáticamente tus métricas en el panel local de Estadísticas."
+      },
+      {
+        "question": "¿Con qué frecuencia conviene practicar?",
+        "answer": "Sesiones enfocadas de 10 minutos, de tres a cinco veces por semana, generan mejoras constantes y medibles."
+      }
+    ]
+  },
+  "torque-balance": {
+    "description": [
+      {
+        "title": "Acerca de Balanza de Torque y Palanca",
+        "content": "Equilibra pesos en una palanca aplicando ecuaciones de torque en modo libre o contrarreloj. Convierte fórmulas abstractas de física y matemáticas en experimentos interactivos. Ajusta controles, lanza órbitas, refleja láseres y equilibra palancas directamente en tu navegador."
+      },
+      {
+        "title": "Mecánica Principal y Base Científica",
+        "content": "Visualizadores 2D interactivos de caída libre gravitacional, velocidad orbital, reflexión óptica con espejos, tiro parabólico y equilibrio de torques. Ecuaciones en Vivo: Observa cómo se actualizan las fórmulas al cambiar variables. Intuición Visual: Inspecciona vectores, normales ópticas y trayectorias previas."
+      },
+      {
+        "title": "Puntuación y Métricas en Tiempo Real",
+        "content": "Cada simulación une retroalimentación visual inmediata con métricas cuantitativas transparentes. Modos Desafío: Pon a prueba tu dominio con misiones puntuadas."
+      },
+      {
+        "title": "Aplicaciones en el Aula y el Trabajo",
+        "content": "Sí. La interfaz se adapta automáticamente a computadoras, Chromebooks, tablets y pizarras digitales. Diez a quince minutos varias veces por semana consolidan la intuición visual y el rendimiento."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Configuración y Controles",
+        "steps": [
+          "Comienza con la configuración estándar para medir tu nivel real actual.",
+          "Cambia un control o nivel cada vez para observar claramente causa y efecto."
+        ]
+      },
+      {
+        "title": "Cómo Realizar una Sesión",
+        "steps": [
+          "Equilibra pesos en una palanca aplicando ecuaciones de torque en modo libre o contrarreloj.",
+          "Revisa ecuaciones, porcentajes de precisión y tiempos en milisegundos tras cada ronda."
+        ]
+      },
+      {
+        "title": "Análisis de Resultados",
+        "steps": [
+          "Sí. Cada sesión completada guarda automáticamente tus métricas en el panel local de Estadísticas.",
+          "Practica en sesiones de 10 minutos con alta concentración en lugar de sesiones fatigantes."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Modifica Una Variable a la Vez",
+        "content": "Cambia un control o nivel cada vez para observar claramente causa y efecto."
+      },
+      {
+        "title": "Prioriza la Precisión Antes que la Velocidad",
+        "content": "Revisa ecuaciones, porcentajes de precisión y tiempos en milisegundos tras cada ronda."
+      },
+      {
+        "title": "Registra Tu Progreso Semanal",
+        "content": "Diez a quince minutos varias veces por semana consolidan la intuición visual y el rendimiento."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "¿Es completamente gratuito este módulo?",
+        "answer": "Sí. Todas las herramientas de Reflextry funcionan en el navegador sin cuentas, descargas ni pagos."
+      },
+      {
+        "question": "¿Funciona en portátiles escolares o tablets?",
+        "answer": "Sí. La interfaz se adapta automáticamente a computadoras, Chromebooks, tablets y pizarras digitales."
+      },
+      {
+        "question": "¿Se guardan mis mejores puntuaciones?",
+        "answer": "Sí. Cada sesión completada guarda automáticamente tus métricas en el panel local de Estadísticas."
+      },
+      {
+        "question": "¿Con qué frecuencia conviene practicar?",
+        "answer": "Sesiones enfocadas de 10 minutos, de tres a cinco veces por semana, generan mejoras constantes y medibles."
+      }
+    ]
+  },
+  "solar-gravity-3d": {
+    "description": [
+      {
+        "title": "Acerca de Simulador 3D de Gravedad Solar",
+        "content": "Explora un pozo gravitacional 3D del espacio-tiempo y lanza satélites orbitales. Impulsado por física WebGL en vivo, explora mallas de espacio-tiempo curvadas, lanza satélites a órbitas estables y apunta a drones 3D en planos cercano, medio y lejano."
+      },
+      {
+        "title": "Mecánica Principal y Base Científica",
+        "content": "Simulaciones 3D aceleradas en navegador para mecánica orbital astrofísica y puntería espacial en profundidad. WebGL 3D en Tiempo Real: Cámara orbital interactiva e iluminación dinámica. Percepción de Profundidad: Entrena precisión visual en planos cercano, medio y lejano."
+      },
+      {
+        "title": "Puntuación y Métricas en Tiempo Real",
+        "content": "Cada simulación une retroalimentación visual inmediata con métricas cuantitativas transparentes. Sin Descargas: Renderizado adaptativo fluido en portátiles y escritorio."
+      },
+      {
+        "title": "Aplicaciones en el Aula y el Trabajo",
+        "content": "Sí. La interfaz se adapta automáticamente a computadoras, Chromebooks, tablets y pizarras digitales. Diez a quince minutos varias veces por semana consolidan la intuición visual y el rendimiento."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Configuración y Controles",
+        "steps": [
+          "Comienza con la configuración estándar para medir tu nivel real actual.",
+          "Cambia un control o nivel cada vez para observar claramente causa y efecto."
+        ]
+      },
+      {
+        "title": "Cómo Realizar una Sesión",
+        "steps": [
+          "Explora un pozo gravitacional 3D del espacio-tiempo y lanza satélites orbitales.",
+          "Revisa ecuaciones, porcentajes de precisión y tiempos en milisegundos tras cada ronda."
+        ]
+      },
+      {
+        "title": "Análisis de Resultados",
+        "steps": [
+          "Sí. Cada sesión completada guarda automáticamente tus métricas en el panel local de Estadísticas.",
+          "Practica en sesiones de 10 minutos con alta concentración en lugar de sesiones fatigantes."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Modifica Una Variable a la Vez",
+        "content": "Cambia un control o nivel cada vez para observar claramente causa y efecto."
+      },
+      {
+        "title": "Prioriza la Precisión Antes que la Velocidad",
+        "content": "Revisa ecuaciones, porcentajes de precisión y tiempos en milisegundos tras cada ronda."
+      },
+      {
+        "title": "Registra Tu Progreso Semanal",
+        "content": "Diez a quince minutos varias veces por semana consolidan la intuición visual y el rendimiento."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "¿Es completamente gratuito este módulo?",
+        "answer": "Sí. Todas las herramientas de Reflextry funcionan en el navegador sin cuentas, descargas ni pagos."
+      },
+      {
+        "question": "¿Funciona en portátiles escolares o tablets?",
+        "answer": "Sí. La interfaz se adapta automáticamente a computadoras, Chromebooks, tablets y pizarras digitales."
+      },
+      {
+        "question": "¿Se guardan mis mejores puntuaciones?",
+        "answer": "Sí. Cada sesión completada guarda automáticamente tus métricas en el panel local de Estadísticas."
+      },
+      {
+        "question": "¿Con qué frecuencia conviene practicar?",
+        "answer": "Sesiones enfocadas de 10 minutos, de tres a cinco veces por semana, generan mejoras constantes y medibles."
+      }
+    ]
+  },
+  "spatial-aim-3d": {
+    "description": [
+      {
+        "title": "Acerca de Arena de Puntería Espacial 3D",
+        "content": "Localiza e impacta drones 3D en planos de profundidad cercano, medio y lejano. Impulsado por física WebGL en vivo, explora mallas de espacio-tiempo curvadas, lanza satélites a órbitas estables y apunta a drones 3D en planos cercano, medio y lejano."
+      },
+      {
+        "title": "Mecánica Principal y Base Científica",
+        "content": "Simulaciones 3D aceleradas en navegador para mecánica orbital astrofísica y puntería espacial en profundidad. WebGL 3D en Tiempo Real: Cámara orbital interactiva e iluminación dinámica. Percepción de Profundidad: Entrena precisión visual en planos cercano, medio y lejano."
+      },
+      {
+        "title": "Puntuación y Métricas en Tiempo Real",
+        "content": "Cada simulación une retroalimentación visual inmediata con métricas cuantitativas transparentes. Sin Descargas: Renderizado adaptativo fluido en portátiles y escritorio."
+      },
+      {
+        "title": "Aplicaciones en el Aula y el Trabajo",
+        "content": "Sí. La interfaz se adapta automáticamente a computadoras, Chromebooks, tablets y pizarras digitales. Diez a quince minutos varias veces por semana consolidan la intuición visual y el rendimiento."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Configuración y Controles",
+        "steps": [
+          "Comienza con la configuración estándar para medir tu nivel real actual.",
+          "Cambia un control o nivel cada vez para observar claramente causa y efecto."
+        ]
+      },
+      {
+        "title": "Cómo Realizar una Sesión",
+        "steps": [
+          "Localiza e impacta drones 3D en planos de profundidad cercano, medio y lejano.",
+          "Revisa ecuaciones, porcentajes de precisión y tiempos en milisegundos tras cada ronda."
+        ]
+      },
+      {
+        "title": "Análisis de Resultados",
+        "steps": [
+          "Sí. Cada sesión completada guarda automáticamente tus métricas en el panel local de Estadísticas.",
+          "Practica en sesiones de 10 minutos con alta concentración en lugar de sesiones fatigantes."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Modifica Una Variable a la Vez",
+        "content": "Cambia un control o nivel cada vez para observar claramente causa y efecto."
+      },
+      {
+        "title": "Prioriza la Precisión Antes que la Velocidad",
+        "content": "Revisa ecuaciones, porcentajes de precisión y tiempos en milisegundos tras cada ronda."
+      },
+      {
+        "title": "Registra Tu Progreso Semanal",
+        "content": "Diez a quince minutos varias veces por semana consolidan la intuición visual y el rendimiento."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "¿Es completamente gratuito este módulo?",
+        "answer": "Sí. Todas las herramientas de Reflextry funcionan en el navegador sin cuentas, descargas ni pagos."
+      },
+      {
+        "question": "¿Funciona en portátiles escolares o tablets?",
+        "answer": "Sí. La interfaz se adapta automáticamente a computadoras, Chromebooks, tablets y pizarras digitales."
+      },
+      {
+        "question": "¿Se guardan mis mejores puntuaciones?",
+        "answer": "Sí. Cada sesión completada guarda automáticamente tus métricas en el panel local de Estadísticas."
+      },
+      {
+        "question": "¿Con qué frecuencia conviene practicar?",
+        "answer": "Sesiones enfocadas de 10 minutos, de tres a cinco veces por semana, generan mejoras constantes y medibles."
+      }
+    ]
+  },
+  "reaction-duel-2p": {
+    "description": [
+      {
+        "title": "Acerca de Duelo de Reflejos 2 Jugadores",
+        "content": "Duelo al mejor de 5 en milisegundos con detección de salida en falso. Sin cuentas ni colas de espera. Comparte pantalla para duelos de reflejos en milisegundos, tira y afloja matemático y batallas de cañones con viento y gravedad."
+      },
+      {
+        "title": "Mecánica Principal y Base Científica",
+        "content": "Juegos locales competitivos de reflejos, cálculo mental y física diseñados para aulas y grupos de estudio. Teclado y Táctil Compartido: Controles izquierdo y derecho en portátiles o tablets. Listo para el Aula: Niveles de dificultad para niños, estudiantes y avanzados."
+      },
+      {
+        "title": "Puntuación y Métricas en Tiempo Real",
+        "content": "Cada simulación une retroalimentación visual inmediata con métricas cuantitativas transparentes. Puntuación en Milisegundos: Detección de salida en falso y estadísticas instantáneas."
+      },
+      {
+        "title": "Aplicaciones en el Aula y el Trabajo",
+        "content": "Sí. La interfaz se adapta automáticamente a computadoras, Chromebooks, tablets y pizarras digitales. Diez a quince minutos varias veces por semana consolidan la intuición visual y el rendimiento."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Configuración y Controles",
+        "steps": [
+          "Comienza con la configuración estándar para medir tu nivel real actual.",
+          "Cambia un control o nivel cada vez para observar claramente causa y efecto."
+        ]
+      },
+      {
+        "title": "Cómo Realizar una Sesión",
+        "steps": [
+          "Duelo al mejor de 5 en milisegundos con detección de salida en falso.",
+          "Revisa ecuaciones, porcentajes de precisión y tiempos en milisegundos tras cada ronda."
+        ]
+      },
+      {
+        "title": "Análisis de Resultados",
+        "steps": [
+          "Sí. Cada sesión completada guarda automáticamente tus métricas en el panel local de Estadísticas.",
+          "Practica en sesiones de 10 minutos con alta concentración en lugar de sesiones fatigantes."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Modifica Una Variable a la Vez",
+        "content": "Cambia un control o nivel cada vez para observar claramente causa y efecto."
+      },
+      {
+        "title": "Prioriza la Precisión Antes que la Velocidad",
+        "content": "Revisa ecuaciones, porcentajes de precisión y tiempos en milisegundos tras cada ronda."
+      },
+      {
+        "title": "Registra Tu Progreso Semanal",
+        "content": "Diez a quince minutos varias veces por semana consolidan la intuición visual y el rendimiento."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "¿Es completamente gratuito este módulo?",
+        "answer": "Sí. Todas las herramientas de Reflextry funcionan en el navegador sin cuentas, descargas ni pagos."
+      },
+      {
+        "question": "¿Funciona en portátiles escolares o tablets?",
+        "answer": "Sí. La interfaz se adapta automáticamente a computadoras, Chromebooks, tablets y pizarras digitales."
+      },
+      {
+        "question": "¿Se guardan mis mejores puntuaciones?",
+        "answer": "Sí. Cada sesión completada guarda automáticamente tus métricas en el panel local de Estadísticas."
+      },
+      {
+        "question": "¿Con qué frecuencia conviene practicar?",
+        "answer": "Sesiones enfocadas de 10 minutos, de tres a cinco veces por semana, generan mejoras constantes y medibles."
+      }
+    ]
+  },
+  "math-tug-of-war": {
+    "description": [
+      {
+        "title": "Acerca de Tira y Afloja Matemático",
+        "content": "Resuelve operaciones más rápido que tu rival para jalar la cuerda hacia tu lado. Sin cuentas ni colas de espera. Comparte pantalla para duelos de reflejos en milisegundos, tira y afloja matemático y batallas de cañones con viento y gravedad."
+      },
+      {
+        "title": "Mecánica Principal y Base Científica",
+        "content": "Juegos locales competitivos de reflejos, cálculo mental y física diseñados para aulas y grupos de estudio. Teclado y Táctil Compartido: Controles izquierdo y derecho en portátiles o tablets. Listo para el Aula: Niveles de dificultad para niños, estudiantes y avanzados."
+      },
+      {
+        "title": "Puntuación y Métricas en Tiempo Real",
+        "content": "Cada simulación une retroalimentación visual inmediata con métricas cuantitativas transparentes. Puntuación en Milisegundos: Detección de salida en falso y estadísticas instantáneas."
+      },
+      {
+        "title": "Aplicaciones en el Aula y el Trabajo",
+        "content": "Sí. La interfaz se adapta automáticamente a computadoras, Chromebooks, tablets y pizarras digitales. Diez a quince minutos varias veces por semana consolidan la intuición visual y el rendimiento."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Configuración y Controles",
+        "steps": [
+          "Comienza con la configuración estándar para medir tu nivel real actual.",
+          "Cambia un control o nivel cada vez para observar claramente causa y efecto."
+        ]
+      },
+      {
+        "title": "Cómo Realizar una Sesión",
+        "steps": [
+          "Resuelve operaciones más rápido que tu rival para jalar la cuerda hacia tu lado.",
+          "Revisa ecuaciones, porcentajes de precisión y tiempos en milisegundos tras cada ronda."
+        ]
+      },
+      {
+        "title": "Análisis de Resultados",
+        "steps": [
+          "Sí. Cada sesión completada guarda automáticamente tus métricas en el panel local de Estadísticas.",
+          "Practica en sesiones de 10 minutos con alta concentración en lugar de sesiones fatigantes."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Modifica Una Variable a la Vez",
+        "content": "Cambia un control o nivel cada vez para observar claramente causa y efecto."
+      },
+      {
+        "title": "Prioriza la Precisión Antes que la Velocidad",
+        "content": "Revisa ecuaciones, porcentajes de precisión y tiempos en milisegundos tras cada ronda."
+      },
+      {
+        "title": "Registra Tu Progreso Semanal",
+        "content": "Diez a quince minutos varias veces por semana consolidan la intuición visual y el rendimiento."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "¿Es completamente gratuito este módulo?",
+        "answer": "Sí. Todas las herramientas de Reflextry funcionan en el navegador sin cuentas, descargas ni pagos."
+      },
+      {
+        "question": "¿Funciona en portátiles escolares o tablets?",
+        "answer": "Sí. La interfaz se adapta automáticamente a computadoras, Chromebooks, tablets y pizarras digitales."
+      },
+      {
+        "question": "¿Se guardan mis mejores puntuaciones?",
+        "answer": "Sí. Cada sesión completada guarda automáticamente tus métricas en el panel local de Estadísticas."
+      },
+      {
+        "question": "¿Con qué frecuencia conviene practicar?",
+        "answer": "Sesiones enfocadas de 10 minutos, de tres a cinco veces por semana, generan mejoras constantes y medibles."
+      }
+    ]
+  },
+  "cannon-battle-2p": {
+    "description": [
+      {
+        "title": "Acerca de Batalla de Cañones con Gravedad",
+        "content": "Artillería 2D por turnos sobre montañas con viento cambiante y gravedad planetaria. Sin cuentas ni colas de espera. Comparte pantalla para duelos de reflejos en milisegundos, tira y afloja matemático y batallas de cañones con viento y gravedad."
+      },
+      {
+        "title": "Mecánica Principal y Base Científica",
+        "content": "Juegos locales competitivos de reflejos, cálculo mental y física diseñados para aulas y grupos de estudio. Teclado y Táctil Compartido: Controles izquierdo y derecho en portátiles o tablets. Listo para el Aula: Niveles de dificultad para niños, estudiantes y avanzados."
+      },
+      {
+        "title": "Puntuación y Métricas en Tiempo Real",
+        "content": "Cada simulación une retroalimentación visual inmediata con métricas cuantitativas transparentes. Puntuación en Milisegundos: Detección de salida en falso y estadísticas instantáneas."
+      },
+      {
+        "title": "Aplicaciones en el Aula y el Trabajo",
+        "content": "Sí. La interfaz se adapta automáticamente a computadoras, Chromebooks, tablets y pizarras digitales. Diez a quince minutos varias veces por semana consolidan la intuición visual y el rendimiento."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Configuración y Controles",
+        "steps": [
+          "Comienza con la configuración estándar para medir tu nivel real actual.",
+          "Cambia un control o nivel cada vez para observar claramente causa y efecto."
+        ]
+      },
+      {
+        "title": "Cómo Realizar una Sesión",
+        "steps": [
+          "Artillería 2D por turnos sobre montañas con viento cambiante y gravedad planetaria.",
+          "Revisa ecuaciones, porcentajes de precisión y tiempos en milisegundos tras cada ronda."
+        ]
+      },
+      {
+        "title": "Análisis de Resultados",
+        "steps": [
+          "Sí. Cada sesión completada guarda automáticamente tus métricas en el panel local de Estadísticas.",
+          "Practica en sesiones de 10 minutos con alta concentración en lugar de sesiones fatigantes."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Modifica Una Variable a la Vez",
+        "content": "Cambia un control o nivel cada vez para observar claramente causa y efecto."
+      },
+      {
+        "title": "Prioriza la Precisión Antes que la Velocidad",
+        "content": "Revisa ecuaciones, porcentajes de precisión y tiempos en milisegundos tras cada ronda."
+      },
+      {
+        "title": "Registra Tu Progreso Semanal",
+        "content": "Diez a quince minutos varias veces por semana consolidan la intuición visual y el rendimiento."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "¿Es completamente gratuito este módulo?",
+        "answer": "Sí. Todas las herramientas de Reflextry funcionan en el navegador sin cuentas, descargas ni pagos."
+      },
+      {
+        "question": "¿Funciona en portátiles escolares o tablets?",
+        "answer": "Sí. La interfaz se adapta automáticamente a computadoras, Chromebooks, tablets y pizarras digitales."
+      },
+      {
+        "question": "¿Se guardan mis mejores puntuaciones?",
+        "answer": "Sí. Cada sesión completada guarda automáticamente tus métricas en el panel local de Estadísticas."
+      },
+      {
+        "question": "¿Con qué frecuencia conviene practicar?",
+        "answer": "Sesiones enfocadas de 10 minutos, de tres a cinco veces por semana, generan mejoras constantes y medibles."
+      }
+    ]
+  },
+  "speed-reading": {
+    "description": [
+      {
+        "title": "Acerca de Lectura Rápida y Comprensión",
+        "content": "Lee en modo resaltado o RSVP y supera el cuestionario para calcular tus PPM efectivas. Diseñada para estudiantes y profesionales. Evalúa tus PPM efectivas con cuestionario, pulsaciones por hora en teclado numérico 10-Key y fatiga cognitiva en bloques Pomodoro."
+      },
+      {
+        "title": "Mecánica Principal y Base Científica",
+        "content": "Pruebas prácticas de lectura rápida RSVP y guiada, entrada numérica contable 10-Key y seguimiento de atención con sprints cronometrados. Comprensión Verificada: Cada prueba de lectura valida la retención real. Métricas KPH Profesionales: Precisión y pulsaciones por hora en teclado numérico."
+      },
+      {
+        "title": "Puntuación y Métricas en Tiempo Real",
+        "content": "Cada simulación une retroalimentación visual inmediata con métricas cuantitativas transparentes. Telemetría de Fatiga: Compara tu reacción antes y después de cada bloque de enfoque."
+      },
+      {
+        "title": "Aplicaciones en el Aula y el Trabajo",
+        "content": "Sí. La interfaz se adapta automáticamente a computadoras, Chromebooks, tablets y pizarras digitales. Diez a quince minutos varias veces por semana consolidan la intuición visual y el rendimiento."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Configuración y Controles",
+        "steps": [
+          "Comienza con la configuración estándar para medir tu nivel real actual.",
+          "Cambia un control o nivel cada vez para observar claramente causa y efecto."
+        ]
+      },
+      {
+        "title": "Cómo Realizar una Sesión",
+        "steps": [
+          "Lee en modo resaltado o RSVP y supera el cuestionario para calcular tus PPM efectivas.",
+          "Revisa ecuaciones, porcentajes de precisión y tiempos en milisegundos tras cada ronda."
+        ]
+      },
+      {
+        "title": "Análisis de Resultados",
+        "steps": [
+          "Sí. Cada sesión completada guarda automáticamente tus métricas en el panel local de Estadísticas.",
+          "Practica en sesiones de 10 minutos con alta concentración en lugar de sesiones fatigantes."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Modifica Una Variable a la Vez",
+        "content": "Cambia un control o nivel cada vez para observar claramente causa y efecto."
+      },
+      {
+        "title": "Prioriza la Precisión Antes que la Velocidad",
+        "content": "Revisa ecuaciones, porcentajes de precisión y tiempos en milisegundos tras cada ronda."
+      },
+      {
+        "title": "Registra Tu Progreso Semanal",
+        "content": "Diez a quince minutos varias veces por semana consolidan la intuición visual y el rendimiento."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "¿Es completamente gratuito este módulo?",
+        "answer": "Sí. Todas las herramientas de Reflextry funcionan en el navegador sin cuentas, descargas ni pagos."
+      },
+      {
+        "question": "¿Funciona en portátiles escolares o tablets?",
+        "answer": "Sí. La interfaz se adapta automáticamente a computadoras, Chromebooks, tablets y pizarras digitales."
+      },
+      {
+        "question": "¿Se guardan mis mejores puntuaciones?",
+        "answer": "Sí. Cada sesión completada guarda automáticamente tus métricas en el panel local de Estadísticas."
+      },
+      {
+        "question": "¿Con qué frecuencia conviene practicar?",
+        "answer": "Sesiones enfocadas de 10 minutos, de tres a cinco veces por semana, generan mejoras constantes y medibles."
+      }
+    ]
+  },
+  "ten-key": {
+    "description": [
+      {
+        "title": "Acerca de Test de Teclado Numérico 10-Key",
+        "content": "Mide tus pulsaciones por hora (KPH) y precisión con facturas, enteros y códigos SKU. Diseñada para estudiantes y profesionales. Evalúa tus PPM efectivas con cuestionario, pulsaciones por hora en teclado numérico 10-Key y fatiga cognitiva en bloques Pomodoro."
+      },
+      {
+        "title": "Mecánica Principal y Base Científica",
+        "content": "Pruebas prácticas de lectura rápida RSVP y guiada, entrada numérica contable 10-Key y seguimiento de atención con sprints cronometrados. Comprensión Verificada: Cada prueba de lectura valida la retención real. Métricas KPH Profesionales: Precisión y pulsaciones por hora en teclado numérico."
+      },
+      {
+        "title": "Puntuación y Métricas en Tiempo Real",
+        "content": "Cada simulación une retroalimentación visual inmediata con métricas cuantitativas transparentes. Telemetría de Fatiga: Compara tu reacción antes y después de cada bloque de enfoque."
+      },
+      {
+        "title": "Aplicaciones en el Aula y el Trabajo",
+        "content": "Sí. La interfaz se adapta automáticamente a computadoras, Chromebooks, tablets y pizarras digitales. Diez a quince minutos varias veces por semana consolidan la intuición visual y el rendimiento."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Configuración y Controles",
+        "steps": [
+          "Comienza con la configuración estándar para medir tu nivel real actual.",
+          "Cambia un control o nivel cada vez para observar claramente causa y efecto."
+        ]
+      },
+      {
+        "title": "Cómo Realizar una Sesión",
+        "steps": [
+          "Mide tus pulsaciones por hora (KPH) y precisión con facturas, enteros y códigos SKU.",
+          "Revisa ecuaciones, porcentajes de precisión y tiempos en milisegundos tras cada ronda."
+        ]
+      },
+      {
+        "title": "Análisis de Resultados",
+        "steps": [
+          "Sí. Cada sesión completada guarda automáticamente tus métricas en el panel local de Estadísticas.",
+          "Practica en sesiones de 10 minutos con alta concentración en lugar de sesiones fatigantes."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Modifica Una Variable a la Vez",
+        "content": "Cambia un control o nivel cada vez para observar claramente causa y efecto."
+      },
+      {
+        "title": "Prioriza la Precisión Antes que la Velocidad",
+        "content": "Revisa ecuaciones, porcentajes de precisión y tiempos en milisegundos tras cada ronda."
+      },
+      {
+        "title": "Registra Tu Progreso Semanal",
+        "content": "Diez a quince minutos varias veces por semana consolidan la intuición visual y el rendimiento."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "¿Es completamente gratuito este módulo?",
+        "answer": "Sí. Todas las herramientas de Reflextry funcionan en el navegador sin cuentas, descargas ni pagos."
+      },
+      {
+        "question": "¿Funciona en portátiles escolares o tablets?",
+        "answer": "Sí. La interfaz se adapta automáticamente a computadoras, Chromebooks, tablets y pizarras digitales."
+      },
+      {
+        "question": "¿Se guardan mis mejores puntuaciones?",
+        "answer": "Sí. Cada sesión completada guarda automáticamente tus métricas en el panel local de Estadísticas."
+      },
+      {
+        "question": "¿Con qué frecuencia conviene practicar?",
+        "answer": "Sesiones enfocadas de 10 minutos, de tres a cinco veces por semana, generan mejoras constantes y medibles."
+      }
+    ]
+  },
+  "focus-sprint": {
+    "description": [
+      {
+        "title": "Acerca de Sprint de Enfoque y Fatiga",
+        "content": "Combina temporizador Pomodoro real con pruebas de reacción antes y después del bloque. Diseñada para estudiantes y profesionales. Evalúa tus PPM efectivas con cuestionario, pulsaciones por hora en teclado numérico 10-Key y fatiga cognitiva en bloques Pomodoro."
+      },
+      {
+        "title": "Mecánica Principal y Base Científica",
+        "content": "Pruebas prácticas de lectura rápida RSVP y guiada, entrada numérica contable 10-Key y seguimiento de atención con sprints cronometrados. Comprensión Verificada: Cada prueba de lectura valida la retención real. Métricas KPH Profesionales: Precisión y pulsaciones por hora en teclado numérico."
+      },
+      {
+        "title": "Puntuación y Métricas en Tiempo Real",
+        "content": "Cada simulación une retroalimentación visual inmediata con métricas cuantitativas transparentes. Telemetría de Fatiga: Compara tu reacción antes y después de cada bloque de enfoque."
+      },
+      {
+        "title": "Aplicaciones en el Aula y el Trabajo",
+        "content": "Sí. La interfaz se adapta automáticamente a computadoras, Chromebooks, tablets y pizarras digitales. Diez a quince minutos varias veces por semana consolidan la intuición visual y el rendimiento."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Configuración y Controles",
+        "steps": [
+          "Comienza con la configuración estándar para medir tu nivel real actual.",
+          "Cambia un control o nivel cada vez para observar claramente causa y efecto."
+        ]
+      },
+      {
+        "title": "Cómo Realizar una Sesión",
+        "steps": [
+          "Combina temporizador Pomodoro real con pruebas de reacción antes y después del bloque.",
+          "Revisa ecuaciones, porcentajes de precisión y tiempos en milisegundos tras cada ronda."
+        ]
+      },
+      {
+        "title": "Análisis de Resultados",
+        "steps": [
+          "Sí. Cada sesión completada guarda automáticamente tus métricas en el panel local de Estadísticas.",
+          "Practica en sesiones de 10 minutos con alta concentración en lugar de sesiones fatigantes."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Modifica Una Variable a la Vez",
+        "content": "Cambia un control o nivel cada vez para observar claramente causa y efecto."
+      },
+      {
+        "title": "Prioriza la Precisión Antes que la Velocidad",
+        "content": "Revisa ecuaciones, porcentajes de precisión y tiempos en milisegundos tras cada ronda."
+      },
+      {
+        "title": "Registra Tu Progreso Semanal",
+        "content": "Diez a quince minutos varias veces por semana consolidan la intuición visual y el rendimiento."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "¿Es completamente gratuito este módulo?",
+        "answer": "Sí. Todas las herramientas de Reflextry funcionan en el navegador sin cuentas, descargas ni pagos."
+      },
+      {
+        "question": "¿Funciona en portátiles escolares o tablets?",
+        "answer": "Sí. La interfaz se adapta automáticamente a computadoras, Chromebooks, tablets y pizarras digitales."
+      },
+      {
+        "question": "¿Se guardan mis mejores puntuaciones?",
+        "answer": "Sí. Cada sesión completada guarda automáticamente tus métricas en el panel local de Estadísticas."
+      },
+      {
+        "question": "¿Con qué frecuencia conviene practicar?",
+        "answer": "Sesiones enfocadas de 10 minutos, de tres a cinco veces por semana, generan mejoras constantes y medibles."
+      }
+    ]
   }
 }

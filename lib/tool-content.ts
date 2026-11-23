@@ -7,6 +7,11 @@
  * - FAQs: Minimum 10 questions
  */
 
+import fs from "fs";
+import path from "path";
+import { NEW_PACKS_CONTENT, NEW_PACKS_RELATED } from "@/lib/new-packs-content";
+import { isSupportedLocale } from "@/lib/i18n/config";
+
 export const toolContent = {
     "card-match": {
         description: [
@@ -4154,7 +4159,7 @@ export const toolContent = {
             { question: "What is Target?", answer: "The next number you must click." },
         ]
     },
-
+    ...NEW_PACKS_CONTENT,
 };
 
 // Related tools mapping for internal linking
@@ -4300,21 +4305,21 @@ const relatedToolsMap: Record<string, Array<{ id: string; title: string; href: s
         { id: "grid-shot", title: "Grid Shot", href: "/reflex/grid" },
         { id: "visual-memory", title: "Visual Memory", href: "/memory/visual" },
     ],
-
+    ...NEW_PACKS_RELATED,
 };
 
+const TOOL_TRANSLATIONS_ROOT = path.resolve(process.cwd(), "content", "translations");
 const toolTranslationsCache: Record<string, Record<string, any>> = {};
 
 function getLocaleTranslation(locale: string): Record<string, any> {
-    if (typeof window !== 'undefined') return {};
+    if (typeof window !== "undefined") return {};
+    if (!isSupportedLocale(locale)) return {};
     if (toolTranslationsCache[locale]) return toolTranslationsCache[locale];
 
     try {
-        const fs = eval('require("fs")');
-        const path = eval('require("path")');
-        const transPath = path.join(process.cwd(), 'content', 'translations', locale, 'tool-content.json');
-        if (fs.existsSync(transPath)) {
-            toolTranslationsCache[locale] = JSON.parse(fs.readFileSync(transPath, 'utf8'));
+        const transPath = path.resolve(TOOL_TRANSLATIONS_ROOT, locale, "tool-content.json");
+        if (transPath.startsWith(`${TOOL_TRANSLATIONS_ROOT}${path.sep}`) && fs.existsSync(transPath)) {
+            toolTranslationsCache[locale] = JSON.parse(fs.readFileSync(transPath, "utf8"));
             return toolTranslationsCache[locale];
         }
     } catch (_) {}

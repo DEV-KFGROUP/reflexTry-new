@@ -3,7 +3,20 @@
 
 import { getBaseUrl } from '@/lib/base-url';
 import { AVAILABLE_LANGUAGES, GEO_TARGET_COUNTRIES } from '@/lib/international-seo';
+import { DEFAULT_LOCALE, getLocalizedPath, isSupportedLocale, type Locale } from '@/lib/i18n/config';
 import type { Article } from '@/lib/content/types';
+
+function resolveLocale(locale?: string): Locale {
+    return locale && isSupportedLocale(locale) ? locale : DEFAULT_LOCALE;
+}
+
+function buildLocalizedUrl(path: string, locale?: string): string {
+    const baseUrl = getBaseUrl();
+    if (path.startsWith('http')) return path;
+    const loc = resolveLocale(locale);
+    const localizedPath = getLocalizedPath(path || '/', loc);
+    return localizedPath === '/' ? baseUrl : `${baseUrl}${localizedPath}`;
+}
 
 /**
  * Safely serializes structured data into a JSON string suitable for inline <script> tags.
@@ -16,19 +29,29 @@ export function safeJsonLdStringify(data: any): string {
 /** Standardized SpeakableSpecification CSS selectors used across all schemas */
 const SPEAKABLE_SELECTORS = ["h1", ".hero-subtitle", ".aeo-answer", "article p:first-of-type"];
 
-export function generateToolStructuredData(_toolId: string, title: string, description: string, url: string) {
+export function generateToolStructuredData(_toolId: string, title: string, description: string, url: string, locale?: string) {
     const baseUrl = getBaseUrl();
+    const activeLocale = resolveLocale(locale);
+    const pageUrl = buildLocalizedUrl(url, activeLocale);
 
     return {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        name: title,
+        name: title.replace(/\s*\|\s*Reflextry$/i, ''),
         description: description,
-        url: `${baseUrl}${url}`,
-        applicationCategory: "Game",
-        operatingSystem: "Web Browser",
-        inLanguage: "en",
+        url: pageUrl,
+        image: `${baseUrl}/opengraph-image`,
+        applicationCategory: "GameApplication",
+        operatingSystem: "All",
+        browserRequirements: "Requires JavaScript. Modern HTML5 browser.",
+        inLanguage: activeLocale,
         areaServed: GEO_TARGET_COUNTRIES,
+        isAccessibleForFree: true,
+        publisher: {
+            "@type": "Organization",
+            name: "Reflextry",
+            url: baseUrl,
+        },
         offers: {
             "@type": "Offer",
             price: "0",
@@ -37,30 +60,41 @@ export function generateToolStructuredData(_toolId: string, title: string, descr
     };
 }
 
-export function generateWebsiteStructuredData() {
+export function generateWebsiteStructuredData(locale?: string) {
     const baseUrl = getBaseUrl();
+    const activeLocale = resolveLocale(locale);
+    const siteUrl = buildLocalizedUrl('/', activeLocale);
+    const toolsSearchUrl = buildLocalizedUrl('/tools', activeLocale);
 
     return {
         "@context": "https://schema.org",
         "@type": "WebSite",
         name: "Reflextry",
-        alternateName: ["Reflextry Brain Benchmark", "Reflextry Games"],
-        description: "Test your accuracy and reflexes with our Gen Z tools. Free online brain training games, reaction time tests, typing speed tests, and more.",
-        url: baseUrl,
-        inLanguage: "en",
+        alternateName: ["Reflextry Brain Benchmark", "Reflextry Cognitive Lab"],
+        description: "Free online brain training games, millisecond reaction time tests, 9 Mensa logic & word puzzles (10,800+ levels), working memory benchmarks, typing WPM, FPS aim trainers, and interactive STEM & 3D labs.",
+        url: siteUrl,
+        inLanguage: activeLocale,
         availableLanguage: AVAILABLE_LANGUAGES,
+        potentialAction: {
+            "@type": "SearchAction",
+            target: {
+                "@type": "EntryPoint",
+                urlTemplate: `${toolsSearchUrl}?q={search_term_string}`,
+            },
+            "query-input": "required name=search_term_string",
+        },
         publisher: {
             "@type": "Organization",
             name: "Reflextry",
             url: baseUrl
         },
-
     };
 }
 
-export function generateArticleStructuredData(meta: Article, slug: string) {
+export function generateArticleStructuredData(meta: Article, slug: string, locale?: string, wordCount?: number) {
     const baseUrl = getBaseUrl();
-    const pageUrl = `${baseUrl}/blog/${slug}`;
+    const activeLocale = resolveLocale(locale);
+    const pageUrl = buildLocalizedUrl(`/blog/${slug}`, activeLocale);
     const resolveUrl = (u: string) => (u.startsWith("http") ? u : `${baseUrl}${u}`);
 
     const images: string[] = meta.image
@@ -82,9 +116,11 @@ export function generateArticleStructuredData(meta: Article, slug: string) {
         "@type": "Article",
         headline: meta.title,
         description: meta.description,
+        articleSection: meta.category || "Cognitive Training",
+        ...(wordCount && wordCount > 0 ? { wordCount } : {}),
         datePublished: meta.publishedAt,
         dateModified: meta.updatedAt ?? meta.publishedAt,
-        inLanguage: "en",
+        inLanguage: activeLocale,
         author,
         publisher: {
             "@type": "Organization",
@@ -108,8 +144,8 @@ export function generateArticleStructuredData(meta: Article, slug: string) {
     };
 }
 
-export function generateBreadcrumbStructuredData(items: { name: string; url: string }[]) {
-    const baseUrl = getBaseUrl();
+export function generateBreadcrumbStructuredData(items: { name: string; url: string }[], locale?: string) {
+    const activeLocale = resolveLocale(locale);
     return {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
@@ -117,7 +153,7 @@ export function generateBreadcrumbStructuredData(items: { name: string; url: str
             "@type": "ListItem",
             position: index + 1,
             name: item.name,
-            item: item.url.startsWith("http") ? item.url : `${baseUrl}${item.url}`,
+            item: buildLocalizedUrl(item.url, activeLocale),
         })),
     };
 }
@@ -131,15 +167,19 @@ export function generateOrganizationSchema() {
         url: baseUrl,
         logo: `${baseUrl}/icon.png`,
         foundingDate: "2024",
-        description: "Free online cognitive training platform providing visual reaction time, working memory, typing WPM, and aim precision benchmarks.",
+        description: "Free online cognitive training platform providing visual reaction time, working memory, 9 Mensa logic & word puzzles (10,800+ levels), typing WPM, FPS aim precision, and interactive STEM & 3D WebGL labs.",
         availableLanguage: AVAILABLE_LANGUAGES,
         areaServed: GEO_TARGET_COUNTRIES,
         knowsAbout: [
             "Cognitive Assessment",
             "Visual Reaction Time",
             "Working Memory Capacity",
+            "Mensa Logic Puzzles",
+            "Daily Word Puzzles",
             "Esports Warmup Mechanics",
-            "Motor Speed & Typing Benchmarks"
+            "Motor Speed & Typing Benchmarks",
+            "Interactive Physics & STEM Simulations",
+            "3D WebGL Spatial Benchmarks"
         ],
         contactPoint: {
             "@type": "ContactPoint",
@@ -148,22 +188,24 @@ export function generateOrganizationSchema() {
             availableLanguage: AVAILABLE_LANGUAGES
         },
         sameAs: [
-            "https://twitter.com/reflextry",
-            "https://github.com/reflextry",
-            "https://www.youtube.com/@reflextry"
+            "https://twitter.com/reflextry_",
+            "https://instagram.com/reflextry_",
+            "https://github.com/reflextry"
         ]
     };
 }
 
-export function generateWebPageSchema(title: string, description: string, urlPath: string) {
+export function generateWebPageSchema(title: string, description: string, urlPath: string, locale?: string) {
     const baseUrl = getBaseUrl();
+    const activeLocale = resolveLocale(locale);
+    const pageUrl = buildLocalizedUrl(urlPath, activeLocale);
     return {
         "@context": "https://schema.org",
         "@type": "WebPage",
         name: title,
         description: description,
-        url: `${baseUrl}${urlPath}`,
-        inLanguage: "en",
+        url: pageUrl,
+        inLanguage: activeLocale,
         isPartOf: {
             "@type": "WebSite",
             url: baseUrl

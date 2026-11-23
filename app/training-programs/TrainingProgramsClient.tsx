@@ -233,178 +233,133 @@ const programs: Program[] = [
     }
 ];
 
-const FloatingBackground = () => {
-    return (
-        <div className="absolute inset-0 overflow-hidden pointer-events-none z-[-1] rounded-3xl">
-            <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-blue-500/20 rounded-full blur-[100px] animate-pulse" />
-            <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-indigo-500/20 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '2s' }} />
-            
-            <motion.div
-                animate={{ y: [0, -20, 0], rotate: [0, 10, 0] }}
-                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-[15%] left-[5%] opacity-20"
-            >
-                <Dumbbell className="w-32 h-32 text-blue-400 drop-shadow-[0_0_15px_rgba(96,165,250,0.8)]" />
-            </motion.div>
-
-            <motion.div
-                animate={{ y: [0, 30, 0], rotate: [0, -15, 0] }}
-                transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute bottom-[20%] right-[5%] opacity-20"
-            >
-                <Trophy className="w-40 h-40 text-indigo-400 drop-shadow-[0_0_15px_rgba(129,140,248,0.8)]" />
-            </motion.div>
-        </div>
-    );
-};
-
 export default function TrainingProgramsClient() {
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: { staggerChildren: 0.1 }
-        }
-    };
-
-    const itemVariants = {
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0 }
-    };
-
     return (
-        <div className="bg-background py-8 px-4 sm:px-6 lg:px-8 min-h-screen overflow-hidden relative">
-            <motion.div 
-                initial="hidden"
-                animate="visible"
-                variants={containerVariants}
-                className="max-w-7xl mx-auto space-y-12 relative z-10"
-            >
-                {/* Header Section */}
-                <motion.div variants={itemVariants} className="text-center space-y-4 mb-12 relative z-10">
-                    <motion.div
-                        initial={{ scale: 0, rotate: -180 }}
-                        animate={{ scale: 1, rotate: 0 }}
-                        transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                        className="inline-block relative mb-4"
-                        suppressHydrationWarning
-                    >
-                        <div className="absolute inset-0 bg-blue-500/30 blur-2xl rounded-full" />
-                        <div className="relative p-4 rounded-full bg-white/5 border border-black/10 dark:border-white/10 backdrop-blur-md shadow-[0_0_30px_rgba(59,130,246,0.2)]">
-                            <Dumbbell className="w-12 h-12 text-blue-400 drop-shadow-[0_0_10px_rgba(96,165,250,0.8)]" />
-                        </div>
-                    </motion.div>
-                    
-                    <div className="inline-block relative">
-                        <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-indigo-500 blur-2xl opacity-30 animate-pulse" />
-                        <h1 
-                            className="text-4xl md:text-5xl lg:text-6xl font-black bg-gradient-to-br from-slate-900 via-slate-800 to-slate-600 dark:from-blue-400 dark:via-indigo-400 dark:to-indigo-500 bg-clip-text text-transparent inline-flex items-center gap-3 relative z-10 drop-shadow-sm"
-                            suppressHydrationWarning
-                        >
-                            <Sparkles className="w-10 h-10 text-blue-400" />
-                            Training Programs
-                        </h1>
-                    </div>
-                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-medium">
+        <div className="bg-[#FAF9F6] text-[#161614] py-12 px-4 sm:px-6 lg:px-8 min-h-screen">
+            <div className="max-w-7xl mx-auto space-y-12">
+                {/* Editorial Header */}
+                <header className="space-y-4 border-b border-[#D8D4C9] pb-10 max-w-3xl">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#78756C]">
+                        Structured Curricula · 4 Multi-Week Programs
+                    </p>
+                    <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium tracking-[-0.02em] text-[#161614] leading-[1.08] [text-wrap:balance]">
+                        Training Programs
+                    </h1>
+                    <p className="text-base sm:text-lg text-[#3F3E39] leading-relaxed">
                         Structured, goal-oriented programs to systematically improve your cognitive performance.
                     </p>
-                    <p className="text-md text-muted-foreground/80 max-w-3xl mx-auto">
+                    <p className="text-sm sm:text-[15px] text-[#57554E] leading-relaxed">
                         Randomly playing games provides limited benefits. To truly enhance neuroplasticity, you need structured progressive overload. Choose a program below and stick to the routine for measurable results.
                     </p>
-                </motion.div>
+                </header>
 
-                {/* Main Glassmorphic Container */}
-                <motion.div 
-                    variants={itemVariants}
-                    className="relative bg-white/40 dark:bg-black/40 backdrop-blur-3xl border border-black/10 dark:border-white/10 rounded-3xl p-4 md:p-8 shadow-[0_0_50px_rgba(59,130,246,0.1)] z-10 space-y-12"
-                >
-                    <FloatingBackground />
+                {/* Program Catalog */}
+                <div className="space-y-10">
+                    {programs.map((program, index) => (
+                        <article
+                            key={program.title}
+                            className="bg-white border border-[#E6E3DB] rounded-2xl p-6 sm:p-8 lg:p-10 space-y-8"
+                        >
+                            <div className="grid lg:grid-cols-3 gap-8">
+                                {/* Left Column: Overview & Goals */}
+                                <div className="lg:col-span-1 space-y-6">
+                                    <div className="space-y-2">
+                                        <p className="text-[11px] font-mono font-semibold uppercase tracking-[0.14em] text-[#78756C]">
+                                            Program 0{index + 1} · {program.duration} · {program.level}
+                                        </p>
+                                        <h2 className="font-serif text-2xl sm:text-3xl font-medium text-[#161614] tracking-[-0.015em]">
+                                            {program.title}
+                                        </h2>
+                                        <p className="text-sm text-[#57554E] leading-relaxed">
+                                            {program.description}
+                                        </p>
+                                    </div>
 
-                    <div className="grid gap-12">
-                        {programs.map((program, index) => (
-                            <motion.div
-                                key={program.title}
-                                variants={itemVariants}
-                                className="bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-3xl p-6 md:p-8 shadow-lg hover:shadow-[0_0_30px_rgba(59,130,246,0.15)] transition-all duration-300 relative overflow-hidden"
-                            >
-                                <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-blue-500 to-indigo-500" />
-                                
-                                <div className="grid md:grid-cols-3 gap-8">
-                                    <div className="md:col-span-1 space-y-6">
-                                        <div>
-                                            <h2 className="text-2xl font-bold text-foreground mb-2">{program.title}</h2>
-                                            <p className="text-muted-foreground text-sm">{program.description}</p>
-                                        </div>
-                                        
-                                        <div className="flex flex-col gap-3">
-                                            <div className="flex items-center gap-2 text-sm text-foreground bg-white/5 px-3 py-2 rounded-lg border border-black/10 dark:border-white/10">
-                                                <Clock className="w-4 h-4 text-blue-400" />
-                                                <span>Duration: <strong className="text-blue-500">{program.duration}</strong></span>
+                                    <div className="grid grid-cols-2 gap-3 pt-2 border-t border-[#F0EDE6]">
+                                        <div className="rounded-xl bg-[#FAF9F6] border border-[#E6E3DB] p-3">
+                                            <div className="flex items-center gap-1.5 text-[11px] font-semibold text-[#78756C] uppercase tracking-wider">
+                                                <Clock className="w-3.5 h-3.5" aria-hidden="true" />
+                                                <span>Duration</span>
                                             </div>
-                                            <div className="flex items-center gap-2 text-sm text-foreground bg-white/5 px-3 py-2 rounded-lg border border-black/10 dark:border-white/10">
-                                                <Target className="w-4 h-4 text-indigo-400" />
-                                                <span>Level: <strong className="text-indigo-500">{program.level}</strong></span>
-                                            </div>
+                                            <p className="text-sm font-semibold text-[#161614] mt-1">{program.duration}</p>
                                         </div>
-
-                                        <div className="space-y-3">
-                                            <h3 className="font-bold text-foreground flex items-center gap-2">
-                                                <Award className="w-5 h-5 text-amber-500" />
-                                                Program Goals
-                                            </h3>
-                                            <ul className="space-y-2">
-                                                {program.goals.map((goal, i) => (
-                                                    <li key={i} className="flex items-start gap-2 text-sm text-muted-foreground">
-                                                        <CheckCircle2 className="w-4 h-4 text-emerald-500 mt-0.5 flex-shrink-0" />
-                                                        <span>{goal}</span>
-                                                    </li>
-                                                ))}
-                                            </ul>
+                                        <div className="rounded-xl bg-[#FAF9F6] border border-[#E6E3DB] p-3">
+                                            <div className="flex items-center gap-1.5 text-[11px] font-semibold text-[#78756C] uppercase tracking-wider">
+                                                <Target className="w-3.5 h-3.5" aria-hidden="true" />
+                                                <span>Level</span>
+                                            </div>
+                                            <p className="text-sm font-semibold text-[#161614] mt-1">{program.level}</p>
                                         </div>
                                     </div>
 
-                                    <div className="md:col-span-2 space-y-6">
-                                        <h3 className="font-bold text-foreground flex items-center gap-2 text-lg">
-                                            <TrendingUp className="w-5 h-5 text-blue-500" />
-                                            Training Schedule
+                                    <div className="space-y-3 pt-2 border-t border-[#F0EDE6]">
+                                        <h3 className="text-sm font-semibold text-[#161614] flex items-center gap-2">
+                                            <Award className="w-4 h-4 text-[#57554E]" aria-hidden="true" />
+                                            <span>Program Goals</span>
                                         </h3>
-                                        <div className="grid sm:grid-cols-2 gap-4">
-                                            {program.schedule.map((week, i) => (
-                                                <div key={i} className="bg-white/5 border border-black/10 dark:border-white/10 rounded-2xl p-4">
-                                                    <h4 className="font-bold text-blue-500 mb-3 text-sm uppercase tracking-wider">{week.day}</h4>
-                                                    <ul className="space-y-2">
-                                                        {week.activities.map((activity, j) => (
-                                                            <li key={j} className="text-sm text-muted-foreground flex items-start gap-2">
-                                                                <span className="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-1.5 flex-shrink-0" />
-                                                                <span className="leading-tight">{activity}</span>
-                                                            </li>
-                                                        ))}
-                                                    </ul>
-                                                </div>
+                                        <ul className="space-y-2">
+                                            {program.goals.map((goal, i) => (
+                                                <li key={i} className="flex items-start gap-2 text-sm text-[#57554E]">
+                                                    <CheckCircle2 className="w-4 h-4 text-[#1E40AF] mt-0.5 shrink-0" aria-hidden="true" />
+                                                    <span>{goal}</span>
+                                                </li>
                                             ))}
-                                        </div>
+                                        </ul>
+                                    </div>
 
-                                        <div className="mt-6 bg-blue-500/10 border border-blue-500/20 rounded-2xl p-5">
-                                            <h3 className="font-bold text-foreground flex items-center gap-2 mb-3">
-                                                <Brain className="w-5 h-5 text-blue-500" />
-                                                Pro Tips for Success
-                                            </h3>
-                                            <ul className="grid sm:grid-cols-2 gap-2">
-                                                {program.tips.map((tip, i) => (
-                                                    <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
-                                                        <Zap className="w-4 h-4 text-amber-500 flex-shrink-0" />
-                                                        <span>{tip}</span>
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div>
+                                    <Link
+                                        href="/tools"
+                                        className="inline-flex items-center justify-center w-full min-h-[44px] px-4 py-2.5 rounded-lg bg-[#161614] hover:bg-[#2C2B27] text-[#FAF9F6] text-xs font-semibold transition-colors"
+                                    >
+                                        Open Training Tools
+                                    </Link>
+                                </div>
+
+                                {/* Right Column: Weekly Schedule & Tips */}
+                                <div className="lg:col-span-2 space-y-6 lg:border-l lg:border-[#F0EDE6] lg:pl-8">
+                                    <h3 className="font-serif text-xl font-medium text-[#161614] flex items-center gap-2">
+                                        <TrendingUp className="w-4 h-4 text-[#57554E]" aria-hidden="true" />
+                                        <span>Training Schedule</span>
+                                    </h3>
+
+                                    <div className="grid sm:grid-cols-2 gap-4">
+                                        {program.schedule.map((week, i) => (
+                                            <div key={i} className="bg-[#FAF9F6] border border-[#E6E3DB] rounded-xl p-5">
+                                                <h4 className="text-xs font-semibold text-[#161614] uppercase tracking-[0.08em] mb-3">
+                                                    {week.day}
+                                                </h4>
+                                                <ul className="space-y-2">
+                                                    {week.activities.map((activity, j) => (
+                                                        <li key={j} className="text-sm text-[#57554E] flex items-start gap-2 leading-snug">
+                                                            <span className="text-[#78756C] font-mono text-xs mt-0.5">—</span>
+                                                            <span>{activity}</span>
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        ))}
+                                    </div>
+
+                                    <div className="bg-[#F3F1EB] border border-[#E6E3DB] rounded-xl p-5 space-y-3">
+                                        <h3 className="text-sm font-semibold text-[#161614] flex items-center gap-2">
+                                            <Brain className="w-4 h-4 text-[#57554E]" aria-hidden="true" />
+                                            <span>Key Practice Guidelines</span>
+                                        </h3>
+                                        <ul className="grid sm:grid-cols-2 gap-2.5">
+                                            {program.tips.map((tip, i) => (
+                                                <li key={i} className="flex items-start gap-2 text-xs sm:text-sm text-[#3F3E39]">
+                                                    <Zap className="w-3.5 h-3.5 text-[#1E40AF] shrink-0 mt-0.5" aria-hidden="true" />
+                                                    <span>{tip}</span>
+                                                </li>
+                                            ))}
+                                        </ul>
                                     </div>
                                 </div>
-                            </motion.div>
-                        ))}
-                    </div>
-                </motion.div>
-            </motion.div>
+                            </div>
+                        </article>
+                    ))}
+                </div>
+            </div>
         </div>
     );
 }

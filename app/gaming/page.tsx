@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { headers } from 'next/headers';
 import GamingHubClient from './GamingHubClient';
 import { CategorySEOContent } from '@/components/CategorySEOContent';
 import { getCategoryMetadata } from '@/lib/seo-utils';
@@ -6,19 +7,23 @@ import { SchemaInjector } from "@/components/SchemaInjector";
 import { generateWebPageSchema, generateBreadcrumbStructuredData, generateFAQPageSchema } from "@/lib/structured-data";
 
 export async function generateMetadata(): Promise<Metadata> {
-    return getCategoryMetadata('gaming');
+    const h = await headers();
+    return getCategoryMetadata('gaming', h.get('x-locale') || 'en');
 }
 
-export default function GamingHub() {
+export default async function GamingHub() {
+    const h = await headers();
+    const locale = h.get('x-locale') || 'en';
     const breadcrumbSchema = generateBreadcrumbStructuredData([
         { name: "Home", url: "/" },
         { name: "Gaming Tools", url: "/gaming" },
-    ]);
+    ], locale);
     
     const webPageSchema = generateWebPageSchema(
         "Pro Gaming Lab - Aim & Reaction Training",
         "Warm up your hands and sharpen your senses with our esports tools. Aim trainer, flick shot, and grid click for competitive gamers.",
-        "/gaming"
+        "/gaming",
+        locale
     );
 
     const faqSchema = generateFAQPageSchema([

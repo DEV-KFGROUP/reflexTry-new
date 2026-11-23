@@ -950,5 +950,113 @@
       "bpm vuruş doğruluk oyunu",
       "ritim refleks çalıştırıcısı"
     ]
+  },
+  "gravity-lab": {
+    "title": "Yerçekimi ve Yörünge Labı - STEM ve Fizik Laboratuvarı | Reflextry",
+    "description": "Dünya, Ay, Mars ve Jüpiter serbest düşüşünü karşılaştırın veya yörünge fırlatın.",
+    "keywords": [
+      "yerçekimi ve yörünge labı",
+      "stem ve fizik laboratuvarı",
+      "reflextry"
+    ]
+  },
+  "laser-reflection": {
+    "title": "Lazer Yansıma Optiği - STEM ve Fizik Laboratuvarı | Reflextry",
+    "description": "Aynaları döndürerek lazeri hedefe ulaştırın ve Yansıma Yasasını doğrulayın.",
+    "keywords": [
+      "lazer yansıma optiği",
+      "stem ve fizik laboratuvarı",
+      "reflextry"
+    ]
+  },
+  "projectile-cannon": {
+    "title": "Eğik Atış Top Fiziği - STEM ve Fizik Laboratuvarı | Reflextry",
+    "description": "Açı, hız, rüzgar ve yerçekimini ayarlayarak parabolik hedefleri vurun.",
+    "keywords": [
+      "eğik atış top fiziği",
+      "stem ve fizik laboratuvarı",
+      "reflextry"
+    ]
+  },
+  "torque-balance": {
+    "title": "Tahterevalli Tork Dengesi - STEM ve Fizik Laboratuvarı | Reflextry",
+    "description": "Kaldıraç koluna ağırlıklar yerleştirerek tork eşitliğini sağlayın.",
+    "keywords": [
+      "tahterevalli tork dengesi",
+      "stem ve fizik laboratuvarı",
+      "reflextry"
+    ]
+  },
+  "solar-gravity-3d": {
+    "title": "3D Güneş Yerçekimi Simülatörü - 3D Etkileşimli Laboratuvar | Reflextry",
+    "description": "3D uzay-zaman yerçekimi kuyusunu keşfedin ve uydu fırlatın.",
+    "keywords": [
+      "3d güneş yerçekimi simülatörü",
+      "3d etkileşimli laboratuvar",
+      "reflextry"
+    ]
+  },
+  "spatial-aim-3d": {
+    "title": "3D Uzamsal Nişan Arenası - 3D Etkileşimli Laboratuvar | Reflextry",
+    "description": "Yakın, orta ve uzak derinlikteki 3D drone hedeflerini hızla vurun.",
+    "keywords": [
+      "3d uzamsal nişan arenası",
+      "3d etkileşimli laboratuvar",
+      "reflextry"
+    ]
+  },
+  "reaction-duel-2p": {
+    "title": "2 Oyunculu Refleks Düellosu - 2 Oyunculu Savaş Arenası | Reflextry",
+    "description": "Hatalı çıkış algılamalı, 5 rauntluk milisaniye tepki yarışı.",
+    "keywords": [
+      "2 oyunculu refleks düellosu",
+      "2 oyunculu savaş arenası",
+      "reflextry"
+    ]
+  },
+  "math-tug-of-war": {
+    "title": "Matematik Halat Çekme - 2 Oyunculu Savaş Arenası | Reflextry",
+    "description": "Rakibinizden hızlı işlem çözerek halatı kendi çizginize çekin.",
+    "keywords": [
+      "matematik halat çekme",
+      "2 oyunculu savaş arenası",
+      "reflextry"
+    ]
+  },
+  "cannon-battle-2p": {
+    "title": "Yerçekimi Top Savaşı - 2 Oyunculu Savaş Arenası | Reflextry",
+    "description": "Dağlık arazide değişen rüzgar ve gezegen yerçekimiyle sırayla top atışı.",
+    "keywords": [
+      "yerçekimi top savaşı",
+      "2 oyunculu savaş arenası",
+      "reflextry"
+    ]
+  },
+  "speed-reading": {
+    "title": "Hızlı Okuma ve Anlama - Öğrenci ve İş Paketi | Reflextry",
+    "description": "Vurgulu veya RSVP modda okuyup quiz ile Etkin WPM puanınızı öğrenin.",
+    "keywords": [
+      "hızlı okuma ve anlama",
+      "öğrenci ve i̇ş paketi",
+      "reflextry"
+    ]
+  },
+  "ten-key": {
+    "title": "10-Key Sayısal Tuş Hız Testi - Öğrenci ve İş Paketi | Reflextry",
+    "description": "Faturalar, tam sayılar ve SKU kodlarıyla KPH ve doğruluğunuzu ölçün.",
+    "keywords": [
+      "10-key sayısal tuş hız testi",
+      "öğrenci ve i̇ş paketi",
+      "reflextry"
+    ]
+  },
+  "focus-sprint": {
+    "title": "Odak Sprinti ve Yorgunluk - Öğrenci ve İş Paketi | Reflextry",
+    "description": "Pomodoro sayacını çalışma öncesi/sonrası tepki testiyle birleştirin.",
+    "keywords": [
+      "odak sprinti ve yorgunluk",
+      "öğrenci ve i̇ş paketi",
+      "reflextry"
+    ]
   }
 }

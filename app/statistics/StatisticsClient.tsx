@@ -1,77 +1,150 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import { TrendingUp, Trophy, Activity, BarChart3, Download, Sparkles, Target, LineChart } from "lucide-react";
+import { useState, useEffect, useMemo, useCallback } from "react";
+import Link from "next/link";
+import {
+    TrendingUp,
+    TrendingDown,
+    Minus,
+    Trophy,
+    Activity,
+    BarChart3,
+    Download,
+    Clock,
+    ArrowRight,
+    Play,
+    Timer,
+    CheckCircle2,
+} from "lucide-react";
+import {
+    ResponsiveContainer,
+    AreaChart,
+    Area,
+    BarChart,
+    Bar,
+    XAxis,
+    YAxis,
+    CartesianGrid,
+    Tooltip,
+    ReferenceLine,
+} from "recharts";
 import { ScoreHistory, ScoreHistoryEntry } from "@/utils/scoreHistory";
 import { Storage } from "@/utils/storage";
+import {
+    DeepWorkLog,
+    DEEP_WORK_EVENT,
+    formatDurationHuman,
+    type DeepWorkSession,
+    type DeepWorkStats,
+} from "@/utils/deepWork";
+import { TOOL_MAPPING } from "@/config/tool-mapping";
 import { Button } from "@/components/ui/Button";
 import { ShareButton } from "@/components/ShareButton";
+import { ToolIcon } from "@/components/ToolIcon";
 import { useTranslation } from "@/lib/i18n/context";
 
-const FloatingBackground = () => {
-    return (
-        <div className="absolute inset-0 overflow-hidden pointer-events-none z-[-1] rounded-3xl">
-            <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-teal-500/20 rounded-full blur-[100px] animate-pulse" />
-            <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-blue-500/20 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '2s' }} />
-            
-            <motion.div
-                animate={{ y: [0, -20, 0], rotate: [0, 10, 0] }}
-                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-[15%] left-[5%] opacity-20"
-            >
-                <BarChart3 className="w-32 h-32 text-teal-400 drop-shadow-[0_0_15px_rgba(45,212,191,0.8)]" />
-            </motion.div>
-
-            <motion.div
-                animate={{ y: [0, 30, 0], rotate: [0, -15, 0] }}
-                transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute bottom-[20%] right-[5%] opacity-20"
-            >
-                <Activity className="w-40 h-40 text-blue-400 drop-shadow-[0_0_15px_rgba(59,130,246,0.8)]" />
-            </motion.div>
-
-            <motion.div
-                animate={{ y: [0, -15, 0], x: [0, 15, 0], rotate: [0, 45, 0] }}
-                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-[40%] right-[15%] opacity-15"
-            >
-                <TrendingUp className="w-24 h-24 text-green-400 drop-shadow-[0_0_15px_rgba(34,197,94,0.8)]" />
-            </motion.div>
-
-            <motion.div
-                animate={{ y: [0, 25, 0], x: [0, -20, 0] }}
-                transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute bottom-[30%] left-[10%] opacity-15"
-            >
-                <LineChart className="w-28 h-28 text-purple-400 drop-shadow-[0_0_15px_rgba(192,132,252,0.8)]" />
-            </motion.div>
-        </div>
-    );
-};
-
 export default function StatisticsClient() {
-    const { t } = useTranslation();
+    const { t, getLocalizedHref } = useTranslation();
     const [history, setHistory] = useState<Record<string, ScoreHistoryEntry[]>>({});
     const [selectedTool, setSelectedTool] = useState<string | null>(null);
+    const [deepWorkSessions, setDeepWorkSessions] = useState<DeepWorkSession[]>([]);
+    const [deepWorkStats, setDeepWorkStats] = useState<DeepWorkStats>(() => ({
+        totalSessions: 0,
+        completedSessions: 0,
+        totalSeconds: 0,
+        todaySeconds: 0,
+        averageMinutes: 0,
+        longestMinutes: 0,
+        dailySeries: [],
+    }));
 
-    useEffect(() => {
-        setHistory(ScoreHistory.getAll());
+    const loadAllData = useCallback(() => {
+        const loaded = ScoreHistory.getAll();
+        setHistory(loaded);
+
+        setDeepWorkSessions(DeepWorkLog.getSessions().slice().reverse());
+        setDeepWorkStats(DeepWorkLog.getStats());
+
+        setSelectedTool((current) => {
+            if (current && loaded[current]?.length) return current;
+            const toolEntries = Object.entries(loaded)
+                .filter(([, entries]) => entries.length > 0)
+                .sort((a, b) => {
+                    const aLast = a[1][a[1].length - 1]?.timestamp ?? 0;
+                    const bLast = b[1][b[1].length - 1]?.timestamp ?? 0;
+                    return bLast - aLast;
+                });
+            return toolEntries.length > 0 ? toolEntries[0][0] : null;
+        });
     }, []);
 
-    const tools = Object.keys(history).filter(key => history[key].length > 0);
-    const totalGames = Object.values(history).reduce((sum, entries) => sum + entries.length, 0);
-    const totalTools = tools.length;
+    useEffect(() => {
+        loadAllData();
+        window.addEventListener("score_updated", loadAllData);
+        window.addEventListener(DEEP_WORK_EVENT, loadAllData);
+        return () => {
+            window.removeEventListener("score_updated", loadAllData);
+            window.removeEventListener(DEEP_WORK_EVENT, loadAllData);
+        };
+    }, [loadAllData]);
+
+    const tools = useMemo(
+        () => Object.keys(history).filter((key) => history[key].length > 0),
+        [history]
+    );
+
+    const totalGames = useMemo(
+        () => Object.values(history).reduce((sum, entries) => sum + entries.length, 0),
+        [history]
+    );
+
+    const totalPracticeSeconds = useMemo(() => {
+        const benchmarkSeconds = Object.values(history)
+            .flat()
+            .reduce((sum, entry) => sum + (entry.duration || 0), 0);
+        return benchmarkSeconds + deepWorkStats.totalSeconds;
+    }, [history, deepWorkStats.totalSeconds]);
+
+    const activeToolId =
+        selectedTool && tools.includes(selectedTool) ? selectedTool : tools[0] ?? null;
+
+    const activeStats = useMemo(() => {
+        if (!activeToolId || !history[activeToolId]) return null;
+        return ScoreHistory.getStats(activeToolId);
+    }, [activeToolId, history]);
+
+    const chartData = useMemo(() => {
+        if (!activeToolId || !activeStats) return [];
+        const entries = (history[activeToolId] || []).filter(
+            (e) => e.eligible !== false && e.configuration === activeStats.configuration
+        );
+        return entries.slice(-30).map((entry, idx) => ({
+            attempt: `#${idx + 1}`,
+            value: Number(entry.value.toFixed(1)),
+            dateLabel: new Date(entry.timestamp).toLocaleDateString(undefined, {
+                month: "short",
+                day: "numeric",
+            }),
+            unit: entry.unit,
+        }));
+    }, [activeToolId, activeStats, history]);
+
+    const hasExportableData = tools.length > 0 || deepWorkSessions.length > 0;
 
     const handleExport = () => {
         const data = {
             history,
-            highScores: {} as Record<string, any>,
+            highScores: {} as Record<string, unknown>,
+            deepWorkSessions,
+            deepWorkSummary: {
+                totalSessions: deepWorkStats.totalSessions,
+                completedSessions: deepWorkStats.completedSessions,
+                totalSeconds: deepWorkStats.totalSeconds,
+            },
             exportedAt: new Date().toISOString(),
         };
 
-        // Get all high scores
-        tools.forEach(toolId => {
+        tools.forEach((toolId) => {
             const score = Storage.getScore(toolId);
             if (score) {
                 data.highScores[toolId] = score;
@@ -87,233 +160,646 @@ export default function StatisticsClient() {
         URL.revokeObjectURL(url);
     };
 
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: { staggerChildren: 0.1 }
-        }
-    };
-
-    const itemVariants = {
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0 }
-    };
-
     return (
-        <div className="bg-background py-8 px-4 sm:px-6 lg:px-8 min-h-screen overflow-hidden relative">
-            <motion.div 
-                initial="hidden"
-                animate="visible"
-                variants={containerVariants}
-                className="max-w-7xl mx-auto space-y-12 relative z-10"
-            >
-                {/* Header Section */}
-                <motion.div variants={itemVariants} className="text-center space-y-4 mb-12 relative z-10">
-                    <motion.div
-                        initial={{ scale: 0, rotate: -180 }}
-                        animate={{ scale: 1, rotate: 0 }}
-                        transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                        className="inline-block relative mb-4"
-                    >
-                        <div className="absolute inset-0 bg-teal-500/30 blur-2xl rounded-full" />
-                        <div className="relative p-4 rounded-full bg-white/5 border border-black/10 dark:border-white/10 backdrop-blur-md shadow-[0_0_30px_rgba(45,212,191,0.2)]">
-                            <BarChart3 className="w-12 h-12 text-teal-400 drop-shadow-[0_0_10px_rgba(45,212,191,0.8)]" />
-                        </div>
-                    </motion.div>
-                    
-                    <div className="inline-block relative">
-                        <div className="absolute inset-0 bg-gradient-to-r from-teal-500 to-blue-500 blur-2xl opacity-30 animate-pulse" />
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-black bg-gradient-to-br from-slate-900 via-slate-800 to-slate-600 dark:from-teal-400 dark:via-blue-400 dark:to-blue-500 bg-clip-text text-transparent inline-flex items-center gap-3 relative z-10 drop-shadow-sm">
-                            <Sparkles className="w-10 h-10 text-teal-400" />
+        <div className="bg-[#FAF9F6] text-[#161614] py-10 px-4 sm:px-6 lg:px-8 min-h-screen">
+            <div className="max-w-7xl mx-auto space-y-8">
+                {/* Editorial Header */}
+                <header className="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-6 border-b border-[#E6E3DB]">
+                    <div className="space-y-2 max-w-2xl">
+                        <p className="text-xs font-mono font-semibold uppercase tracking-widest text-[#1E40AF]">
+                            Performance Analytics
+                        </p>
+                        <h1 className="font-serif text-3xl sm:text-4xl font-semibold tracking-tight text-[#161614]">
                             {t("statistics.heroTitle", "Your Statistics")}
                         </h1>
+                        <p className="text-sm sm:text-base text-[#4A4842] leading-relaxed">
+                            {t(
+                                "statistics.heroSubtitle",
+                                "Track your recorded sessions, deep work Pomodoro focus blocks, and comparable performance trends."
+                            )}
+                        </p>
                     </div>
-                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-medium">
-                        {t("statistics.heroSubtitle", "Track your progress, view performance trends, and analyze your improvement across all tools.")}
-                    </p>
-                </motion.div>
 
-                {/* Main Glassmorphic Container */}
-                <motion.div 
-                    variants={itemVariants}
-                    className="relative bg-white/40 dark:bg-black/40 backdrop-blur-3xl border border-black/10 dark:border-white/10 rounded-3xl p-4 md:p-8 shadow-[0_0_50px_rgba(45,212,191,0.1)] z-10"
+                    {hasExportableData && (
+                        <Button
+                            variant="outline"
+                            size="sm"
+                            onClick={handleExport}
+                            className="self-start md:self-auto"
+                        >
+                            <Download className="w-4 h-4" aria-hidden="true" />
+                            <span>{t("statistics.downloadData", "Export JSON")}</span>
+                        </Button>
+                    )}
+                </header>
+
+                {/* Primary 4-Column KPI Summary Strip */}
+                <section
+                    aria-label="Session summary"
+                    className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4"
                 >
-                    <FloatingBackground />
-
-                    {/* Quick info - Clean card layout */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-12 relative z-10">
-                        <div className="p-6 rounded-2xl bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 text-center hover:bg-white/10 transition-colors">
-                            <TrendingUp className="w-8 h-8 text-teal-400 mx-auto mb-3 drop-shadow-[0_0_10px_rgba(45,212,191,0.8)]" />
-                            <h3 className="text-base font-bold text-foreground mb-1">{t("statistics.scoreTrend", "Track Trends")}</h3>
-                            <p className="text-sm text-muted-foreground">See improvements</p>
-                        </div>
-                        <div className="p-6 rounded-2xl bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 text-center hover:bg-white/10 transition-colors">
-                            <LineChart className="w-8 h-8 text-blue-400 mx-auto mb-3 drop-shadow-[0_0_10px_rgba(59,130,246,0.8)]" />
-                            <h3 className="text-base font-bold text-foreground mb-1">View Charts</h3>
-                            <p className="text-sm text-muted-foreground">Visual progress</p>
-                        </div>
-                        <div className="p-6 rounded-2xl bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 text-center hover:bg-white/10 transition-colors">
-                            <Download className="w-8 h-8 text-purple-400 mx-auto mb-3 drop-shadow-[0_0_10px_rgba(192,132,252,0.8)]" />
-                            <h3 className="text-base font-bold text-foreground mb-1">{t("statistics.downloadData", "Export Data")}</h3>
-                            <p className="text-sm text-muted-foreground">Save your stats</p>
-                        </div>
-                    </div>
-
-                    {/* Summary Cards */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16 relative z-10">
-                        <motion.div
-                            whileHover={{ scale: 1.02 }}
-                            className="bg-gradient-to-br from-teal-500/10 to-transparent border border-teal-500/20 rounded-3xl p-8 shadow-[0_0_30px_rgba(45,212,191,0.1)] hover:shadow-[0_0_40px_rgba(45,212,191,0.2)] transition-all duration-300 relative overflow-hidden group"
-                        >
-                            <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                            <div className="flex items-center gap-4 mb-6 relative z-10">
-                                <div className="bg-teal-500/20 p-3 rounded-2xl border border-teal-500/30">
-                                    <Activity className="w-8 h-8 text-teal-500 dark:text-teal-400 drop-shadow-[0_0_8px_rgba(45,212,191,0.5)]" />
-                                </div>
-                                <h3 className="text-2xl font-bold text-foreground">{t("statistics.totalSessions", "Total Games")}</h3>
-                            </div>
-                            <p className="text-6xl font-black text-teal-600 dark:text-teal-400 drop-shadow-md relative z-10">{totalGames}</p>
-                        </motion.div>
-
-                        <motion.div
-                            whileHover={{ scale: 1.02 }}
-                            className="bg-gradient-to-br from-yellow-500/10 to-transparent border border-yellow-500/20 rounded-3xl p-8 shadow-[0_0_30px_rgba(250,204,21,0.1)] hover:shadow-[0_0_40px_rgba(250,204,21,0.2)] transition-all duration-300 relative overflow-hidden group"
-                        >
-                            <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                            <div className="flex items-center gap-4 mb-6 relative z-10">
-                                <div className="bg-yellow-500/20 p-3 rounded-2xl border border-yellow-500/30">
-                                    <Trophy className="w-8 h-8 text-yellow-600 dark:text-yellow-400 drop-shadow-[0_0_8px_rgba(250,204,21,0.5)]" />
-                                </div>
-                                <h3 className="text-2xl font-bold text-foreground">{t("statistics.selectTest", "Tools Used")}</h3>
-                            </div>
-                            <p className="text-6xl font-black text-yellow-600 dark:text-yellow-400 drop-shadow-md relative z-10">{totalTools}</p>
-                        </motion.div>
-
-                        <motion.div
-                            whileHover={{ scale: 1.02 }}
-                            className="bg-gradient-to-br from-green-500/10 to-transparent border border-green-500/20 rounded-3xl p-8 shadow-[0_0_30px_rgba(34,197,94,0.1)] hover:shadow-[0_0_40px_rgba(34,197,94,0.2)] transition-all duration-300 relative overflow-hidden group"
-                        >
-                            <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                            <div className="flex items-center gap-4 mb-6 relative z-10">
-                                <div className="bg-green-500/20 p-3 rounded-2xl border border-green-500/30">
-                                    <TrendingUp className="w-8 h-8 text-green-600 dark:text-green-400 drop-shadow-[0_0_8px_rgba(34,197,94,0.5)]" />
-                                </div>
-                                <h3 className="text-2xl font-bold text-foreground">Practice time</h3>
-                            </div>
-                            <p className="text-6xl font-black text-green-600 dark:text-green-400 drop-shadow-md relative z-10">
-                                {Math.round(Object.values(history).flat().reduce((sum, entry) => sum + (entry.duration || 0), 0) / 60)} min
+                    <div className="bg-white border border-[#E6E3DB] rounded-2xl p-6 flex items-start justify-between">
+                        <div className="space-y-1">
+                            <p className="text-xs font-semibold uppercase tracking-wider text-[#6A675F]">
+                                {t("statistics.totalSessions", "Benchmark Runs")}
                             </p>
-                        </motion.div>
+                            <p className="text-3xl font-mono font-bold text-[#161614] tabular-nums">
+                                {totalGames.toLocaleString()}
+                            </p>
+                            <p className="text-xs text-[#6A675F] font-mono tabular-nums">
+                                {tools.length} tools practiced
+                            </p>
+                        </div>
+                        <div className="w-10 h-10 rounded-xl bg-[#F3F1EB] border border-[#E6E3DB] flex items-center justify-center shrink-0">
+                            <Activity className="w-5 h-5 text-[#1E40AF]" aria-hidden="true" />
+                        </div>
                     </div>
 
-                    {/* Tool Statistics */}
-                    <div className="space-y-8 relative z-10">
-                        <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-                            <div className="flex items-center gap-3">
-                                <Target className="w-8 h-8 text-teal-500 dark:text-teal-400" />
-                                <h2 className="text-3xl font-black text-foreground">{t("statistics.scoreTrend", "Tool Performance")}</h2>
-                            </div>
-                            <Button 
-                                variant="outline" 
-                                onClick={handleExport} 
-                                className="flex items-center gap-2 rounded-full border-teal-500/50 text-teal-600 dark:text-teal-400 hover:bg-teal-500/10 hover:border-teal-400 transition-all shadow-[0_0_15px_rgba(45,212,191,0.2)]"
-                            >
-                                <Download className="w-4 h-4" />
-                                {t("statistics.downloadData", "Export Data")}
-                            </Button>
+                    <div className="bg-white border border-[#E6E3DB] rounded-2xl p-6 flex items-start justify-between">
+                        <div className="space-y-1">
+                            <p className="text-xs font-semibold uppercase tracking-wider text-[#6A675F]">
+                                Deep Work Logged
+                            </p>
+                            <p className="text-3xl font-mono font-bold text-[#161614] tabular-nums">
+                                {formatDurationHuman(deepWorkStats.totalSeconds)}
+                            </p>
+                            <p className="text-xs text-[#6A675F] font-mono tabular-nums">
+                                {deepWorkStats.totalSessions} focus{" "}
+                                {deepWorkStats.totalSessions === 1 ? "session" : "sessions"}
+                            </p>
                         </div>
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {tools.map((toolId) => {
-                                const stats = ScoreHistory.getStats(toolId);
-                                if (!stats) return null;
-
-                                return (
-                                    <motion.div
-                                        key={toolId}
-                                        variants={itemVariants}
-                                        className="group bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 rounded-3xl p-6 cursor-pointer hover:border-teal-500/50 hover:bg-teal-500/5 transition-all duration-300 shadow-lg hover:shadow-[0_0_30px_rgba(45,212,191,0.2)]"
-                                        onClick={() => setSelectedTool(selectedTool === toolId ? null : toolId)}
-                                    >
-                                        <h3 className="text-xl font-bold text-foreground mb-6 capitalize border-b border-black/10 dark:border-white/10 pb-4 group-hover:border-teal-500/30 transition-colors">
-                                            {t(`tools.${toolId}.title`, toolId.replace(/-/g, " "))}
-                                        </h3>
-                                        <p className="mb-4 text-sm text-muted-foreground">Comparing {stats.difficulty || "standard"} · {stats.inputMethod || "legacy input"} · {stats.unit}. Same setup only.</p>
-                                        <div className="space-y-4">
-                                            <div className="flex justify-between items-center bg-black/5 dark:bg-black/20 p-3 rounded-xl border border-black/5 dark:border-white/5">
-                                                <span className="text-muted-foreground font-medium">{t("statistics.totalSessions", "Games Played")}:</span>
-                                                <span className="text-foreground font-black text-lg">{stats.count}</span>
-                                            </div>
-                                            <div className="flex justify-between items-center bg-teal-500/10 p-3 rounded-xl border border-teal-500/20">
-                                                <span className="text-teal-700 dark:text-teal-400 font-bold">{t("statistics.bestPerformance", "Best Score")}:</span>
-                                                <span className="text-teal-600 dark:text-teal-400 font-black text-lg drop-shadow-[0_0_8px_rgba(45,212,191,0.3)]">
-                                                    {stats.best.toLocaleString()} {stats.unit}
-                                                </span>
-                                            </div>
-                                            <div className="flex justify-between items-center bg-black/5 dark:bg-black/20 p-3 rounded-xl border border-black/5 dark:border-white/5">
-                                                <span className="text-muted-foreground font-medium">{t("statistics.averageScore", "Average")}:</span>
-                                                <span className="text-foreground font-bold text-lg">
-                                                    {Math.round(stats.average).toLocaleString()}
-                                                </span>
-                                            </div>
-                                            <div className="flex justify-between items-center bg-black/5 dark:bg-black/20 p-3 rounded-xl border border-black/5 dark:border-white/5">
-                                                <span className="text-muted-foreground font-medium">{t("statistics.scoreTrend", "Trend")}:</span>
-                                                <span className={`font-black text-lg uppercase tracking-wider ${
-                                                    stats.trend === "improving" ? "text-green-600 dark:text-green-400 drop-shadow-[0_0_8px_rgba(34,197,94,0.3)]" :
-                                                    stats.trend === "declining" ? "text-red-600 dark:text-red-400" :
-                                                    "text-muted-foreground"
-                                                }`}>
-                                                    {stats.trend}
-                                                </span>
-                                            </div>
-                                        </div>
-                                    </motion.div>
-                                );
-                            })}
+                        <div className="w-10 h-10 rounded-xl bg-[#F3F1EB] border border-[#E6E3DB] flex items-center justify-center shrink-0">
+                            <Timer className="w-5 h-5 text-[#1E40AF]" aria-hidden="true" />
                         </div>
-
-                        {tools.length === 0 && (
-                            <div className="text-center py-16 bg-white/5 rounded-3xl border border-black/10 dark:border-white/10 backdrop-blur-sm">
-                                <BarChart3 className="w-16 h-16 text-muted-foreground/30 mx-auto mb-4" />
-                                <p className="text-muted-foreground text-lg">{t("statistics.noData", "No statistics yet. Start playing games to see your progress!")}</p>
-                            </div>
-                        )}
                     </div>
 
-                    {/* Share Section */}
-                    {tools.length > 0 && (
-                        <div className="mt-12 bg-gradient-to-r from-teal-500/10 to-blue-500/10 border border-teal-500/20 rounded-3xl p-8 text-center relative z-10 shadow-[0_0_30px_rgba(45,212,191,0.15)]">
-                            <h3 className="text-2xl font-black text-foreground mb-6">Share Your Progress</h3>
-                            <div className="inline-block hover:scale-105 transition-transform duration-300">
-                                <ShareButton 
-                                    text={`I've played ${totalGames} games across ${totalTools} tools on Reflextry!`}
-                                />
+                    <div className="bg-white border border-[#E6E3DB] rounded-2xl p-6 flex items-start justify-between">
+                        <div className="space-y-1">
+                            <p className="text-xs font-semibold uppercase tracking-wider text-[#6A675F]">
+                                Today&apos;s Focus
+                            </p>
+                            <p className="text-3xl font-mono font-bold text-[#161614] tabular-nums">
+                                {formatDurationHuman(deepWorkStats.todaySeconds)}
+                            </p>
+                            <p className="text-xs text-[#6A675F] font-mono tabular-nums">
+                                {deepWorkStats.completedSessions} full blocks completed
+                            </p>
+                        </div>
+                        <div className="w-10 h-10 rounded-xl bg-[#F3F1EB] border border-[#E6E3DB] flex items-center justify-center shrink-0">
+                            <Trophy className="w-5 h-5 text-[#B45309]" aria-hidden="true" />
+                        </div>
+                    </div>
+
+                    <div className="bg-white border border-[#E6E3DB] rounded-2xl p-6 flex items-start justify-between">
+                        <div className="space-y-1">
+                            <p className="text-xs font-semibold uppercase tracking-wider text-[#6A675F]">
+                                Total Practice Time
+                            </p>
+                            <p className="text-3xl font-mono font-bold text-[#161614] tabular-nums">
+                                {formatDurationHuman(totalPracticeSeconds)}
+                            </p>
+                            <p className="text-xs text-[#6A675F]">
+                                Benchmarks + deep work
+                            </p>
+                        </div>
+                        <div className="w-10 h-10 rounded-xl bg-[#F3F1EB] border border-[#E6E3DB] flex items-center justify-center shrink-0">
+                            <Clock className="w-5 h-5 text-[#047857]" aria-hidden="true" />
+                        </div>
+                    </div>
+                </section>
+
+                {/* Deep Work Pomodoro Analytics Section */}
+                <section className="bg-white border border-[#E6E3DB] rounded-2xl p-6 sm:p-8 space-y-6">
+                    <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-5 border-b border-[#E6E3DB]">
+                        <div className="space-y-1">
+                            <p className="text-xs font-mono font-semibold uppercase tracking-wider text-[#1E40AF]">
+                                Deep Work Log
+                            </p>
+                            <h2 className="font-serif text-2xl font-semibold text-[#161614] tracking-tight">
+                                Pomodoro Focus Sessions
+                            </h2>
+                            <p className="text-sm text-[#4A4842]">
+                                Start the timer in the top header on any page to track active deep work intervals automatically.
+                            </p>
+                        </div>
+                        <div className="flex flex-wrap items-center gap-4 text-xs font-mono text-[#4A4842] tabular-nums">
+                            <span>Avg block: {deepWorkStats.averageMinutes} min</span>
+                            <span aria-hidden="true">·</span>
+                            <span>Longest: {deepWorkStats.longestMinutes} min</span>
+                        </div>
+                    </div>
+
+                    {deepWorkSessions.length === 0 ? (
+                        <div className="py-8 px-4 text-center bg-[#F3F1EB] border border-[#E6E3DB] rounded-xl space-y-2">
+                            <Timer className="w-6 h-6 text-[#6A675F] mx-auto" aria-hidden="true" />
+                            <h3 className="text-sm font-semibold text-[#161614]">
+                                No deep work sessions logged yet
+                            </h3>
+                            <p className="text-xs sm:text-sm text-[#57554E] max-w-md mx-auto">
+                                Open the Pomodoro timer in the top header and click Start Deep Work. Your completed blocks and early-logged sessions will chart here automatically.
+                            </p>
+                        </div>
+                    ) : (
+                        <div className="grid grid-cols-1 lg:grid-cols-5 gap-6">
+                            {/* 7-Day Focus Minutes Chart */}
+                            <div className="lg:col-span-2 space-y-3">
+                                <div className="flex items-center justify-between">
+                                    <h3 className="text-sm font-semibold text-[#161614]">
+                                        Last 7 Days (Minutes)
+                                    </h3>
+                                    <span className="text-xs font-mono text-[#78756C] tabular-nums">
+                                        {deepWorkStats.totalSessions} total
+                                    </span>
+                                </div>
+                                <div className="w-full h-56">
+                                    <ResponsiveContainer width="100%" height="100%">
+                                        <BarChart
+                                            data={deepWorkStats.dailySeries}
+                                            margin={{ top: 8, right: 8, left: -16, bottom: 0 }}
+                                        >
+                                            <CartesianGrid
+                                                strokeDasharray="3 3"
+                                                stroke="#E2E8F0"
+                                                vertical={false}
+                                            />
+                                            <XAxis
+                                                dataKey="label"
+                                                tick={{ fill: "#64748B", fontSize: 12 }}
+                                                axisLine={{ stroke: "#CBD5E1" }}
+                                                tickLine={false}
+                                            />
+                                            <YAxis
+                                                tick={{ fill: "#64748B", fontSize: 12 }}
+                                                axisLine={false}
+                                                tickLine={false}
+                                                allowDecimals={false}
+                                            />
+                                            <Tooltip
+                                                contentStyle={{
+                                                    backgroundColor: "#FFFFFF",
+                                                    borderColor: "#E2E8F0",
+                                                    borderRadius: "0.75rem",
+                                                    fontSize: "12px",
+                                                    color: "#0F172A",
+                                                    boxShadow: "0 10px 25px -5px rgba(15, 23, 42, 0.08)",
+                                                }}
+                                                formatter={(value: unknown) => [
+                                                    `${Number(value).toFixed(1)} min`,
+                                                    "Deep Work",
+                                                ]}
+                                            />
+                                            <Bar
+                                                dataKey="minutes"
+                                                fill="#2563EB"
+                                                radius={[6, 6, 0, 0]}
+                                                maxBarSize={36}
+                                            />
+                                        </BarChart>
+                                    </ResponsiveContainer>
+                                </div>
+                            </div>
+
+                            {/* Recent Deep Work Sessions Table */}
+                            <div className="lg:col-span-3 space-y-3">
+                                <div className="flex items-center justify-between">
+                                    <h3 className="text-sm font-semibold text-[#161614]">
+                                        Recent Focus Blocks
+                                    </h3>
+                                    <span className="text-xs text-[#78756C]">
+                                        Showing latest {Math.min(8, deepWorkSessions.length)}
+                                    </span>
+                                </div>
+                                <div className="overflow-x-auto border border-[#E6E3DB] rounded-xl">
+                                    <table className="w-full text-left border-collapse">
+                                        <thead>
+                                            <tr className="border-b border-[#E6E3DB] bg-[#FAF9F6] text-[11px] font-semibold uppercase tracking-wider text-[#78756C]">
+                                                <th className="py-2.5 px-3.5">Focus Block</th>
+                                                <th className="py-2.5 px-3.5">Date</th>
+                                                <th className="py-2.5 px-3.5 text-right">Duration</th>
+                                                <th className="py-2.5 px-3.5 text-right">Status</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody className="divide-y divide-[#EFECE4] text-sm">
+                                            {deepWorkSessions.slice(0, 8).map((session) => (
+                                                <tr
+                                                    key={session.id}
+                                                    className="hover:bg-[#FAF9F6]/70 transition-colors"
+                                                >
+                                                    <td className="py-2.5 px-3.5">
+                                                        <div className="font-semibold text-[#161614] truncate max-w-[200px]">
+                                                            {session.label}
+                                                        </div>
+                                                        {session.pagesVisited.length > 0 && (
+                                                            <div className="text-xs font-mono text-[#78756C] truncate max-w-[220px]">
+                                                                {session.pagesVisited.slice(0, 2).join(", ")}
+                                                                {session.pagesVisited.length > 2
+                                                                    ? ` +${session.pagesVisited.length - 2}`
+                                                                    : ""}
+                                                            </div>
+                                                        )}
+                                                    </td>
+                                                    <td className="py-2.5 px-3.5 text-xs font-mono text-[#78756C] whitespace-nowrap tabular-nums">
+                                                        {new Date(session.endedAt).toLocaleDateString(
+                                                            undefined,
+                                                            {
+                                                                month: "short",
+                                                                day: "numeric",
+                                                            }
+                                                        )}{" "}
+                                                        ·{" "}
+                                                        {new Date(session.endedAt).toLocaleTimeString(
+                                                            undefined,
+                                                            {
+                                                                hour: "2-digit",
+                                                                minute: "2-digit",
+                                                            }
+                                                        )}
+                                                    </td>
+                                                    <td className="py-2.5 px-3.5 text-right font-mono font-semibold text-[#161614] whitespace-nowrap tabular-nums">
+                                                        {formatDurationHuman(session.durationSec)}
+                                                    </td>
+                                                    <td className="py-2.5 px-3.5 text-right whitespace-nowrap">
+                                                        <span
+                                                            className={`inline-flex items-center gap-1 text-xs font-medium ${
+                                                                session.completed
+                                                                    ? "text-emerald-700"
+                                                                    : "text-[#57554E]"
+                                                            }`}
+                                                        >
+                                                            {session.completed && (
+                                                                <CheckCircle2
+                                                                    className="w-3.5 h-3.5"
+                                                                    aria-hidden="true"
+                                                                />
+                                                            )}
+                                                            <span>
+                                                                {session.completed
+                                                                    ? "Completed"
+                                                                    : "Logged"}
+                                                            </span>
+                                                        </span>
+                                                    </td>
+                                                </tr>
+                                            ))}
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
                     )}
+                </section>
 
-                    {/* SEO & Content Block */}
-                    <div className="w-full mt-16 p-8 md:p-10 bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 rounded-3xl shadow-lg relative z-10">
-                        <h2 className="text-2xl md:text-3xl font-black text-foreground mb-6">Deep Dive into Cognitive Statistics</h2>
-                        <div className="space-y-6 text-muted-foreground leading-relaxed">
-                            <p>
-                                At Reflextry, we believe that you can't improve what you don't measure. The <strong>Statistics & Progress</strong> dashboard is your personal cognitive telemetry center, designed to track your latency, working memory retention, and motor-skill accuracy over time.
+                {/* Benchmark Empty State OR Interactive Trend Chart + Tool Cards */}
+                {tools.length === 0 ? (
+                    <section className="bg-white border border-[#E6E3DB] rounded-2xl p-10 sm:p-14 text-center space-y-5">
+                        <div className="w-12 h-12 rounded-xl bg-[#F3F1EB] border border-[#E6E3DB] flex items-center justify-center mx-auto">
+                            <BarChart3 className="w-6 h-6 text-[#6A675F]" aria-hidden="true" />
+                        </div>
+                        <div className="space-y-2 max-w-md mx-auto">
+                            <h2 className="font-serif text-2xl font-semibold text-[#161614]">
+                                No benchmark scores recorded yet
+                            </h2>
+                            <p className="text-sm text-[#4A4842] leading-relaxed">
+                                {t(
+                                    "statistics.noData",
+                                    "Complete any benchmark to save your local baseline. Your score history and trend charts will appear here automatically."
+                                )}
                             </p>
-                            
-                            <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Why Tracking Matters</h3>
+                        </div>
+                        <div className="flex flex-wrap items-center justify-center gap-3 pt-1">
+                            <Link
+                                href={getLocalizedHref("/reflex/reaction")}
+                                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#161614] hover:bg-[#2C2B27] text-[#FAF9F6] text-sm font-semibold transition-colors"
+                            >
+                                <Play className="w-4 h-4" aria-hidden="true" />
+                                <span>Start Reaction Test</span>
+                            </Link>
+                            <Link
+                                href={getLocalizedHref("/tools")}
+                                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white border border-[#D8D4C9] hover:bg-[#F3F1EB] text-[#161614] text-sm font-semibold transition-colors"
+                            >
+                                <span>Browse All Tools</span>
+                                <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                            </Link>
+                        </div>
+                    </section>
+                ) : (
+                    <>
+                        {/* Interactive Recharts Trend Panel */}
+                        {activeToolId && activeStats && (
+                            <section className="bg-white border border-[#E6E3DB] rounded-2xl p-6 sm:p-8 space-y-6">
+                                <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-4 pb-5 border-b border-[#E6E3DB]">
+                                    <div className="flex items-start gap-4">
+                                        <ToolIcon
+                                            toolId={activeToolId}
+                                            variant="3d-pedestal"
+                                            size="md"
+                                            interactive
+                                        />
+                                        <div className="space-y-1">
+                                            <p className="text-xs font-mono font-semibold uppercase tracking-wider text-[#1E40AF]">
+                                                Selected Benchmark Trend
+                                            </p>
+                                            <h2 className="font-serif text-2xl font-semibold text-[#161614] capitalize">
+                                                {t(
+                                                    `tools.${activeToolId}.title`,
+                                                    activeToolId.replace(/-/g, " ")
+                                                )}
+                                            </h2>
+                                            <p className="text-xs font-mono text-[#6A675F]">
+                                                Setup: {activeStats.difficulty || "standard"} ·{" "}
+                                                {activeStats.inputMethod || "browser"} · {activeStats.unit} (
+                                                {activeStats.higherIsBetter
+                                                    ? "higher is better"
+                                                    : "lower is better"}
+                                                )
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div className="flex flex-wrap items-center gap-4">
+                                        <div className="px-4 py-2 rounded-xl bg-[#F3F1EB] border border-[#E6E3DB]">
+                                            <div className="text-[11px] font-semibold uppercase tracking-wider text-[#6A675F]">
+                                                Personal Best
+                                            </div>
+                                            <div className="text-lg font-mono font-bold text-[#1E40AF] tabular-nums">
+                                                {activeStats.best.toLocaleString()} {activeStats.unit}
+                                            </div>
+                                        </div>
+                                        <div className="px-4 py-2 rounded-xl bg-[#F3F1EB] border border-[#E6E3DB]">
+                                            <div className="text-[11px] font-semibold uppercase tracking-wider text-[#6A675F]">
+                                                Average
+                                            </div>
+                                            <div className="text-lg font-mono font-bold text-[#161614] tabular-nums">
+                                                {Math.round(activeStats.average).toLocaleString()}{" "}
+                                                {activeStats.unit}
+                                            </div>
+                                        </div>
+                                        <Link
+                                            href={getLocalizedHref(
+                                                TOOL_MAPPING[activeToolId] || "/tools"
+                                            )}
+                                            className="inline-flex items-center gap-1.5 px-4 py-2.5 rounded-xl bg-[#161614] hover:bg-[#2C2B27] text-[#FAF9F6] text-xs font-semibold transition-colors"
+                                        >
+                                            <span>Run Again</span>
+                                            <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
+                                        </Link>
+                                    </div>
+                                </div>
+
+                                <div className="w-full h-72">
+                                    <ResponsiveContainer width="100%" height="100%">
+                                        <AreaChart
+                                            data={chartData}
+                                            margin={{ top: 10, right: 16, left: 0, bottom: 4 }}
+                                        >
+                                            <defs>
+                                                <linearGradient id="scoreFill" x1="0" y1="0" x2="0" y2="1">
+                                                    <stop
+                                                        offset="5%"
+                                                        stopColor="#2563EB"
+                                                        stopOpacity={0.18}
+                                                    />
+                                                    <stop
+                                                        offset="95%"
+                                                        stopColor="#2563EB"
+                                                        stopOpacity={0.01}
+                                                    />
+                                                </linearGradient>
+                                            </defs>
+                                            <CartesianGrid
+                                                strokeDasharray="3 3"
+                                                stroke="#E2E8F0"
+                                                vertical={false}
+                                            />
+                                            <XAxis
+                                                dataKey="attempt"
+                                                tick={{ fill: "#64748B", fontSize: 12 }}
+                                                axisLine={{ stroke: "#CBD5E1" }}
+                                                tickLine={false}
+                                            />
+                                            <YAxis
+                                                tick={{ fill: "#64748B", fontSize: 12 }}
+                                                axisLine={false}
+                                                tickLine={false}
+                                                width={52}
+                                            />
+                                            <Tooltip
+                                                contentStyle={{
+                                                    backgroundColor: "#FFFFFF",
+                                                    borderColor: "#E2E8F0",
+                                                    borderRadius: "0.75rem",
+                                                    fontSize: "12px",
+                                                    color: "#0F172A",
+                                                    boxShadow:
+                                                        "0 10px 25px -5px rgba(15, 23, 42, 0.08)",
+                                                }}
+                                                formatter={(value: unknown) => [
+                                                    `${Number(value).toLocaleString()} ${activeStats.unit}`,
+                                                    "Score",
+                                                ]}
+                                                labelFormatter={(_, payload) => {
+                                                    const first = payload?.[0]?.payload as
+                                                        | { attempt?: string; dateLabel?: string }
+                                                        | undefined;
+                                                    return first
+                                                        ? `Attempt ${first.attempt} · ${first.dateLabel}`
+                                                        : "";
+                                                }}
+                                            />
+                                            <ReferenceLine
+                                                y={activeStats.best}
+                                                stroke="#059669"
+                                                strokeDasharray="4 4"
+                                                label={{
+                                                    value: `Best: ${activeStats.best}`,
+                                                    position: "insideTopRight",
+                                                    fill: "#047857",
+                                                    fontSize: 11,
+                                                }}
+                                            />
+                                            <Area
+                                                type="monotone"
+                                                dataKey="value"
+                                                stroke="#2563EB"
+                                                strokeWidth={2.25}
+                                                fill="url(#scoreFill)"
+                                                dot={{ r: 3.5, fill: "#2563EB", strokeWidth: 0 }}
+                                                activeDot={{
+                                                    r: 5.5,
+                                                    fill: "#1D4ED8",
+                                                    stroke: "#FFFFFF",
+                                                    strokeWidth: 2,
+                                                }}
+                                            />
+                                        </AreaChart>
+                                    </ResponsiveContainer>
+                                </div>
+
+                                {chartData.length < 2 && (
+                                    <p className="text-xs text-[#78756C]">
+                                        Complete at least 2 comparable sessions on this setup to visualize a multi-point trend curve.
+                                    </p>
+                                )}
+                            </section>
+                        )}
+
+                        {/* Tool Performance Selector Grid */}
+                        <section className="space-y-4">
+                            <div className="flex items-center justify-between">
+                                <h2 className="font-serif text-xl font-semibold text-[#161614] tracking-tight">
+                                    {t("statistics.scoreTrend", "Tool Performance")}
+                                </h2>
+                                <span className="text-xs text-[#6A675F]">
+                                    Select a card to inspect its chart
+                                </span>
+                            </div>
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                                {tools.map((toolId) => {
+                                    const stats = ScoreHistory.getStats(toolId);
+                                    if (!stats) return null;
+                                    const isSelected = activeToolId === toolId;
+
+                                    return (
+                                        <button
+                                            key={toolId}
+                                            type="button"
+                                            onClick={() => setSelectedTool(toolId)}
+                                            aria-pressed={isSelected}
+                                            className={`text-left p-5 rounded-2xl border transition-colors cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1E40AF] ${
+                                                isSelected
+                                                    ? "bg-[#F3F1EB]/70 border-[#1E40AF]"
+                                                    : "bg-white border-[#E6E3DB] hover:border-[#D8D4C9]"
+                                            }`}
+                                        >
+                                            <div className="flex items-start justify-between gap-2 pb-3 mb-3 border-b border-[#E6E3DB]">
+                                                <div className="flex items-center gap-3 min-w-0">
+                                                    <ToolIcon toolId={toolId} variant="3d" size="sm" />
+                                                    <div className="min-w-0">
+                                                        <h3 className="text-base font-semibold text-[#161614] capitalize truncate">
+                                                            {t(
+                                                                `tools.${toolId}.title`,
+                                                                toolId.replace(/-/g, " ")
+                                                            )}
+                                                        </h3>
+                                                        <p className="text-xs font-mono text-[#6A675F] mt-0.5 truncate">
+                                                            {stats.difficulty || "standard"} ·{" "}
+                                                            {stats.inputMethod || "browser"}
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <span
+                                                    className={`inline-flex items-center gap-1 text-xs font-semibold capitalize shrink-0 ${
+                                                        stats.trend === "improving"
+                                                            ? "text-emerald-700"
+                                                            : stats.trend === "declining"
+                                                            ? "text-rose-700"
+                                                            : "text-[#6A675F]"
+                                                    }`}
+                                                >
+                                                    {stats.trend === "improving" ? (
+                                                        <TrendingUp
+                                                            className="w-3.5 h-3.5"
+                                                            aria-hidden="true"
+                                                        />
+                                                    ) : stats.trend === "declining" ? (
+                                                        <TrendingDown
+                                                            className="w-3.5 h-3.5"
+                                                            aria-hidden="true"
+                                                        />
+                                                    ) : (
+                                                        <Minus
+                                                            className="w-3.5 h-3.5"
+                                                            aria-hidden="true"
+                                                        />
+                                                    )}
+                                                    {stats.trend}
+                                                </span>
+                                            </div>
+
+                                            <div className="grid grid-cols-3 gap-2 font-mono tabular-nums">
+                                                <div className="p-2.5 rounded-xl bg-[#FAF9F6] border border-[#E6E3DB]">
+                                                    <div className="text-[10px] font-sans font-semibold uppercase tracking-wider text-[#6A675F]">
+                                                        Best
+                                                    </div>
+                                                    <div className="text-sm font-bold text-[#1E40AF] mt-0.5">
+                                                        {stats.best.toLocaleString()} {stats.unit}
+                                                    </div>
+                                                </div>
+                                                <div className="p-2.5 rounded-xl bg-[#FAF9F6] border border-[#E6E3DB]">
+                                                    <div className="text-[10px] font-sans font-semibold uppercase tracking-wider text-[#6A675F]">
+                                                        Avg
+                                                    </div>
+                                                    <div className="text-sm font-bold text-[#161614] mt-0.5">
+                                                        {Math.round(stats.average).toLocaleString()}
+                                                    </div>
+                                                </div>
+                                                <div className="p-2.5 rounded-xl bg-[#FAF9F6] border border-[#E6E3DB]">
+                                                    <div className="text-[10px] font-sans font-semibold uppercase tracking-wider text-[#6A675F]">
+                                                        Runs
+                                                    </div>
+                                                    <div className="text-sm font-bold text-[#161614] mt-0.5">
+                                                        {stats.count}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </button>
+                                    );
+                                })}
+                            </div>
+                        </section>
+
+                        {/* Share Bar */}
+                        <section className="bg-white border border-[#E6E3DB] rounded-2xl p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+                            <div>
+                                <h3 className="text-base font-semibold text-[#161614]">
+                                    Share Your Progress
+                                </h3>
+                                <p className="text-sm text-[#4A4842]">
+                                    {totalGames} recorded sessions across {tools.length} benchmarks
+                                    {deepWorkStats.totalSeconds > 0
+                                        ? ` and ${formatDurationHuman(deepWorkStats.totalSeconds)} of deep work`
+                                        : ""}{" "}
+                                    on this device.
+                                </p>
+                            </div>
+                            <ShareButton
+                                text={`I've completed ${totalGames} cognitive sessions${
+                                    deepWorkStats.totalSeconds > 0
+                                        ? ` and ${formatDurationHuman(deepWorkStats.totalSeconds)} of deep work`
+                                        : ""
+                                } on Reflextry!`}
+                            />
+                        </section>
+                    </>
+                )}
+
+                {/* Editorial Context */}
+                <section className="bg-white border border-[#E6E3DB] rounded-2xl p-6 sm:p-8 space-y-5">
+                    <h2 className="font-serif text-xl font-semibold text-[#161614] tracking-tight">
+                        Interpreting Your Cognitive Statistics
+                    </h2>
+                    <div className="grid md:grid-cols-2 gap-6 text-sm text-[#4A4842] leading-relaxed">
+                        <div className="space-y-2">
+                            <h3 className="text-base font-semibold text-[#161614]">
+                                Why Same-Setup Comparisons Matter
+                            </h3>
                             <p>
-                                Whether you're an esports athlete looking to optimize your flick-shot reaction times or a student aiming to improve focus and short-term memory, establishing a <strong>personal baseline</strong> is critical. By logging your scores daily, you can visualize whether your cognitive agility is trending upward, or if factors like fatigue and lack of sleep are impacting your latency.
+                                Browser scores reflect your display refresh rate, mouse or touch input latency, and chosen difficulty level. Reflextry groups comparable sessions by configuration so your personal best and trend line never mix incompatible setups.
                             </p>
-                            
-                            <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Interpreting Your Averages</h3>
+                        </div>
+                        <div className="space-y-2">
+                            <h3 className="text-base font-semibold text-[#161614]">
+                                Structured Deep Work Intervals
+                            </h3>
                             <p>
-                                We calculate your average performance by aggregating your historical data points. It's completely normal to experience variance (standard deviation) in your scores based on time of day, hardware changes, or physical condition. We recommend focusing on the long-term <strong>Trend</strong> indicator rather than stressing over a single suboptimal session.
+                                Pairing focused 15–50 minute Pomodoro intervals with short recovery breaks prevents cognitive fatigue and produces cleaner reaction and working-memory baselines over time.
                             </p>
                         </div>
                     </div>
-                </motion.div>
-            </motion.div>
+                </section>
+            </div>
         </div>
     );
 }

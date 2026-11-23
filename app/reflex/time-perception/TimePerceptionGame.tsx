@@ -210,7 +210,7 @@ export default function TimePerceptionGame() {
       subtitle="INTERNAL CLOCK CALIBRATION"
       difficultySelector={difficultySelector}
       stats={stats}
-      arenaHeaderLeft={`ARENA // ${diff.label.toUpperCase()}`}
+      arenaHeaderLeft={`${diff.label} Mode`}
       arenaHeaderRight="DURATION ESTIMATION"
       soundEnabled={!isMuted}
       onToggleSound={toggleMute}
@@ -228,15 +228,15 @@ export default function TimePerceptionGame() {
             <div className="game-start-icon w-20 h-20 bg-indigo-50 dark:bg-indigo-900/20 rounded-full flex items-center justify-center mb-6">
               <Clock className="w-10 h-10 text-indigo-500" />
             </div>
-            <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-wider mb-4">
+            <h2 className="text-2xl font-black text-[#161614] dark:text-white uppercase tracking-wider mb-4">
               Time Perception Test
             </h2>
-            <p className="text-sm text-slate-500 dark:text-slate-400 mb-8 leading-relaxed">
+            <p className="text-sm text-[#78756C] dark:text-slate-400 mb-8 leading-relaxed">
               Test your internal biological clock. Release the button exactly when you think the target time has elapsed.
             </p>
             <button
               onClick={startGame}
-              className="w-full sm:w-auto px-12 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold uppercase tracking-widest text-sm transition-all shadow-lg hover:shadow-indigo-500/20 flex items-center justify-center gap-3"
+              className="w-full sm:w-auto px-12 py-4 bg-[#161614] hover:bg-[#2C2B27] text-[#FAF9F6] rounded-xl font-bold uppercase tracking-widest text-sm transition-all shadow-lg hover: flex items-center justify-center gap-3"
             >
               <Play className="w-4 h-4 fill-current" />
               Play
@@ -252,8 +252,8 @@ export default function TimePerceptionGame() {
             exit={{ opacity: 0, transition: { duration: 0 } }}
             className="w-full flex flex-col items-center justify-center"
           >
-            <div className="text-slate-500 font-bold tracking-widest uppercase mb-4 text-sm">Target Time</div>
-            <div className="text-7xl font-black text-slate-900 dark:text-white mb-12 tabular-nums">
+            <div className="text-[#78756C] font-bold tracking-widest uppercase mb-4 text-sm">Target Time</div>
+            <div className="text-7xl font-black text-[#161614] dark:text-white mb-12 tabular-nums">
               {targetTime}.0<span className="text-4xl text-slate-400">s</span>
             </div>
 
@@ -298,10 +298,10 @@ export default function TimePerceptionGame() {
             exit={{ opacity: 0, transition: { duration: 0 } }}
             className="w-full flex flex-col items-center justify-center text-center max-w-lg"
           >
-            <div className="text-slate-500 font-bold tracking-widest uppercase mb-2 text-sm">Target</div>
-            <div className="text-3xl font-black text-slate-900 dark:text-white mb-8">{targetTime}.0s</div>
+            <div className="text-[#78756C] font-bold tracking-widest uppercase mb-2 text-sm">Target</div>
+            <div className="text-3xl font-black text-[#161614] dark:text-white mb-8">{targetTime}.0s</div>
 
-            <div className="text-slate-500 font-bold tracking-widest uppercase mb-2 text-sm">You were</div>
+            <div className="text-[#78756C] font-bold tracking-widest uppercase mb-2 text-sm">You were</div>
             <div className={`text-6xl font-black mb-4 tabular-nums ${
               lastResult !== null && Math.abs(lastResult) <= diff.marginMs
                 ? "text-emerald-500" 
@@ -311,7 +311,7 @@ export default function TimePerceptionGame() {
               {Math.round(lastResult || 0)}<span className="text-3xl text-slate-400 ml-1">ms</span>
             </div>
 
-            <div className="text-slate-500 font-medium mb-12">
+            <div className="text-[#78756C] font-medium mb-12">
               {lastResult !== null && Math.abs(lastResult) <= diff.marginMs
                 ? `Well done! Margin was ±${diff.marginMs}ms` 
                 : `Failed. You missed the ±${diff.marginMs}ms margin`}
@@ -319,7 +319,7 @@ export default function TimePerceptionGame() {
 
             <button
               onClick={nextRound}
-              className="px-12 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold uppercase tracking-widest text-sm transition-all shadow-lg hover:shadow-indigo-500/20"
+              className="px-12 py-4 bg-[#161614] hover:bg-[#2C2B27] text-[#FAF9F6] rounded-xl font-bold uppercase tracking-widest text-sm transition-all shadow-lg hover:"
             >
               {failed || round >= ROUNDS ? "View Results" : "Next Round"}
             </button>
@@ -336,14 +336,14 @@ export default function TimePerceptionGame() {
             <div className="game-start-icon w-20 h-20 bg-indigo-50 dark:bg-indigo-900/20 rounded-full flex items-center justify-center mb-6">
               <Trophy className="w-10 h-10 text-indigo-500" />
             </div>
-            <h2 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-widest mb-2">
+            <h2 className="text-3xl font-black text-[#161614] dark:text-white uppercase tracking-widest mb-2">
               Calibration Complete
             </h2>
             
             {failed ? (
               <div className="text-rose-500 mb-2 font-bold uppercase tracking-widest text-sm">Calibration Failed</div>
             ) : (
-              <div className="text-slate-500 mb-2 uppercase tracking-widest text-sm">
+              <div className="text-[#78756C] mb-2 uppercase tracking-widest text-sm">
                 Average Error: <span className="text-2xl font-black text-emerald-500 ml-2">{avgScore}ms</span>
               </div>
             )}
@@ -356,14 +356,14 @@ export default function TimePerceptionGame() {
             <div className="flex gap-4">
               <button
                 onClick={startGame}
-                className="flex items-center gap-2 px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold uppercase tracking-widest text-xs transition-all shadow-lg hover:shadow-indigo-500/20"
+                className="flex items-center gap-2 px-8 py-4 bg-[#161614] hover:bg-[#2C2B27] text-[#FAF9F6] rounded-xl font-bold uppercase tracking-widest text-xs transition-all shadow-lg hover:"
               >
                 <RotateCcw className="w-4 h-4" />
                 Recalibrate
               </button>
               <button
                 onClick={() => setGameState("select")}
-                className="flex items-center gap-2 px-8 py-4 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-900 dark:text-white rounded-xl font-bold uppercase tracking-widest text-xs transition-all"
+                className="flex items-center gap-2 px-8 py-4 bg-[#F3F1EB] hover:bg-[#E6E3DB] dark:bg-slate-800 dark:hover:bg-slate-700 text-[#161614] dark:text-white rounded-xl font-bold uppercase tracking-widest text-xs transition-all"
               >
                 Menu
               </button>

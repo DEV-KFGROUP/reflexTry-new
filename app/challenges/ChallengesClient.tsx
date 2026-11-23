@@ -1,53 +1,11 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import { Calendar, Flame, Trophy, Target, ArrowRight, Sparkles, Gift } from "lucide-react";
-import { DailyChallenge } from "@/utils/dailyChallenge";
 import Link from "next/link";
+import { Calendar, Flame, Trophy, Target, ArrowRight, CheckCircle2 } from "lucide-react";
+import { DailyChallenge } from "@/utils/dailyChallenge";
 import { TOOL_MAPPING } from "@/config/tool-mapping";
 import { useTranslation } from "@/lib/i18n/context";
-
-const FloatingBackground = () => {
-    return (
-        <div className="absolute inset-0 overflow-hidden pointer-events-none z-[-1] rounded-3xl">
-            <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-teal-500/20 rounded-full blur-[100px] animate-pulse" />
-            <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-orange-500/20 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '2s' }} />
-            
-            <motion.div
-                animate={{ y: [0, -20, 0], rotate: [0, 10, 0] }}
-                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-[15%] left-[5%] opacity-20"
-            >
-                <Target className="w-32 h-32 text-teal-400 drop-shadow-[0_0_15px_rgba(45,212,191,0.8)]" />
-            </motion.div>
-
-            <motion.div
-                animate={{ y: [0, 30, 0], rotate: [0, -15, 0] }}
-                transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute bottom-[20%] right-[5%] opacity-20"
-            >
-                <Trophy className="w-40 h-40 text-yellow-400 drop-shadow-[0_0_15px_rgba(250,204,21,0.8)]" />
-            </motion.div>
-
-            <motion.div
-                animate={{ y: [0, -15, 0], x: [0, 15, 0], rotate: [0, 45, 0] }}
-                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-[40%] right-[15%] opacity-15"
-            >
-                <Flame className="w-24 h-24 text-orange-400 drop-shadow-[0_0_15px_rgba(251,146,60,0.8)]" />
-            </motion.div>
-
-            <motion.div
-                animate={{ y: [0, 25, 0], x: [0, -20, 0] }}
-                transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute bottom-[30%] left-[10%] opacity-15"
-            >
-                <Calendar className="w-28 h-28 text-purple-400 drop-shadow-[0_0_15px_rgba(192,132,252,0.8)]" />
-            </motion.div>
-        </div>
-    );
-};
 
 export default function ChallengesClient() {
     const { t, getLocalizedHref } = useTranslation();
@@ -64,234 +22,197 @@ export default function ChallengesClient() {
 
     if (!challenge) {
         return (
-            <div className="min-h-screen bg-background flex items-center justify-center">
-                <div className="sr-only">Daily Challenges</div>
-                <div className="text-center text-muted-foreground">
-                    <p>Loading challenge...</p>
+            <div className="bg-[#FAF9F6] text-[#161614] py-12 px-4 sm:px-6 lg:px-8 min-h-screen">
+                <div className="max-w-4xl mx-auto space-y-8">
+                    <header className="space-y-3 border-b border-[#D8D4C9] pb-8">
+                        <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#78756C]">
+                            Daily Routine
+                        </p>
+                        <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium tracking-[-0.02em] text-[#161614]">
+                            {t("challenges.heroTitle", "Daily Challenge")}
+                        </h1>
+                        <p className="text-sm sm:text-base text-[#57554E] max-w-2xl leading-relaxed">
+                            {t(
+                                "challenges.heroSubtitle",
+                                "Complete today's target benchmark to build your daily streak. Challenges reset at midnight in your local timezone."
+                            )}
+                        </p>
+                    </header>
+                    <div className="bg-white border border-[#E6E3DB] rounded-2xl p-8 text-center">
+                        <p className="text-sm text-[#78756C]">Loading today&apos;s challenge...</p>
+                    </div>
                 </div>
             </div>
         );
     }
 
     const toolPath = TOOL_MAPPING[challenge.toolId] || `/${challenge.toolId}`;
-
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: { staggerChildren: 0.1 }
-        }
-    };
-
-    const itemVariants = {
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0 }
-    };
+    const formattedDate = new Date(`${challenge.date}T00:00:00`).toLocaleDateString(undefined, {
+        weekday: "long",
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+    });
 
     return (
-        <div className="bg-background py-8 px-4 sm:px-6 lg:px-8 min-h-screen overflow-hidden relative">
-            <motion.div 
-                initial="hidden"
-                animate="visible"
-                variants={containerVariants}
-                className="max-w-4xl mx-auto space-y-12 relative z-10"
-            >
-                {/* Header Section */}
-                <motion.div variants={itemVariants} className="text-center space-y-4 mb-12 relative z-10">
-                    <motion.div
-                        initial={{ scale: 0, rotate: -180 }}
-                        animate={{ scale: 1, rotate: 0 }}
-                        transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                        className="inline-block relative mb-4"
-                    >
-                        <div className="absolute inset-0 bg-teal-500/30 blur-2xl rounded-full" />
-                        <div className="relative p-4 rounded-full bg-white/5 border border-black/10 dark:border-white/10 backdrop-blur-md shadow-[0_0_30px_rgba(45,212,191,0.2)]">
-                            <Calendar className="w-12 h-12 text-teal-400 drop-shadow-[0_0_10px_rgba(45,212,191,0.8)]" />
-                        </div>
-                    </motion.div>
-                    
-                    <div className="inline-block relative">
-                        <div className="absolute inset-0 bg-gradient-to-r from-teal-500 to-purple-500 blur-2xl opacity-30 animate-pulse" />
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-black bg-gradient-to-br from-slate-900 via-slate-800 to-slate-600 dark:from-white dark:via-white dark:to-white/50 bg-clip-text text-transparent inline-flex items-center gap-3 relative z-10 drop-shadow-sm">
-                            <Sparkles className="w-10 h-10 text-teal-400" />
-                            {t("challenges.heroTitle", "Daily Challenge")}
-                        </h1>
-                    </div>
-                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-medium">
-                        {t("challenges.heroSubtitle", "Complete today's challenge to earn rewards, build your streak, and unlock new badges!")}
-                        <span className="block mt-2 text-sm">Resets at midnight in your local timezone.</span>
+        <div className="bg-[#FAF9F6] text-[#161614] py-12 px-4 sm:px-6 lg:px-8 min-h-screen">
+            <div className="max-w-4xl mx-auto space-y-8">
+                {/* Editorial Header */}
+                <header className="space-y-3 border-b border-[#D8D4C9] pb-8">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#78756C]">
+                        Daily Routine
                     </p>
-                </motion.div>
-
-                {/* Main Glassmorphic Container */}
-                <motion.div 
-                    variants={itemVariants}
-                    className="relative bg-white/40 dark:bg-black/40 backdrop-blur-3xl border border-black/10 dark:border-white/10 rounded-3xl p-4 md:p-8 shadow-[0_0_50px_rgba(45,212,191,0.15)] z-10"
-                >
-                    <FloatingBackground />
-
-                    {/* Quick info - Clean card layout */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 relative z-10">
-                        <div className="p-6 rounded-2xl bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 text-center hover:bg-white/10 transition-colors">
-                            <Gift className="w-8 h-8 text-purple-400 mx-auto mb-3 drop-shadow-[0_0_10px_rgba(192,132,252,0.8)]" />
-                            <h3 className="text-base font-bold text-foreground mb-1">{t("challenges.streakReward", "Earn Rewards")}</h3>
-                            <p className="text-sm text-muted-foreground">Complete daily goals</p>
-                        </div>
-                        <div className="p-6 rounded-2xl bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 text-center hover:bg-white/10 transition-colors">
-                            <Flame className="w-8 h-8 text-orange-400 mx-auto mb-3 drop-shadow-[0_0_10px_rgba(251,146,60,0.8)]" />
-                            <h3 className="text-base font-bold text-foreground mb-1">{t("challenges.streak", "Build Streaks")}</h3>
-                            <p className="text-sm text-muted-foreground">Stay consistent</p>
-                        </div>
-                        <div className="p-6 rounded-2xl bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 text-center hover:bg-white/10 transition-colors">
-                            <Trophy className="w-8 h-8 text-yellow-400 mx-auto mb-3 drop-shadow-[0_0_10px_rgba(250,204,21,0.8)]" />
-                            <h3 className="text-base font-bold text-foreground mb-1">Unlock Badges</h3>
-                            <p className="text-sm text-muted-foreground">Achieve milestones</p>
-                        </div>
-                    </div>
-
-                    {/* Streak */}
-                    {streak > 0 && (
-                        <motion.div
-                            initial={{ opacity: 0, scale: 0.9 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            className="bg-gradient-to-r from-orange-500/20 to-red-500/20 border-2 border-orange-500/40 rounded-2xl p-6 text-center mb-8 relative overflow-hidden group shadow-[0_0_30px_rgba(251,146,60,0.2)]"
-                        >
-                            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
-                            <div className="flex items-center justify-center gap-3 mb-2 relative z-10">
-                                <Flame className="w-8 h-8 text-orange-400 drop-shadow-[0_0_10px_rgba(251,146,60,0.8)] animate-pulse" />
-                                <h2 className="text-4xl font-black text-foreground drop-shadow-md">{streak}</h2>
-                            </div>
-                            <p className="text-muted-foreground font-bold text-lg relative z-10">{t("challenges.streak", "Current Streak")}: {streak} {t("challenges.days", "Days")}</p>
-                        </motion.div>
-                    )}
-
-                    {/* Challenge Card */}
-                    <div
-                        className={`relative bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 rounded-3xl p-6 lg:p-10 shadow-xl overflow-hidden transition-all duration-500 ${isCompleted
-                                ? "ring-2 ring-green-500/50 shadow-[0_0_40px_rgba(34,197,94,0.2)]"
-                                : ""
-                            }`}
-                    >
-                        {isCompleted && (
-                            <div className="absolute inset-0 bg-green-500/5 pointer-events-none" />
+                    <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium tracking-[-0.02em] text-[#161614]">
+                        {t("challenges.heroTitle", "Daily Challenge")}
+                    </h1>
+                    <p className="text-sm sm:text-base text-[#57554E] max-w-2xl leading-relaxed">
+                        {t(
+                            "challenges.heroSubtitle",
+                            "Complete today's target benchmark to build your daily streak. Challenges reset at midnight in your local timezone."
                         )}
+                    </p>
+                </header>
 
-                        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 relative z-10">
+                {/* Streak Banner */}
+                {streak > 0 && (
+                    <section className="bg-[#F3F1EB] border border-[#D8D4C9] rounded-2xl p-5 flex items-center justify-between gap-4">
+                        <div className="flex items-center gap-3.5">
+                            <div className="w-10 h-10 rounded-lg bg-white border border-[#E6E3DB] flex items-center justify-center shrink-0">
+                                <Flame className="w-5 h-5 text-amber-700" aria-hidden="true" />
+                            </div>
                             <div>
-                                <div className="flex items-center gap-3 mb-2">
-                                    <Target className="w-8 h-8 text-teal-400 drop-shadow-[0_0_10px_rgba(45,212,191,0.8)]" />
-                                    <h2 className="text-3xl font-black text-foreground">{t("challenges.todayChallenge", "Today's Mission")}</h2>
-                                </div>
-                                <p className="text-muted-foreground text-lg font-medium">
-                                    {new Date(challenge.date).toLocaleDateString(undefined, {
-                                        weekday: "long",
-                                        year: "numeric",
-                                        month: "long",
-                                        day: "numeric",
-                                    })}
+                                <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-[#78756C]">
+                                    {t("challenges.streak", "Active Streak")}
+                                </p>
+                                <p className="text-sm text-[#3F3E39]">
+                                    Keep completing daily goals to maintain your streak.
                                 </p>
                             </div>
-                            {isCompleted && (
-                                <motion.div 
-                                    initial={{ scale: 0, rotate: -180 }}
-                                    animate={{ scale: 1, rotate: 0 }}
-                                    className="mt-4 sm:mt-0 bg-green-500/20 text-green-400 p-4 rounded-full border border-green-500/30 shadow-[0_0_20px_rgba(34,197,94,0.4)]"
-                                >
-                                    <Target className="w-8 h-8" />
-                                </motion.div>
-                            )}
+                        </div>
+                        <div className="text-right font-mono tabular-nums shrink-0">
+                            <span className="text-3xl font-bold text-[#161614]">{streak}</span>{" "}
+                            <span className="text-xs font-semibold uppercase text-[#78756C]">
+                                {t("challenges.days", "days")}
+                            </span>
+                        </div>
+                    </section>
+                )}
+
+                {/* Today's Mission Card */}
+                <section
+                    className={`bg-white border rounded-2xl p-6 sm:p-8 space-y-6 ${
+                        isCompleted ? "border-emerald-300" : "border-[#E6E3DB]"
+                    }`}
+                >
+                    <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-5 border-b border-[#F0EDE6]">
+                        <div className="space-y-1">
+                            <div className="flex items-center gap-2 text-xs font-mono text-[#78756C]">
+                                <Calendar className="w-3.5 h-3.5 text-[#57554E]" aria-hidden="true" />
+                                <span>{formattedDate}</span>
+                            </div>
+                            <h2 className="font-serif text-2xl sm:text-3xl font-medium text-[#161614] capitalize">
+                                {t(`tools.${challenge.toolId}.title`, challenge.toolId.replace(/-/g, " "))}
+                            </h2>
                         </div>
 
-                        <div className="space-y-6 relative z-10">
-                            <div className="bg-black/5 dark:bg-black/20 rounded-2xl p-6 border border-black/10 dark:border-white/5">
-                                <h3 className="text-2xl font-bold text-foreground mb-3 capitalize flex items-center gap-2">
-                                    <Sparkles className="w-5 h-5 text-purple-400" />
-                                    {t(`tools.${challenge.toolId}.title`, challenge.toolId.replace(/-/g, " "))}
-                                </h3>
-                                <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-                                    {challenge.description}
+                        {isCompleted ? (
+                            <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-800 self-start sm:self-auto">
+                                <CheckCircle2 className="w-4 h-4" aria-hidden="true" />
+                                <span>Completed</span>
+                            </span>
+                        ) : (
+                            <span className="inline-flex items-center gap-1.5 text-xs font-semibold text-[#57554E] self-start sm:self-auto">
+                                <Target className="w-4 h-4 text-[#1E40AF]" aria-hidden="true" />
+                                <span>{t("challenges.todayChallenge", "Today's Goal")}</span>
+                            </span>
+                        )}
+                    </div>
+
+                    <p className="text-base text-[#3F3E39] leading-relaxed">
+                        {challenge.description}
+                    </p>
+
+                    {/* Target & Reward Strip */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                        <div className="bg-[#FAF9F6] border border-[#E6E3DB] rounded-xl p-5">
+                            <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-[#78756C]">
+                                {t("challenges.target", "Target Threshold")}
+                            </p>
+                            <p className="text-3xl font-mono font-bold text-[#161614] tabular-nums mt-1.5">
+                                {challenge.unit === "ms" ? "≤ " : "≥ "}
+                                {challenge.target}{" "}
+                                <span className="text-base font-medium text-[#78756C] uppercase">
+                                    {challenge.unit}
+                                </span>
+                            </p>
+                        </div>
+
+                        <div className="bg-[#FAF9F6] border border-[#E6E3DB] rounded-xl p-5 flex items-start gap-3">
+                            <div className="w-9 h-9 rounded-lg bg-white border border-[#E6E3DB] flex items-center justify-center shrink-0 mt-0.5">
+                                <Trophy className="w-4 h-4 text-[#57554E]" aria-hidden="true" />
+                            </div>
+                            <div>
+                                <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-[#78756C]">
+                                    {t("challenges.streakReward", "Completion Reward")}
                                 </p>
-                                <div className="bg-gradient-to-r from-teal-500/10 to-purple-500/10 rounded-xl p-6 border border-teal-500/20">
-                                    <div className="flex flex-col sm:flex-row items-baseline gap-3">
-                                        <span className="text-sm font-bold text-muted-foreground uppercase tracking-wider">{t("challenges.target", "Goal:")}</span>
-                                        <div className="flex items-baseline gap-2">
-                                            <span className="text-4xl font-black text-teal-400 drop-shadow-[0_0_10px_rgba(45,212,191,0.5)]">
-                                                {challenge.target}
-                                            </span>
-                                            <span className="text-foreground/80 font-bold uppercase tracking-wider">{challenge.unit}</span>
-                                        </div>
-                                    </div>
-                                </div>
+                                <p className="text-sm font-semibold text-[#161614] mt-1.5">
+                                    +100 XP &amp; Daily Streak Credit
+                                </p>
                             </div>
-
-                            <div className="bg-yellow-500/10 border border-yellow-500/30 rounded-2xl p-6 shadow-inner">
-                                <div className="flex items-center gap-3 mb-2">
-                                    <Trophy className="w-6 h-6 text-yellow-400 drop-shadow-[0_0_10px_rgba(250,204,21,0.8)]" />
-                                    <span className="font-bold text-yellow-500 dark:text-yellow-400 text-lg">{t("challenges.streakReward", "Reward Pending:")}</span>
-                                </div>
-                                <p className="text-foreground font-medium text-lg ml-9">{challenge.reward}</p>
-                            </div>
-
-                            {!isCompleted && (
-                                <Link
-                                    href={getLocalizedHref(toolPath)}
-                                    className="group relative flex items-center justify-center gap-3 px-8 py-5 text-lg rounded-2xl font-bold transition-all duration-300 w-full overflow-hidden"
-                                >
-                                    <div className="absolute inset-0 bg-gradient-to-r from-teal-500 to-purple-500 opacity-90 group-hover:opacity-100 transition-opacity" />
-                                    <div className="absolute inset-0 bg-gradient-to-r from-teal-400 to-purple-400 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-300 -z-10" />
-                                    
-                                    <span className="relative z-10 text-white drop-shadow-md">{t("challenges.startChallenge", "Start Challenge")}</span>
-                                    <ArrowRight className="w-6 h-6 relative z-10 text-white group-hover:translate-x-2 transition-transform duration-300" />
-                                </Link>
-                            )}
-
-                            {isCompleted && (
-                                <motion.div 
-                                    initial={{ opacity: 0, y: 10 }}
-                                    animate={{ opacity: 1, y: 0 }}
-                                    className="text-center py-8 bg-green-500/10 rounded-2xl border border-green-500/20"
-                                >
-                                    <p className="text-green-500 dark:text-green-400 font-black text-2xl mb-2 drop-shadow-[0_0_8px_rgba(34,197,94,0.5)]">{t("challenges.completed", "Mission Accomplished! 🎉")}</p>
-                                    <p className="text-muted-foreground font-medium text-lg">
-                                        You've earned today's reward. Come back tomorrow for a new challenge!
-                                    </p>
-                                </motion.div>
-                            )}
                         </div>
                     </div>
-                </motion.div>
 
-                {/* SEO & Content Block */}
-                <motion.div variants={itemVariants} className="max-w-4xl mx-auto mt-16 p-8 md:p-10 bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 rounded-3xl shadow-lg z-10 relative">
-                    <h2 className="text-2xl md:text-3xl font-black text-foreground mb-6">Understanding Daily Challenges</h2>
-                    <div className="space-y-6 text-muted-foreground leading-relaxed">
-                        <p>
-                            Consistency is the master key to cognitive improvement. The <strong>Reflextry Daily Challenges</strong> system provides a randomized, curated goal every 24 hours to keep your brain training routine both fresh and systematically engaging. Whether the objective is hitting a new words-per-minute typing milestone, surviving a grueling visual memory sequence, or reacting within milliseconds on a flick-shot test, these tasks are optimized to challenge distinct sectors of your cognitive load.
-                        </p>
-                        
-                        <h3 className="text-xl font-bold text-foreground mt-8 mb-4">How the Streak System Works</h3>
-                        <p>
-                            Every consecutive day you log in and successfully complete the Daily Challenge, your <strong>Streak Multiplier</strong> increases. Streaks act as a proven psychological catalyst—leveraging the brain's intrinsic dopamine reward centers—to help you maintain healthy neuroplasticity habits. If you miss a 24-hour window, the streak resets to zero, emphasizing that daily consistency is paramount for long-term neurological adaptation.
-                        </p>
-                        
-                        <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Why Randomize Cognitive Challenges?</h3>
-                        <p>
-                            If you only practice a single benchmark tool (like just clicking speed), your brain undergoes task-specific adaptation, which heavily reduces overall cognitive agility. By algorithmically randomizing our challenges across our four main arenas—<strong>Reflex, Speed, Accuracy, and Memory</strong>—we ensure a holistically balanced cognitive conditioning program. One day might meticulously test your spatial working memory, while the next strictly demands raw reaction speed and peripheral vision tracking.
-                        </p>
+                    {/* Primary CTA or Completion Message */}
+                    {!isCompleted ? (
+                        <Link
+                            href={getLocalizedHref(toolPath)}
+                            className="w-full min-h-[48px] inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-[#161614] hover:bg-[#2C2B27] text-[#FAF9F6] text-sm font-semibold transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1E40AF] focus-visible:ring-offset-2"
+                        >
+                            <span>{t("challenges.startChallenge", "Start Today's Challenge")}</span>
+                            <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                        </Link>
+                    ) : (
+                        <div className="p-5 rounded-xl bg-emerald-50 border border-emerald-200 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                            <div>
+                                <p className="text-base font-semibold text-emerald-900">
+                                    {t("challenges.completed", "Challenge Complete")}
+                                </p>
+                                <p className="text-sm text-emerald-800 mt-0.5">
+                                    You&apos;ve earned today&apos;s XP reward. Check back tomorrow for the next benchmark.
+                                </p>
+                            </div>
+                            <Link
+                                href={getLocalizedHref("/statistics")}
+                                className="inline-flex items-center gap-1.5 text-sm font-semibold text-emerald-900 hover:text-emerald-950 underline underline-offset-4 shrink-0"
+                            >
+                                <span>View statistics</span>
+                                <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                            </Link>
+                        </div>
+                    )}
+                </section>
 
-                        <h3 className="text-xl font-bold text-foreground mt-8 mb-4">The Science of Routine Brain Training</h3>
-                        <p>
-                            Research in the field of cognitive science demonstrates that shorter, daily bursts of high-intensity mental exercises are vastly superior to long, infrequent sessions. This phenomenon is tied to how the brain consolidates learning during sleep. By engaging with a Reflextry Daily Challenge for just 5 to 10 minutes a day, you are effectively signaling to your central nervous system that these specific neural pathways—responsible for fast-twitch physical responses and quick data retention—need to be strengthened and prioritized.
-                        </p>
-
-                        <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Tracking Your Personal Growth</h3>
-                        <p>
-                            Completing the Daily Challenge doesn't just grant you XP and digital rewards; it feeds critical telemetry into your personal statistics dashboard. Over weeks and months of consistent participation, you will begin to observe statistical trends in your performance. You may discover that your baseline reaction time has dropped by 30 milliseconds, or your working memory capacity has expanded from 7 to 9 simultaneous items. The Daily Challenge acts as a consistent, standardized baseline to accurately measure this growth over time.
-                        </p>
+                {/* Editorial Context */}
+                <section className="bg-white border border-[#E6E3DB] rounded-2xl p-6 sm:p-8 space-y-5">
+                    <h2 className="font-serif text-2xl font-medium text-[#161614] tracking-tight">
+                        How Daily Challenges Work
+                    </h2>
+                    <div className="grid md:grid-cols-2 gap-6 text-sm text-[#57554E] leading-relaxed">
+                        <div className="space-y-2">
+                            <h3 className="text-base font-semibold text-[#161614]">Deterministic Daily Rotation</h3>
+                            <p>
+                                Each calendar day rotates across core Reflex, Memory, and Speed benchmarks so you practice multiple cognitive skills instead of repeating only one drill.
+                            </p>
+                        </div>
+                        <div className="space-y-2">
+                            <h3 className="text-base font-semibold text-[#161614]">Short, Consistent Practice</h3>
+                            <p>
+                                A focused 5-to-10 minute daily session provides cleaner session-to-session trend data on your Statistics page than occasional marathon sessions.
+                            </p>
+                        </div>
                     </div>
-                </motion.div>
-
-            </motion.div>
+                </section>
+            </div>
         </div>
     );
 }

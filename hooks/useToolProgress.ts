@@ -152,14 +152,19 @@ export function useToolProgress<Level extends string>(options: Options<Level>) {
       accuracy: o.accuracy,
       eligible, outcome: o.eligible === false ? "failed" : "completed", version: 2,
     });
-    const unlocked = eligible ? Achievements.check(o.toolId, value, o.unit) : [];
+    const unlocked = eligible
+      ? Achievements.check(o.toolId, value, o.unit, { accuracy: o.accuracy })
+      : [];
     if (unlocked.length) window.dispatchEvent(new CustomEvent("achievement_unlocked", { detail: unlocked }));
     const challenge = eligible && DailyChallenge.checkCompletion(o.toolId, value, o.unit);
     if (eligible) {
       XPSystem.awardGameComplete();
       if (newBest) XPSystem.awardNewHighScore();
       if (challenge) XPSystem.awardDailyChallenge();
-      if (unlocked.length) XPSystem.awardAchievement(0);
+      if (unlocked.length) {
+        const badgeXP = unlocked.reduce((sum, badge) => sum + (badge.xpReward || 50), 0);
+        XPSystem.awardAchievement(badgeXP);
+      }
     }
     setFeedback({ saved, value, unit: o.unit, previous: previousEntry?.value ?? null, higherIsBetter, newBest, challenge });
     window.dispatchEvent(new Event("score_updated"));

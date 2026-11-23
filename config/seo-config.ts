@@ -1,3 +1,7 @@
+import { NEW_PACKS_SEO } from "@/lib/new-packs-content";
+import { FLAGSHIP_SEO_MAP } from "@/lib/flagship-tools-meta";
+import { PUZZLE_SEO_MAP } from "@/lib/puzzles/meta";
+
 export const SEO_CONFIGS = {
   // --- MEMORY TOOLS ---
   "sequence-memory": {
@@ -55,7 +59,7 @@ export const SEO_CONFIGS = {
   "visual-memory": {
     title: "Visual Memory Test - Spatial Grid Recall Game | Reflextry",
     description:
-      "Enhance visual retention and spatial pattern recognition. Test your visual memory by recalling flash grid patterns on an expanding matrix. Free human benchmark tool.",
+      "Enhance visual retention and spatial pattern recognition. Test visual memory by recalling flash grid patterns on an expanding matrix — free online.",
     keywords: [
       "visual memory test",
       "visual memory game",
@@ -279,7 +283,7 @@ export const SEO_CONFIGS = {
   "reaction-time": {
     title: "Reaction Time Test - Millisecond Benchmark (ms) | Reflextry",
     description:
-      "Test and improve your visual reaction time in milliseconds. Take our free millisecond reaction test, benchmark against pro gamers, and track your reflex progress.",
+      "Test and improve visual reaction time in milliseconds. Take our free millisecond reaction test, benchmark against esports ranges, and track your reflex gains.",
     keywords: [
       "reaction time test",
       "reaction test ms",
@@ -326,7 +330,7 @@ export const SEO_CONFIGS = {
   "grid-shot": {
     title: "Grid Shot Aim Trainer - Mouse Precision Reflex | Reflextry",
     description:
-      "Warm up your aim and mouse speed with Grid Shot. Click rapidly appearing targets across the grid to boost hand-eye coordination for FPS games like Valorant and CS2.",
+      "Warm up your aim and mouse speed with Grid Shot. Click rapidly appearing grid targets to boost hand-eye coordination for FPS games like Valorant and CS2.",
     keywords: [
       "grid reflex test",
       "grid shot aim trainer",
@@ -369,7 +373,7 @@ export const SEO_CONFIGS = {
   "directional-reflex": {
     title: "Directional Reflex Test - Arrow Key Speed Game | Reflextry",
     description:
-      "Test keyboard response speed and spatial decision-making. Press arrow keys matching rapid directional prompts to improve cognitive processing and reflex agility.",
+      "Test keyboard response speed and spatial decision-making. Press arrow keys matching rapid directional prompts to sharpen cognitive processing and agility.",
     keywords: [
       "direction reflex test",
       "arrow reaction test",
@@ -540,7 +544,7 @@ export const SEO_CONFIGS = {
   "cps-test": {
     title: "CPS Test - Clicks Per Second Speed Benchmark | Reflextry",
     description:
-      "Measure your clicking speed with our free CPS Test. Test 1s, 5s, 10s, 30s, and 60s modes for normal clicking, jitter clicking, butterfly clicking, and drag clicking.",
+      "Measure clicking speed with our free CPS Test. Try 1s, 5s, 10s, 30s, and 60s modes for normal, jitter, butterfly, and drag clicking speed benchmarks.",
     keywords: [
       "cps test",
       "clicks per second test",
@@ -606,7 +610,7 @@ export const SEO_CONFIGS = {
   "typing-speed": {
     title: "Typing Speed Test - Free Online WPM Benchmark | Reflextry",
     description:
-      "Test words per minute (WPM) and accuracy with our free 1-minute Typing Speed Test. Benchmark your keyboarding speed, track error rates, and improve touch typing.",
+      "Test words per minute (WPM) and accuracy with our free 1-minute Typing Speed Test. Benchmark keyboard speed, track error rates, and improve touch typing.",
     keywords: [
       "typing speed test",
       "wpm test online free",
@@ -752,7 +756,7 @@ export const SEO_CONFIGS = {
   "pattern-matching": {
     title: "Pattern Matching Test - Visual Matrix Accuracy | Reflextry",
     description:
-      "Improve visual pattern recognition and non-verbal reasoning. Match complex matrix patterns and geometric sequences to test visual acuity and analytical thinking.",
+      "Improve visual pattern recognition and non-verbal reasoning. Match matrix patterns and geometric sequences to benchmark visual acuity and analytical thinking.",
     keywords: [
       "pattern matching test online",
       "pattern recognition test free",
@@ -1011,4 +1015,7 @@ export const SEO_CONFIGS = {
       "rhythm reflex trainer"
     ],
   },
+  ...NEW_PACKS_SEO,
+  ...FLAGSHIP_SEO_MAP,
+  ...PUZZLE_SEO_MAP,
 };

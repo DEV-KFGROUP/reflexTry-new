@@ -11,7 +11,11 @@
     "challenges": "Défis",
     "statistics": "Statistiques",
     "science": "Science",
-    "blog": "Blog"
+    "blog": "Blog",
+    "stem": "Labo STEM",
+    "lab3d": "Labo 3D",
+    "multiplayer": "2 Joueurs",
+    "productivity": "Études & Travail"
   },
   "common": {
     "start": "Commencer le test",
@@ -75,6 +79,22 @@
     "gaming": {
       "title": "Échauffement eSport",
       "description": "Calibrez vos flick shots, le suivi de cible et vos réflexes de combat pour les jeux compétitifs."
+    },
+    "stem": {
+      "title": "Laboratoire STEM & Physique",
+      "description": "Visualisez gravité, optique, cinématique et couple avec des équations en direct."
+    },
+    "lab-3d": {
+      "title": "Laboratoire 3D Interactif",
+      "description": "Explorez des puits gravitationnels 3D et des réflexes spatiaux en profondeur."
+    },
+    "multiplayer": {
+      "title": "Arène 2 Joueurs",
+      "description": "Affrontez un ami ou camarade sur un seul clavier ou écran tactile."
+    },
+    "productivity": {
+      "title": "Suite Études & Travail",
+      "description": "Mesurez lecture rapide avec compréhension, pavé numérique 10-Key et fatigue cognitive."
     }
   },
   "footer": {
@@ -457,6 +477,70 @@
     "mental-rotation": {
       "title": "Test de rotation mentale",
       "desc": "Évaluez votre visualisation spatiale 3D et votre vitesse de rotation cognitive. Déterminez si des formes géométriques complexes sont identiques ou inversées en miroir en temps réel."
+    },
+    "gravity-lab": {
+      "title": "Labo Gravité & Orbites",
+      "desc": "Comparez la chute libre sur Terre, Lune, Mars et Jupiter ou lancez une orbite stable."
+    },
+    "laser-reflection": {
+      "title": "Optique de Réflexion Laser",
+      "desc": "Pivotez des miroirs pour guider un faisceau laser et vérifier la Loi de Réflexion."
+    },
+    "projectile-cannon": {
+      "title": "Physique du Canon Balistique",
+      "desc": "Réglez angle, vitesse, vent et gravité pour atteindre des cibles paraboliques."
+    },
+    "torque-balance": {
+      "title": "Balance de Couple & Levier",
+      "desc": "Équilibrez des masses sur une bascule à l'aide des équations de moment."
+    },
+    "solar-gravity-3d": {
+      "title": "Simulateur 3D de Gravité Solaire",
+      "desc": "Explorez un puits gravitationnel 3D et lancez des satellites sur mesure."
+    },
+    "spatial-aim-3d": {
+      "title": "Arène de Visée Spatiale 3D",
+      "desc": "Ciblez des drones 3D répartis sur des plans proche, intermédiaire et lointain."
+    },
+    "reaction-duel-2p": {
+      "title": "Duel de Réflexes 2 Joueurs",
+      "desc": "Affrontement en 5 manches à la milliseconde avec détection de faux départ."
+    },
+    "math-tug-of-war": {
+      "title": "Tir à la Corde Mathématique",
+      "desc": "Résolvez les calculs plus vite que votre adversaire pour tirer la corde."
+    },
+    "cannon-battle-2p": {
+      "title": "Bataille de Canons Gravité",
+      "desc": "Artillerie 2D au tour par tour sur relief montagneux avec vent et gravité."
+    },
+    "speed-reading": {
+      "title": "Lecture Rapide & Compréhension",
+      "desc": "Lisez en surbrillance guidée ou RSVP puis répondez au quiz pour vos MPM effectifs."
+    },
+    "ten-key": {
+      "title": "Test Pavé Numérique 10-Key",
+      "desc": "Mesurez vos KPH et votre précision sur factures, entiers et codes SKU."
+    },
+    "focus-sprint": {
+      "title": "Sprint Focus & Fatigue",
+      "desc": "Associez un minuteur Pomodoro réel à des tests de réflexes avant/après session."
+    },
+    "solar-gravity": {
+      "title": "Simulateur 3D de Gravité Solaire",
+      "desc": "Explorez un puits gravitationnel 3D et lancez des satellites sur mesure."
+    },
+    "spatial-aim": {
+      "title": "Arène de Visée Spatiale 3D",
+      "desc": "Ciblez des drones 3D répartis sur des plans proche, intermédiaire et lointain."
+    },
+    "reaction-duel": {
+      "title": "Duel de Réflexes 2 Joueurs",
+      "desc": "Affrontement en 5 manches à la milliseconde avec détection de faux départ."
+    },
+    "cannon-battle": {
+      "title": "Bataille de Canons Gravité",
+      "desc": "Artillerie 2D au tour par tour sur relief montagneux avec vent et gravité."
     }
   },
   "homeContent": {
@@ -576,7 +660,59 @@
     "exploreOther": "Explorer d'autres catégories",
     "toolNameCol": "Nom de l'outil",
     "bestForCol": "Idéal pour (Cas d'utilisation)",
-    "coreBenefitCol": "Avantage principal"
+    "coreBenefitCol": "Avantage principal",
+    "stem": {
+      "heroTitle": "Laboratoire Visuel de Physique & STEM",
+      "heroSubtitle": "Visualisez gravité, optique, cinématique et couple avec des équations en direct.",
+      "heroDesc": "Transformez les formules abstraites de physique et de maths en expériences interactives. Ajustez les curseurs, lancez des orbites, déviez des lasers et équilibrez des leviers dans votre navigateur.",
+      "whatItCovers": "Contenu de cette Arène",
+      "whatItCoversDesc": "Simulateurs 2D interactifs de chute libre, vitesse orbitale, réflexion optique sur miroirs, trajectoire parabolique et équilibre des moments.",
+      "benefit1Title": "Équations en Direct",
+      "benefit1Desc": "Observez les formules évoluer selon vos paramètres",
+      "benefit2Title": "Intuition Visuelle",
+      "benefit2Desc": "Inspectez vecteurs, normales optiques et traces fantômes",
+      "benefit3Title": "Modes Défi",
+      "benefit3Desc": "Validez votre maîtrise avec des missions notées"
+    },
+    "lab-3d": {
+      "heroTitle": "Laboratoire WebGL 3D Interactif",
+      "heroSubtitle": "Explorez des puits gravitationnels 3D et des réflexes spatiaux en profondeur.",
+      "heroDesc": "Propulsées par WebGL en temps réel, ces simulations permettent d'orbiter autour d'une grille d'espace-temps courbée, lancer des satellites et viser des drones 3D sur trois plans de profondeur.",
+      "whatItCovers": "Contenu de cette Arène",
+      "whatItCoversDesc": "Simulations 3D accélérées dans le navigateur alliant mécanique orbitale et acquisition de cibles en profondeur.",
+      "benefit1Title": "WebGL 3D Temps Réel",
+      "benefit1Desc": "Caméra orbitale interactive et éclairage dynamique",
+      "benefit2Title": "Perception de Profondeur",
+      "benefit2Desc": "Entraînez votre visée sur plans proche, moyen et lointain",
+      "benefit3Title": "Zéro Téléchargement",
+      "benefit3Desc": "Rendu adaptatif fluide sur ordinateurs portables et fixes"
+    },
+    "multiplayer": {
+      "heroTitle": "Duels 2 Joueurs en Écran Partagé",
+      "heroSubtitle": "Affrontez un ami ou camarade sur un seul clavier ou écran tactile.",
+      "heroDesc": "Sans inscription ni file d'attente. Partagez un écran pour des duels de réflexes en millisecondes, un tir à la corde mathématique et des batailles de canons avec vent et gravité.",
+      "whatItCovers": "Contenu de cette Arène",
+      "whatItCoversDesc": "Jeux locaux compétitifs de réflexes, calcul mental et physique conçus pour les classes et groupes d'étude.",
+      "benefit1Title": "Clavier & Tactile Partagés",
+      "benefit1Desc": "Commandes gauche/droite pour PC portables et tablettes",
+      "benefit2Title": "Idéal en Classe",
+      "benefit2Desc": "Niveaux adaptés aux enfants, étudiants et experts",
+      "benefit3Title": "Mesure au Millième",
+      "benefit3Desc": "Détection de faux départ et statistiques immédiates"
+    },
+    "productivity": {
+      "heroTitle": "Suite Performance Études & Bureau",
+      "heroSubtitle": "Mesurez lecture rapide avec compréhension, pavé numérique 10-Key et fatigue cognitive.",
+      "heroDesc": "Conçue pour les étudiants et professionnels. Évaluez vos MPM effectifs via quiz, vos frappes par heure (KPH) au pavé numérique et l'évolution de vos réflexes après un sprint Pomodoro.",
+      "whatItCovers": "Contenu de cette Arène",
+      "whatItCoversDesc": "Benchmarks quotidiens de lecture RSVP et guidée, saisie numérique comptable et suivi de concentration avec tests de réaction.",
+      "benefit1Title": "Compréhension Vérifiée",
+      "benefit1Desc": "Chaque session de lecture valide la rétention réelle",
+      "benefit2Title": "Indicateurs KPH Pro",
+      "benefit2Desc": "Précision et vitesse normalisées sur pavé numérique",
+      "benefit3Title": "Suivi de Fatigue",
+      "benefit3Desc": "Comparez votre latence avant et après un bloc de focus"
+    }
   },
   "allTools": {
     "title": "Tous les outils d'entraînement",
@@ -777,6 +913,38 @@
       "sec1Text": "Des recherches publiées dans PLOS ONE ont montré que les joueurs professionnels démontrent des vitesses de traitement visuomoteur nettement plus rapides que les non-joueurs. Les joueurs de jeux vidéo d'action présentent une allocation d'attention accrue et une prise de décision perceptuelle développée par une pratique délibérée.",
       "sec2Heading": "Protocole d'échauffement optimal",
       "sec2Text": "Un échauffement de 5 à 10 minutes améliore les performances et réduit le risque de blessure. Progressez de mouvements lents et contrôlés vers des réactions à la vitesse du jeu : commencez par 2 minutes de Grid Click, 3 minutes d'Aim Trainer, suivies de 2 minutes de Flick Shot à vitesse maximale."
+    },
+    "stem": {
+      "sec0Heading": "Laboratoire STEM & Physique — Équations en Direct",
+      "sec0Text": "Transformez les formules abstraites de physique et de maths en expériences interactives. Ajustez les curseurs, lancez des orbites, déviez des lasers et équilibrez des leviers dans votre navigateur. Observez les formules évoluer selon vos paramètres.",
+      "sec1Heading": "Intuition Visuelle",
+      "sec1Text": "Simulateurs 2D interactifs de chute libre, vitesse orbitale, réflexion optique sur miroirs, trajectoire parabolique et équilibre des moments. Inspectez vecteurs, normales optiques et traces fantômes.",
+      "sec2Heading": "Modes Défi",
+      "sec2Text": "Chaque simulation associe visualisation immédiate et indicateurs chiffrés transparents. Validez votre maîtrise avec des missions notées."
+    },
+    "lab-3d": {
+      "sec0Heading": "Laboratoire 3D Interactif — WebGL 3D Temps Réel",
+      "sec0Text": "Propulsées par WebGL en temps réel, ces simulations permettent d'orbiter autour d'une grille d'espace-temps courbée, lancer des satellites et viser des drones 3D sur trois plans de profondeur. Caméra orbitale interactive et éclairage dynamique.",
+      "sec1Heading": "Perception de Profondeur",
+      "sec1Text": "Simulations 3D accélérées dans le navigateur alliant mécanique orbitale et acquisition de cibles en profondeur. Entraînez votre visée sur plans proche, moyen et lointain.",
+      "sec2Heading": "Zéro Téléchargement",
+      "sec2Text": "Chaque simulation associe visualisation immédiate et indicateurs chiffrés transparents. Rendu adaptatif fluide sur ordinateurs portables et fixes."
+    },
+    "multiplayer": {
+      "sec0Heading": "Arène 2 Joueurs — Clavier & Tactile Partagés",
+      "sec0Text": "Sans inscription ni file d'attente. Partagez un écran pour des duels de réflexes en millisecondes, un tir à la corde mathématique et des batailles de canons avec vent et gravité. Commandes gauche/droite pour PC portables et tablettes.",
+      "sec1Heading": "Idéal en Classe",
+      "sec1Text": "Jeux locaux compétitifs de réflexes, calcul mental et physique conçus pour les classes et groupes d'étude. Niveaux adaptés aux enfants, étudiants et experts.",
+      "sec2Heading": "Mesure au Millième",
+      "sec2Text": "Chaque simulation associe visualisation immédiate et indicateurs chiffrés transparents. Détection de faux départ et statistiques immédiates."
+    },
+    "productivity": {
+      "sec0Heading": "Suite Études & Travail — Compréhension Vérifiée",
+      "sec0Text": "Conçue pour les étudiants et professionnels. Évaluez vos MPM effectifs via quiz, vos frappes par heure (KPH) au pavé numérique et l'évolution de vos réflexes après un sprint Pomodoro. Chaque session de lecture valide la rétention réelle.",
+      "sec1Heading": "Indicateurs KPH Pro",
+      "sec1Text": "Benchmarks quotidiens de lecture RSVP et guidée, saisie numérique comptable et suivi de concentration avec tests de réaction. Précision et vitesse normalisées sur pavé numérique.",
+      "sec2Heading": "Suivi de Fatigue",
+      "sec2Text": "Chaque simulation associe visualisation immédiate et indicateurs chiffrés transparents. Comparez votre latence avant et après un bloc de focus."
     }
   },
   "categoryGuide": {
@@ -939,6 +1107,134 @@
       "faq1A": "Oui. Les entraîneurs de visée isolent la mécanique physique de l'utilisation d'une souris, telle que le suivi et le flick. En les séparant de la vision du jeu, de la conscience de la carte et de la stratégie, vous pouvez développer une mémoire musculaire mécanique brute beaucoup plus rapidement qu'en jouant simplement au jeu.",
       "faq2Q": "Quelle est la meilleure façon de s'échauffer avant un match classé ?",
       "faq2A": "Un bon échauffement d'avant-match doit durer 5 à 10 minutes et impliquer des mouvements progressivement plus rapides. Nous recommandons cette séquence : 2 minutes d'Aim Trainer pour établir la précision de base, 3 minutes de Target Tracking pour des mouvements fluides et 2 minutes de Flick Shot pour repousser vos limites de vitesse."
+    },
+    "stem": {
+      "whatIsTitle": "Qu'est-ce que cette Arène ? — Laboratoire STEM & Physique",
+      "whatIsDesc": "Transformez les formules abstraites de physique et de maths en expériences interactives. Ajustez les curseurs, lancez des orbites, déviez des lasers et équilibrez des leviers dans votre navigateur.",
+      "howToTitle": "Comment Maîtriser ces Outils",
+      "howToStep1Title": "Établir une Base",
+      "howToStep1Desc": "Commencez avec les réglages standard pour mesurer objectivement votre niveau initial.",
+      "howToStep2Title": "Isoler une Variable",
+      "howToStep2Desc": "Ajustez un paramètre à la fois afin de voir clairement la relation de cause à effet.",
+      "howToStep3Title": "Analyser le Retour Direct",
+      "howToStep3Desc": "Consultez les formules, la précision et les temps en millisecondes après chaque essai.",
+      "howToStep4Title": "Pratiquer par Sessions Courtes",
+      "howToStep4Desc": "Privilégiez des blocs concentrés de 10 minutes plutôt que de longues sessions fatigantes.",
+      "shouldPracticeTitle": "Faut-il Pratiquer Chaque Jour ?",
+      "shouldPracticeDesc": "Dix à quinze minutes plusieurs fois par semaine renforcent durablement l'intuition et la précision.",
+      "comparisonTitle": "Comparatif des Modules",
+      "row1Tool": "Labo Gravité & Orbites",
+      "row1BestFor": "Équations en Direct",
+      "row1Benefit": "Comparez la chute libre sur Terre, Lune, Mars et Jupiter ou lancez une orbite stable.",
+      "row2Tool": "Optique de Réflexion Laser",
+      "row2BestFor": "Intuition Visuelle",
+      "row2Benefit": "Pivotez des miroirs pour guider un faisceau laser et vérifier la Loi de Réflexion.",
+      "row3Tool": "Physique du Canon Balistique",
+      "row3BestFor": "Modes Défi",
+      "row3Benefit": "Réglez angle, vitesse, vent et gravité pour atteindre des cibles paraboliques.",
+      "benchmarksTitle": "Repères & Valeur Pédagogique",
+      "benchmarksDesc": "Chaque simulation associe visualisation immédiate et indicateurs chiffrés transparents.",
+      "faqTitle": "Questions Fréquentes",
+      "faq1Q": "Ce module est-il entièrement gratuit ?",
+      "faq1A": "Oui. Chaque outil Reflextry fonctionne dans le navigateur sans compte ni téléchargement.",
+      "faq2Q": "Est-il compatible avec les ordinateurs scolaires et tablettes ?",
+      "faq2A": "Oui. L'interface s'adapte aux portables, Chromebooks, tablettes et tableaux interactifs."
+    },
+    "lab-3d": {
+      "whatIsTitle": "Qu'est-ce que cette Arène ? — Laboratoire 3D Interactif",
+      "whatIsDesc": "Propulsées par WebGL en temps réel, ces simulations permettent d'orbiter autour d'une grille d'espace-temps courbée, lancer des satellites et viser des drones 3D sur trois plans de profondeur.",
+      "howToTitle": "Comment Maîtriser ces Outils",
+      "howToStep1Title": "Établir une Base",
+      "howToStep1Desc": "Commencez avec les réglages standard pour mesurer objectivement votre niveau initial.",
+      "howToStep2Title": "Isoler une Variable",
+      "howToStep2Desc": "Ajustez un paramètre à la fois afin de voir clairement la relation de cause à effet.",
+      "howToStep3Title": "Analyser le Retour Direct",
+      "howToStep3Desc": "Consultez les formules, la précision et les temps en millisecondes après chaque essai.",
+      "howToStep4Title": "Pratiquer par Sessions Courtes",
+      "howToStep4Desc": "Privilégiez des blocs concentrés de 10 minutes plutôt que de longues sessions fatigantes.",
+      "shouldPracticeTitle": "Faut-il Pratiquer Chaque Jour ?",
+      "shouldPracticeDesc": "Dix à quinze minutes plusieurs fois par semaine renforcent durablement l'intuition et la précision.",
+      "comparisonTitle": "Comparatif des Modules",
+      "row1Tool": "Simulateur 3D de Gravité Solaire",
+      "row1BestFor": "WebGL 3D Temps Réel",
+      "row1Benefit": "Explorez un puits gravitationnel 3D et lancez des satellites sur mesure.",
+      "row2Tool": "Arène de Visée Spatiale 3D",
+      "row2BestFor": "Perception de Profondeur",
+      "row2Benefit": "Ciblez des drones 3D répartis sur des plans proche, intermédiaire et lointain.",
+      "row3Tool": "Simulateur 3D de Gravité Solaire",
+      "row3BestFor": "Zéro Téléchargement",
+      "row3Benefit": "Explorez un puits gravitationnel 3D et lancez des satellites sur mesure.",
+      "benchmarksTitle": "Repères & Valeur Pédagogique",
+      "benchmarksDesc": "Chaque simulation associe visualisation immédiate et indicateurs chiffrés transparents.",
+      "faqTitle": "Questions Fréquentes",
+      "faq1Q": "Ce module est-il entièrement gratuit ?",
+      "faq1A": "Oui. Chaque outil Reflextry fonctionne dans le navigateur sans compte ni téléchargement.",
+      "faq2Q": "Est-il compatible avec les ordinateurs scolaires et tablettes ?",
+      "faq2A": "Oui. L'interface s'adapte aux portables, Chromebooks, tablettes et tableaux interactifs."
+    },
+    "multiplayer": {
+      "whatIsTitle": "Qu'est-ce que cette Arène ? — Arène 2 Joueurs",
+      "whatIsDesc": "Sans inscription ni file d'attente. Partagez un écran pour des duels de réflexes en millisecondes, un tir à la corde mathématique et des batailles de canons avec vent et gravité.",
+      "howToTitle": "Comment Maîtriser ces Outils",
+      "howToStep1Title": "Établir une Base",
+      "howToStep1Desc": "Commencez avec les réglages standard pour mesurer objectivement votre niveau initial.",
+      "howToStep2Title": "Isoler une Variable",
+      "howToStep2Desc": "Ajustez un paramètre à la fois afin de voir clairement la relation de cause à effet.",
+      "howToStep3Title": "Analyser le Retour Direct",
+      "howToStep3Desc": "Consultez les formules, la précision et les temps en millisecondes après chaque essai.",
+      "howToStep4Title": "Pratiquer par Sessions Courtes",
+      "howToStep4Desc": "Privilégiez des blocs concentrés de 10 minutes plutôt que de longues sessions fatigantes.",
+      "shouldPracticeTitle": "Faut-il Pratiquer Chaque Jour ?",
+      "shouldPracticeDesc": "Dix à quinze minutes plusieurs fois par semaine renforcent durablement l'intuition et la précision.",
+      "comparisonTitle": "Comparatif des Modules",
+      "row1Tool": "Duel de Réflexes 2 Joueurs",
+      "row1BestFor": "Clavier & Tactile Partagés",
+      "row1Benefit": "Affrontement en 5 manches à la milliseconde avec détection de faux départ.",
+      "row2Tool": "Tir à la Corde Mathématique",
+      "row2BestFor": "Idéal en Classe",
+      "row2Benefit": "Résolvez les calculs plus vite que votre adversaire pour tirer la corde.",
+      "row3Tool": "Bataille de Canons Gravité",
+      "row3BestFor": "Mesure au Millième",
+      "row3Benefit": "Artillerie 2D au tour par tour sur relief montagneux avec vent et gravité.",
+      "benchmarksTitle": "Repères & Valeur Pédagogique",
+      "benchmarksDesc": "Chaque simulation associe visualisation immédiate et indicateurs chiffrés transparents.",
+      "faqTitle": "Questions Fréquentes",
+      "faq1Q": "Ce module est-il entièrement gratuit ?",
+      "faq1A": "Oui. Chaque outil Reflextry fonctionne dans le navigateur sans compte ni téléchargement.",
+      "faq2Q": "Est-il compatible avec les ordinateurs scolaires et tablettes ?",
+      "faq2A": "Oui. L'interface s'adapte aux portables, Chromebooks, tablettes et tableaux interactifs."
+    },
+    "productivity": {
+      "whatIsTitle": "Qu'est-ce que cette Arène ? — Suite Études & Travail",
+      "whatIsDesc": "Conçue pour les étudiants et professionnels. Évaluez vos MPM effectifs via quiz, vos frappes par heure (KPH) au pavé numérique et l'évolution de vos réflexes après un sprint Pomodoro.",
+      "howToTitle": "Comment Maîtriser ces Outils",
+      "howToStep1Title": "Établir une Base",
+      "howToStep1Desc": "Commencez avec les réglages standard pour mesurer objectivement votre niveau initial.",
+      "howToStep2Title": "Isoler une Variable",
+      "howToStep2Desc": "Ajustez un paramètre à la fois afin de voir clairement la relation de cause à effet.",
+      "howToStep3Title": "Analyser le Retour Direct",
+      "howToStep3Desc": "Consultez les formules, la précision et les temps en millisecondes après chaque essai.",
+      "howToStep4Title": "Pratiquer par Sessions Courtes",
+      "howToStep4Desc": "Privilégiez des blocs concentrés de 10 minutes plutôt que de longues sessions fatigantes.",
+      "shouldPracticeTitle": "Faut-il Pratiquer Chaque Jour ?",
+      "shouldPracticeDesc": "Dix à quinze minutes plusieurs fois par semaine renforcent durablement l'intuition et la précision.",
+      "comparisonTitle": "Comparatif des Modules",
+      "row1Tool": "Lecture Rapide & Compréhension",
+      "row1BestFor": "Compréhension Vérifiée",
+      "row1Benefit": "Lisez en surbrillance guidée ou RSVP puis répondez au quiz pour vos MPM effectifs.",
+      "row2Tool": "Test Pavé Numérique 10-Key",
+      "row2BestFor": "Indicateurs KPH Pro",
+      "row2Benefit": "Mesurez vos KPH et votre précision sur factures, entiers et codes SKU.",
+      "row3Tool": "Sprint Focus & Fatigue",
+      "row3BestFor": "Suivi de Fatigue",
+      "row3Benefit": "Associez un minuteur Pomodoro réel à des tests de réflexes avant/après session.",
+      "benchmarksTitle": "Repères & Valeur Pédagogique",
+      "benchmarksDesc": "Chaque simulation associe visualisation immédiate et indicateurs chiffrés transparents.",
+      "faqTitle": "Questions Fréquentes",
+      "faq1Q": "Ce module est-il entièrement gratuit ?",
+      "faq1A": "Oui. Chaque outil Reflextry fonctionne dans le navigateur sans compte ni téléchargement.",
+      "faq2Q": "Est-il compatible avec les ordinateurs scolaires et tablettes ?",
+      "faq2A": "Oui. L'interface s'adapte aux portables, Chromebooks, tablettes et tableaux interactifs."
     }
   }
 }

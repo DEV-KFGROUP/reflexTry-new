@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { headers } from 'next/headers';
 import AccuracyPageClient from './AccuracyPageClient';
 import { CategorySEOContent } from '@/components/CategorySEOContent';
 import { getCategoryMetadata } from '@/lib/seo-utils';
@@ -6,19 +7,23 @@ import { SchemaInjector } from "@/components/SchemaInjector";
 import { generateWebPageSchema, generateBreadcrumbStructuredData, generateFAQPageSchema } from "@/lib/structured-data";
 
 export async function generateMetadata(): Promise<Metadata> {
-    return getCategoryMetadata('accuracy');
+    const h = await headers();
+    return getCategoryMetadata('accuracy', h.get('x-locale') || 'en');
 }
 
-export default function AccuracyHub() {
+export default async function AccuracyHub() {
+    const h = await headers();
+    const locale = h.get('x-locale') || 'en';
     const breadcrumbSchema = generateBreadcrumbStructuredData([
         { name: "Home", url: "/" },
         { name: "Accuracy Tests", url: "/accuracy" },
-    ]);
+    ], locale);
     
     const webPageSchema = generateWebPageSchema(
         "Accuracy Tests - Improve Your Precision",
         "Test your accuracy and precision with our free tools. Pattern matching, angle estimation, and precision clicking.",
-        "/accuracy"
+        "/accuracy",
+        locale
     );
 
     const faqSchema = generateFAQPageSchema([

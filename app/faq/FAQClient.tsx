@@ -1,8 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import { HelpCircle, ChevronDown, ArrowRight, Sparkles } from "lucide-react";
+import { ChevronDown, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { useTranslation } from "@/lib/i18n/context";
 
@@ -23,7 +22,7 @@ function categoryId(category: string) {
 function scrollToCategory(id: string) {
     const el = document.getElementById(id);
     if (!el) return;
-    const headerOffset = 88; // fixed navbar (~72px) + breathing room
+    const headerOffset = 88;
     const top = el.getBoundingClientRect().top + window.scrollY - headerOffset;
     window.scrollTo({ top, behavior: "smooth" });
     window.history.replaceState(null, "", `#${id}`);
@@ -36,22 +35,21 @@ function FAQItemRow({ faq, defaultOpen = false }: { faq: FAQItem; defaultOpen?: 
         <details
             open={open}
             onToggle={(e) => setOpen((e.currentTarget as HTMLDetailsElement).open)}
-            className="group rounded-2xl border border-slate-200 bg-white shadow-sm open:border-cyan-200 open:shadow-[0_0_0_1px_rgba(6,182,212,0.12)] transition-colors duration-150"
+            className="group border-b border-[#E6E3DB] last:border-b-0 bg-white transition-colors"
         >
-            <summary className="flex cursor-pointer list-none items-start gap-3 p-5 sm:p-6 [&::-webkit-details-marker]:hidden">
-                <span className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-md bg-cyan-50 text-xs font-mono font-bold text-cyan-600 border border-cyan-100">
-                    ?
-                </span>
-                <h3 className="flex-1 text-base sm:text-lg font-semibold text-slate-900 leading-snug pr-2">
+            <summary className="flex cursor-pointer list-none items-start justify-between gap-4 p-5 sm:p-6 hover:bg-[#FAF9F6] transition-colors [&::-webkit-details-marker]:hidden">
+                <h3 className="flex-1 text-base font-semibold text-[#161614] leading-snug">
                     {faq.question}
                 </h3>
                 <ChevronDown
-                    className="mt-1 h-5 w-5 flex-shrink-0 text-slate-400 transition-transform duration-150 group-open:rotate-180 group-open:text-cyan-600"
-                    aria-hidden
+                    className="mt-0.5 h-5 w-5 shrink-0 text-[#78756C] transition-transform duration-150 group-open:rotate-180 group-open:text-[#161614]"
+                    aria-hidden="true"
                 />
             </summary>
-            <div className="border-t border-slate-100 px-5 sm:px-6 pb-5 sm:pb-6 pt-4">
-                <p className="pl-9 text-sm sm:text-base text-slate-600 leading-relaxed">{faq.answer}</p>
+            <div className="px-5 sm:px-6 pb-6 pt-0">
+                <p className="text-sm sm:text-[15px] text-[#57554E] leading-relaxed max-w-3xl">
+                    {faq.answer}
+                </p>
             </div>
         </details>
     );
@@ -124,61 +122,33 @@ export default function FAQClient() {
     ];
 
     const categories = Array.from(new Set(faqs.map((faq) => faq.category)));
+
     useEffect(() => {
         const hash = window.location.hash.replace(/^#/, "");
         if (!hash) return;
-        // Wait a tick so layout/sticky header settle
-        const t = window.setTimeout(() => scrollToCategory(hash), 50);
-        return () => window.clearTimeout(t);
+        const timer = window.setTimeout(() => scrollToCategory(hash), 50);
+        return () => window.clearTimeout(timer);
     }, []);
 
     return (
-        <div className="w-full bg-[#f8fafc] dark:bg-slate-800 text-slate-800 dark:text-white font-sans relative overflow-x-hidden py-8 px-4 sm:px-6 lg:px-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm mb-8">
-            <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.03)_1px,transparent_1px)] bg-[size:32px_32px] [mask-image:radial-gradient(ellipse_at_center,black_50%,transparent_100%)] pointer-events-none z-0" />
-            <div className="absolute top-[-5%] left-[10%] w-[500px] h-[500px] bg-cyan-500/[0.03] blur-[120px] rounded-full pointer-events-none z-0" />
-            <div className="absolute bottom-[-5%] right-[10%] w-[500px] h-[500px] bg-violet-500/[0.03] blur-[120px] rounded-full pointer-events-none z-0" />
-
-            <div className="relative z-10 max-w-5xl mx-auto space-y-12">
-                <motion.div
-                    initial={{ opacity: 0, y: -12 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.35, ease: "easeOut" }}
-                    className="space-y-4"
-                >
-                    <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/20 bg-cyan-500/5 text-cyan-600 text-xs font-mono tracking-widest uppercase">
-                        <Sparkles className="w-3.5 h-3.5 text-cyan-500" />
+        <div className="w-full min-h-screen bg-[#FAF9F6] text-[#161614] font-sans py-12 px-4 sm:px-6 lg:px-8">
+            <div className="max-w-5xl mx-auto space-y-12">
+                <header className="space-y-4 border-b border-[#D8D4C9] pb-10">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#78756C]">
                         Support Knowledge Base
-                    </div>
+                    </p>
+                    <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium tracking-[-0.02em] text-[#161614] leading-[1.08] [text-wrap:balance]">
+                        {t("faqPage.heroTitle", "Frequently Asked Questions")}
+                    </h1>
+                    <p className="text-base text-[#57554E] max-w-2xl leading-relaxed">
+                        {t("faqPage.heroSubtitle", "Everything you need to know about the tests, training benefits, and scoring.")}
+                    </p>
+                </header>
 
-                    <div className="flex items-start gap-4">
-                        <div
-                            className="hidden sm:flex p-3 rounded-2xl bg-cyan-50 border border-cyan-200 flex-shrink-0"
-                            style={{ boxShadow: "3px 6px 12px rgba(6,182,212,0.12)" }}
-                        >
-                            <HelpCircle className="w-7 h-7 text-cyan-600" />
-                        </div>
-                        <div>
-                            <h1 className="text-4xl md:text-5xl lg:text-6xl font-mono font-extrabold tracking-tight text-slate-900 dark:text-white uppercase leading-none">
-                                {t("faqPage.heroTitle", "Frequently Asked Questions")}
-                            </h1>
-                            <p className="mt-4 text-sm md:text-base text-slate-500 max-w-2xl leading-relaxed">
-                                {t("faqPage.heroSubtitle", "Everything you need to know about the tests, training benefits, and scoring.")}
-                            </p>
-                        </div>
-                    </div>
-                </motion.div>
-
-                <motion.nav
-                    initial={{ opacity: 0, y: 12 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.05, duration: 0.35, ease: "easeOut" }}
-                    aria-label="FAQ categories"
-                    className="rounded-3xl border border-slate-200 bg-white/90 backdrop-blur-md p-6 shadow-sm"
-                >
-                    <h2 className="text-xs font-mono font-bold tracking-widest text-slate-600 dark:text-slate-400 uppercase mb-4 flex items-center gap-2">
-                        <span className="w-1.5 h-1.5 rounded-full bg-cyan-500" />
+                <nav aria-label="FAQ categories" className="space-y-3">
+                    <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#78756C]">
                         {t("guide.jumpTo", "Jump to Category")}
-                    </h2>
+                    </p>
                     <div className="flex flex-wrap gap-2">
                         {categories.map((category) => {
                             const id = categoryId(category);
@@ -190,31 +160,25 @@ export default function FAQClient() {
                                         e.preventDefault();
                                         scrollToCategory(id);
                                     }}
-                                    className="px-3.5 py-2 rounded-xl bg-slate-50 border border-slate-200 text-sm font-medium text-slate-700 hover:bg-cyan-50 hover:border-cyan-200 hover:text-cyan-700 transition-colors duration-150"
+                                    className="px-3.5 py-2 rounded-lg bg-white border border-[#E6E3DB] text-xs font-semibold text-[#3F3E39] hover:border-[#161614] hover:text-[#161614] transition-colors"
                                 >
                                     {category}
                                 </a>
                             );
                         })}
                     </div>
-                </motion.nav>
+                </nav>
 
-                {categories.map((category, categoryIndex) => {
-                    const items = faqs.filter((faq) => faq.category === category);
-                    const id = categoryId(category);
-                    return (
-                        <div key={category} id={id} className="scroll-mt-28 space-y-4">
-                            <motion.div
-                                initial={{ opacity: 0, y: 16 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.08 + categoryIndex * 0.04, duration: 0.35, ease: "easeOut" }}
-                                className="space-y-4"
-                            >
-                                <h2 className="text-xl sm:text-2xl font-mono font-bold text-slate-900 flex items-center gap-3">
-                                    <span className="w-1.5 h-7 rounded-full bg-gradient-to-b from-cyan-500 to-violet-500" />
+                <div className="space-y-10">
+                    {categories.map((category, categoryIndex) => {
+                        const items = faqs.filter((faq) => faq.category === category);
+                        const id = categoryId(category);
+                        return (
+                            <section key={category} id={id} className="scroll-mt-28 space-y-4">
+                                <h2 className="font-serif text-2xl font-medium text-[#161614]">
                                     {category}
                                 </h2>
-                                <div className="space-y-3">
+                                <div className="border border-[#E6E3DB] rounded-2xl overflow-hidden bg-white">
                                     {items.map((faq, index) => (
                                         <FAQItemRow
                                             key={faq.question}
@@ -223,41 +187,34 @@ export default function FAQClient() {
                                         />
                                     ))}
                                 </div>
-                            </motion.div>
-                        </div>
-                    );
-                })}
+                            </section>
+                        );
+                    })}
+                </div>
 
-                <motion.div
-                    initial={{ opacity: 0, y: 12 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.35, duration: 0.35, ease: "easeOut" }}
-                    className="relative rounded-3xl border border-cyan-200/70 bg-white p-8 text-center overflow-hidden shadow-sm"
-                >
-                    <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/[0.06] via-transparent to-violet-500/[0.06] pointer-events-none" />
-                    <div className="relative">
-                        <HelpCircle className="w-10 h-10 text-cyan-600 mx-auto mb-4" />
-                        <h2 className="text-2xl font-mono font-bold text-slate-900 mb-3">Still Have Questions?</h2>
-                        <p className="text-slate-600 mb-6 max-w-xl mx-auto text-sm sm:text-base leading-relaxed">
-                            Didn&apos;t find what you&apos;re looking for? Shoot us a message. We actually read them all.
-                        </p>
-                        <div className="flex flex-wrap justify-center gap-3">
-                            <Link
-                                href={getLocalizedHref("/contact")}
-                                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-cyan-600 text-white text-sm font-mono font-semibold hover:bg-cyan-500 active:translate-y-0.5 transition-colors duration-150 shadow-[0_4px_12px_rgba(6,182,212,0.28)]"
-                            >
-                                {t("footer.contact", "Contact Support")}
-                                <ArrowRight className="w-4 h-4" />
-                            </Link>
-                            <Link
-                                href={getLocalizedHref("/blog")}
-                                className="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-slate-800 text-sm font-mono font-semibold border border-slate-300 hover:bg-slate-50 hover:border-slate-400 transition-colors duration-150"
-                            >
-                                {t("nav.blog", "Read Our Blog")}
-                            </Link>
-                        </div>
+                <section className="rounded-2xl border border-[#E6E3DB] bg-white p-8 sm:p-10 text-center space-y-4">
+                    <h2 className="font-serif text-2xl sm:text-3xl font-medium text-[#161614]">
+                        Still Have Questions?
+                    </h2>
+                    <p className="text-[#57554E] max-w-xl mx-auto text-sm sm:text-base leading-relaxed">
+                        Didn&apos;t find what you&apos;re looking for? Send us a message and we will get back to you.
+                    </p>
+                    <div className="flex flex-wrap justify-center gap-3 pt-2">
+                        <Link
+                            href={getLocalizedHref("/contact")}
+                            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-[#161614] hover:bg-[#2C2B27] text-[#FAF9F6] text-sm font-semibold transition-colors"
+                        >
+                            <span>{t("footer.contact", "Contact Support")}</span>
+                            <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                        </Link>
+                        <Link
+                            href={getLocalizedHref("/blog")}
+                            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-white text-[#161614] text-sm font-semibold border border-[#E6E3DB] hover:bg-[#FAF9F6] hover:border-[#161614] transition-colors"
+                        >
+                            {t("nav.blog", "Read Our Blog")}
+                        </Link>
                     </div>
-                </motion.div>
+                </section>
             </div>
         </div>
     );

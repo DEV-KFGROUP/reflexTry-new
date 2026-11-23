@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { headers } from 'next/headers';
 import MemoryHubClient from './MemoryHubClient';
 import { CategorySEOContent } from '@/components/CategorySEOContent';
 import { getCategoryMetadata } from '@/lib/seo-utils';
@@ -6,19 +7,23 @@ import { SchemaInjector } from "@/components/SchemaInjector";
 import { generateWebPageSchema, generateBreadcrumbStructuredData, generateFAQPageSchema } from "@/lib/structured-data";
 
 export async function generateMetadata(): Promise<Metadata> {
-    return getCategoryMetadata('memory');
+    const h = await headers();
+    return getCategoryMetadata('memory', h.get('x-locale') || 'en');
 }
 
-export default function MemoryHub() {
+export default async function MemoryHub() {
+    const h = await headers();
+    const locale = h.get('x-locale') || 'en';
     const breadcrumbSchema = generateBreadcrumbStructuredData([
         { name: "Home", url: "/" },
         { name: "Memory Games", url: "/memory" },
-    ]);
+    ], locale);
     
     const webPageSchema = generateWebPageSchema(
         "Memory Games - Test Your Working Memory",
         "Challenge your short-term and working memory with our collection of free cognitive tests. Sequence memory, visual recall, and more.",
-        "/memory"
+        "/memory",
+        locale
     );
 
     const faqSchema = generateFAQPageSchema([

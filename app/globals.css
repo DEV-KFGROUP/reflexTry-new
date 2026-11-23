@@ -14,7 +14,7 @@
 
 @custom-variant dark (&:where(.dark, .dark *));
 
-@theme {
+@theme inline {
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
   --color-card: hsl(var(--card));
@@ -54,7 +54,9 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-sm: calc(var(--radius) - 4px);
 
-  --font-sans: var(--font-outfit);
+  --font-sans: var(--font-plus-jakarta), system-ui, -apple-system, sans-serif;
+  --font-serif: var(--font-fraunces), Georgia, "Times New Roman", serif;
+  --font-mono: var(--font-ibm-plex-mono), ui-monospace, SFMono-Regular, monospace;
 
   --animate-accordion-down: accordion-down 0.2s ease-out;
   --animate-accordion-up: accordion-up 0.2s ease-out;
@@ -92,8 +94,7 @@
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--color-gray-800, currentColor);
-    /* Darker default border */
+    border-color: var(--color-stone-200, currentColor);
   }
 
   /* Ensure gradient text renders with WebKit background-clip across all browsers */
@@ -118,28 +119,28 @@
 }
 
 :root {
-  /* SIMPLE SOBER LIGHT THEME */
-  --background: 210 33% 98%;
-  --foreground: 222 47% 11%;
+  /* EDITORIAL WARM PAPER & INK THEME */
+  --background: 45 25% 97%;
+  --foreground: 40 7% 9%;
   --card: 0 0% 100%;
-  --card-foreground: 222 47% 11%;
+  --card-foreground: 40 7% 9%;
   --popover: 0 0% 100%;
-  --popover-foreground: 222 47% 11%;
-  --primary: 222 47% 11%;
-  --primary-foreground: 210 40% 98%;
-  --secondary: 210 24% 96%;
-  --secondary-foreground: 222 47% 11%;
-  --muted: 210 24% 96%;
-  --muted-foreground: 215 20% 38%;
+  --popover-foreground: 40 7% 9%;
+  --primary: 40 7% 9%;
+  --primary-foreground: 45 25% 97%;
+  --secondary: 40 16% 94%;
+  --secondary-foreground: 40 7% 9%;
+  --muted: 40 16% 94%;
+  --muted-foreground: 36 6% 36%;
 
-  --accent: 214 32% 91%;
-  --accent-foreground: 222 47% 11%;
+  --accent: 40 16% 92%;
+  --accent-foreground: 40 7% 9%;
   --destructive: 0 72% 51%;
-  --destructive-foreground: 210 40% 98%;
+  --destructive-foreground: 45 25% 97%;
 
-  --border: 214 24% 88%;
-  --input: 214 24% 88%;
-  --ring: 215 20% 65%;
+  --border: 38 15% 88%;
+  --input: 38 15% 88%;
+  --ring: 221 63% 40%;
   --radius: 0.75rem;
 
   /* Soft neutral semantic colors */
@@ -148,7 +149,7 @@
   --accuracy: 199 18% 40%;
   --memory: 215 18% 42%;
   --wisdom: 220 9% 46%;
-  --info: 217 85% 46%;
+  --info: 221 63% 40%;
 
   --arena-memory: 215 16% 47%;
   --arena-reflex: 221 39% 34%;
@@ -157,31 +158,31 @@
   --arena-accuracy: 199 18% 40%;
 
   --game-glow: 215 16% 47%;
-  --game-surface: 210 33% 98%;
-  --game-border: 214 24% 88%;
+  --game-surface: 45 25% 97%;
+  --game-border: 38 15% 88%;
   --game-highlight: 215 25% 27%;
 }
 
 .light {
-  --background: 210 33% 98%;
-  --foreground: 222 47% 11%;
+  --background: 45 25% 97%;
+  --foreground: 40 7% 9%;
   --card: 0 0% 100%;
-  --card-foreground: 222 47% 11%;
+  --card-foreground: 40 7% 9%;
   --popover: 0 0% 100%;
-  --popover-foreground: 222 47% 11%;
-  --primary: 222 47% 11%;
-  --primary-foreground: 210 40% 98%;
-  --secondary: 210 24% 96%;
-  --secondary-foreground: 222 47% 11%;
-  --muted: 210 24% 96%;
-  --muted-foreground: 215 20% 38%;
-  --accent: 214 32% 91%;
-  --accent-foreground: 222 47% 11%;
+  --popover-foreground: 40 7% 9%;
+  --primary: 40 7% 9%;
+  --primary-foreground: 45 25% 97%;
+  --secondary: 40 16% 94%;
+  --secondary-foreground: 40 7% 9%;
+  --muted: 40 16% 94%;
+  --muted-foreground: 36 6% 36%;
+  --accent: 40 16% 92%;
+  --accent-foreground: 40 7% 9%;
   --destructive: 0 84.2% 60.2%;
-  --destructive-foreground: 210 40% 98%;
-  --border: 214 24% 88%;
-  --input: 214 24% 88%;
-  --ring: 215 16% 47%;
+  --destructive-foreground: 45 25% 97%;
+  --border: 38 15% 88%;
+  --input: 38 15% 88%;
+  --ring: 221 63% 40%;
 }
 
 @layer base {
@@ -799,38 +800,52 @@
   animation: scanline 8s linear infinite;
 }
 /* Shared game shell: compact controls, a stable arena and readable state feedback. */
-.game-tool { border-radius: 16px; }
+.game-tool { border-radius: 16px; max-width: 100%; box-sizing: border-box; }
 .game-tool h1 { letter-spacing: -.02em; text-wrap: balance; overflow-wrap: anywhere; }
-.game-tool .game-columns, .game-tool .game-arena { min-width: 0; }
+.game-tool .game-columns, .game-tool .game-arena { min-width: 0; max-width: 100%; }
 .game-tool button:focus-visible, .game-tool input:focus-visible,
 .game-tool textarea:focus-visible, .game-tool select:focus-visible {
-  outline: 3px solid #2563eb;
-  outline-offset: 3px;
+  outline: 2px solid #1E40AF;
+  outline-offset: 2px;
 }
-.game-tool button { -webkit-tap-highlight-color: transparent; }
-.game-tool .game-difficulty button { min-height: 44px; }
+.game-tool button { -webkit-tap-highlight-color: transparent; touch-action: manipulation; }
+.game-tool .game-difficulty button { min-height: 48px; }
 .game-tool .game-difficulty p { font-size: .8125rem; line-height: 1.45; }
+.game-tool input[type="range"] { touch-action: pan-y; }
+.game-tool input[type="range"]::-webkit-slider-thumb {
+  width: 28px;
+  height: 28px;
+}
+.game-tool input[type="range"]::-moz-range-thumb {
+  width: 28px;
+  height: 28px;
+}
 .game-progress-feedback {
   position: relative; z-index: 1; width: 100%; max-width: 64rem;
   margin: 0 auto 1rem; padding: 1rem; border-radius: 12px;
-  background: #eff6ff; color: #1e3a8a; border: 1px solid #bfdbfe;
+  background: #F3F1EB; color: #161614; border: 1px solid #D8D4C9;
 }
-.dark .game-progress-feedback { background: #172554; color: #dbeafe; border-color: #1e40af; }
+.dark .game-progress-feedback { background: #1c1b18; color: #FAF9F6; border-color: #3f3e39; }
 /* Custom game panels share the same surface contract as the common dashboard. */
 .dark .game-tool .bg-white { background-color: #0f172a; }
 .dark .game-tool .bg-slate-50 { background-color: #1e293b; }
 .dark .game-tool .text-slate-800, .dark .game-tool .text-slate-900 { color: #f1f5f9; }
 .dark .game-tool .text-slate-700, .dark .game-tool .text-slate-600 { color: #cbd5e1; }
 .game-tool input, .game-tool textarea { max-width: 100%; }
+.game-tool canvas, .game-tool svg { max-width: 100%; }
 @media (max-width: 1023px) {
-  .game-tool { padding: 1rem .75rem; }
+  .game-tool { padding: 1rem .75rem; max-width: 100%; }
+  .game-tool > div { max-width: 100%; min-width: 0; }
+  .game-tool .inline-flex { max-width: 100%; min-width: 0; flex-wrap: wrap; gap: .75rem; }
+  .game-tool .inline-flex > div { min-width: 0; max-width: 100%; }
+  .game-tool .inline-flex p { letter-spacing: .08em; overflow-wrap: anywhere; }
   .game-tool h1 { font-size: 1.75rem; }
   .game-tool .game-columns { display: flex; flex-direction: column; gap: 1rem; }
   .game-tool .game-settings { display: contents; }
   .game-tool .game-difficulty { order: 0; width: 100%; padding: 0; border: 0; background: transparent; box-shadow: none; }
   .game-tool .game-difficulty > div:first-child { display: none; }
-  .game-tool .game-difficulty > div:last-child { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .375rem; }
-  .game-tool .game-difficulty button { padding: .5rem .25rem; border-width: 1px; border-radius: 8px; text-align: center; }
+  .game-tool .game-difficulty > div:last-child { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .5rem; }
+  .game-tool .game-difficulty button { min-height: 48px; padding: .625rem .375rem; border-width: 1.5px; border-radius: 12px; text-align: center; }
   .game-tool .game-difficulty button p,
   .game-tool .game-difficulty button span:not(:first-child),
   .game-tool .game-difficulty button svg,
@@ -839,15 +854,17 @@
   .game-tool .game-difficulty button > div > div,
   .game-tool .game-difficulty button > div > div > div { display: block; padding: 0; }
   .game-tool .game-difficulty button > div > div:last-child { display: block; }
-  .game-tool .game-difficulty button span { font-family: inherit; font-size: .75rem; letter-spacing: 0; }
-  .game-tool .game-arena { order: 1; width: 100%; }
-  .game-tool .game-stats { order: 2; width: 100%; }
-  .game-tool .game-arena > div:first-child { border-radius: 12px; min-height: min(440px, 66dvh); }
+  .game-tool .game-difficulty button span { font-family: inherit; font-size: .75rem; font-weight: 700; letter-spacing: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .game-tool .game-arena { order: 1; width: 100%; max-width: 100%; min-width: 0; }
+  .game-tool .game-stats { order: 2; width: 100%; max-width: 100%; min-width: 0; }
+  .game-tool .game-stats button { min-height: 48px; }
+  .game-tool .game-arena > div:first-child { border-radius: 16px; min-height: min(440px, 66dvh); max-width: 100%; }
   .game-tool .game-arena > div:first-child > div[class*="p-6"] { padding: 1rem; min-height: min(440px, 66dvh); }
   .game-tool .game-arena [class*="min-w-[280px]"] { min-width: 0; width: 100%; }
   .game-tool .game-arena [class*="text-6xl"] { font-size: 2.5rem; overflow-wrap: anywhere; }
+  .game-tool .game-arena button:not(.game-target-dot) { min-height: 44px; }
   .game-tool .game-arena button[class*="px-10"],
-  .game-tool .game-arena button[class*="px-12"] { padding-inline: 1rem; }
+  .game-tool .game-arena button[class*="px-12"] { padding-inline: 1.25rem; }
   .game-tool textarea, .game-tool input[type="text"], .game-tool input[type="number"] { font-size: 16px; scroll-margin-block: 6rem; }
 }
 @media (max-height: 500px) and (orientation: landscape) {
@@ -873,7 +890,7 @@
   .game-tool[data-idle="true"] .game-arena > div:first-child > div[class*="p-6"] { min-height: 0; }
   .game-tool[data-idle="true"] .game-arena h2 { display: none; }
   .game-tool[data-idle="true"] .game-arena p { font-size: .875rem; line-height: 1.5; }
-  .game-tool[data-idle="true"] .game-arena button { min-height: 44px; }
+  .game-tool[data-idle="true"] .game-arena button { min-height: 52px; }
 }
 @media (max-height: 500px) and (orientation: landscape) {
   .game-tool .game-difficulty > div:last-child { grid-template-columns: repeat(5, minmax(0, 1fr)); }

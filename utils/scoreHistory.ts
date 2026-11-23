@@ -1,85 +1,162 @@
-import { safeStorage } from './safeStorage';
+import { safeStorage } from "./safeStorage";
 
 export interface ScoreHistoryEntry {
-    toolId: string;
     value: number;
     unit: string;
-    timestamp: number;
     difficulty?: string;
+    timestamp: number;
     higherIsBetter?: boolean;
     inputMethod?: string;
     configuration?: string;
     duration?: number;
     accuracy?: number;
     eligible?: boolean;
-    outcome?: 'completed' | 'failed';
+    outcome?: string;
     version?: number;
 }
 
-type ResultDetails = Partial<Omit<ScoreHistoryEntry, 'toolId' | 'value' | 'unit' | 'timestamp' | 'difficulty'>>;
+export type ScoreHistoryMeta = Partial<
+    Omit<ScoreHistoryEntry, "value" | "unit" | "difficulty" | "timestamp">
+>;
+
+export interface ScoreStats {
+    best: number;
+    average: number;
+    count: number;
+    trend: "improving" | "declining" | "stable";
+    unit: string;
+    difficulty?: string;
+    inputMethod?: string;
+    configuration?: string;
+    higherIsBetter: boolean;
+}
+
+const HISTORY_PREFIX = "reflexhub_history_";
+const MAX_HISTORY_ENTRIES = 100;
+
+/**
+ * Determine trend direction by comparing the first half and second half
+ * of chronological score values.
+ */
+export function calculateTrend(
+    values: number[],
+    higherIsBetter = true
+): "improving" | "declining" | "stable" {
+    const clean = values.filter((v) => Number.isFinite(v));
+    if (clean.length < 2) return "stable";
+
+    const mid = Math.floor(clean.length / 2);
+    const firstHalf = clean.slice(0, mid);
+    const secondHalf = clean.slice(mid);
+
+    const firstAvg = firstHalf.reduce((sum, n) => sum + n, 0) / firstHalf.length;
+    const secondAvg = secondHalf.reduce((sum, n) => sum + n, 0) / secondHalf.length;
+
+    const delta = secondAvg - firstAvg;
+    const threshold = Math.max(0.01, Math.abs(firstAvg) * 0.03);
+    if (Math.abs(delta) < threshold) return "stable";
+
+    const improved = higherIsBetter ? delta > 0 : delta < 0;
+    return improved ? "improving" : "declining";
+}
 
 export const ScoreHistory = {
-    save(toolId: string, value: number, unit: string, difficulty?: string, details: ResultDetails = {}) {
-        if (typeof window === 'undefined' || !Number.isFinite(value)) return false;
-        const entry: ScoreHistoryEntry = { ...details, toolId, value, unit, timestamp: Date.now(), difficulty };
-        return safeStorage.setItem(`reflexhub_history_${toolId}`, JSON.stringify([...ScoreHistory.get(toolId), entry].slice(-100)));
-    },
     get(toolId: string): ScoreHistoryEntry[] {
+        const raw = safeStorage.getItem(`${HISTORY_PREFIX}${toolId}`);
+        if (!raw) return [];
         try {
-            const parsed: unknown = JSON.parse(safeStorage.getItem(`reflexhub_history_${toolId}`) || '[]');
-            return Array.isArray(parsed) ? parsed.filter(e => e && Number.isFinite(e.value) && typeof e.unit === 'string') : [];
-        } catch { return []; }
+            const parsed = JSON.parse(raw);
+            if (!Array.isArray(parsed)) return [];
+            return parsed.filter(
+                (entry): entry is ScoreHistoryEntry =>
+                    entry !== null &&
+                    typeof entry === "object" &&
+                    typeof entry.value === "number" &&
+                    Number.isFinite(entry.value) &&
+                    typeof entry.unit === "string"
+            );
+        } catch {
+            return [];
+        }
     },
+
+    save(
+        toolId: string,
+        value: number,
+        unit: string,
+        difficulty?: string,
+        meta?: ScoreHistoryMeta
+    ): boolean {
+        if (!toolId || !Number.isFinite(value) || value < 0) return false;
+
+        const existing = ScoreHistory.get(toolId);
+        const entry: ScoreHistoryEntry = {
+            value,
+            unit,
+            difficulty,
+            timestamp: Date.now(),
+            ...meta,
+        };
+
+        const bounded = [...existing, entry].slice(-MAX_HISTORY_ENTRIES);
+        return safeStorage.setItem(
+            `${HISTORY_PREFIX}${toolId}`,
+            JSON.stringify(bounded)
+        );
+    },
+
     getAll(): Record<string, ScoreHistoryEntry[]> {
-        const history: Record<string, ScoreHistoryEntry[]> = {};
-        try {
-            if (typeof window === 'undefined') return history;
-            for (let i = 0; i < localStorage.length; i++) {
-                const key = localStorage.key(i);
-                if (key?.startsWith('reflexhub_history_')) {
-                    const toolId = key.slice('reflexhub_history_'.length);
-                    history[toolId] = ScoreHistory.get(toolId);
-                }
+        const all: Record<string, ScoreHistoryEntry[]> = {};
+        const keys = safeStorage.keys();
+        for (const key of keys) {
+            if (!key.startsWith(HISTORY_PREFIX)) continue;
+            const toolId = key.slice(HISTORY_PREFIX.length);
+            if (!toolId) continue;
+            const entries = ScoreHistory.get(toolId);
+            if (entries.length > 0) {
+                all[toolId] = entries;
             }
-        } catch { /* Storage can be unavailable. */ }
-        return history;
+        }
+        return all;
     },
-    clear(toolId?: string) {
-        if (toolId) safeStorage.removeItem(`reflexhub_history_${toolId}`);
-        else Object.keys(ScoreHistory.getAll()).forEach(id => safeStorage.removeItem(`reflexhub_history_${id}`));
-    },
-    getStats(toolId: string, configuration?: string) {
-        const all = ScoreHistory.get(toolId).filter(e => e.eligible !== false);
-        const latest = all.at(-1);
-        if (!latest) return null;
-        const group = configuration ?? latest.configuration;
-        const history = all.filter(e => group ? e.configuration === group : e.difficulty === latest.difficulty && e.unit === latest.unit);
-        if (!history.length) return null;
-        const values = history.map(e => e.value);
-        const basis = history.at(-1)!;
-        const higherIsBetter = basis.higherIsBetter ?? basis.unit !== 'ms';
+
+    getStats(toolId: string, configuration?: string): ScoreStats | null {
+        const entries = ScoreHistory.get(toolId).filter((e) => e.eligible !== false);
+        if (entries.length === 0) return null;
+
+        const targetConfig =
+            configuration !== undefined
+                ? configuration
+                : entries[entries.length - 1].configuration;
+
+        const comparable = entries.filter((e) => e.configuration === targetConfig);
+        if (comparable.length === 0) return null;
+
+        const latest = comparable[comparable.length - 1];
+        const higherIsBetter =
+            latest.higherIsBetter !== undefined
+                ? latest.higherIsBetter
+                : latest.unit !== "ms";
+
+        const values = comparable.map((e) => e.value);
+        const best = higherIsBetter ? Math.max(...values) : Math.min(...values);
+        const average = values.reduce((sum, n) => sum + n, 0) / values.length;
+        const trend = calculateTrend(values, higherIsBetter);
+
         return {
-            count: history.length,
-            best: higherIsBetter ? Math.max(...values) : Math.min(...values),
-            worst: higherIsBetter ? Math.min(...values) : Math.max(...values),
-            average: values.reduce((a, b) => a + b, 0) / values.length,
-            recent: history.slice(-10),
-            trend: calculateTrend(values, higherIsBetter),
-            configuration: group,
-            difficulty: basis.difficulty,
-            inputMethod: basis.inputMethod,
-            unit: basis.unit,
+            best,
+            average,
+            count: comparable.length,
+            trend,
+            unit: latest.unit,
+            difficulty: latest.difficulty,
+            inputMethod: latest.inputMethod,
+            configuration: targetConfig,
+            higherIsBetter,
         };
     },
-};
 
-export function calculateTrend(values: number[], higherIsBetter = true): 'improving' | 'declining' | 'stable' {
-    if (values.length < 5) return 'stable';
-    const middle = Math.floor(values.length / 2);
-    const avg = (xs: number[]) => xs.reduce((a, b) => a + b, 0) / xs.length;
-    const first = avg(values.slice(0, middle));
-    const second = avg(values.slice(middle));
-    const diff = ((second - first) / Math.max(Math.abs(first), 0.001)) * 100;
-    if (Math.abs(diff) < 5) return 'stable';
-    return (higherIsBetter ? diff > 0 : diff < 0) ? 'improving' : 'declining';
-}
+    clear(toolId: string): boolean {
+        return safeStorage.removeItem(`${HISTORY_PREFIX}${toolId}`);
+    },
+};

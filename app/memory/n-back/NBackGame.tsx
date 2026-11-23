@@ -288,7 +288,7 @@ export default function NBackGame() {
       subtitle="WORKING MEMORY"
       difficultySelector={difficultySelector}
       stats={stats}
-      arenaHeaderLeft={`ARENA // ${diff.label.toUpperCase()}`}
+      arenaHeaderLeft={`${diff.label} Mode`}
       arenaHeaderRight={`${diff.n}-BACK MATCH`}
       soundEnabled={!isMuted}
       onToggleSound={toggleMute}
@@ -306,15 +306,15 @@ export default function NBackGame() {
             <div className="game-start-icon w-20 h-20 bg-indigo-50 dark:bg-indigo-900/20 rounded-full flex items-center justify-center mb-6">
               <Layers className="w-10 h-10 text-indigo-500" />
             </div>
-            <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-wider mb-4">
+            <h2 className="text-2xl font-black text-[#161614] dark:text-white uppercase tracking-wider mb-4">
               N-Back Memory Test
             </h2>
-            <p className="text-sm text-slate-500 dark:text-slate-400 mb-8 leading-relaxed">
+            <p className="text-sm text-[#78756C] dark:text-slate-400 mb-8 leading-relaxed">
               Letters appear one at a time. Press Match (or Space) when the current letter matches the one {diff.n} step{diff.n > 1 ? "s" : ""} back.
             </p>
             <button
               onClick={startGame}
-              className="w-full sm:w-auto px-12 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold uppercase tracking-widest text-sm transition-all shadow-lg hover:shadow-indigo-500/20 flex items-center justify-center gap-3"
+              className="w-full sm:w-auto px-12 py-4 bg-[#161614] hover:bg-[#2C2B27] text-[#FAF9F6] rounded-xl font-bold uppercase tracking-widest text-sm transition-all shadow-lg hover: flex items-center justify-center gap-3"
             >
               <Play className="w-4 h-4 fill-current" />
               Play
@@ -331,11 +331,11 @@ export default function NBackGame() {
             className="w-full flex flex-col items-center justify-center p-4 max-w-2xl"
           >
             <div className="w-full max-w-xs mb-6">
-              <div className="flex justify-between text-xs font-mono uppercase tracking-widest text-slate-600 dark:text-slate-400 mb-2">
+              <div className="flex justify-between text-xs font-mono uppercase tracking-widest text-[#57554E] dark:text-slate-400 mb-2">
                 <span>{diff.n}-Back</span>
                 <span>{trial}/{diff.trials}</span>
               </div>
-              <div className="h-1.5 rounded-full bg-slate-100 dark:bg-slate-800 overflow-hidden">
+              <div className="h-1.5 rounded-full bg-[#F3F1EB] dark:bg-slate-800 overflow-hidden">
                 <div
                   className="h-full rounded-full bg-indigo-500 transition-all duration-300"
                   style={{ width: `${Math.min(100, (trial / diff.trials) * 100)}%` }}
@@ -355,18 +355,18 @@ export default function NBackGame() {
                   ? "bg-emerald-50 dark:bg-emerald-900/30 border-emerald-300 dark:border-emerald-700 shadow-[0_0_40px_rgba(16,185,129,0.25)]"
                   : feedback === "miss" || feedback === "false"
                     ? "bg-rose-50 dark:bg-rose-900/30 border-rose-300 dark:border-rose-700 shadow-[0_0_40px_rgba(244,63,94,0.25)]"
-                    : "bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900 border-slate-200 dark:border-slate-700 shadow-[0_12px_40px_rgba(15,23,42,0.08)]"
+                    : "bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-800 dark:to-slate-900 border-[#E6E3DB] dark:border-slate-700 shadow-[0_12px_40px_rgba(15,23,42,0.08)]"
               }`}
             >
-              <span className="absolute top-3 left-4 text-[10px] font-mono text-slate-500 dark:text-slate-400 tracking-widest">STIM</span>
-              <span className="text-7xl md:text-8xl font-black text-slate-900 dark:text-white tracking-tight tabular-nums">
+              <span className="absolute top-3 left-4 text-[10px] font-mono text-[#78756C] dark:text-slate-400 tracking-widest">STIM</span>
+              <span className="text-7xl md:text-8xl font-black text-[#161614] dark:text-white tracking-tight tabular-nums">
                 {currentLetter || "·"}
               </span>
             </motion.div>
             <button
               onClick={handleMatch}
               disabled={trial <= diff.n}
-              className="w-full max-w-xs py-5 bg-indigo-600 hover:bg-indigo-700 disabled:opacity-40 disabled:cursor-not-allowed text-white rounded-2xl font-black text-xl tracking-widest uppercase transition-all hover:scale-[1.02] active:scale-95 shadow-lg shadow-indigo-500/30"
+              className="w-full max-w-xs py-5 bg-indigo-600 hover:bg-indigo-700 disabled:opacity-40 disabled:cursor-not-allowed text-white rounded-2xl font-black text-xl tracking-widest uppercase transition-all hover:scale-[1.02] active:scale-95 shadow-lg"
             >
               Match
             </button>
@@ -394,14 +394,14 @@ export default function NBackGame() {
             <div className="w-20 h-20 bg-rose-50 dark:bg-rose-900/20 rounded-full flex items-center justify-center mb-6">
               <Trophy className="w-10 h-10 text-rose-500" />
             </div>
-            <h2 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-widest mb-2">
+            <h2 className="text-3xl font-black text-[#161614] dark:text-white uppercase tracking-widest mb-2">
               Calibration Complete
             </h2>
-            <div className="text-slate-500 mb-1 text-sm uppercase tracking-widest">
-              Hits: <span className="text-xl font-black text-slate-900 dark:text-white ml-2">{score}</span>
+            <div className="text-[#78756C] mb-1 text-sm uppercase tracking-widest">
+              Hits: <span className="text-xl font-black text-[#161614] dark:text-white ml-2">{score}</span>
             </div>
-            <div className="text-slate-500 mb-2 text-sm uppercase tracking-widest">
-              Accuracy: <span className="text-lg font-black text-slate-900 dark:text-white ml-2">{accuracy}%</span>
+            <div className="text-[#78756C] mb-2 text-sm uppercase tracking-widest">
+              Accuracy: <span className="text-lg font-black text-[#161614] dark:text-white ml-2">{accuracy}%</span>
             </div>
             {score > 0 && score >= highScores[diffId] ? (
               <p className="text-amber-500 font-bold text-xs uppercase tracking-widest mb-6">New Record!</p>
@@ -411,14 +411,14 @@ export default function NBackGame() {
             <div className="flex gap-4">
               <button
                 onClick={startGame}
-                className="flex items-center gap-2 px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold uppercase tracking-widest text-xs transition-all shadow-lg hover:shadow-indigo-500/20"
+                className="flex items-center gap-2 px-8 py-4 bg-[#161614] hover:bg-[#2C2B27] text-[#FAF9F6] rounded-xl font-bold uppercase tracking-widest text-xs transition-all shadow-lg hover:"
               >
                 <RotateCcw className="w-4 h-4" />
                 Recalibrate
               </button>
               <button
                 onClick={() => setGameState("select")}
-                className="flex items-center gap-2 px-8 py-4 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-900 dark:text-white rounded-xl font-bold uppercase tracking-widest text-xs transition-all"
+                className="flex items-center gap-2 px-8 py-4 bg-[#F3F1EB] hover:bg-[#E6E3DB] dark:bg-slate-800 dark:hover:bg-slate-700 text-[#161614] dark:text-white rounded-xl font-bold uppercase tracking-widest text-xs transition-all"
               >
                 Menu
               </button>

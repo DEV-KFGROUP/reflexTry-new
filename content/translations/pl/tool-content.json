@@ -5303,5 +5303,905 @@
         "answer": "Kolejna liczba, którą musisz kliknąć."
       }
     ]
+  },
+  "gravity-lab": {
+    "description": [
+      {
+        "title": "O module: Laboratorium Grawitacji i Orbit",
+        "content": "Porównaj spadek swobodny na Ziemi, Księżycu, Marsie i Jowiszu lub wejdź na orbitę. Zamień podręcznikowe wzory fizyczne i matematyczne w interaktywne doświadczenia. Zmieniaj suwaki, umieszczaj satelity na orbicie, odbijaj laser i równoważ dźwignie w przeglądarce."
+      },
+      {
+        "title": "Mechanika i podstawy naukowe",
+        "content": "Interaktywne symulatory 2D swobodnego spadku, prędkości orbitalnej, prawa odbicia światła, rzutu ukośnego i równowagi momentów sił. Równania na żywo: Obserwuj aktualizację wzorów przy zmianie parametrów. Intuicja wizualna: Analizuj wektory, normalne luster i ślady toru lotu."
+      },
+      {
+        "title": "Punktacja i metryki na żywo",
+        "content": "Każda symulacja łączy natychmiastowy obraz z przejrzystymi pomiarami liczbowymi. Tryby wyzwań: Sprawdź wiedzę w punktowanych misjach edukacyjnych."
+      },
+      {
+        "title": "Zastosowanie w szkole i pracy",
+        "content": "Tak. Interfejs dostosowuje się do laptopów, Chromebooków, tabletów i tablic interaktywnych. Dziesięć do piętnastu minut kilka razy w tygodniu buduje trwałą intuicję i precyzję."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Konfiguracja i sterowanie",
+        "steps": [
+          "Zacznij na standardowych ustawieniach, aby uczciwie zmierzyć obecny poziom.",
+          "Zmieniaj tylko jeden parametr naraz, aby wyraźnie widzieć związek przyczynowy."
+        ]
+      },
+      {
+        "title": "Przebieg sesji",
+        "steps": [
+          "Porównaj spadek swobodny na Ziemi, Księżycu, Marsie i Jowiszu lub wejdź na orbitę.",
+          "Analizuj wzory, dokładność i czasy w milisekundach po każdej rundzie."
+        ]
+      },
+      {
+        "title": "Analiza wyników",
+        "steps": [
+          "Tak. Ukończone sesje automatycznie trafiają do lokalnego panelu Statystyk.",
+          "Skupione 10-minutowe bloki są skuteczniejsze niż długie męczące maratony."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Zmieniaj jedną zmienną naraz",
+        "content": "Zmieniaj tylko jeden parametr naraz, aby wyraźnie widzieć związek przyczynowy."
+      },
+      {
+        "title": "Najpierw precyzja, potem tempo",
+        "content": "Analizuj wzory, dokładność i czasy w milisekundach po każdej rundzie."
+      },
+      {
+        "title": "Śledź postępy w kolejnych dniach",
+        "content": "Dziesięć do piętnastu minut kilka razy w tygodniu buduje trwałą intuicję i precyzję."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Czy ten moduł jest całkowicie darmowy?",
+        "answer": "Tak. Wszystkie narzędzia Reflextry działają w przeglądarce bez rejestracji i opłat."
+      },
+      {
+        "question": "Czy działa na szkolnych laptopach i tabletach?",
+        "answer": "Tak. Interfejs dostosowuje się do laptopów, Chromebooków, tabletów i tablic interaktywnych."
+      },
+      {
+        "question": "Czy moje najlepsze wyniki są zapisywane?",
+        "answer": "Tak. Ukończone sesje automatycznie trafiają do lokalnego panelu Statystyk."
+      },
+      {
+        "question": "Jak często warto ćwiczyć?",
+        "answer": "Krótkie 10-minutowe sesje 3–5 razy w tygodniu przynoszą trwały, mierzalny postęp."
+      }
+    ]
+  },
+  "laser-reflection": {
+    "description": [
+      {
+        "title": "O module: Optyka Odbicia Lasera",
+        "content": "Obracaj lustra, kieruj wiązkę lasera na czujnik i sprawdzaj prawo odbicia. Zamień podręcznikowe wzory fizyczne i matematyczne w interaktywne doświadczenia. Zmieniaj suwaki, umieszczaj satelity na orbicie, odbijaj laser i równoważ dźwignie w przeglądarce."
+      },
+      {
+        "title": "Mechanika i podstawy naukowe",
+        "content": "Interaktywne symulatory 2D swobodnego spadku, prędkości orbitalnej, prawa odbicia światła, rzutu ukośnego i równowagi momentów sił. Równania na żywo: Obserwuj aktualizację wzorów przy zmianie parametrów. Intuicja wizualna: Analizuj wektory, normalne luster i ślady toru lotu."
+      },
+      {
+        "title": "Punktacja i metryki na żywo",
+        "content": "Każda symulacja łączy natychmiastowy obraz z przejrzystymi pomiarami liczbowymi. Tryby wyzwań: Sprawdź wiedzę w punktowanych misjach edukacyjnych."
+      },
+      {
+        "title": "Zastosowanie w szkole i pracy",
+        "content": "Tak. Interfejs dostosowuje się do laptopów, Chromebooków, tabletów i tablic interaktywnych. Dziesięć do piętnastu minut kilka razy w tygodniu buduje trwałą intuicję i precyzję."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Konfiguracja i sterowanie",
+        "steps": [
+          "Zacznij na standardowych ustawieniach, aby uczciwie zmierzyć obecny poziom.",
+          "Zmieniaj tylko jeden parametr naraz, aby wyraźnie widzieć związek przyczynowy."
+        ]
+      },
+      {
+        "title": "Przebieg sesji",
+        "steps": [
+          "Obracaj lustra, kieruj wiązkę lasera na czujnik i sprawdzaj prawo odbicia.",
+          "Analizuj wzory, dokładność i czasy w milisekundach po każdej rundzie."
+        ]
+      },
+      {
+        "title": "Analiza wyników",
+        "steps": [
+          "Tak. Ukończone sesje automatycznie trafiają do lokalnego panelu Statystyk.",
+          "Skupione 10-minutowe bloki są skuteczniejsze niż długie męczące maratony."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Zmieniaj jedną zmienną naraz",
+        "content": "Zmieniaj tylko jeden parametr naraz, aby wyraźnie widzieć związek przyczynowy."
+      },
+      {
+        "title": "Najpierw precyzja, potem tempo",
+        "content": "Analizuj wzory, dokładność i czasy w milisekundach po każdej rundzie."
+      },
+      {
+        "title": "Śledź postępy w kolejnych dniach",
+        "content": "Dziesięć do piętnastu minut kilka razy w tygodniu buduje trwałą intuicję i precyzję."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Czy ten moduł jest całkowicie darmowy?",
+        "answer": "Tak. Wszystkie narzędzia Reflextry działają w przeglądarce bez rejestracji i opłat."
+      },
+      {
+        "question": "Czy działa na szkolnych laptopach i tabletach?",
+        "answer": "Tak. Interfejs dostosowuje się do laptopów, Chromebooków, tabletów i tablic interaktywnych."
+      },
+      {
+        "question": "Czy moje najlepsze wyniki są zapisywane?",
+        "answer": "Tak. Ukończone sesje automatycznie trafiają do lokalnego panelu Statystyk."
+      },
+      {
+        "question": "Jak często warto ćwiczyć?",
+        "answer": "Krótkie 10-minutowe sesje 3–5 razy w tygodniu przynoszą trwały, mierzalny postęp."
+      }
+    ]
+  },
+  "projectile-cannon": {
+    "description": [
+      {
+        "title": "O module: Fizyka Działa Balistycznego",
+        "content": "Dobierz kąt, prędkość, wiatr i grawitację, by trafić cele po paraboli. Zamień podręcznikowe wzory fizyczne i matematyczne w interaktywne doświadczenia. Zmieniaj suwaki, umieszczaj satelity na orbicie, odbijaj laser i równoważ dźwignie w przeglądarce."
+      },
+      {
+        "title": "Mechanika i podstawy naukowe",
+        "content": "Interaktywne symulatory 2D swobodnego spadku, prędkości orbitalnej, prawa odbicia światła, rzutu ukośnego i równowagi momentów sił. Równania na żywo: Obserwuj aktualizację wzorów przy zmianie parametrów. Intuicja wizualna: Analizuj wektory, normalne luster i ślady toru lotu."
+      },
+      {
+        "title": "Punktacja i metryki na żywo",
+        "content": "Każda symulacja łączy natychmiastowy obraz z przejrzystymi pomiarami liczbowymi. Tryby wyzwań: Sprawdź wiedzę w punktowanych misjach edukacyjnych."
+      },
+      {
+        "title": "Zastosowanie w szkole i pracy",
+        "content": "Tak. Interfejs dostosowuje się do laptopów, Chromebooków, tabletów i tablic interaktywnych. Dziesięć do piętnastu minut kilka razy w tygodniu buduje trwałą intuicję i precyzję."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Konfiguracja i sterowanie",
+        "steps": [
+          "Zacznij na standardowych ustawieniach, aby uczciwie zmierzyć obecny poziom.",
+          "Zmieniaj tylko jeden parametr naraz, aby wyraźnie widzieć związek przyczynowy."
+        ]
+      },
+      {
+        "title": "Przebieg sesji",
+        "steps": [
+          "Dobierz kąt, prędkość, wiatr i grawitację, by trafić cele po paraboli.",
+          "Analizuj wzory, dokładność i czasy w milisekundach po każdej rundzie."
+        ]
+      },
+      {
+        "title": "Analiza wyników",
+        "steps": [
+          "Tak. Ukończone sesje automatycznie trafiają do lokalnego panelu Statystyk.",
+          "Skupione 10-minutowe bloki są skuteczniejsze niż długie męczące maratony."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Zmieniaj jedną zmienną naraz",
+        "content": "Zmieniaj tylko jeden parametr naraz, aby wyraźnie widzieć związek przyczynowy."
+      },
+      {
+        "title": "Najpierw precyzja, potem tempo",
+        "content": "Analizuj wzory, dokładność i czasy w milisekundach po każdej rundzie."
+      },
+      {
+        "title": "Śledź postępy w kolejnych dniach",
+        "content": "Dziesięć do piętnastu minut kilka razy w tygodniu buduje trwałą intuicję i precyzję."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Czy ten moduł jest całkowicie darmowy?",
+        "answer": "Tak. Wszystkie narzędzia Reflextry działają w przeglądarce bez rejestracji i opłat."
+      },
+      {
+        "question": "Czy działa na szkolnych laptopach i tabletach?",
+        "answer": "Tak. Interfejs dostosowuje się do laptopów, Chromebooków, tabletów i tablic interaktywnych."
+      },
+      {
+        "question": "Czy moje najlepsze wyniki są zapisywane?",
+        "answer": "Tak. Ukończone sesje automatycznie trafiają do lokalnego panelu Statystyk."
+      },
+      {
+        "question": "Jak często warto ćwiczyć?",
+        "answer": "Krótkie 10-minutowe sesje 3–5 razy w tygodniu przynoszą trwały, mierzalny postęp."
+      }
+    ]
+  },
+  "torque-balance": {
+    "description": [
+      {
+        "title": "O module: Równowaga Momentu i Dźwigni",
+        "content": "Równoważ ciężarki na huśtawce, stosując równania momentu siły. Zamień podręcznikowe wzory fizyczne i matematyczne w interaktywne doświadczenia. Zmieniaj suwaki, umieszczaj satelity na orbicie, odbijaj laser i równoważ dźwignie w przeglądarce."
+      },
+      {
+        "title": "Mechanika i podstawy naukowe",
+        "content": "Interaktywne symulatory 2D swobodnego spadku, prędkości orbitalnej, prawa odbicia światła, rzutu ukośnego i równowagi momentów sił. Równania na żywo: Obserwuj aktualizację wzorów przy zmianie parametrów. Intuicja wizualna: Analizuj wektory, normalne luster i ślady toru lotu."
+      },
+      {
+        "title": "Punktacja i metryki na żywo",
+        "content": "Każda symulacja łączy natychmiastowy obraz z przejrzystymi pomiarami liczbowymi. Tryby wyzwań: Sprawdź wiedzę w punktowanych misjach edukacyjnych."
+      },
+      {
+        "title": "Zastosowanie w szkole i pracy",
+        "content": "Tak. Interfejs dostosowuje się do laptopów, Chromebooków, tabletów i tablic interaktywnych. Dziesięć do piętnastu minut kilka razy w tygodniu buduje trwałą intuicję i precyzję."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Konfiguracja i sterowanie",
+        "steps": [
+          "Zacznij na standardowych ustawieniach, aby uczciwie zmierzyć obecny poziom.",
+          "Zmieniaj tylko jeden parametr naraz, aby wyraźnie widzieć związek przyczynowy."
+        ]
+      },
+      {
+        "title": "Przebieg sesji",
+        "steps": [
+          "Równoważ ciężarki na huśtawce, stosując równania momentu siły.",
+          "Analizuj wzory, dokładność i czasy w milisekundach po każdej rundzie."
+        ]
+      },
+      {
+        "title": "Analiza wyników",
+        "steps": [
+          "Tak. Ukończone sesje automatycznie trafiają do lokalnego panelu Statystyk.",
+          "Skupione 10-minutowe bloki są skuteczniejsze niż długie męczące maratony."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Zmieniaj jedną zmienną naraz",
+        "content": "Zmieniaj tylko jeden parametr naraz, aby wyraźnie widzieć związek przyczynowy."
+      },
+      {
+        "title": "Najpierw precyzja, potem tempo",
+        "content": "Analizuj wzory, dokładność i czasy w milisekundach po każdej rundzie."
+      },
+      {
+        "title": "Śledź postępy w kolejnych dniach",
+        "content": "Dziesięć do piętnastu minut kilka razy w tygodniu buduje trwałą intuicję i precyzję."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Czy ten moduł jest całkowicie darmowy?",
+        "answer": "Tak. Wszystkie narzędzia Reflextry działają w przeglądarce bez rejestracji i opłat."
+      },
+      {
+        "question": "Czy działa na szkolnych laptopach i tabletach?",
+        "answer": "Tak. Interfejs dostosowuje się do laptopów, Chromebooków, tabletów i tablic interaktywnych."
+      },
+      {
+        "question": "Czy moje najlepsze wyniki są zapisywane?",
+        "answer": "Tak. Ukończone sesje automatycznie trafiają do lokalnego panelu Statystyk."
+      },
+      {
+        "question": "Jak często warto ćwiczyć?",
+        "answer": "Krótkie 10-minutowe sesje 3–5 razy w tygodniu przynoszą trwały, mierzalny postęp."
+      }
+    ]
+  },
+  "solar-gravity-3d": {
+    "description": [
+      {
+        "title": "O module: Symulator 3D Grawitacji Słonecznej",
+        "content": "Badaj studnię grawitacyjną 3D i umieszczaj własne satelity na orbicie. Dzięki fizyce WebGL 3D możesz obracać kamerę wokół zakrzywionej siatki czasoprzestrzeni, wystrzeliwać własne satelity i trafiać drony 3D na planie bliskim, średnim i dalekim."
+      },
+      {
+        "title": "Mechanika i podstawy naukowe",
+        "content": "Sprzętowo przyspieszane symulacje 3D mechaniki orbitalnej oraz celności przestrzennej w głębi osi Z. WebGL 3D w czasie rzeczywistym: Interaktywna kamera 3D i dynamiczne oświetlenie. Percepcja głębi: Trenuj ocenę przestrzeni na trzech płaszczyznach głębi."
+      },
+      {
+        "title": "Punktacja i metryki na żywo",
+        "content": "Każda symulacja łączy natychmiastowy obraz z przejrzystymi pomiarami liczbowymi. Bez pobierania: Adaptacyjne renderowanie działa płynnie na laptopach."
+      },
+      {
+        "title": "Zastosowanie w szkole i pracy",
+        "content": "Tak. Interfejs dostosowuje się do laptopów, Chromebooków, tabletów i tablic interaktywnych. Dziesięć do piętnastu minut kilka razy w tygodniu buduje trwałą intuicję i precyzję."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Konfiguracja i sterowanie",
+        "steps": [
+          "Zacznij na standardowych ustawieniach, aby uczciwie zmierzyć obecny poziom.",
+          "Zmieniaj tylko jeden parametr naraz, aby wyraźnie widzieć związek przyczynowy."
+        ]
+      },
+      {
+        "title": "Przebieg sesji",
+        "steps": [
+          "Badaj studnię grawitacyjną 3D i umieszczaj własne satelity na orbicie.",
+          "Analizuj wzory, dokładność i czasy w milisekundach po każdej rundzie."
+        ]
+      },
+      {
+        "title": "Analiza wyników",
+        "steps": [
+          "Tak. Ukończone sesje automatycznie trafiają do lokalnego panelu Statystyk.",
+          "Skupione 10-minutowe bloki są skuteczniejsze niż długie męczące maratony."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Zmieniaj jedną zmienną naraz",
+        "content": "Zmieniaj tylko jeden parametr naraz, aby wyraźnie widzieć związek przyczynowy."
+      },
+      {
+        "title": "Najpierw precyzja, potem tempo",
+        "content": "Analizuj wzory, dokładność i czasy w milisekundach po każdej rundzie."
+      },
+      {
+        "title": "Śledź postępy w kolejnych dniach",
+        "content": "Dziesięć do piętnastu minut kilka razy w tygodniu buduje trwałą intuicję i precyzję."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Czy ten moduł jest całkowicie darmowy?",
+        "answer": "Tak. Wszystkie narzędzia Reflextry działają w przeglądarce bez rejestracji i opłat."
+      },
+      {
+        "question": "Czy działa na szkolnych laptopach i tabletach?",
+        "answer": "Tak. Interfejs dostosowuje się do laptopów, Chromebooków, tabletów i tablic interaktywnych."
+      },
+      {
+        "question": "Czy moje najlepsze wyniki są zapisywane?",
+        "answer": "Tak. Ukończone sesje automatycznie trafiają do lokalnego panelu Statystyk."
+      },
+      {
+        "question": "Jak często warto ćwiczyć?",
+        "answer": "Krótkie 10-minutowe sesje 3–5 razy w tygodniu przynoszą trwały, mierzalny postęp."
+      }
+    ]
+  },
+  "spatial-aim-3d": {
+    "description": [
+      {
+        "title": "O module: Arena Celności Przestrzennej 3D",
+        "content": "Trafiaj drony 3D pojawiające się na bliskim, średnim i dalekim planie. Dzięki fizyce WebGL 3D możesz obracać kamerę wokół zakrzywionej siatki czasoprzestrzeni, wystrzeliwać własne satelity i trafiać drony 3D na planie bliskim, średnim i dalekim."
+      },
+      {
+        "title": "Mechanika i podstawy naukowe",
+        "content": "Sprzętowo przyspieszane symulacje 3D mechaniki orbitalnej oraz celności przestrzennej w głębi osi Z. WebGL 3D w czasie rzeczywistym: Interaktywna kamera 3D i dynamiczne oświetlenie. Percepcja głębi: Trenuj ocenę przestrzeni na trzech płaszczyznach głębi."
+      },
+      {
+        "title": "Punktacja i metryki na żywo",
+        "content": "Każda symulacja łączy natychmiastowy obraz z przejrzystymi pomiarami liczbowymi. Bez pobierania: Adaptacyjne renderowanie działa płynnie na laptopach."
+      },
+      {
+        "title": "Zastosowanie w szkole i pracy",
+        "content": "Tak. Interfejs dostosowuje się do laptopów, Chromebooków, tabletów i tablic interaktywnych. Dziesięć do piętnastu minut kilka razy w tygodniu buduje trwałą intuicję i precyzję."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Konfiguracja i sterowanie",
+        "steps": [
+          "Zacznij na standardowych ustawieniach, aby uczciwie zmierzyć obecny poziom.",
+          "Zmieniaj tylko jeden parametr naraz, aby wyraźnie widzieć związek przyczynowy."
+        ]
+      },
+      {
+        "title": "Przebieg sesji",
+        "steps": [
+          "Trafiaj drony 3D pojawiające się na bliskim, średnim i dalekim planie.",
+          "Analizuj wzory, dokładność i czasy w milisekundach po każdej rundzie."
+        ]
+      },
+      {
+        "title": "Analiza wyników",
+        "steps": [
+          "Tak. Ukończone sesje automatycznie trafiają do lokalnego panelu Statystyk.",
+          "Skupione 10-minutowe bloki są skuteczniejsze niż długie męczące maratony."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Zmieniaj jedną zmienną naraz",
+        "content": "Zmieniaj tylko jeden parametr naraz, aby wyraźnie widzieć związek przyczynowy."
+      },
+      {
+        "title": "Najpierw precyzja, potem tempo",
+        "content": "Analizuj wzory, dokładność i czasy w milisekundach po każdej rundzie."
+      },
+      {
+        "title": "Śledź postępy w kolejnych dniach",
+        "content": "Dziesięć do piętnastu minut kilka razy w tygodniu buduje trwałą intuicję i precyzję."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Czy ten moduł jest całkowicie darmowy?",
+        "answer": "Tak. Wszystkie narzędzia Reflextry działają w przeglądarce bez rejestracji i opłat."
+      },
+      {
+        "question": "Czy działa na szkolnych laptopach i tabletach?",
+        "answer": "Tak. Interfejs dostosowuje się do laptopów, Chromebooków, tabletów i tablic interaktywnych."
+      },
+      {
+        "question": "Czy moje najlepsze wyniki są zapisywane?",
+        "answer": "Tak. Ukończone sesje automatycznie trafiają do lokalnego panelu Statystyk."
+      },
+      {
+        "question": "Jak często warto ćwiczyć?",
+        "answer": "Krótkie 10-minutowe sesje 3–5 razy w tygodniu przynoszą trwały, mierzalny postęp."
+      }
+    ]
+  },
+  "reaction-duel-2p": {
+    "description": [
+      {
+        "title": "O module: Pojedynek Refleksu 2 Graczy",
+        "content": "Starcie do 3 wygranych z pomiarem w milisekundach i wykrywaniem falstartu. Bez logowania i kolejek. Podzielcie jeden ekran do pojedynków refleksu w milisekundach, matematycznego przeciągania liny oraz bitew artyleryjskich z wiatrem i grawitacją."
+      },
+      {
+        "title": "Mechanika i podstawy naukowe",
+        "content": "Lokalne gry rywalizacyjne z refleksu, rachunków pamięciowych i fizyki dla klas i grup nauki. Wspólna klawiatura i dotyk: Sterowanie lewa vs prawa strona na laptopach i tabletach. Gotowe na lekcje: Poziomy trudności dla dzieci, uczniów i zaawansowanych."
+      },
+      {
+        "title": "Punktacja i metryki na żywo",
+        "content": "Każda symulacja łączy natychmiastowy obraz z przejrzystymi pomiarami liczbowymi. Pomiar w milisekundach: Wykrywanie falstartów i natychmiastowe statystyki."
+      },
+      {
+        "title": "Zastosowanie w szkole i pracy",
+        "content": "Tak. Interfejs dostosowuje się do laptopów, Chromebooków, tabletów i tablic interaktywnych. Dziesięć do piętnastu minut kilka razy w tygodniu buduje trwałą intuicję i precyzję."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Konfiguracja i sterowanie",
+        "steps": [
+          "Zacznij na standardowych ustawieniach, aby uczciwie zmierzyć obecny poziom.",
+          "Zmieniaj tylko jeden parametr naraz, aby wyraźnie widzieć związek przyczynowy."
+        ]
+      },
+      {
+        "title": "Przebieg sesji",
+        "steps": [
+          "Starcie do 3 wygranych z pomiarem w milisekundach i wykrywaniem falstartu.",
+          "Analizuj wzory, dokładność i czasy w milisekundach po każdej rundzie."
+        ]
+      },
+      {
+        "title": "Analiza wyników",
+        "steps": [
+          "Tak. Ukończone sesje automatycznie trafiają do lokalnego panelu Statystyk.",
+          "Skupione 10-minutowe bloki są skuteczniejsze niż długie męczące maratony."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Zmieniaj jedną zmienną naraz",
+        "content": "Zmieniaj tylko jeden parametr naraz, aby wyraźnie widzieć związek przyczynowy."
+      },
+      {
+        "title": "Najpierw precyzja, potem tempo",
+        "content": "Analizuj wzory, dokładność i czasy w milisekundach po każdej rundzie."
+      },
+      {
+        "title": "Śledź postępy w kolejnych dniach",
+        "content": "Dziesięć do piętnastu minut kilka razy w tygodniu buduje trwałą intuicję i precyzję."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Czy ten moduł jest całkowicie darmowy?",
+        "answer": "Tak. Wszystkie narzędzia Reflextry działają w przeglądarce bez rejestracji i opłat."
+      },
+      {
+        "question": "Czy działa na szkolnych laptopach i tabletach?",
+        "answer": "Tak. Interfejs dostosowuje się do laptopów, Chromebooków, tabletów i tablic interaktywnych."
+      },
+      {
+        "question": "Czy moje najlepsze wyniki są zapisywane?",
+        "answer": "Tak. Ukończone sesje automatycznie trafiają do lokalnego panelu Statystyk."
+      },
+      {
+        "question": "Jak często warto ćwiczyć?",
+        "answer": "Krótkie 10-minutowe sesje 3–5 razy w tygodniu przynoszą trwały, mierzalny postęp."
+      }
+    ]
+  },
+  "math-tug-of-war": {
+    "description": [
+      {
+        "title": "O module: Matematyczne Przeciąganie Liny",
+        "content": "Rozwiązuj działania szybciej niż rywal, aby przeciągnąć linę na swoją stronę. Bez logowania i kolejek. Podzielcie jeden ekran do pojedynków refleksu w milisekundach, matematycznego przeciągania liny oraz bitew artyleryjskich z wiatrem i grawitacją."
+      },
+      {
+        "title": "Mechanika i podstawy naukowe",
+        "content": "Lokalne gry rywalizacyjne z refleksu, rachunków pamięciowych i fizyki dla klas i grup nauki. Wspólna klawiatura i dotyk: Sterowanie lewa vs prawa strona na laptopach i tabletach. Gotowe na lekcje: Poziomy trudności dla dzieci, uczniów i zaawansowanych."
+      },
+      {
+        "title": "Punktacja i metryki na żywo",
+        "content": "Każda symulacja łączy natychmiastowy obraz z przejrzystymi pomiarami liczbowymi. Pomiar w milisekundach: Wykrywanie falstartów i natychmiastowe statystyki."
+      },
+      {
+        "title": "Zastosowanie w szkole i pracy",
+        "content": "Tak. Interfejs dostosowuje się do laptopów, Chromebooków, tabletów i tablic interaktywnych. Dziesięć do piętnastu minut kilka razy w tygodniu buduje trwałą intuicję i precyzję."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Konfiguracja i sterowanie",
+        "steps": [
+          "Zacznij na standardowych ustawieniach, aby uczciwie zmierzyć obecny poziom.",
+          "Zmieniaj tylko jeden parametr naraz, aby wyraźnie widzieć związek przyczynowy."
+        ]
+      },
+      {
+        "title": "Przebieg sesji",
+        "steps": [
+          "Rozwiązuj działania szybciej niż rywal, aby przeciągnąć linę na swoją stronę.",
+          "Analizuj wzory, dokładność i czasy w milisekundach po każdej rundzie."
+        ]
+      },
+      {
+        "title": "Analiza wyników",
+        "steps": [
+          "Tak. Ukończone sesje automatycznie trafiają do lokalnego panelu Statystyk.",
+          "Skupione 10-minutowe bloki są skuteczniejsze niż długie męczące maratony."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Zmieniaj jedną zmienną naraz",
+        "content": "Zmieniaj tylko jeden parametr naraz, aby wyraźnie widzieć związek przyczynowy."
+      },
+      {
+        "title": "Najpierw precyzja, potem tempo",
+        "content": "Analizuj wzory, dokładność i czasy w milisekundach po każdej rundzie."
+      },
+      {
+        "title": "Śledź postępy w kolejnych dniach",
+        "content": "Dziesięć do piętnastu minut kilka razy w tygodniu buduje trwałą intuicję i precyzję."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Czy ten moduł jest całkowicie darmowy?",
+        "answer": "Tak. Wszystkie narzędzia Reflextry działają w przeglądarce bez rejestracji i opłat."
+      },
+      {
+        "question": "Czy działa na szkolnych laptopach i tabletach?",
+        "answer": "Tak. Interfejs dostosowuje się do laptopów, Chromebooków, tabletów i tablic interaktywnych."
+      },
+      {
+        "question": "Czy moje najlepsze wyniki są zapisywane?",
+        "answer": "Tak. Ukończone sesje automatycznie trafiają do lokalnego panelu Statystyk."
+      },
+      {
+        "question": "Jak często warto ćwiczyć?",
+        "answer": "Krótkie 10-minutowe sesje 3–5 razy w tygodniu przynoszą trwały, mierzalny postęp."
+      }
+    ]
+  },
+  "cannon-battle-2p": {
+    "description": [
+      {
+        "title": "O module: Bitwa Dział Grawitacyjnych",
+        "content": "Turowa artyleria 2D nad górami ze zmiennym wiatrem i grawitacją planet. Bez logowania i kolejek. Podzielcie jeden ekran do pojedynków refleksu w milisekundach, matematycznego przeciągania liny oraz bitew artyleryjskich z wiatrem i grawitacją."
+      },
+      {
+        "title": "Mechanika i podstawy naukowe",
+        "content": "Lokalne gry rywalizacyjne z refleksu, rachunków pamięciowych i fizyki dla klas i grup nauki. Wspólna klawiatura i dotyk: Sterowanie lewa vs prawa strona na laptopach i tabletach. Gotowe na lekcje: Poziomy trudności dla dzieci, uczniów i zaawansowanych."
+      },
+      {
+        "title": "Punktacja i metryki na żywo",
+        "content": "Każda symulacja łączy natychmiastowy obraz z przejrzystymi pomiarami liczbowymi. Pomiar w milisekundach: Wykrywanie falstartów i natychmiastowe statystyki."
+      },
+      {
+        "title": "Zastosowanie w szkole i pracy",
+        "content": "Tak. Interfejs dostosowuje się do laptopów, Chromebooków, tabletów i tablic interaktywnych. Dziesięć do piętnastu minut kilka razy w tygodniu buduje trwałą intuicję i precyzję."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Konfiguracja i sterowanie",
+        "steps": [
+          "Zacznij na standardowych ustawieniach, aby uczciwie zmierzyć obecny poziom.",
+          "Zmieniaj tylko jeden parametr naraz, aby wyraźnie widzieć związek przyczynowy."
+        ]
+      },
+      {
+        "title": "Przebieg sesji",
+        "steps": [
+          "Turowa artyleria 2D nad górami ze zmiennym wiatrem i grawitacją planet.",
+          "Analizuj wzory, dokładność i czasy w milisekundach po każdej rundzie."
+        ]
+      },
+      {
+        "title": "Analiza wyników",
+        "steps": [
+          "Tak. Ukończone sesje automatycznie trafiają do lokalnego panelu Statystyk.",
+          "Skupione 10-minutowe bloki są skuteczniejsze niż długie męczące maratony."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Zmieniaj jedną zmienną naraz",
+        "content": "Zmieniaj tylko jeden parametr naraz, aby wyraźnie widzieć związek przyczynowy."
+      },
+      {
+        "title": "Najpierw precyzja, potem tempo",
+        "content": "Analizuj wzory, dokładność i czasy w milisekundach po każdej rundzie."
+      },
+      {
+        "title": "Śledź postępy w kolejnych dniach",
+        "content": "Dziesięć do piętnastu minut kilka razy w tygodniu buduje trwałą intuicję i precyzję."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Czy ten moduł jest całkowicie darmowy?",
+        "answer": "Tak. Wszystkie narzędzia Reflextry działają w przeglądarce bez rejestracji i opłat."
+      },
+      {
+        "question": "Czy działa na szkolnych laptopach i tabletach?",
+        "answer": "Tak. Interfejs dostosowuje się do laptopów, Chromebooków, tabletów i tablic interaktywnych."
+      },
+      {
+        "question": "Czy moje najlepsze wyniki są zapisywane?",
+        "answer": "Tak. Ukończone sesje automatycznie trafiają do lokalnego panelu Statystyk."
+      },
+      {
+        "question": "Jak często warto ćwiczyć?",
+        "answer": "Krótkie 10-minutowe sesje 3–5 razy w tygodniu przynoszą trwały, mierzalny postęp."
+      }
+    ]
+  },
+  "speed-reading": {
+    "description": [
+      {
+        "title": "O module: Szybkie Czytanie i Zrozumienie",
+        "content": "Czytaj z podświetleniem lub RSVP i zdaj quiz, aby poznać efektywne WPM. Dla uczniów, studentów i pracowników biurowych. Oblicz efektywne WPM z quizem, tempo KPH na klawiaturze numerycznej oraz zmianę refleksu po sprintach Pomodoro."
+      },
+      {
+        "title": "Mechanika i podstawy naukowe",
+        "content": "Praktyczne benchmarki szybkiego czytania RSVP, wprowadzania danych liczbowych 10-Key i bloków głębokiego skupienia. Zweryfikowane rozumienie: Każdy test czytania sprawdza realne zapamiętanie. Biurowe wskaźniki KPH: Standardowy pomiar dokładności i KPH na bloku numerycznym."
+      },
+      {
+        "title": "Punktacja i metryki na żywo",
+        "content": "Każda symulacja łączy natychmiastowy obraz z przejrzystymi pomiarami liczbowymi. Telemetria zmęczenia: Porównaj czas reakcji przed i po sesji skupienia."
+      },
+      {
+        "title": "Zastosowanie w szkole i pracy",
+        "content": "Tak. Interfejs dostosowuje się do laptopów, Chromebooków, tabletów i tablic interaktywnych. Dziesięć do piętnastu minut kilka razy w tygodniu buduje trwałą intuicję i precyzję."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Konfiguracja i sterowanie",
+        "steps": [
+          "Zacznij na standardowych ustawieniach, aby uczciwie zmierzyć obecny poziom.",
+          "Zmieniaj tylko jeden parametr naraz, aby wyraźnie widzieć związek przyczynowy."
+        ]
+      },
+      {
+        "title": "Przebieg sesji",
+        "steps": [
+          "Czytaj z podświetleniem lub RSVP i zdaj quiz, aby poznać efektywne WPM.",
+          "Analizuj wzory, dokładność i czasy w milisekundach po każdej rundzie."
+        ]
+      },
+      {
+        "title": "Analiza wyników",
+        "steps": [
+          "Tak. Ukończone sesje automatycznie trafiają do lokalnego panelu Statystyk.",
+          "Skupione 10-minutowe bloki są skuteczniejsze niż długie męczące maratony."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Zmieniaj jedną zmienną naraz",
+        "content": "Zmieniaj tylko jeden parametr naraz, aby wyraźnie widzieć związek przyczynowy."
+      },
+      {
+        "title": "Najpierw precyzja, potem tempo",
+        "content": "Analizuj wzory, dokładność i czasy w milisekundach po każdej rundzie."
+      },
+      {
+        "title": "Śledź postępy w kolejnych dniach",
+        "content": "Dziesięć do piętnastu minut kilka razy w tygodniu buduje trwałą intuicję i precyzję."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Czy ten moduł jest całkowicie darmowy?",
+        "answer": "Tak. Wszystkie narzędzia Reflextry działają w przeglądarce bez rejestracji i opłat."
+      },
+      {
+        "question": "Czy działa na szkolnych laptopach i tabletach?",
+        "answer": "Tak. Interfejs dostosowuje się do laptopów, Chromebooków, tabletów i tablic interaktywnych."
+      },
+      {
+        "question": "Czy moje najlepsze wyniki są zapisywane?",
+        "answer": "Tak. Ukończone sesje automatycznie trafiają do lokalnego panelu Statystyk."
+      },
+      {
+        "question": "Jak często warto ćwiczyć?",
+        "answer": "Krótkie 10-minutowe sesje 3–5 razy w tygodniu przynoszą trwały, mierzalny postęp."
+      }
+    ]
+  },
+  "ten-key": {
+    "description": [
+      {
+        "title": "O module: Test Klawiatury Numerycznej 10-Key",
+        "content": "Zmierz KPH i dokładność na fakturach, liczbach całkowitych i kodach SKU. Dla uczniów, studentów i pracowników biurowych. Oblicz efektywne WPM z quizem, tempo KPH na klawiaturze numerycznej oraz zmianę refleksu po sprintach Pomodoro."
+      },
+      {
+        "title": "Mechanika i podstawy naukowe",
+        "content": "Praktyczne benchmarki szybkiego czytania RSVP, wprowadzania danych liczbowych 10-Key i bloków głębokiego skupienia. Zweryfikowane rozumienie: Każdy test czytania sprawdza realne zapamiętanie. Biurowe wskaźniki KPH: Standardowy pomiar dokładności i KPH na bloku numerycznym."
+      },
+      {
+        "title": "Punktacja i metryki na żywo",
+        "content": "Każda symulacja łączy natychmiastowy obraz z przejrzystymi pomiarami liczbowymi. Telemetria zmęczenia: Porównaj czas reakcji przed i po sesji skupienia."
+      },
+      {
+        "title": "Zastosowanie w szkole i pracy",
+        "content": "Tak. Interfejs dostosowuje się do laptopów, Chromebooków, tabletów i tablic interaktywnych. Dziesięć do piętnastu minut kilka razy w tygodniu buduje trwałą intuicję i precyzję."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Konfiguracja i sterowanie",
+        "steps": [
+          "Zacznij na standardowych ustawieniach, aby uczciwie zmierzyć obecny poziom.",
+          "Zmieniaj tylko jeden parametr naraz, aby wyraźnie widzieć związek przyczynowy."
+        ]
+      },
+      {
+        "title": "Przebieg sesji",
+        "steps": [
+          "Zmierz KPH i dokładność na fakturach, liczbach całkowitych i kodach SKU.",
+          "Analizuj wzory, dokładność i czasy w milisekundach po każdej rundzie."
+        ]
+      },
+      {
+        "title": "Analiza wyników",
+        "steps": [
+          "Tak. Ukończone sesje automatycznie trafiają do lokalnego panelu Statystyk.",
+          "Skupione 10-minutowe bloki są skuteczniejsze niż długie męczące maratony."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Zmieniaj jedną zmienną naraz",
+        "content": "Zmieniaj tylko jeden parametr naraz, aby wyraźnie widzieć związek przyczynowy."
+      },
+      {
+        "title": "Najpierw precyzja, potem tempo",
+        "content": "Analizuj wzory, dokładność i czasy w milisekundach po każdej rundzie."
+      },
+      {
+        "title": "Śledź postępy w kolejnych dniach",
+        "content": "Dziesięć do piętnastu minut kilka razy w tygodniu buduje trwałą intuicję i precyzję."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Czy ten moduł jest całkowicie darmowy?",
+        "answer": "Tak. Wszystkie narzędzia Reflextry działają w przeglądarce bez rejestracji i opłat."
+      },
+      {
+        "question": "Czy działa na szkolnych laptopach i tabletach?",
+        "answer": "Tak. Interfejs dostosowuje się do laptopów, Chromebooków, tabletów i tablic interaktywnych."
+      },
+      {
+        "question": "Czy moje najlepsze wyniki są zapisywane?",
+        "answer": "Tak. Ukończone sesje automatycznie trafiają do lokalnego panelu Statystyk."
+      },
+      {
+        "question": "Jak często warto ćwiczyć?",
+        "answer": "Krótkie 10-minutowe sesje 3–5 razy w tygodniu przynoszą trwały, mierzalny postęp."
+      }
+    ]
+  },
+  "focus-sprint": {
+    "description": [
+      {
+        "title": "O module: Sprint Skupienia i Zmęczenia",
+        "content": "Połącz timer Pomodoro z testem czasu reakcji przed i po sesji pracy. Dla uczniów, studentów i pracowników biurowych. Oblicz efektywne WPM z quizem, tempo KPH na klawiaturze numerycznej oraz zmianę refleksu po sprintach Pomodoro."
+      },
+      {
+        "title": "Mechanika i podstawy naukowe",
+        "content": "Praktyczne benchmarki szybkiego czytania RSVP, wprowadzania danych liczbowych 10-Key i bloków głębokiego skupienia. Zweryfikowane rozumienie: Każdy test czytania sprawdza realne zapamiętanie. Biurowe wskaźniki KPH: Standardowy pomiar dokładności i KPH na bloku numerycznym."
+      },
+      {
+        "title": "Punktacja i metryki na żywo",
+        "content": "Każda symulacja łączy natychmiastowy obraz z przejrzystymi pomiarami liczbowymi. Telemetria zmęczenia: Porównaj czas reakcji przed i po sesji skupienia."
+      },
+      {
+        "title": "Zastosowanie w szkole i pracy",
+        "content": "Tak. Interfejs dostosowuje się do laptopów, Chromebooków, tabletów i tablic interaktywnych. Dziesięć do piętnastu minut kilka razy w tygodniu buduje trwałą intuicję i precyzję."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Konfiguracja i sterowanie",
+        "steps": [
+          "Zacznij na standardowych ustawieniach, aby uczciwie zmierzyć obecny poziom.",
+          "Zmieniaj tylko jeden parametr naraz, aby wyraźnie widzieć związek przyczynowy."
+        ]
+      },
+      {
+        "title": "Przebieg sesji",
+        "steps": [
+          "Połącz timer Pomodoro z testem czasu reakcji przed i po sesji pracy.",
+          "Analizuj wzory, dokładność i czasy w milisekundach po każdej rundzie."
+        ]
+      },
+      {
+        "title": "Analiza wyników",
+        "steps": [
+          "Tak. Ukończone sesje automatycznie trafiają do lokalnego panelu Statystyk.",
+          "Skupione 10-minutowe bloki są skuteczniejsze niż długie męczące maratony."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Zmieniaj jedną zmienną naraz",
+        "content": "Zmieniaj tylko jeden parametr naraz, aby wyraźnie widzieć związek przyczynowy."
+      },
+      {
+        "title": "Najpierw precyzja, potem tempo",
+        "content": "Analizuj wzory, dokładność i czasy w milisekundach po każdej rundzie."
+      },
+      {
+        "title": "Śledź postępy w kolejnych dniach",
+        "content": "Dziesięć do piętnastu minut kilka razy w tygodniu buduje trwałą intuicję i precyzję."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Czy ten moduł jest całkowicie darmowy?",
+        "answer": "Tak. Wszystkie narzędzia Reflextry działają w przeglądarce bez rejestracji i opłat."
+      },
+      {
+        "question": "Czy działa na szkolnych laptopach i tabletach?",
+        "answer": "Tak. Interfejs dostosowuje się do laptopów, Chromebooków, tabletów i tablic interaktywnych."
+      },
+      {
+        "question": "Czy moje najlepsze wyniki są zapisywane?",
+        "answer": "Tak. Ukończone sesje automatycznie trafiają do lokalnego panelu Statystyk."
+      },
+      {
+        "question": "Jak często warto ćwiczyć?",
+        "answer": "Krótkie 10-minutowe sesje 3–5 razy w tygodniu przynoszą trwały, mierzalny postęp."
+      }
+    ]
   }
 }

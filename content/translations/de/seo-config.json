@@ -950,5 +950,113 @@
       "bpm tap genauigkeitsspiel",
       "rhythmus reflex trainer"
     ]
+  },
+  "gravity-lab": {
+    "title": "Gravitations- & Orbit-Labor - MINT- & Physik-Labor | Reflextry",
+    "description": "Vergleiche freien Fall auf Erde, Mond, Mars und Jupiter oder starte eine stabile Umlaufbahn.",
+    "keywords": [
+      "gravitations- & orbit-labor",
+      "mint- & physik-labor",
+      "reflextry"
+    ]
+  },
+  "laser-reflection": {
+    "title": "Laser-Reflexions-Optik - MINT- & Physik-Labor | Reflextry",
+    "description": "Drehe Spiegel, lenke Laserstrahlen um Hindernisse und prüfe das Reflexionsgesetz.",
+    "keywords": [
+      "laser-reflexions-optik",
+      "mint- & physik-labor",
+      "reflextry"
+    ]
+  },
+  "projectile-cannon": {
+    "title": "Projektil-Kanonen-Physik - MINT- & Physik-Labor | Reflextry",
+    "description": "Stelle Winkel, Geschwindigkeit, Wind und Schwerkraft für Parabeltreffer ein.",
+    "keywords": [
+      "projektil-kanonen-physik",
+      "mint- & physik-labor",
+      "reflextry"
+    ]
+  },
+  "torque-balance": {
+    "title": "Wippen-Drehmoment-Waage - MINT- & Physik-Labor | Reflextry",
+    "description": "Bringe Gewichte am Hebelarm per Drehmoment-Gleichung ins Gleichgewicht.",
+    "keywords": [
+      "wippen-drehmoment-waage",
+      "mint- & physik-labor",
+      "reflextry"
+    ]
+  },
+  "solar-gravity-3d": {
+    "title": "3D-Sonnensystem-Gravitation - Interaktives 3D-Labor | Reflextry",
+    "description": "Erkunde einen 3D-Raumzeit-Gravitationstrichter und starte eigene Satelliten.",
+    "keywords": [
+      "3d-sonnensystem-gravitation",
+      "interaktives 3d-labor",
+      "reflextry"
+    ]
+  },
+  "spatial-aim-3d": {
+    "title": "3D-Raumziel-Arena - Interaktives 3D-Labor | Reflextry",
+    "description": "Erfasse und treffe 3D-Drohnenziele auf Nah-, Mittel- und Fern-Tiefenebenen.",
+    "keywords": [
+      "3d-raumziel-arena",
+      "interaktives 3d-labor",
+      "reflextry"
+    ]
+  },
+  "reaction-duel-2p": {
+    "title": "2-Spieler-Reaktionsduell - 2-Spieler-Arena | Reflextry",
+    "description": "Best-of-5 Millisekunden-Showdown an einem Gerät mit Fehlstart-Erkennung.",
+    "keywords": [
+      "2-spieler-reaktionsduell",
+      "2-spieler-arena",
+      "reflextry"
+    ]
+  },
+  "math-tug-of-war": {
+    "title": "Mathe-Tauziehen - 2-Spieler-Arena | Reflextry",
+    "description": "Löse Rechenaufgaben schneller als dein Gegner und ziehe das Seil über die Linie.",
+    "keywords": [
+      "mathe-tauziehen",
+      "2-spieler-arena",
+      "reflextry"
+    ]
+  },
+  "cannon-battle-2p": {
+    "title": "Gravitations-Kanonenduell - 2-Spieler-Arena | Reflextry",
+    "description": "Rundenbasierte 2D-Artillerie über Berge bei wechselndem Wind und Planetengravitation.",
+    "keywords": [
+      "gravitations-kanonenduell",
+      "2-spieler-arena",
+      "reflextry"
+    ]
+  },
+  "speed-reading": {
+    "title": "Schnelllesen & Verständnis - Studium- & Arbeits-Suite | Reflextry",
+    "description": "Lies im Highlight- oder RSVP-Modus und ermittle per Quiz deine effektiven WPM.",
+    "keywords": [
+      "schnelllesen & verständnis",
+      "studium- & arbeits-suite",
+      "reflextry"
+    ]
+  },
+  "ten-key": {
+    "title": "10-Key-Ziffernblock-Test - Studium- & Arbeits-Suite | Reflextry",
+    "description": "Miss Ziffernblock-KPH und Genauigkeit bei Rechnungen, Ganzzahlen und SKUs.",
+    "keywords": [
+      "10-key-ziffernblock-test",
+      "studium- & arbeits-suite",
+      "reflextry"
+    ]
+  },
+  "focus-sprint": {
+    "title": "Fokus-Sprint & Ermüdung - Studium- & Arbeits-Suite | Reflextry",
+    "description": "Kombiniere echte Pomodoro-Sprints mit Reaktions-Checks davor und danach.",
+    "keywords": [
+      "fokus-sprint & ermüdung",
+      "studium- & arbeits-suite",
+      "reflextry"
+    ]
   }
 }

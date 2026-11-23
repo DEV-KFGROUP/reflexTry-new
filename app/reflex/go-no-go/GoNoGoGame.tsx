@@ -262,7 +262,7 @@ export default function GoNoGoGame() {
       subtitle="INHIBITORY CONTROL"
       difficultySelector={difficultySelector}
       stats={stats}
-      arenaHeaderLeft={`ARENA // ${diff.label.toUpperCase()}`}
+      arenaHeaderLeft={`${diff.label} Mode`}
       arenaHeaderRight="PRESS GREEN · HOLD RED"
       soundEnabled={!isMuted}
       onToggleSound={toggleMute}
@@ -280,15 +280,15 @@ export default function GoNoGoGame() {
             <div className="game-start-icon w-20 h-20 bg-indigo-50 dark:bg-indigo-900/20 rounded-full flex items-center justify-center mb-6">
               <CircleDot className="w-10 h-10 text-indigo-500" />
             </div>
-            <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-wider mb-4">
+            <h2 className="text-2xl font-black text-[#161614] dark:text-white uppercase tracking-wider mb-4">
               Go / No-Go Test
             </h2>
-            <p className="text-sm text-slate-500 dark:text-slate-400 mb-8 leading-relaxed">
+            <p className="text-sm text-[#78756C] dark:text-slate-400 mb-8 leading-relaxed">
               Green circle = press Space or tap ASAP. Red circle = do not press. Inhibit false alarms while reacting fast.
             </p>
             <button
               onClick={startGame}
-              className="w-full sm:w-auto px-12 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold uppercase tracking-widest text-sm transition-all shadow-lg hover:shadow-indigo-500/20 flex items-center justify-center gap-3"
+              className="w-full sm:w-auto px-12 py-4 bg-[#161614] hover:bg-[#2C2B27] text-[#FAF9F6] rounded-xl font-bold uppercase tracking-widest text-sm transition-all shadow-lg hover: flex items-center justify-center gap-3"
             >
               <Play className="w-4 h-4 fill-current" />
               Play
@@ -325,7 +325,7 @@ export default function GoNoGoGame() {
                   ? "bg-emerald-500 shadow-[0_0_50px_rgba(34,197,94,0.45)]"
                   : stimulus === "nogo"
                     ? "bg-rose-500 shadow-[0_0_50px_rgba(244,63,94,0.45)]"
-                    : "bg-slate-200 dark:bg-slate-700 shadow-inner"
+                    : "bg-[#E6E3DB] dark:bg-slate-700 shadow-inner"
               }`}
               aria-label={stimulus === "go" ? "Go stimulus" : stimulus === "nogo" ? "No-go stimulus" : "Waiting"}
             >
@@ -340,7 +340,7 @@ export default function GoNoGoGame() {
                 <p className="text-emerald-500 text-sm font-bold uppercase tracking-widest">{lastRt}ms</p>
               )}
             </div>
-            <p className="text-xs font-mono uppercase tracking-widest text-slate-600 dark:text-slate-400">
+            <p className="text-xs font-mono uppercase tracking-widest text-[#57554E] dark:text-slate-400">
               Space or tap · Trial {trial}/{diff.trials}
             </p>
           </motion.div>
@@ -356,15 +356,15 @@ export default function GoNoGoGame() {
             <div className="w-20 h-20 bg-rose-50 dark:bg-rose-900/20 rounded-full flex items-center justify-center mb-6">
               <Trophy className="w-10 h-10 text-rose-500" />
             </div>
-            <h2 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-widest mb-2">
+            <h2 className="text-3xl font-black text-[#161614] dark:text-white uppercase tracking-widest mb-2">
               Calibration Complete
             </h2>
-            <div className="text-slate-500 mb-1 text-sm uppercase tracking-widest">
-              Correct: <span className="text-xl font-black text-slate-900 dark:text-white ml-2">{score}/{diff.trials}</span>
+            <div className="text-[#78756C] mb-1 text-sm uppercase tracking-widest">
+              Correct: <span className="text-xl font-black text-[#161614] dark:text-white ml-2">{score}/{diff.trials}</span>
             </div>
             {avgRt > 0 && (
-              <div className="text-slate-500 mb-2 text-sm uppercase tracking-widest">
-                Avg Go RT: <span className="text-lg font-black text-slate-900 dark:text-white ml-2">{avgRt}ms</span>
+              <div className="text-[#78756C] mb-2 text-sm uppercase tracking-widest">
+                Avg Go RT: <span className="text-lg font-black text-[#161614] dark:text-white ml-2">{avgRt}ms</span>
               </div>
             )}
             {score > 0 && score >= highScores[diffId] ? (
@@ -375,14 +375,14 @@ export default function GoNoGoGame() {
             <div className="flex gap-4">
               <button
                 onClick={startGame}
-                className="flex items-center gap-2 px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold uppercase tracking-widest text-xs transition-all shadow-lg hover:shadow-indigo-500/20"
+                className="flex items-center gap-2 px-8 py-4 bg-[#161614] hover:bg-[#2C2B27] text-[#FAF9F6] rounded-xl font-bold uppercase tracking-widest text-xs transition-all shadow-lg hover:"
               >
                 <RotateCcw className="w-4 h-4" />
                 Recalibrate
               </button>
               <button
                 onClick={() => setGameState("select")}
-                className="flex items-center gap-2 px-8 py-4 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-900 dark:text-white rounded-xl font-bold uppercase tracking-widest text-xs transition-all"
+                className="flex items-center gap-2 px-8 py-4 bg-[#F3F1EB] hover:bg-[#E6E3DB] dark:bg-slate-800 dark:hover:bg-slate-700 text-[#161614] dark:text-white rounded-xl font-bold uppercase tracking-widest text-xs transition-all"
               >
                 Menu
               </button>

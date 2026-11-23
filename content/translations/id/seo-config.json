@@ -950,5 +950,113 @@
       "game akurasi tap bpm",
       "pelatih refleks ritme"
     ]
+  },
+  "gravity-lab": {
+    "title": "Lab Gravitasi & Orbit - Lab Visual STEM & Fisika | Reflextry",
+    "description": "Bandingkan jatuh bebas di Bumi, Bulan, Mars, Jupiter atau luncurkan orbit stabil.",
+    "keywords": [
+      "lab gravitasi & orbit",
+      "lab visual stem & fisika",
+      "reflextry"
+    ]
+  },
+  "laser-reflection": {
+    "title": "Optik Pemantulan Laser - Lab Visual STEM & Fisika | Reflextry",
+    "description": "Putar cermin untuk memantulkan laser ke sensor dan buktikan Hukum Pemantulan.",
+    "keywords": [
+      "optik pemantulan laser",
+      "lab visual stem & fisika",
+      "reflextry"
+    ]
+  },
+  "projectile-cannon": {
+    "title": "Fisika Meriam Proyektil - Lab Visual STEM & Fisika | Reflextry",
+    "description": "Atur sudut, kecepatan, angin, dan gravitasi untuk mengenai target parabola.",
+    "keywords": [
+      "fisika meriam proyektil",
+      "lab visual stem & fisika",
+      "reflextry"
+    ]
+  },
+  "torque-balance": {
+    "title": "Keseimbangan Torsi Jungkat-Jungkit - Lab Visual STEM & Fisika | Reflextry",
+    "description": "Seimbangkan beban pada tuas menggunakan persamaan torsi di mode bebas atau waktu.",
+    "keywords": [
+      "keseimbangan torsi jungkat-jungkit",
+      "lab visual stem & fisika",
+      "reflextry"
+    ]
+  },
+  "solar-gravity-3d": {
+    "title": "Simulator Gravitasi Surya 3D - Lab 3D Interaktif | Reflextry",
+    "description": "Jelajahi sumur gravitasi ruang-waktu 3D dan luncurkan satelit buatanmu.",
+    "keywords": [
+      "simulator gravitasi surya 3d",
+      "lab 3d interaktif",
+      "reflextry"
+    ]
+  },
+  "spatial-aim-3d": {
+    "title": "Arena Bidik Ruang 3D - Lab 3D Interaktif | Reflextry",
+    "description": "Bidik target drone 3D pada bidang kedalaman dekat, tengah, dan jauh.",
+    "keywords": [
+      "arena bidik ruang 3d",
+      "lab 3d interaktif",
+      "reflextry"
+    ]
+  },
+  "reaction-duel-2p": {
+    "title": "Duel Refleks 2 Pemain - Arena 2 Pemain | Reflextry",
+    "description": "Adu cepat milidetik 5 ronde dalam satu perangkat dengan deteksi curi start.",
+    "keywords": [
+      "duel refleks 2 pemain",
+      "arena 2 pemain",
+      "reflextry"
+    ]
+  },
+  "math-tug-of-war": {
+    "title": "Tarik Tambang Matematika - Arena 2 Pemain | Reflextry",
+    "description": "Jawab soal hitungan lebih cepat dari lawan untuk menarik tali kemenangan.",
+    "keywords": [
+      "tarik tambang matematika",
+      "arena 2 pemain",
+      "reflextry"
+    ]
+  },
+  "cannon-battle-2p": {
+    "title": "Pertempuran Meriam Gravitasi - Arena 2 Pemain | Reflextry",
+    "description": "Artileri 2D bergiliran melintasi pegunungan dengan angin dan gravitasi planet.",
+    "keywords": [
+      "pertempuran meriam gravitasi",
+      "arena 2 pemain",
+      "reflextry"
+    ]
+  },
+  "speed-reading": {
+    "title": "Baca Cepat & Pemahaman - Suite Belajar & Kerja | Reflextry",
+    "description": "Baca dengan sorotan atau RSVP lalu jawab kuis untuk menghitung Effective WPM.",
+    "keywords": [
+      "baca cepat & pemahaman",
+      "suite belajar & kerja",
+      "reflextry"
+    ]
+  },
+  "ten-key": {
+    "title": "Tes Kecepatan Numpad 10-Key - Suite Belajar & Kerja | Reflextry",
+    "description": "Ukur KPH dan akurasi entri angka pada faktur, bilangan bulat, dan kode SKU.",
+    "keywords": [
+      "tes kecepatan numpad 10-key",
+      "suite belajar & kerja",
+      "reflextry"
+    ]
+  },
+  "focus-sprint": {
+    "title": "Focus Sprint & Pelacak Lelah - Suite Belajar & Kerja | Reflextry",
+    "description": "Gabungkan timer Pomodoro nyata dengan cek reaksi sebelum dan sesudah sesi.",
+    "keywords": [
+      "focus sprint & pelacak lelah",
+      "suite belajar & kerja",
+      "reflextry"
+    ]
   }
 }

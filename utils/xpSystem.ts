@@ -1,134 +1,86 @@
 import { safeStorage } from "./safeStorage";
-import { XP_REWARDS } from "./achievements";
-import { getLevel, getXPProgress, getRank } from "./achievements";
-
-const XP_STORAGE_KEY = "reflextry_total_xp";
-const LAST_LEVEL_STORAGE_KEY = "reflextry_last_level";
+import { XP_REWARDS, getLevel, getXPProgress, getRank } from "./achievements";
 
 export interface XPProgress {
-    totalXP: number;
     level: number;
+    totalXP: number;
     currentLevelXP: number;
     nextLevelXP: number;
+    /** Progress within current level normalized from 0 to 1. */
     progress: number;
-    rank: { name: string; icon: string };
+    rank: {
+        name: string;
+        icon: string;
+    };
     xpToNextLevel: number;
 }
 
+const XP_STORAGE_KEY = "reflexhub_total_xp";
+
+function buildProgress(totalXP: number): XPProgress {
+    const safeXP = Number.isFinite(totalXP) && totalXP > 0 ? Math.floor(totalXP) : 0;
+    const level = getLevel(safeXP);
+    const { currentLevelXP, nextLevelXP, progress } = getXPProgress(safeXP);
+    const rank = getRank(level);
+
+    return {
+        level,
+        totalXP: safeXP,
+        currentLevelXP,
+        nextLevelXP,
+        progress: Math.min(1, Math.max(0, progress / 100)),
+        rank,
+        xpToNextLevel: Math.max(0, nextLevelXP - safeXP),
+    };
+}
+
 export const XPSystem = {
-    /**
-     * Add XP and return the new total
-     */
-    addXP: (amount: number, reason?: string): XPProgress => {
-        if (typeof window === "undefined") {
+    getTotalXP(): number {
+        const raw = safeStorage.getItem(XP_STORAGE_KEY);
+        if (!raw) return 0;
+        const parsed = Number(raw);
+        return Number.isFinite(parsed) && parsed > 0 ? Math.floor(parsed) : 0;
+    },
+
+    getProgress(): XPProgress {
+        return buildProgress(XPSystem.getTotalXP());
+    },
+
+    addXP(amount: number): XPProgress {
+        if (!Number.isFinite(amount) || amount <= 0) {
             return XPSystem.getProgress();
         }
 
         const currentXP = XPSystem.getTotalXP();
-        const oldLevel = getLevel(currentXP);
-        const newXP = currentXP + amount;
+        const previousLevel = getLevel(currentXP);
+        const nextXP = currentXP + Math.floor(amount);
+        safeStorage.setItem(XP_STORAGE_KEY, String(nextXP));
 
-        safeStorage.setItem(XP_STORAGE_KEY, newXP.toString());
-
-        const newLevel = getLevel(newXP);
-        const progress = getXPProgress(newXP);
-        const rank = getRank(newLevel);
-
-        // Check if level up
-        if (newLevel > oldLevel) {
-            safeStorage.setItem(LAST_LEVEL_STORAGE_KEY, newLevel.toString());
-            // Dispatch level up event
-            window.dispatchEvent(new CustomEvent('level_up', {
-                detail: { level: newLevel, oldLevel, reason }
-            }));
+        const updated = buildProgress(nextXP);
+        if (typeof window !== "undefined") {
+            window.dispatchEvent(new CustomEvent("xp_updated", { detail: updated }));
+            if (updated.level > previousLevel) {
+                window.dispatchEvent(new CustomEvent("level_up", { detail: updated }));
+            }
         }
-
-        // Dispatch general XP update event
-        window.dispatchEvent(new CustomEvent('xp_updated'));
-
-        return {
-            totalXP: newXP,
-            level: newLevel,
-            ...progress,
-            rank,
-            xpToNextLevel: progress.nextLevelXP - newXP,
-        };
+        return updated;
     },
 
-    /**
-     * Get total XP
-     */
-    getTotalXP: (): number => {
-        if (typeof window === "undefined") return 0;
-        const stored = safeStorage.getItem(XP_STORAGE_KEY);
-        return stored && Number.isFinite(Number(stored)) ? Number(stored) : 0;
+    awardGameComplete(): XPProgress {
+        return XPSystem.addXP(XP_REWARDS.gameComplete);
     },
 
-    /**
-     * Get current XP progress
-     */
-    getProgress: (): XPProgress => {
-        const totalXP = XPSystem.getTotalXP();
-        const level = getLevel(totalXP);
-        const progress = getXPProgress(totalXP);
-        const rank = getRank(level);
-
-        return {
-            totalXP,
-            level,
-            ...progress,
-            rank,
-            xpToNextLevel: progress.nextLevelXP - totalXP,
-        };
+    awardNewHighScore(): XPProgress {
+        return XPSystem.addXP(XP_REWARDS.newHighScore);
     },
 
-    /**
-     * Award XP for completing a game
-     */
-    awardGameComplete: (): XPProgress => {
-        return XPSystem.addXP(XP_REWARDS.gameComplete, "game_complete");
+    awardDailyChallenge(): XPProgress {
+        return XPSystem.addXP(XP_REWARDS.dailyChallengeComplete);
     },
 
-    /**
-     * Award XP for new high score
-     */
-    awardNewHighScore: (): XPProgress => {
-        return XPSystem.addXP(XP_REWARDS.newHighScore, "new_high_score");
-    },
-
-    /**
-     * Award XP for unlocking achievement
-     */
-    awardAchievement: (achievementXP: number): XPProgress => {
-        return XPSystem.addXP(XP_REWARDS.achievementUnlock + achievementXP, "achievement");
-    },
-
-    /**
-     * Award XP for daily challenge
-     */
-    awardDailyChallenge: (): XPProgress => {
-        return XPSystem.addXP(XP_REWARDS.dailyChallengeComplete, "daily_challenge");
-    },
-
-    /**
-     * Award XP for streak milestone
-     */
-    awardStreakMilestone: (streakDays: number): XPProgress => {
-        // Bonus XP for milestone streaks (7, 14, 30, etc.)
-        if (streakDays === 7 || streakDays === 14 || streakDays === 30 || streakDays === 60 || streakDays === 100) {
-            return XPSystem.addXP(XP_REWARDS.streakMilestone, "streak_milestone");
-        }
-        return XPSystem.getProgress();
-    },
-
-    /**
-     * Reset XP (for testing/admin)
-     */
-    reset: (): void => {
-        if (typeof window === "undefined") return;
-        safeStorage.removeItem(XP_STORAGE_KEY);
-        safeStorage.removeItem(LAST_LEVEL_STORAGE_KEY);
+    awardAchievement(bonus?: number): XPProgress {
+        const amount =
+            bonus === undefined ? XP_REWARDS.achievementUnlock : Math.max(0, bonus);
+        return XPSystem.addXP(amount);
     },
 };
-
-

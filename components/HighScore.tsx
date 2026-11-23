@@ -1,8 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
-import { Trophy, Sparkles } from "lucide-react";
+import { Trophy } from "lucide-react";
 import { Storage, Score } from "@/utils/storage";
 
 interface HighScoreProps {
@@ -10,54 +9,51 @@ interface HighScoreProps {
     unit?: string;
 }
 
-export function HighScore({ toolId, unit = "pts" }: HighScoreProps) {
+export function HighScore({ toolId }: HighScoreProps) {
     const [score, setScore] = useState<Score | null>(null);
     const [isNewRecord, setIsNewRecord] = useState(false);
 
     useEffect(() => {
         setScore(Storage.getScore(toolId));
 
-        // Listen for storage events (if updated in another tab or component)
         const handleStorage = () => {
             const newScore = Storage.getScore(toolId);
-            if (newScore && (!score || newScore.value > score.value)) {
-                setIsNewRecord(true);
-                setTimeout(() => setIsNewRecord(false), 3000);
-            }
-            setScore(newScore);
+            setScore((prev) => {
+                if (newScore && (!prev || newScore.value !== prev.value)) {
+                    setIsNewRecord(true);
+                    setTimeout(() => setIsNewRecord(false), 2500);
+                }
+                return newScore;
+            });
         };
-        window.addEventListener('storage', handleStorage);
-        // Custom event for same-tab updates
-        window.addEventListener('score_updated', handleStorage);
+
+        window.addEventListener("storage", handleStorage);
+        window.addEventListener("score_updated", handleStorage);
 
         return () => {
-            window.removeEventListener('storage', handleStorage);
-            window.removeEventListener('score_updated', handleStorage);
+            window.removeEventListener("storage", handleStorage);
+            window.removeEventListener("score_updated", handleStorage);
         };
-    }, [toolId, score]);
+    }, [toolId]);
 
     if (!score) return null;
 
     return (
-        <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className={`relative flex items-center gap-2 bg-gradient-to-r from-yellow-500/20 via-yellow-500/15 to-yellow-500/20 backdrop-blur-sm px-5 py-2.5 rounded-full border-2 border-yellow-500/40 shadow-lg shadow-yellow-500/20 ${isNewRecord ? 'animate-pulse' : ''}`}
+        <div
+            className={`inline-flex items-center gap-2 px-3.5 py-2 rounded-xl border transition-colors ${
+                isNewRecord
+                    ? "bg-amber-50 border-amber-300 text-amber-900"
+                    : "bg-white border-[#E6E3DB] text-[#161614]"
+            }`}
         >
-            {isNewRecord && (
-                <motion.div
-                    animate={{ rotate: 360 }}
-                    transition={{ repeat: Infinity, duration: 2 }}
-                    className="absolute -left-2"
-                >
-                    <Sparkles className="w-5 h-5 text-yellow-400" />
-                </motion.div>
-            )}
-            <Trophy className="w-5 h-5 text-yellow-400" />
-            <span className="text-sm font-bold uppercase tracking-wider text-yellow-400">Best:</span>
-            <span className="font-mono font-bold text-theme-primary text-lg">
-                {score.value.toLocaleString()} <span className="text-xs text-yellow-400/70">{score.unit}</span>
+            <Trophy className="w-4 h-4 text-amber-600 shrink-0" aria-hidden="true" />
+            <span className="text-xs font-semibold uppercase tracking-wider text-[#78756C]">
+                Best
             </span>
-        </motion.div>
+            <span className="font-mono tabular-nums font-bold text-[#161614] text-sm">
+                {score.value.toLocaleString()}{" "}
+                <span className="text-xs font-medium text-[#78756C]">{score.unit}</span>
+            </span>
+        </div>
     );
 }

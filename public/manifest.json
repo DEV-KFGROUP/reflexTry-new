@@ -1,11 +1,11 @@
 {
-  "name": "Reflextry - Brain Training Games",
+  "name": "Reflextry - Brain Training Games & Cognitive Benchmarks",
   "short_name": "Reflextry",
-  "description": "Test your accuracy and reflexes with our Gen Z tools. Free online brain training games.",
+  "description": "76 free browser benchmarks and 9 daily logic puzzles for reaction time, working memory, typing speed, and aim precision.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0a0a0a",
-  "theme_color": "#00f0ff",
+  "background_color": "#faf9f6",
+  "theme_color": "#161614",
   "orientation": "portrait-primary",
   "icons": [
     {

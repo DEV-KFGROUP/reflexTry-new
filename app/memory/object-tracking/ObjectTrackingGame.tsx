@@ -283,7 +283,7 @@ export default function ObjectTrackingGame() {
       subtitle="DYNAMIC VISUAL ATTENTION"
       difficultySelector={difficultySelector}
       stats={stats}
-      arenaHeaderLeft={`ARENA // ${diff.label.toUpperCase()}`}
+      arenaHeaderLeft={`${diff.label} Mode`}
       arenaHeaderRight="TARGET IDENTIFICATION"
       soundEnabled={!isMuted}
       onToggleSound={toggleMute}
@@ -301,15 +301,15 @@ export default function ObjectTrackingGame() {
             <div className="game-start-icon w-20 h-20 bg-indigo-50 dark:bg-indigo-900/20 rounded-full flex items-center justify-center mb-6">
               <Target className="w-10 h-10 text-indigo-500" />
             </div>
-            <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-wider mb-4">
+            <h2 className="text-2xl font-black text-[#161614] dark:text-white uppercase tracking-wider mb-4">
               Multiple Object Tracking
             </h2>
-            <p className="text-sm text-slate-500 dark:text-slate-400 mb-8 leading-relaxed">
+            <p className="text-sm text-[#78756C] dark:text-slate-400 mb-8 leading-relaxed">
               Multiple objects will appear. A few will flash as targets. Keep your eyes on the targets as they move rapidly, and identify them when they stop.
             </p>
             <button
               onClick={startGame}
-              className="w-full sm:w-auto px-12 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold uppercase tracking-widest text-sm transition-all shadow-lg hover:shadow-indigo-500/20 flex items-center justify-center gap-3"
+              className="w-full sm:w-auto px-12 py-4 bg-[#161614] hover:bg-[#2C2B27] text-[#FAF9F6] rounded-xl font-bold uppercase tracking-widest text-sm transition-all shadow-lg hover: flex items-center justify-center gap-3"
             >
               <Play className="w-4 h-4 fill-current" />
               Play
@@ -332,7 +332,7 @@ export default function ObjectTrackingGame() {
               {gameState === "result" && <div className="text-emerald-500 font-bold uppercase tracking-widest">Tracking Successful</div>}
             </div>
 
-            <div className="relative w-full max-w-[600px] aspect-square bg-slate-50 dark:bg-slate-900/50 rounded-full overflow-hidden border border-slate-200 dark:border-slate-800 shadow-inner">
+            <div className="relative w-full max-w-[600px] aspect-square bg-[#F3F1EB] rounded-full overflow-hidden border border-[#E6E3DB]">
               {dots.map((dot) => {
                 let bgClass = "bg-slate-300 dark:bg-slate-700";
                 let scale = 1;
@@ -387,11 +387,11 @@ export default function ObjectTrackingGame() {
             <div className="w-20 h-20 bg-rose-50 dark:bg-rose-900/20 rounded-full flex items-center justify-center mb-6">
               <Trophy className="w-10 h-10 text-rose-500" />
             </div>
-            <h2 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-widest mb-2">
+            <h2 className="text-3xl font-black text-[#161614] dark:text-white uppercase tracking-widest mb-2">
               Calibration Complete
             </h2>
-            <div className="text-slate-500 mb-2 text-sm uppercase tracking-widest">
-              Final Score: <span className="text-xl font-black text-slate-900 dark:text-white ml-2">{score}</span>
+            <div className="text-[#78756C] mb-2 text-sm uppercase tracking-widest">
+              Final Score: <span className="text-xl font-black text-[#161614] dark:text-white ml-2">{score}</span>
             </div>
             {score > 0 && score >= highScores[diffId] ? (
               <p className="text-amber-500 font-bold text-xs uppercase tracking-widest mb-6">New Record!</p>
@@ -402,14 +402,14 @@ export default function ObjectTrackingGame() {
             <div className="flex gap-4">
               <button
                 onClick={startGame}
-                className="flex items-center gap-2 px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold uppercase tracking-widest text-xs transition-all shadow-lg hover:shadow-indigo-500/20"
+                className="flex items-center gap-2 px-8 py-4 bg-[#161614] hover:bg-[#2C2B27] text-[#FAF9F6] rounded-xl font-bold uppercase tracking-widest text-xs transition-all shadow-lg hover:"
               >
                 <RotateCcw className="w-4 h-4" />
                 Recalibrate
               </button>
               <button
                 onClick={() => setGameState("select")}
-                className="flex items-center gap-2 px-8 py-4 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-900 dark:text-white rounded-xl font-bold uppercase tracking-widest text-xs transition-all"
+                className="flex items-center gap-2 px-8 py-4 bg-[#F3F1EB] hover:bg-[#E6E3DB] dark:bg-slate-800 dark:hover:bg-slate-700 text-[#161614] dark:text-white rounded-xl font-bold uppercase tracking-widest text-xs transition-all"
               >
                 Menu
               </button>

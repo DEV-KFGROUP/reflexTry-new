@@ -1,5 +1,6 @@
 "use client";
 
+import { ToolIcon } from "@/components/ToolIcon";
 import { GameProgressFeedback } from "@/components/GameProgressFeedback";
 import { useGameTimers } from "@/hooks/useGameTimers";
 import { useLatestCallback } from "@/hooks/useLatestCallback";
@@ -115,7 +116,7 @@ function DifficultyCard({
       onClick={disabled ? undefined : onSelect}
       className={`relative w-full text-left rounded-2xl border-2 p-3 transition-all focus:outline-none overflow-hidden ${
         disabled ? "opacity-60 cursor-not-allowed" : "cursor-pointer"
-      } ${selected ? `${d.borderColor} bg-white shadow-lg` : "border-slate-200 bg-white/70 hover:border-slate-300"}`}
+      } ${selected ? `${d.borderColor} bg-white shadow-lg` : "border-[#E6E3DB] bg-white/70 hover:border-[#D8D4C9]"}`}
     >
       {selected && (
         <div className="absolute inset-0 opacity-5" style={{ background: DIFF_GRADIENT[diffKey] }} />
@@ -126,14 +127,14 @@ function DifficultyCard({
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 flex-wrap">
-            <span className="font-mono font-bold text-xs text-slate-800">{d.label}</span>
+            <span className="font-mono font-bold text-xs text-[#161614]">{d.label}</span>
             {selected && (
               <span className="text-[10px] font-mono px-2 py-0.5 rounded-full text-white" style={{ background: DIFF_GRADIENT[diffKey] }}>
                 ACTIVE
               </span>
             )}
           </div>
-          <p className="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5 leading-tight">{d.description}</p>
+          <p className="text-[11px] text-[#57554E] dark:text-slate-300 mt-0.5 leading-tight">{d.description}</p>
           {highScore > 0 && (
             <p className={`text-[11px] font-mono font-bold mt-1 ${d.textColor}`}>Best: Stage {highScore}</p>
           )}
@@ -340,22 +341,21 @@ export default function WordRecallGame() {
   });
 
   return (
-    <div data-idle={phase === "select"} className="game-tool w-full bg-[#f8fafc] dark:bg-slate-800 text-slate-800 dark:text-white font-sans relative overflow-hidden py-8 px-4 sm:px-6 lg:px-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm mb-8">
+    <div data-idle={phase === "select"} className="game-tool w-full bg-[#FAF9F6] text-[#161614] font-sans relative overflow-hidden py-4 px-2 sm:px-4 lg:px-6 mb-4">
       <GameProgressFeedback result={progress} />
-      {/* Grid Overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.04)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none z-0" />
-      <div className="absolute top-[-5%] left-[5%] w-[600px] h-[600px] bg-violet-500/[0.03] blur-[140px] rounded-full pointer-events-none z-0" />
-      <div className="absolute bottom-[-5%] right-[5%] w-[500px] h-[500px] bg-cyan-500/[0.03] blur-[120px] rounded-full pointer-events-none z-0" />
 
       <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center space-y-6 pt-0">
 
         {/* Header */}
         <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="text-center w-full">
-          <h1 className="text-3xl md:text-5xl font-mono font-black tracking-widest text-slate-800">WORD RECALL</h1>
-          <div className="flex items-center justify-center gap-3 mt-1">
-            <span className="h-[1px] w-8 bg-slate-300" />
-            <p className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-[0.2em]">VERBAL STORAGE RETRIEVAL</p>
-            <span className="h-[1px] w-8 bg-slate-300" />
+          <div className="inline-flex items-center justify-center gap-4 mb-1">
+            <ToolIcon toolId="/memory/word-recall" variant="3d-pedestal" size="md" interactive />
+            <div className="text-left">
+              <h1 className="font-serif text-3xl md:text-4xl font-semibold tracking-tight text-[#161614]">Word Recall</h1>
+          <div className="flex items-center gap-2 mt-1">
+            <p className="text-xs font-mono font-medium text-[#57554E] dark:text-slate-400 uppercase tracking-[0.2em]">VERBAL STORAGE RETRIEVAL</p>
+          </div>
+            </div>
           </div>
         </motion.div>
 
@@ -366,8 +366,8 @@ export default function WordRecallGame() {
           <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 }} className="game-settings flex flex-col gap-4">
 
             {/* Difficulty Selector */}
-            <div className="game-difficulty bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
-              <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Difficulty Level</div>
+            <div className="game-difficulty bg-white border border-[#E6E3DB] rounded-2xl p-4">
+              <div className="text-xs font-mono font-semibold text-[#57554E] dark:text-slate-300 uppercase tracking-widest mb-3">Difficulty Level</div>
               <div className="flex flex-col gap-2">
                 {DIFF_ORDER.map(key => (
                   <DifficultyCard
@@ -383,28 +383,28 @@ export default function WordRecallGame() {
             </div>
 
             {/* Stats Panel */}
-            <div className="game-stats bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
-              <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Session Stats</div>
+            <div className="game-stats bg-white border border-[#E6E3DB] rounded-2xl p-4">
+              <div className="text-xs font-mono font-semibold text-[#57554E] dark:text-slate-300 uppercase tracking-widest mb-3">Session Stats</div>
               <div className="grid grid-cols-2 gap-3">
-                <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Level</div>
-                  <div className="text-xl font-mono font-bold text-slate-800 mt-0.5">Stage {level}</div>
+                <div className="bg-[#F3F1EB] border border-[#E6E3DB] rounded-xl p-3">
+                  <div className="text-[11px] font-mono font-medium text-[#57554E] dark:text-slate-400 uppercase tracking-wider">Level</div>
+                  <div className="text-xl font-mono font-bold text-[#161614] mt-0.5">Stage {level}</div>
                 </div>
-                <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Words count</div>
-                  <div className="text-xl font-mono font-bold text-slate-800 mt-0.5">{wordCount}</div>
+                <div className="bg-[#F3F1EB] border border-[#E6E3DB] rounded-xl p-3">
+                  <div className="text-[11px] font-mono font-medium text-[#57554E] dark:text-slate-400 uppercase tracking-wider">Words count</div>
+                  <div className="text-xl font-mono font-bold text-[#161614] mt-0.5">{wordCount}</div>
                 </div>
-                <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Lives</div>
+                <div className="bg-[#F3F1EB] border border-[#E6E3DB] rounded-xl p-3">
+                  <div className="text-[11px] font-mono font-medium text-[#57554E] dark:text-slate-400 uppercase tracking-wider">Lives</div>
                   <div className="flex gap-1 mt-1.5 flex-wrap">
                     {Array.from({ length: diff.lives }).map((_, i) => (
                       <Heart key={i} className={`w-4 h-4 ${i < livesLeft ? "text-rose-500 fill-rose-500" : "text-slate-200 fill-slate-200"}`} />
                     ))}
                   </div>
                 </div>
-                <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Streak</div>
-                  <div className={`text-lg font-mono font-bold mt-0.5 ${streak >= 3 ? "text-orange-500" : "text-slate-800"}`}>
+                <div className="bg-[#F3F1EB] border border-[#E6E3DB] rounded-xl p-3">
+                  <div className="text-[11px] font-mono font-medium text-[#57554E] dark:text-slate-400 uppercase tracking-wider">Streak</div>
+                  <div className={`text-lg font-mono font-bold mt-0.5 ${streak >= 3 ? "text-orange-500" : "text-[#161614]"}`}>
                     {streak >= 3 ? `🔥x${streak}` : `x${streak}`}
                   </div>
                 </div>
@@ -412,10 +412,10 @@ export default function WordRecallGame() {
 
               {/* Best Score */}
               {highScores[diffId] > 0 && (
-                <div className="mt-3 bg-slate-50 border border-slate-100 rounded-xl p-3 flex items-center gap-2">
+                <div className="mt-3 bg-[#F3F1EB] border border-[#E6E3DB] rounded-xl p-3 flex items-center gap-2">
                   <Trophy className={`w-4 h-4 ${diff.textColor}`} />
                   <div>
-                    <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Best Stage</div>
+                    <div className="text-[11px] font-mono font-medium text-[#57554E] dark:text-slate-400 uppercase tracking-wider">Best Stage</div>
                     <div className={`text-sm font-mono font-bold ${diff.textColor}`}>Stage {highScores[diffId]}</div>
                   </div>
                 </div>
@@ -425,10 +425,10 @@ export default function WordRecallGame() {
               {diff.hasRecallTimer && phase === "recall" && inputTimeLeft > 0 && (
                 <motion.div className="mt-3" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
                   <div className="flex justify-between items-center mb-1">
-                    <span className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Recall Time</span>
-                    <span className={`text-sm font-mono font-bold ${inputTimeLeft <= 4 ? "text-red-500" : "text-slate-700"}`}>{inputTimeLeft}s</span>
+                    <span className="text-[11px] font-mono font-medium text-[#57554E] dark:text-slate-400 uppercase tracking-wider">Recall Time</span>
+                    <span className={`text-sm font-mono font-bold ${inputTimeLeft <= 4 ? "text-red-500" : "text-[#3F3E39]"}`}>{inputTimeLeft}s</span>
                   </div>
-                  <div className="h-2 bg-slate-100 rounded-full overflow-hidden">
+                  <div className="h-2 bg-[#F3F1EB] rounded-full overflow-hidden">
                     <motion.div
                       className="h-full rounded-full"
                       style={{ background: inputTimeLeft <= 4 ? "#ef4444" : DIFF_GRADIENT[diffId] }}
@@ -442,7 +442,7 @@ export default function WordRecallGame() {
               {/* Mute */}
               <button
                 onClick={() => setMuted(m => !m)}
-                className={`mt-3 w-full p-2.5 rounded-xl border transition-all cursor-pointer flex items-center justify-center gap-2 ${muted ? "bg-red-50 border-red-200 text-red-600" : "bg-slate-50 border-slate-200 text-slate-500 hover:border-violet-200 hover:text-violet-600"}`}
+                className={`mt-3 w-full p-2.5 rounded-xl border transition-all cursor-pointer flex items-center justify-center gap-2 ${muted ? "bg-red-50 border-red-200 text-red-600" : "bg-[#FAF9F6] border-[#E6E3DB] text-[#78756C] hover:border-violet-200 hover:text-violet-600"}`}
               >
                 {muted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
                 <span className="text-xs font-mono font-medium uppercase tracking-widest">{muted ? "Unmute" : "Sound On"}</span>
@@ -452,16 +452,15 @@ export default function WordRecallGame() {
 
           {/* ═══ RIGHT PANEL: Game Console ═══ */}
           <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.15 }} className="game-arena flex flex-col gap-4">
-            <div className="relative bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-[0_8px_40px_rgba(15,23,42,0.07)]">
-              <div className="absolute top-4 left-4 w-4 h-4 border-t-2 border-l-2 border-slate-200" />
-              <div className="absolute top-4 right-4 w-4 h-4 border-t-2 border-r-2 border-slate-200" />
-              <div className="absolute bottom-4 left-4 w-4 h-4 border-b-2 border-l-2 border-slate-200" />
-              <div className="absolute bottom-4 right-4 w-4 h-4 border-b-2 border-r-2 border-slate-200" />
+            <div className="relative bg-white border border-[#E6E3DB] rounded-2xl overflow-hidden">
 
-              <div className="absolute top-4 left-10 text-[10px] font-mono text-slate-500 dark:text-slate-400 tracking-widest hidden sm:block">
-                DECK // {diff.label.toUpperCase()}
+
+
+
+              <div className="absolute top-4 left-10 text-[10px] font-mono text-[#78756C] dark:text-slate-400 tracking-widest hidden sm:block">
+                {diff.label} Mode
               </div>
-              <div className="absolute top-4 right-10 text-[10px] font-mono text-slate-500 dark:text-slate-400 tracking-widest hidden sm:block">
+              <div className="absolute top-4 right-10 text-[10px] font-mono text-[#78756C] dark:text-slate-400 tracking-widest hidden sm:block">
                 WORDS DISPLAY: {diff.wordDisplayMs}MS
               </div>
 
@@ -479,8 +478,8 @@ export default function WordRecallGame() {
                         </div>
                       </div>
                       <div className="space-y-2">
-                        <h2 className="text-xl md:text-2xl font-mono font-bold text-slate-800 uppercase tracking-wider">Verbal Stack Calibration</h2>
-                        <p className="text-xs text-slate-600 dark:text-slate-400 max-w-xs mx-auto leading-relaxed">
+                        <h2 className="text-xl md:text-2xl font-mono font-bold text-[#161614] uppercase tracking-wider">Verbal Stack Calibration</h2>
+                        <p className="text-xs text-[#57554E] dark:text-slate-400 max-w-xs mx-auto leading-relaxed">
                           Watch words flash on screen and memorize them. Input them back in exact sequential order (Pro mode) or any order.
                         </p>
                         <p className={`game-level-description text-xs font-mono font-semibold ${diff.textColor} mt-1`}>{diff.label}: {diff.description}</p>
@@ -498,7 +497,7 @@ export default function WordRecallGame() {
                   {/* ── 2. MEMORIZE PHASE SCREEN ── */}
                   {phase === "memorize" && (
                     <motion.div key="memorize" initial={false} animate={{ opacity: 1 }} exit={{ opacity: 0, transition: { duration: 0 } }} className="text-center space-y-8 w-full max-w-md">
-                      <div className="flex items-center justify-center gap-2 text-slate-600 dark:text-slate-400 font-mono text-xs uppercase tracking-widest">
+                      <div className="flex items-center justify-center gap-2 text-[#57554E] dark:text-slate-400 font-mono text-xs uppercase tracking-widest">
                         <Clock className="w-4 h-4 animate-spin" />
                         [ MEMORIZING STACK {currentWordIndex + 1}/{words.length} ]
                       </div>
@@ -511,14 +510,14 @@ export default function WordRecallGame() {
                             animate={{ opacity: 1, y: 0, scale: 1, rotate: wordAngle }}
                             exit={{ opacity: 0, y: -20, scale: 0.8 }}
                             transition={{ duration: 0.15 }}
-                            className={`font-black text-slate-800 tracking-tight font-mono select-none ${wordSize}`}
+                            className={`font-black text-[#161614] tracking-tight font-mono select-none ${wordSize}`}
                           >
                             {words[currentWordIndex]}
                           </motion.div>
                         </AnimatePresence>
                       </div>
 
-                      <div className="w-full max-w-xs mx-auto h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                      <div className="w-full max-w-xs mx-auto h-1.5 bg-[#F3F1EB] rounded-full overflow-hidden">
                         <motion.div
                           className="h-full rounded-full"
                           style={{ background: DIFF_GRADIENT[diffId] }}
@@ -535,10 +534,10 @@ export default function WordRecallGame() {
                     <motion.div key="recall" initial={false} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, transition: { duration: 0 } }} className="text-center space-y-6 w-full max-w-md">
                       <div className="space-y-1">
                         <Brain className="w-10 h-10 text-cyan-600 mx-auto" />
-                        <h3 className="text-lg font-mono font-bold text-slate-700 block uppercase tracking-wider">
+                        <h3 className="text-lg font-mono font-bold text-[#3F3E39] block uppercase tracking-wider">
                           Recall Input Deck
                         </h3>
-                        <p className="text-xs font-mono text-slate-600 dark:text-slate-400 uppercase tracking-widest">
+                        <p className="text-xs font-mono text-[#57554E] dark:text-slate-400 uppercase tracking-widest">
                           {diff.strictOrder ? "[ CRITICAL: TYPE WORDS IN THE EXACT ORDER THEY APPEARED ]" : "[ TYPE WORDS IN ANY ORDER ]"}
                         </p>
                       </div>
@@ -567,14 +566,14 @@ export default function WordRecallGame() {
 
                       <form onSubmit={handleSubmit} className="flex gap-3 max-w-sm mx-auto w-full">
                         <div className="relative flex-1">
-                          <div className="absolute inset-0 rounded-xl bg-slate-100 shadow-[inset_0_2px_4px_rgba(0,0,0,0.06)]" />
+                          <div className="absolute inset-0 rounded-xl bg-[#F3F1EB] shadow-[inset_0_2px_4px_rgba(0,0,0,0.06)]" />
                           <input
                             type="text"
                             value={input}
                             onChange={e => setInput(e.target.value)}
                             placeholder="Type recalled word..."
                             autoFocus
-                            className="relative w-full bg-white border border-slate-200 rounded-xl px-4 py-2.5 text-slate-800 text-base font-mono focus:outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-400/20 shadow-sm"
+                            className="relative w-full bg-white border border-[#E6E3DB] rounded-xl px-4 py-2.5 text-[#161614] text-base font-mono focus:outline-none focus:border-violet-400 focus:ring-2 focus:ring-violet-400/20 shadow-sm"
                           />
                         </div>
                         <button
@@ -596,17 +595,17 @@ export default function WordRecallGame() {
                       </div>
                       <div className="space-y-1">
                         <div className="text-2xl font-mono font-black text-red-650 tracking-wider">RECALL_DISRUPT</div>
-                        <p className="text-xs font-mono text-slate-500">
+                        <p className="text-xs font-mono text-[#78756C]">
                           Mismatch detected. {livesLeft} life left — try again.
                         </p>
                       </div>
 
                       {/* Display expected words list */}
-                      <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 text-left">
-                        <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider mb-2">EXPECTED SEQUENCE</div>
+                      <div className="bg-[#FAF9F6] border border-[#E6E3DB] rounded-xl p-4 text-left">
+                        <div className="text-[11px] font-mono font-medium text-[#57554E] dark:text-slate-400 uppercase tracking-wider mb-2">EXPECTED SEQUENCE</div>
                         <div className="flex flex-wrap gap-2">
                           {words.map((w, idx) => (
-                            <span key={idx} className="px-2.5 py-1 bg-white border border-slate-250 text-slate-700 font-mono text-xs rounded-lg">
+                            <span key={idx} className="px-2.5 py-1 bg-white border border-slate-250 text-[#3F3E39] font-mono text-xs rounded-lg">
                               {idx + 1}. {w}
                             </span>
                           ))}
@@ -631,7 +630,7 @@ export default function WordRecallGame() {
                       </div>
                       <div className="space-y-2">
                         <div className="text-2xl font-mono font-black text-red-650 tracking-wider">GAME OVER</div>
-                        <p className="text-xs font-mono text-slate-500">{diff.label} mode · Failed at Stage {level}</p>
+                        <p className="text-xs font-mono text-[#78756C]">{diff.label} mode · Failed at Stage {level}</p>
                         {level >= highScores[diffId] && level > 1 && (
                           <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} className="inline-flex items-center gap-1.5 bg-amber-50 border border-amber-200 text-amber-700 rounded-full px-3 py-1 text-[11px] font-mono font-bold">
                             <Trophy className="w-3.5 h-3.5" />
@@ -639,9 +638,9 @@ export default function WordRecallGame() {
                           </motion.div>
                         )}
                       </div>
-                      <div className="bg-slate-50 border border-slate-200 rounded-xl p-5 shadow-sm w-full">
-                        <div className="text-xs font-mono text-slate-600 dark:text-slate-400 uppercase">Words Memorized</div>
-                        <div className="text-3xl text-slate-700 font-mono font-bold mt-1">{score} Words</div>
+                      <div className="bg-[#FAF9F6] border border-[#E6E3DB] rounded-xl p-5 shadow-sm w-full">
+                        <div className="text-xs font-mono text-[#57554E] dark:text-slate-400 uppercase">Words Memorized</div>
+                        <div className="text-3xl text-[#3F3E39] font-mono font-bold mt-1">{score} Words</div>
                       </div>
                       <div className="flex gap-3 w-full justify-center">
                         <motion.button whileHover={{ translateY: -2 }} whileTap={{ translateY: 6 }} onClick={startGame} className="relative group cursor-pointer focus:outline-none select-none">
@@ -674,7 +673,7 @@ export default function WordRecallGame() {
               <div className="flex justify-end">
                 <button onClickCapture={() => window.dispatchEvent(new Event("game_abort_requested"))}
                   onClick={() => { stopAllTimers(); setPhase("gameover"); }}
-                  className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 hover:text-red-500 transition-colors cursor-pointer"
+                  className="text-xs font-mono font-medium text-[#57554E] dark:text-slate-400 hover:text-red-500 transition-colors cursor-pointer"
                 >
                   End round ×
                 </button>

@@ -230,7 +230,7 @@ export default function SchulteTableGame() {
       subtitle="VISUAL SCANNING"
       difficultySelector={difficultySelector}
       stats={stats}
-      arenaHeaderLeft={`ARENA // ${diff.label.toUpperCase()}`}
+      arenaHeaderLeft={`${diff.label} Mode`}
       arenaHeaderRight={diff.reverse ? "COUNT DOWN" : "COUNT UP"}
       soundEnabled={!isMuted}
       onToggleSound={toggleMute}
@@ -248,15 +248,15 @@ export default function SchulteTableGame() {
             <div className="game-start-icon w-20 h-20 bg-indigo-50 dark:bg-indigo-900/20 rounded-full flex items-center justify-center mb-6">
               <Grid3X3 className="w-10 h-10 text-indigo-500" />
             </div>
-            <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-wider mb-4">
+            <h2 className="text-2xl font-black text-[#161614] dark:text-white uppercase tracking-wider mb-4">
               Schulte Table Speed Test
             </h2>
-            <p className="text-sm text-slate-500 dark:text-slate-400 mb-8 leading-relaxed">
+            <p className="text-sm text-[#78756C] dark:text-slate-400 mb-8 leading-relaxed">
               Click numbers in {diff.reverse ? "descending" : "ascending"} order as fast as possible. Expand your visual field and scanning speed.
             </p>
             <button
               onClick={startGame}
-              className="w-full sm:w-auto px-12 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold uppercase tracking-widest text-sm transition-all shadow-lg hover:shadow-indigo-500/20 flex items-center justify-center gap-3"
+              className="w-full sm:w-auto px-12 py-4 bg-[#161614] hover:bg-[#2C2B27] text-[#FAF9F6] rounded-xl font-bold uppercase tracking-widest text-sm transition-all shadow-lg hover: flex items-center justify-center gap-3"
             >
               <Play className="w-4 h-4 fill-current" />
               Play
@@ -273,18 +273,18 @@ export default function SchulteTableGame() {
             className="w-full flex flex-col items-center justify-center p-2 max-w-2xl"
           >
             <div className="mb-5 flex items-center gap-3">
-              <span className="text-xs font-mono uppercase tracking-widest text-slate-600 dark:text-slate-400">
+              <span className="text-xs font-mono uppercase tracking-widest text-[#57554E] dark:text-slate-400">
                 Next
               </span>
-              <span className="inline-flex min-w-12 h-12 items-center justify-center rounded-2xl bg-indigo-600 text-white text-2xl font-black shadow-lg shadow-indigo-500/30">
+              <span className="inline-flex min-w-12 h-12 items-center justify-center rounded-2xl bg-indigo-600 text-white text-2xl font-black shadow-lg">
                 {target}
               </span>
-              <span className="text-xs font-mono uppercase tracking-widest text-slate-600 dark:text-slate-400">
+              <span className="text-xs font-mono uppercase tracking-widest text-[#57554E] dark:text-slate-400">
                 {formatTime(elapsed)}
               </span>
             </div>
             <div
-              className="grid gap-1.5 md:gap-2 w-full max-w-lg p-3 rounded-2xl bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800"
+              className="grid gap-1.5 md:gap-2 w-full max-w-lg p-3 rounded-2xl bg-[#FAF9F6] dark:bg-slate-800/50 border border-[#EFECE4] dark:border-slate-800"
               style={{ gridTemplateColumns: `repeat(${diff.size}, minmax(0, 1fr))` }}
             >
               {grid.map((num) => {
@@ -300,7 +300,7 @@ export default function SchulteTableGame() {
                         ? "bg-indigo-100/80 dark:bg-indigo-900/30 text-indigo-300 dark:text-indigo-800"
                         : isWrong
                           ? "bg-rose-200 dark:bg-rose-900/50 text-rose-700 scale-95"
-                          : "bg-white dark:bg-slate-800 text-slate-900 dark:text-white border border-slate-200 dark:border-slate-700 hover:border-indigo-300 hover:scale-105 active:scale-95"
+                          : "bg-white dark:bg-slate-800 text-[#161614] dark:text-white border border-[#E6E3DB] dark:border-slate-700 hover:border-indigo-300 hover:scale-105 active:scale-95"
                     }`}
                   >
                     {num}
@@ -308,7 +308,7 @@ export default function SchulteTableGame() {
                 );
               })}
             </div>
-            <p className="mt-4 text-xs font-mono uppercase tracking-widest text-slate-600 dark:text-slate-400">
+            <p className="mt-4 text-xs font-mono uppercase tracking-widest text-[#57554E] dark:text-slate-400">
               {clicked.size}/{diff.size * diff.size} cleared · {diff.reverse ? "Descending" : "Ascending"}
             </p>
           </motion.div>
@@ -324,11 +324,11 @@ export default function SchulteTableGame() {
             <div className="w-20 h-20 bg-rose-50 dark:bg-rose-900/20 rounded-full flex items-center justify-center mb-6">
               <Trophy className="w-10 h-10 text-rose-500" />
             </div>
-            <h2 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-widest mb-2">
+            <h2 className="text-3xl font-black text-[#161614] dark:text-white uppercase tracking-widest mb-2">
               Calibration Complete
             </h2>
-            <div className="text-slate-500 mb-2 text-sm uppercase tracking-widest">
-              Time: <span className="text-xl font-black text-slate-900 dark:text-white ml-2">{formatTime(finalTime)}</span>
+            <div className="text-[#78756C] mb-2 text-sm uppercase tracking-widest">
+              Time: <span className="text-xl font-black text-[#161614] dark:text-white ml-2">{formatTime(finalTime)}</span>
             </div>
             {finalTime > 0 && (highScores[diffId] === 0 || finalTime <= highScores[diffId]) ? (
               <p className="text-amber-500 font-bold text-xs uppercase tracking-widest mb-6">New Record!</p>
@@ -338,14 +338,14 @@ export default function SchulteTableGame() {
             <div className="flex gap-4">
               <button
                 onClick={startGame}
-                className="flex items-center gap-2 px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold uppercase tracking-widest text-xs transition-all shadow-lg hover:shadow-indigo-500/20"
+                className="flex items-center gap-2 px-8 py-4 bg-[#161614] hover:bg-[#2C2B27] text-[#FAF9F6] rounded-xl font-bold uppercase tracking-widest text-xs transition-all shadow-lg hover:"
               >
                 <RotateCcw className="w-4 h-4" />
                 Recalibrate
               </button>
               <button
                 onClick={() => setGameState("select")}
-                className="flex items-center gap-2 px-8 py-4 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-900 dark:text-white rounded-xl font-bold uppercase tracking-widest text-xs transition-all"
+                className="flex items-center gap-2 px-8 py-4 bg-[#F3F1EB] hover:bg-[#E6E3DB] dark:bg-slate-800 dark:hover:bg-slate-700 text-[#161614] dark:text-white rounded-xl font-bold uppercase tracking-widest text-xs transition-all"
               >
                 Menu
               </button>

@@ -950,5 +950,113 @@
       "bpm tap nauwkeurigheidsspel",
       "ritme reflex trainer"
     ]
+  },
+  "gravity-lab": {
+    "title": "Zwaartekracht & Baan Lab - STEM & Natuurkunde Lab | Reflextry",
+    "description": "Vergelijk vrije val op Aarde, Maan, Mars en Jupiter of lanceer een stabiele baan.",
+    "keywords": [
+      "zwaartekracht & baan lab",
+      "stem & natuurkunde lab",
+      "reflextry"
+    ]
+  },
+  "laser-reflection": {
+    "title": "Laser Reflectie Optica - STEM & Natuurkunde Lab | Reflextry",
+    "description": "Draai spiegels om laserstralen naar de sensor te sturen en de reflectiewet te testen.",
+    "keywords": [
+      "laser reflectie optica",
+      "stem & natuurkunde lab",
+      "reflextry"
+    ]
+  },
+  "projectile-cannon": {
+    "title": "Projectiel Kanon Fysica - STEM & Natuurkunde Lab | Reflextry",
+    "description": "Stel hoek, snelheid, wind en zwaartekracht af om doelen via een parabool te raken.",
+    "keywords": [
+      "projectiel kanon fysica",
+      "stem & natuurkunde lab",
+      "reflextry"
+    ]
+  },
+  "torque-balance": {
+    "title": "Wip Koppel & Balans - STEM & Natuurkunde Lab | Reflextry",
+    "description": "Plaats gewichten op een hefboom en bereken het draaimoment-evenwicht.",
+    "keywords": [
+      "wip koppel & balans",
+      "stem & natuurkunde lab",
+      "reflextry"
+    ]
+  },
+  "solar-gravity-3d": {
+    "title": "3D Zonnestelsel Zwaartekracht - Interactief 3D Lab | Reflextry",
+    "description": "Verken een 3D-ruimtetijd zwaartekrachtput en lanceer eigen satellieten.",
+    "keywords": [
+      "3d zonnestelsel zwaartekracht",
+      "interactief 3d lab",
+      "reflextry"
+    ]
+  },
+  "spatial-aim-3d": {
+    "title": "3D Ruimtelijke Aim Arena - Interactief 3D Lab | Reflextry",
+    "description": "Raak 3D-drones op nabije, middelste en verre dieptevlakken met milliseconde-meting.",
+    "keywords": [
+      "3d ruimtelijke aim arena",
+      "interactief 3d lab",
+      "reflextry"
+    ]
+  },
+  "reaction-duel-2p": {
+    "title": "2-Speler Reactieduel - 2-Speler Arena | Reflextry",
+    "description": "Best-of-5 milliseconde reflexduel op één scherm met valse-start detectie.",
+    "keywords": [
+      "2-speler reactieduel",
+      "2-speler arena",
+      "reflextry"
+    ]
+  },
+  "math-tug-of-war": {
+    "title": "Reken Touwtrekken - 2-Speler Arena | Reflextry",
+    "description": "Los sommen sneller op dan je tegenstander om het touw over de lijn te trekken.",
+    "keywords": [
+      "reken touwtrekken",
+      "2-speler arena",
+      "reflextry"
+    ]
+  },
+  "cannon-battle-2p": {
+    "title": "Zwaartekracht Kanon Duel - 2-Speler Arena | Reflextry",
+    "description": "Beurtelingse 2D-artillerie over bergen met wisselende wind en planeetzwaartekracht.",
+    "keywords": [
+      "zwaartekracht kanon duel",
+      "2-speler arena",
+      "reflextry"
+    ]
+  },
+  "speed-reading": {
+    "title": "Snellezen & Tekstbegrip - Studie- & Werksuite | Reflextry",
+    "description": "Lees in markeer- of RSVP-modus en maak de quiz voor je Effectieve WPM.",
+    "keywords": [
+      "snellezen & tekstbegrip",
+      "studie- & werksuite",
+      "reflextry"
+    ]
+  },
+  "ten-key": {
+    "title": "10-Key Numpad Snelheidstest - Studie- & Werksuite | Reflextry",
+    "description": "Meet KPH en precisie op facturen, gehele getallen en gemengde SKU-codes.",
+    "keywords": [
+      "10-key numpad snelheidstest",
+      "studie- & werksuite",
+      "reflextry"
+    ]
+  },
+  "focus-sprint": {
+    "title": "Focus Sprint & Vermoeidheid - Studie- & Werksuite | Reflextry",
+    "description": "Combineer een Pomodoro-timer met reactietests vóór en na je werkblok.",
+    "keywords": [
+      "focus sprint & vermoeidheid",
+      "studie- & werksuite",
+      "reflextry"
+    ]
   }
 }

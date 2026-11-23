@@ -5304,5 +5304,905 @@
         "answer": "Số tiếp theo bạn phải nhấp vào."
       }
     ]
+  },
+  "gravity-lab": {
+    "description": [
+      {
+        "title": "Giới thiệu Phòng Thí Nghiệm Trọng Lực & Quỹ Đạo",
+        "content": "So sánh rơi tự do trên Trái Đất, Mặt Trăng, Sao Hỏa, Sao Mộc hoặc phóng quỹ đạo. Biến công thức vật lý và toán học trừu tượng thành thí nghiệm trực quan sinh động. Thả rơi tự do, phóng vệ tinh quỹ đạo, phản xạ tia laser và cân bằng đòn bẩy ngay trên trình duyệt."
+      },
+      {
+        "title": "Cơ chế cốt lõi & Khoa học học tập",
+        "content": "Mô phỏng 2D tương tác về rơi tự do, vận tốc quỹ đạo, định luật phản xạ gương, chuyển động ném xiên và cân bằng mô-men lực. Công thức trực tiếp: Theo dõi phương trình cập nhật ngay khi bạn đổi thông số. Trực quan sinh động: Quan sát véc-tơ vận tốc, pháp tuyến gương và quỹ đạo cũ."
+      },
+      {
+        "title": "Cách tính điểm & Chỉ số trực tiếp",
+        "content": "Mỗi mô phỏng kết hợp hình ảnh trực quan tức thì với chỉ số định lượng minh bạch. Chế độ thử thách: Kiểm tra hiểu biết qua các nhiệm vụ tính điểm."
+      },
+      {
+        "title": "Ứng dụng trong học tập & công việc",
+        "content": "Có. Giao diện tương thích mượt mà với laptop, Chromebook, máy tính bảng và bảng tương tác. Mười đến mười lăm phút vài lần mỗi tuần giúp củng cố trực giác và hiệu suất ổn định."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Thiết lập & Điều khiển",
+        "steps": [
+          "Bắt đầu ở chế độ chuẩn để ghi nhận khách quan tốc độ và hiểu biết hiện tại.",
+          "Chỉ thay đổi một thông số mỗi lần để thấy rõ mối quan hệ nhân quả."
+        ]
+      },
+      {
+        "title": "Cách thực hiện một phiên",
+        "steps": [
+          "So sánh rơi tự do trên Trái Đất, Mặt Trăng, Sao Hỏa, Sao Mộc hoặc phóng quỹ đạo.",
+          "Xem công thức, độ chính xác và mili-giây sau mỗi lượt thử."
+        ]
+      },
+      {
+        "title": "Phân tích kết quả",
+        "steps": [
+          "Có. Các bài hoàn thành được tự động lưu vào bảng Thống kê cục bộ trên trình duyệt.",
+          "Các khối 10 phút tập trung cao hiệu quả hơn nhiều so với luyện kéo dài gây mệt mỏi."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Thay đổi từng biến số một",
+        "content": "Chỉ thay đổi một thông số mỗi lần để thấy rõ mối quan hệ nhân quả."
+      },
+      {
+        "title": "Ưu tiên chính xác trước tốc độ",
+        "content": "Xem công thức, độ chính xác và mili-giây sau mỗi lượt thử."
+      },
+      {
+        "title": "Theo dõi tiến bộ đều đặn",
+        "content": "Mười đến mười lăm phút vài lần mỗi tuần giúp củng cố trực giác và hiệu suất ổn định."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Công cụ này có hoàn toàn miễn phí không?",
+        "answer": "Có. Mọi mô-đun trên Reflextry đều chạy trực tiếp trên trình duyệt, không cần tài khoản hay tải về."
+      },
+      {
+        "question": "Có dùng được trên laptop học tập và máy tính bảng không?",
+        "answer": "Có. Giao diện tương thích mượt mà với laptop, Chromebook, máy tính bảng và bảng tương tác."
+      },
+      {
+        "question": "Điểm cao nhất của tôi có được lưu lại không?",
+        "answer": "Có. Các bài hoàn thành được tự động lưu vào bảng Thống kê cục bộ trên trình duyệt."
+      },
+      {
+        "question": "Nên luyện tập với tần suất thế nào?",
+        "answer": "Mỗi phiên tập trung 10 phút, 3–5 lần mỗi tuần sẽ mang lại sự tiến bộ rõ rệt và bền vững."
+      }
+    ]
+  },
+  "laser-reflection": {
+    "description": [
+      {
+        "title": "Giới thiệu Quang Học Phản Xạ Laser",
+        "content": "Xoay gương dẫn tia laser tới cảm biến và kiểm chứng Định luật Phản xạ. Biến công thức vật lý và toán học trừu tượng thành thí nghiệm trực quan sinh động. Thả rơi tự do, phóng vệ tinh quỹ đạo, phản xạ tia laser và cân bằng đòn bẩy ngay trên trình duyệt."
+      },
+      {
+        "title": "Cơ chế cốt lõi & Khoa học học tập",
+        "content": "Mô phỏng 2D tương tác về rơi tự do, vận tốc quỹ đạo, định luật phản xạ gương, chuyển động ném xiên và cân bằng mô-men lực. Công thức trực tiếp: Theo dõi phương trình cập nhật ngay khi bạn đổi thông số. Trực quan sinh động: Quan sát véc-tơ vận tốc, pháp tuyến gương và quỹ đạo cũ."
+      },
+      {
+        "title": "Cách tính điểm & Chỉ số trực tiếp",
+        "content": "Mỗi mô phỏng kết hợp hình ảnh trực quan tức thì với chỉ số định lượng minh bạch. Chế độ thử thách: Kiểm tra hiểu biết qua các nhiệm vụ tính điểm."
+      },
+      {
+        "title": "Ứng dụng trong học tập & công việc",
+        "content": "Có. Giao diện tương thích mượt mà với laptop, Chromebook, máy tính bảng và bảng tương tác. Mười đến mười lăm phút vài lần mỗi tuần giúp củng cố trực giác và hiệu suất ổn định."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Thiết lập & Điều khiển",
+        "steps": [
+          "Bắt đầu ở chế độ chuẩn để ghi nhận khách quan tốc độ và hiểu biết hiện tại.",
+          "Chỉ thay đổi một thông số mỗi lần để thấy rõ mối quan hệ nhân quả."
+        ]
+      },
+      {
+        "title": "Cách thực hiện một phiên",
+        "steps": [
+          "Xoay gương dẫn tia laser tới cảm biến và kiểm chứng Định luật Phản xạ.",
+          "Xem công thức, độ chính xác và mili-giây sau mỗi lượt thử."
+        ]
+      },
+      {
+        "title": "Phân tích kết quả",
+        "steps": [
+          "Có. Các bài hoàn thành được tự động lưu vào bảng Thống kê cục bộ trên trình duyệt.",
+          "Các khối 10 phút tập trung cao hiệu quả hơn nhiều so với luyện kéo dài gây mệt mỏi."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Thay đổi từng biến số một",
+        "content": "Chỉ thay đổi một thông số mỗi lần để thấy rõ mối quan hệ nhân quả."
+      },
+      {
+        "title": "Ưu tiên chính xác trước tốc độ",
+        "content": "Xem công thức, độ chính xác và mili-giây sau mỗi lượt thử."
+      },
+      {
+        "title": "Theo dõi tiến bộ đều đặn",
+        "content": "Mười đến mười lăm phút vài lần mỗi tuần giúp củng cố trực giác và hiệu suất ổn định."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Công cụ này có hoàn toàn miễn phí không?",
+        "answer": "Có. Mọi mô-đun trên Reflextry đều chạy trực tiếp trên trình duyệt, không cần tài khoản hay tải về."
+      },
+      {
+        "question": "Có dùng được trên laptop học tập và máy tính bảng không?",
+        "answer": "Có. Giao diện tương thích mượt mà với laptop, Chromebook, máy tính bảng và bảng tương tác."
+      },
+      {
+        "question": "Điểm cao nhất của tôi có được lưu lại không?",
+        "answer": "Có. Các bài hoàn thành được tự động lưu vào bảng Thống kê cục bộ trên trình duyệt."
+      },
+      {
+        "question": "Nên luyện tập với tần suất thế nào?",
+        "answer": "Mỗi phiên tập trung 10 phút, 3–5 lần mỗi tuần sẽ mang lại sự tiến bộ rõ rệt và bền vững."
+      }
+    ]
+  },
+  "projectile-cannon": {
+    "description": [
+      {
+        "title": "Giới thiệu Vật Lý Pháo Ném Xiên",
+        "content": "Điều chỉnh góc bắn, vận tốc, gió và trọng lực để bắn trúng mục tiêu parabol. Biến công thức vật lý và toán học trừu tượng thành thí nghiệm trực quan sinh động. Thả rơi tự do, phóng vệ tinh quỹ đạo, phản xạ tia laser và cân bằng đòn bẩy ngay trên trình duyệt."
+      },
+      {
+        "title": "Cơ chế cốt lõi & Khoa học học tập",
+        "content": "Mô phỏng 2D tương tác về rơi tự do, vận tốc quỹ đạo, định luật phản xạ gương, chuyển động ném xiên và cân bằng mô-men lực. Công thức trực tiếp: Theo dõi phương trình cập nhật ngay khi bạn đổi thông số. Trực quan sinh động: Quan sát véc-tơ vận tốc, pháp tuyến gương và quỹ đạo cũ."
+      },
+      {
+        "title": "Cách tính điểm & Chỉ số trực tiếp",
+        "content": "Mỗi mô phỏng kết hợp hình ảnh trực quan tức thì với chỉ số định lượng minh bạch. Chế độ thử thách: Kiểm tra hiểu biết qua các nhiệm vụ tính điểm."
+      },
+      {
+        "title": "Ứng dụng trong học tập & công việc",
+        "content": "Có. Giao diện tương thích mượt mà với laptop, Chromebook, máy tính bảng và bảng tương tác. Mười đến mười lăm phút vài lần mỗi tuần giúp củng cố trực giác và hiệu suất ổn định."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Thiết lập & Điều khiển",
+        "steps": [
+          "Bắt đầu ở chế độ chuẩn để ghi nhận khách quan tốc độ và hiểu biết hiện tại.",
+          "Chỉ thay đổi một thông số mỗi lần để thấy rõ mối quan hệ nhân quả."
+        ]
+      },
+      {
+        "title": "Cách thực hiện một phiên",
+        "steps": [
+          "Điều chỉnh góc bắn, vận tốc, gió và trọng lực để bắn trúng mục tiêu parabol.",
+          "Xem công thức, độ chính xác và mili-giây sau mỗi lượt thử."
+        ]
+      },
+      {
+        "title": "Phân tích kết quả",
+        "steps": [
+          "Có. Các bài hoàn thành được tự động lưu vào bảng Thống kê cục bộ trên trình duyệt.",
+          "Các khối 10 phút tập trung cao hiệu quả hơn nhiều so với luyện kéo dài gây mệt mỏi."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Thay đổi từng biến số một",
+        "content": "Chỉ thay đổi một thông số mỗi lần để thấy rõ mối quan hệ nhân quả."
+      },
+      {
+        "title": "Ưu tiên chính xác trước tốc độ",
+        "content": "Xem công thức, độ chính xác và mili-giây sau mỗi lượt thử."
+      },
+      {
+        "title": "Theo dõi tiến bộ đều đặn",
+        "content": "Mười đến mười lăm phút vài lần mỗi tuần giúp củng cố trực giác và hiệu suất ổn định."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Công cụ này có hoàn toàn miễn phí không?",
+        "answer": "Có. Mọi mô-đun trên Reflextry đều chạy trực tiếp trên trình duyệt, không cần tài khoản hay tải về."
+      },
+      {
+        "question": "Có dùng được trên laptop học tập và máy tính bảng không?",
+        "answer": "Có. Giao diện tương thích mượt mà với laptop, Chromebook, máy tính bảng và bảng tương tác."
+      },
+      {
+        "question": "Điểm cao nhất của tôi có được lưu lại không?",
+        "answer": "Có. Các bài hoàn thành được tự động lưu vào bảng Thống kê cục bộ trên trình duyệt."
+      },
+      {
+        "question": "Nên luyện tập với tần suất thế nào?",
+        "answer": "Mỗi phiên tập trung 10 phút, 3–5 lần mỗi tuần sẽ mang lại sự tiến bộ rõ rệt và bền vững."
+      }
+    ]
+  },
+  "torque-balance": {
+    "description": [
+      {
+        "title": "Giới thiệu Cân Bằng Mô-Men Đòn Bẩy",
+        "content": "Đặt quả cân lên bập bênh theo phương trình mô-men ở chế độ tự do hoặc tính giờ. Biến công thức vật lý và toán học trừu tượng thành thí nghiệm trực quan sinh động. Thả rơi tự do, phóng vệ tinh quỹ đạo, phản xạ tia laser và cân bằng đòn bẩy ngay trên trình duyệt."
+      },
+      {
+        "title": "Cơ chế cốt lõi & Khoa học học tập",
+        "content": "Mô phỏng 2D tương tác về rơi tự do, vận tốc quỹ đạo, định luật phản xạ gương, chuyển động ném xiên và cân bằng mô-men lực. Công thức trực tiếp: Theo dõi phương trình cập nhật ngay khi bạn đổi thông số. Trực quan sinh động: Quan sát véc-tơ vận tốc, pháp tuyến gương và quỹ đạo cũ."
+      },
+      {
+        "title": "Cách tính điểm & Chỉ số trực tiếp",
+        "content": "Mỗi mô phỏng kết hợp hình ảnh trực quan tức thì với chỉ số định lượng minh bạch. Chế độ thử thách: Kiểm tra hiểu biết qua các nhiệm vụ tính điểm."
+      },
+      {
+        "title": "Ứng dụng trong học tập & công việc",
+        "content": "Có. Giao diện tương thích mượt mà với laptop, Chromebook, máy tính bảng và bảng tương tác. Mười đến mười lăm phút vài lần mỗi tuần giúp củng cố trực giác và hiệu suất ổn định."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Thiết lập & Điều khiển",
+        "steps": [
+          "Bắt đầu ở chế độ chuẩn để ghi nhận khách quan tốc độ và hiểu biết hiện tại.",
+          "Chỉ thay đổi một thông số mỗi lần để thấy rõ mối quan hệ nhân quả."
+        ]
+      },
+      {
+        "title": "Cách thực hiện một phiên",
+        "steps": [
+          "Đặt quả cân lên bập bênh theo phương trình mô-men ở chế độ tự do hoặc tính giờ.",
+          "Xem công thức, độ chính xác và mili-giây sau mỗi lượt thử."
+        ]
+      },
+      {
+        "title": "Phân tích kết quả",
+        "steps": [
+          "Có. Các bài hoàn thành được tự động lưu vào bảng Thống kê cục bộ trên trình duyệt.",
+          "Các khối 10 phút tập trung cao hiệu quả hơn nhiều so với luyện kéo dài gây mệt mỏi."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Thay đổi từng biến số một",
+        "content": "Chỉ thay đổi một thông số mỗi lần để thấy rõ mối quan hệ nhân quả."
+      },
+      {
+        "title": "Ưu tiên chính xác trước tốc độ",
+        "content": "Xem công thức, độ chính xác và mili-giây sau mỗi lượt thử."
+      },
+      {
+        "title": "Theo dõi tiến bộ đều đặn",
+        "content": "Mười đến mười lăm phút vài lần mỗi tuần giúp củng cố trực giác và hiệu suất ổn định."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Công cụ này có hoàn toàn miễn phí không?",
+        "answer": "Có. Mọi mô-đun trên Reflextry đều chạy trực tiếp trên trình duyệt, không cần tài khoản hay tải về."
+      },
+      {
+        "question": "Có dùng được trên laptop học tập và máy tính bảng không?",
+        "answer": "Có. Giao diện tương thích mượt mà với laptop, Chromebook, máy tính bảng và bảng tương tác."
+      },
+      {
+        "question": "Điểm cao nhất của tôi có được lưu lại không?",
+        "answer": "Có. Các bài hoàn thành được tự động lưu vào bảng Thống kê cục bộ trên trình duyệt."
+      },
+      {
+        "question": "Nên luyện tập với tần suất thế nào?",
+        "answer": "Mỗi phiên tập trung 10 phút, 3–5 lần mỗi tuần sẽ mang lại sự tiến bộ rõ rệt và bền vững."
+      }
+    ]
+  },
+  "solar-gravity-3d": {
+    "description": [
+      {
+        "title": "Giới thiệu Mô Phỏng Trọng Lực Hệ Mặt Trời 3D",
+        "content": "Khám phá giếng trọng lực không-thời gian 3D và phóng vệ tinh quỹ đạo. Chạy bằng WebGL 3D thời gian thực, cho phép xoay camera quanh lưới không-thời gian uốn cong, phóng vệ tinh vào quỹ đạo ổn định và bắn mục tiêu drone 3D ở các mặt phẳng gần, trung, xa."
+      },
+      {
+        "title": "Cơ chế cốt lõi & Khoa học học tập",
+        "content": "Mô phỏng 3D tăng tốc phần cứng trên trình duyệt về cơ học quỹ đạo thiên văn và ngắm mục tiêu theo chiều sâu Z. WebGL 3D thời gian thực: Điều khiển góc nhìn 3D linh hoạt cùng ánh sáng thực. Cảm nhận chiều sâu: Rèn phản xạ không gian trên ba tầng độ sâu gần, trung, xa."
+      },
+      {
+        "title": "Cách tính điểm & Chỉ số trực tiếp",
+        "content": "Mỗi mô phỏng kết hợp hình ảnh trực quan tức thì với chỉ số định lượng minh bạch. Không cần tải xuống: Tự động tối ưu hiển thị mượt mà trên laptop và PC."
+      },
+      {
+        "title": "Ứng dụng trong học tập & công việc",
+        "content": "Có. Giao diện tương thích mượt mà với laptop, Chromebook, máy tính bảng và bảng tương tác. Mười đến mười lăm phút vài lần mỗi tuần giúp củng cố trực giác và hiệu suất ổn định."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Thiết lập & Điều khiển",
+        "steps": [
+          "Bắt đầu ở chế độ chuẩn để ghi nhận khách quan tốc độ và hiểu biết hiện tại.",
+          "Chỉ thay đổi một thông số mỗi lần để thấy rõ mối quan hệ nhân quả."
+        ]
+      },
+      {
+        "title": "Cách thực hiện một phiên",
+        "steps": [
+          "Khám phá giếng trọng lực không-thời gian 3D và phóng vệ tinh quỹ đạo.",
+          "Xem công thức, độ chính xác và mili-giây sau mỗi lượt thử."
+        ]
+      },
+      {
+        "title": "Phân tích kết quả",
+        "steps": [
+          "Có. Các bài hoàn thành được tự động lưu vào bảng Thống kê cục bộ trên trình duyệt.",
+          "Các khối 10 phút tập trung cao hiệu quả hơn nhiều so với luyện kéo dài gây mệt mỏi."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Thay đổi từng biến số một",
+        "content": "Chỉ thay đổi một thông số mỗi lần để thấy rõ mối quan hệ nhân quả."
+      },
+      {
+        "title": "Ưu tiên chính xác trước tốc độ",
+        "content": "Xem công thức, độ chính xác và mili-giây sau mỗi lượt thử."
+      },
+      {
+        "title": "Theo dõi tiến bộ đều đặn",
+        "content": "Mười đến mười lăm phút vài lần mỗi tuần giúp củng cố trực giác và hiệu suất ổn định."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Công cụ này có hoàn toàn miễn phí không?",
+        "answer": "Có. Mọi mô-đun trên Reflextry đều chạy trực tiếp trên trình duyệt, không cần tài khoản hay tải về."
+      },
+      {
+        "question": "Có dùng được trên laptop học tập và máy tính bảng không?",
+        "answer": "Có. Giao diện tương thích mượt mà với laptop, Chromebook, máy tính bảng và bảng tương tác."
+      },
+      {
+        "question": "Điểm cao nhất của tôi có được lưu lại không?",
+        "answer": "Có. Các bài hoàn thành được tự động lưu vào bảng Thống kê cục bộ trên trình duyệt."
+      },
+      {
+        "question": "Nên luyện tập với tần suất thế nào?",
+        "answer": "Mỗi phiên tập trung 10 phút, 3–5 lần mỗi tuần sẽ mang lại sự tiến bộ rõ rệt và bền vững."
+      }
+    ]
+  },
+  "spatial-aim-3d": {
+    "description": [
+      {
+        "title": "Giới thiệu Đấu Trường Ngắm Không Gian 3D",
+        "content": "Ngắm và bắn drone 3D xuất hiện ở các tầng độ sâu gần, trung và xa. Chạy bằng WebGL 3D thời gian thực, cho phép xoay camera quanh lưới không-thời gian uốn cong, phóng vệ tinh vào quỹ đạo ổn định và bắn mục tiêu drone 3D ở các mặt phẳng gần, trung, xa."
+      },
+      {
+        "title": "Cơ chế cốt lõi & Khoa học học tập",
+        "content": "Mô phỏng 3D tăng tốc phần cứng trên trình duyệt về cơ học quỹ đạo thiên văn và ngắm mục tiêu theo chiều sâu Z. WebGL 3D thời gian thực: Điều khiển góc nhìn 3D linh hoạt cùng ánh sáng thực. Cảm nhận chiều sâu: Rèn phản xạ không gian trên ba tầng độ sâu gần, trung, xa."
+      },
+      {
+        "title": "Cách tính điểm & Chỉ số trực tiếp",
+        "content": "Mỗi mô phỏng kết hợp hình ảnh trực quan tức thì với chỉ số định lượng minh bạch. Không cần tải xuống: Tự động tối ưu hiển thị mượt mà trên laptop và PC."
+      },
+      {
+        "title": "Ứng dụng trong học tập & công việc",
+        "content": "Có. Giao diện tương thích mượt mà với laptop, Chromebook, máy tính bảng và bảng tương tác. Mười đến mười lăm phút vài lần mỗi tuần giúp củng cố trực giác và hiệu suất ổn định."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Thiết lập & Điều khiển",
+        "steps": [
+          "Bắt đầu ở chế độ chuẩn để ghi nhận khách quan tốc độ và hiểu biết hiện tại.",
+          "Chỉ thay đổi một thông số mỗi lần để thấy rõ mối quan hệ nhân quả."
+        ]
+      },
+      {
+        "title": "Cách thực hiện một phiên",
+        "steps": [
+          "Ngắm và bắn drone 3D xuất hiện ở các tầng độ sâu gần, trung và xa.",
+          "Xem công thức, độ chính xác và mili-giây sau mỗi lượt thử."
+        ]
+      },
+      {
+        "title": "Phân tích kết quả",
+        "steps": [
+          "Có. Các bài hoàn thành được tự động lưu vào bảng Thống kê cục bộ trên trình duyệt.",
+          "Các khối 10 phút tập trung cao hiệu quả hơn nhiều so với luyện kéo dài gây mệt mỏi."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Thay đổi từng biến số một",
+        "content": "Chỉ thay đổi một thông số mỗi lần để thấy rõ mối quan hệ nhân quả."
+      },
+      {
+        "title": "Ưu tiên chính xác trước tốc độ",
+        "content": "Xem công thức, độ chính xác và mili-giây sau mỗi lượt thử."
+      },
+      {
+        "title": "Theo dõi tiến bộ đều đặn",
+        "content": "Mười đến mười lăm phút vài lần mỗi tuần giúp củng cố trực giác và hiệu suất ổn định."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Công cụ này có hoàn toàn miễn phí không?",
+        "answer": "Có. Mọi mô-đun trên Reflextry đều chạy trực tiếp trên trình duyệt, không cần tài khoản hay tải về."
+      },
+      {
+        "question": "Có dùng được trên laptop học tập và máy tính bảng không?",
+        "answer": "Có. Giao diện tương thích mượt mà với laptop, Chromebook, máy tính bảng và bảng tương tác."
+      },
+      {
+        "question": "Điểm cao nhất của tôi có được lưu lại không?",
+        "answer": "Có. Các bài hoàn thành được tự động lưu vào bảng Thống kê cục bộ trên trình duyệt."
+      },
+      {
+        "question": "Nên luyện tập với tần suất thế nào?",
+        "answer": "Mỗi phiên tập trung 10 phút, 3–5 lần mỗi tuần sẽ mang lại sự tiến bộ rõ rệt và bền vững."
+      }
+    ]
+  },
+  "reaction-duel-2p": {
+    "description": [
+      {
+        "title": "Giới thiệu Đấu Phản Xạ 2 Người Chơi",
+        "content": "So tài 5 hiệp tính theo mili-giây trên cùng thiết bị có báo phạm quy bấm sớm. Không cần đăng nhập hay ghép trận. Chia sẻ một màn hình để thi đấu phản xạ mili-giây, kéo co toán học tốc độ và bắn pháo trọng lực theo lượt."
+      },
+      {
+        "title": "Cơ chế cốt lõi & Khoa học học tập",
+        "content": "Trò chơi thi đấu 2 người tại chỗ về phản xạ, tính nhẩm và vật lý dành cho lớp học và nhóm học tập. Chung bàn phím & cảm ứng: Điều khiển trái/phải tiện lợi trên laptop và máy tính bảng. Phù hợp lớp học: Nhiều cấp độ cho trẻ em, học sinh và người chơi nâng cao."
+      },
+      {
+        "title": "Cách tính điểm & Chỉ số trực tiếp",
+        "content": "Mỗi mô phỏng kết hợp hình ảnh trực quan tức thì với chỉ số định lượng minh bạch. Chấm điểm mili-giây công bằng: Phát hiện bấm sớm và thống kê từng hiệp ngay lập tức."
+      },
+      {
+        "title": "Ứng dụng trong học tập & công việc",
+        "content": "Có. Giao diện tương thích mượt mà với laptop, Chromebook, máy tính bảng và bảng tương tác. Mười đến mười lăm phút vài lần mỗi tuần giúp củng cố trực giác và hiệu suất ổn định."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Thiết lập & Điều khiển",
+        "steps": [
+          "Bắt đầu ở chế độ chuẩn để ghi nhận khách quan tốc độ và hiểu biết hiện tại.",
+          "Chỉ thay đổi một thông số mỗi lần để thấy rõ mối quan hệ nhân quả."
+        ]
+      },
+      {
+        "title": "Cách thực hiện một phiên",
+        "steps": [
+          "So tài 5 hiệp tính theo mili-giây trên cùng thiết bị có báo phạm quy bấm sớm.",
+          "Xem công thức, độ chính xác và mili-giây sau mỗi lượt thử."
+        ]
+      },
+      {
+        "title": "Phân tích kết quả",
+        "steps": [
+          "Có. Các bài hoàn thành được tự động lưu vào bảng Thống kê cục bộ trên trình duyệt.",
+          "Các khối 10 phút tập trung cao hiệu quả hơn nhiều so với luyện kéo dài gây mệt mỏi."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Thay đổi từng biến số một",
+        "content": "Chỉ thay đổi một thông số mỗi lần để thấy rõ mối quan hệ nhân quả."
+      },
+      {
+        "title": "Ưu tiên chính xác trước tốc độ",
+        "content": "Xem công thức, độ chính xác và mili-giây sau mỗi lượt thử."
+      },
+      {
+        "title": "Theo dõi tiến bộ đều đặn",
+        "content": "Mười đến mười lăm phút vài lần mỗi tuần giúp củng cố trực giác và hiệu suất ổn định."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Công cụ này có hoàn toàn miễn phí không?",
+        "answer": "Có. Mọi mô-đun trên Reflextry đều chạy trực tiếp trên trình duyệt, không cần tài khoản hay tải về."
+      },
+      {
+        "question": "Có dùng được trên laptop học tập và máy tính bảng không?",
+        "answer": "Có. Giao diện tương thích mượt mà với laptop, Chromebook, máy tính bảng và bảng tương tác."
+      },
+      {
+        "question": "Điểm cao nhất của tôi có được lưu lại không?",
+        "answer": "Có. Các bài hoàn thành được tự động lưu vào bảng Thống kê cục bộ trên trình duyệt."
+      },
+      {
+        "question": "Nên luyện tập với tần suất thế nào?",
+        "answer": "Mỗi phiên tập trung 10 phút, 3–5 lần mỗi tuần sẽ mang lại sự tiến bộ rõ rệt và bền vững."
+      }
+    ]
+  },
+  "math-tug-of-war": {
+    "description": [
+      {
+        "title": "Giới thiệu Kéo Co Toán Học 2 Người",
+        "content": "Giải phép tính nhanh hơn đối thủ để kéo dây vượt vạch chiến thắng. Không cần đăng nhập hay ghép trận. Chia sẻ một màn hình để thi đấu phản xạ mili-giây, kéo co toán học tốc độ và bắn pháo trọng lực theo lượt."
+      },
+      {
+        "title": "Cơ chế cốt lõi & Khoa học học tập",
+        "content": "Trò chơi thi đấu 2 người tại chỗ về phản xạ, tính nhẩm và vật lý dành cho lớp học và nhóm học tập. Chung bàn phím & cảm ứng: Điều khiển trái/phải tiện lợi trên laptop và máy tính bảng. Phù hợp lớp học: Nhiều cấp độ cho trẻ em, học sinh và người chơi nâng cao."
+      },
+      {
+        "title": "Cách tính điểm & Chỉ số trực tiếp",
+        "content": "Mỗi mô phỏng kết hợp hình ảnh trực quan tức thì với chỉ số định lượng minh bạch. Chấm điểm mili-giây công bằng: Phát hiện bấm sớm và thống kê từng hiệp ngay lập tức."
+      },
+      {
+        "title": "Ứng dụng trong học tập & công việc",
+        "content": "Có. Giao diện tương thích mượt mà với laptop, Chromebook, máy tính bảng và bảng tương tác. Mười đến mười lăm phút vài lần mỗi tuần giúp củng cố trực giác và hiệu suất ổn định."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Thiết lập & Điều khiển",
+        "steps": [
+          "Bắt đầu ở chế độ chuẩn để ghi nhận khách quan tốc độ và hiểu biết hiện tại.",
+          "Chỉ thay đổi một thông số mỗi lần để thấy rõ mối quan hệ nhân quả."
+        ]
+      },
+      {
+        "title": "Cách thực hiện một phiên",
+        "steps": [
+          "Giải phép tính nhanh hơn đối thủ để kéo dây vượt vạch chiến thắng.",
+          "Xem công thức, độ chính xác và mili-giây sau mỗi lượt thử."
+        ]
+      },
+      {
+        "title": "Phân tích kết quả",
+        "steps": [
+          "Có. Các bài hoàn thành được tự động lưu vào bảng Thống kê cục bộ trên trình duyệt.",
+          "Các khối 10 phút tập trung cao hiệu quả hơn nhiều so với luyện kéo dài gây mệt mỏi."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Thay đổi từng biến số một",
+        "content": "Chỉ thay đổi một thông số mỗi lần để thấy rõ mối quan hệ nhân quả."
+      },
+      {
+        "title": "Ưu tiên chính xác trước tốc độ",
+        "content": "Xem công thức, độ chính xác và mili-giây sau mỗi lượt thử."
+      },
+      {
+        "title": "Theo dõi tiến bộ đều đặn",
+        "content": "Mười đến mười lăm phút vài lần mỗi tuần giúp củng cố trực giác và hiệu suất ổn định."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Công cụ này có hoàn toàn miễn phí không?",
+        "answer": "Có. Mọi mô-đun trên Reflextry đều chạy trực tiếp trên trình duyệt, không cần tài khoản hay tải về."
+      },
+      {
+        "question": "Có dùng được trên laptop học tập và máy tính bảng không?",
+        "answer": "Có. Giao diện tương thích mượt mà với laptop, Chromebook, máy tính bảng và bảng tương tác."
+      },
+      {
+        "question": "Điểm cao nhất của tôi có được lưu lại không?",
+        "answer": "Có. Các bài hoàn thành được tự động lưu vào bảng Thống kê cục bộ trên trình duyệt."
+      },
+      {
+        "question": "Nên luyện tập với tần suất thế nào?",
+        "answer": "Mỗi phiên tập trung 10 phút, 3–5 lần mỗi tuần sẽ mang lại sự tiến bộ rõ rệt và bền vững."
+      }
+    ]
+  },
+  "cannon-battle-2p": {
+    "description": [
+      {
+        "title": "Giới thiệu Đại Chiến Pháo Trọng Lực",
+        "content": "Bắn pháo 2D theo lượt qua địa hình núi với gió đổi chiều và trọng lực hành tinh. Không cần đăng nhập hay ghép trận. Chia sẻ một màn hình để thi đấu phản xạ mili-giây, kéo co toán học tốc độ và bắn pháo trọng lực theo lượt."
+      },
+      {
+        "title": "Cơ chế cốt lõi & Khoa học học tập",
+        "content": "Trò chơi thi đấu 2 người tại chỗ về phản xạ, tính nhẩm và vật lý dành cho lớp học và nhóm học tập. Chung bàn phím & cảm ứng: Điều khiển trái/phải tiện lợi trên laptop và máy tính bảng. Phù hợp lớp học: Nhiều cấp độ cho trẻ em, học sinh và người chơi nâng cao."
+      },
+      {
+        "title": "Cách tính điểm & Chỉ số trực tiếp",
+        "content": "Mỗi mô phỏng kết hợp hình ảnh trực quan tức thì với chỉ số định lượng minh bạch. Chấm điểm mili-giây công bằng: Phát hiện bấm sớm và thống kê từng hiệp ngay lập tức."
+      },
+      {
+        "title": "Ứng dụng trong học tập & công việc",
+        "content": "Có. Giao diện tương thích mượt mà với laptop, Chromebook, máy tính bảng và bảng tương tác. Mười đến mười lăm phút vài lần mỗi tuần giúp củng cố trực giác và hiệu suất ổn định."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Thiết lập & Điều khiển",
+        "steps": [
+          "Bắt đầu ở chế độ chuẩn để ghi nhận khách quan tốc độ và hiểu biết hiện tại.",
+          "Chỉ thay đổi một thông số mỗi lần để thấy rõ mối quan hệ nhân quả."
+        ]
+      },
+      {
+        "title": "Cách thực hiện một phiên",
+        "steps": [
+          "Bắn pháo 2D theo lượt qua địa hình núi với gió đổi chiều và trọng lực hành tinh.",
+          "Xem công thức, độ chính xác và mili-giây sau mỗi lượt thử."
+        ]
+      },
+      {
+        "title": "Phân tích kết quả",
+        "steps": [
+          "Có. Các bài hoàn thành được tự động lưu vào bảng Thống kê cục bộ trên trình duyệt.",
+          "Các khối 10 phút tập trung cao hiệu quả hơn nhiều so với luyện kéo dài gây mệt mỏi."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Thay đổi từng biến số một",
+        "content": "Chỉ thay đổi một thông số mỗi lần để thấy rõ mối quan hệ nhân quả."
+      },
+      {
+        "title": "Ưu tiên chính xác trước tốc độ",
+        "content": "Xem công thức, độ chính xác và mili-giây sau mỗi lượt thử."
+      },
+      {
+        "title": "Theo dõi tiến bộ đều đặn",
+        "content": "Mười đến mười lăm phút vài lần mỗi tuần giúp củng cố trực giác và hiệu suất ổn định."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Công cụ này có hoàn toàn miễn phí không?",
+        "answer": "Có. Mọi mô-đun trên Reflextry đều chạy trực tiếp trên trình duyệt, không cần tài khoản hay tải về."
+      },
+      {
+        "question": "Có dùng được trên laptop học tập và máy tính bảng không?",
+        "answer": "Có. Giao diện tương thích mượt mà với laptop, Chromebook, máy tính bảng và bảng tương tác."
+      },
+      {
+        "question": "Điểm cao nhất của tôi có được lưu lại không?",
+        "answer": "Có. Các bài hoàn thành được tự động lưu vào bảng Thống kê cục bộ trên trình duyệt."
+      },
+      {
+        "question": "Nên luyện tập với tần suất thế nào?",
+        "answer": "Mỗi phiên tập trung 10 phút, 3–5 lần mỗi tuần sẽ mang lại sự tiến bộ rõ rệt và bền vững."
+      }
+    ]
+  },
+  "speed-reading": {
+    "description": [
+      {
+        "title": "Giới thiệu Đọc Nhanh & Đọc Hiểu",
+        "content": "Đọc chế độ đánh dấu hoặc RSVP rồi làm trắc nghiệm để tính Effective WPM. Thiết kế cho học sinh, sinh viên và dân văn phòng. Tính WPM hiệu quả kèm câu hỏi đọc hiểu, tốc độ KPH bàn phím số và biến động phản xạ sau mỗi phiên Pomodoro."
+      },
+      {
+        "title": "Cơ chế cốt lõi & Khoa học học tập",
+        "content": "Bài đo thực tiễn gồm đọc nhanh RSVP & đánh dấu nhịp, nhập liệu số kế toán 10-Key và theo dõi tập trung kèm kiểm tra phản xạ. Kiểm chứng đọc hiểu: Mỗi bài đọc nhanh đều có câu hỏi xác thực khả năng ghi nhớ. Chỉ số KPH văn phòng: Chuẩn hóa tốc độ gõ phím số KPH và tỷ lệ chính xác."
+      },
+      {
+        "title": "Cách tính điểm & Chỉ số trực tiếp",
+        "content": "Mỗi mô phỏng kết hợp hình ảnh trực quan tức thì với chỉ số định lượng minh bạch. Đo lường độ mệt mỏi: So sánh thời gian phản xạ trước và sau phiên tập trung."
+      },
+      {
+        "title": "Ứng dụng trong học tập & công việc",
+        "content": "Có. Giao diện tương thích mượt mà với laptop, Chromebook, máy tính bảng và bảng tương tác. Mười đến mười lăm phút vài lần mỗi tuần giúp củng cố trực giác và hiệu suất ổn định."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Thiết lập & Điều khiển",
+        "steps": [
+          "Bắt đầu ở chế độ chuẩn để ghi nhận khách quan tốc độ và hiểu biết hiện tại.",
+          "Chỉ thay đổi một thông số mỗi lần để thấy rõ mối quan hệ nhân quả."
+        ]
+      },
+      {
+        "title": "Cách thực hiện một phiên",
+        "steps": [
+          "Đọc chế độ đánh dấu hoặc RSVP rồi làm trắc nghiệm để tính Effective WPM.",
+          "Xem công thức, độ chính xác và mili-giây sau mỗi lượt thử."
+        ]
+      },
+      {
+        "title": "Phân tích kết quả",
+        "steps": [
+          "Có. Các bài hoàn thành được tự động lưu vào bảng Thống kê cục bộ trên trình duyệt.",
+          "Các khối 10 phút tập trung cao hiệu quả hơn nhiều so với luyện kéo dài gây mệt mỏi."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Thay đổi từng biến số một",
+        "content": "Chỉ thay đổi một thông số mỗi lần để thấy rõ mối quan hệ nhân quả."
+      },
+      {
+        "title": "Ưu tiên chính xác trước tốc độ",
+        "content": "Xem công thức, độ chính xác và mili-giây sau mỗi lượt thử."
+      },
+      {
+        "title": "Theo dõi tiến bộ đều đặn",
+        "content": "Mười đến mười lăm phút vài lần mỗi tuần giúp củng cố trực giác và hiệu suất ổn định."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Công cụ này có hoàn toàn miễn phí không?",
+        "answer": "Có. Mọi mô-đun trên Reflextry đều chạy trực tiếp trên trình duyệt, không cần tài khoản hay tải về."
+      },
+      {
+        "question": "Có dùng được trên laptop học tập và máy tính bảng không?",
+        "answer": "Có. Giao diện tương thích mượt mà với laptop, Chromebook, máy tính bảng và bảng tương tác."
+      },
+      {
+        "question": "Điểm cao nhất của tôi có được lưu lại không?",
+        "answer": "Có. Các bài hoàn thành được tự động lưu vào bảng Thống kê cục bộ trên trình duyệt."
+      },
+      {
+        "question": "Nên luyện tập với tần suất thế nào?",
+        "answer": "Mỗi phiên tập trung 10 phút, 3–5 lần mỗi tuần sẽ mang lại sự tiến bộ rõ rệt và bền vững."
+      }
+    ]
+  },
+  "ten-key": {
+    "description": [
+      {
+        "title": "Giới thiệu Kiểm Tra Bàn Phím Số 10-Key",
+        "content": "Đo KPH và độ chính xác khi nhập hóa đơn, số nguyên và mã SKU. Thiết kế cho học sinh, sinh viên và dân văn phòng. Tính WPM hiệu quả kèm câu hỏi đọc hiểu, tốc độ KPH bàn phím số và biến động phản xạ sau mỗi phiên Pomodoro."
+      },
+      {
+        "title": "Cơ chế cốt lõi & Khoa học học tập",
+        "content": "Bài đo thực tiễn gồm đọc nhanh RSVP & đánh dấu nhịp, nhập liệu số kế toán 10-Key và theo dõi tập trung kèm kiểm tra phản xạ. Kiểm chứng đọc hiểu: Mỗi bài đọc nhanh đều có câu hỏi xác thực khả năng ghi nhớ. Chỉ số KPH văn phòng: Chuẩn hóa tốc độ gõ phím số KPH và tỷ lệ chính xác."
+      },
+      {
+        "title": "Cách tính điểm & Chỉ số trực tiếp",
+        "content": "Mỗi mô phỏng kết hợp hình ảnh trực quan tức thì với chỉ số định lượng minh bạch. Đo lường độ mệt mỏi: So sánh thời gian phản xạ trước và sau phiên tập trung."
+      },
+      {
+        "title": "Ứng dụng trong học tập & công việc",
+        "content": "Có. Giao diện tương thích mượt mà với laptop, Chromebook, máy tính bảng và bảng tương tác. Mười đến mười lăm phút vài lần mỗi tuần giúp củng cố trực giác và hiệu suất ổn định."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Thiết lập & Điều khiển",
+        "steps": [
+          "Bắt đầu ở chế độ chuẩn để ghi nhận khách quan tốc độ và hiểu biết hiện tại.",
+          "Chỉ thay đổi một thông số mỗi lần để thấy rõ mối quan hệ nhân quả."
+        ]
+      },
+      {
+        "title": "Cách thực hiện một phiên",
+        "steps": [
+          "Đo KPH và độ chính xác khi nhập hóa đơn, số nguyên và mã SKU.",
+          "Xem công thức, độ chính xác và mili-giây sau mỗi lượt thử."
+        ]
+      },
+      {
+        "title": "Phân tích kết quả",
+        "steps": [
+          "Có. Các bài hoàn thành được tự động lưu vào bảng Thống kê cục bộ trên trình duyệt.",
+          "Các khối 10 phút tập trung cao hiệu quả hơn nhiều so với luyện kéo dài gây mệt mỏi."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Thay đổi từng biến số một",
+        "content": "Chỉ thay đổi một thông số mỗi lần để thấy rõ mối quan hệ nhân quả."
+      },
+      {
+        "title": "Ưu tiên chính xác trước tốc độ",
+        "content": "Xem công thức, độ chính xác và mili-giây sau mỗi lượt thử."
+      },
+      {
+        "title": "Theo dõi tiến bộ đều đặn",
+        "content": "Mười đến mười lăm phút vài lần mỗi tuần giúp củng cố trực giác và hiệu suất ổn định."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Công cụ này có hoàn toàn miễn phí không?",
+        "answer": "Có. Mọi mô-đun trên Reflextry đều chạy trực tiếp trên trình duyệt, không cần tài khoản hay tải về."
+      },
+      {
+        "question": "Có dùng được trên laptop học tập và máy tính bảng không?",
+        "answer": "Có. Giao diện tương thích mượt mà với laptop, Chromebook, máy tính bảng và bảng tương tác."
+      },
+      {
+        "question": "Điểm cao nhất của tôi có được lưu lại không?",
+        "answer": "Có. Các bài hoàn thành được tự động lưu vào bảng Thống kê cục bộ trên trình duyệt."
+      },
+      {
+        "question": "Nên luyện tập với tần suất thế nào?",
+        "answer": "Mỗi phiên tập trung 10 phút, 3–5 lần mỗi tuần sẽ mang lại sự tiến bộ rõ rệt và bền vững."
+      }
+    ]
+  },
+  "focus-sprint": {
+    "description": [
+      {
+        "title": "Giới thiệu Phiên Tập Trung & Đo Mệt Mỏi",
+        "content": "Kết hợp đồng hồ Pomodoro chuẩn với kiểm tra phản xạ trước và sau phiên học. Thiết kế cho học sinh, sinh viên và dân văn phòng. Tính WPM hiệu quả kèm câu hỏi đọc hiểu, tốc độ KPH bàn phím số và biến động phản xạ sau mỗi phiên Pomodoro."
+      },
+      {
+        "title": "Cơ chế cốt lõi & Khoa học học tập",
+        "content": "Bài đo thực tiễn gồm đọc nhanh RSVP & đánh dấu nhịp, nhập liệu số kế toán 10-Key và theo dõi tập trung kèm kiểm tra phản xạ. Kiểm chứng đọc hiểu: Mỗi bài đọc nhanh đều có câu hỏi xác thực khả năng ghi nhớ. Chỉ số KPH văn phòng: Chuẩn hóa tốc độ gõ phím số KPH và tỷ lệ chính xác."
+      },
+      {
+        "title": "Cách tính điểm & Chỉ số trực tiếp",
+        "content": "Mỗi mô phỏng kết hợp hình ảnh trực quan tức thì với chỉ số định lượng minh bạch. Đo lường độ mệt mỏi: So sánh thời gian phản xạ trước và sau phiên tập trung."
+      },
+      {
+        "title": "Ứng dụng trong học tập & công việc",
+        "content": "Có. Giao diện tương thích mượt mà với laptop, Chromebook, máy tính bảng và bảng tương tác. Mười đến mười lăm phút vài lần mỗi tuần giúp củng cố trực giác và hiệu suất ổn định."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Thiết lập & Điều khiển",
+        "steps": [
+          "Bắt đầu ở chế độ chuẩn để ghi nhận khách quan tốc độ và hiểu biết hiện tại.",
+          "Chỉ thay đổi một thông số mỗi lần để thấy rõ mối quan hệ nhân quả."
+        ]
+      },
+      {
+        "title": "Cách thực hiện một phiên",
+        "steps": [
+          "Kết hợp đồng hồ Pomodoro chuẩn với kiểm tra phản xạ trước và sau phiên học.",
+          "Xem công thức, độ chính xác và mili-giây sau mỗi lượt thử."
+        ]
+      },
+      {
+        "title": "Phân tích kết quả",
+        "steps": [
+          "Có. Các bài hoàn thành được tự động lưu vào bảng Thống kê cục bộ trên trình duyệt.",
+          "Các khối 10 phút tập trung cao hiệu quả hơn nhiều so với luyện kéo dài gây mệt mỏi."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Thay đổi từng biến số một",
+        "content": "Chỉ thay đổi một thông số mỗi lần để thấy rõ mối quan hệ nhân quả."
+      },
+      {
+        "title": "Ưu tiên chính xác trước tốc độ",
+        "content": "Xem công thức, độ chính xác và mili-giây sau mỗi lượt thử."
+      },
+      {
+        "title": "Theo dõi tiến bộ đều đặn",
+        "content": "Mười đến mười lăm phút vài lần mỗi tuần giúp củng cố trực giác và hiệu suất ổn định."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Công cụ này có hoàn toàn miễn phí không?",
+        "answer": "Có. Mọi mô-đun trên Reflextry đều chạy trực tiếp trên trình duyệt, không cần tài khoản hay tải về."
+      },
+      {
+        "question": "Có dùng được trên laptop học tập và máy tính bảng không?",
+        "answer": "Có. Giao diện tương thích mượt mà với laptop, Chromebook, máy tính bảng và bảng tương tác."
+      },
+      {
+        "question": "Điểm cao nhất của tôi có được lưu lại không?",
+        "answer": "Có. Các bài hoàn thành được tự động lưu vào bảng Thống kê cục bộ trên trình duyệt."
+      },
+      {
+        "question": "Nên luyện tập với tần suất thế nào?",
+        "answer": "Mỗi phiên tập trung 10 phút, 3–5 lần mỗi tuần sẽ mang lại sự tiến bộ rõ rệt và bền vững."
+      }
+    ]
   }
 }

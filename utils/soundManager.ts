@@ -1,157 +1,160 @@
 "use client";
 
-export class SoundManager {
-    private static sounds: Map<string, HTMLAudioElement> = new Map();
-    private static enabled: boolean = true;
+import { safeStorage } from "./safeStorage";
 
-    static init() {
-        if (typeof window === "undefined") return;
+export type SoundEffect =
+    | "click"
+    | "hover"
+    | "levelup"
+    | "success"
+    | "error"
+    | "start"
+    | "complete"
+    | "tick";
 
-        // Load preference
-        const stored = localStorage.getItem("reflextry_preferences");
-        if (stored) {
-            try {
-                const prefs = JSON.parse(stored);
-                SoundManager.enabled = prefs.soundEnabled !== false;
-            } catch (_e) {
-                // Ignore
+const PREFERENCES_KEY = "reflextry_preferences";
+
+class SoundManagerService {
+    private audioContext: AudioContext | null = null;
+    private enabled: boolean | null = null;
+    private lastHoverTime = 0;
+
+    private readPreference(): boolean {
+        if (typeof window === "undefined") return false;
+        try {
+            const raw = safeStorage.getItem(PREFERENCES_KEY);
+            if (!raw) return true;
+            const parsed = JSON.parse(raw) as { soundEnabled?: unknown };
+            if (typeof parsed.soundEnabled === "boolean") {
+                return parsed.soundEnabled;
             }
+        } catch {
+            // Fall back to enabled by default
+        }
+        return true;
+    }
+
+    public isEnabled(): boolean {
+        if (this.enabled === null) {
+            this.enabled = this.readPreference();
+        }
+        return this.enabled;
+    }
+
+    public setEnabled(enabled: boolean): void {
+        this.enabled = Boolean(enabled);
+    }
+
+    public toggle(): boolean {
+        const next = !this.isEnabled();
+        this.setEnabled(next);
+        return next;
+    }
+
+    private getContext(): AudioContext | null {
+        if (typeof window === "undefined") return null;
+        try {
+            if (!this.audioContext) {
+                const AudioCtx =
+                    window.AudioContext ||
+                    (window as unknown as { webkitAudioContext?: typeof AudioContext })
+                        .webkitAudioContext;
+                if (!AudioCtx) return null;
+                this.audioContext = new AudioCtx();
+            }
+            if (this.audioContext.state === "suspended") {
+                void this.audioContext.resume().catch(() => {});
+            }
+            return this.audioContext;
+        } catch {
+            return null;
         }
     }
 
-    static setEnabled(enabled: boolean) {
-        SoundManager.enabled = enabled;
+    private playTone(
+        ctx: AudioContext,
+        frequency: number,
+        durationSec: number,
+        type: OscillatorType,
+        volume: number,
+        delaySec = 0,
+        endFrequency?: number
+    ): void {
+        const now = ctx.currentTime + delaySec;
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+
+        osc.type = type;
+        osc.frequency.setValueAtTime(frequency, now);
+        if (endFrequency !== undefined) {
+            osc.frequency.exponentialRampToValueAtTime(
+                Math.max(1, endFrequency),
+                now + durationSec
+            );
+        }
+
+        gain.gain.setValueAtTime(0.0001, now);
+        gain.gain.exponentialRampToValueAtTime(Math.max(0.0001, volume), now + 0.008);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + durationSec);
+
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+
+        osc.start(now);
+        osc.stop(now + durationSec + 0.01);
     }
 
-    static play(soundName: string, volume: number = 0.5) {
-        if (!SoundManager.enabled || typeof window === "undefined") return;
+    public play(effect: SoundEffect): void {
+        if (typeof window === "undefined" || !this.isEnabled()) return;
+
+        // Avoid noisy hover audio before any user gesture or during rapid pointer sweeps
+        if (effect === "hover") {
+            const now = Date.now();
+            if (now - this.lastHoverTime < 80) return;
+            this.lastHoverTime = now;
+            if (!this.audioContext || this.audioContext.state !== "running") {
+                return;
+            }
+        }
+
+        const ctx = this.getContext();
+        if (!ctx || ctx.state !== "running") return;
 
         try {
-             
-            const AudioContextClass = (window.AudioContext || (window as any).webkitAudioContext);
-            if (!AudioContextClass) return;
-
-            const audioContext = new AudioContextClass();
-            const gainNode = audioContext.createGain();
-            gainNode.connect(audioContext.destination);
-            gainNode.gain.setValueAtTime(volume, audioContext.currentTime);
-
-            const oscillator = audioContext.createOscillator();
-            oscillator.connect(gainNode);
-
-            const now = audioContext.currentTime;
-
-            switch (soundName) {
+            switch (effect) {
                 case "click":
-                case "beep":
-                    oscillator.type = "sine";
-                    oscillator.frequency.setValueAtTime(800, now);
-                    oscillator.frequency.exponentialRampToValueAtTime(400, now + 0.1);
-                    gainNode.gain.exponentialRampToValueAtTime(0.01, now + 0.1);
-                    oscillator.start(now);
-                    oscillator.stop(now + 0.1);
+                    this.playTone(ctx, 560, 0.045, "sine", 0.04, 0, 380);
                     break;
-
                 case "hover":
-                    oscillator.type = "sine";
-                    oscillator.frequency.setValueAtTime(400, now);
-                    oscillator.frequency.exponentialRampToValueAtTime(600, now + 0.05);
-                    gainNode.gain.setValueAtTime(volume * 0.5, now);
-                    gainNode.gain.exponentialRampToValueAtTime(0.01, now + 0.05);
-                    oscillator.start(now);
-                    oscillator.stop(now + 0.05);
+                    this.playTone(ctx, 720, 0.025, "sine", 0.015, 0, 680);
                     break;
-
+                case "tick":
+                    this.playTone(ctx, 880, 0.03, "triangle", 0.03);
+                    break;
+                case "start":
+                    this.playTone(ctx, 440, 0.08, "sine", 0.05, 0);
+                    this.playTone(ctx, 660, 0.1, "sine", 0.05, 0.07);
+                    break;
                 case "success":
-                case "hit":
-                    oscillator.type = "sine";
-                    oscillator.frequency.setValueAtTime(600, now);
-                    oscillator.frequency.exponentialRampToValueAtTime(1200, now + 0.1);
-                    gainNode.gain.exponentialRampToValueAtTime(0.01, now + 0.2);
-                    oscillator.start(now);
-                    oscillator.stop(now + 0.2);
-
-                    // Add a second harmonic for "ding" effect
-                    const osc2 = audioContext.createOscillator();
-                    const gain2 = audioContext.createGain();
-                    osc2.connect(gain2);
-                    gain2.connect(audioContext.destination);
-                    osc2.frequency.setValueAtTime(1200, now);
-                    gain2.gain.setValueAtTime(volume * 0.5, now);
-                    gain2.gain.exponentialRampToValueAtTime(0.01, now + 0.3);
-                    osc2.start(now);
-                    osc2.stop(now + 0.3);
+                case "complete":
+                    this.playTone(ctx, 523.25, 0.09, "sine", 0.06, 0);
+                    this.playTone(ctx, 659.25, 0.09, "sine", 0.06, 0.07);
+                    this.playTone(ctx, 783.99, 0.14, "sine", 0.06, 0.14);
                     break;
-
                 case "error":
-                case "miss":
-                    oscillator.type = "sawtooth";
-                    oscillator.frequency.setValueAtTime(200, now);
-                    oscillator.frequency.exponentialRampToValueAtTime(100, now + 0.2);
-                    gainNode.gain.exponentialRampToValueAtTime(0.01, now + 0.2);
-                    oscillator.start(now);
-                    oscillator.stop(now + 0.2);
+                    this.playTone(ctx, 220, 0.12, "sawtooth", 0.04, 0, 150);
                     break;
-
                 case "levelup":
-                case "high_score":
-                    // Arpeggio
-                    const notes = [523.25, 659.25, 783.99, 1046.50]; // C Major
-                    notes.forEach((freq, i) => {
-                        const osc = audioContext.createOscillator();
-                        const gn = audioContext.createGain();
-                        osc.connect(gn);
-                        gn.connect(audioContext.destination);
-
-                        const start = now + (i * 0.1);
-                        osc.frequency.value = freq;
-                        gn.gain.setValueAtTime(0, start);
-                        gn.gain.linearRampToValueAtTime(volume, start + 0.05);
-                        gn.gain.exponentialRampToValueAtTime(0.01, start + 0.4);
-
-                        osc.start(start);
-                        osc.stop(start + 0.4);
-                    });
+                    this.playTone(ctx, 523.25, 0.1, "triangle", 0.07, 0);
+                    this.playTone(ctx, 659.25, 0.1, "triangle", 0.07, 0.09);
+                    this.playTone(ctx, 783.99, 0.12, "triangle", 0.07, 0.18);
+                    this.playTone(ctx, 1046.5, 0.24, "triangle", 0.08, 0.28);
                     break;
-
-                default:
-                    // Fallback simple beep
-                    oscillator.type = "sine";
-                    oscillator.frequency.setValueAtTime(440, now);
-                    gainNode.gain.exponentialRampToValueAtTime(0.01, now + 0.1);
-                    oscillator.start(now);
-                    oscillator.stop(now + 0.1);
             }
-        } catch (error) {
-            console.error("Sound error:", error);
+        } catch {
+            // Silently ignore Web Audio playback errors
         }
-    }
-
-    static stop(soundName: string) {
-        const audio = SoundManager.sounds.get(soundName);
-        if (audio) {
-            audio.pause();
-            audio.currentTime = 0;
-        }
-    }
-
-    static stopAll() {
-        SoundManager.sounds.forEach(audio => {
-            audio.pause();
-            audio.currentTime = 0;
-        });
     }
 }
 
-// Initialize on load
-if (typeof window !== "undefined") {
-    SoundManager.init();
-}
-
-
-
-
-
-
-
-
+export const SoundManager = new SoundManagerService();

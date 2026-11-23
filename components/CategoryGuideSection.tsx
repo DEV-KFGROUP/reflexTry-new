@@ -1,185 +1,196 @@
 "use client";
 
 import Link from "next/link";
+import {
+    Zap,
+    Brain,
+    Gauge,
+    Target,
+    Gamepad2,
+    Atom,
+    Orbit,
+    Swords,
+    BookOpenCheck,
+    Crown,
+    ArrowUpRight,
+} from "lucide-react";
 import { useTranslation } from "@/lib/i18n/context";
 
 interface CategoryGuideProps {
-  category: "reflex" | "memory" | "speed" | "accuracy" | "gaming";
+    category: "reflex" | "memory" | "speed" | "accuracy" | "gaming" | "stem" | "lab-3d" | "multiplayer" | "productivity";
 }
 
-const CATEGORY_COLORS: Record<string, { text: string; bg: string; border: string }> = {
-  reflex: { text: "text-amber-700 dark:text-amber-400", bg: "hover:bg-amber-500/5", border: "hover:border-amber-500/50" },
-  memory: { text: "text-blue-700 dark:text-blue-400", bg: "hover:bg-blue-500/5", border: "hover:border-blue-500/50" },
-  speed: { text: "text-red-700 dark:text-red-400", bg: "hover:bg-red-500/5", border: "hover:border-red-500/50" },
-  accuracy: { text: "text-emerald-700 dark:text-emerald-400", bg: "hover:bg-emerald-500/5", border: "hover:border-emerald-500/50" },
-  gaming: { text: "text-purple-700 dark:text-purple-400", bg: "hover:bg-purple-500/5", border: "hover:border-purple-500/50" },
-};
-
 const ALL_CATEGORIES = [
-  { id: "gaming", icon: "🎮", href: "/gaming", color: "text-purple-500", hoverBorder: "hover:border-purple-500/50", hoverBg: "hover:bg-purple-500/5" },
-  { id: "memory", icon: "🧠", href: "/memory", color: "text-blue-500", hoverBorder: "hover:border-blue-500/50", hoverBg: "hover:bg-blue-500/5" },
-  { id: "reflex", icon: "⚡", href: "/reflex", color: "text-amber-500", hoverBorder: "hover:border-amber-500/50", hoverBg: "hover:bg-amber-500/5" },
-  { id: "speed", icon: "⌨️", href: "/speed", color: "text-red-500", hoverBorder: "hover:border-red-500/50", hoverBg: "hover:bg-red-500/5" },
-  { id: "accuracy", icon: "🎯", href: "/accuracy", color: "text-teal-500", hoverBorder: "hover:border-teal-500/50", hoverBg: "hover:bg-teal-500/5" },
+    { id: "puzzles", label: "Logic Puzzles", icon: Crown, href: "/puzzles" },
+    { id: "classics", label: "Flagship Classics", icon: Gamepad2, href: "/classics" },
+    { id: "reflex", label: "Reflex Arena", icon: Zap, href: "/reflex" },
+    { id: "memory", label: "Memory Arena", icon: Brain, href: "/memory" },
+    { id: "speed", label: "Speed Arena", icon: Gauge, href: "/speed" },
+    { id: "gaming", label: "Gaming Arena", icon: Gamepad2, href: "/gaming" },
+    { id: "accuracy", label: "Accuracy Arena", icon: Target, href: "/accuracy" },
+    { id: "stem", label: "STEM & Physics Lab", icon: Atom, href: "/stem" },
+    { id: "lab-3d", label: "3D Interactive Lab", icon: Orbit, href: "/lab-3d" },
+    { id: "multiplayer", label: "2-Player Arena", icon: Swords, href: "/multiplayer" },
+    { id: "productivity", label: "Student & Work Suite", icon: BookOpenCheck, href: "/productivity" },
 ];
 
 export function CategoryGuideSection({ category }: CategoryGuideProps) {
-  const { t, getLocalizedHref } = useTranslation();
-  const colors = CATEGORY_COLORS[category] || CATEGORY_COLORS.reflex;
-  const otherCategories = ALL_CATEGORIES.filter(c => c.id !== category);
+    const { t, getLocalizedHref } = useTranslation();
+    const otherCategories = ALL_CATEGORIES.filter((c) => c.id !== category);
 
-  return (
-    <>
-      {/* Detailed SEO / AEO / GEO Section */}
-      <div className="max-w-4xl mx-auto mt-16 space-y-12 text-left pt-6 border-t border-black/10 dark:border-white/10 relative z-10">
-        
-        {/* What is Section */}
-        <div className="space-y-4">
-          <h2 className="text-3xl font-bold text-foreground">
-            {t(`categoryGuide.${category}.whatIsTitle`, "What is Training?")}
-          </h2>
-          <p className="text-muted-foreground leading-relaxed">
-            {t(`categoryGuide.${category}.whatIsDesc`, "")}
-          </p>
-        </div>
+    return (
+        <div className="space-y-12">
+            {/* Editorial Reading Guide */}
+            <article className="bg-white border border-[#E6E3DB] rounded-xl p-6 sm:p-10 divide-y divide-[#E6E3DB]">
+                <section className="space-y-3 pb-8 max-w-3xl">
+                    <h2 className="font-serif text-2xl font-medium text-[#161614] tracking-tight">
+                        {t(`categoryGuide.${category}.whatIsTitle`, "What is Training?")}
+                    </h2>
+                    <p className="text-sm sm:text-[15px] text-[#57554E] leading-relaxed">
+                        {t(`categoryGuide.${category}.whatIsDesc`, "")}
+                    </p>
+                </section>
 
-        {/* How to Improve Section */}
-        <div className="space-y-4">
-          <h2 className="text-2xl font-bold text-foreground">
-            {t(`categoryGuide.${category}.howToTitle`, "How to Improve?")}
-          </h2>
-          <ol className="list-decimal list-inside space-y-2 text-muted-foreground">
-            <li>
-              <strong>{t(`categoryGuide.${category}.howToStep1Title`, "Step 1")}:</strong>{" "}
-              {t(`categoryGuide.${category}.howToStep1Desc`, "")}
-            </li>
-            <li>
-              <strong>{t(`categoryGuide.${category}.howToStep2Title`, "Step 2")}:</strong>{" "}
-              {t(`categoryGuide.${category}.howToStep2Desc`, "")}
-            </li>
-            <li>
-              <strong>{t(`categoryGuide.${category}.howToStep3Title`, "Step 3")}:</strong>{" "}
-              {t(`categoryGuide.${category}.howToStep3Desc`, "")}
-            </li>
-            <li>
-              <strong>{t(`categoryGuide.${category}.howToStep4Title`, "Step 4")}:</strong>{" "}
-              {t(`categoryGuide.${category}.howToStep4Desc`, "")}
-            </li>
-          </ol>
-        </div>
+                <section className="space-y-3 py-8 max-w-3xl">
+                    <h2 className="font-serif text-xl sm:text-2xl font-medium text-[#161614] tracking-tight">
+                        {t(`categoryGuide.${category}.howToTitle`, "How to Improve?")}
+                    </h2>
+                    <ol className="list-decimal pl-5 space-y-2.5 text-sm sm:text-[15px] text-[#57554E] leading-relaxed">
+                        <li>
+                            <strong className="text-[#161614] font-semibold">
+                                {t(`categoryGuide.${category}.howToStep1Title`, "Step 1")}:
+                            </strong>{" "}
+                            {t(`categoryGuide.${category}.howToStep1Desc`, "")}
+                        </li>
+                        <li>
+                            <strong className="text-[#161614] font-semibold">
+                                {t(`categoryGuide.${category}.howToStep2Title`, "Step 2")}:
+                            </strong>{" "}
+                            {t(`categoryGuide.${category}.howToStep2Desc`, "")}
+                        </li>
+                        <li>
+                            <strong className="text-[#161614] font-semibold">
+                                {t(`categoryGuide.${category}.howToStep3Title`, "Step 3")}:
+                            </strong>{" "}
+                            {t(`categoryGuide.${category}.howToStep3Desc`, "")}
+                        </li>
+                        <li>
+                            <strong className="text-[#161614] font-semibold">
+                                {t(`categoryGuide.${category}.howToStep4Title`, "Step 4")}:
+                            </strong>{" "}
+                            {t(`categoryGuide.${category}.howToStep4Desc`, "")}
+                        </li>
+                    </ol>
+                </section>
 
-        {/* Should I Practice Daily? */}
-        <div className="space-y-4">
-          <h3 className="text-2xl font-bold text-foreground">
-            {t(`categoryGuide.${category}.shouldPracticeTitle`, "Should I Practice Daily?")}
-          </h3>
-          <p className="text-muted-foreground leading-relaxed">
-            {t(`categoryGuide.${category}.shouldPracticeDesc`, "")}
-          </p>
-        </div>
+                <section className="space-y-3 py-8 max-w-3xl">
+                    <h3 className="font-serif text-xl font-medium text-[#161614] tracking-tight">
+                        {t(`categoryGuide.${category}.shouldPracticeTitle`, "Should I Practice Daily?")}
+                    </h3>
+                    <p className="text-sm sm:text-[15px] text-[#57554E] leading-relaxed">
+                        {t(`categoryGuide.${category}.shouldPracticeDesc`, "")}
+                    </p>
+                </section>
 
-        {/* Comparison Table */}
-        <div className="space-y-4">
-          <h2 className="text-2xl font-bold text-foreground">
-            {t(`categoryGuide.${category}.comparisonTitle`, "Tools Comparison")}
-          </h2>
-          <div className="overflow-x-auto">
-            <table className="w-full text-left border-collapse min-w-[600px]">
-              <thead>
-                <tr className="border-b border-black/10 dark:border-white/10">
-                  <th className="p-3 text-foreground font-bold">
-                    {t("categoryHub.toolNameCol", "Tool Name")}
-                  </th>
-                  <th className="p-3 text-foreground font-bold">
-                    {t("categoryHub.bestForCol", "Best For (Use Case)")}
-                  </th>
-                  <th className="p-3 text-foreground font-bold">
-                    {t("categoryHub.coreBenefitCol", "Core Benefit")}
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="text-muted-foreground">
-                <tr className="border-b border-black/5 dark:border-white/5">
-                  <td className={`p-3 font-bold ${colors.text}`}>
-                    {t(`categoryGuide.${category}.row1Tool`, "")}
-                  </td>
-                  <td className="p-3">{t(`categoryGuide.${category}.row1BestFor`, "")}</td>
-                  <td className="p-3">{t(`categoryGuide.${category}.row1Benefit`, "")}</td>
-                </tr>
-                <tr className="border-b border-black/5 dark:border-white/5">
-                  <td className={`p-3 font-bold ${colors.text}`}>
-                    {t(`categoryGuide.${category}.row2Tool`, "")}
-                  </td>
-                  <td className="p-3">{t(`categoryGuide.${category}.row2BestFor`, "")}</td>
-                  <td className="p-3">{t(`categoryGuide.${category}.row2Benefit`, "")}</td>
-                </tr>
-                <tr className="border-b border-black/5 dark:border-white/5">
-                  <td className={`p-3 font-bold ${colors.text}`}>
-                    {t(`categoryGuide.${category}.row3Tool`, "")}
-                  </td>
-                  <td className="p-3">{t(`categoryGuide.${category}.row3BestFor`, "")}</td>
-                  <td className="p-3">{t(`categoryGuide.${category}.row3Benefit`, "")}</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
+                <section className="space-y-4 py-8">
+                    <h2 className="font-serif text-xl sm:text-2xl font-medium text-[#161614] tracking-tight">
+                        {t(`categoryGuide.${category}.comparisonTitle`, "Tools Comparison")}
+                    </h2>
+                    <div className="overflow-x-auto border border-[#E6E3DB] rounded-lg">
+                        <table className="w-full text-left border-collapse min-w-[560px]">
+                            <thead>
+                                <tr className="bg-[#FAF9F6] border-b border-[#E6E3DB]">
+                                    <th className="px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#78756C]">
+                                        {t("categoryHub.toolNameCol", "Tool Name")}
+                                    </th>
+                                    <th className="px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#78756C]">
+                                        {t("categoryHub.bestForCol", "Best For")}
+                                    </th>
+                                    <th className="px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.12em] text-[#78756C]">
+                                        {t("categoryHub.coreBenefitCol", "Core Benefit")}
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody className="divide-y divide-[#E6E3DB] text-sm text-[#57554E]">
+                                {[1, 2, 3].map((row) => (
+                                    <tr key={row} className="hover:bg-[#FAF9F6] transition-colors">
+                                        <td className="px-4 py-3.5 font-semibold whitespace-nowrap text-[#161614]">
+                                            {t(`categoryGuide.${category}.row${row}Tool`, "")}
+                                        </td>
+                                        <td className="px-4 py-3.5">
+                                            {t(`categoryGuide.${category}.row${row}BestFor`, "")}
+                                        </td>
+                                        <td className="px-4 py-3.5">
+                                            {t(`categoryGuide.${category}.row${row}Benefit`, "")}
+                                        </td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
 
-        {/* Benchmarks & Scientific Proof */}
-        <div className="space-y-4">
-          <h2 className="text-2xl font-bold text-foreground">
-            {t(`categoryGuide.${category}.benchmarksTitle`, "Benchmarks & Scientific Proof")}
-          </h2>
-          <p className="text-muted-foreground leading-relaxed">
-            {t(`categoryGuide.${category}.benchmarksDesc`, "")}
-          </p>
-        </div>
+                <section className="space-y-3 py-8 max-w-3xl">
+                    <h2 className="font-serif text-xl sm:text-2xl font-medium text-[#161614] tracking-tight">
+                        {t(`categoryGuide.${category}.benchmarksTitle`, "Benchmarks & Context")}
+                    </h2>
+                    <p className="text-sm sm:text-[15px] text-[#57554E] leading-relaxed">
+                        {t(`categoryGuide.${category}.benchmarksDesc`, "")}
+                    </p>
+                </section>
 
-        {/* FAQs */}
-        <div className="space-y-4">
-          <h2 className="text-2xl font-bold text-foreground">
-            {t(`categoryGuide.${category}.faqTitle`, "Frequently Asked Questions")}
-          </h2>
-          <div className="bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 p-6 rounded-3xl">
-            <h3 className="text-xl font-bold text-foreground mb-3">
-              {t(`categoryGuide.${category}.faq1Q`, "")}
-            </h3>
-            <p className="text-muted-foreground mb-3">
-              {t(`categoryGuide.${category}.faq1A`, "")}
-            </p>
-          </div>
-          <div className="bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-black/10 dark:border-white/10 p-6 rounded-3xl">
-            <h3 className="text-xl font-bold text-foreground mb-3">
-              {t(`categoryGuide.${category}.faq2Q`, "")}
-            </h3>
-            <p className="text-muted-foreground mb-3">
-              {t(`categoryGuide.${category}.faq2A`, "")}
-            </p>
-          </div>
-        </div>
-      </div>
+                <section className="space-y-5 pt-8">
+                    <h2 className="font-serif text-xl sm:text-2xl font-medium text-[#161614] tracking-tight">
+                        {t(`categoryGuide.${category}.faqTitle`, "Frequently Asked Questions")}
+                    </h2>
+                    <div className="grid md:grid-cols-2 gap-6">
+                        <div className="space-y-1.5">
+                            <h3 className="text-base font-semibold text-[#161614]">
+                                {t(`categoryGuide.${category}.faq1Q`, "")}
+                            </h3>
+                            <p className="text-sm text-[#57554E] leading-relaxed">
+                                {t(`categoryGuide.${category}.faq1A`, "")}
+                            </p>
+                        </div>
+                        <div className="space-y-1.5">
+                            <h3 className="text-base font-semibold text-[#161614]">
+                                {t(`categoryGuide.${category}.faq2Q`, "")}
+                            </h3>
+                            <p className="text-sm text-[#57554E] leading-relaxed">
+                                {t(`categoryGuide.${category}.faq2A`, "")}
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </article>
 
-      {/* Related Categories */}
-      <div className="mt-16 pt-8 border-t border-black/10 dark:border-white/10 relative z-10">
-        <h3 className="text-2xl font-bold text-foreground mb-6 text-center">
-          {t("categoryHub.exploreOther", "Explore Other Categories")}
-        </h3>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {otherCategories.map((c) => (
-            <Link
-              key={c.id}
-              href={getLocalizedHref(c.href)}
-              prefetch={false}
-              className={`p-4 rounded-2xl bg-white/5 border border-black/10 dark:border-white/10 ${c.hoverBorder} ${c.hoverBg} transition-all text-center`}
-            >
-              <div className={`${c.color} text-2xl mb-2 drop-shadow-sm`}>{c.icon}</div>
-              <div className="text-sm font-bold text-foreground">
-                {t(`categories.${c.id}.title`, c.id.toUpperCase())}
-              </div>
-            </Link>
-          ))}
+            {/* Explore All Other Arenas */}
+            <section className="space-y-4">
+                <h3 className="font-serif text-xl font-medium text-[#161614] tracking-tight">
+                    {t("categoryHub.exploreOther", "Explore Other Arenas")}
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 border-t border-l border-[#E6E3DB] bg-white">
+                    {otherCategories.map((c) => {
+                        const CatIcon = c.icon;
+                        return (
+                            <Link
+                                key={c.id}
+                                href={getLocalizedHref(c.href)}
+                                prefetch={false}
+                                className="group min-h-[56px] p-4 border-r border-b border-[#E6E3DB] hover:bg-[#FAF9F6] transition-colors flex items-center justify-between gap-2.5 touch-manipulation"
+                            >
+                                <div className="flex items-center gap-2.5 min-w-0">
+                                    <CatIcon className="w-4 h-4 text-[#57554E] group-hover:text-[#161614] shrink-0" aria-hidden="true" />
+                                    <span className="text-sm font-medium text-[#161614] group-hover:text-[#1E40AF] transition-colors truncate">
+                                        {t(`categories.${c.id}.title`, c.label)}
+                                    </span>
+                                </div>
+                                <ArrowUpRight className="w-3.5 h-3.5 text-[#78756C] group-hover:text-[#1E40AF] shrink-0" aria-hidden="true" />
+                            </Link>
+                        );
+                    })}
+                </div>
+            </section>
         </div>
-      </div>
-    </>
-  );
+    );
 }

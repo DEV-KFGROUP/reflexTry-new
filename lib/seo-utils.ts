@@ -1,21 +1,31 @@
+import fs from "fs";
+import path from "path";
 import { TOOL_COUNT } from "@/config/tool-mapping";
 import { Metadata } from "next";
 import { generateSEOMetadata, fitTitle } from "@/components/SEO";
 import { SEO_CONFIGS } from "@/config/seo-config";
+import { isSupportedLocale } from "@/lib/i18n/config";
 
 export { fitTitle };
 
+const TRANSLATIONS_ROOT = path.resolve(process.cwd(), "content", "translations");
+const DICTIONARIES_ROOT = path.resolve(process.cwd(), "lib", "i18n", "dictionaries");
+
+function isConfinedPath(root: string, target: string): boolean {
+    const resolved = path.resolve(target);
+    return resolved.startsWith(`${root}${path.sep}`);
+}
+
 const seoTranslationsCache: Record<string, Record<string, any>> = {};
+const homeDictCache: Record<string, { title?: string; description?: string }> = {};
 
 export function getToolSEOConfig(toolId: string, locale?: string): { title: string; description: string; keywords: string[] } {
-    if (locale && locale !== 'en') {
+    if (locale && locale !== "en" && isSupportedLocale(locale)) {
         if (!seoTranslationsCache[locale]) {
             try {
-                const fs = eval('require("fs")');
-                const path = eval('require("path")');
-                const transPath = path.join(process.cwd(), 'content', 'translations', locale, 'seo-config.json');
-                if (fs.existsSync(transPath)) {
-                    seoTranslationsCache[locale] = JSON.parse(fs.readFileSync(transPath, 'utf8'));
+                const transPath = path.resolve(TRANSLATIONS_ROOT, locale, "seo-config.json");
+                if (isConfinedPath(TRANSLATIONS_ROOT, transPath) && fs.existsSync(transPath)) {
+                    seoTranslationsCache[locale] = JSON.parse(fs.readFileSync(transPath, "utf8"));
                 }
             } catch (_) {}
             if (!seoTranslationsCache[locale]) seoTranslationsCache[locale] = {};
@@ -38,7 +48,7 @@ export function getToolSEOConfig(toolId: string, locale?: string): { title: stri
 
     return {
         title: "Brain Training Benchmark | Reflextry",
-        description: "Free online cognitive test and reflex benchmark on Reflextry.",
+        description: "Test your reaction time, working memory, typing speed, and aim precision with free browser-based cognitive training tools on Reflextry.",
         keywords: ["brain training", "reaction test"],
     };
 }
@@ -52,29 +62,34 @@ export function getToolMetadata(toolId: string, url: string, locale?: string): M
         keywords: config.keywords,
         url: url,
         type: "website",
+        locale,
     });
 }
 
 export function getHomeMetadata(locale?: string): Metadata {
-    const isEn = !locale || locale === 'en';
-    let title = "Brain Training Games & Reaction Time Benchmark | Reflextry";
-    let description = "Train cognitive skills with free brain training games. Test reaction time (ms), working memory, CPS click speed, typing WPM, and FPS aim precision online.";
+    const isEn = !locale || locale === "en";
+    let title = "Brain Training Games & Reaction Time Test | Reflextry";
+    let description = "Play 76 free cognitive benchmarks & 9 Mensa logic puzzles (10,800+ levels). Test reaction time (ms), memory, typing WPM, Queens, Tango, Zip, Wordle & Chess.";
 
-    if (!isEn) {
-        try {
-            const fs = eval('require("fs")');
-            const path = eval('require("path")');
-            const dictPath = path.join(process.cwd(), 'lib', 'i18n', 'dictionaries', `${locale}.json`);
-            if (fs.existsSync(dictPath)) {
-                const dict = JSON.parse(fs.readFileSync(dictPath, 'utf8'));
-                if (dict?.home?.heroTitle) {
-                    title = `${dict.home.heroTitle} ${dict.home.heroTitleHighlight || ''} | Reflextry`.trim();
+    if (!isEn && locale && isSupportedLocale(locale)) {
+        if (!homeDictCache[locale]) {
+            const cached: { title?: string; description?: string } = {};
+            try {
+                const dictPath = path.resolve(DICTIONARIES_ROOT, `${locale}.json`);
+                if (isConfinedPath(DICTIONARIES_ROOT, dictPath) && fs.existsSync(dictPath)) {
+                    const dict = JSON.parse(fs.readFileSync(dictPath, "utf8"));
+                    if (dict?.home?.heroTitle) {
+                        cached.title = `${dict.home.heroTitle} ${dict.home.heroTitleHighlight || ""} | Reflextry`.trim();
+                    }
+                    if (dict?.home?.heroSubtitle) {
+                        cached.description = dict.home.heroSubtitle;
+                    }
                 }
-                if (dict?.home?.heroSubtitle) {
-                    description = dict.home.heroSubtitle;
-                }
-            }
-        } catch (_) {}
+            } catch (_) {}
+            homeDictCache[locale] = cached;
+        }
+        if (homeDictCache[locale].title) title = homeDictCache[locale].title!;
+        if (homeDictCache[locale].description) description = homeDictCache[locale].description!;
     }
 
     return generateSEOMetadata({
@@ -82,37 +97,38 @@ export function getHomeMetadata(locale?: string): Metadata {
         description,
         keywords: [
             "reaction time test",
+            "brain training games free",
+            "mensa logic puzzles online",
+            "queens puzzle unlimited",
+            "tango sun moon puzzle",
+            "zip path puzzle",
+            "mini sudoku 6x6",
+            "crossclimb word ladder",
+            "pinpoint word game",
+            "wordle unlimited",
+            "classic tetris browser",
+            "chess vs ai online",
             "cps test",
             "typing speed test",
             "aim trainer online",
-            "brain training games free",
             "memory test online",
             "human benchmark alternative",
             "cognitive test suite",
             "reflex test online",
-            "click speed test",
             "visual memory test",
             "number memory test",
             "sequence memory test",
-            "wpm test",
             "schulte table online",
-            "flick shot aim trainer",
             "esports reaction warmup",
-            "working memory exercises",
-            "mental math speed test",
-            "stroop test online",
-            "chimp test",
-            "verbal memory test",
-            "digit span test",
-            "hand eye coordination test",
-            "neuroplasticity brain exercises"
+            "3d spatial aim trainer"
         ],
         url: "",
         type: "website",
+        locale,
     });
 }
 
-export function getCategoryMetadata(category: string): Metadata {
+export function getCategoryMetadata(category: string, locale?: string): Metadata {
     const categoryConfigs: Record<string, { title: string; description: string; keywords: string[] }> = {
         memory: {
             title: "Working Memory Tests & Cognitive Games | Reflextry",
@@ -208,9 +224,88 @@ export function getCategoryMetadata(category: string): Metadata {
                 "mouse accuracy benchmark"
             ],
         },
+        stem: {
+            title: "STEM & Physics Lab — Interactive Science | Reflextry",
+            description: "Explore interactive 2D physics visualizers for students. Experiment with gravity free-fall, laser reflection optics, projectile motion, and torque balance.",
+            keywords: [
+                "interactive physics lab online",
+                "gravity simulator for students",
+                "laser reflection optics game",
+                "projectile motion calculator game",
+                "seesaw torque balance simulator",
+                "stem education games free",
+                "visual physics experiments online"
+            ],
+        },
+        "lab-3d": {
+            title: "3D WebGL Lab — Solar Gravity & 3D Aim | Reflextry",
+            description: "Experience real-time WebGL 3D simulations right in your browser. Explore 3D orbital mechanics with spacetime curvature and train 3D spatial depth reflexes.",
+            keywords: [
+                "3d solar system gravity simulator",
+                "3d orbit simulator webgl",
+                "3d aim trainer browser",
+                "3d spatial reflex test",
+                "interactive 3d physics games",
+                "threejs education lab"
+            ],
+        },
+        multiplayer: {
+            title: "2-Player Arena — Split-Screen Battles | Reflextry",
+            description: "Challenge a friend or classmate on one screen. Play 2-player millisecond reaction duels, rapid math tug-of-war, and wind-adjusted gravity cannon battles.",
+            keywords: [
+                "2 player reaction game",
+                "2 player math game classroom",
+                "2 player cannon physics game",
+                "split screen browser games",
+                "local multiplayer brain games",
+                "two player educational games"
+            ],
+        },
+        productivity: {
+            title: "Student & Work Suite — Calc, GPA & 10-Key | Reflextry",
+            description: "Boost study and office throughput with free browser tools: graphing calculator, GPA solver, flashcards, speed reading, 10-key KPH test, and focus tracker.",
+            keywords: [
+                "speed reading test with comprehension",
+                "10 key typing test kph",
+                "numpad data entry benchmark",
+                "pomodoro focus reaction tracker",
+                "student productivity tools free",
+                "work performance training online",
+                "graphing calculator online",
+                "gpa calculator"
+            ],
+        },
+        classics: {
+            title: "Classic Browser Games — Wordle, Tetris & Chess | Reflextry",
+            description: "Play hand-crafted browser classics with authentic rules: Daily & Unlimited Wordle, 60fps SRS Tetris, and full-rules Chess vs Alpha-Beta AI — free online.",
+            keywords: [
+                "classic browser games free",
+                "wordle online unlimited",
+                "classic tetris free browser",
+                "play chess vs ai online",
+                "flagship puzzle games"
+            ],
+        },
+        puzzles: {
+            title: "Logic & Word Puzzles — 9 Games, 10,800+ Levels | Reflextry",
+            description: "Play Queens, Tango, Zip, Mini Sudoku, Patches, Sumbreak, Wend, Pinpoint & Crossclimb. 1,200+ Mensa-grade levels each plus daily challenges — free online.",
+            keywords: [
+                "mensa logic puzzles online",
+                "queens puzzle unlimited",
+                "tango sun moon logic game",
+                "zip path puzzle online",
+                "mini sudoku 6x6 free",
+                "patches shikaku puzzle",
+                "sumbreak merge puzzle",
+                "wend word weave game",
+                "pinpoint category game",
+                "crossclimb word ladder",
+                "daily logic games free"
+            ],
+        },
         tools: {
             title: "Cognitive Benchmark Tools Directory | Reflextry",
-            description: `Explore ${TOOL_COUNT} free browser games for reaction time, memory, speed, accuracy, and aim. Read scoring instructions and compare your practice sessions.`,
+            description: `Explore ${TOOL_COUNT} free browser games for reaction time, memory, speed, accuracy, aim, STEM physics, 3D labs, 2-player battles, and study productivity.`,
             keywords: [
                 "online cognitive benchmark tools",
                 "free brain test suite",
@@ -298,5 +393,6 @@ export function getCategoryMetadata(category: string): Metadata {
         keywords: config.keywords,
         url: `/${category}`,
         type: "website",
+        locale,
     });
 }

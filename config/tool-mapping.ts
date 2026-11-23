@@ -1,3 +1,6 @@
+import { FLAGSHIP_TOOL_PATHS } from "@/lib/flagship-tools-meta";
+import { PUZZLE_TOOL_PATHS } from "@/lib/puzzles/meta";
+
 // Mapping of tool IDs to their page paths
 export const TOOL_MAPPING: Record<string, string> = {
     // Memory tools
@@ -60,6 +63,32 @@ export const TOOL_MAPPING: Record<string, string> = {
     "color-match": "/accuracy/color-match",
     "color-blindness": "/accuracy/color-blindness",
     "mental-rotation": "/accuracy/mental-rotation",
+
+    // STEM & Physics Lab (Pack A)
+    "gravity-lab": "/stem/gravity-lab",
+    "laser-reflection": "/stem/laser-reflection",
+    "projectile-cannon": "/stem/projectile-cannon",
+    "torque-balance": "/stem/torque-balance",
+
+    // 3D Interactive Lab (Pack B)
+    "solar-gravity-3d": "/lab-3d/solar-gravity",
+    "spatial-aim-3d": "/lab-3d/spatial-aim",
+
+    // 2-Player Battle Arena (Pack C)
+    "reaction-duel-2p": "/multiplayer/reaction-duel",
+    "math-tug-of-war": "/multiplayer/math-tug-of-war",
+    "cannon-battle-2p": "/multiplayer/cannon-battle",
+
+    // Student & Work Performance Suite (Pack D)
+    "speed-reading": "/productivity/speed-reading",
+    "ten-key": "/productivity/ten-key",
+    "focus-sprint": "/productivity/focus-sprint",
+
+    // Flagship Student & Work Tools + Classics (Wordle, Tetris, Chess)
+    ...FLAGSHIP_TOOL_PATHS,
+
+    // Mensa Logic & Word Puzzles (9 Games × 1,200+ Levels)
+    ...PUZZLE_TOOL_PATHS,
 };
 
 /** Aliases map to the same game; count published paths only. */

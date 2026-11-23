@@ -54,12 +54,18 @@ export function middleware(request: NextRequest) {
         });
 
         response.headers.set('Content-Language', firstSegment);
+        if (process.env.NODE_ENV === 'production') {
+            response.headers.set('Cache-Control', 'public, s-maxage=3600, stale-while-revalidate=86400');
+        }
         return response;
     }
 
     // 4. Default route (English)
     const response = NextResponse.next();
     response.headers.set('Content-Language', DEFAULT_LOCALE);
+    if (process.env.NODE_ENV === 'production') {
+        response.headers.set('Cache-Control', 'public, s-maxage=3600, stale-while-revalidate=86400');
+    }
     return response;
 }
 

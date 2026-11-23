@@ -1,5 +1,6 @@
 "use client";
 
+import { ToolIcon } from "@/components/ToolIcon";
 import { GameProgressFeedback } from "@/components/GameProgressFeedback";
 import { useGameTimers } from "@/hooks/useGameTimers";
 import { useLatestCallback } from "@/hooks/useLatestCallback";
@@ -127,7 +128,7 @@ function DifficultyCard({ diffKey, selected, onSelect, highScore, disabled }: {
       onClick={disabled ? undefined : onSelect}
       className={`relative w-full text-left rounded-2xl border-2 p-3 transition-all focus:outline-none overflow-hidden ${
         disabled ? "opacity-60 cursor-not-allowed" : "cursor-pointer"
-      } ${selected ? `${d.borderColor} bg-white shadow-lg` : "border-slate-200 bg-white/70 hover:border-slate-300"}`}
+      } ${selected ? `${d.borderColor} bg-white shadow-lg` : "border-[#E6E3DB] bg-white/70 hover:border-[#D8D4C9]"}`}
     >
       {selected && <div className="absolute inset-0 opacity-5" style={{ background: DIFF_GRADIENT[diffKey] }} />}
       <div className="relative z-10 flex items-start gap-3">
@@ -136,12 +137,12 @@ function DifficultyCard({ diffKey, selected, onSelect, highScore, disabled }: {
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 flex-wrap">
-            <span className="font-mono font-bold text-xs text-slate-800">{d.label}</span>
+            <span className="font-mono font-bold text-xs text-[#161614]">{d.label}</span>
             {selected && (
               <span className="text-[10px] font-mono px-2 py-0.5 rounded-full text-white" style={{ background: DIFF_GRADIENT[diffKey] }}>ACTIVE</span>
             )}
           </div>
-          <p className="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5 leading-tight">{d.description}</p>
+          <p className="text-[11px] text-[#57554E] dark:text-slate-300 mt-0.5 leading-tight">{d.description}</p>
           {highScore > 0 && <p className={`text-[11px] font-mono font-bold mt-1 ${d.textColor}`}>Best: Level {highScore}</p>}
         </div>
       </div>
@@ -314,21 +315,21 @@ export default function VisualMemoryPageClient() {
   });
 
   return (
-    <div data-idle={phase === "select"} className="game-tool w-full bg-[#f8fafc] dark:bg-slate-800 text-slate-800 dark:text-white font-sans relative overflow-hidden py-8 px-4 sm:px-6 lg:px-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm mb-8">
+    <div data-idle={phase === "select"} className="game-tool w-full bg-[#FAF9F6] text-[#161614] font-sans relative overflow-hidden py-4 px-2 sm:px-4 lg:px-6 mb-4">
       <GameProgressFeedback result={progress} />
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.04)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none z-0" />
-      <div className="absolute top-[-5%] left-[5%] w-[600px] h-[600px] bg-violet-500/[0.03] blur-[140px] rounded-full pointer-events-none z-0" />
-      <div className="absolute bottom-[-5%] right-[5%] w-[500px] h-[500px] bg-cyan-500/[0.03] blur-[120px] rounded-full pointer-events-none z-0" />
 
       <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center space-y-6 pt-0">
 
         {/* Header */}
         <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="text-center w-full">
-          <h1 className="text-3xl md:text-5xl font-mono font-black tracking-widest text-slate-800">VISUAL MEMORY</h1>
-          <div className="flex items-center justify-center gap-3 mt-1">
-            <span className="h-[1px] w-8 bg-slate-300" />
-            <p className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-[0.2em]">SPATIAL PATTERN CALIBRATION</p>
-            <span className="h-[1px] w-8 bg-slate-300" />
+          <div className="inline-flex items-center justify-center gap-4 mb-1">
+            <ToolIcon toolId="/memory/visual" variant="3d-pedestal" size="md" interactive />
+            <div className="text-left">
+              <h1 className="font-serif text-3xl md:text-4xl font-semibold tracking-tight text-[#161614]">Visual Memory</h1>
+          <div className="flex items-center gap-2 mt-1">
+            <p className="text-xs font-mono font-medium text-[#57554E] dark:text-slate-400 uppercase tracking-[0.2em]">SPATIAL PATTERN CALIBRATION</p>
+          </div>
+            </div>
           </div>
         </motion.div>
 
@@ -339,8 +340,8 @@ export default function VisualMemoryPageClient() {
           <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 }} className="game-settings flex flex-col gap-4">
 
             {/* Difficulty Selector */}
-            <div className="game-difficulty bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
-              <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Difficulty Level</div>
+            <div className="game-difficulty bg-white border border-[#E6E3DB] rounded-2xl p-4">
+              <div className="text-xs font-mono font-semibold text-[#57554E] dark:text-slate-300 uppercase tracking-widest mb-3">Difficulty Level</div>
               <div className="flex flex-col gap-2">
                 {DIFF_ORDER.map(key => (
                   <DifficultyCard
@@ -354,38 +355,38 @@ export default function VisualMemoryPageClient() {
             </div>
 
             {/* Stats */}
-            <div className="game-stats bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
-              <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Session Stats</div>
+            <div className="game-stats bg-white border border-[#E6E3DB] rounded-2xl p-4">
+              <div className="text-xs font-mono font-semibold text-[#57554E] dark:text-slate-300 uppercase tracking-widest mb-3">Session Stats</div>
               <div className="grid grid-cols-2 gap-3">
-                <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Level</div>
-                  <div className="text-2xl font-mono font-bold text-slate-800 mt-0.5">{level < 10 ? `0${level}` : level}</div>
+                <div className="bg-[#F3F1EB] border border-[#E6E3DB] rounded-xl p-3">
+                  <div className="text-[11px] font-mono font-medium text-[#57554E] dark:text-slate-400 uppercase tracking-wider">Level</div>
+                  <div className="text-2xl font-mono font-bold text-[#161614] mt-0.5">{level < 10 ? `0${level}` : level}</div>
                 </div>
-                <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Grid</div>
+                <div className="bg-[#F3F1EB] border border-[#E6E3DB] rounded-xl p-3">
+                  <div className="text-[11px] font-mono font-medium text-[#57554E] dark:text-slate-400 uppercase tracking-wider">Grid</div>
                   <div className={`text-2xl font-mono font-bold mt-0.5 ${diff.textColor}`}>{gridSize}×{gridSize}</div>
                 </div>
-                <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Lives</div>
+                <div className="bg-[#F3F1EB] border border-[#E6E3DB] rounded-xl p-3">
+                  <div className="text-[11px] font-mono font-medium text-[#57554E] dark:text-slate-400 uppercase tracking-wider">Lives</div>
                   <div className="flex gap-1 mt-1.5 flex-wrap">
                     {Array.from({ length: diff.lives }).map((_, i) => (
                       <Heart key={i} className={`w-4 h-4 ${i < livesLeft ? "text-rose-500 fill-rose-500" : "text-slate-200 fill-slate-200"}`} />
                     ))}
                   </div>
                 </div>
-                <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Streak</div>
-                  <div className={`text-xl font-mono font-bold mt-0.5 ${streak >= 3 ? "text-orange-500" : "text-slate-800"}`}>
+                <div className="bg-[#F3F1EB] border border-[#E6E3DB] rounded-xl p-3">
+                  <div className="text-[11px] font-mono font-medium text-[#57554E] dark:text-slate-400 uppercase tracking-wider">Streak</div>
+                  <div className={`text-xl font-mono font-bold mt-0.5 ${streak >= 3 ? "text-orange-500" : "text-[#161614]"}`}>
                     {streak >= 3 ? `🔥x${streak}` : `x${streak}`}
                   </div>
                 </div>
               </div>
 
               {highScores[diffId] > 0 && (
-                <div className="mt-3 bg-slate-50 border border-slate-100 rounded-xl p-3 flex items-center gap-2">
+                <div className="mt-3 bg-[#F3F1EB] border border-[#E6E3DB] rounded-xl p-3 flex items-center gap-2">
                   <Trophy className={`w-4 h-4 ${diff.textColor}`} />
                   <div>
-                    <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Best ({diff.label})</div>
+                    <div className="text-[11px] font-mono font-medium text-[#57554E] dark:text-slate-400 uppercase tracking-wider">Best ({diff.label})</div>
                     <div className={`text-sm font-mono font-bold ${diff.textColor}`}>Level {highScores[diffId]}</div>
                   </div>
                 </div>
@@ -395,10 +396,10 @@ export default function VisualMemoryPageClient() {
               {phase === "input" && (
                 <div className="mt-3">
                   <div className="flex justify-between items-center mb-1">
-                    <span className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Found</span>
-                    <span className="text-[11px] font-mono text-slate-600 dark:text-slate-400 font-bold">{userPattern.length} / {pattern.length}</span>
+                    <span className="text-[11px] font-mono font-medium text-[#57554E] dark:text-slate-400 uppercase tracking-wider">Found</span>
+                    <span className="text-[11px] font-mono text-[#57554E] dark:text-slate-400 font-bold">{userPattern.length} / {pattern.length}</span>
                   </div>
-                  <div className="h-2 bg-slate-100 rounded-full overflow-hidden">
+                  <div className="h-2 bg-[#F3F1EB] rounded-full overflow-hidden">
                     <motion.div
                       className="h-full rounded-full"
                       style={{ background: DIFF_GRADIENT[diffId] }}
@@ -413,10 +414,10 @@ export default function VisualMemoryPageClient() {
               {diff.hasInputTimer && phase === "input" && inputTimeLeft > 0 && (
                 <motion.div className="mt-3" initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
                   <div className="flex justify-between items-center mb-1">
-                    <span className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Time Left</span>
-                    <span className={`text-sm font-mono font-bold ${inputTimeLeft <= 4 ? "text-red-500" : "text-slate-700"}`}>{inputTimeLeft}s</span>
+                    <span className="text-[11px] font-mono font-medium text-[#57554E] dark:text-slate-400 uppercase tracking-wider">Time Left</span>
+                    <span className={`text-sm font-mono font-bold ${inputTimeLeft <= 4 ? "text-red-500" : "text-[#3F3E39]"}`}>{inputTimeLeft}s</span>
                   </div>
-                  <div className="h-2 bg-slate-100 rounded-full overflow-hidden">
+                  <div className="h-2 bg-[#F3F1EB] rounded-full overflow-hidden">
                     <motion.div
                       className="h-full rounded-full"
                       style={{ background: inputTimeLeft <= 4 ? "#ef4444" : DIFF_GRADIENT[diffId] }}
@@ -430,7 +431,7 @@ export default function VisualMemoryPageClient() {
               {/* Mute */}
               <button
                 onClick={() => setMuted(m => !m)}
-                className={`mt-3 w-full p-2.5 rounded-xl border transition-all cursor-pointer flex items-center justify-center gap-2 ${muted ? "bg-red-50 border-red-200 text-red-600" : "bg-slate-50 border-slate-200 text-slate-500 hover:border-violet-200 hover:text-violet-600"}`}
+                className={`mt-3 w-full p-2.5 rounded-xl border transition-all cursor-pointer flex items-center justify-center gap-2 ${muted ? "bg-red-50 border-red-200 text-red-600" : "bg-[#FAF9F6] border-[#E6E3DB] text-[#78756C] hover:border-violet-200 hover:text-violet-600"}`}
               >
                 {muted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
                 <span className="text-xs font-mono font-medium uppercase tracking-widest">{muted ? "Unmute" : "Sound On"}</span>
@@ -440,16 +441,15 @@ export default function VisualMemoryPageClient() {
 
           {/* ═══ RIGHT PANEL: Game Console ═══ */}
           <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.15 }} className="game-arena flex flex-col gap-4">
-            <div className="relative bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-[0_8px_40px_rgba(15,23,42,0.07)]">
+            <div className="relative bg-white border border-[#E6E3DB] rounded-2xl overflow-hidden">
               {/* Corner decals */}
-              <div className="absolute top-4 left-4 w-4 h-4 border-t-2 border-l-2 border-slate-200" />
-              <div className="absolute top-4 right-4 w-4 h-4 border-t-2 border-r-2 border-slate-200" />
-              <div className="absolute bottom-4 left-4 w-4 h-4 border-b-2 border-l-2 border-slate-200" />
-              <div className="absolute bottom-4 right-4 w-4 h-4 border-b-2 border-r-2 border-slate-200" />
-              <div className="absolute top-4 left-10 text-[10px] font-mono text-slate-500 dark:text-slate-400 tracking-widest hidden sm:block">
-                DECK // {diff.label.toUpperCase()}
+
+
+
+              <div className="absolute top-4 left-10 text-[10px] font-mono text-[#78756C] dark:text-slate-400 tracking-widest hidden sm:block">
+                {diff.label} Mode
               </div>
-              <div className="absolute top-4 right-10 text-[10px] font-mono text-slate-500 dark:text-slate-400 tracking-widest hidden sm:block">
+              <div className="absolute top-4 right-10 text-[10px] font-mono text-[#78756C] dark:text-slate-400 tracking-widest hidden sm:block">
                 {gridSize}×{gridSize} · {currentTiles} TILES
               </div>
               <div className="absolute inset-0 pointer-events-none opacity-[0.02] bg-[linear-gradient(rgba(148,163,184,0)_50%,rgba(148,163,184,0.15)_50%)] bg-[size:100%_4px]" />
@@ -468,8 +468,8 @@ export default function VisualMemoryPageClient() {
                         </div>
                       </div>
                       <div className="space-y-2">
-                        <h2 className="text-xl md:text-2xl font-mono font-bold text-slate-800 uppercase tracking-wider">Retinal Calibration</h2>
-                        <p className="text-xs text-slate-600 dark:text-slate-400 max-w-xs mx-auto leading-relaxed">
+                        <h2 className="text-xl md:text-2xl font-mono font-bold text-[#161614] uppercase tracking-wider">Retinal Calibration</h2>
+                        <p className="text-xs text-[#57554E] dark:text-slate-400 max-w-xs mx-auto leading-relaxed">
                           Memorize the highlighted tiles on the grid, then click them from memory when the pattern hides.
                         </p>
                         <p className={`game-level-description text-xs font-mono font-semibold ${diff.textColor} mt-1`}>{diff.label}: {diff.description}</p>
@@ -483,8 +483,6 @@ export default function VisualMemoryPageClient() {
                       </motion.button>
                     </motion.div>
                   )}
-
-                  {/* ── 2. MEMORIZE + INPUT GRID ── */}
                   {(phase === "memorize" || phase === "input") && (
                     <motion.div key="grid" initial={{ opacity: 0, scale: 0.95 }} animate={{ opacity: 1, scale: 1 }} exit={{ opacity: 0, scale: 0.95 }} className="w-full flex flex-col items-center gap-4">
                       {/* Status label */}
@@ -494,7 +492,7 @@ export default function VisualMemoryPageClient() {
                             [ MEMORIZE {currentTiles} TILES ]
                           </span>
                         ) : (
-                          <span className="text-xs font-mono text-slate-600 dark:text-slate-400 uppercase tracking-widest">
+                          <span className="text-xs font-mono text-[#57554E] dark:text-slate-400 uppercase tracking-widest">
                             Click the {pattern.length - userPattern.length} remaining tiles
                           </span>
                         )}
@@ -502,7 +500,7 @@ export default function VisualMemoryPageClient() {
 
                       {/* Memorize progress bar */}
                       {phase === "memorize" && (
-                        <div className="w-full max-w-xs h-1.5 bg-slate-100 rounded-full overflow-hidden">
+                        <div className="w-full max-w-xs h-1.5 bg-[#F3F1EB] rounded-full overflow-hidden">
                           <motion.div
                             className="h-full rounded-full"
                             style={{ background: DIFF_GRADIENT[diffId] }}
@@ -512,10 +510,8 @@ export default function VisualMemoryPageClient() {
                           />
                         </div>
                       )}
-
-                      {/* Grid */}
                       <div
-                        className="grid gap-2 sm:gap-3 bg-slate-50/80 p-4 sm:p-5 rounded-2xl border border-slate-200 shadow-inner w-full"
+                        className="grid gap-2 sm:gap-3 bg-[#FAF9F6]/80 p-4 sm:p-5 rounded-2xl border border-[#E6E3DB] shadow-inner w-full"
                         style={{ gridTemplateColumns: `repeat(${gridSize}, minmax(0, 1fr))` }}
                       >
                         {Array.from({ length: gridSize * gridSize }).map((_, i) => {
@@ -544,14 +540,14 @@ export default function VisualMemoryPageClient() {
                             tileStyle = "bg-orange-300 border-orange-400 shadow-md animate-pulse";
                             isPressed = true;
                           } else {
-                            tileStyle = "bg-white border-slate-200 hover:bg-slate-50 hover:border-slate-300";
+                            tileStyle = "bg-white border-[#E6E3DB] hover:bg-[#FAF9F6] hover:border-[#D8D4C9]";
                           }
 
                           const isSmall = gridSize >= 6;
 
                           return (
                             <div key={i} className="relative aspect-square w-full">
-                              <div className={`absolute inset-0 rounded-lg border-b-2 border-black/10 translate-y-0.5 ${isUserCorrect || (phase === "memorize" && isHighlighted) ? "opacity-50" : "bg-slate-100"}`} />
+                              <div className={`absolute inset-0 rounded-lg border-b-2 border-black/10 translate-y-0.5 ${isUserCorrect || (phase === "memorize" && isHighlighted) ? "opacity-50" : "bg-[#F3F1EB]"}`} />
                               <motion.button aria-label={`Tile ${i + 1}`}
                                 animate={{ y: isPressed ? 2 : 0 }}
                                 whileHover={phase === "input" && !isUserCorrect && !isWrong ? { y: -1 } : {}}
@@ -585,7 +581,7 @@ export default function VisualMemoryPageClient() {
                       </div>
                       <div className="space-y-2">
                         <div className="text-2xl font-mono font-black text-red-600 tracking-wider">PHASE DISRUPT</div>
-                        <p className="text-xs font-mono text-slate-500">{diff.label} mode · Reached Level {level}</p>
+                        <p className="text-xs font-mono text-[#78756C]">{diff.label} mode · Reached Level {level}</p>
                         {level >= highScores[diffId] && level > 1 && (
                           <motion.div initial={{ scale: 0 }} animate={{ scale: 1 }} className="inline-flex items-center gap-1.5 bg-amber-50 border border-amber-200 text-amber-700 rounded-full px-3 py-1 text-[11px] font-mono font-bold">
                             <Trophy className="w-3.5 h-3.5" />
@@ -593,7 +589,7 @@ export default function VisualMemoryPageClient() {
                           </motion.div>
                         )}
                       </div>
-                      <div className="bg-slate-50 border border-red-100 rounded-xl p-3 font-mono text-[11px] text-red-700 dark:text-red-400 text-left space-y-1 w-full">
+                      <div className="bg-[#FAF9F6] border border-red-100 rounded-xl p-3 font-mono text-[11px] text-red-700 dark:text-red-400 text-left space-y-1 w-full">
                         <div>&gt; DIAG: RETINAL_SEQUENCE_DISRUPT</div>
                         <div>&gt; PATTERN BUFFER CLEARED</div>
                         <div>&gt; REBOOT TO RESTORE CONNECTION</div>
@@ -629,7 +625,7 @@ export default function VisualMemoryPageClient() {
               <div className="flex justify-end">
                 <button onClickCapture={() => window.dispatchEvent(new Event("game_abort_requested"))}
                   onClick={() => { stopInputTimer(); saveHighScore(level); setPhase("gameover"); }}
-                  className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 hover:text-red-500 transition-colors cursor-pointer"
+                  className="text-xs font-mono font-medium text-[#57554E] dark:text-slate-400 hover:text-red-500 transition-colors cursor-pointer"
                 >
                   End round ×
                 </button>

@@ -82,6 +82,46 @@ const GAME_ROUTES = [
     '/gaming/target-tracking',
     '/gaming/flick-shot',
     '/gaming/rhythm-tap',
+    // STEM & Physics Lab
+    '/stem',
+    '/stem/gravity-lab',
+    '/stem/laser-reflection',
+    '/stem/projectile-cannon',
+    '/stem/torque-balance',
+    // 3D Interactive Lab
+    '/lab-3d',
+    '/lab-3d/solar-gravity',
+    '/lab-3d/spatial-aim',
+    // 2-Player Battle Arena
+    '/multiplayer',
+    '/multiplayer/reaction-duel',
+    '/multiplayer/math-tug-of-war',
+    '/multiplayer/cannon-battle',
+    // Student & Work Suite
+    '/productivity',
+    '/productivity/graphing-calculator',
+    '/productivity/unit-converter',
+    '/productivity/gpa-calculator',
+    '/productivity/flashcards',
+    '/productivity/speed-reading',
+    '/productivity/ten-key',
+    '/productivity/focus-sprint',
+    // Flagship Classics
+    '/classics',
+    '/classics/wordle',
+    '/classics/tetris',
+    '/classics/chess',
+    // Mensa Logic & Word Puzzles
+    '/puzzles',
+    '/puzzles/queens',
+    '/puzzles/tango',
+    '/puzzles/zip',
+    '/puzzles/mini-sudoku',
+    '/puzzles/patches',
+    '/puzzles/sumbreak',
+    '/puzzles/wend',
+    '/puzzles/pinpoint',
+    '/puzzles/crossclimb',
 ];
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
@@ -89,7 +129,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const allRoutes = [...STATIC_ROUTES, ...GAME_ROUTES];
 
     // Core tools and category pages audited and updated in the recent release
-    const CORE_PAGES_LASTMOD = new Date('2026-10-02T19:04:49.000Z');
+    const CORE_PAGES_LASTMOD = new Date('2026-11-20T00:00:00.000Z');
 
     const entries: MetadataRoute.Sitemap = [];
 

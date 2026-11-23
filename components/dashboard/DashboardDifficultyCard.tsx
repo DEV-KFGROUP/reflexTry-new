@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { Check } from "lucide-react";
 import { useTranslation } from "@/lib/i18n/context";
 
 interface DashboardDifficultyCardProps {
@@ -11,12 +12,18 @@ interface DashboardDifficultyCardProps {
   onSelect: () => void;
   disabled?: boolean;
   icon: React.ElementType;
-  iconColorClass: string;
-  iconBgClass: string;
+  iconColorClass?: string;
+  iconBgClass?: string;
 }
 
 export function DashboardDifficultyCard({
-  id, label, description, selected, onSelect, disabled = false, icon: Icon, iconColorClass, iconBgClass
+  id,
+  label,
+  description,
+  selected,
+  onSelect,
+  disabled = false,
+  icon: Icon,
 }: DashboardDifficultyCardProps) {
   const { t } = useTranslation();
   const diffKey = `game.diff${id.charAt(0).toUpperCase() + id.slice(1)}`;
@@ -24,35 +31,40 @@ export function DashboardDifficultyCard({
 
   return (
     <button
+      type="button"
       onClick={disabled ? undefined : onSelect}
       aria-pressed={selected}
       disabled={disabled}
-      className={`relative w-full text-left rounded-2xl border p-3 transition-all focus:outline-none flex items-start gap-3 ${
+      className={`relative w-full min-h-[52px] text-left rounded-xl border p-3.5 transition-colors touch-manipulation focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1E40AF] focus-visible:ring-offset-1 flex items-start gap-3 ${
         disabled ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
       } ${
-        selected 
-          ? "border-indigo-500 bg-indigo-50/30 dark:bg-indigo-900/10 shadow-[0_4px_20px_rgba(99,102,241,0.1)]" 
-          : "border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:border-slate-300 dark:hover:border-slate-700 hover:shadow-sm"
+        selected
+          ? "border-[#161614] bg-[#F3F1EB]"
+          : "border-[#E6E3DB] bg-white hover:border-[#D8D4C9] hover:bg-[#FAF9F6]"
       }`}
     >
-      {/* Icon Box */}
-      <div className={`difficulty-icon w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 ${iconBgClass}`}>
-        <Icon className={`w-4 h-4 ${iconColorClass}`} />
+      {/* Icon Box — preserves .difficulty-icon mobile CSS hook */}
+      <div
+        className={`difficulty-icon w-9 h-9 rounded-lg flex items-center justify-center shrink-0 border transition-colors ${
+          selected
+            ? "bg-[#161614] border-[#161614] text-[#FAF9F6]"
+            : "bg-[#FAF9F6] border-[#E6E3DB] text-[#57554E]"
+        }`}
+      >
+        <Icon className="w-4 h-4" aria-hidden="true" />
       </div>
 
       {/* Content */}
-      <div className="flex-1 min-w-0 flex flex-col justify-center pt-0.5">
-        <div className="flex items-center gap-2">
-          <span className="font-bold text-xs tracking-wide text-slate-800 dark:text-slate-200">
+      <div className="flex-1 min-w-0 flex flex-col justify-center">
+        <div className="flex items-center justify-between gap-2">
+          <span className="font-semibold text-xs text-[#161614]">
             {displayLabel}
           </span>
           {selected && (
-            <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded-full bg-indigo-500 text-white leading-none">
-              {t("game.active", "Active")}
-            </span>
+            <Check className="w-3.5 h-3.5 text-[#1E40AF] shrink-0" aria-hidden="true" />
           )}
         </div>
-        <p className="text-xs font-normal text-slate-600 dark:text-slate-300 mt-1 leading-tight pr-2">
+        <p className="text-xs font-normal text-[#57554E] mt-0.5 leading-snug">
           {description}
         </p>
       </div>

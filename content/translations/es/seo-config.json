@@ -950,5 +950,113 @@
       "juego de precisión de ritmo bpm",
       "entrenador de reflejos de ritmo"
     ]
+  },
+  "gravity-lab": {
+    "title": "Laboratorio de Gravedad y Órbitas - Laboratorio STEM y Física | Reflextry",
+    "description": "Compara caída libre en la Tierra, Luna, Marte y Júpiter o lanza una órbita estable.",
+    "keywords": [
+      "laboratorio de gravedad y órbitas",
+      "laboratorio stem y física",
+      "reflextry"
+    ]
+  },
+  "laser-reflection": {
+    "title": "Óptica de Reflexión Láser - Laboratorio STEM y Física | Reflextry",
+    "description": "Gira espejos para dirigir haces láser y comprobar la Ley de Reflexión.",
+    "keywords": [
+      "óptica de reflexión láser",
+      "laboratorio stem y física",
+      "reflextry"
+    ]
+  },
+  "projectile-cannon": {
+    "title": "Física de Cañón de Proyectiles - Laboratorio STEM y Física | Reflextry",
+    "description": "Ajusta ángulo, velocidad, viento y gravedad para impactar objetivos parabólicos.",
+    "keywords": [
+      "física de cañón de proyectiles",
+      "laboratorio stem y física",
+      "reflextry"
+    ]
+  },
+  "torque-balance": {
+    "title": "Balanza de Torque y Palanca - Laboratorio STEM y Física | Reflextry",
+    "description": "Equilibra pesos en una palanca aplicando ecuaciones de torque en modo libre o contrarreloj.",
+    "keywords": [
+      "balanza de torque y palanca",
+      "laboratorio stem y física",
+      "reflextry"
+    ]
+  },
+  "solar-gravity-3d": {
+    "title": "Simulador 3D de Gravedad Solar - Laboratorio 3D Interactivo | Reflextry",
+    "description": "Explora un pozo gravitacional 3D del espacio-tiempo y lanza satélites orbitales.",
+    "keywords": [
+      "simulador 3d de gravedad solar",
+      "laboratorio 3d interactivo",
+      "reflextry"
+    ]
+  },
+  "spatial-aim-3d": {
+    "title": "Arena de Puntería Espacial 3D - Laboratorio 3D Interactivo | Reflextry",
+    "description": "Localiza e impacta drones 3D en planos de profundidad cercano, medio y lejano.",
+    "keywords": [
+      "arena de puntería espacial 3d",
+      "laboratorio 3d interactivo",
+      "reflextry"
+    ]
+  },
+  "reaction-duel-2p": {
+    "title": "Duelo de Reflejos 2 Jugadores - Arena 2 Jugadores | Reflextry",
+    "description": "Duelo al mejor de 5 en milisegundos con detección de salida en falso.",
+    "keywords": [
+      "duelo de reflejos 2 jugadores",
+      "arena 2 jugadores",
+      "reflextry"
+    ]
+  },
+  "math-tug-of-war": {
+    "title": "Tira y Afloja Matemático - Arena 2 Jugadores | Reflextry",
+    "description": "Resuelve operaciones más rápido que tu rival para jalar la cuerda hacia tu lado.",
+    "keywords": [
+      "tira y afloja matemático",
+      "arena 2 jugadores",
+      "reflextry"
+    ]
+  },
+  "cannon-battle-2p": {
+    "title": "Batalla de Cañones con Gravedad - Arena 2 Jugadores | Reflextry",
+    "description": "Artillería 2D por turnos sobre montañas con viento cambiante y gravedad planetaria.",
+    "keywords": [
+      "batalla de cañones con gravedad",
+      "arena 2 jugadores",
+      "reflextry"
+    ]
+  },
+  "speed-reading": {
+    "title": "Lectura Rápida y Comprensión - Suite de Estudio y Trabajo | Reflextry",
+    "description": "Lee en modo resaltado o RSVP y supera el cuestionario para calcular tus PPM efectivas.",
+    "keywords": [
+      "lectura rápida y comprensión",
+      "suite de estudio y trabajo",
+      "reflextry"
+    ]
+  },
+  "ten-key": {
+    "title": "Test de Teclado Numérico 10-Key - Suite de Estudio y Trabajo | Reflextry",
+    "description": "Mide tus pulsaciones por hora (KPH) y precisión con facturas, enteros y códigos SKU.",
+    "keywords": [
+      "test de teclado numérico 10-key",
+      "suite de estudio y trabajo",
+      "reflextry"
+    ]
+  },
+  "focus-sprint": {
+    "title": "Sprint de Enfoque y Fatiga - Suite de Estudio y Trabajo | Reflextry",
+    "description": "Combina temporizador Pomodoro real con pruebas de reacción antes y después del bloque.",
+    "keywords": [
+      "sprint de enfoque y fatiga",
+      "suite de estudio y trabajo",
+      "reflextry"
+    ]
   }
 }

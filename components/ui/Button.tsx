@@ -5,66 +5,53 @@ import { cn } from "@/lib/utils";
 import { forwardRef } from "react";
 
 interface ButtonProps extends Omit<HTMLMotionProps<"button">, "asChild"> {
-    variant?: "primary" | "secondary" | "outline" | "ghost" | "game" | "mission" | "speed" | "reflex" | "memory" | "wisdom" | "accuracy";
+    variant?:
+        | "primary"
+        | "secondary"
+        | "outline"
+        | "ghost"
+        | "game"
+        | "mission"
+        | "speed"
+        | "reflex"
+        | "memory"
+        | "wisdom"
+        | "accuracy";
     size?: "sm" | "md" | "lg" | "xl";
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
     ({ className, variant = "primary", size = "md", children, style, ...props }, ref) => {
-        const variantStyles: Record<string, { background?: string; boxShadow?: string }> = {
-            primary: {
-                background: "#0f172a",
-            },
-            secondary: {
-                background: "#ffffff",
-            },
-            speed: {
-                background: "#ffffff",
-            },
-            reflex: {
-                background: "#ffffff",
-            },
-            memory: {
-                background: "#ffffff",
-            },
-            wisdom: {
-                background: "#ffffff",
-            },
-            accuracy: {
-                background: "#ffffff",
-            },
-            game: {
-                background: "#ffffff",
-            },
-            outline: {},
-            ghost: {},
-            mission: {},
+        const variantClasses: Record<NonNullable<ButtonProps["variant"]>, string> = {
+            primary:
+                "bg-[#161614] text-[#FAF9F6] border border-[#161614] hover:bg-[#2C2B27] hover:border-[#2C2B27]",
+            secondary:
+                "bg-white text-[#161614] border border-[#E6E3DB] hover:bg-[#FAF9F6] hover:border-[#D8D4C9]",
+            outline:
+                "bg-white text-[#3F3E39] border border-[#E6E3DB] hover:bg-[#FAF9F6] hover:text-[#161614] hover:border-[#161614]",
+            ghost:
+                "bg-transparent text-[#57554E] border border-transparent hover:bg-[#F3F1EB] hover:text-[#161614] shadow-none",
+            game:
+                "bg-white text-[#161614] border border-[#E6E3DB] hover:bg-[#FAF9F6] hover:border-[#161614]",
+            mission:
+                "bg-[#161614] text-[#FAF9F6] border border-[#161614] hover:bg-[#2C2B27] hover:border-[#2C2B27]",
+            speed:
+                "bg-white text-[#161614] border border-[#E6E3DB] hover:border-[#161614] hover:bg-[#FAF9F6]",
+            reflex:
+                "bg-white text-[#161614] border border-[#E6E3DB] hover:border-[#161614] hover:bg-[#FAF9F6]",
+            memory:
+                "bg-white text-[#161614] border border-[#E6E3DB] hover:border-[#161614] hover:bg-[#FAF9F6]",
+            wisdom:
+                "bg-white text-[#161614] border border-[#E6E3DB] hover:border-[#161614] hover:bg-[#FAF9F6]",
+            accuracy:
+                "bg-white text-[#161614] border border-[#E6E3DB] hover:border-[#161614] hover:bg-[#FAF9F6]",
         };
 
-        const variantClasses = {
-            primary: "text-black font-semibold border border-slate-900 hover:bg-slate-800",
-            secondary: "text-slate-900 font-semibold border border-border hover:bg-slate-50",
-            outline: "border border-border text-slate-700 hover:bg-slate-50 bg-transparent font-medium",
-            ghost: "text-slate-600 hover:text-slate-900 hover:bg-slate-100 bg-transparent font-medium",
-            game: "text-slate-900 font-semibold border border-border hover:bg-slate-50",
-            mission: `
-                bg-white
-                text-slate-900
-                border border-border
-                hover:bg-slate-50
-            `,
-            speed: "text-slate-900 font-semibold border border-border hover:bg-slate-50",
-            reflex: "text-slate-900 font-semibold border border-border hover:bg-slate-50",
-            memory: "text-slate-900 font-semibold border border-border hover:bg-slate-50",
-            wisdom: "text-slate-900 font-semibold border border-border hover:bg-slate-50",
-            accuracy: "text-slate-900 font-semibold border border-border hover:bg-slate-50",
-        };
-
-        const sizes = {
-            sm: "px-6 py-3 text-sm",
-            md: "px-8 py-4 text-base",
-            lg: "px-10 py-5 text-lg",
-            xl: "px-14 py-6 text-xl",
+        const sizes: Record<NonNullable<ButtonProps["size"]>, string> = {
+            sm: "px-4 py-2 text-sm",
+            md: "px-5 py-2.5 text-sm sm:text-base",
+            lg: "px-6 py-3 text-base",
+            xl: "px-8 py-4 text-lg",
         };
 
         // Filter out asChild prop to prevent it from being passed to DOM
@@ -74,18 +61,14 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         return (
             <motion.button
                 ref={ref}
-                whileHover={{ y: -1 }}
                 whileTap={{ scale: 0.98 }}
                 className={cn(
-                    "rounded-xl font-semibold transition duration-200 cursor-pointer active:scale-[0.97] flex items-center justify-center gap-2 shadow-sm",
+                    "inline-flex items-center justify-center gap-2 rounded-xl font-semibold transition-colors duration-150 cursor-pointer select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1E40AF] focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none",
                     variantClasses[variant],
                     sizes[size],
                     className
                 )}
-                style={{
-                    ...variantStyles[variant],
-                    ...style,
-                }}
+                style={style}
                 {...restProps}
             >
                 {children}

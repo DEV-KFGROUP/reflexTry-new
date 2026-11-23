@@ -3,6 +3,22 @@
 /** @type {import('next').NextConfig} */
 const nextConfig: import('next').NextConfig = {
   /* config options here */
+  poweredByHeader: false,
+  compress: true,
+
+  experimental: {
+    optimizePackageImports: ['lucide-react', 'framer-motion', 'recharts'],
+  },
+
+  // Allow Next.js 16 dev resources (/_next/static/*, HMR) when loaded inside hosted preview iframes
+  allowedDevOrigins: [
+    '**.run.app',
+    '*.run.app',
+    '**.usercontent.goog',
+    '*.usercontent.goog',
+    '**.google.com',
+    '127.0.0.1',
+  ],
 
   // Image optimization configuration - Modern formats prioritized
   images: {
@@ -67,10 +83,14 @@ const nextConfig: import('next').NextConfig = {
             key: 'X-Content-Type-Options',
             value: 'nosniff',
           },
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
+          ...(isProd
+            ? [
+              {
+                key: 'X-Frame-Options',
+                value: 'DENY',
+              },
+            ]
+            : []),
           {
             key: 'X-XSS-Protection',
             value: '1; mode=block',

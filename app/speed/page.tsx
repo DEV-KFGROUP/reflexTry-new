@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import { headers } from 'next/headers';
 import SpeedHubClient from './SpeedHubClient';
 import { CategorySEOContent } from '@/components/CategorySEOContent';
 import { getCategoryMetadata } from '@/lib/seo-utils';
@@ -6,19 +7,23 @@ import { SchemaInjector } from "@/components/SchemaInjector";
 import { generateWebPageSchema, generateBreadcrumbStructuredData, generateFAQPageSchema } from "@/lib/structured-data";
 
 export async function generateMetadata(): Promise<Metadata> {
-    return getCategoryMetadata('speed');
+    const h = await headers();
+    return getCategoryMetadata('speed', h.get('x-locale') || 'en');
 }
 
-export default function SpeedHub() {
+export default async function SpeedHub() {
+    const h = await headers();
+    const locale = h.get('x-locale') || 'en';
     const breadcrumbSchema = generateBreadcrumbStructuredData([
         { name: "Home", url: "/" },
         { name: "Speed Tests", url: "/speed" },
-    ]);
+    ], locale);
     
     const webPageSchema = generateWebPageSchema(
         "Speed Tests - Clicks Per Second & Typing Speed",
         "Test your raw speed with our click speed tests (CPS) and typing tests (WPM). Improve your finger dexterity and mental calculation speed.",
-        "/speed"
+        "/speed",
+        locale
     );
 
     const faqSchema = generateFAQPageSchema([

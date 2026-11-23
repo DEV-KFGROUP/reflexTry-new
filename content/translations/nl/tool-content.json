@@ -5303,5 +5303,905 @@
         "answer": "Het volgende nummer waarop je moet klikken."
       }
     ]
+  },
+  "gravity-lab": {
+    "description": [
+      {
+        "title": "Over Zwaartekracht & Baan Lab",
+        "content": "Vergelijk vrije val op Aarde, Maan, Mars en Jupiter of lanceer een stabiele baan. Verander abstracte schoolformules in tastbare browserexperimenten. Sleep schuifregelaars, lanceer satellietbanen, kaats laserstralen en balanceer hefboomkrachten direct online."
+      },
+      {
+        "title": "Kernmechaniek & Leerwetenschap",
+        "content": "Interactieve 2D-simulators voor vrije val, baansnelheid, spiegelreflectie, kogelbaan en draaimoment-evenwicht. Live Formules: Zie vergelijkingen direct meebewegen met elke variabele. Visuele Intuïtie: Bekijk vectoren, normaal-lijnen en vorige banen."
+      },
+      {
+        "title": "Scoring & Live Statistieken",
+        "content": "Elke simulatie combineert directe visuele feedback met heldere kwantitatieve cijfers. Uitdagingsmodi: Test je inzicht met gescoorde studentenmissies."
+      },
+      {
+        "title": "Toepassing op School & Werk",
+        "content": "Ja. De interface schaalt netjes mee op laptops, Chromebooks, tablets en digiborden. Tien tot vijftien minuten een paar keer per week bouwt sterke intuïtie en precisie op."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Instellingen & Bediening",
+        "steps": [
+          "Begin op standaardinstellingen om je huidige snelheid of begrip eerlijk vast te leggen.",
+          "Pas telkens één regelaar aan zodat oorzaak en gevolg direct duidelijk blijven."
+        ]
+      },
+      {
+        "title": "Een Sessie Uitvoeren",
+        "steps": [
+          "Vergelijk vrije val op Aarde, Maan, Mars en Jupiter of lanceer een stabiele baan.",
+          "Bekijk formules, nauwkeurigheid en milliseconden na elke ronde."
+        ]
+      },
+      {
+        "title": "Resultaten Analyseren",
+        "steps": [
+          "Ja. Afgeronde sessies worden automatisch bewaard in je lokale Statistieken-overzicht.",
+          "Gerichte blokken van 10 minuten werken veel beter dan lange vermoeiende sessies."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Verander Eén Variabele Tegelijk",
+        "content": "Pas telkens één regelaar aan zodat oorzaak en gevolg direct duidelijk blijven."
+      },
+      {
+        "title": "Precisie Vóór Snelheid",
+        "content": "Bekijk formules, nauwkeurigheid en milliseconden na elke ronde."
+      },
+      {
+        "title": "Volg Je Voortgang Wekelijks",
+        "content": "Tien tot vijftien minuten een paar keer per week bouwt sterke intuïtie en precisie op."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is deze module volledig gratis?",
+        "answer": "Ja. Alle tools op Reflextry werken direct in de browser zonder account of downloads."
+      },
+      {
+        "question": "Werkt dit op schoollaptops en tablets?",
+        "answer": "Ja. De interface schaalt netjes mee op laptops, Chromebooks, tablets en digiborden."
+      },
+      {
+        "question": "Worden mijn beste scores opgeslagen?",
+        "answer": "Ja. Afgeronde sessies worden automatisch bewaard in je lokale Statistieken-overzicht."
+      },
+      {
+        "question": "Hoe vaak moet ik oefenen?",
+        "answer": "Korte, gerichte sessies van 10 minuten, drie tot vijf keer per week, leveren blijvende vooruitgang op."
+      }
+    ]
+  },
+  "laser-reflection": {
+    "description": [
+      {
+        "title": "Over Laser Reflectie Optica",
+        "content": "Draai spiegels om laserstralen naar de sensor te sturen en de reflectiewet te testen. Verander abstracte schoolformules in tastbare browserexperimenten. Sleep schuifregelaars, lanceer satellietbanen, kaats laserstralen en balanceer hefboomkrachten direct online."
+      },
+      {
+        "title": "Kernmechaniek & Leerwetenschap",
+        "content": "Interactieve 2D-simulators voor vrije val, baansnelheid, spiegelreflectie, kogelbaan en draaimoment-evenwicht. Live Formules: Zie vergelijkingen direct meebewegen met elke variabele. Visuele Intuïtie: Bekijk vectoren, normaal-lijnen en vorige banen."
+      },
+      {
+        "title": "Scoring & Live Statistieken",
+        "content": "Elke simulatie combineert directe visuele feedback met heldere kwantitatieve cijfers. Uitdagingsmodi: Test je inzicht met gescoorde studentenmissies."
+      },
+      {
+        "title": "Toepassing op School & Werk",
+        "content": "Ja. De interface schaalt netjes mee op laptops, Chromebooks, tablets en digiborden. Tien tot vijftien minuten een paar keer per week bouwt sterke intuïtie en precisie op."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Instellingen & Bediening",
+        "steps": [
+          "Begin op standaardinstellingen om je huidige snelheid of begrip eerlijk vast te leggen.",
+          "Pas telkens één regelaar aan zodat oorzaak en gevolg direct duidelijk blijven."
+        ]
+      },
+      {
+        "title": "Een Sessie Uitvoeren",
+        "steps": [
+          "Draai spiegels om laserstralen naar de sensor te sturen en de reflectiewet te testen.",
+          "Bekijk formules, nauwkeurigheid en milliseconden na elke ronde."
+        ]
+      },
+      {
+        "title": "Resultaten Analyseren",
+        "steps": [
+          "Ja. Afgeronde sessies worden automatisch bewaard in je lokale Statistieken-overzicht.",
+          "Gerichte blokken van 10 minuten werken veel beter dan lange vermoeiende sessies."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Verander Eén Variabele Tegelijk",
+        "content": "Pas telkens één regelaar aan zodat oorzaak en gevolg direct duidelijk blijven."
+      },
+      {
+        "title": "Precisie Vóór Snelheid",
+        "content": "Bekijk formules, nauwkeurigheid en milliseconden na elke ronde."
+      },
+      {
+        "title": "Volg Je Voortgang Wekelijks",
+        "content": "Tien tot vijftien minuten een paar keer per week bouwt sterke intuïtie en precisie op."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is deze module volledig gratis?",
+        "answer": "Ja. Alle tools op Reflextry werken direct in de browser zonder account of downloads."
+      },
+      {
+        "question": "Werkt dit op schoollaptops en tablets?",
+        "answer": "Ja. De interface schaalt netjes mee op laptops, Chromebooks, tablets en digiborden."
+      },
+      {
+        "question": "Worden mijn beste scores opgeslagen?",
+        "answer": "Ja. Afgeronde sessies worden automatisch bewaard in je lokale Statistieken-overzicht."
+      },
+      {
+        "question": "Hoe vaak moet ik oefenen?",
+        "answer": "Korte, gerichte sessies van 10 minuten, drie tot vijf keer per week, leveren blijvende vooruitgang op."
+      }
+    ]
+  },
+  "projectile-cannon": {
+    "description": [
+      {
+        "title": "Over Projectiel Kanon Fysica",
+        "content": "Stel hoek, snelheid, wind en zwaartekracht af om doelen via een parabool te raken. Verander abstracte schoolformules in tastbare browserexperimenten. Sleep schuifregelaars, lanceer satellietbanen, kaats laserstralen en balanceer hefboomkrachten direct online."
+      },
+      {
+        "title": "Kernmechaniek & Leerwetenschap",
+        "content": "Interactieve 2D-simulators voor vrije val, baansnelheid, spiegelreflectie, kogelbaan en draaimoment-evenwicht. Live Formules: Zie vergelijkingen direct meebewegen met elke variabele. Visuele Intuïtie: Bekijk vectoren, normaal-lijnen en vorige banen."
+      },
+      {
+        "title": "Scoring & Live Statistieken",
+        "content": "Elke simulatie combineert directe visuele feedback met heldere kwantitatieve cijfers. Uitdagingsmodi: Test je inzicht met gescoorde studentenmissies."
+      },
+      {
+        "title": "Toepassing op School & Werk",
+        "content": "Ja. De interface schaalt netjes mee op laptops, Chromebooks, tablets en digiborden. Tien tot vijftien minuten een paar keer per week bouwt sterke intuïtie en precisie op."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Instellingen & Bediening",
+        "steps": [
+          "Begin op standaardinstellingen om je huidige snelheid of begrip eerlijk vast te leggen.",
+          "Pas telkens één regelaar aan zodat oorzaak en gevolg direct duidelijk blijven."
+        ]
+      },
+      {
+        "title": "Een Sessie Uitvoeren",
+        "steps": [
+          "Stel hoek, snelheid, wind en zwaartekracht af om doelen via een parabool te raken.",
+          "Bekijk formules, nauwkeurigheid en milliseconden na elke ronde."
+        ]
+      },
+      {
+        "title": "Resultaten Analyseren",
+        "steps": [
+          "Ja. Afgeronde sessies worden automatisch bewaard in je lokale Statistieken-overzicht.",
+          "Gerichte blokken van 10 minuten werken veel beter dan lange vermoeiende sessies."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Verander Eén Variabele Tegelijk",
+        "content": "Pas telkens één regelaar aan zodat oorzaak en gevolg direct duidelijk blijven."
+      },
+      {
+        "title": "Precisie Vóór Snelheid",
+        "content": "Bekijk formules, nauwkeurigheid en milliseconden na elke ronde."
+      },
+      {
+        "title": "Volg Je Voortgang Wekelijks",
+        "content": "Tien tot vijftien minuten een paar keer per week bouwt sterke intuïtie en precisie op."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is deze module volledig gratis?",
+        "answer": "Ja. Alle tools op Reflextry werken direct in de browser zonder account of downloads."
+      },
+      {
+        "question": "Werkt dit op schoollaptops en tablets?",
+        "answer": "Ja. De interface schaalt netjes mee op laptops, Chromebooks, tablets en digiborden."
+      },
+      {
+        "question": "Worden mijn beste scores opgeslagen?",
+        "answer": "Ja. Afgeronde sessies worden automatisch bewaard in je lokale Statistieken-overzicht."
+      },
+      {
+        "question": "Hoe vaak moet ik oefenen?",
+        "answer": "Korte, gerichte sessies van 10 minuten, drie tot vijf keer per week, leveren blijvende vooruitgang op."
+      }
+    ]
+  },
+  "torque-balance": {
+    "description": [
+      {
+        "title": "Over Wip Koppel & Balans",
+        "content": "Plaats gewichten op een hefboom en bereken het draaimoment-evenwicht. Verander abstracte schoolformules in tastbare browserexperimenten. Sleep schuifregelaars, lanceer satellietbanen, kaats laserstralen en balanceer hefboomkrachten direct online."
+      },
+      {
+        "title": "Kernmechaniek & Leerwetenschap",
+        "content": "Interactieve 2D-simulators voor vrije val, baansnelheid, spiegelreflectie, kogelbaan en draaimoment-evenwicht. Live Formules: Zie vergelijkingen direct meebewegen met elke variabele. Visuele Intuïtie: Bekijk vectoren, normaal-lijnen en vorige banen."
+      },
+      {
+        "title": "Scoring & Live Statistieken",
+        "content": "Elke simulatie combineert directe visuele feedback met heldere kwantitatieve cijfers. Uitdagingsmodi: Test je inzicht met gescoorde studentenmissies."
+      },
+      {
+        "title": "Toepassing op School & Werk",
+        "content": "Ja. De interface schaalt netjes mee op laptops, Chromebooks, tablets en digiborden. Tien tot vijftien minuten een paar keer per week bouwt sterke intuïtie en precisie op."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Instellingen & Bediening",
+        "steps": [
+          "Begin op standaardinstellingen om je huidige snelheid of begrip eerlijk vast te leggen.",
+          "Pas telkens één regelaar aan zodat oorzaak en gevolg direct duidelijk blijven."
+        ]
+      },
+      {
+        "title": "Een Sessie Uitvoeren",
+        "steps": [
+          "Plaats gewichten op een hefboom en bereken het draaimoment-evenwicht.",
+          "Bekijk formules, nauwkeurigheid en milliseconden na elke ronde."
+        ]
+      },
+      {
+        "title": "Resultaten Analyseren",
+        "steps": [
+          "Ja. Afgeronde sessies worden automatisch bewaard in je lokale Statistieken-overzicht.",
+          "Gerichte blokken van 10 minuten werken veel beter dan lange vermoeiende sessies."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Verander Eén Variabele Tegelijk",
+        "content": "Pas telkens één regelaar aan zodat oorzaak en gevolg direct duidelijk blijven."
+      },
+      {
+        "title": "Precisie Vóór Snelheid",
+        "content": "Bekijk formules, nauwkeurigheid en milliseconden na elke ronde."
+      },
+      {
+        "title": "Volg Je Voortgang Wekelijks",
+        "content": "Tien tot vijftien minuten een paar keer per week bouwt sterke intuïtie en precisie op."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is deze module volledig gratis?",
+        "answer": "Ja. Alle tools op Reflextry werken direct in de browser zonder account of downloads."
+      },
+      {
+        "question": "Werkt dit op schoollaptops en tablets?",
+        "answer": "Ja. De interface schaalt netjes mee op laptops, Chromebooks, tablets en digiborden."
+      },
+      {
+        "question": "Worden mijn beste scores opgeslagen?",
+        "answer": "Ja. Afgeronde sessies worden automatisch bewaard in je lokale Statistieken-overzicht."
+      },
+      {
+        "question": "Hoe vaak moet ik oefenen?",
+        "answer": "Korte, gerichte sessies van 10 minuten, drie tot vijf keer per week, leveren blijvende vooruitgang op."
+      }
+    ]
+  },
+  "solar-gravity-3d": {
+    "description": [
+      {
+        "title": "Over 3D Zonnestelsel Zwaartekracht",
+        "content": "Verken een 3D-ruimtetijd zwaartekrachtput en lanceer eigen satellieten. Aangedreven door WebGL 3D-fysica: draai vrij rond een gebogen ruimtetijd-raster, lanceer eigen satellieten en raak 3D-drones op nabije, middelste en verre dieptevlakken."
+      },
+      {
+        "title": "Kernmechaniek & Leerwetenschap",
+        "content": "Hardwareversnelde 3D-browsersimulaties voor orbitale mechanica en ruimtelijke Z-diepte doelprecisie. Real-Time WebGL 3D: Interactieve 3D-camera en dynamische belichting. Diepteperceptie: Train ruimtelijk inschatten over drie dieptevlakken."
+      },
+      {
+        "title": "Scoring & Live Statistieken",
+        "content": "Elke simulatie combineert directe visuele feedback met heldere kwantitatieve cijfers. Geen Downloads: Adaptieve weergave draait soepel op laptops en desktops."
+      },
+      {
+        "title": "Toepassing op School & Werk",
+        "content": "Ja. De interface schaalt netjes mee op laptops, Chromebooks, tablets en digiborden. Tien tot vijftien minuten een paar keer per week bouwt sterke intuïtie en precisie op."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Instellingen & Bediening",
+        "steps": [
+          "Begin op standaardinstellingen om je huidige snelheid of begrip eerlijk vast te leggen.",
+          "Pas telkens één regelaar aan zodat oorzaak en gevolg direct duidelijk blijven."
+        ]
+      },
+      {
+        "title": "Een Sessie Uitvoeren",
+        "steps": [
+          "Verken een 3D-ruimtetijd zwaartekrachtput en lanceer eigen satellieten.",
+          "Bekijk formules, nauwkeurigheid en milliseconden na elke ronde."
+        ]
+      },
+      {
+        "title": "Resultaten Analyseren",
+        "steps": [
+          "Ja. Afgeronde sessies worden automatisch bewaard in je lokale Statistieken-overzicht.",
+          "Gerichte blokken van 10 minuten werken veel beter dan lange vermoeiende sessies."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Verander Eén Variabele Tegelijk",
+        "content": "Pas telkens één regelaar aan zodat oorzaak en gevolg direct duidelijk blijven."
+      },
+      {
+        "title": "Precisie Vóór Snelheid",
+        "content": "Bekijk formules, nauwkeurigheid en milliseconden na elke ronde."
+      },
+      {
+        "title": "Volg Je Voortgang Wekelijks",
+        "content": "Tien tot vijftien minuten een paar keer per week bouwt sterke intuïtie en precisie op."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is deze module volledig gratis?",
+        "answer": "Ja. Alle tools op Reflextry werken direct in de browser zonder account of downloads."
+      },
+      {
+        "question": "Werkt dit op schoollaptops en tablets?",
+        "answer": "Ja. De interface schaalt netjes mee op laptops, Chromebooks, tablets en digiborden."
+      },
+      {
+        "question": "Worden mijn beste scores opgeslagen?",
+        "answer": "Ja. Afgeronde sessies worden automatisch bewaard in je lokale Statistieken-overzicht."
+      },
+      {
+        "question": "Hoe vaak moet ik oefenen?",
+        "answer": "Korte, gerichte sessies van 10 minuten, drie tot vijf keer per week, leveren blijvende vooruitgang op."
+      }
+    ]
+  },
+  "spatial-aim-3d": {
+    "description": [
+      {
+        "title": "Over 3D Ruimtelijke Aim Arena",
+        "content": "Raak 3D-drones op nabije, middelste en verre dieptevlakken met milliseconde-meting. Aangedreven door WebGL 3D-fysica: draai vrij rond een gebogen ruimtetijd-raster, lanceer eigen satellieten en raak 3D-drones op nabije, middelste en verre dieptevlakken."
+      },
+      {
+        "title": "Kernmechaniek & Leerwetenschap",
+        "content": "Hardwareversnelde 3D-browsersimulaties voor orbitale mechanica en ruimtelijke Z-diepte doelprecisie. Real-Time WebGL 3D: Interactieve 3D-camera en dynamische belichting. Diepteperceptie: Train ruimtelijk inschatten over drie dieptevlakken."
+      },
+      {
+        "title": "Scoring & Live Statistieken",
+        "content": "Elke simulatie combineert directe visuele feedback met heldere kwantitatieve cijfers. Geen Downloads: Adaptieve weergave draait soepel op laptops en desktops."
+      },
+      {
+        "title": "Toepassing op School & Werk",
+        "content": "Ja. De interface schaalt netjes mee op laptops, Chromebooks, tablets en digiborden. Tien tot vijftien minuten een paar keer per week bouwt sterke intuïtie en precisie op."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Instellingen & Bediening",
+        "steps": [
+          "Begin op standaardinstellingen om je huidige snelheid of begrip eerlijk vast te leggen.",
+          "Pas telkens één regelaar aan zodat oorzaak en gevolg direct duidelijk blijven."
+        ]
+      },
+      {
+        "title": "Een Sessie Uitvoeren",
+        "steps": [
+          "Raak 3D-drones op nabije, middelste en verre dieptevlakken met milliseconde-meting.",
+          "Bekijk formules, nauwkeurigheid en milliseconden na elke ronde."
+        ]
+      },
+      {
+        "title": "Resultaten Analyseren",
+        "steps": [
+          "Ja. Afgeronde sessies worden automatisch bewaard in je lokale Statistieken-overzicht.",
+          "Gerichte blokken van 10 minuten werken veel beter dan lange vermoeiende sessies."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Verander Eén Variabele Tegelijk",
+        "content": "Pas telkens één regelaar aan zodat oorzaak en gevolg direct duidelijk blijven."
+      },
+      {
+        "title": "Precisie Vóór Snelheid",
+        "content": "Bekijk formules, nauwkeurigheid en milliseconden na elke ronde."
+      },
+      {
+        "title": "Volg Je Voortgang Wekelijks",
+        "content": "Tien tot vijftien minuten een paar keer per week bouwt sterke intuïtie en precisie op."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is deze module volledig gratis?",
+        "answer": "Ja. Alle tools op Reflextry werken direct in de browser zonder account of downloads."
+      },
+      {
+        "question": "Werkt dit op schoollaptops en tablets?",
+        "answer": "Ja. De interface schaalt netjes mee op laptops, Chromebooks, tablets en digiborden."
+      },
+      {
+        "question": "Worden mijn beste scores opgeslagen?",
+        "answer": "Ja. Afgeronde sessies worden automatisch bewaard in je lokale Statistieken-overzicht."
+      },
+      {
+        "question": "Hoe vaak moet ik oefenen?",
+        "answer": "Korte, gerichte sessies van 10 minuten, drie tot vijf keer per week, leveren blijvende vooruitgang op."
+      }
+    ]
+  },
+  "reaction-duel-2p": {
+    "description": [
+      {
+        "title": "Over 2-Speler Reactieduel",
+        "content": "Best-of-5 milliseconde reflexduel op één scherm met valse-start detectie. Geen accounts of wachtrijen nodig. Deel één scherm voor milliseconde-reactieduels, rekentouwtrekken en kanongevechten met wind en zwaartekracht."
+      },
+      {
+        "title": "Kernmechaniek & Leerwetenschap",
+        "content": "Lokale 2-speler hersen- en STEM-duels ontworpen voor klaslokalen en studiegroepen. Gedeeld Toetsenbord & Touch: Links-versus-rechts bediening voor laptop en tablet. Klaar voor de Klas: Niveaus voor kinderen, scholieren en gevorderden."
+      },
+      {
+        "title": "Scoring & Live Statistieken",
+        "content": "Elke simulatie combineert directe visuele feedback met heldere kwantitatieve cijfers. Eerlijke Milliseconde-Score: Valse-start detectie en directe wedstrijdstatistieken."
+      },
+      {
+        "title": "Toepassing op School & Werk",
+        "content": "Ja. De interface schaalt netjes mee op laptops, Chromebooks, tablets en digiborden. Tien tot vijftien minuten een paar keer per week bouwt sterke intuïtie en precisie op."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Instellingen & Bediening",
+        "steps": [
+          "Begin op standaardinstellingen om je huidige snelheid of begrip eerlijk vast te leggen.",
+          "Pas telkens één regelaar aan zodat oorzaak en gevolg direct duidelijk blijven."
+        ]
+      },
+      {
+        "title": "Een Sessie Uitvoeren",
+        "steps": [
+          "Best-of-5 milliseconde reflexduel op één scherm met valse-start detectie.",
+          "Bekijk formules, nauwkeurigheid en milliseconden na elke ronde."
+        ]
+      },
+      {
+        "title": "Resultaten Analyseren",
+        "steps": [
+          "Ja. Afgeronde sessies worden automatisch bewaard in je lokale Statistieken-overzicht.",
+          "Gerichte blokken van 10 minuten werken veel beter dan lange vermoeiende sessies."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Verander Eén Variabele Tegelijk",
+        "content": "Pas telkens één regelaar aan zodat oorzaak en gevolg direct duidelijk blijven."
+      },
+      {
+        "title": "Precisie Vóór Snelheid",
+        "content": "Bekijk formules, nauwkeurigheid en milliseconden na elke ronde."
+      },
+      {
+        "title": "Volg Je Voortgang Wekelijks",
+        "content": "Tien tot vijftien minuten een paar keer per week bouwt sterke intuïtie en precisie op."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is deze module volledig gratis?",
+        "answer": "Ja. Alle tools op Reflextry werken direct in de browser zonder account of downloads."
+      },
+      {
+        "question": "Werkt dit op schoollaptops en tablets?",
+        "answer": "Ja. De interface schaalt netjes mee op laptops, Chromebooks, tablets en digiborden."
+      },
+      {
+        "question": "Worden mijn beste scores opgeslagen?",
+        "answer": "Ja. Afgeronde sessies worden automatisch bewaard in je lokale Statistieken-overzicht."
+      },
+      {
+        "question": "Hoe vaak moet ik oefenen?",
+        "answer": "Korte, gerichte sessies van 10 minuten, drie tot vijf keer per week, leveren blijvende vooruitgang op."
+      }
+    ]
+  },
+  "math-tug-of-war": {
+    "description": [
+      {
+        "title": "Over Reken Touwtrekken",
+        "content": "Los sommen sneller op dan je tegenstander om het touw over de lijn te trekken. Geen accounts of wachtrijen nodig. Deel één scherm voor milliseconde-reactieduels, rekentouwtrekken en kanongevechten met wind en zwaartekracht."
+      },
+      {
+        "title": "Kernmechaniek & Leerwetenschap",
+        "content": "Lokale 2-speler hersen- en STEM-duels ontworpen voor klaslokalen en studiegroepen. Gedeeld Toetsenbord & Touch: Links-versus-rechts bediening voor laptop en tablet. Klaar voor de Klas: Niveaus voor kinderen, scholieren en gevorderden."
+      },
+      {
+        "title": "Scoring & Live Statistieken",
+        "content": "Elke simulatie combineert directe visuele feedback met heldere kwantitatieve cijfers. Eerlijke Milliseconde-Score: Valse-start detectie en directe wedstrijdstatistieken."
+      },
+      {
+        "title": "Toepassing op School & Werk",
+        "content": "Ja. De interface schaalt netjes mee op laptops, Chromebooks, tablets en digiborden. Tien tot vijftien minuten een paar keer per week bouwt sterke intuïtie en precisie op."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Instellingen & Bediening",
+        "steps": [
+          "Begin op standaardinstellingen om je huidige snelheid of begrip eerlijk vast te leggen.",
+          "Pas telkens één regelaar aan zodat oorzaak en gevolg direct duidelijk blijven."
+        ]
+      },
+      {
+        "title": "Een Sessie Uitvoeren",
+        "steps": [
+          "Los sommen sneller op dan je tegenstander om het touw over de lijn te trekken.",
+          "Bekijk formules, nauwkeurigheid en milliseconden na elke ronde."
+        ]
+      },
+      {
+        "title": "Resultaten Analyseren",
+        "steps": [
+          "Ja. Afgeronde sessies worden automatisch bewaard in je lokale Statistieken-overzicht.",
+          "Gerichte blokken van 10 minuten werken veel beter dan lange vermoeiende sessies."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Verander Eén Variabele Tegelijk",
+        "content": "Pas telkens één regelaar aan zodat oorzaak en gevolg direct duidelijk blijven."
+      },
+      {
+        "title": "Precisie Vóór Snelheid",
+        "content": "Bekijk formules, nauwkeurigheid en milliseconden na elke ronde."
+      },
+      {
+        "title": "Volg Je Voortgang Wekelijks",
+        "content": "Tien tot vijftien minuten een paar keer per week bouwt sterke intuïtie en precisie op."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is deze module volledig gratis?",
+        "answer": "Ja. Alle tools op Reflextry werken direct in de browser zonder account of downloads."
+      },
+      {
+        "question": "Werkt dit op schoollaptops en tablets?",
+        "answer": "Ja. De interface schaalt netjes mee op laptops, Chromebooks, tablets en digiborden."
+      },
+      {
+        "question": "Worden mijn beste scores opgeslagen?",
+        "answer": "Ja. Afgeronde sessies worden automatisch bewaard in je lokale Statistieken-overzicht."
+      },
+      {
+        "question": "Hoe vaak moet ik oefenen?",
+        "answer": "Korte, gerichte sessies van 10 minuten, drie tot vijf keer per week, leveren blijvende vooruitgang op."
+      }
+    ]
+  },
+  "cannon-battle-2p": {
+    "description": [
+      {
+        "title": "Over Zwaartekracht Kanon Duel",
+        "content": "Beurtelingse 2D-artillerie over bergen met wisselende wind en planeetzwaartekracht. Geen accounts of wachtrijen nodig. Deel één scherm voor milliseconde-reactieduels, rekentouwtrekken en kanongevechten met wind en zwaartekracht."
+      },
+      {
+        "title": "Kernmechaniek & Leerwetenschap",
+        "content": "Lokale 2-speler hersen- en STEM-duels ontworpen voor klaslokalen en studiegroepen. Gedeeld Toetsenbord & Touch: Links-versus-rechts bediening voor laptop en tablet. Klaar voor de Klas: Niveaus voor kinderen, scholieren en gevorderden."
+      },
+      {
+        "title": "Scoring & Live Statistieken",
+        "content": "Elke simulatie combineert directe visuele feedback met heldere kwantitatieve cijfers. Eerlijke Milliseconde-Score: Valse-start detectie en directe wedstrijdstatistieken."
+      },
+      {
+        "title": "Toepassing op School & Werk",
+        "content": "Ja. De interface schaalt netjes mee op laptops, Chromebooks, tablets en digiborden. Tien tot vijftien minuten een paar keer per week bouwt sterke intuïtie en precisie op."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Instellingen & Bediening",
+        "steps": [
+          "Begin op standaardinstellingen om je huidige snelheid of begrip eerlijk vast te leggen.",
+          "Pas telkens één regelaar aan zodat oorzaak en gevolg direct duidelijk blijven."
+        ]
+      },
+      {
+        "title": "Een Sessie Uitvoeren",
+        "steps": [
+          "Beurtelingse 2D-artillerie over bergen met wisselende wind en planeetzwaartekracht.",
+          "Bekijk formules, nauwkeurigheid en milliseconden na elke ronde."
+        ]
+      },
+      {
+        "title": "Resultaten Analyseren",
+        "steps": [
+          "Ja. Afgeronde sessies worden automatisch bewaard in je lokale Statistieken-overzicht.",
+          "Gerichte blokken van 10 minuten werken veel beter dan lange vermoeiende sessies."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Verander Eén Variabele Tegelijk",
+        "content": "Pas telkens één regelaar aan zodat oorzaak en gevolg direct duidelijk blijven."
+      },
+      {
+        "title": "Precisie Vóór Snelheid",
+        "content": "Bekijk formules, nauwkeurigheid en milliseconden na elke ronde."
+      },
+      {
+        "title": "Volg Je Voortgang Wekelijks",
+        "content": "Tien tot vijftien minuten een paar keer per week bouwt sterke intuïtie en precisie op."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is deze module volledig gratis?",
+        "answer": "Ja. Alle tools op Reflextry werken direct in de browser zonder account of downloads."
+      },
+      {
+        "question": "Werkt dit op schoollaptops en tablets?",
+        "answer": "Ja. De interface schaalt netjes mee op laptops, Chromebooks, tablets en digiborden."
+      },
+      {
+        "question": "Worden mijn beste scores opgeslagen?",
+        "answer": "Ja. Afgeronde sessies worden automatisch bewaard in je lokale Statistieken-overzicht."
+      },
+      {
+        "question": "Hoe vaak moet ik oefenen?",
+        "answer": "Korte, gerichte sessies van 10 minuten, drie tot vijf keer per week, leveren blijvende vooruitgang op."
+      }
+    ]
+  },
+  "speed-reading": {
+    "description": [
+      {
+        "title": "Over Snellezen & Tekstbegrip",
+        "content": "Lees in markeer- of RSVP-modus en maak de quiz voor je Effectieve WPM. Gemaakt voor studenten en professionals. Bereken Effectieve WPM via een begripsquiz, 10-Key aanslagen per uur (KPH) en reactieverandering rond Pomodoro-sprints."
+      },
+      {
+        "title": "Kernmechaniek & Leerwetenschap",
+        "content": "Praktische dagelijkse benchmarks voor RSVP- en gemarkeerd snellezen, numerieke gegevensinvoer en focusblokken met reactiecheck. Gecontroleerd Begrip: Elke snelleestest toetst daadwerkelijk tekstbegrip. Zakelijke KPH-Cijfers: Gestandaardiseerde 10-Key nauwkeurigheid en KPH."
+      },
+      {
+        "title": "Scoring & Live Statistieken",
+        "content": "Elke simulatie combineert directe visuele feedback met heldere kwantitatieve cijfers. Vermoeidheidsmeting: Vergelijk reactietijd vóór en na een focussprint."
+      },
+      {
+        "title": "Toepassing op School & Werk",
+        "content": "Ja. De interface schaalt netjes mee op laptops, Chromebooks, tablets en digiborden. Tien tot vijftien minuten een paar keer per week bouwt sterke intuïtie en precisie op."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Instellingen & Bediening",
+        "steps": [
+          "Begin op standaardinstellingen om je huidige snelheid of begrip eerlijk vast te leggen.",
+          "Pas telkens één regelaar aan zodat oorzaak en gevolg direct duidelijk blijven."
+        ]
+      },
+      {
+        "title": "Een Sessie Uitvoeren",
+        "steps": [
+          "Lees in markeer- of RSVP-modus en maak de quiz voor je Effectieve WPM.",
+          "Bekijk formules, nauwkeurigheid en milliseconden na elke ronde."
+        ]
+      },
+      {
+        "title": "Resultaten Analyseren",
+        "steps": [
+          "Ja. Afgeronde sessies worden automatisch bewaard in je lokale Statistieken-overzicht.",
+          "Gerichte blokken van 10 minuten werken veel beter dan lange vermoeiende sessies."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Verander Eén Variabele Tegelijk",
+        "content": "Pas telkens één regelaar aan zodat oorzaak en gevolg direct duidelijk blijven."
+      },
+      {
+        "title": "Precisie Vóór Snelheid",
+        "content": "Bekijk formules, nauwkeurigheid en milliseconden na elke ronde."
+      },
+      {
+        "title": "Volg Je Voortgang Wekelijks",
+        "content": "Tien tot vijftien minuten een paar keer per week bouwt sterke intuïtie en precisie op."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is deze module volledig gratis?",
+        "answer": "Ja. Alle tools op Reflextry werken direct in de browser zonder account of downloads."
+      },
+      {
+        "question": "Werkt dit op schoollaptops en tablets?",
+        "answer": "Ja. De interface schaalt netjes mee op laptops, Chromebooks, tablets en digiborden."
+      },
+      {
+        "question": "Worden mijn beste scores opgeslagen?",
+        "answer": "Ja. Afgeronde sessies worden automatisch bewaard in je lokale Statistieken-overzicht."
+      },
+      {
+        "question": "Hoe vaak moet ik oefenen?",
+        "answer": "Korte, gerichte sessies van 10 minuten, drie tot vijf keer per week, leveren blijvende vooruitgang op."
+      }
+    ]
+  },
+  "ten-key": {
+    "description": [
+      {
+        "title": "Over 10-Key Numpad Snelheidstest",
+        "content": "Meet KPH en precisie op facturen, gehele getallen en gemengde SKU-codes. Gemaakt voor studenten en professionals. Bereken Effectieve WPM via een begripsquiz, 10-Key aanslagen per uur (KPH) en reactieverandering rond Pomodoro-sprints."
+      },
+      {
+        "title": "Kernmechaniek & Leerwetenschap",
+        "content": "Praktische dagelijkse benchmarks voor RSVP- en gemarkeerd snellezen, numerieke gegevensinvoer en focusblokken met reactiecheck. Gecontroleerd Begrip: Elke snelleestest toetst daadwerkelijk tekstbegrip. Zakelijke KPH-Cijfers: Gestandaardiseerde 10-Key nauwkeurigheid en KPH."
+      },
+      {
+        "title": "Scoring & Live Statistieken",
+        "content": "Elke simulatie combineert directe visuele feedback met heldere kwantitatieve cijfers. Vermoeidheidsmeting: Vergelijk reactietijd vóór en na een focussprint."
+      },
+      {
+        "title": "Toepassing op School & Werk",
+        "content": "Ja. De interface schaalt netjes mee op laptops, Chromebooks, tablets en digiborden. Tien tot vijftien minuten een paar keer per week bouwt sterke intuïtie en precisie op."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Instellingen & Bediening",
+        "steps": [
+          "Begin op standaardinstellingen om je huidige snelheid of begrip eerlijk vast te leggen.",
+          "Pas telkens één regelaar aan zodat oorzaak en gevolg direct duidelijk blijven."
+        ]
+      },
+      {
+        "title": "Een Sessie Uitvoeren",
+        "steps": [
+          "Meet KPH en precisie op facturen, gehele getallen en gemengde SKU-codes.",
+          "Bekijk formules, nauwkeurigheid en milliseconden na elke ronde."
+        ]
+      },
+      {
+        "title": "Resultaten Analyseren",
+        "steps": [
+          "Ja. Afgeronde sessies worden automatisch bewaard in je lokale Statistieken-overzicht.",
+          "Gerichte blokken van 10 minuten werken veel beter dan lange vermoeiende sessies."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Verander Eén Variabele Tegelijk",
+        "content": "Pas telkens één regelaar aan zodat oorzaak en gevolg direct duidelijk blijven."
+      },
+      {
+        "title": "Precisie Vóór Snelheid",
+        "content": "Bekijk formules, nauwkeurigheid en milliseconden na elke ronde."
+      },
+      {
+        "title": "Volg Je Voortgang Wekelijks",
+        "content": "Tien tot vijftien minuten een paar keer per week bouwt sterke intuïtie en precisie op."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is deze module volledig gratis?",
+        "answer": "Ja. Alle tools op Reflextry werken direct in de browser zonder account of downloads."
+      },
+      {
+        "question": "Werkt dit op schoollaptops en tablets?",
+        "answer": "Ja. De interface schaalt netjes mee op laptops, Chromebooks, tablets en digiborden."
+      },
+      {
+        "question": "Worden mijn beste scores opgeslagen?",
+        "answer": "Ja. Afgeronde sessies worden automatisch bewaard in je lokale Statistieken-overzicht."
+      },
+      {
+        "question": "Hoe vaak moet ik oefenen?",
+        "answer": "Korte, gerichte sessies van 10 minuten, drie tot vijf keer per week, leveren blijvende vooruitgang op."
+      }
+    ]
+  },
+  "focus-sprint": {
+    "description": [
+      {
+        "title": "Over Focus Sprint & Vermoeidheid",
+        "content": "Combineer een Pomodoro-timer met reactietests vóór en na je werkblok. Gemaakt voor studenten en professionals. Bereken Effectieve WPM via een begripsquiz, 10-Key aanslagen per uur (KPH) en reactieverandering rond Pomodoro-sprints."
+      },
+      {
+        "title": "Kernmechaniek & Leerwetenschap",
+        "content": "Praktische dagelijkse benchmarks voor RSVP- en gemarkeerd snellezen, numerieke gegevensinvoer en focusblokken met reactiecheck. Gecontroleerd Begrip: Elke snelleestest toetst daadwerkelijk tekstbegrip. Zakelijke KPH-Cijfers: Gestandaardiseerde 10-Key nauwkeurigheid en KPH."
+      },
+      {
+        "title": "Scoring & Live Statistieken",
+        "content": "Elke simulatie combineert directe visuele feedback met heldere kwantitatieve cijfers. Vermoeidheidsmeting: Vergelijk reactietijd vóór en na een focussprint."
+      },
+      {
+        "title": "Toepassing op School & Werk",
+        "content": "Ja. De interface schaalt netjes mee op laptops, Chromebooks, tablets en digiborden. Tien tot vijftien minuten een paar keer per week bouwt sterke intuïtie en precisie op."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Instellingen & Bediening",
+        "steps": [
+          "Begin op standaardinstellingen om je huidige snelheid of begrip eerlijk vast te leggen.",
+          "Pas telkens één regelaar aan zodat oorzaak en gevolg direct duidelijk blijven."
+        ]
+      },
+      {
+        "title": "Een Sessie Uitvoeren",
+        "steps": [
+          "Combineer een Pomodoro-timer met reactietests vóór en na je werkblok.",
+          "Bekijk formules, nauwkeurigheid en milliseconden na elke ronde."
+        ]
+      },
+      {
+        "title": "Resultaten Analyseren",
+        "steps": [
+          "Ja. Afgeronde sessies worden automatisch bewaard in je lokale Statistieken-overzicht.",
+          "Gerichte blokken van 10 minuten werken veel beter dan lange vermoeiende sessies."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Verander Eén Variabele Tegelijk",
+        "content": "Pas telkens één regelaar aan zodat oorzaak en gevolg direct duidelijk blijven."
+      },
+      {
+        "title": "Precisie Vóór Snelheid",
+        "content": "Bekijk formules, nauwkeurigheid en milliseconden na elke ronde."
+      },
+      {
+        "title": "Volg Je Voortgang Wekelijks",
+        "content": "Tien tot vijftien minuten een paar keer per week bouwt sterke intuïtie en precisie op."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is deze module volledig gratis?",
+        "answer": "Ja. Alle tools op Reflextry werken direct in de browser zonder account of downloads."
+      },
+      {
+        "question": "Werkt dit op schoollaptops en tablets?",
+        "answer": "Ja. De interface schaalt netjes mee op laptops, Chromebooks, tablets en digiborden."
+      },
+      {
+        "question": "Worden mijn beste scores opgeslagen?",
+        "answer": "Ja. Afgeronde sessies worden automatisch bewaard in je lokale Statistieken-overzicht."
+      },
+      {
+        "question": "Hoe vaak moet ik oefenen?",
+        "answer": "Korte, gerichte sessies van 10 minuten, drie tot vijf keer per week, leveren blijvende vooruitgang op."
+      }
+    ]
   }
 }

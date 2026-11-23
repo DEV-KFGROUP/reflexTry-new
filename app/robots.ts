@@ -3,6 +3,8 @@ import { getBaseUrl } from '@/lib/base-url';
 
 const BASE_URL = getBaseUrl();
 
+export const dynamic = 'force-static';
+
 export default function robots(): MetadataRoute.Robots {
     return {
         rules: [

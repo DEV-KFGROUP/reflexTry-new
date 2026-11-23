@@ -950,5 +950,113 @@
       "BPM 탭 정확도 게임",
       "리듬 반사 신경 트레이너"
     ]
+  },
+  "gravity-lab": {
+    "title": "중력 & 궤도 실험실 - STEM & 물리 비주얼 랩 | Reflextry",
+    "description": "지구·달·화성·목성 자유낙하를 비교하거나 안정적인 위성 궤도를 발사하세요.",
+    "keywords": [
+      "중력 & 궤도 실험실",
+      "stem & 물리 비주얼 랩",
+      "reflextry"
+    ]
+  },
+  "laser-reflection": {
+    "title": "레이저 반사 광학 퍼즐 - STEM & 물리 비주얼 랩 | Reflextry",
+    "description": "거울 각도를 조절해 레이저를 센서에 맞추고 반사의 법칙을 확인하세요.",
+    "keywords": [
+      "레이저 반사 광학 퍼즐",
+      "stem & 물리 비주얼 랩",
+      "reflextry"
+    ]
+  },
+  "projectile-cannon": {
+    "title": "포물선 대포 물리학 - STEM & 물리 비주얼 랩 | Reflextry",
+    "description": "발사 각도·속도·바람·중력을 맞춰 포물선 표적을 명중시키세요.",
+    "keywords": [
+      "포물선 대포 물리학",
+      "stem & 물리 비주얼 랩",
+      "reflextry"
+    ]
+  },
+  "torque-balance": {
+    "title": "시소 토크 균형 실험 - STEM & 물리 비주얼 랩 | Reflextry",
+    "description": "지렛대 팔에 추를 배치해 회전력(토크) 평형을 맞추는 물리·수학 게임.",
+    "keywords": [
+      "시소 토크 균형 실험",
+      "stem & 물리 비주얼 랩",
+      "reflextry"
+    ]
+  },
+  "solar-gravity-3d": {
+    "title": "3D 태양계 중력 시뮬레이터 - 3D 인터랙티브 랩 | Reflextry",
+    "description": "3D 시공간 중력 우물을 탐색하고 위성을 케플러 궤도에 올려보세요.",
+    "keywords": [
+      "3d 태양계 중력 시뮬레이터",
+      "3d 인터랙티브 랩",
+      "reflextry"
+    ]
+  },
+  "spatial-aim-3d": {
+    "title": "3D 공간 에임 아레나 - 3D 인터랙티브 랩 | Reflextry",
+    "description": "근·중·원거리 3D 공간에 나타나는 드론 표적을 빠르게 타격하세요.",
+    "keywords": [
+      "3d 공간 에임 아레나",
+      "3d 인터랙티브 랩",
+      "reflextry"
+    ]
+  },
+  "reaction-duel-2p": {
+    "title": "2인 반응속도 대결 - 2인 배틀 아레나 | Reflextry",
+    "description": "한 화면에서 펼치는 5판 3선승 밀리초 반응 대결(부정 출발 감지 포함).",
+    "keywords": [
+      "2인 반응속도 대결",
+      "2인 배틀 아레나",
+      "reflextry"
+    ]
+  },
+  "math-tug-of-war": {
+    "title": "수학 줄다리기 대결 - 2인 배틀 아레나 | Reflextry",
+    "description": "상대보다 빠르게 사칙연산을 풀어 줄을 내 쪽으로 끌어오세요.",
+    "keywords": [
+      "수학 줄다리기 대결",
+      "2인 배틀 아레나",
+      "reflextry"
+    ]
+  },
+  "cannon-battle-2p": {
+    "title": "2인 중력 대포 배틀 - 2인 배틀 아레나 | Reflextry",
+    "description": "산악 지형과 변하는 바람·중력을 계산하는 턴제 2D 포격 대전.",
+    "keywords": [
+      "2인 중력 대포 배틀",
+      "2인 배틀 아레나",
+      "reflextry"
+    ]
+  },
+  "speed-reading": {
+    "title": "속독 & 이해도 랩 - 학습·업무 퍼포먼스 스위트 | Reflextry",
+    "description": "하이라이트 또는 RSVP 모드로 읽고 퀴즈를 통해 유효 WPM을 계산하세요.",
+    "keywords": [
+      "속독 & 이해도 랩",
+      "학습·업무 퍼포먼스 스위트",
+      "reflextry"
+    ]
+  },
+  "ten-key": {
+    "title": "10키 숫자패드 속도 테스트 - 학습·업무 퍼포먼스 스위트 | Reflextry",
+    "description": "청구서·정수·SKU 코드로 숫자패드 KPH와 정확도를 측정하세요.",
+    "keywords": [
+      "10키 숫자패드 속도 테스트",
+      "학습·업무 퍼포먼스 스위트",
+      "reflextry"
+    ]
+  },
+  "focus-sprint": {
+    "title": "포커스 스프린트 & 피로 추적 - 학습·업무 퍼포먼스 스위트 | Reflextry",
+    "description": "뽀모도로 집중 타이머와 전후 반응 속도 측정으로 인지 피로를 확인하세요.",
+    "keywords": [
+      "포커스 스프린트 & 피로 추적",
+      "학습·업무 퍼포먼스 스위트",
+      "reflextry"
+    ]
   }
 }

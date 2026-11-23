@@ -950,5 +950,113 @@
       "bpm 點擊準確度遊��",
       "節奏反射訓練器"
     ]
+  },
+  "gravity-lab": {
+    "title": "重力與軌道實驗室 - STEM 與物理視覺實驗室 | Reflextry",
+    "description": "比較地球、月球、火星與木星自由落體，或發射衛星進入穩定軌道。",
+    "keywords": [
+      "重力與軌道實驗室",
+      "stem 與物理視覺實驗室",
+      "reflextry"
+    ]
+  },
+  "laser-reflection": {
+    "title": "雷射反射光學謎題 - STEM 與物理視覺實驗室 | Reflextry",
+    "description": "旋轉平面鏡引導雷射命中感測器，直觀驗證反射定律。",
+    "keywords": [
+      "雷射反射光學謎題",
+      "stem 與物理視覺實驗室",
+      "reflextry"
+    ]
+  },
+  "projectile-cannon": {
+    "title": "拋體大砲物理模擬 - STEM 與物理視覺實驗室 | Reflextry",
+    "description": "調整發射角、初速、風速與重力，完成拋物線命中挑戰。",
+    "keywords": [
+      "拋體大砲物理模擬",
+      "stem 與物理視覺實驗室",
+      "reflextry"
+    ]
+  },
+  "torque-balance": {
+    "title": "翹翹板力矩平衡 - STEM 與物理視覺實驗室 | Reflextry",
+    "description": "運用力矩公式在槓桿兩側放置砝碼，支援自由探索與限時挑戰。",
+    "keywords": [
+      "翹翹板力矩平衡",
+      "stem 與物理視覺實驗室",
+      "reflextry"
+    ]
+  },
+  "solar-gravity-3d": {
+    "title": "3D 太陽系重力模擬器 - 3D 互動實驗室 | Reflextry",
+    "description": "旋轉探索三維時空重力井，發射自訂衛星達成克卜勒軌道。",
+    "keywords": [
+      "3d 太陽系重力模擬器",
+      "3d 互動實驗室",
+      "reflextry"
+    ]
+  },
+  "spatial-aim-3d": {
+    "title": "3D 空間瞄準競技場 - 3D 互動實驗室 | Reflextry",
+    "description": "快速鎖定並擊中近、中、遠景深平面上的立體無人機目標。",
+    "keywords": [
+      "3d 空間瞄準競技場",
+      "3d 互動實驗室",
+      "reflextry"
+    ]
+  },
+  "reaction-duel-2p": {
+    "title": "雙人毫秒反應對決 - 雙人同螢幕對戰區 | Reflextry",
+    "description": "同螢幕五戰三勝反應對決，內建偷跑犯規自動判定。",
+    "keywords": [
+      "雙人毫秒反應對決",
+      "雙人同螢幕對戰區",
+      "reflextry"
+    ]
+  },
+  "math-tug-of-war": {
+    "title": "雙人數學拔河賽 - 雙人同螢幕對戰區 | Reflextry",
+    "description": "比對手更快解出算術題，將拔河繩拉過己方勝利線。",
+    "keywords": [
+      "雙人數學拔河賽",
+      "雙人同螢幕對戰區",
+      "reflextry"
+    ]
+  },
+  "cannon-battle-2p": {
+    "title": "雙人重力大砲對戰 - 雙人同螢幕對戰區 | Reflextry",
+    "description": "跨越山地地形的回合制 2D 砲戰，結合變動風速與行星重力。",
+    "keywords": [
+      "雙人重力大砲對戰",
+      "雙人同螢幕對戰區",
+      "reflextry"
+    ]
+  },
+  "speed-reading": {
+    "title": "速讀與理解力測試 - 學習與工作效能套件 | Reflextry",
+    "description": "支援高亮度領讀或 RSVP 閃現模式，並以測驗計算有效 WPM。",
+    "keywords": [
+      "速讀與理解力測試",
+      "學習與工作效能套件",
+      "reflextry"
+    ]
+  },
+  "ten-key": {
+    "title": "10-Key 數字小鍵盤測速 - 學習與工作效能套件 | Reflextry",
+    "description": "以發票金額、整數與 SKU 編碼評測小鍵盤 KPH 與準確率。",
+    "keywords": [
+      "10-key 數字小鍵盤測速",
+      "學習與工作效能套件",
+      "reflextry"
+    ]
+  },
+  "focus-sprint": {
+    "title": "專注衝刺與疲勞追蹤 - 學習與工作效能套件 | Reflextry",
+    "description": "結合番茄鐘計時與前後反應速度基準，量化認知疲勞變化。",
+    "keywords": [
+      "專注衝刺與疲勞追蹤",
+      "學習與工作效能套件",
+      "reflextry"
+    ]
   }
 }

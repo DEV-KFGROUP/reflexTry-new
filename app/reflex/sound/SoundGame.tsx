@@ -1,5 +1,6 @@
 "use client";
 
+import { ToolIcon } from "@/components/ToolIcon";
 import { GameProgressFeedback } from "@/components/GameProgressFeedback";
 import { useGameTimers } from "@/hooks/useGameTimers";
 import { useLatestCallback } from "@/hooks/useLatestCallback";
@@ -97,7 +98,7 @@ function DifficultyCard({
       onClick={disabled ? undefined : onSelect}
       className={`relative w-full text-left rounded-2xl border-2 p-3 transition-all focus:outline-none overflow-hidden ${
         disabled ? "opacity-60 cursor-not-allowed" : "cursor-pointer"
-      } ${selected ? `${d.borderColor} bg-white shadow-lg` : "border-slate-200 bg-white/70 hover:border-slate-300"}`}
+      } ${selected ? `${d.borderColor} bg-white shadow-lg` : "border-[#E6E3DB] bg-white/70 hover:border-[#D8D4C9]"}`}
     >
       {selected && (
         <div className="absolute inset-0 opacity-5" style={{ background: DIFF_GRADIENT[diffKey] }} />
@@ -108,14 +109,14 @@ function DifficultyCard({
         </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 flex-wrap">
-            <span className="font-mono font-bold text-xs text-slate-800">{d.label}</span>
+            <span className="font-mono font-bold text-xs text-[#161614]">{d.label}</span>
             {selected && (
               <span className="text-[10px] font-mono px-2 py-0.5 rounded-full text-white" style={{ background: DIFF_GRADIENT[diffKey] }}>
                 ACTIVE
               </span>
             )}
           </div>
-          <p className="text-[11px] text-slate-600 dark:text-slate-300 mt-0.5 leading-tight">{d.description}</p>
+          <p className="text-[11px] text-[#57554E] dark:text-slate-300 mt-0.5 leading-tight">{d.description}</p>
           {highScore > 0 && highScore !== 999 && (
             <p className={`text-[11px] font-mono font-bold mt-1 ${d.textColor}`}>Best Avg: {highScore}ms</p>
           )}
@@ -309,23 +310,22 @@ export default function SoundReactionGame() {
   });
 
   return (
-    <div data-idle={phase === "select"} className="game-tool w-full bg-[#f8fafc] dark:bg-slate-800 text-slate-800 dark:text-white font-sans relative overflow-hidden py-8 px-4 sm:px-6 lg:px-8 rounded-3xl border border-slate-200 dark:border-slate-700 shadow-sm mb-8">
+    <div data-idle={phase === "select"} className="game-tool w-full bg-[#FAF9F6] text-[#161614] font-sans relative overflow-hidden py-4 px-2 sm:px-4 lg:px-6 mb-4">
       <GameProgressFeedback result={progress} />
       {audioUnavailable && <p role="status" className="game-progress-feedback">Sound is not ready. Tap the play area again to enable audio, then start your attempt.</p>}
-      {/* Background grids */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(148,163,184,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.04)_1px,transparent_1px)] dark:bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none z-0" />
-      <div className="absolute top-[-5%] left-[5%] w-[600px] h-[600px] bg-violet-500/[0.03] blur-[140px] rounded-full pointer-events-none z-0" />
-      <div className="absolute bottom-[-5%] right-[5%] w-[500px] h-[500px] bg-cyan-500/[0.03] blur-[120px] rounded-full pointer-events-none z-0" />
 
       <div className="relative z-10 max-w-5xl mx-auto flex flex-col items-center space-y-6 pt-0">
 
         {/* Header */}
         <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="text-center w-full">
-          <h1 className="text-3xl md:text-5xl font-mono font-black tracking-widest text-slate-800">AUDIO TEST</h1>
-          <div className="flex items-center justify-center gap-3 mt-1">
-            <span className="h-[1px] w-8 bg-slate-300" />
-            <p className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-[0.2em]">AUDITORY LATENCY STABILITY</p>
-            <span className="h-[1px] w-8 bg-slate-300" />
+          <div className="inline-flex items-center justify-center gap-4 mb-1">
+            <ToolIcon toolId="/reflex/sound" variant="3d-pedestal" size="md" interactive />
+            <div className="text-left">
+              <h1 className="font-serif text-3xl md:text-4xl font-semibold tracking-tight text-[#161614]">Audio Test</h1>
+          <div className="flex items-center gap-2 mt-1">
+            <p className="text-xs font-mono font-medium text-[#57554E] dark:text-slate-400 uppercase tracking-[0.2em]">AUDITORY LATENCY STABILITY</p>
+          </div>
+            </div>
           </div>
         </motion.div>
 
@@ -336,8 +336,8 @@ export default function SoundReactionGame() {
           <motion.div initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.1 }} className="game-settings flex flex-col gap-4">
 
             {/* Difficulty Selector */}
-            <div className="game-difficulty bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
-              <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Difficulty Level</div>
+            <div className="game-difficulty bg-white border border-[#E6E3DB] rounded-2xl p-4">
+              <div className="text-xs font-mono font-semibold text-[#57554E] dark:text-slate-300 uppercase tracking-widest mb-3">Difficulty Level</div>
               <div className="flex flex-col gap-2">
                 {DIFF_ORDER.map(key => (
                   <DifficultyCard
@@ -353,29 +353,29 @@ export default function SoundReactionGame() {
             </div>
 
             {/* Stats Panel */}
-            <div className="game-stats bg-white border border-slate-200 rounded-2xl p-4 shadow-sm">
-              <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-widest mb-3">Session Stats</div>
+            <div className="game-stats bg-white border border-[#E6E3DB] rounded-2xl p-4">
+              <div className="text-xs font-mono font-semibold text-[#57554E] dark:text-slate-300 uppercase tracking-widest mb-3">Session Stats</div>
               <div className="grid grid-cols-2 gap-3">
-                <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Attempt</div>
-                  <div className="text-xl font-mono font-bold text-slate-800 mt-0.5">
+                <div className="bg-[#F3F1EB] border border-[#E6E3DB] rounded-xl p-3">
+                  <div className="text-[11px] font-mono font-medium text-[#57554E] dark:text-slate-400 uppercase tracking-wider">Attempt</div>
+                  <div className="text-xl font-mono font-bold text-[#161614] mt-0.5">
                     {currentAttempt}/{diff.attemptsCount}
                   </div>
                 </div>
-                <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Avg Latency</div>
-                  <div className="text-xl font-mono font-bold text-slate-800 mt-0.5">
+                <div className="bg-[#F3F1EB] border border-[#E6E3DB] rounded-xl p-3">
+                  <div className="text-[11px] font-mono font-medium text-[#57554E] dark:text-slate-400 uppercase tracking-wider">Avg Latency</div>
+                  <div className="text-xl font-mono font-bold text-[#161614] mt-0.5">
                     {averageScore > 0 ? `${averageScore}ms` : "—"}
                   </div>
                 </div>
-                <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Best Click</div>
+                <div className="bg-[#F3F1EB] border border-[#E6E3DB] rounded-xl p-3">
+                  <div className="text-[11px] font-mono font-medium text-[#57554E] dark:text-slate-400 uppercase tracking-wider">Best Click</div>
                   <div className="text-xl font-mono font-bold text-emerald-600 mt-0.5">
                     {bestScore > 0 ? `${bestScore}ms` : "—"}
                   </div>
                 </div>
-                <div className="bg-slate-50 border border-slate-100 rounded-xl p-3">
-                  <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Penalty</div>
+                <div className="bg-[#F3F1EB] border border-[#E6E3DB] rounded-xl p-3">
+                  <div className="text-[11px] font-mono font-medium text-[#57554E] dark:text-slate-400 uppercase tracking-wider">Penalty</div>
                   <div className="text-xs font-mono font-bold text-red-500 mt-1">
                     {diff.earlyClickPenalty ? "1000ms" : "NONE"}
                   </div>
@@ -384,10 +384,10 @@ export default function SoundReactionGame() {
 
               {/* Best record display */}
               {highScores[diffId] > 0 && highScores[diffId] !== 999 && (
-                <div className="mt-3 bg-slate-50 border border-slate-100 rounded-xl p-3 flex items-center gap-2">
+                <div className="mt-3 bg-[#F3F1EB] border border-[#E6E3DB] rounded-xl p-3 flex items-center gap-2">
                   <Trophy className={`w-4 h-4 ${diff.textColor}`} />
                   <div>
-                    <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Best Avg ({diff.label})</div>
+                    <div className="text-[11px] font-mono font-medium text-[#57554E] dark:text-slate-400 uppercase tracking-wider">Best Avg ({diff.label})</div>
                     <div className={`text-sm font-mono font-bold ${diff.textColor}`}>{highScores[diffId]}ms</div>
                   </div>
                 </div>
@@ -396,7 +396,7 @@ export default function SoundReactionGame() {
               {/* Mute */}
               <button
                 onClick={() => setMuted(m => !m)}
-                className={`mt-3 w-full p-2.5 rounded-xl border transition-all cursor-pointer flex items-center justify-center gap-2 ${muted ? "bg-red-50 border-red-200 text-red-600" : "bg-slate-50 border-slate-200 text-slate-500 hover:border-violet-200 hover:text-violet-600"}`}
+                className={`mt-3 w-full p-2.5 rounded-xl border transition-all cursor-pointer flex items-center justify-center gap-2 ${muted ? "bg-red-50 border-red-200 text-red-600" : "bg-[#FAF9F6] border-[#E6E3DB] text-[#78756C] hover:border-violet-200 hover:text-violet-600"}`}
               >
                 {muted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
                 <span className="text-xs font-mono font-medium uppercase tracking-widest">{muted ? "Unmute" : "Sound On"}</span>
@@ -406,16 +406,15 @@ export default function SoundReactionGame() {
 
           {/* ═══ RIGHT PANEL: Game Console ═══ */}
           <motion.div initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.15 }} className="game-arena flex flex-col gap-4">
-            <div className="relative bg-white border border-slate-200 rounded-3xl overflow-hidden shadow-[0_8px_40px_rgba(15,23,42,0.07)]">
-              <div className="absolute top-4 left-4 w-4 h-4 border-t-2 border-l-2 border-slate-200" />
-              <div className="absolute top-4 right-4 w-4 h-4 border-t-2 border-r-2 border-slate-200" />
-              <div className="absolute bottom-4 left-4 w-4 h-4 border-b-2 border-l-2 border-slate-200" />
-              <div className="absolute bottom-4 right-4 w-4 h-4 border-b-2 border-r-2 border-slate-200" />
+            <div className="relative bg-white border border-[#E6E3DB] rounded-2xl overflow-hidden">
 
-              <div className="absolute top-4 left-10 text-[10px] font-mono text-slate-500 dark:text-slate-400 tracking-widest hidden sm:block">
-                DECK // {diff.label.toUpperCase()}
+
+
+
+              <div className="absolute top-4 left-10 text-[10px] font-mono text-[#78756C] dark:text-slate-400 tracking-widest hidden sm:block">
+                {diff.label} Mode
               </div>
-              <div className="absolute top-4 right-10 text-[10px] font-mono text-slate-500 dark:text-slate-400 tracking-widest hidden sm:block">
+              <div className="absolute top-4 right-10 text-[10px] font-mono text-[#78756C] dark:text-slate-400 tracking-widest hidden sm:block">
                 TONES: {diff.hasFauxTones ? "HIGH + LOW" : "HIGH ONLY"}
               </div>
 
@@ -433,8 +432,8 @@ export default function SoundReactionGame() {
                         </div>
                       </div>
                       <div className="space-y-2">
-                        <h2 className="text-xl md:text-2xl font-mono font-bold text-slate-800 uppercase tracking-wider">Auditory Calibration</h2>
-                        <p className="text-xs text-slate-600 dark:text-slate-400 max-w-xs mx-auto leading-relaxed">
+                        <h2 className="text-xl md:text-2xl font-mono font-bold text-[#161614] uppercase tracking-wider">Auditory Calibration</h2>
+                        <p className="text-xs text-[#57554E] dark:text-slate-400 max-w-xs mx-auto leading-relaxed">
                           Listen carefully and tap immediately when the target audio tone plays. Use headphones for best results.
                         </p>
                         <p className={`game-level-description text-xs font-mono font-semibold ${diff.textColor} mt-1`}>{diff.label}: {diff.description}</p>
@@ -460,7 +459,7 @@ export default function SoundReactionGame() {
                       onKeyDown={(event) => { if (!event.repeat && (event.key === " " || event.key === "Enter")) { event.preventDefault(); handleAction(); } }}
                       role="button" tabIndex={0}
                       className={`relative w-full h-[400px] rounded-3xl flex flex-col items-center justify-center border transition-all duration-150 select-none cursor-pointer ${
-                        phase === "idle" ? "bg-slate-50 border-slate-200 hover:bg-slate-100/50" : ""
+                        phase === "idle" ? "bg-[#FAF9F6] border-[#E6E3DB] hover:bg-[#F3F1EB]/50" : ""
                       } ${
                         phase === "waiting" ? "bg-amber-50/20 border-amber-250/60 shadow-inner" : ""
                       } ${
@@ -468,7 +467,7 @@ export default function SoundReactionGame() {
                       } ${
                         phase === "early" ? "bg-red-50/40 border-red-200 shadow-inner" : ""
                       } ${
-                        phase === "result" ? "bg-slate-50 border-slate-250 shadow-inner" : ""
+                        phase === "result" ? "bg-[#FAF9F6] border-slate-250 shadow-inner" : ""
                       }`}
                     >
                       {/* Scanline */}
@@ -499,7 +498,7 @@ export default function SoundReactionGame() {
                       {phase === "idle" && (
                         <div className="text-center space-y-4">
                           <Volume2 className="w-10 h-10 text-cyan-500 mx-auto animate-pulse" />
-                          <h3 className="text-sm font-mono font-bold text-slate-700 uppercase tracking-widest">[ TAP PAD TO START TEST ]</h3>
+                          <h3 className="text-sm font-mono font-bold text-[#3F3E39] uppercase tracking-widest">[ TAP PAD TO START TEST ]</h3>
                         </div>
                       )}
 
@@ -507,7 +506,7 @@ export default function SoundReactionGame() {
                         <div className="text-center space-y-4">
                           <span className="inline-block w-4 h-4 rounded-full bg-amber-500 animate-ping" />
                           <h3 className="text-sm font-mono font-bold text-amber-600 uppercase tracking-widest">[ SYNCHRONIZING DECK TONE ]</h3>
-                          <p className="text-[11px] font-mono text-slate-600 dark:text-slate-400">DO NOT CLICK YET — LISTEN CAREFULLY</p>
+                          <p className="text-[11px] font-mono text-[#57554E] dark:text-slate-400">DO NOT CLICK YET — LISTEN CAREFULLY</p>
                         </div>
                       )}
 
@@ -525,7 +524,7 @@ export default function SoundReactionGame() {
                         <div className="text-center space-y-4 p-4">
                           <ShieldAlert className="w-12 h-12 text-red-500 mx-auto animate-pulse" />
                           <h3 className="text-lg font-mono font-bold text-red-700 uppercase tracking-wider">MISFIRE DETECTED</h3>
-                          <p className="text-[10px] font-mono text-slate-500 max-w-xs mx-auto leading-relaxed">
+                          <p className="text-[10px] font-mono text-[#78756C] max-w-xs mx-auto leading-relaxed">
                             {diff.earlyClickPenalty
                               ? "Registered early or clicked wrong frequency tone. +1000ms penalty added. Tap to proceed."
                               : "Registered tap before tone was synchronized. Tap anywhere to reset."}
@@ -535,11 +534,11 @@ export default function SoundReactionGame() {
 
                       {phase === "result" && (
                         <div className="text-center space-y-4">
-                          <div className="text-[11px] font-mono font-medium text-slate-600 dark:text-slate-400 uppercase tracking-wider">Auditory Latency</div>
-                          <div className="bg-white border border-slate-200 p-4 px-8 rounded-2xl shadow-sm inline-block">
+                          <div className="text-[11px] font-mono font-medium text-[#57554E] dark:text-slate-400 uppercase tracking-wider">Auditory Latency</div>
+                          <div className="bg-white border border-[#E6E3DB] p-4 px-8 rounded-2xl shadow-sm inline-block">
                             <span className="text-4xl font-mono font-black text-fuchsia-600">{reactionTime}ms</span>
                           </div>
-                          <p className="text-[11px] font-mono text-slate-600 dark:text-slate-400">[ TAP ANYWHERE TO CONTINUE ]</p>
+                          <p className="text-[11px] font-mono text-[#57554E] dark:text-slate-400">[ TAP ANYWHERE TO CONTINUE ]</p>
                         </div>
                       )}
 
@@ -554,28 +553,28 @@ export default function SoundReactionGame() {
                       </div>
                       <div className="space-y-1">
                         <div className="text-2xl font-mono font-black text-emerald-600 tracking-wider">SESSION_COMPLETE</div>
-                        <p className="text-xs font-mono text-slate-500">{diff.label} mode average latency</p>
+                        <p className="text-xs font-mono text-[#78756C]">{diff.label} mode average latency</p>
                       </div>
 
                       <div className="grid grid-cols-2 gap-4 text-left max-w-sm mx-auto">
-                        <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 shadow-sm">
-                          <div className="text-[11px] font-mono text-slate-600 dark:text-slate-400 uppercase mb-1">Average Latency</div>
+                        <div className="bg-[#FAF9F6] border border-[#E6E3DB] rounded-xl p-4 shadow-sm">
+                          <div className="text-[11px] font-mono text-[#57554E] dark:text-slate-400 uppercase mb-1">Average Latency</div>
                           <div className="text-2xl text-fuchsia-600 font-mono font-black">{averageScore}ms</div>
                         </div>
-                        <div className="bg-slate-50 border border-slate-200 rounded-xl p-4 shadow-sm">
-                          <div className="text-[11px] font-mono text-slate-600 dark:text-slate-400 uppercase mb-1">Fastest Latency</div>
+                        <div className="bg-[#FAF9F6] border border-[#E6E3DB] rounded-xl p-4 shadow-sm">
+                          <div className="text-[11px] font-mono text-[#57554E] dark:text-slate-400 uppercase mb-1">Fastest Latency</div>
                           <div className="text-2xl text-emerald-600 font-mono font-black">{bestScore}ms</div>
                         </div>
                       </div>
 
                       {/* Display attempt lists */}
-                      <div className="bg-slate-50 border border-slate-250 rounded-xl p-3 text-left">
-                        <div className="text-[11px] font-mono text-slate-600 dark:text-slate-400 uppercase mb-2">auditory latency logs</div>
+                      <div className="bg-[#FAF9F6] border border-slate-250 rounded-xl p-3 text-left">
+                        <div className="text-[11px] font-mono text-[#57554E] dark:text-slate-400 uppercase mb-2">auditory latency logs</div>
                         <div className="grid grid-cols-5 gap-2 text-center">
                           {attempts.slice(0, 5).map((time, idx) => (
-                            <div key={idx} className="bg-white border border-slate-200 p-2 rounded-lg font-mono text-xs text-slate-700">
+                            <div key={idx} className="bg-white border border-[#E6E3DB] p-2 rounded-lg font-mono text-xs text-[#3F3E39]">
                               #{idx + 1}
-                              <div className={`font-bold mt-1 ${time === 1000 ? "text-red-500" : "text-slate-800"}`}>
+                              <div className={`font-bold mt-1 ${time === 1000 ? "text-red-500" : "text-[#161614]"}`}>
                                 {time === 1000 ? "FAIL" : `${time}ms`}
                               </div>
                             </div>
@@ -614,7 +613,7 @@ export default function SoundReactionGame() {
               <div className="flex justify-end">
                 <button onClickCapture={() => window.dispatchEvent(new Event("game_abort_requested"))}
                   onClick={() => { if (timerRef.current) clearTimeout(timerRef.current); setPhase("summary"); }}
-                  className="text-xs font-mono font-medium text-slate-600 dark:text-slate-400 hover:text-red-500 transition-colors cursor-pointer"
+                  className="text-xs font-mono font-medium text-[#57554E] dark:text-slate-400 hover:text-red-500 transition-colors cursor-pointer"
                 >
                   End round ×
                 </button>

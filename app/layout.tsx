@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Outfit } from "next/font/google";
+import { Fraunces, Plus_Jakarta_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { NavbarDynamic } from "@/components/NavbarDynamic";
 import { Footer } from "@/components/Footer";
@@ -9,18 +9,35 @@ import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { CookieBanner } from "@/components/CookieBanner";
 import { StructuredData, generateOrganizationSchema } from "@/components/StructuredData";
+import { ToolKeyboardNavigation } from "@/components/ToolKeyboardNavigation";
 
 export const viewport: Viewport = {
-  themeColor: "#f8fafc",
+  themeColor: "#faf9f6",
 };
 
-const outfit = Outfit({
-  variable: "--font-outfit",
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
   subsets: ["latin"],
-  display: "optional", // Keep the fallback on slow connections rather than repainting text late.
-  preload: true, // Preload font for LCP - critical for hero text rendering
-  adjustFontFallback: true, // Use system font fallback for faster rendering
-  fallback: ['system-ui', '-apple-system', 'sans-serif'], // Immediate fallback
+  display: "swap",
+  preload: true,
+  fallback: ["Georgia", "Times New Roman", "serif"],
+});
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  variable: "--font-plus-jakarta",
+  subsets: ["latin"],
+  display: "swap",
+  preload: true,
+  fallback: ["system-ui", "-apple-system", "sans-serif"],
+});
+
+const ibmPlexMono = IBM_Plex_Mono({
+  variable: "--font-ibm-plex-mono",
+  subsets: ["latin"],
+  weight: ["400", "500", "600"],
+  display: "swap",
+  preload: false,
+  fallback: ["ui-monospace", "SFMono-Regular", "monospace"],
 });
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -30,10 +47,10 @@ export async function generateMetadata(): Promise<Metadata> {
     // Use canonical www version
     metadataBase: getBaseUrlObject(),
     title: {
-      default: "Brain Training & Reflex Games | Reflextry",
+      default: "Brain Training Games & Reaction Time Test | Reflextry",
       template: "%s | Reflextry"
     },
-    description: "Test your accuracy and reflexes with our Gen Z tools. Free online brain training games, reaction time tests, typing speed tests, memory games, and more.",
+    description: "Train cognitive skills with free brain training games. Test reaction time (ms), working memory, CPS click speed, typing WPM, and FPS aim precision online.",
     keywords: ["reaction time test", "typing speed test", "brain training games", "memory games", "accuracy test", "reflex test", "human benchmark", "reaction test", "aim trainer", "human benchmark reaction time", "test for reaction", "reaction speed test", "memory test"],
     authors: [{ name: "Reflextry" }],
     creator: "Reflextry",
@@ -51,27 +68,35 @@ export async function generateMetadata(): Promise<Metadata> {
     robots: {
       index: true,
       follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
+      },
     },
     openGraph: {
       type: "website",
       locale: "en_US",
       siteName: "Reflextry",
-      title: "Reflextry - Test Your Accuracy & Reflexes",
-      description: "Test your accuracy and reflexes with our Gen Z tools. Free online brain training games.",
+      title: "Brain Training Games & Reaction Time Test | Reflextry",
+      description: "Free online brain training games, millisecond reaction time tests, working memory benchmarks, typing speed WPM, and FPS aim trainers.",
       images: [
         {
           url: "/opengraph-image",
           width: 1200,
           height: 630,
-          alt: "Reflextry — Free brain training games",
+          alt: "Reflextry — Free brain training games and cognitive benchmarks",
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: "Reflextry - Test Your Accuracy & Reflexes",
-      description: "Test your accuracy and reflexes with our Gen Z tools.",
+      title: "Brain Training Games & Reaction Time Test | Reflextry",
+      description: "Free online brain training games, reaction time tests, working memory benchmarks, typing WPM, and FPS aim trainers.",
       images: ["/opengraph-image"],
+      creator: "@reflextry",
     },
     alternates: {
       // Canonical URLs are handled by individual pages via generateSEOMetadata
@@ -82,6 +107,7 @@ export async function generateMetadata(): Promise<Metadata> {
 import { headers } from "next/headers";
 import { I18nProvider } from "@/lib/i18n/context";
 import { DEFAULT_LOCALE, isSupportedLocale, type Locale } from "@/lib/i18n/config";
+import { loadLocaleDictionary } from "@/lib/i18n/load-dictionary";
 
 export default async function RootLayout({
   children,
@@ -91,10 +117,15 @@ export default async function RootLayout({
   const headerList = await headers();
   const rawLocale = headerList.get("x-locale");
   const locale: Locale = rawLocale && isSupportedLocale(rawLocale) ? rawLocale : DEFAULT_LOCALE;
+  const initialDict = locale !== DEFAULT_LOCALE ? await loadLocaleDictionary(locale) : undefined;
   const organizationSchema = generateOrganizationSchema();
 
   return (
-    <html lang={locale} className="light" suppressHydrationWarning>
+    <html
+      lang={locale}
+      className={`light ${fraunces.variable} ${plusJakartaSans.variable} ${ibmPlexMono.variable}`}
+      suppressHydrationWarning
+    >
       <head>
         <StructuredData type="Organization" data={organizationSchema} />
 
@@ -106,30 +137,30 @@ export default async function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
               :root {
-                --background: 210 33% 98%;
-                --foreground: 222 47% 11%;
+                --background: 45 25% 97%;
+                --foreground: 40 7% 9%;
                 --card: 0 0% 100%;
-                --card-foreground: 222 47% 11%;
+                --card-foreground: 40 7% 9%;
                 --popover: 0 0% 100%;
-                --popover-foreground: 222 47% 11%;
-                --primary: 222 47% 11%;
-                --primary-foreground: 210 40% 98%;
-                --secondary: 210 24% 96%;
-                --secondary-foreground: 222 47% 11%;
-                --muted: 210 24% 96%;
-                --muted-foreground: 215 20% 38%;
-                --accent: 214 32% 91%;
-                --accent-foreground: 222 47% 11%;
-                --border: 214 24% 88%;
-                --input: 214 24% 88%;
-                --ring: 215 20% 65%;
+                --popover-foreground: 40 7% 9%;
+                --primary: 40 7% 9%;
+                --primary-foreground: 45 25% 97%;
+                --secondary: 40 16% 94%;
+                --secondary-foreground: 40 7% 9%;
+                --muted: 40 16% 94%;
+                --muted-foreground: 36 6% 36%;
+                --accent: 40 16% 92%;
+                --accent-foreground: 40 7% 9%;
+                --border: 38 15% 88%;
+                --input: 38 15% 88%;
+                --ring: 221 63% 40%;
                 --radius: 0.75rem;
                 --reflex: 221 39% 34%;
                 --speed: 215 25% 27%;
                 --accuracy: 199 18% 40%;
                 --memory: 215 18% 42%;
                 --wisdom: 220 9% 46%;
-                --info: 217 85% 46%;
+                --info: 221 63% 40%;
               }
               html {
                 color-scheme: light;
@@ -139,22 +170,24 @@ export default async function RootLayout({
               body {
                 margin: 0;
                 padding: 0;
-                font-family: var(--font-outfit, system-ui, -apple-system, sans-serif);
-                line-height: 1.5;
+                background-color: #FAF9F6;
+                color: #161614;
+                font-family: var(--font-plus-jakarta, system-ui, -apple-system, sans-serif);
+                line-height: 1.55;
               }
             `,
           }}
         />
       </head>
       <body
-        className={`${outfit.variable} antialiased bg-background text-foreground flex flex-col min-h-screen`}
+        className="font-sans antialiased bg-[#FAF9F6] text-[#161614] flex flex-col min-h-screen"
       >
         <ThemeProvider>
-          <I18nProvider initialLocale={locale}>
+          <I18nProvider initialLocale={locale} initialDict={initialDict}>
             <ErrorBoundary>
               <NavbarDynamic />
-              <main className="flex-1 pt-20">
-                {children}
+              <main className="flex-1 pt-[68px]">
+                <ToolKeyboardNavigation>{children}</ToolKeyboardNavigation>
               </main>
               <Footer />
               <LazyLoadedComponents />

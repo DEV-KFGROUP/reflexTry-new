@@ -1,254 +1,550 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import { Trophy, Lock, Star, Target, Zap, Award, Sparkles, Medal } from "lucide-react";
-import { Achievements, Achievement } from "@/utils/achievements";
+import { useState, useEffect, useMemo, useCallback } from "react";
+import Link from "next/link";
+import {
+    Trophy,
+    Lock,
+    CheckCircle2,
+    ArrowRight,
+    Zap,
+    RotateCcw,
+} from "lucide-react";
+import {
+    Achievements,
+    type AchievementCategory,
+    type AchievementProgress,
+    type AchievementTier,
+} from "@/utils/achievements";
+import { ScoreHistory } from "@/utils/scoreHistory";
+import { XPSystem, type XPProgress } from "@/utils/xpSystem";
+import { AchievementIcon } from "@/components/AchievementIcon";
 import { useTranslation } from "@/lib/i18n/context";
 
-const FloatingBackground = () => {
-    return (
-        <div className="absolute inset-0 overflow-hidden pointer-events-none z-[-1] rounded-3xl">
-            <div className="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] bg-yellow-500/20 rounded-full blur-[100px] animate-pulse" />
-            <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] bg-orange-500/20 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '2s' }} />
-            
-            <motion.div
-                animate={{ y: [0, -20, 0], rotate: [0, 10, 0] }}
-                transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-[15%] left-[5%] opacity-20"
-            >
-                <Trophy className="w-32 h-32 text-yellow-400 drop-shadow-[0_0_15px_rgba(250,204,21,0.8)]" />
-            </motion.div>
+type CategoryFilter = "all" | AchievementCategory;
+type StatusFilter = "all" | "unlocked" | "locked";
 
-            <motion.div
-                animate={{ y: [0, 30, 0], rotate: [0, -15, 0] }}
-                transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute bottom-[20%] right-[5%] opacity-20"
-            >
-                <Medal className="w-40 h-40 text-orange-400 drop-shadow-[0_0_15px_rgba(251,146,60,0.8)]" />
-            </motion.div>
+const CATEGORY_TABS: { id: CategoryFilter; label: string }[] = [
+    { id: "all", label: "All Arenas" },
+    { id: "reflex", label: "Reflex" },
+    { id: "memory", label: "Memory" },
+    { id: "speed", label: "Speed" },
+    { id: "gaming", label: "Gaming" },
+    { id: "accuracy", label: "Accuracy" },
+    { id: "milestones", label: "Milestones" },
+];
 
-            <motion.div
-                animate={{ y: [0, -15, 0], x: [0, 15, 0], rotate: [0, 45, 0] }}
-                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-[40%] right-[15%] opacity-15"
-            >
-                <Star className="w-24 h-24 text-yellow-300 drop-shadow-[0_0_15px_rgba(253,224,71,0.8)]" />
-            </motion.div>
+const CATEGORY_LABELS: Record<AchievementCategory, string> = {
+    reflex: "Reflex",
+    memory: "Memory",
+    speed: "Speed",
+    gaming: "Gaming",
+    accuracy: "Accuracy",
+    milestones: "Milestone",
+};
 
-            <motion.div
-                animate={{ y: [0, 25, 0], x: [0, -20, 0] }}
-                transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute bottom-[30%] left-[10%] opacity-15"
-            >
-                <Award className="w-28 h-28 text-orange-300 drop-shadow-[0_0_15px_rgba(253,186,116,0.8)]" />
-            </motion.div>
-        </div>
-    );
+const TIER_STYLES: Record<
+    AchievementTier,
+    { label: string; emblem: string; accentText: string; barColor: string; unlockedBorder: string }
+> = {
+    bronze: {
+        label: "Bronze",
+        emblem: "bg-amber-50 border-amber-200 text-amber-700",
+        accentText: "text-amber-700",
+        barColor: "bg-amber-600",
+        unlockedBorder: "border-amber-200",
+    },
+    silver: {
+        label: "Silver",
+        emblem: "bg-[#F3F1EB] border-[#D8D4C9] text-[#3F3E39]",
+        accentText: "text-[#3F3E39]",
+        barColor: "bg-slate-700",
+        unlockedBorder: "border-[#D8D4C9]",
+    },
+    gold: {
+        label: "Gold",
+        emblem: "bg-yellow-50 border-yellow-300 text-amber-700",
+        accentText: "text-amber-700",
+        barColor: "bg-amber-500",
+        unlockedBorder: "border-yellow-300",
+    },
+    platinum: {
+        label: "Platinum",
+        emblem: "bg-blue-50 border-blue-200 text-blue-700",
+        accentText: "text-blue-700",
+        barColor: "bg-blue-600",
+        unlockedBorder: "border-blue-300",
+    },
 };
 
 export default function AchievementsClient() {
-    const { t } = useTranslation();
-    const [unlocked, setUnlocked] = useState<Achievement[]>([]);
-    const [allAchievements, setAllAchievements] = useState<Achievement[]>([]);
+    const { t, getLocalizedHref } = useTranslation();
+    const [items, setItems] = useState<AchievementProgress[]>(() =>
+        Achievements.getAll().map((achievement) => ({
+            achievement,
+            unlocked: false,
+            progressRatio: 0,
+            currentLabel: "Not started",
+        }))
+    );
+    const [xpProgress, setXpProgress] = useState<XPProgress | null>(null);
+    const [totalSessions, setTotalSessions] = useState(0);
+    const [categoryFilter, setCategoryFilter] = useState<CategoryFilter>("all");
+    const [statusFilter, setStatusFilter] = useState<StatusFilter>("all");
+    const [mounted, setMounted] = useState(false);
 
-    useEffect(() => {
-        setUnlocked(Achievements.getUnlocked());
-        setAllAchievements(Achievements.getAll());
+    const refreshData = useCallback(() => {
+        // Retroactively unlock any badges already satisfied by saved high scores
+        const newlySynced = Achievements.syncFromScores();
+        if (newlySynced.length > 0) {
+            const bonusXP = newlySynced.reduce((sum, b) => sum + (b.xpReward || 50), 0);
+            XPSystem.awardAchievement(bonusXP);
+        }
+
+        setItems(Achievements.evaluateProgress());
+        setXpProgress(XPSystem.getProgress());
+
+        const history = ScoreHistory.getAll();
+        const sessions = Object.values(history).reduce(
+            (sum, entries) => sum + entries.filter((e) => e.eligible !== false).length,
+            0
+        );
+        setTotalSessions(sessions);
     }, []);
 
-    const unlockedIds = new Set(unlocked.map(a => a.id));
-    const locked = allAchievements.filter(a => !unlockedIds.has(a.id));
+    useEffect(() => {
+        setMounted(true);
+        refreshData();
 
-    const containerVariants = {
-        hidden: { opacity: 0 },
-        visible: {
-            opacity: 1,
-            transition: { staggerChildren: 0.05 }
+        window.addEventListener("score_updated", refreshData);
+        window.addEventListener("achievement_unlocked", refreshData);
+        window.addEventListener("xp_updated", refreshData);
+        return () => {
+            window.removeEventListener("score_updated", refreshData);
+            window.removeEventListener("achievement_unlocked", refreshData);
+            window.removeEventListener("xp_updated", refreshData);
+        };
+    }, [refreshData]);
+
+    const unlockedCount = useMemo(() => items.filter((i) => i.unlocked).length, [items]);
+    const totalCount = items.length;
+    const completionPct = totalCount > 0 ? Math.round((unlockedCount / totalCount) * 100) : 0;
+
+    const earnedBadgeXP = useMemo(
+        () =>
+            items
+                .filter((i) => i.unlocked)
+                .reduce((sum, i) => sum + i.achievement.xpReward, 0),
+        [items]
+    );
+
+    const arenasUnlocked = useMemo(() => {
+        const set = new Set(
+            items
+                .filter((i) => i.unlocked && i.achievement.category !== "milestones")
+                .map((i) => i.achievement.category)
+        );
+        return set.size;
+    }, [items]);
+
+    const categoryCounts = useMemo(() => {
+        const counts: Record<CategoryFilter, { unlocked: number; total: number }> = {
+            all: { unlocked: unlockedCount, total: totalCount },
+            reflex: { unlocked: 0, total: 0 },
+            memory: { unlocked: 0, total: 0 },
+            speed: { unlocked: 0, total: 0 },
+            gaming: { unlocked: 0, total: 0 },
+            accuracy: { unlocked: 0, total: 0 },
+            milestones: { unlocked: 0, total: 0 },
+        };
+        for (const item of items) {
+            counts[item.achievement.category].total += 1;
+            if (item.unlocked) counts[item.achievement.category].unlocked += 1;
         }
-    };
+        return counts;
+    }, [items, unlockedCount, totalCount]);
 
-    const itemVariants = {
-        hidden: { opacity: 0, y: 20 },
-        visible: { opacity: 1, y: 0 }
-    };
+    const filteredItems = useMemo(() => {
+        return items
+            .filter((item) => {
+                if (categoryFilter !== "all" && item.achievement.category !== categoryFilter) {
+                    return false;
+                }
+                if (statusFilter === "unlocked" && !item.unlocked) return false;
+                if (statusFilter === "locked" && item.unlocked) return false;
+                return true;
+            })
+            .sort((a, b) => {
+                // Earned badges first, then closest to unlocking
+                if (a.unlocked !== b.unlocked) return a.unlocked ? -1 : 1;
+                return b.progressRatio - a.progressRatio;
+            });
+    }, [items, categoryFilter, statusFilter]);
 
     return (
-        <div className="bg-background py-8 px-4 sm:px-6 lg:px-8 min-h-screen overflow-hidden relative">
-            <motion.div 
-                initial="hidden"
-                animate="visible"
-                variants={containerVariants}
-                className="max-w-6xl mx-auto space-y-12 relative z-10"
-            >
-                {/* Header Section */}
-                <motion.div variants={itemVariants} className="text-center space-y-4 mb-12 relative z-10">
-                    <motion.div
-                        initial={{ scale: 0, rotate: -180 }}
-                        animate={{ scale: 1, rotate: 0 }}
-                        transition={{ type: "spring", stiffness: 200, damping: 20 }}
-                        className="inline-block relative mb-4"
-                    >
-                        <div className="absolute inset-0 bg-yellow-500/30 blur-2xl rounded-full" />
-                        <div className="relative p-4 rounded-full bg-white/5 border border-black/10 dark:border-white/10 backdrop-blur-md shadow-[0_0_30px_rgba(250,204,21,0.2)]">
-                            <Trophy className="w-12 h-12 text-yellow-400 drop-shadow-[0_0_10px_rgba(250,204,21,0.8)]" />
-                        </div>
-                    </motion.div>
-                    
-                    <div className="inline-block relative">
-                        <div className="absolute inset-0 bg-gradient-to-r from-yellow-500 to-orange-500 blur-2xl opacity-30 animate-pulse" />
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-black bg-gradient-to-br from-slate-900 via-slate-800 to-slate-600 dark:from-yellow-400 dark:via-orange-400 dark:to-orange-500 bg-clip-text text-transparent inline-flex items-center gap-3 relative z-10 drop-shadow-sm">
-                            <Sparkles className="w-10 h-10 text-yellow-400" />
+        <div className="bg-[#FAF9F6] text-[#161614] py-12 px-4 sm:px-6 lg:px-8 min-h-screen">
+            <div className="max-w-7xl mx-auto space-y-10">
+                {/* Editorial Header */}
+                <header className="flex flex-col md:flex-row md:items-end justify-between gap-6 border-b border-[#D8D4C9] pb-8">
+                    <div className="space-y-3 max-w-2xl">
+                        <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#78756C]">
+                            Performance Badges &amp; Milestones
+                        </p>
+                        <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-medium tracking-[-0.02em] text-[#161614] leading-[1.08] [text-wrap:balance]">
                             {t("achievements.heroTitle", "Achievements")}
                         </h1>
-                    </div>
-                    <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-medium">
-                        {unlocked.length} / {allAchievements.length} {t("achievements.unlocked", "achievements unlocked")}
-                    </p>
-                </motion.div>
-
-                {/* Main Glassmorphic Container */}
-                <motion.div 
-                    variants={itemVariants}
-                    className="relative bg-white/40 dark:bg-black/40 backdrop-blur-3xl border border-black/10 dark:border-white/10 rounded-3xl p-4 md:p-8 shadow-[0_0_50px_rgba(250,204,21,0.1)] z-10"
-                >
-                    <FloatingBackground />
-
-                    {/* Quick info */}
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8 relative z-10">
-                        <div className="p-6 rounded-2xl bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 text-center hover:bg-white/10 transition-colors">
-                            <Star className="w-8 h-8 text-yellow-400 mx-auto mb-3 drop-shadow-[0_0_10px_rgba(250,204,21,0.8)]" />
-                            <h3 className="text-base font-bold text-foreground mb-1">High Scores</h3>
-                            <p className="text-sm text-muted-foreground">Reach milestones</p>
-                        </div>
-                        <div className="p-6 rounded-2xl bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 text-center hover:bg-white/10 transition-colors">
-                            <Zap className="w-8 h-8 text-orange-400 mx-auto mb-3 drop-shadow-[0_0_10px_rgba(251,146,60,0.8)]" />
-                            <h3 className="text-base font-bold text-foreground mb-1">Daily Streaks</h3>
-                            <p className="text-sm text-muted-foreground">Stay consistent</p>
-                        </div>
-                        <div className="p-6 rounded-2xl bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 text-center hover:bg-white/10 transition-colors">
-                            <Target className="w-8 h-8 text-red-400 mx-auto mb-3 drop-shadow-[0_0_10px_rgba(248,113,113,0.8)]" />
-                            <h3 className="text-base font-bold text-foreground mb-1">Skill Mastery</h3>
-                            <p className="text-sm text-muted-foreground">Master tools</p>
-                        </div>
-                    </div>
-
-                    {/* Progress Bar */}
-                    <div className="bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 rounded-3xl p-8 mb-12 relative z-10 shadow-xl">
-                        <div className="flex items-center justify-between mb-4">
-                            <span className="text-lg font-bold text-muted-foreground uppercase tracking-wider">{t("achievements.totalUnlocked", "Overall Progress")}</span>
-                            <span className="text-2xl font-black text-foreground drop-shadow-md">
-                                {allAchievements.length > 0 ? Math.round((unlocked.length / allAchievements.length) * 100) : 0}%
-                            </span>
-                        </div>
-                        <div className="w-full bg-black/10 dark:bg-white/5 rounded-full h-4 overflow-hidden border border-black/5 dark:border-white/10 shadow-inner">
-                            <motion.div
-                                initial={{ width: 0 }}
-                                animate={{ width: `${allAchievements.length > 0 ? (unlocked.length / allAchievements.length) * 100 : 0}%` }}
-                                transition={{ duration: 1.5, ease: "easeOut" }}
-                                className="h-full bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 relative"
-                            >
-                                <div className="absolute inset-0 bg-white/20 animate-pulse" />
-                            </motion.div>
-                        </div>
-                    </div>
-
-                    {/* Unlocked Achievements */}
-                    {unlocked.length > 0 && (
-                        <div className="space-y-6 relative z-10 mb-16">
-                            <div className="flex items-center gap-3 mb-6">
-                                <Trophy className="w-8 h-8 text-yellow-400 drop-shadow-[0_0_10px_rgba(250,204,21,0.8)]" />
-                                <h2 className="text-3xl font-black text-foreground">{t("achievements.unlocked", "Unlocked")}</h2>
-                            </div>
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                {unlocked.map((achievement, index) => (
-                                    <motion.div
-                                        key={achievement.id}
-                                        variants={itemVariants}
-                                        className="group bg-gradient-to-br from-yellow-500/10 to-orange-500/10 border border-yellow-500/30 rounded-3xl p-6 hover:bg-yellow-500/20 transition-all duration-300 shadow-[0_0_30px_rgba(250,204,21,0.1)] hover:shadow-[0_0_40px_rgba(250,204,21,0.25)] relative overflow-hidden"
-                                    >
-                                        <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                                        
-                                        <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300 drop-shadow-[0_0_15px_rgba(250,204,21,0.5)]">
-                                            {achievement.icon}
-                                        </div>
-                                        <h3 className="text-xl font-bold text-foreground mb-2 drop-shadow-sm">{achievement.name}</h3>
-                                        <p className="text-base text-muted-foreground mb-4 leading-relaxed">{achievement.description}</p>
-                                        
-                                        {achievement.unlockedAt && (
-                                            <div className="mt-auto pt-4 border-t border-yellow-500/20">
-                                                <p className="text-sm font-bold text-yellow-600 dark:text-yellow-400">
-                                                    {t("achievements.unlocked", "Unlocked")}: {new Date(achievement.unlockedAt).toLocaleDateString()}
-                                                </p>
-                                            </div>
-                                        )}
-                                    </motion.div>
-                                ))}
-                            </div>
-                        </div>
-                    )}
-
-                    {/* Locked Achievements */}
-                    {locked.length > 0 && (
-                        <div className="space-y-6 relative z-10">
-                            <div className="flex items-center gap-3 mb-6">
-                                <Lock className="w-8 h-8 text-muted-foreground" />
-                                <h2 className="text-3xl font-black text-foreground">{t("achievements.locked", "Locked")}</h2>
-                            </div>
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                                {locked.map((achievement, index) => (
-                                    <motion.div
-                                        key={achievement.id}
-                                        variants={itemVariants}
-                                        className="bg-white/5 dark:bg-white/5 backdrop-blur-sm border border-black/5 dark:border-white/5 rounded-3xl p-6 opacity-60 hover:opacity-80 transition-opacity duration-300"
-                                    >
-                                        <div className="flex items-start justify-between mb-4">
-                                            <div className="text-5xl grayscale opacity-50 drop-shadow-none">
-                                                {achievement.icon}
-                                            </div>
-                                            <div className="bg-black/10 dark:bg-white/10 p-2 rounded-full">
-                                                <Lock className="w-5 h-5 text-muted-foreground" />
-                                            </div>
-                                        </div>
-                                        <h3 className="text-xl font-bold text-muted-foreground mb-2">{achievement.name}</h3>
-                                        <p className="text-base text-muted-foreground/70 leading-relaxed">{achievement.description}</p>
-                                    </motion.div>
-                                ))}
-                            </div>
-                        </div>
-                    )}
-                </motion.div>
-
-                {/* SEO & FAQ Content Block */}
-                <motion.div variants={itemVariants} className="max-w-4xl mx-auto mt-16 p-8 md:p-10 bg-white/5 dark:bg-white/5 backdrop-blur-md border border-black/10 dark:border-white/10 rounded-3xl shadow-lg z-10 relative">
-                    <h2 className="text-2xl md:text-3xl font-black text-foreground mb-6">About Achievements & Badges</h2>
-                    <div className="space-y-6 text-muted-foreground leading-relaxed">
-                        <p>
-                            At Reflextry, we believe that gamifying cognitive development is one of the most effective ways to build consistency. The <strong>Achievements & Badges</strong> system is designed to reward you for hitting significant milestones across our various brain training tools, including reflex tests, memory games, and accuracy drills.
+                        <p className="text-sm sm:text-base text-[#57554E] leading-relaxed">
+                            Earn badges automatically as your personal bests cross target thresholds across Reflex, Memory, Speed, Gaming, and Accuracy benchmarks.
                         </p>
-                        
-                        <h3 className="text-xl font-bold text-foreground mt-8 mb-4">Frequently Asked Questions</h3>
-                        
-                        <div className="space-y-4">
-                            <div>
-                                <h4 className="font-bold text-foreground">How do I unlock new badges?</h4>
-                                <p>Badges are unlocked automatically when you reach specific targets. For example, completing a sequence memory test up to level 10, or achieving a reaction time under 200ms, will trigger an achievement unlock. These are instantly saved to your profile.</p>
-                            </div>
-                            
-                            <div>
-                                <h4 className="font-bold text-foreground">What types of achievements are available?</h4>
-                                <p>We offer a diverse range of badges categorized by cognitive skill: <strong>Speed, Accuracy, Memory, and Reflexes</strong>. There are also meta-achievements for daily streaks and overall consistency, encouraging long-term cognitive health and neuroplasticity.</p>
-                            </div>
-                            
-                            <div>
-                                <h4 className="font-bold text-foreground">Do my achievements reset?</h4>
-                                <p>No, once you earn a badge, it permanently belongs to your profile! While daily challenges and streaks reset based on time, your core achievements showcase your all-time personal bests and cognitive milestones.</p>
-                            </div>
+                    </div>
+                    <Link
+                        href={getLocalizedHref("/reflex/reaction")}
+                        className="inline-flex items-center gap-2 px-5 py-3 rounded-lg bg-[#161614] hover:bg-[#2C2B27] text-[#FAF9F6] text-sm font-semibold whitespace-nowrap shrink-0 transition-colors w-fit focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1E40AF] focus-visible:ring-offset-2"
+                    >
+                        <Zap className="w-4 h-4" aria-hidden="true" />
+                        <span>Run Benchmark</span>
+                        <ArrowRight className="w-4 h-4" aria-hidden="true" />
+                    </Link>
+                </header>
+
+                {/* Unified KPI Strip & Completion Bar (Single Elevation, Hairline Dividers) */}
+                <section className="bg-white border border-[#E6E3DB] rounded-2xl overflow-hidden">
+                    <div className="grid grid-cols-2 lg:grid-cols-4 divide-y lg:divide-y-0 lg:divide-x divide-[#E6E3DB]">
+                        <div className="p-5 sm:p-6">
+                            <p className="text-xs font-medium text-[#78756C]">
+                                {t("achievements.totalUnlocked", "Badges Earned")}
+                            </p>
+                            <p className="text-2xl sm:text-3xl font-mono font-bold text-[#161614] tabular-nums mt-1">
+                                {unlockedCount}
+                                <span className="text-base font-medium text-[#78756C]">
+                                    {" "}
+                                    / {totalCount}
+                                </span>
+                            </p>
+                            <p className="text-xs text-[#78756C] font-mono tabular-nums mt-1">
+                                {completionPct}% collection complete
+                            </p>
+                        </div>
+
+                        <div className="p-5 sm:p-6 border-l border-[#E6E3DB] lg:border-l-0">
+                            <p className="text-xs font-medium text-[#78756C]">Badge XP Earned</p>
+                            <p className="text-2xl sm:text-3xl font-mono font-bold text-[#161614] tabular-nums mt-1">
+                                +{earnedBadgeXP}
+                                <span className="text-sm font-semibold text-[#1E40AF] ml-1">XP</span>
+                            </p>
+                            <p className="text-xs text-[#78756C] mt-1">
+                                {mounted && xpProgress
+                                    ? `Level ${xpProgress.level} · ${xpProgress.rank.name}`
+                                    : "Level 1 · Beginner"}
+                            </p>
+                        </div>
+
+                        <div className="p-5 sm:p-6">
+                            <p className="text-xs font-medium text-[#78756C]">Arenas Qualified</p>
+                            <p className="text-2xl sm:text-3xl font-mono font-bold text-[#161614] tabular-nums mt-1">
+                                {arenasUnlocked}
+                                <span className="text-base font-medium text-[#78756C]"> / 5</span>
+                            </p>
+                            <p className="text-xs text-[#78756C] mt-1">
+                                Reflex · Memory · Speed · Gaming · Accuracy
+                            </p>
+                        </div>
+
+                        <div className="p-5 sm:p-6 border-l border-[#E6E3DB] lg:border-l-0">
+                            <p className="text-xs font-medium text-[#78756C]">Eligible Sessions</p>
+                            <p className="text-2xl sm:text-3xl font-mono font-bold text-[#161614] tabular-nums mt-1">
+                                {totalSessions}
+                            </p>
+                            <p className="text-xs text-[#78756C] mt-1">
+                                Synced locally on this device
+                            </p>
                         </div>
                     </div>
-                </motion.div>
 
-            </motion.div>
+                    <div className="px-5 sm:px-6 py-4 bg-[#FAF9F6] border-t border-[#E6E3DB] flex items-center gap-4">
+                        <span className="text-xs font-mono font-semibold text-[#3F3E39] whitespace-nowrap shrink-0 tabular-nums">
+                            {completionPct}%
+                        </span>
+                        <div
+                            className="flex-1 h-2 rounded-full bg-[#E6E3DB] overflow-hidden"
+                            role="progressbar"
+                            aria-label="Overall achievement completion"
+                            aria-valuenow={completionPct}
+                            aria-valuemin={0}
+                            aria-valuemax={100}
+                        >
+                            <div
+                                className="h-full bg-[#161614] rounded-full transition-all duration-300"
+                                style={{ width: `${completionPct}%` }}
+                            />
+                        </div>
+                        <span className="text-xs font-mono text-[#78756C] whitespace-nowrap shrink-0 tabular-nums">
+                            {totalCount - unlockedCount} remaining
+                        </span>
+                    </div>
+                </section>
+
+                {/* Filter Controls Bar */}
+                <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-3">
+                    {/* Arena Category Tabs */}
+                    <div
+                        className="flex items-center gap-1 p-1 bg-[#F3F1EB] border border-[#E6E3DB] rounded-xl overflow-x-auto"
+                        role="tablist"
+                        aria-label="Filter badges by arena"
+                    >
+                        {CATEGORY_TABS.map((tab) => {
+                            const active = categoryFilter === tab.id;
+                            const stat = categoryCounts[tab.id];
+                            return (
+                                <button
+                                    key={tab.id}
+                                    type="button"
+                                    role="tab"
+                                    aria-selected={active}
+                                    onClick={() => setCategoryFilter(tab.id)}
+                                    className={`cursor-pointer px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap shrink-0 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1E40AF] ${
+                                        active
+                                            ? "bg-[#161614] text-[#FAF9F6]"
+                                            : "text-[#57554E] hover:text-[#161614]"
+                                    }`}
+                                >
+                                    {tab.label}{" "}
+                                    <span className="font-mono opacity-75 tabular-nums ml-0.5">
+                                        {stat.unlocked}/{stat.total}
+                                    </span>
+                                </button>
+                            );
+                        })}
+                    </div>
+
+                    {/* Status Filter Segmented Control */}
+                    <div
+                        className="inline-flex items-center gap-1 p-1 bg-[#F3F1EB] border border-[#E6E3DB] rounded-xl w-fit shrink-0"
+                        role="group"
+                        aria-label="Filter badges by status"
+                    >
+                        {(
+                            [
+                                { id: "all", label: "All" },
+                                { id: "unlocked", label: `Earned (${unlockedCount})` },
+                                { id: "locked", label: `Locked (${totalCount - unlockedCount})` },
+                            ] as const
+                        ).map((opt) => {
+                            const active = statusFilter === opt.id;
+                            return (
+                                <button
+                                    key={opt.id}
+                                    type="button"
+                                    aria-pressed={active}
+                                    onClick={() => setStatusFilter(opt.id)}
+                                    className={`cursor-pointer px-3 py-1.5 rounded-lg text-xs font-semibold whitespace-nowrap shrink-0 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1E40AF] ${
+                                        active
+                                            ? "bg-[#161614] text-[#FAF9F6]"
+                                            : "text-[#57554E] hover:text-[#161614]"
+                                    }`}
+                                >
+                                    {opt.label}
+                                </button>
+                            );
+                        })}
+                    </div>
+                </div>
+
+                {/* Badges Grid */}
+                {filteredItems.length === 0 ? (
+                    <section className="bg-white border border-[#E6E3DB] rounded-2xl p-10 text-center space-y-4">
+                        <div className="w-12 h-12 rounded-xl bg-[#FAF9F6] border border-[#E6E3DB] flex items-center justify-center mx-auto">
+                            <Trophy className="w-5 h-5 text-[#78756C]" aria-hidden="true" />
+                        </div>
+                        <div className="space-y-1 max-w-md mx-auto">
+                            <h2 className="font-serif text-xl font-medium text-[#161614]">
+                                {statusFilter === "unlocked"
+                                    ? "No badges earned in this view yet"
+                                    : "No badges match this filter"}
+                            </h2>
+                            <p className="text-sm text-[#57554E]">
+                                {statusFilter === "unlocked"
+                                    ? "Complete an eligible test session to start unlocking high-score badges automatically."
+                                    : "Switch back to all badges to see available targets across every arena."}
+                            </p>
+                        </div>
+                        <div className="flex flex-wrap items-center justify-center gap-3 pt-1">
+                            <Link
+                                href={getLocalizedHref("/reflex/reaction")}
+                                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-[#161614] hover:bg-[#2C2B27] text-[#FAF9F6] text-sm font-semibold transition-colors"
+                            >
+                                <Zap className="w-4 h-4" aria-hidden="true" />
+                                <span>Start Reaction Test</span>
+                            </Link>
+                            <button
+                                type="button"
+                                onClick={() => {
+                                    setCategoryFilter("all");
+                                    setStatusFilter("all");
+                                }}
+                                className="cursor-pointer inline-flex items-center gap-1.5 px-4 py-2.5 rounded-lg border border-[#E6E3DB] bg-white hover:bg-[#FAF9F6] text-[#3F3E39] text-sm font-semibold transition-colors"
+                            >
+                                <RotateCcw className="w-4 h-4" aria-hidden="true" />
+                                <span>Reset filters</span>
+                            </button>
+                        </div>
+                    </section>
+                ) : (
+                    <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t border-l border-[#E6E3DB] bg-white">
+                        {filteredItems.map((item) => {
+                            const { achievement, unlocked, unlockedAt, progressRatio, currentLabel } =
+                                item;
+                            const tier = TIER_STYLES[achievement.tier];
+                            const pct = Math.round(progressRatio * 100);
+
+                            return (
+                                <article
+                                    key={achievement.id}
+                                    className="border-r border-b border-[#E6E3DB] p-6 flex flex-col justify-between gap-5 hover:bg-[#FAF9F6]/60 transition-colors"
+                                >
+                                    <div className="space-y-4">
+                                        <div className="flex items-start justify-between gap-3">
+                                            <div
+                                                className={`w-10 h-10 rounded-lg border flex items-center justify-center shrink-0 ${
+                                                    unlocked
+                                                        ? "bg-[#161614] border-[#161614] text-[#FAF9F6]"
+                                                        : "bg-[#FAF9F6] border-[#E6E3DB] text-[#78756C]"
+                                                }`}
+                                            >
+                                                <AchievementIcon
+                                                    name={achievement.iconName}
+                                                    className="w-4 h-4"
+                                                />
+                                            </div>
+
+                                            <div className="flex flex-col items-end gap-1 text-right">
+                                                <div className="flex items-center gap-1.5 text-[11px] font-mono font-semibold text-[#78756C] tabular-nums">
+                                                    <span className={unlocked ? "text-[#161614]" : "text-[#78756C]"}>
+                                                        {tier.label}
+                                                    </span>
+                                                    <span aria-hidden="true">·</span>
+                                                    <span>{CATEGORY_LABELS[achievement.category]}</span>
+                                                    <span aria-hidden="true">·</span>
+                                                    <span>+{achievement.xpReward} XP</span>
+                                                </div>
+                                                <span
+                                                    className={`inline-flex items-center gap-1 text-xs font-medium ${
+                                                        unlocked ? "text-emerald-700" : "text-[#78756C]"
+                                                    }`}
+                                                >
+                                                    {unlocked ? (
+                                                        <>
+                                                            <CheckCircle2 className="w-3.5 h-3.5" aria-hidden="true" />
+                                                            <span>Earned</span>
+                                                        </>
+                                                    ) : (
+                                                        <>
+                                                            <Lock className="w-3.5 h-3.5" aria-hidden="true" />
+                                                            <span>Locked</span>
+                                                        </>
+                                                    )}
+                                                </span>
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <h2 className="text-base font-semibold tracking-tight text-[#161614]">
+                                                {achievement.name}
+                                            </h2>
+                                            <p className="text-sm text-[#57554E] mt-1 leading-relaxed">
+                                                {achievement.description}
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div className="space-y-3 pt-4 border-t border-[#F0EDE6]">
+                                        <div className="space-y-1.5">
+                                            <div className="flex items-center justify-between gap-2 text-xs font-mono tabular-nums">
+                                                <span className="text-[#57554E] truncate">
+                                                    {currentLabel}
+                                                </span>
+                                                <span className="text-[#78756C] shrink-0">
+                                                    Goal: {achievement.targetLabel}
+                                                </span>
+                                            </div>
+                                            <div
+                                                className="w-full h-1.5 rounded-full bg-[#F0EDE6] overflow-hidden"
+                                                role="progressbar"
+                                                aria-label={`${achievement.name} progress`}
+                                                aria-valuenow={pct}
+                                                aria-valuemin={0}
+                                                aria-valuemax={100}
+                                            >
+                                                <div
+                                                    className={`h-full rounded-full transition-all duration-300 ${
+                                                        unlocked ? "bg-emerald-700" : "bg-[#161614]"
+                                                    }`}
+                                                    style={{ width: `${pct}%` }}
+                                                />
+                                            </div>
+                                        </div>
+
+                                        <div className="flex items-center justify-between gap-2">
+                                            {unlocked ? (
+                                                <p className="text-xs font-mono text-[#78756C] tabular-nums">
+                                                    {unlockedAt
+                                                        ? `Unlocked ${new Date(unlockedAt).toLocaleDateString()}`
+                                                        : "Unlocked"}
+                                                </p>
+                                            ) : (
+                                                <p className="text-xs font-mono text-[#78756C] tabular-nums">
+                                                    {pct}% to target
+                                                </p>
+                                            )}
+
+                                            <Link
+                                                href={getLocalizedHref(achievement.recommendedHref)}
+                                                className="inline-flex items-center gap-1 text-xs font-semibold text-[#1E40AF] hover:text-[#161614] transition-colors whitespace-nowrap shrink-0"
+                                            >
+                                                <span>{unlocked ? "Practice again" : "Attempt tool"}</span>
+                                                <ArrowRight className="w-3.5 h-3.5" aria-hidden="true" />
+                                            </Link>
+                                        </div>
+                                    </div>
+                                </article>
+                            );
+                        })}
+                    </section>
+                )}
+
+                {/* Explainer Section */}
+                <section className="bg-white border border-[#E6E3DB] rounded-2xl p-6 sm:p-8 space-y-5">
+                    <h2 className="font-serif text-2xl font-medium text-[#161614] tracking-tight">
+                        How Badges Work
+                    </h2>
+                    <div className="grid md:grid-cols-3 gap-6 text-sm text-[#57554E] leading-relaxed">
+                        <div className="space-y-1.5">
+                            <h3 className="font-semibold text-[#161614]">
+                                Automatic High-Score Unlocks
+                            </h3>
+                            <p>
+                                Every eligible benchmark updates your progress toward matching badges—like earning Speedster under 200 ms or Memory Master at level 10—and triggers an instant notification.
+                            </p>
+                        </div>
+                        <div className="space-y-1.5">
+                            <h3 className="font-semibold text-[#161614]">
+                                Tiered XP Rewards
+                            </h3>
+                            <p>
+                                Bronze (+25 XP), Silver (+50 XP), Gold (+100 XP), and Platinum (+200 XP) badges feed directly into your Reflextry level and rank progression.
+                            </p>
+                        </div>
+                        <div className="space-y-1.5">
+                            <h3 className="font-semibold text-[#161614]">
+                                Local &amp; Permanent
+                            </h3>
+                            <p>
+                                Your badge unlocks stay saved locally in your browser alongside your personal bests and history without requiring an account.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+            </div>
         </div>
     );
 }

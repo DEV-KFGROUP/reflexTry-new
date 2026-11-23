@@ -5179,5 +5179,905 @@
         "answer": "Il numero successivo che devi cliccare."
       }
     ]
+  },
+  "gravity-lab": {
+    "description": [
+      {
+        "title": "Informazioni su Lab Gravità e Orbite",
+        "content": "Confronta la caduta libera su Terra, Luna, Marte e Giove o lancia un'orbita stabile. Trasforma le formule di fisica e matematica in esperimenti interattivi. Regola cursori, lancia orbite, rifletti fasci laser e bilancia leve direttamente nel browser."
+      },
+      {
+        "title": "Meccanica Principale e Scienza",
+        "content": "Simulatori 2D interattivi di caduta libera, velocità orbitale, legge della riflessione ottica, moto parabolico ed equilibrio dei momenti. Equazioni dal Vivo: Osserva le formule aggiornarsi mentre modifichi i parametri. Intuizione Visiva: Ispeziona vettori, normali ottiche e traiettorie precedenti."
+      },
+      {
+        "title": "Punteggio e Metriche Dal Vivo",
+        "content": "Ogni simulazione unisce feedback visivo immediato e metriche quantitative trasparenti. Modalità Sfida: Metti alla prova le tue conoscenze con missioni a punteggio."
+      },
+      {
+        "title": "Applicazioni in Classe e Ufficio",
+        "content": "Sì. L'interfaccia si adatta facilmente a laptop, Chromebook, tablet e LIM. Dieci-quindici minuti più volte a settimana consolidano intuizione e precisione."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Configurazione e Comandi",
+        "steps": [
+          "Inizia con le impostazioni standard per misurare il tuo livello attuale.",
+          "Cambia un solo parametro per volta per osservare chiaramente causa ed effetto."
+        ]
+      },
+      {
+        "title": "Svolgimento della Sessione",
+        "steps": [
+          "Confronta la caduta libera su Terra, Luna, Marte e Giove o lancia un'orbita stabile.",
+          "Controlla formule, accuratezza e tempi in millisecondi dopo ogni turno."
+        ]
+      },
+      {
+        "title": "Analisi dei Risultati",
+        "steps": [
+          "Sì. Le sessioni completate aggiornano automaticamente la dashboard Statistiche locale.",
+          "Sessioni concentrate da 10 minuti sono più efficaci di maratone stancanti."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Modifica Una Variabile alla Volta",
+        "content": "Cambia un solo parametro per volta per osservare chiaramente causa ed effetto."
+      },
+      {
+        "title": "Precisione Prima della Velocità",
+        "content": "Controlla formule, accuratezza e tempi in millisecondi dopo ogni turno."
+      },
+      {
+        "title": "Monitora i Progressi nel Tempo",
+        "content": "Dieci-quindici minuti più volte a settimana consolidano intuizione e precisione."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Questo modulo è completamente gratuito?",
+        "answer": "Sì. Ogni strumento di Reflextry funziona nel browser senza registrazione né download."
+      },
+      {
+        "question": "Funziona su portatili scolastici e tablet?",
+        "answer": "Sì. L'interfaccia si adatta facilmente a laptop, Chromebook, tablet e LIM."
+      },
+      {
+        "question": "I miei punteggi migliori vengono salvati?",
+        "answer": "Sì. Le sessioni completate aggiornano automaticamente la dashboard Statistiche locale."
+      },
+      {
+        "question": "Quanto spesso conviene esercitarsi?",
+        "answer": "Sessioni focalizzate di 10 minuti, 3–5 volte a settimana, producono miglioramenti costanti."
+      }
+    ]
+  },
+  "laser-reflection": {
+    "description": [
+      {
+        "title": "Informazioni su Ottica di Riflessione Laser",
+        "content": "Ruota gli specchi per guidare il raggio laser e verificare la Legge della Riflessione. Trasforma le formule di fisica e matematica in esperimenti interattivi. Regola cursori, lancia orbite, rifletti fasci laser e bilancia leve direttamente nel browser."
+      },
+      {
+        "title": "Meccanica Principale e Scienza",
+        "content": "Simulatori 2D interattivi di caduta libera, velocità orbitale, legge della riflessione ottica, moto parabolico ed equilibrio dei momenti. Equazioni dal Vivo: Osserva le formule aggiornarsi mentre modifichi i parametri. Intuizione Visiva: Ispeziona vettori, normali ottiche e traiettorie precedenti."
+      },
+      {
+        "title": "Punteggio e Metriche Dal Vivo",
+        "content": "Ogni simulazione unisce feedback visivo immediato e metriche quantitative trasparenti. Modalità Sfida: Metti alla prova le tue conoscenze con missioni a punteggio."
+      },
+      {
+        "title": "Applicazioni in Classe e Ufficio",
+        "content": "Sì. L'interfaccia si adatta facilmente a laptop, Chromebook, tablet e LIM. Dieci-quindici minuti più volte a settimana consolidano intuizione e precisione."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Configurazione e Comandi",
+        "steps": [
+          "Inizia con le impostazioni standard per misurare il tuo livello attuale.",
+          "Cambia un solo parametro per volta per osservare chiaramente causa ed effetto."
+        ]
+      },
+      {
+        "title": "Svolgimento della Sessione",
+        "steps": [
+          "Ruota gli specchi per guidare il raggio laser e verificare la Legge della Riflessione.",
+          "Controlla formule, accuratezza e tempi in millisecondi dopo ogni turno."
+        ]
+      },
+      {
+        "title": "Analisi dei Risultati",
+        "steps": [
+          "Sì. Le sessioni completate aggiornano automaticamente la dashboard Statistiche locale.",
+          "Sessioni concentrate da 10 minuti sono più efficaci di maratone stancanti."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Modifica Una Variabile alla Volta",
+        "content": "Cambia un solo parametro per volta per osservare chiaramente causa ed effetto."
+      },
+      {
+        "title": "Precisione Prima della Velocità",
+        "content": "Controlla formule, accuratezza e tempi in millisecondi dopo ogni turno."
+      },
+      {
+        "title": "Monitora i Progressi nel Tempo",
+        "content": "Dieci-quindici minuti più volte a settimana consolidano intuizione e precisione."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Questo modulo è completamente gratuito?",
+        "answer": "Sì. Ogni strumento di Reflextry funziona nel browser senza registrazione né download."
+      },
+      {
+        "question": "Funziona su portatili scolastici e tablet?",
+        "answer": "Sì. L'interfaccia si adatta facilmente a laptop, Chromebook, tablet e LIM."
+      },
+      {
+        "question": "I miei punteggi migliori vengono salvati?",
+        "answer": "Sì. Le sessioni completate aggiornano automaticamente la dashboard Statistiche locale."
+      },
+      {
+        "question": "Quanto spesso conviene esercitarsi?",
+        "answer": "Sessioni focalizzate di 10 minuti, 3–5 volte a settimana, producono miglioramenti costanti."
+      }
+    ]
+  },
+  "projectile-cannon": {
+    "description": [
+      {
+        "title": "Informazioni su Fisica del Cannone Parabolico",
+        "content": "Regola angolo, velocità, vento e gravità per colpire bersagli parabolici. Trasforma le formule di fisica e matematica in esperimenti interattivi. Regola cursori, lancia orbite, rifletti fasci laser e bilancia leve direttamente nel browser."
+      },
+      {
+        "title": "Meccanica Principale e Scienza",
+        "content": "Simulatori 2D interattivi di caduta libera, velocità orbitale, legge della riflessione ottica, moto parabolico ed equilibrio dei momenti. Equazioni dal Vivo: Osserva le formule aggiornarsi mentre modifichi i parametri. Intuizione Visiva: Ispeziona vettori, normali ottiche e traiettorie precedenti."
+      },
+      {
+        "title": "Punteggio e Metriche Dal Vivo",
+        "content": "Ogni simulazione unisce feedback visivo immediato e metriche quantitative trasparenti. Modalità Sfida: Metti alla prova le tue conoscenze con missioni a punteggio."
+      },
+      {
+        "title": "Applicazioni in Classe e Ufficio",
+        "content": "Sì. L'interfaccia si adatta facilmente a laptop, Chromebook, tablet e LIM. Dieci-quindici minuti più volte a settimana consolidano intuizione e precisione."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Configurazione e Comandi",
+        "steps": [
+          "Inizia con le impostazioni standard per misurare il tuo livello attuale.",
+          "Cambia un solo parametro per volta per osservare chiaramente causa ed effetto."
+        ]
+      },
+      {
+        "title": "Svolgimento della Sessione",
+        "steps": [
+          "Regola angolo, velocità, vento e gravità per colpire bersagli parabolici.",
+          "Controlla formule, accuratezza e tempi in millisecondi dopo ogni turno."
+        ]
+      },
+      {
+        "title": "Analisi dei Risultati",
+        "steps": [
+          "Sì. Le sessioni completate aggiornano automaticamente la dashboard Statistiche locale.",
+          "Sessioni concentrate da 10 minuti sono più efficaci di maratone stancanti."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Modifica Una Variabile alla Volta",
+        "content": "Cambia un solo parametro per volta per osservare chiaramente causa ed effetto."
+      },
+      {
+        "title": "Precisione Prima della Velocità",
+        "content": "Controlla formule, accuratezza e tempi in millisecondi dopo ogni turno."
+      },
+      {
+        "title": "Monitora i Progressi nel Tempo",
+        "content": "Dieci-quindici minuti più volte a settimana consolidano intuizione e precisione."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Questo modulo è completamente gratuito?",
+        "answer": "Sì. Ogni strumento di Reflextry funziona nel browser senza registrazione né download."
+      },
+      {
+        "question": "Funziona su portatili scolastici e tablet?",
+        "answer": "Sì. L'interfaccia si adatta facilmente a laptop, Chromebook, tablet e LIM."
+      },
+      {
+        "question": "I miei punteggi migliori vengono salvati?",
+        "answer": "Sì. Le sessioni completate aggiornano automaticamente la dashboard Statistiche locale."
+      },
+      {
+        "question": "Quanto spesso conviene esercitarsi?",
+        "answer": "Sessioni focalizzate di 10 minuti, 3–5 volte a settimana, producono miglioramenti costanti."
+      }
+    ]
+  },
+  "torque-balance": {
+    "description": [
+      {
+        "title": "Informazioni su Bilancia di Momento e Leva",
+        "content": "Equilibra i pesi su un'altalena usando le equazioni del momento torcente. Trasforma le formule di fisica e matematica in esperimenti interattivi. Regola cursori, lancia orbite, rifletti fasci laser e bilancia leve direttamente nel browser."
+      },
+      {
+        "title": "Meccanica Principale e Scienza",
+        "content": "Simulatori 2D interattivi di caduta libera, velocità orbitale, legge della riflessione ottica, moto parabolico ed equilibrio dei momenti. Equazioni dal Vivo: Osserva le formule aggiornarsi mentre modifichi i parametri. Intuizione Visiva: Ispeziona vettori, normali ottiche e traiettorie precedenti."
+      },
+      {
+        "title": "Punteggio e Metriche Dal Vivo",
+        "content": "Ogni simulazione unisce feedback visivo immediato e metriche quantitative trasparenti. Modalità Sfida: Metti alla prova le tue conoscenze con missioni a punteggio."
+      },
+      {
+        "title": "Applicazioni in Classe e Ufficio",
+        "content": "Sì. L'interfaccia si adatta facilmente a laptop, Chromebook, tablet e LIM. Dieci-quindici minuti più volte a settimana consolidano intuizione e precisione."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Configurazione e Comandi",
+        "steps": [
+          "Inizia con le impostazioni standard per misurare il tuo livello attuale.",
+          "Cambia un solo parametro per volta per osservare chiaramente causa ed effetto."
+        ]
+      },
+      {
+        "title": "Svolgimento della Sessione",
+        "steps": [
+          "Equilibra i pesi su un'altalena usando le equazioni del momento torcente.",
+          "Controlla formule, accuratezza e tempi in millisecondi dopo ogni turno."
+        ]
+      },
+      {
+        "title": "Analisi dei Risultati",
+        "steps": [
+          "Sì. Le sessioni completate aggiornano automaticamente la dashboard Statistiche locale.",
+          "Sessioni concentrate da 10 minuti sono più efficaci di maratone stancanti."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Modifica Una Variabile alla Volta",
+        "content": "Cambia un solo parametro per volta per osservare chiaramente causa ed effetto."
+      },
+      {
+        "title": "Precisione Prima della Velocità",
+        "content": "Controlla formule, accuratezza e tempi in millisecondi dopo ogni turno."
+      },
+      {
+        "title": "Monitora i Progressi nel Tempo",
+        "content": "Dieci-quindici minuti più volte a settimana consolidano intuizione e precisione."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Questo modulo è completamente gratuito?",
+        "answer": "Sì. Ogni strumento di Reflextry funziona nel browser senza registrazione né download."
+      },
+      {
+        "question": "Funziona su portatili scolastici e tablet?",
+        "answer": "Sì. L'interfaccia si adatta facilmente a laptop, Chromebook, tablet e LIM."
+      },
+      {
+        "question": "I miei punteggi migliori vengono salvati?",
+        "answer": "Sì. Le sessioni completate aggiornano automaticamente la dashboard Statistiche locale."
+      },
+      {
+        "question": "Quanto spesso conviene esercitarsi?",
+        "answer": "Sessioni focalizzate di 10 minuti, 3–5 volte a settimana, producono miglioramenti costanti."
+      }
+    ]
+  },
+  "solar-gravity-3d": {
+    "description": [
+      {
+        "title": "Informazioni su Simulatore 3D Gravità Solare",
+        "content": "Esplora un pozzo gravitazionale 3D e lancia satelliti in orbita kepleriana. Con la fisica WebGL in tempo reale puoi orbitare attorno a griglie spaziotemporali curve, lanciare satelliti stabili e colpire droni 3D su piani vicino, medio e lontano."
+      },
+      {
+        "title": "Meccanica Principale e Scienza",
+        "content": "Simulazioni 3D accelerate nel browser per meccanica orbitale e mira spaziale su più piani di profondità. WebGL 3D in Tempo Reale: Camera orbitale interattiva e illuminazione dinamica. Percezione della Profondità: Allena la precisione sui piani vicino, medio e lontano."
+      },
+      {
+        "title": "Punteggio e Metriche Dal Vivo",
+        "content": "Ogni simulazione unisce feedback visivo immediato e metriche quantitative trasparenti. Zero Download: Rendering adattivo fluido su portatili e desktop."
+      },
+      {
+        "title": "Applicazioni in Classe e Ufficio",
+        "content": "Sì. L'interfaccia si adatta facilmente a laptop, Chromebook, tablet e LIM. Dieci-quindici minuti più volte a settimana consolidano intuizione e precisione."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Configurazione e Comandi",
+        "steps": [
+          "Inizia con le impostazioni standard per misurare il tuo livello attuale.",
+          "Cambia un solo parametro per volta per osservare chiaramente causa ed effetto."
+        ]
+      },
+      {
+        "title": "Svolgimento della Sessione",
+        "steps": [
+          "Esplora un pozzo gravitazionale 3D e lancia satelliti in orbita kepleriana.",
+          "Controlla formule, accuratezza e tempi in millisecondi dopo ogni turno."
+        ]
+      },
+      {
+        "title": "Analisi dei Risultati",
+        "steps": [
+          "Sì. Le sessioni completate aggiornano automaticamente la dashboard Statistiche locale.",
+          "Sessioni concentrate da 10 minuti sono più efficaci di maratone stancanti."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Modifica Una Variabile alla Volta",
+        "content": "Cambia un solo parametro per volta per osservare chiaramente causa ed effetto."
+      },
+      {
+        "title": "Precisione Prima della Velocità",
+        "content": "Controlla formule, accuratezza e tempi in millisecondi dopo ogni turno."
+      },
+      {
+        "title": "Monitora i Progressi nel Tempo",
+        "content": "Dieci-quindici minuti più volte a settimana consolidano intuizione e precisione."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Questo modulo è completamente gratuito?",
+        "answer": "Sì. Ogni strumento di Reflextry funziona nel browser senza registrazione né download."
+      },
+      {
+        "question": "Funziona su portatili scolastici e tablet?",
+        "answer": "Sì. L'interfaccia si adatta facilmente a laptop, Chromebook, tablet e LIM."
+      },
+      {
+        "question": "I miei punteggi migliori vengono salvati?",
+        "answer": "Sì. Le sessioni completate aggiornano automaticamente la dashboard Statistiche locale."
+      },
+      {
+        "question": "Quanto spesso conviene esercitarsi?",
+        "answer": "Sessioni focalizzate di 10 minuti, 3–5 volte a settimana, producono miglioramenti costanti."
+      }
+    ]
+  },
+  "spatial-aim-3d": {
+    "description": [
+      {
+        "title": "Informazioni su Arena Mira Spaziale 3D",
+        "content": "Colpisci droni 3D distribuiti su piani di profondità vicino, medio e lontano. Con la fisica WebGL in tempo reale puoi orbitare attorno a griglie spaziotemporali curve, lanciare satelliti stabili e colpire droni 3D su piani vicino, medio e lontano."
+      },
+      {
+        "title": "Meccanica Principale e Scienza",
+        "content": "Simulazioni 3D accelerate nel browser per meccanica orbitale e mira spaziale su più piani di profondità. WebGL 3D in Tempo Reale: Camera orbitale interattiva e illuminazione dinamica. Percezione della Profondità: Allena la precisione sui piani vicino, medio e lontano."
+      },
+      {
+        "title": "Punteggio e Metriche Dal Vivo",
+        "content": "Ogni simulazione unisce feedback visivo immediato e metriche quantitative trasparenti. Zero Download: Rendering adattivo fluido su portatili e desktop."
+      },
+      {
+        "title": "Applicazioni in Classe e Ufficio",
+        "content": "Sì. L'interfaccia si adatta facilmente a laptop, Chromebook, tablet e LIM. Dieci-quindici minuti più volte a settimana consolidano intuizione e precisione."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Configurazione e Comandi",
+        "steps": [
+          "Inizia con le impostazioni standard per misurare il tuo livello attuale.",
+          "Cambia un solo parametro per volta per osservare chiaramente causa ed effetto."
+        ]
+      },
+      {
+        "title": "Svolgimento della Sessione",
+        "steps": [
+          "Colpisci droni 3D distribuiti su piani di profondità vicino, medio e lontano.",
+          "Controlla formule, accuratezza e tempi in millisecondi dopo ogni turno."
+        ]
+      },
+      {
+        "title": "Analisi dei Risultati",
+        "steps": [
+          "Sì. Le sessioni completate aggiornano automaticamente la dashboard Statistiche locale.",
+          "Sessioni concentrate da 10 minuti sono più efficaci di maratone stancanti."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Modifica Una Variabile alla Volta",
+        "content": "Cambia un solo parametro per volta per osservare chiaramente causa ed effetto."
+      },
+      {
+        "title": "Precisione Prima della Velocità",
+        "content": "Controlla formule, accuratezza e tempi in millisecondi dopo ogni turno."
+      },
+      {
+        "title": "Monitora i Progressi nel Tempo",
+        "content": "Dieci-quindici minuti più volte a settimana consolidano intuizione e precisione."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Questo modulo è completamente gratuito?",
+        "answer": "Sì. Ogni strumento di Reflextry funziona nel browser senza registrazione né download."
+      },
+      {
+        "question": "Funziona su portatili scolastici e tablet?",
+        "answer": "Sì. L'interfaccia si adatta facilmente a laptop, Chromebook, tablet e LIM."
+      },
+      {
+        "question": "I miei punteggi migliori vengono salvati?",
+        "answer": "Sì. Le sessioni completate aggiornano automaticamente la dashboard Statistiche locale."
+      },
+      {
+        "question": "Quanto spesso conviene esercitarsi?",
+        "answer": "Sessioni focalizzate di 10 minuti, 3–5 volte a settimana, producono miglioramenti costanti."
+      }
+    ]
+  },
+  "reaction-duel-2p": {
+    "description": [
+      {
+        "title": "Informazioni su Duello Riflessi 2 Giocatori",
+        "content": "Sfida al meglio di 5 al millisecondo con rilevamento della falsa partenza. Senza account né attese. Condividi uno schermo per duelli di riflessi al millisecondo, tiro alla fune matematico e battaglie di cannoni con vento e gravità."
+      },
+      {
+        "title": "Meccanica Principale e Scienza",
+        "content": "Giochi competitivi locali di riflessi, calcolo rapido e fisica pensati per classi e gruppi di studio. Tastiera e Touch Condivisi: Comandi sinistro/destro per laptop e tablet. Pronto per la Classe: Livelli graduati per bambini, studenti ed esperti."
+      },
+      {
+        "title": "Punteggio e Metriche Dal Vivo",
+        "content": "Ogni simulazione unisce feedback visivo immediato e metriche quantitative trasparenti. Cronometraggio Preciso: Rilevamento falsa partenza e statistiche immediate."
+      },
+      {
+        "title": "Applicazioni in Classe e Ufficio",
+        "content": "Sì. L'interfaccia si adatta facilmente a laptop, Chromebook, tablet e LIM. Dieci-quindici minuti più volte a settimana consolidano intuizione e precisione."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Configurazione e Comandi",
+        "steps": [
+          "Inizia con le impostazioni standard per misurare il tuo livello attuale.",
+          "Cambia un solo parametro per volta per osservare chiaramente causa ed effetto."
+        ]
+      },
+      {
+        "title": "Svolgimento della Sessione",
+        "steps": [
+          "Sfida al meglio di 5 al millisecondo con rilevamento della falsa partenza.",
+          "Controlla formule, accuratezza e tempi in millisecondi dopo ogni turno."
+        ]
+      },
+      {
+        "title": "Analisi dei Risultati",
+        "steps": [
+          "Sì. Le sessioni completate aggiornano automaticamente la dashboard Statistiche locale.",
+          "Sessioni concentrate da 10 minuti sono più efficaci di maratone stancanti."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Modifica Una Variabile alla Volta",
+        "content": "Cambia un solo parametro per volta per osservare chiaramente causa ed effetto."
+      },
+      {
+        "title": "Precisione Prima della Velocità",
+        "content": "Controlla formule, accuratezza e tempi in millisecondi dopo ogni turno."
+      },
+      {
+        "title": "Monitora i Progressi nel Tempo",
+        "content": "Dieci-quindici minuti più volte a settimana consolidano intuizione e precisione."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Questo modulo è completamente gratuito?",
+        "answer": "Sì. Ogni strumento di Reflextry funziona nel browser senza registrazione né download."
+      },
+      {
+        "question": "Funziona su portatili scolastici e tablet?",
+        "answer": "Sì. L'interfaccia si adatta facilmente a laptop, Chromebook, tablet e LIM."
+      },
+      {
+        "question": "I miei punteggi migliori vengono salvati?",
+        "answer": "Sì. Le sessioni completate aggiornano automaticamente la dashboard Statistiche locale."
+      },
+      {
+        "question": "Quanto spesso conviene esercitarsi?",
+        "answer": "Sessioni focalizzate di 10 minuti, 3–5 volte a settimana, producono miglioramenti costanti."
+      }
+    ]
+  },
+  "math-tug-of-war": {
+    "description": [
+      {
+        "title": "Informazioni su Tiro alla Fune Matematico",
+        "content": "Risolvi i calcoli più velocemente dell'avversario per tirare la fune. Senza account né attese. Condividi uno schermo per duelli di riflessi al millisecondo, tiro alla fune matematico e battaglie di cannoni con vento e gravità."
+      },
+      {
+        "title": "Meccanica Principale e Scienza",
+        "content": "Giochi competitivi locali di riflessi, calcolo rapido e fisica pensati per classi e gruppi di studio. Tastiera e Touch Condivisi: Comandi sinistro/destro per laptop e tablet. Pronto per la Classe: Livelli graduati per bambini, studenti ed esperti."
+      },
+      {
+        "title": "Punteggio e Metriche Dal Vivo",
+        "content": "Ogni simulazione unisce feedback visivo immediato e metriche quantitative trasparenti. Cronometraggio Preciso: Rilevamento falsa partenza e statistiche immediate."
+      },
+      {
+        "title": "Applicazioni in Classe e Ufficio",
+        "content": "Sì. L'interfaccia si adatta facilmente a laptop, Chromebook, tablet e LIM. Dieci-quindici minuti più volte a settimana consolidano intuizione e precisione."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Configurazione e Comandi",
+        "steps": [
+          "Inizia con le impostazioni standard per misurare il tuo livello attuale.",
+          "Cambia un solo parametro per volta per osservare chiaramente causa ed effetto."
+        ]
+      },
+      {
+        "title": "Svolgimento della Sessione",
+        "steps": [
+          "Risolvi i calcoli più velocemente dell'avversario per tirare la fune.",
+          "Controlla formule, accuratezza e tempi in millisecondi dopo ogni turno."
+        ]
+      },
+      {
+        "title": "Analisi dei Risultati",
+        "steps": [
+          "Sì. Le sessioni completate aggiornano automaticamente la dashboard Statistiche locale.",
+          "Sessioni concentrate da 10 minuti sono più efficaci di maratone stancanti."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Modifica Una Variabile alla Volta",
+        "content": "Cambia un solo parametro per volta per osservare chiaramente causa ed effetto."
+      },
+      {
+        "title": "Precisione Prima della Velocità",
+        "content": "Controlla formule, accuratezza e tempi in millisecondi dopo ogni turno."
+      },
+      {
+        "title": "Monitora i Progressi nel Tempo",
+        "content": "Dieci-quindici minuti più volte a settimana consolidano intuizione e precisione."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Questo modulo è completamente gratuito?",
+        "answer": "Sì. Ogni strumento di Reflextry funziona nel browser senza registrazione né download."
+      },
+      {
+        "question": "Funziona su portatili scolastici e tablet?",
+        "answer": "Sì. L'interfaccia si adatta facilmente a laptop, Chromebook, tablet e LIM."
+      },
+      {
+        "question": "I miei punteggi migliori vengono salvati?",
+        "answer": "Sì. Le sessioni completate aggiornano automaticamente la dashboard Statistiche locale."
+      },
+      {
+        "question": "Quanto spesso conviene esercitarsi?",
+        "answer": "Sessioni focalizzate di 10 minuti, 3–5 volte a settimana, producono miglioramenti costanti."
+      }
+    ]
+  },
+  "cannon-battle-2p": {
+    "description": [
+      {
+        "title": "Informazioni su Battaglia di Cannoni Gravità",
+        "content": "Artiglieria 2D a turni tra montagne con vento variabile e gravità planetaria. Senza account né attese. Condividi uno schermo per duelli di riflessi al millisecondo, tiro alla fune matematico e battaglie di cannoni con vento e gravità."
+      },
+      {
+        "title": "Meccanica Principale e Scienza",
+        "content": "Giochi competitivi locali di riflessi, calcolo rapido e fisica pensati per classi e gruppi di studio. Tastiera e Touch Condivisi: Comandi sinistro/destro per laptop e tablet. Pronto per la Classe: Livelli graduati per bambini, studenti ed esperti."
+      },
+      {
+        "title": "Punteggio e Metriche Dal Vivo",
+        "content": "Ogni simulazione unisce feedback visivo immediato e metriche quantitative trasparenti. Cronometraggio Preciso: Rilevamento falsa partenza e statistiche immediate."
+      },
+      {
+        "title": "Applicazioni in Classe e Ufficio",
+        "content": "Sì. L'interfaccia si adatta facilmente a laptop, Chromebook, tablet e LIM. Dieci-quindici minuti più volte a settimana consolidano intuizione e precisione."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Configurazione e Comandi",
+        "steps": [
+          "Inizia con le impostazioni standard per misurare il tuo livello attuale.",
+          "Cambia un solo parametro per volta per osservare chiaramente causa ed effetto."
+        ]
+      },
+      {
+        "title": "Svolgimento della Sessione",
+        "steps": [
+          "Artiglieria 2D a turni tra montagne con vento variabile e gravità planetaria.",
+          "Controlla formule, accuratezza e tempi in millisecondi dopo ogni turno."
+        ]
+      },
+      {
+        "title": "Analisi dei Risultati",
+        "steps": [
+          "Sì. Le sessioni completate aggiornano automaticamente la dashboard Statistiche locale.",
+          "Sessioni concentrate da 10 minuti sono più efficaci di maratone stancanti."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Modifica Una Variabile alla Volta",
+        "content": "Cambia un solo parametro per volta per osservare chiaramente causa ed effetto."
+      },
+      {
+        "title": "Precisione Prima della Velocità",
+        "content": "Controlla formule, accuratezza e tempi in millisecondi dopo ogni turno."
+      },
+      {
+        "title": "Monitora i Progressi nel Tempo",
+        "content": "Dieci-quindici minuti più volte a settimana consolidano intuizione e precisione."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Questo modulo è completamente gratuito?",
+        "answer": "Sì. Ogni strumento di Reflextry funziona nel browser senza registrazione né download."
+      },
+      {
+        "question": "Funziona su portatili scolastici e tablet?",
+        "answer": "Sì. L'interfaccia si adatta facilmente a laptop, Chromebook, tablet e LIM."
+      },
+      {
+        "question": "I miei punteggi migliori vengono salvati?",
+        "answer": "Sì. Le sessioni completate aggiornano automaticamente la dashboard Statistiche locale."
+      },
+      {
+        "question": "Quanto spesso conviene esercitarsi?",
+        "answer": "Sessioni focalizzate di 10 minuti, 3–5 volte a settimana, producono miglioramenti costanti."
+      }
+    ]
+  },
+  "speed-reading": {
+    "description": [
+      {
+        "title": "Informazioni su Lettura Veloce e Comprensione",
+        "content": "Leggi con evidenziazione o RSVP e supera il quiz per le PPM effettive. Progettata per studenti e professionisti. Calcola le PPM effettive con quiz, battute l'ora (KPH) sul tastierino numerico e variazione dei riflessi dopo sprint Pomodoro."
+      },
+      {
+        "title": "Meccanica Principale e Scienza",
+        "content": "Benchmark quotidiani di lettura RSVP e guidata, inserimento numerico contabile e blocchi di concentrazione con test di reazione. Comprensione Verificata: Ogni prova di lettura veloce include un quiz di verifica. Metriche KPH da Ufficio: Precisione e velocità standard sul tastierino numerico."
+      },
+      {
+        "title": "Punteggio e Metriche Dal Vivo",
+        "content": "Ogni simulazione unisce feedback visivo immediato e metriche quantitative trasparenti. Telemetria Fatica: Confronta i tempi di reazione prima e dopo lo studio."
+      },
+      {
+        "title": "Applicazioni in Classe e Ufficio",
+        "content": "Sì. L'interfaccia si adatta facilmente a laptop, Chromebook, tablet e LIM. Dieci-quindici minuti più volte a settimana consolidano intuizione e precisione."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Configurazione e Comandi",
+        "steps": [
+          "Inizia con le impostazioni standard per misurare il tuo livello attuale.",
+          "Cambia un solo parametro per volta per osservare chiaramente causa ed effetto."
+        ]
+      },
+      {
+        "title": "Svolgimento della Sessione",
+        "steps": [
+          "Leggi con evidenziazione o RSVP e supera il quiz per le PPM effettive.",
+          "Controlla formule, accuratezza e tempi in millisecondi dopo ogni turno."
+        ]
+      },
+      {
+        "title": "Analisi dei Risultati",
+        "steps": [
+          "Sì. Le sessioni completate aggiornano automaticamente la dashboard Statistiche locale.",
+          "Sessioni concentrate da 10 minuti sono più efficaci di maratone stancanti."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Modifica Una Variabile alla Volta",
+        "content": "Cambia un solo parametro per volta per osservare chiaramente causa ed effetto."
+      },
+      {
+        "title": "Precisione Prima della Velocità",
+        "content": "Controlla formule, accuratezza e tempi in millisecondi dopo ogni turno."
+      },
+      {
+        "title": "Monitora i Progressi nel Tempo",
+        "content": "Dieci-quindici minuti più volte a settimana consolidano intuizione e precisione."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Questo modulo è completamente gratuito?",
+        "answer": "Sì. Ogni strumento di Reflextry funziona nel browser senza registrazione né download."
+      },
+      {
+        "question": "Funziona su portatili scolastici e tablet?",
+        "answer": "Sì. L'interfaccia si adatta facilmente a laptop, Chromebook, tablet e LIM."
+      },
+      {
+        "question": "I miei punteggi migliori vengono salvati?",
+        "answer": "Sì. Le sessioni completate aggiornano automaticamente la dashboard Statistiche locale."
+      },
+      {
+        "question": "Quanto spesso conviene esercitarsi?",
+        "answer": "Sessioni focalizzate di 10 minuti, 3–5 volte a settimana, producono miglioramenti costanti."
+      }
+    ]
+  },
+  "ten-key": {
+    "description": [
+      {
+        "title": "Informazioni su Test Tastierino Numerico 10-Key",
+        "content": "Misura KPH e precisione su fatture, numeri interi e codici SKU. Progettata per studenti e professionisti. Calcola le PPM effettive con quiz, battute l'ora (KPH) sul tastierino numerico e variazione dei riflessi dopo sprint Pomodoro."
+      },
+      {
+        "title": "Meccanica Principale e Scienza",
+        "content": "Benchmark quotidiani di lettura RSVP e guidata, inserimento numerico contabile e blocchi di concentrazione con test di reazione. Comprensione Verificata: Ogni prova di lettura veloce include un quiz di verifica. Metriche KPH da Ufficio: Precisione e velocità standard sul tastierino numerico."
+      },
+      {
+        "title": "Punteggio e Metriche Dal Vivo",
+        "content": "Ogni simulazione unisce feedback visivo immediato e metriche quantitative trasparenti. Telemetria Fatica: Confronta i tempi di reazione prima e dopo lo studio."
+      },
+      {
+        "title": "Applicazioni in Classe e Ufficio",
+        "content": "Sì. L'interfaccia si adatta facilmente a laptop, Chromebook, tablet e LIM. Dieci-quindici minuti più volte a settimana consolidano intuizione e precisione."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Configurazione e Comandi",
+        "steps": [
+          "Inizia con le impostazioni standard per misurare il tuo livello attuale.",
+          "Cambia un solo parametro per volta per osservare chiaramente causa ed effetto."
+        ]
+      },
+      {
+        "title": "Svolgimento della Sessione",
+        "steps": [
+          "Misura KPH e precisione su fatture, numeri interi e codici SKU.",
+          "Controlla formule, accuratezza e tempi in millisecondi dopo ogni turno."
+        ]
+      },
+      {
+        "title": "Analisi dei Risultati",
+        "steps": [
+          "Sì. Le sessioni completate aggiornano automaticamente la dashboard Statistiche locale.",
+          "Sessioni concentrate da 10 minuti sono più efficaci di maratone stancanti."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Modifica Una Variabile alla Volta",
+        "content": "Cambia un solo parametro per volta per osservare chiaramente causa ed effetto."
+      },
+      {
+        "title": "Precisione Prima della Velocità",
+        "content": "Controlla formule, accuratezza e tempi in millisecondi dopo ogni turno."
+      },
+      {
+        "title": "Monitora i Progressi nel Tempo",
+        "content": "Dieci-quindici minuti più volte a settimana consolidano intuizione e precisione."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Questo modulo è completamente gratuito?",
+        "answer": "Sì. Ogni strumento di Reflextry funziona nel browser senza registrazione né download."
+      },
+      {
+        "question": "Funziona su portatili scolastici e tablet?",
+        "answer": "Sì. L'interfaccia si adatta facilmente a laptop, Chromebook, tablet e LIM."
+      },
+      {
+        "question": "I miei punteggi migliori vengono salvati?",
+        "answer": "Sì. Le sessioni completate aggiornano automaticamente la dashboard Statistiche locale."
+      },
+      {
+        "question": "Quanto spesso conviene esercitarsi?",
+        "answer": "Sessioni focalizzate di 10 minuti, 3–5 volte a settimana, producono miglioramenti costanti."
+      }
+    ]
+  },
+  "focus-sprint": {
+    "description": [
+      {
+        "title": "Informazioni su Focus Sprint e Fatica",
+        "content": "Abbina un timer Pomodoro reale a test di reazione pre e post sessione. Progettata per studenti e professionisti. Calcola le PPM effettive con quiz, battute l'ora (KPH) sul tastierino numerico e variazione dei riflessi dopo sprint Pomodoro."
+      },
+      {
+        "title": "Meccanica Principale e Scienza",
+        "content": "Benchmark quotidiani di lettura RSVP e guidata, inserimento numerico contabile e blocchi di concentrazione con test di reazione. Comprensione Verificata: Ogni prova di lettura veloce include un quiz di verifica. Metriche KPH da Ufficio: Precisione e velocità standard sul tastierino numerico."
+      },
+      {
+        "title": "Punteggio e Metriche Dal Vivo",
+        "content": "Ogni simulazione unisce feedback visivo immediato e metriche quantitative trasparenti. Telemetria Fatica: Confronta i tempi di reazione prima e dopo lo studio."
+      },
+      {
+        "title": "Applicazioni in Classe e Ufficio",
+        "content": "Sì. L'interfaccia si adatta facilmente a laptop, Chromebook, tablet e LIM. Dieci-quindici minuti più volte a settimana consolidano intuizione e precisione."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Configurazione e Comandi",
+        "steps": [
+          "Inizia con le impostazioni standard per misurare il tuo livello attuale.",
+          "Cambia un solo parametro per volta per osservare chiaramente causa ed effetto."
+        ]
+      },
+      {
+        "title": "Svolgimento della Sessione",
+        "steps": [
+          "Abbina un timer Pomodoro reale a test di reazione pre e post sessione.",
+          "Controlla formule, accuratezza e tempi in millisecondi dopo ogni turno."
+        ]
+      },
+      {
+        "title": "Analisi dei Risultati",
+        "steps": [
+          "Sì. Le sessioni completate aggiornano automaticamente la dashboard Statistiche locale.",
+          "Sessioni concentrate da 10 minuti sono più efficaci di maratone stancanti."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Modifica Una Variabile alla Volta",
+        "content": "Cambia un solo parametro per volta per osservare chiaramente causa ed effetto."
+      },
+      {
+        "title": "Precisione Prima della Velocità",
+        "content": "Controlla formule, accuratezza e tempi in millisecondi dopo ogni turno."
+      },
+      {
+        "title": "Monitora i Progressi nel Tempo",
+        "content": "Dieci-quindici minuti più volte a settimana consolidano intuizione e precisione."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Questo modulo è completamente gratuito?",
+        "answer": "Sì. Ogni strumento di Reflextry funziona nel browser senza registrazione né download."
+      },
+      {
+        "question": "Funziona su portatili scolastici e tablet?",
+        "answer": "Sì. L'interfaccia si adatta facilmente a laptop, Chromebook, tablet e LIM."
+      },
+      {
+        "question": "I miei punteggi migliori vengono salvati?",
+        "answer": "Sì. Le sessioni completate aggiornano automaticamente la dashboard Statistiche locale."
+      },
+      {
+        "question": "Quanto spesso conviene esercitarsi?",
+        "answer": "Sessioni focalizzate di 10 minuti, 3–5 volte a settimana, producono miglioramenti costanti."
+      }
+    ]
   }
 }

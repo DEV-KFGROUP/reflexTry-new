@@ -15,18 +15,23 @@ export function StatBox({ label, value, highlight = false }: StatBoxProps) {
   const displayLabel = t(`stats.${cleanKey}`, t(`common.${cleanKey}`, label));
 
   return (
-    <div className={`bg-slate-50 border border-slate-100 rounded-xl p-3 ${
-      highlight ? "ring-1 ring-violet-200" : ""
-    }`}>
-      <div className="text-xs font-mono font-semibold text-slate-600 dark:text-slate-300 uppercase tracking-wider">
+    <div
+      className={`rounded-xl p-3 border ${
+        highlight
+          ? "bg-[#F3F1EB] border-[#D8D4C9]"
+          : "bg-[#FAF9F6] border-[#E6E3DB]"
+      }`}
+    >
+      <div className="text-[11px] font-semibold text-[#78756C] uppercase tracking-[0.08em] truncate">
         {displayLabel}
       </div>
-      <div className={`text-2xl font-mono font-bold mt-0.5 ${
-        highlight ? "text-violet-600" : "text-slate-800"
-      }`}>
+      <div
+        className={`text-xl font-mono font-bold tabular-nums mt-0.5 truncate ${
+          highlight ? "text-[#1E40AF]" : "text-[#161614]"
+        }`}
+      >
         {value}
       </div>
     </div>
   );
 }
-

@@ -5303,5 +5303,905 @@
         "answer": "Die nächste Zahl, die du anklicken musst."
       }
     ]
+  },
+  "gravity-lab": {
+    "description": [
+      {
+        "title": "Über Gravitations- & Orbit-Labor",
+        "content": "Vergleiche freien Fall auf Erde, Mond, Mars und Jupiter oder starte eine stabile Umlaufbahn. Mache abstrakte Physik- und Matheformeln greifbar. Verändere Regler, starte Satellitenorbits, lenke Laserstrahlen mit Spiegeln um und löse Hebelgesetze direkt im Browser."
+      },
+      {
+        "title": "Kernmechanik & Lernwissenschaft",
+        "content": "Interaktive 2D-Physik- und Mathe-Visualisierer für freien Fall, Orbitalgeschwindigkeit, Reflexionsgesetz, schiefen Wurf und Drehmomentgleichgewicht. Live-Gleichungen: Sieh Formeln in Echtzeit auf Änderungen reagieren. Visuelle Intuition: Untersuche Vektoren, Einfallslote und Flugbahnen."
+      },
+      {
+        "title": "Wertung & Echtzeit-Kennzahlen",
+        "content": "Jede Simulation verbindet sofortiges visuelles Feedback mit transparenten Messwerten. Challenge-Modi: Prüfe dein Wissen in bewerteten Missionen."
+      },
+      {
+        "title": "Einsatz in Schule, Studium & Beruf",
+        "content": "Ja. Das Layout passt sich sauber an Laptops, Chromebooks, Tablets und Smartboards an. Zehn bis fünfzehn Minuten mehrmals pro Woche festigen Verständnis und Reaktionssicherheit."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Einrichtung & Steuerung",
+        "steps": [
+          "Starte im Standardmodus, um deinen aktuellen Stand objektiv festzuhalten.",
+          "Verändere jeweils nur einen Parameter, um Ursache und Wirkung klar zu erkennen."
+        ]
+      },
+      {
+        "title": "Ablauf einer Sitzung",
+        "steps": [
+          "Vergleiche freien Fall auf Erde, Mond, Mars und Jupiter oder starte eine stabile Umlaufbahn.",
+          "Analysiere Formeln, Genauigkeit und Millisekunden-Werte direkt nach jeder Runde."
+        ]
+      },
+      {
+        "title": "Auswertung deiner Ergebnisse",
+        "steps": [
+          "Ja. Abgeschlossene Durchgänge werden automatisch im lokalen Statistik-Dashboard gesichert.",
+          "Konzentrierte 10-Minuten-Blöcke sind deutlich wirksamer als ermüdende Dauersitzungen."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Immer nur eine Variable ändern",
+        "content": "Verändere jeweils nur einen Parameter, um Ursache und Wirkung klar zu erkennen."
+      },
+      {
+        "title": "Präzision vor Geschwindigkeit",
+        "content": "Analysiere Formeln, Genauigkeit und Millisekunden-Werte direkt nach jeder Runde."
+      },
+      {
+        "title": "Fortschritt regelmäßig vergleichen",
+        "content": "Zehn bis fünfzehn Minuten mehrmals pro Woche festigen Verständnis und Reaktionssicherheit."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Ist dieses Modul kostenlos nutzbar?",
+        "answer": "Ja. Alle Werkzeuge auf Reflextry laufen direkt im Browser ohne Konto, Download oder Kosten."
+      },
+      {
+        "question": "Läuft die Simulation auf Schul-Laptops und Tablets?",
+        "answer": "Ja. Das Layout passt sich sauber an Laptops, Chromebooks, Tablets und Smartboards an."
+      },
+      {
+        "question": "Werden meine Bestwerte lokal gespeichert?",
+        "answer": "Ja. Abgeschlossene Durchgänge werden automatisch im lokalen Statistik-Dashboard gesichert."
+      },
+      {
+        "question": "Wie oft sollte man üben?",
+        "answer": "Kurze, konzentrierte 10-Minuten-Einheiten drei- bis fünfmal pro Woche bringen verlässliche Fortschritte."
+      }
+    ]
+  },
+  "laser-reflection": {
+    "description": [
+      {
+        "title": "Über Laser-Reflexions-Optik",
+        "content": "Drehe Spiegel, lenke Laserstrahlen um Hindernisse und prüfe das Reflexionsgesetz. Mache abstrakte Physik- und Matheformeln greifbar. Verändere Regler, starte Satellitenorbits, lenke Laserstrahlen mit Spiegeln um und löse Hebelgesetze direkt im Browser."
+      },
+      {
+        "title": "Kernmechanik & Lernwissenschaft",
+        "content": "Interaktive 2D-Physik- und Mathe-Visualisierer für freien Fall, Orbitalgeschwindigkeit, Reflexionsgesetz, schiefen Wurf und Drehmomentgleichgewicht. Live-Gleichungen: Sieh Formeln in Echtzeit auf Änderungen reagieren. Visuelle Intuition: Untersuche Vektoren, Einfallslote und Flugbahnen."
+      },
+      {
+        "title": "Wertung & Echtzeit-Kennzahlen",
+        "content": "Jede Simulation verbindet sofortiges visuelles Feedback mit transparenten Messwerten. Challenge-Modi: Prüfe dein Wissen in bewerteten Missionen."
+      },
+      {
+        "title": "Einsatz in Schule, Studium & Beruf",
+        "content": "Ja. Das Layout passt sich sauber an Laptops, Chromebooks, Tablets und Smartboards an. Zehn bis fünfzehn Minuten mehrmals pro Woche festigen Verständnis und Reaktionssicherheit."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Einrichtung & Steuerung",
+        "steps": [
+          "Starte im Standardmodus, um deinen aktuellen Stand objektiv festzuhalten.",
+          "Verändere jeweils nur einen Parameter, um Ursache und Wirkung klar zu erkennen."
+        ]
+      },
+      {
+        "title": "Ablauf einer Sitzung",
+        "steps": [
+          "Drehe Spiegel, lenke Laserstrahlen um Hindernisse und prüfe das Reflexionsgesetz.",
+          "Analysiere Formeln, Genauigkeit und Millisekunden-Werte direkt nach jeder Runde."
+        ]
+      },
+      {
+        "title": "Auswertung deiner Ergebnisse",
+        "steps": [
+          "Ja. Abgeschlossene Durchgänge werden automatisch im lokalen Statistik-Dashboard gesichert.",
+          "Konzentrierte 10-Minuten-Blöcke sind deutlich wirksamer als ermüdende Dauersitzungen."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Immer nur eine Variable ändern",
+        "content": "Verändere jeweils nur einen Parameter, um Ursache und Wirkung klar zu erkennen."
+      },
+      {
+        "title": "Präzision vor Geschwindigkeit",
+        "content": "Analysiere Formeln, Genauigkeit und Millisekunden-Werte direkt nach jeder Runde."
+      },
+      {
+        "title": "Fortschritt regelmäßig vergleichen",
+        "content": "Zehn bis fünfzehn Minuten mehrmals pro Woche festigen Verständnis und Reaktionssicherheit."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Ist dieses Modul kostenlos nutzbar?",
+        "answer": "Ja. Alle Werkzeuge auf Reflextry laufen direkt im Browser ohne Konto, Download oder Kosten."
+      },
+      {
+        "question": "Läuft die Simulation auf Schul-Laptops und Tablets?",
+        "answer": "Ja. Das Layout passt sich sauber an Laptops, Chromebooks, Tablets und Smartboards an."
+      },
+      {
+        "question": "Werden meine Bestwerte lokal gespeichert?",
+        "answer": "Ja. Abgeschlossene Durchgänge werden automatisch im lokalen Statistik-Dashboard gesichert."
+      },
+      {
+        "question": "Wie oft sollte man üben?",
+        "answer": "Kurze, konzentrierte 10-Minuten-Einheiten drei- bis fünfmal pro Woche bringen verlässliche Fortschritte."
+      }
+    ]
+  },
+  "projectile-cannon": {
+    "description": [
+      {
+        "title": "Über Projektil-Kanonen-Physik",
+        "content": "Stelle Winkel, Geschwindigkeit, Wind und Schwerkraft für Parabeltreffer ein. Mache abstrakte Physik- und Matheformeln greifbar. Verändere Regler, starte Satellitenorbits, lenke Laserstrahlen mit Spiegeln um und löse Hebelgesetze direkt im Browser."
+      },
+      {
+        "title": "Kernmechanik & Lernwissenschaft",
+        "content": "Interaktive 2D-Physik- und Mathe-Visualisierer für freien Fall, Orbitalgeschwindigkeit, Reflexionsgesetz, schiefen Wurf und Drehmomentgleichgewicht. Live-Gleichungen: Sieh Formeln in Echtzeit auf Änderungen reagieren. Visuelle Intuition: Untersuche Vektoren, Einfallslote und Flugbahnen."
+      },
+      {
+        "title": "Wertung & Echtzeit-Kennzahlen",
+        "content": "Jede Simulation verbindet sofortiges visuelles Feedback mit transparenten Messwerten. Challenge-Modi: Prüfe dein Wissen in bewerteten Missionen."
+      },
+      {
+        "title": "Einsatz in Schule, Studium & Beruf",
+        "content": "Ja. Das Layout passt sich sauber an Laptops, Chromebooks, Tablets und Smartboards an. Zehn bis fünfzehn Minuten mehrmals pro Woche festigen Verständnis und Reaktionssicherheit."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Einrichtung & Steuerung",
+        "steps": [
+          "Starte im Standardmodus, um deinen aktuellen Stand objektiv festzuhalten.",
+          "Verändere jeweils nur einen Parameter, um Ursache und Wirkung klar zu erkennen."
+        ]
+      },
+      {
+        "title": "Ablauf einer Sitzung",
+        "steps": [
+          "Stelle Winkel, Geschwindigkeit, Wind und Schwerkraft für Parabeltreffer ein.",
+          "Analysiere Formeln, Genauigkeit und Millisekunden-Werte direkt nach jeder Runde."
+        ]
+      },
+      {
+        "title": "Auswertung deiner Ergebnisse",
+        "steps": [
+          "Ja. Abgeschlossene Durchgänge werden automatisch im lokalen Statistik-Dashboard gesichert.",
+          "Konzentrierte 10-Minuten-Blöcke sind deutlich wirksamer als ermüdende Dauersitzungen."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Immer nur eine Variable ändern",
+        "content": "Verändere jeweils nur einen Parameter, um Ursache und Wirkung klar zu erkennen."
+      },
+      {
+        "title": "Präzision vor Geschwindigkeit",
+        "content": "Analysiere Formeln, Genauigkeit und Millisekunden-Werte direkt nach jeder Runde."
+      },
+      {
+        "title": "Fortschritt regelmäßig vergleichen",
+        "content": "Zehn bis fünfzehn Minuten mehrmals pro Woche festigen Verständnis und Reaktionssicherheit."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Ist dieses Modul kostenlos nutzbar?",
+        "answer": "Ja. Alle Werkzeuge auf Reflextry laufen direkt im Browser ohne Konto, Download oder Kosten."
+      },
+      {
+        "question": "Läuft die Simulation auf Schul-Laptops und Tablets?",
+        "answer": "Ja. Das Layout passt sich sauber an Laptops, Chromebooks, Tablets und Smartboards an."
+      },
+      {
+        "question": "Werden meine Bestwerte lokal gespeichert?",
+        "answer": "Ja. Abgeschlossene Durchgänge werden automatisch im lokalen Statistik-Dashboard gesichert."
+      },
+      {
+        "question": "Wie oft sollte man üben?",
+        "answer": "Kurze, konzentrierte 10-Minuten-Einheiten drei- bis fünfmal pro Woche bringen verlässliche Fortschritte."
+      }
+    ]
+  },
+  "torque-balance": {
+    "description": [
+      {
+        "title": "Über Wippen-Drehmoment-Waage",
+        "content": "Bringe Gewichte am Hebelarm per Drehmoment-Gleichung ins Gleichgewicht. Mache abstrakte Physik- und Matheformeln greifbar. Verändere Regler, starte Satellitenorbits, lenke Laserstrahlen mit Spiegeln um und löse Hebelgesetze direkt im Browser."
+      },
+      {
+        "title": "Kernmechanik & Lernwissenschaft",
+        "content": "Interaktive 2D-Physik- und Mathe-Visualisierer für freien Fall, Orbitalgeschwindigkeit, Reflexionsgesetz, schiefen Wurf und Drehmomentgleichgewicht. Live-Gleichungen: Sieh Formeln in Echtzeit auf Änderungen reagieren. Visuelle Intuition: Untersuche Vektoren, Einfallslote und Flugbahnen."
+      },
+      {
+        "title": "Wertung & Echtzeit-Kennzahlen",
+        "content": "Jede Simulation verbindet sofortiges visuelles Feedback mit transparenten Messwerten. Challenge-Modi: Prüfe dein Wissen in bewerteten Missionen."
+      },
+      {
+        "title": "Einsatz in Schule, Studium & Beruf",
+        "content": "Ja. Das Layout passt sich sauber an Laptops, Chromebooks, Tablets und Smartboards an. Zehn bis fünfzehn Minuten mehrmals pro Woche festigen Verständnis und Reaktionssicherheit."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Einrichtung & Steuerung",
+        "steps": [
+          "Starte im Standardmodus, um deinen aktuellen Stand objektiv festzuhalten.",
+          "Verändere jeweils nur einen Parameter, um Ursache und Wirkung klar zu erkennen."
+        ]
+      },
+      {
+        "title": "Ablauf einer Sitzung",
+        "steps": [
+          "Bringe Gewichte am Hebelarm per Drehmoment-Gleichung ins Gleichgewicht.",
+          "Analysiere Formeln, Genauigkeit und Millisekunden-Werte direkt nach jeder Runde."
+        ]
+      },
+      {
+        "title": "Auswertung deiner Ergebnisse",
+        "steps": [
+          "Ja. Abgeschlossene Durchgänge werden automatisch im lokalen Statistik-Dashboard gesichert.",
+          "Konzentrierte 10-Minuten-Blöcke sind deutlich wirksamer als ermüdende Dauersitzungen."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Immer nur eine Variable ändern",
+        "content": "Verändere jeweils nur einen Parameter, um Ursache und Wirkung klar zu erkennen."
+      },
+      {
+        "title": "Präzision vor Geschwindigkeit",
+        "content": "Analysiere Formeln, Genauigkeit und Millisekunden-Werte direkt nach jeder Runde."
+      },
+      {
+        "title": "Fortschritt regelmäßig vergleichen",
+        "content": "Zehn bis fünfzehn Minuten mehrmals pro Woche festigen Verständnis und Reaktionssicherheit."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Ist dieses Modul kostenlos nutzbar?",
+        "answer": "Ja. Alle Werkzeuge auf Reflextry laufen direkt im Browser ohne Konto, Download oder Kosten."
+      },
+      {
+        "question": "Läuft die Simulation auf Schul-Laptops und Tablets?",
+        "answer": "Ja. Das Layout passt sich sauber an Laptops, Chromebooks, Tablets und Smartboards an."
+      },
+      {
+        "question": "Werden meine Bestwerte lokal gespeichert?",
+        "answer": "Ja. Abgeschlossene Durchgänge werden automatisch im lokalen Statistik-Dashboard gesichert."
+      },
+      {
+        "question": "Wie oft sollte man üben?",
+        "answer": "Kurze, konzentrierte 10-Minuten-Einheiten drei- bis fünfmal pro Woche bringen verlässliche Fortschritte."
+      }
+    ]
+  },
+  "solar-gravity-3d": {
+    "description": [
+      {
+        "title": "Über 3D-Sonnensystem-Gravitation",
+        "content": "Erkunde einen 3D-Raumzeit-Gravitationstrichter und starte eigene Satelliten. Erlebe Echtzeit-WebGL-Physik: Drehe die Kamera um gekrümmte Raumzeit-Gitter, starte eigene Satelliten und treffe 3D-Drohnen auf Nah-, Mittel- und Fern-Tiefenebenen."
+      },
+      {
+        "title": "Kernmechanik & Lernwissenschaft",
+        "content": "Hardwarebeschleunigte 3D-Browser-Simulationen für Orbitalmechanik und räumliche Tiefenzielerfassung. Echtzeit WebGL 3D: Interaktive 3D-Kamera und dynamische Beleuchtung. Tiefenwahrnehmung: Trainiere räumliches Einschätzen auf drei Tiefenebenen."
+      },
+      {
+        "title": "Wertung & Echtzeit-Kennzahlen",
+        "content": "Jede Simulation verbindet sofortiges visuelles Feedback mit transparenten Messwerten. Ohne Downloads: Adaptive Grafik läuft flüssig auf Laptops und Desktops."
+      },
+      {
+        "title": "Einsatz in Schule, Studium & Beruf",
+        "content": "Ja. Das Layout passt sich sauber an Laptops, Chromebooks, Tablets und Smartboards an. Zehn bis fünfzehn Minuten mehrmals pro Woche festigen Verständnis und Reaktionssicherheit."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Einrichtung & Steuerung",
+        "steps": [
+          "Starte im Standardmodus, um deinen aktuellen Stand objektiv festzuhalten.",
+          "Verändere jeweils nur einen Parameter, um Ursache und Wirkung klar zu erkennen."
+        ]
+      },
+      {
+        "title": "Ablauf einer Sitzung",
+        "steps": [
+          "Erkunde einen 3D-Raumzeit-Gravitationstrichter und starte eigene Satelliten.",
+          "Analysiere Formeln, Genauigkeit und Millisekunden-Werte direkt nach jeder Runde."
+        ]
+      },
+      {
+        "title": "Auswertung deiner Ergebnisse",
+        "steps": [
+          "Ja. Abgeschlossene Durchgänge werden automatisch im lokalen Statistik-Dashboard gesichert.",
+          "Konzentrierte 10-Minuten-Blöcke sind deutlich wirksamer als ermüdende Dauersitzungen."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Immer nur eine Variable ändern",
+        "content": "Verändere jeweils nur einen Parameter, um Ursache und Wirkung klar zu erkennen."
+      },
+      {
+        "title": "Präzision vor Geschwindigkeit",
+        "content": "Analysiere Formeln, Genauigkeit und Millisekunden-Werte direkt nach jeder Runde."
+      },
+      {
+        "title": "Fortschritt regelmäßig vergleichen",
+        "content": "Zehn bis fünfzehn Minuten mehrmals pro Woche festigen Verständnis und Reaktionssicherheit."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Ist dieses Modul kostenlos nutzbar?",
+        "answer": "Ja. Alle Werkzeuge auf Reflextry laufen direkt im Browser ohne Konto, Download oder Kosten."
+      },
+      {
+        "question": "Läuft die Simulation auf Schul-Laptops und Tablets?",
+        "answer": "Ja. Das Layout passt sich sauber an Laptops, Chromebooks, Tablets und Smartboards an."
+      },
+      {
+        "question": "Werden meine Bestwerte lokal gespeichert?",
+        "answer": "Ja. Abgeschlossene Durchgänge werden automatisch im lokalen Statistik-Dashboard gesichert."
+      },
+      {
+        "question": "Wie oft sollte man üben?",
+        "answer": "Kurze, konzentrierte 10-Minuten-Einheiten drei- bis fünfmal pro Woche bringen verlässliche Fortschritte."
+      }
+    ]
+  },
+  "spatial-aim-3d": {
+    "description": [
+      {
+        "title": "Über 3D-Raumziel-Arena",
+        "content": "Erfasse und treffe 3D-Drohnenziele auf Nah-, Mittel- und Fern-Tiefenebenen. Erlebe Echtzeit-WebGL-Physik: Drehe die Kamera um gekrümmte Raumzeit-Gitter, starte eigene Satelliten und treffe 3D-Drohnen auf Nah-, Mittel- und Fern-Tiefenebenen."
+      },
+      {
+        "title": "Kernmechanik & Lernwissenschaft",
+        "content": "Hardwarebeschleunigte 3D-Browser-Simulationen für Orbitalmechanik und räumliche Tiefenzielerfassung. Echtzeit WebGL 3D: Interaktive 3D-Kamera und dynamische Beleuchtung. Tiefenwahrnehmung: Trainiere räumliches Einschätzen auf drei Tiefenebenen."
+      },
+      {
+        "title": "Wertung & Echtzeit-Kennzahlen",
+        "content": "Jede Simulation verbindet sofortiges visuelles Feedback mit transparenten Messwerten. Ohne Downloads: Adaptive Grafik läuft flüssig auf Laptops und Desktops."
+      },
+      {
+        "title": "Einsatz in Schule, Studium & Beruf",
+        "content": "Ja. Das Layout passt sich sauber an Laptops, Chromebooks, Tablets und Smartboards an. Zehn bis fünfzehn Minuten mehrmals pro Woche festigen Verständnis und Reaktionssicherheit."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Einrichtung & Steuerung",
+        "steps": [
+          "Starte im Standardmodus, um deinen aktuellen Stand objektiv festzuhalten.",
+          "Verändere jeweils nur einen Parameter, um Ursache und Wirkung klar zu erkennen."
+        ]
+      },
+      {
+        "title": "Ablauf einer Sitzung",
+        "steps": [
+          "Erfasse und treffe 3D-Drohnenziele auf Nah-, Mittel- und Fern-Tiefenebenen.",
+          "Analysiere Formeln, Genauigkeit und Millisekunden-Werte direkt nach jeder Runde."
+        ]
+      },
+      {
+        "title": "Auswertung deiner Ergebnisse",
+        "steps": [
+          "Ja. Abgeschlossene Durchgänge werden automatisch im lokalen Statistik-Dashboard gesichert.",
+          "Konzentrierte 10-Minuten-Blöcke sind deutlich wirksamer als ermüdende Dauersitzungen."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Immer nur eine Variable ändern",
+        "content": "Verändere jeweils nur einen Parameter, um Ursache und Wirkung klar zu erkennen."
+      },
+      {
+        "title": "Präzision vor Geschwindigkeit",
+        "content": "Analysiere Formeln, Genauigkeit und Millisekunden-Werte direkt nach jeder Runde."
+      },
+      {
+        "title": "Fortschritt regelmäßig vergleichen",
+        "content": "Zehn bis fünfzehn Minuten mehrmals pro Woche festigen Verständnis und Reaktionssicherheit."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Ist dieses Modul kostenlos nutzbar?",
+        "answer": "Ja. Alle Werkzeuge auf Reflextry laufen direkt im Browser ohne Konto, Download oder Kosten."
+      },
+      {
+        "question": "Läuft die Simulation auf Schul-Laptops und Tablets?",
+        "answer": "Ja. Das Layout passt sich sauber an Laptops, Chromebooks, Tablets und Smartboards an."
+      },
+      {
+        "question": "Werden meine Bestwerte lokal gespeichert?",
+        "answer": "Ja. Abgeschlossene Durchgänge werden automatisch im lokalen Statistik-Dashboard gesichert."
+      },
+      {
+        "question": "Wie oft sollte man üben?",
+        "answer": "Kurze, konzentrierte 10-Minuten-Einheiten drei- bis fünfmal pro Woche bringen verlässliche Fortschritte."
+      }
+    ]
+  },
+  "reaction-duel-2p": {
+    "description": [
+      {
+        "title": "Über 2-Spieler-Reaktionsduell",
+        "content": "Best-of-5 Millisekunden-Showdown an einem Gerät mit Fehlstart-Erkennung. Ohne Anmeldung oder Warteschlangen. Teilt euch einen Bildschirm für Millisekunden-Reaktionsduelle, Mathe-Tauziehen und Gravitations-Kanonenduelle mit Wind."
+      },
+      {
+        "title": "Kernmechanik & Lernwissenschaft",
+        "content": "Lokale 2-Spieler-Wettkämpfe für Unterricht, Lerngruppen und schnelle Kopf-an-Kopf-Duelle. Geteilte Tastatur & Touch: Links-gegen-Rechts-Steuerung auf Laptop und Tablet. Für den Unterricht: Schwierigkeitsstufen für Kinder, Schüler und Profis."
+      },
+      {
+        "title": "Wertung & Echtzeit-Kennzahlen",
+        "content": "Jede Simulation verbindet sofortiges visuelles Feedback mit transparenten Messwerten. Faire Millisekunden-Wertung: Fehlstart-Erkennung und direkte Match-Statistik."
+      },
+      {
+        "title": "Einsatz in Schule, Studium & Beruf",
+        "content": "Ja. Das Layout passt sich sauber an Laptops, Chromebooks, Tablets und Smartboards an. Zehn bis fünfzehn Minuten mehrmals pro Woche festigen Verständnis und Reaktionssicherheit."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Einrichtung & Steuerung",
+        "steps": [
+          "Starte im Standardmodus, um deinen aktuellen Stand objektiv festzuhalten.",
+          "Verändere jeweils nur einen Parameter, um Ursache und Wirkung klar zu erkennen."
+        ]
+      },
+      {
+        "title": "Ablauf einer Sitzung",
+        "steps": [
+          "Best-of-5 Millisekunden-Showdown an einem Gerät mit Fehlstart-Erkennung.",
+          "Analysiere Formeln, Genauigkeit und Millisekunden-Werte direkt nach jeder Runde."
+        ]
+      },
+      {
+        "title": "Auswertung deiner Ergebnisse",
+        "steps": [
+          "Ja. Abgeschlossene Durchgänge werden automatisch im lokalen Statistik-Dashboard gesichert.",
+          "Konzentrierte 10-Minuten-Blöcke sind deutlich wirksamer als ermüdende Dauersitzungen."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Immer nur eine Variable ändern",
+        "content": "Verändere jeweils nur einen Parameter, um Ursache und Wirkung klar zu erkennen."
+      },
+      {
+        "title": "Präzision vor Geschwindigkeit",
+        "content": "Analysiere Formeln, Genauigkeit und Millisekunden-Werte direkt nach jeder Runde."
+      },
+      {
+        "title": "Fortschritt regelmäßig vergleichen",
+        "content": "Zehn bis fünfzehn Minuten mehrmals pro Woche festigen Verständnis und Reaktionssicherheit."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Ist dieses Modul kostenlos nutzbar?",
+        "answer": "Ja. Alle Werkzeuge auf Reflextry laufen direkt im Browser ohne Konto, Download oder Kosten."
+      },
+      {
+        "question": "Läuft die Simulation auf Schul-Laptops und Tablets?",
+        "answer": "Ja. Das Layout passt sich sauber an Laptops, Chromebooks, Tablets und Smartboards an."
+      },
+      {
+        "question": "Werden meine Bestwerte lokal gespeichert?",
+        "answer": "Ja. Abgeschlossene Durchgänge werden automatisch im lokalen Statistik-Dashboard gesichert."
+      },
+      {
+        "question": "Wie oft sollte man üben?",
+        "answer": "Kurze, konzentrierte 10-Minuten-Einheiten drei- bis fünfmal pro Woche bringen verlässliche Fortschritte."
+      }
+    ]
+  },
+  "math-tug-of-war": {
+    "description": [
+      {
+        "title": "Über Mathe-Tauziehen",
+        "content": "Löse Rechenaufgaben schneller als dein Gegner und ziehe das Seil über die Linie. Ohne Anmeldung oder Warteschlangen. Teilt euch einen Bildschirm für Millisekunden-Reaktionsduelle, Mathe-Tauziehen und Gravitations-Kanonenduelle mit Wind."
+      },
+      {
+        "title": "Kernmechanik & Lernwissenschaft",
+        "content": "Lokale 2-Spieler-Wettkämpfe für Unterricht, Lerngruppen und schnelle Kopf-an-Kopf-Duelle. Geteilte Tastatur & Touch: Links-gegen-Rechts-Steuerung auf Laptop und Tablet. Für den Unterricht: Schwierigkeitsstufen für Kinder, Schüler und Profis."
+      },
+      {
+        "title": "Wertung & Echtzeit-Kennzahlen",
+        "content": "Jede Simulation verbindet sofortiges visuelles Feedback mit transparenten Messwerten. Faire Millisekunden-Wertung: Fehlstart-Erkennung und direkte Match-Statistik."
+      },
+      {
+        "title": "Einsatz in Schule, Studium & Beruf",
+        "content": "Ja. Das Layout passt sich sauber an Laptops, Chromebooks, Tablets und Smartboards an. Zehn bis fünfzehn Minuten mehrmals pro Woche festigen Verständnis und Reaktionssicherheit."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Einrichtung & Steuerung",
+        "steps": [
+          "Starte im Standardmodus, um deinen aktuellen Stand objektiv festzuhalten.",
+          "Verändere jeweils nur einen Parameter, um Ursache und Wirkung klar zu erkennen."
+        ]
+      },
+      {
+        "title": "Ablauf einer Sitzung",
+        "steps": [
+          "Löse Rechenaufgaben schneller als dein Gegner und ziehe das Seil über die Linie.",
+          "Analysiere Formeln, Genauigkeit und Millisekunden-Werte direkt nach jeder Runde."
+        ]
+      },
+      {
+        "title": "Auswertung deiner Ergebnisse",
+        "steps": [
+          "Ja. Abgeschlossene Durchgänge werden automatisch im lokalen Statistik-Dashboard gesichert.",
+          "Konzentrierte 10-Minuten-Blöcke sind deutlich wirksamer als ermüdende Dauersitzungen."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Immer nur eine Variable ändern",
+        "content": "Verändere jeweils nur einen Parameter, um Ursache und Wirkung klar zu erkennen."
+      },
+      {
+        "title": "Präzision vor Geschwindigkeit",
+        "content": "Analysiere Formeln, Genauigkeit und Millisekunden-Werte direkt nach jeder Runde."
+      },
+      {
+        "title": "Fortschritt regelmäßig vergleichen",
+        "content": "Zehn bis fünfzehn Minuten mehrmals pro Woche festigen Verständnis und Reaktionssicherheit."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Ist dieses Modul kostenlos nutzbar?",
+        "answer": "Ja. Alle Werkzeuge auf Reflextry laufen direkt im Browser ohne Konto, Download oder Kosten."
+      },
+      {
+        "question": "Läuft die Simulation auf Schul-Laptops und Tablets?",
+        "answer": "Ja. Das Layout passt sich sauber an Laptops, Chromebooks, Tablets und Smartboards an."
+      },
+      {
+        "question": "Werden meine Bestwerte lokal gespeichert?",
+        "answer": "Ja. Abgeschlossene Durchgänge werden automatisch im lokalen Statistik-Dashboard gesichert."
+      },
+      {
+        "question": "Wie oft sollte man üben?",
+        "answer": "Kurze, konzentrierte 10-Minuten-Einheiten drei- bis fünfmal pro Woche bringen verlässliche Fortschritte."
+      }
+    ]
+  },
+  "cannon-battle-2p": {
+    "description": [
+      {
+        "title": "Über Gravitations-Kanonenduell",
+        "content": "Rundenbasierte 2D-Artillerie über Berge bei wechselndem Wind und Planetengravitation. Ohne Anmeldung oder Warteschlangen. Teilt euch einen Bildschirm für Millisekunden-Reaktionsduelle, Mathe-Tauziehen und Gravitations-Kanonenduelle mit Wind."
+      },
+      {
+        "title": "Kernmechanik & Lernwissenschaft",
+        "content": "Lokale 2-Spieler-Wettkämpfe für Unterricht, Lerngruppen und schnelle Kopf-an-Kopf-Duelle. Geteilte Tastatur & Touch: Links-gegen-Rechts-Steuerung auf Laptop und Tablet. Für den Unterricht: Schwierigkeitsstufen für Kinder, Schüler und Profis."
+      },
+      {
+        "title": "Wertung & Echtzeit-Kennzahlen",
+        "content": "Jede Simulation verbindet sofortiges visuelles Feedback mit transparenten Messwerten. Faire Millisekunden-Wertung: Fehlstart-Erkennung und direkte Match-Statistik."
+      },
+      {
+        "title": "Einsatz in Schule, Studium & Beruf",
+        "content": "Ja. Das Layout passt sich sauber an Laptops, Chromebooks, Tablets und Smartboards an. Zehn bis fünfzehn Minuten mehrmals pro Woche festigen Verständnis und Reaktionssicherheit."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Einrichtung & Steuerung",
+        "steps": [
+          "Starte im Standardmodus, um deinen aktuellen Stand objektiv festzuhalten.",
+          "Verändere jeweils nur einen Parameter, um Ursache und Wirkung klar zu erkennen."
+        ]
+      },
+      {
+        "title": "Ablauf einer Sitzung",
+        "steps": [
+          "Rundenbasierte 2D-Artillerie über Berge bei wechselndem Wind und Planetengravitation.",
+          "Analysiere Formeln, Genauigkeit und Millisekunden-Werte direkt nach jeder Runde."
+        ]
+      },
+      {
+        "title": "Auswertung deiner Ergebnisse",
+        "steps": [
+          "Ja. Abgeschlossene Durchgänge werden automatisch im lokalen Statistik-Dashboard gesichert.",
+          "Konzentrierte 10-Minuten-Blöcke sind deutlich wirksamer als ermüdende Dauersitzungen."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Immer nur eine Variable ändern",
+        "content": "Verändere jeweils nur einen Parameter, um Ursache und Wirkung klar zu erkennen."
+      },
+      {
+        "title": "Präzision vor Geschwindigkeit",
+        "content": "Analysiere Formeln, Genauigkeit und Millisekunden-Werte direkt nach jeder Runde."
+      },
+      {
+        "title": "Fortschritt regelmäßig vergleichen",
+        "content": "Zehn bis fünfzehn Minuten mehrmals pro Woche festigen Verständnis und Reaktionssicherheit."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Ist dieses Modul kostenlos nutzbar?",
+        "answer": "Ja. Alle Werkzeuge auf Reflextry laufen direkt im Browser ohne Konto, Download oder Kosten."
+      },
+      {
+        "question": "Läuft die Simulation auf Schul-Laptops und Tablets?",
+        "answer": "Ja. Das Layout passt sich sauber an Laptops, Chromebooks, Tablets und Smartboards an."
+      },
+      {
+        "question": "Werden meine Bestwerte lokal gespeichert?",
+        "answer": "Ja. Abgeschlossene Durchgänge werden automatisch im lokalen Statistik-Dashboard gesichert."
+      },
+      {
+        "question": "Wie oft sollte man üben?",
+        "answer": "Kurze, konzentrierte 10-Minuten-Einheiten drei- bis fünfmal pro Woche bringen verlässliche Fortschritte."
+      }
+    ]
+  },
+  "speed-reading": {
+    "description": [
+      {
+        "title": "Über Schnelllesen & Verständnis",
+        "content": "Lies im Highlight- oder RSVP-Modus und ermittle per Quiz deine effektiven WPM. Für Schüler, Studierende und Wissensarbeiter. Ermittle effektive WPM per Quiz, 10-Key-Anschläge pro Stunde (KPH) und deine Reaktions-Ermüdung nach Pomodoro-Sprints."
+      },
+      {
+        "title": "Kernmechanik & Lernwissenschaft",
+        "content": "Alltagsnahe Benchmarks für RSVP- und geführtes Schnelllesen, Ziffernblock-Dateneingabe und reaktionsgeprüfte Fokusblöcke. Geprüftes Verständnis: Jeder Lesetest überprüft die tatsächliche Merkleistung. Büro-KPH-Kennzahlen: Standardisierte 10-Key-Genauigkeit und KPH-Messung."
+      },
+      {
+        "title": "Wertung & Echtzeit-Kennzahlen",
+        "content": "Jede Simulation verbindet sofortiges visuelles Feedback mit transparenten Messwerten. Ermüdungs-Telemetrie: Vergleiche deine Reaktionszeit vor und nach Fokus-Sprints."
+      },
+      {
+        "title": "Einsatz in Schule, Studium & Beruf",
+        "content": "Ja. Das Layout passt sich sauber an Laptops, Chromebooks, Tablets und Smartboards an. Zehn bis fünfzehn Minuten mehrmals pro Woche festigen Verständnis und Reaktionssicherheit."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Einrichtung & Steuerung",
+        "steps": [
+          "Starte im Standardmodus, um deinen aktuellen Stand objektiv festzuhalten.",
+          "Verändere jeweils nur einen Parameter, um Ursache und Wirkung klar zu erkennen."
+        ]
+      },
+      {
+        "title": "Ablauf einer Sitzung",
+        "steps": [
+          "Lies im Highlight- oder RSVP-Modus und ermittle per Quiz deine effektiven WPM.",
+          "Analysiere Formeln, Genauigkeit und Millisekunden-Werte direkt nach jeder Runde."
+        ]
+      },
+      {
+        "title": "Auswertung deiner Ergebnisse",
+        "steps": [
+          "Ja. Abgeschlossene Durchgänge werden automatisch im lokalen Statistik-Dashboard gesichert.",
+          "Konzentrierte 10-Minuten-Blöcke sind deutlich wirksamer als ermüdende Dauersitzungen."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Immer nur eine Variable ändern",
+        "content": "Verändere jeweils nur einen Parameter, um Ursache und Wirkung klar zu erkennen."
+      },
+      {
+        "title": "Präzision vor Geschwindigkeit",
+        "content": "Analysiere Formeln, Genauigkeit und Millisekunden-Werte direkt nach jeder Runde."
+      },
+      {
+        "title": "Fortschritt regelmäßig vergleichen",
+        "content": "Zehn bis fünfzehn Minuten mehrmals pro Woche festigen Verständnis und Reaktionssicherheit."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Ist dieses Modul kostenlos nutzbar?",
+        "answer": "Ja. Alle Werkzeuge auf Reflextry laufen direkt im Browser ohne Konto, Download oder Kosten."
+      },
+      {
+        "question": "Läuft die Simulation auf Schul-Laptops und Tablets?",
+        "answer": "Ja. Das Layout passt sich sauber an Laptops, Chromebooks, Tablets und Smartboards an."
+      },
+      {
+        "question": "Werden meine Bestwerte lokal gespeichert?",
+        "answer": "Ja. Abgeschlossene Durchgänge werden automatisch im lokalen Statistik-Dashboard gesichert."
+      },
+      {
+        "question": "Wie oft sollte man üben?",
+        "answer": "Kurze, konzentrierte 10-Minuten-Einheiten drei- bis fünfmal pro Woche bringen verlässliche Fortschritte."
+      }
+    ]
+  },
+  "ten-key": {
+    "description": [
+      {
+        "title": "Über 10-Key-Ziffernblock-Test",
+        "content": "Miss Ziffernblock-KPH und Genauigkeit bei Rechnungen, Ganzzahlen und SKUs. Für Schüler, Studierende und Wissensarbeiter. Ermittle effektive WPM per Quiz, 10-Key-Anschläge pro Stunde (KPH) und deine Reaktions-Ermüdung nach Pomodoro-Sprints."
+      },
+      {
+        "title": "Kernmechanik & Lernwissenschaft",
+        "content": "Alltagsnahe Benchmarks für RSVP- und geführtes Schnelllesen, Ziffernblock-Dateneingabe und reaktionsgeprüfte Fokusblöcke. Geprüftes Verständnis: Jeder Lesetest überprüft die tatsächliche Merkleistung. Büro-KPH-Kennzahlen: Standardisierte 10-Key-Genauigkeit und KPH-Messung."
+      },
+      {
+        "title": "Wertung & Echtzeit-Kennzahlen",
+        "content": "Jede Simulation verbindet sofortiges visuelles Feedback mit transparenten Messwerten. Ermüdungs-Telemetrie: Vergleiche deine Reaktionszeit vor und nach Fokus-Sprints."
+      },
+      {
+        "title": "Einsatz in Schule, Studium & Beruf",
+        "content": "Ja. Das Layout passt sich sauber an Laptops, Chromebooks, Tablets und Smartboards an. Zehn bis fünfzehn Minuten mehrmals pro Woche festigen Verständnis und Reaktionssicherheit."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Einrichtung & Steuerung",
+        "steps": [
+          "Starte im Standardmodus, um deinen aktuellen Stand objektiv festzuhalten.",
+          "Verändere jeweils nur einen Parameter, um Ursache und Wirkung klar zu erkennen."
+        ]
+      },
+      {
+        "title": "Ablauf einer Sitzung",
+        "steps": [
+          "Miss Ziffernblock-KPH und Genauigkeit bei Rechnungen, Ganzzahlen und SKUs.",
+          "Analysiere Formeln, Genauigkeit und Millisekunden-Werte direkt nach jeder Runde."
+        ]
+      },
+      {
+        "title": "Auswertung deiner Ergebnisse",
+        "steps": [
+          "Ja. Abgeschlossene Durchgänge werden automatisch im lokalen Statistik-Dashboard gesichert.",
+          "Konzentrierte 10-Minuten-Blöcke sind deutlich wirksamer als ermüdende Dauersitzungen."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Immer nur eine Variable ändern",
+        "content": "Verändere jeweils nur einen Parameter, um Ursache und Wirkung klar zu erkennen."
+      },
+      {
+        "title": "Präzision vor Geschwindigkeit",
+        "content": "Analysiere Formeln, Genauigkeit und Millisekunden-Werte direkt nach jeder Runde."
+      },
+      {
+        "title": "Fortschritt regelmäßig vergleichen",
+        "content": "Zehn bis fünfzehn Minuten mehrmals pro Woche festigen Verständnis und Reaktionssicherheit."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Ist dieses Modul kostenlos nutzbar?",
+        "answer": "Ja. Alle Werkzeuge auf Reflextry laufen direkt im Browser ohne Konto, Download oder Kosten."
+      },
+      {
+        "question": "Läuft die Simulation auf Schul-Laptops und Tablets?",
+        "answer": "Ja. Das Layout passt sich sauber an Laptops, Chromebooks, Tablets und Smartboards an."
+      },
+      {
+        "question": "Werden meine Bestwerte lokal gespeichert?",
+        "answer": "Ja. Abgeschlossene Durchgänge werden automatisch im lokalen Statistik-Dashboard gesichert."
+      },
+      {
+        "question": "Wie oft sollte man üben?",
+        "answer": "Kurze, konzentrierte 10-Minuten-Einheiten drei- bis fünfmal pro Woche bringen verlässliche Fortschritte."
+      }
+    ]
+  },
+  "focus-sprint": {
+    "description": [
+      {
+        "title": "Über Fokus-Sprint & Ermüdung",
+        "content": "Kombiniere echte Pomodoro-Sprints mit Reaktions-Checks davor und danach. Für Schüler, Studierende und Wissensarbeiter. Ermittle effektive WPM per Quiz, 10-Key-Anschläge pro Stunde (KPH) und deine Reaktions-Ermüdung nach Pomodoro-Sprints."
+      },
+      {
+        "title": "Kernmechanik & Lernwissenschaft",
+        "content": "Alltagsnahe Benchmarks für RSVP- und geführtes Schnelllesen, Ziffernblock-Dateneingabe und reaktionsgeprüfte Fokusblöcke. Geprüftes Verständnis: Jeder Lesetest überprüft die tatsächliche Merkleistung. Büro-KPH-Kennzahlen: Standardisierte 10-Key-Genauigkeit und KPH-Messung."
+      },
+      {
+        "title": "Wertung & Echtzeit-Kennzahlen",
+        "content": "Jede Simulation verbindet sofortiges visuelles Feedback mit transparenten Messwerten. Ermüdungs-Telemetrie: Vergleiche deine Reaktionszeit vor und nach Fokus-Sprints."
+      },
+      {
+        "title": "Einsatz in Schule, Studium & Beruf",
+        "content": "Ja. Das Layout passt sich sauber an Laptops, Chromebooks, Tablets und Smartboards an. Zehn bis fünfzehn Minuten mehrmals pro Woche festigen Verständnis und Reaktionssicherheit."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Einrichtung & Steuerung",
+        "steps": [
+          "Starte im Standardmodus, um deinen aktuellen Stand objektiv festzuhalten.",
+          "Verändere jeweils nur einen Parameter, um Ursache und Wirkung klar zu erkennen."
+        ]
+      },
+      {
+        "title": "Ablauf einer Sitzung",
+        "steps": [
+          "Kombiniere echte Pomodoro-Sprints mit Reaktions-Checks davor und danach.",
+          "Analysiere Formeln, Genauigkeit und Millisekunden-Werte direkt nach jeder Runde."
+        ]
+      },
+      {
+        "title": "Auswertung deiner Ergebnisse",
+        "steps": [
+          "Ja. Abgeschlossene Durchgänge werden automatisch im lokalen Statistik-Dashboard gesichert.",
+          "Konzentrierte 10-Minuten-Blöcke sind deutlich wirksamer als ermüdende Dauersitzungen."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Immer nur eine Variable ändern",
+        "content": "Verändere jeweils nur einen Parameter, um Ursache und Wirkung klar zu erkennen."
+      },
+      {
+        "title": "Präzision vor Geschwindigkeit",
+        "content": "Analysiere Formeln, Genauigkeit und Millisekunden-Werte direkt nach jeder Runde."
+      },
+      {
+        "title": "Fortschritt regelmäßig vergleichen",
+        "content": "Zehn bis fünfzehn Minuten mehrmals pro Woche festigen Verständnis und Reaktionssicherheit."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Ist dieses Modul kostenlos nutzbar?",
+        "answer": "Ja. Alle Werkzeuge auf Reflextry laufen direkt im Browser ohne Konto, Download oder Kosten."
+      },
+      {
+        "question": "Läuft die Simulation auf Schul-Laptops und Tablets?",
+        "answer": "Ja. Das Layout passt sich sauber an Laptops, Chromebooks, Tablets und Smartboards an."
+      },
+      {
+        "question": "Werden meine Bestwerte lokal gespeichert?",
+        "answer": "Ja. Abgeschlossene Durchgänge werden automatisch im lokalen Statistik-Dashboard gesichert."
+      },
+      {
+        "question": "Wie oft sollte man üben?",
+        "answer": "Kurze, konzentrierte 10-Minuten-Einheiten drei- bis fünfmal pro Woche bringen verlässliche Fortschritte."
+      }
+    ]
   }
 }

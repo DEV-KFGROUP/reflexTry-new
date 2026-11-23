@@ -6,7 +6,7 @@ const components = {
     h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
         <h1
             className={cn(
-                "scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl mb-6 text-foreground",
+                "scroll-m-20 font-serif text-3xl sm:text-4xl font-medium tracking-[-0.02em] mb-6 text-[#161614]",
                 className
             )}
             {...props}
@@ -15,7 +15,7 @@ const components = {
     h2: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
         <h2
             className={cn(
-                "scroll-m-20 border-b border-border pb-2 text-3xl font-semibold tracking-tight first:mt-0 mb-4 mt-8 text-foreground",
+                "scroll-m-20 border-b border-[#E6E3DB] pb-2 font-serif text-2xl sm:text-3xl font-medium tracking-[-0.02em] first:mt-0 mb-4 mt-10 text-[#161614]",
                 className
             )}
             {...props}
@@ -24,7 +24,7 @@ const components = {
     h3: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
         <h3
             className={cn(
-                "scroll-m-20 text-2xl font-semibold tracking-tight mb-4 mt-6 text-foreground",
+                "scroll-m-20 font-serif text-xl sm:text-2xl font-medium tracking-tight mb-3 mt-7 text-[#161614]",
                 className
             )}
             {...props}
@@ -32,17 +32,17 @@ const components = {
     ),
     p: ({ className, ...props }: React.HTMLAttributes<HTMLParagraphElement>) => (
         <p
-            className={cn("leading-7 text-foreground [&:not(:first-child)]:mt-6", className)}
+            className={cn("leading-7 text-[#3F3E39] [&:not(:first-child)]:mt-5", className)}
             {...props}
         />
     ),
     ul: ({ className, ...props }: React.HTMLAttributes<HTMLUListElement>) => (
-        <ul className={cn("my-6 ml-6 list-disc [&>li]:mt-2", className)} {...props} />
+        <ul className={cn("my-5 ml-6 list-disc text-[#3F3E39] [&>li]:mt-2", className)} {...props} />
     ),
     blockquote: ({ className, ...props }: React.HTMLAttributes<HTMLQuoteElement>) => (
         <blockquote
             className={cn(
-                "mt-6 border-l-2 pl-6 italic text-muted-foreground",
+                "my-7 border-y border-[#E6E3DB] py-5 px-2 font-serif italic text-lg text-[#3F3E39]",
                 className
             )}
             {...props}
@@ -51,7 +51,7 @@ const components = {
     pre: ({ className, ...props }: React.HTMLAttributes<HTMLPreElement>) => (
         <pre
             className={cn(
-                "mb-4 mt-6 overflow-x-auto rounded-lg border border-border bg-slate-100 py-4 px-4 text-slate-900",
+                "mb-4 mt-6 overflow-x-auto rounded-xl border border-[#E6E3DB] bg-[#FAF9F6] py-4 px-4 text-[#161614] font-mono text-sm",
                 className
             )}
             {...props}
@@ -62,7 +62,6 @@ const components = {
     CardHeader: CardHeader,
     CardTitle: CardTitle,
     CardDescription: CardDescription,
-    // Add other components like Callout, Table, etc. here
 };
 
 export function MDXContent({ source }: { source: string }) {

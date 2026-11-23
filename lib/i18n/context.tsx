@@ -9,43 +9,13 @@ import {
     DEFAULT_LOCALE,
     type Locale,
 } from "./config";
+import {
+    getEnglishDictionary,
+    loadLocaleDictionary,
+    type TranslationDictionary,
+} from "./load-dictionary";
 
-// Statically import all 16 lightweight dictionaries (~3KB each)
-import enDict from "./dictionaries/en.json";
-import esDict from "./dictionaries/es.json";
-import ptDict from "./dictionaries/pt.json";
-import deDict from "./dictionaries/de.json";
-import frDict from "./dictionaries/fr.json";
-import jaDict from "./dictionaries/ja.json";
-import koDict from "./dictionaries/ko.json";
-import ruDict from "./dictionaries/ru.json";
-import itDict from "./dictionaries/it.json";
-import plDict from "./dictionaries/pl.json";
-import trDict from "./dictionaries/tr.json";
-import idDict from "./dictionaries/id.json";
-import viDict from "./dictionaries/vi.json";
-import zhCNDict from "./dictionaries/zh-CN.json";
-import zhTWDict from "./dictionaries/zh-TW.json";
-import nlDict from "./dictionaries/nl.json";
-
-const DICTIONARIES: Record<Locale, Record<string, any>> = {
-    en: enDict,
-    es: esDict,
-    pt: ptDict,
-    de: deDict,
-    fr: frDict,
-    ja: jaDict,
-    ko: koDict,
-    ru: ruDict,
-    it: itDict,
-    pl: plDict,
-    tr: trDict,
-    id: idDict,
-    vi: viDict,
-    "zh-CN": zhCNDict,
-    "zh-TW": zhTWDict,
-    nl: nlDict,
-};
+const EN_DICT: TranslationDictionary = getEnglishDictionary();
 
 interface I18nContextType {
     locale: Locale;
@@ -63,7 +33,15 @@ const I18nContext = createContext<I18nContextType>({
     cleanPathname: "/",
 });
 
-export function I18nProvider({ children, initialLocale }: { children: ReactNode; initialLocale?: Locale }) {
+export function I18nProvider({
+    children,
+    initialLocale,
+    initialDict,
+}: {
+    children: ReactNode;
+    initialLocale?: Locale;
+    initialDict?: TranslationDictionary;
+}) {
     const pathname = usePathname() || "/";
     const router = useRouter();
 
@@ -79,6 +57,8 @@ export function I18nProvider({ children, initialLocale }: { children: ReactNode;
         return DEFAULT_LOCALE;
     });
 
+    const [activeDict, setActiveDict] = useState<TranslationDictionary>(() => initialDict || EN_DICT);
+
     // Synchronize locale when browser URL changes
     useEffect(() => {
         if (typeof window !== "undefined") {
@@ -88,14 +68,31 @@ export function I18nProvider({ children, initialLocale }: { children: ReactNode;
                 setLocaleState(activeLocale);
             }
         }
-    }, [pathname]);
+    }, [pathname, locale]);
 
-    const activeDict = DICTIONARIES[locale] || DICTIONARIES[DEFAULT_LOCALE];
+    // Lazily load only the requested non-English dictionary if needed
+    useEffect(() => {
+        if (locale === DEFAULT_LOCALE) {
+            setActiveDict(EN_DICT);
+            return;
+        }
+        if (initialLocale === locale && initialDict) {
+            setActiveDict(initialDict);
+            return;
+        }
+        let cancelled = false;
+        loadLocaleDictionary(locale).then((dict) => {
+            if (!cancelled) setActiveDict(dict);
+        });
+        return () => {
+            cancelled = true;
+        };
+    }, [locale, initialLocale, initialDict]);
 
     const t = useMemo(() => {
         return (key: string, fallback?: string): string => {
             const parts = key.split(".");
-            
+
             // 1. Try target locale dictionary
             let value: any = activeDict;
             for (const part of parts) {
@@ -104,7 +101,7 @@ export function I18nProvider({ children, initialLocale }: { children: ReactNode;
             if (typeof value === "string") return value;
 
             // 2. Fallback to English dictionary
-            let enValue: any = DICTIONARIES[DEFAULT_LOCALE];
+            let enValue: any = EN_DICT;
             for (const part of parts) {
                 enValue = enValue && typeof enValue === "object" ? enValue[part] : undefined;
             }
@@ -122,7 +119,9 @@ export function I18nProvider({ children, initialLocale }: { children: ReactNode;
         try {
             document.cookie = `NEXT_LOCALE=${newLocale}; path=/; max-age=31536000; SameSite=Lax`;
             localStorage.setItem("reflextry_locale", newLocale);
-        } catch (_) {}
+        } catch {
+            // ignore storage errors
+        }
 
         // Navigate to the target localized URL preserving current subpath
         const currentPath = typeof window !== "undefined" ? window.location.pathname : pathname;

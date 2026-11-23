@@ -950,5 +950,113 @@
       "jeu de précision bpm tap",
       "entraîneur de réflexes rythmiques"
     ]
+  },
+  "gravity-lab": {
+    "title": "Labo Gravité & Orbites - Laboratoire STEM & Physique | Reflextry",
+    "description": "Comparez la chute libre sur Terre, Lune, Mars et Jupiter ou lancez une orbite stable.",
+    "keywords": [
+      "labo gravité & orbites",
+      "laboratoire stem & physique",
+      "reflextry"
+    ]
+  },
+  "laser-reflection": {
+    "title": "Optique de Réflexion Laser - Laboratoire STEM & Physique | Reflextry",
+    "description": "Pivotez des miroirs pour guider un faisceau laser et vérifier la Loi de Réflexion.",
+    "keywords": [
+      "optique de réflexion laser",
+      "laboratoire stem & physique",
+      "reflextry"
+    ]
+  },
+  "projectile-cannon": {
+    "title": "Physique du Canon Balistique - Laboratoire STEM & Physique | Reflextry",
+    "description": "Réglez angle, vitesse, vent et gravité pour atteindre des cibles paraboliques.",
+    "keywords": [
+      "physique du canon balistique",
+      "laboratoire stem & physique",
+      "reflextry"
+    ]
+  },
+  "torque-balance": {
+    "title": "Balance de Couple & Levier - Laboratoire STEM & Physique | Reflextry",
+    "description": "Équilibrez des masses sur une bascule à l'aide des équations de moment.",
+    "keywords": [
+      "balance de couple & levier",
+      "laboratoire stem & physique",
+      "reflextry"
+    ]
+  },
+  "solar-gravity-3d": {
+    "title": "Simulateur 3D de Gravité Solaire - Laboratoire 3D Interactif | Reflextry",
+    "description": "Explorez un puits gravitationnel 3D et lancez des satellites sur mesure.",
+    "keywords": [
+      "simulateur 3d de gravité solaire",
+      "laboratoire 3d interactif",
+      "reflextry"
+    ]
+  },
+  "spatial-aim-3d": {
+    "title": "Arène de Visée Spatiale 3D - Laboratoire 3D Interactif | Reflextry",
+    "description": "Ciblez des drones 3D répartis sur des plans proche, intermédiaire et lointain.",
+    "keywords": [
+      "arène de visée spatiale 3d",
+      "laboratoire 3d interactif",
+      "reflextry"
+    ]
+  },
+  "reaction-duel-2p": {
+    "title": "Duel de Réflexes 2 Joueurs - Arène 2 Joueurs | Reflextry",
+    "description": "Affrontement en 5 manches à la milliseconde avec détection de faux départ.",
+    "keywords": [
+      "duel de réflexes 2 joueurs",
+      "arène 2 joueurs",
+      "reflextry"
+    ]
+  },
+  "math-tug-of-war": {
+    "title": "Tir à la Corde Mathématique - Arène 2 Joueurs | Reflextry",
+    "description": "Résolvez les calculs plus vite que votre adversaire pour tirer la corde.",
+    "keywords": [
+      "tir à la corde mathématique",
+      "arène 2 joueurs",
+      "reflextry"
+    ]
+  },
+  "cannon-battle-2p": {
+    "title": "Bataille de Canons Gravité - Arène 2 Joueurs | Reflextry",
+    "description": "Artillerie 2D au tour par tour sur relief montagneux avec vent et gravité.",
+    "keywords": [
+      "bataille de canons gravité",
+      "arène 2 joueurs",
+      "reflextry"
+    ]
+  },
+  "speed-reading": {
+    "title": "Lecture Rapide & Compréhension - Suite Études & Travail | Reflextry",
+    "description": "Lisez en surbrillance guidée ou RSVP puis répondez au quiz pour vos MPM effectifs.",
+    "keywords": [
+      "lecture rapide & compréhension",
+      "suite études & travail",
+      "reflextry"
+    ]
+  },
+  "ten-key": {
+    "title": "Test Pavé Numérique 10-Key - Suite Études & Travail | Reflextry",
+    "description": "Mesurez vos KPH et votre précision sur factures, entiers et codes SKU.",
+    "keywords": [
+      "test pavé numérique 10-key",
+      "suite études & travail",
+      "reflextry"
+    ]
+  },
+  "focus-sprint": {
+    "title": "Sprint Focus & Fatigue - Suite Études & Travail | Reflextry",
+    "description": "Associez un minuteur Pomodoro réel à des tests de réflexes avant/après session.",
+    "keywords": [
+      "sprint focus & fatigue",
+      "suite études & travail",
+      "reflextry"
+    ]
   }
 }

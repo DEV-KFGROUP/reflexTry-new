@@ -348,7 +348,7 @@ export default function MentalRotationGame() {
       subtitle="SPATIAL INTELLIGENCE"
       difficultySelector={difficultySelector}
       stats={stats}
-      arenaHeaderLeft={`ARENA // ${diff.label.toUpperCase()}`}
+      arenaHeaderLeft={`${diff.label} Mode`}
       arenaHeaderRight="3D STRUCTURAL ANALYSIS"
       soundEnabled={!isMuted}
       onToggleSound={toggleMute}
@@ -366,15 +366,15 @@ export default function MentalRotationGame() {
             <div className="game-start-icon w-20 h-20 bg-indigo-50 dark:bg-indigo-900/20 rounded-full flex items-center justify-center mb-6">
               <Box className="w-10 h-10 text-indigo-500" />
             </div>
-            <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-wider mb-4">
+            <h2 className="text-2xl font-black text-[#161614] dark:text-white uppercase tracking-wider mb-4">
               Mental Rotation Test
             </h2>
-            <p className="text-sm text-slate-500 dark:text-slate-400 mb-8 leading-relaxed">
+            <p className="text-sm text-[#78756C] dark:text-slate-400 mb-8 leading-relaxed">
               Test your spatial intelligence by determining if two 3D structures are the same object rotated, or if they are mirrored differently.
             </p>
             <button
               onClick={startGame}
-              className="w-full sm:w-auto px-12 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold uppercase tracking-widest text-sm transition-all shadow-lg hover:shadow-indigo-500/20 flex items-center justify-center gap-3"
+              className="w-full sm:w-auto min-h-[52px] min-w-[200px] px-12 py-4 bg-[#161614] hover:bg-[#2C2B27] text-[#FAF9F6] rounded-xl font-bold uppercase tracking-widest text-sm transition-all shadow-lg hover: flex items-center justify-center gap-3 cursor-pointer touch-manipulation"
             >
               <Play className="w-4 h-4 fill-current" />
               Play
@@ -395,7 +395,7 @@ export default function MentalRotationGame() {
               {/* Object A */}
               <div className="flex flex-col items-center">
                 <div className="text-slate-400 font-bold mb-4 uppercase tracking-widest text-sm">Object A</div>
-                <div className="w-48 h-48 sm:w-64 sm:h-64 bg-slate-50 dark:bg-slate-900/50 rounded-2xl flex items-center justify-center border border-slate-200 dark:border-slate-800 shadow-inner overflow-hidden">
+                <div className="w-48 h-48 sm:w-64 sm:h-64 bg-[#F3F1EB] rounded-2xl flex items-center justify-center border border-[#E6E3DB] overflow-hidden">
                   <BlockRender blocks={originalObj} />
                 </div>
               </div>
@@ -405,7 +405,7 @@ export default function MentalRotationGame() {
               {/* Object B */}
               <div className="flex flex-col items-center">
                 <div className="text-slate-400 font-bold mb-4 uppercase tracking-widest text-sm">Object B</div>
-                <div className="w-48 h-48 sm:w-64 sm:h-64 bg-slate-50 dark:bg-slate-900/50 rounded-2xl flex items-center justify-center border border-slate-200 dark:border-slate-800 shadow-inner overflow-hidden">
+                <div className="w-48 h-48 sm:w-64 sm:h-64 bg-[#F3F1EB] rounded-2xl flex items-center justify-center border border-[#E6E3DB] overflow-hidden">
                   <BlockRender blocks={targetObj} />
                 </div>
               </div>
@@ -416,31 +416,31 @@ export default function MentalRotationGame() {
                     <motion.div initial={{scale:0.5}} animate={{scale:1}} className="text-emerald-500 flex flex-col items-center">
                       <Check className="w-24 h-24 mb-4" />
                       <span className="text-4xl font-black uppercase tracking-widest">Correct</span>
-                      <span className="text-lg mt-2 text-slate-500 font-bold tracking-widest">It was {isSame ? 'SAME' : 'DIFFERENT'}</span>
+                      <span className="text-lg mt-2 text-[#78756C] font-bold tracking-widest">It was {isSame ? 'SAME' : 'DIFFERENT'}</span>
                     </motion.div>
                   ) : (
                     <motion.div initial={{scale:0.5}} animate={{scale:1}} className="text-rose-500 flex flex-col items-center">
                       <X className="w-24 h-24 mb-4" />
                       <span className="text-4xl font-black uppercase tracking-widest">Wrong</span>
-                      <span className="text-lg mt-2 text-slate-500 font-bold tracking-widest">It was {isSame ? 'SAME' : 'DIFFERENT'}</span>
+                      <span className="text-lg mt-2 text-[#78756C] font-bold tracking-widest">It was {isSame ? 'SAME' : 'DIFFERENT'}</span>
                     </motion.div>
                   )}
                 </div>
               )}
             </div>
 
-            <div className="flex flex-row items-center justify-center gap-4 mt-12 w-full max-w-md">
+            <div className="flex flex-row items-center justify-center gap-3 sm:gap-4 mt-10 w-full max-w-md">
               <button
                 onClick={() => handleGuess(true)}
                 disabled={gameState !== "playing"}
-                className="flex-1 bg-white dark:bg-slate-800 border-2 border-emerald-500 dark:border-emerald-400 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-900/30 disabled:opacity-50 py-4 rounded-2xl font-black text-xl tracking-widest transition-all active:scale-95 shadow-sm"
+                className="flex-1 min-h-[56px] bg-white dark:bg-slate-800 border-2 border-emerald-500 dark:border-emerald-400 text-emerald-600 dark:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-900/30 disabled:opacity-50 py-4 px-3 rounded-2xl font-black text-lg sm:text-xl tracking-widest transition-all active:scale-95 shadow-sm cursor-pointer touch-manipulation"
               >
                 SAME
               </button>
               <button
                 onClick={() => handleGuess(false)}
                 disabled={gameState !== "playing"}
-                className="flex-1 bg-rose-600 hover:bg-rose-700 disabled:opacity-50 text-white py-4 rounded-2xl font-black text-xl tracking-widest transition-all active:scale-95 shadow-lg shadow-rose-500/30 border-2 border-rose-600 hover:border-rose-700"
+                className="flex-1 min-h-[56px] bg-rose-600 hover:bg-rose-700 disabled:opacity-50 text-white py-4 px-3 rounded-2xl font-black text-lg sm:text-xl tracking-widest transition-all active:scale-95 shadow-lg shadow-rose-500/30 border-2 border-rose-600 hover:border-rose-700 cursor-pointer touch-manipulation"
               >
                 DIFFERENT
               </button>
@@ -458,11 +458,11 @@ export default function MentalRotationGame() {
             <div className="w-20 h-20 bg-rose-50 dark:bg-rose-900/20 rounded-full flex items-center justify-center mb-6">
               <Trophy className="w-10 h-10 text-rose-500" />
             </div>
-            <h2 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-widest mb-2">
+            <h2 className="text-3xl font-black text-[#161614] dark:text-white uppercase tracking-widest mb-2">
               Calibration Complete
             </h2>
-            <div className="text-slate-500 mb-2 text-sm uppercase tracking-widest">
-              Final Score: <span className="text-xl font-black text-slate-900 dark:text-white ml-2">{score}</span>
+            <div className="text-[#78756C] mb-2 text-sm uppercase tracking-widest">
+              Final Score: <span className="text-xl font-black text-[#161614] dark:text-white ml-2">{score}</span>
             </div>
             {score > 0 && score >= highScores[diffId] ? (
               <p className="text-amber-500 font-bold text-xs uppercase tracking-widest mb-6">New Record!</p>
@@ -470,17 +470,17 @@ export default function MentalRotationGame() {
               <div className="mb-6" />
             )}
             
-            <div className="flex gap-4">
+            <div className="flex flex-col sm:flex-row gap-3 w-full max-w-sm">
               <button
                 onClick={startGame}
-                className="flex items-center gap-2 px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold uppercase tracking-widest text-xs transition-all shadow-lg hover:shadow-indigo-500/20"
+                className="flex-1 min-h-[52px] flex items-center justify-center gap-2 px-8 py-4 bg-[#161614] hover:bg-[#2C2B27] text-[#FAF9F6] rounded-xl font-bold uppercase tracking-widest text-xs sm:text-sm transition-all shadow-lg hover: cursor-pointer touch-manipulation"
               >
                 <RotateCcw className="w-4 h-4" />
                 Recalibrate
               </button>
               <button
                 onClick={() => setGameState("select")}
-                className="flex items-center gap-2 px-8 py-4 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-900 dark:text-white rounded-xl font-bold uppercase tracking-widest text-xs transition-all"
+                className="flex-1 min-h-[52px] flex items-center justify-center gap-2 px-8 py-4 bg-[#F3F1EB] hover:bg-[#E6E3DB] dark:bg-slate-800 dark:hover:bg-slate-700 text-[#161614] dark:text-white rounded-xl font-bold uppercase tracking-widest text-xs sm:text-sm transition-all cursor-pointer touch-manipulation"
               >
                 Menu
               </button>

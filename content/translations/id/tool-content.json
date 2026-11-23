@@ -3091,5 +3091,905 @@
         "answer": "Angka berikutnya yang harus kamu klik."
       }
     ]
+  },
+  "gravity-lab": {
+    "description": [
+      {
+        "title": "Tentang Lab Gravitasi & Orbit",
+        "content": "Bandingkan jatuh bebas di Bumi, Bulan, Mars, Jupiter atau luncurkan orbit stabil. Ubah rumus fisika dan matematika di buku teks menjadi eksperimen visual interaktif. Atur slider, luncurkan orbit satelit, pantulkan laser, dan seimbangkan tuas langsung di browser."
+      },
+      {
+        "title": "Mekanika Utama & Ilmu Belajar",
+        "content": "Visualizer 2D interaktif untuk jatuh bebas gravitasi, kecepatan orbit, hukum pemantulan cermin, gerak parabola, dan kesetimbangan torsi. Rumus Real-Time: Lihat persamaan diperbarui otomatis saat variabel diubah. Intuisi Visual: Amati vektor kecepatan, garis normal cermin, dan jejak lintasan."
+      },
+      {
+        "title": "Penilaian & Metrik Langsung",
+        "content": "Setiap simulasi memadukan umpan balik visual cepat dengan metrik kuantitatif yang transparan. Mode Tantangan: Uji pemahamanmu lewat misi siswa berskor."
+      },
+      {
+        "title": "Penerapan di Kelas & Kerja",
+        "content": "Ya. Tampilan menyesuaikan dengan rapi di laptop, Chromebook, tablet, dan papan interaktif. Sepuluh hingga lima belas menit beberapa kali seminggu membangun intuisi dan ketepatan nyata."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Pengaturan & Kontrol",
+        "steps": [
+          "Mulai dengan pengaturan standar untuk mengukur kemampuan dasar Anda secara objektif.",
+          "Ubah satu kontrol setiap kali agar hubungan sebab-akibat terlihat jelas."
+        ]
+      },
+      {
+        "title": "Menjalankan Sesi",
+        "steps": [
+          "Bandingkan jatuh bebas di Bumi, Bulan, Mars, Jupiter atau luncurkan orbit stabil.",
+          "Periksa rumus, akurasi, dan waktu milidetik setelah setiap ronde."
+        ]
+      },
+      {
+        "title": "Menganalisis Hasil",
+        "steps": [
+          "Ya. Hasil sesi yang selesai otomatis tersimpan di dasbor Statistik lokal browser Anda.",
+          "Blok latihan 10 menit yang fokus jauh lebih efektif daripada sesi panjang yang melelahkan."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Ubah Satu Variabel Sekaligus",
+        "content": "Ubah satu kontrol setiap kali agar hubungan sebab-akibat terlihat jelas."
+      },
+      {
+        "title": "Utamakan Akurasi Sebelum Kecepatan",
+        "content": "Periksa rumus, akurasi, dan waktu milidetik setelah setiap ronde."
+      },
+      {
+        "title": "Pantau Kemajuan Secara Berkala",
+        "content": "Sepuluh hingga lima belas menit beberapa kali seminggu membangun intuisi dan ketepatan nyata."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Apakah modul ini sepenuhnya gratis?",
+        "answer": "Ya. Semua alat Reflextry berjalan langsung di browser tanpa akun, unduhan, atau biaya."
+      },
+      {
+        "question": "Apakah cocok untuk laptop sekolah dan tablet?",
+        "answer": "Ya. Tampilan menyesuaikan dengan rapi di laptop, Chromebook, tablet, dan papan interaktif."
+      },
+      {
+        "question": "Apakah skor terbaik saya tersimpan?",
+        "answer": "Ya. Hasil sesi yang selesai otomatis tersimpan di dasbor Statistik lokal browser Anda."
+      },
+      {
+        "question": "Seberapa sering sebaiknya berlatih?",
+        "answer": "Sesi fokus 10 menit sebanyak 3–5 kali seminggu memberikan peningkatan yang konsisten."
+      }
+    ]
+  },
+  "laser-reflection": {
+    "description": [
+      {
+        "title": "Tentang Optik Pemantulan Laser",
+        "content": "Putar cermin untuk memantulkan laser ke sensor dan buktikan Hukum Pemantulan. Ubah rumus fisika dan matematika di buku teks menjadi eksperimen visual interaktif. Atur slider, luncurkan orbit satelit, pantulkan laser, dan seimbangkan tuas langsung di browser."
+      },
+      {
+        "title": "Mekanika Utama & Ilmu Belajar",
+        "content": "Visualizer 2D interaktif untuk jatuh bebas gravitasi, kecepatan orbit, hukum pemantulan cermin, gerak parabola, dan kesetimbangan torsi. Rumus Real-Time: Lihat persamaan diperbarui otomatis saat variabel diubah. Intuisi Visual: Amati vektor kecepatan, garis normal cermin, dan jejak lintasan."
+      },
+      {
+        "title": "Penilaian & Metrik Langsung",
+        "content": "Setiap simulasi memadukan umpan balik visual cepat dengan metrik kuantitatif yang transparan. Mode Tantangan: Uji pemahamanmu lewat misi siswa berskor."
+      },
+      {
+        "title": "Penerapan di Kelas & Kerja",
+        "content": "Ya. Tampilan menyesuaikan dengan rapi di laptop, Chromebook, tablet, dan papan interaktif. Sepuluh hingga lima belas menit beberapa kali seminggu membangun intuisi dan ketepatan nyata."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Pengaturan & Kontrol",
+        "steps": [
+          "Mulai dengan pengaturan standar untuk mengukur kemampuan dasar Anda secara objektif.",
+          "Ubah satu kontrol setiap kali agar hubungan sebab-akibat terlihat jelas."
+        ]
+      },
+      {
+        "title": "Menjalankan Sesi",
+        "steps": [
+          "Putar cermin untuk memantulkan laser ke sensor dan buktikan Hukum Pemantulan.",
+          "Periksa rumus, akurasi, dan waktu milidetik setelah setiap ronde."
+        ]
+      },
+      {
+        "title": "Menganalisis Hasil",
+        "steps": [
+          "Ya. Hasil sesi yang selesai otomatis tersimpan di dasbor Statistik lokal browser Anda.",
+          "Blok latihan 10 menit yang fokus jauh lebih efektif daripada sesi panjang yang melelahkan."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Ubah Satu Variabel Sekaligus",
+        "content": "Ubah satu kontrol setiap kali agar hubungan sebab-akibat terlihat jelas."
+      },
+      {
+        "title": "Utamakan Akurasi Sebelum Kecepatan",
+        "content": "Periksa rumus, akurasi, dan waktu milidetik setelah setiap ronde."
+      },
+      {
+        "title": "Pantau Kemajuan Secara Berkala",
+        "content": "Sepuluh hingga lima belas menit beberapa kali seminggu membangun intuisi dan ketepatan nyata."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Apakah modul ini sepenuhnya gratis?",
+        "answer": "Ya. Semua alat Reflextry berjalan langsung di browser tanpa akun, unduhan, atau biaya."
+      },
+      {
+        "question": "Apakah cocok untuk laptop sekolah dan tablet?",
+        "answer": "Ya. Tampilan menyesuaikan dengan rapi di laptop, Chromebook, tablet, dan papan interaktif."
+      },
+      {
+        "question": "Apakah skor terbaik saya tersimpan?",
+        "answer": "Ya. Hasil sesi yang selesai otomatis tersimpan di dasbor Statistik lokal browser Anda."
+      },
+      {
+        "question": "Seberapa sering sebaiknya berlatih?",
+        "answer": "Sesi fokus 10 menit sebanyak 3–5 kali seminggu memberikan peningkatan yang konsisten."
+      }
+    ]
+  },
+  "projectile-cannon": {
+    "description": [
+      {
+        "title": "Tentang Fisika Meriam Proyektil",
+        "content": "Atur sudut, kecepatan, angin, dan gravitasi untuk mengenai target parabola. Ubah rumus fisika dan matematika di buku teks menjadi eksperimen visual interaktif. Atur slider, luncurkan orbit satelit, pantulkan laser, dan seimbangkan tuas langsung di browser."
+      },
+      {
+        "title": "Mekanika Utama & Ilmu Belajar",
+        "content": "Visualizer 2D interaktif untuk jatuh bebas gravitasi, kecepatan orbit, hukum pemantulan cermin, gerak parabola, dan kesetimbangan torsi. Rumus Real-Time: Lihat persamaan diperbarui otomatis saat variabel diubah. Intuisi Visual: Amati vektor kecepatan, garis normal cermin, dan jejak lintasan."
+      },
+      {
+        "title": "Penilaian & Metrik Langsung",
+        "content": "Setiap simulasi memadukan umpan balik visual cepat dengan metrik kuantitatif yang transparan. Mode Tantangan: Uji pemahamanmu lewat misi siswa berskor."
+      },
+      {
+        "title": "Penerapan di Kelas & Kerja",
+        "content": "Ya. Tampilan menyesuaikan dengan rapi di laptop, Chromebook, tablet, dan papan interaktif. Sepuluh hingga lima belas menit beberapa kali seminggu membangun intuisi dan ketepatan nyata."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Pengaturan & Kontrol",
+        "steps": [
+          "Mulai dengan pengaturan standar untuk mengukur kemampuan dasar Anda secara objektif.",
+          "Ubah satu kontrol setiap kali agar hubungan sebab-akibat terlihat jelas."
+        ]
+      },
+      {
+        "title": "Menjalankan Sesi",
+        "steps": [
+          "Atur sudut, kecepatan, angin, dan gravitasi untuk mengenai target parabola.",
+          "Periksa rumus, akurasi, dan waktu milidetik setelah setiap ronde."
+        ]
+      },
+      {
+        "title": "Menganalisis Hasil",
+        "steps": [
+          "Ya. Hasil sesi yang selesai otomatis tersimpan di dasbor Statistik lokal browser Anda.",
+          "Blok latihan 10 menit yang fokus jauh lebih efektif daripada sesi panjang yang melelahkan."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Ubah Satu Variabel Sekaligus",
+        "content": "Ubah satu kontrol setiap kali agar hubungan sebab-akibat terlihat jelas."
+      },
+      {
+        "title": "Utamakan Akurasi Sebelum Kecepatan",
+        "content": "Periksa rumus, akurasi, dan waktu milidetik setelah setiap ronde."
+      },
+      {
+        "title": "Pantau Kemajuan Secara Berkala",
+        "content": "Sepuluh hingga lima belas menit beberapa kali seminggu membangun intuisi dan ketepatan nyata."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Apakah modul ini sepenuhnya gratis?",
+        "answer": "Ya. Semua alat Reflextry berjalan langsung di browser tanpa akun, unduhan, atau biaya."
+      },
+      {
+        "question": "Apakah cocok untuk laptop sekolah dan tablet?",
+        "answer": "Ya. Tampilan menyesuaikan dengan rapi di laptop, Chromebook, tablet, dan papan interaktif."
+      },
+      {
+        "question": "Apakah skor terbaik saya tersimpan?",
+        "answer": "Ya. Hasil sesi yang selesai otomatis tersimpan di dasbor Statistik lokal browser Anda."
+      },
+      {
+        "question": "Seberapa sering sebaiknya berlatih?",
+        "answer": "Sesi fokus 10 menit sebanyak 3–5 kali seminggu memberikan peningkatan yang konsisten."
+      }
+    ]
+  },
+  "torque-balance": {
+    "description": [
+      {
+        "title": "Tentang Keseimbangan Torsi Jungkat-Jungkit",
+        "content": "Seimbangkan beban pada tuas menggunakan persamaan torsi di mode bebas atau waktu. Ubah rumus fisika dan matematika di buku teks menjadi eksperimen visual interaktif. Atur slider, luncurkan orbit satelit, pantulkan laser, dan seimbangkan tuas langsung di browser."
+      },
+      {
+        "title": "Mekanika Utama & Ilmu Belajar",
+        "content": "Visualizer 2D interaktif untuk jatuh bebas gravitasi, kecepatan orbit, hukum pemantulan cermin, gerak parabola, dan kesetimbangan torsi. Rumus Real-Time: Lihat persamaan diperbarui otomatis saat variabel diubah. Intuisi Visual: Amati vektor kecepatan, garis normal cermin, dan jejak lintasan."
+      },
+      {
+        "title": "Penilaian & Metrik Langsung",
+        "content": "Setiap simulasi memadukan umpan balik visual cepat dengan metrik kuantitatif yang transparan. Mode Tantangan: Uji pemahamanmu lewat misi siswa berskor."
+      },
+      {
+        "title": "Penerapan di Kelas & Kerja",
+        "content": "Ya. Tampilan menyesuaikan dengan rapi di laptop, Chromebook, tablet, dan papan interaktif. Sepuluh hingga lima belas menit beberapa kali seminggu membangun intuisi dan ketepatan nyata."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Pengaturan & Kontrol",
+        "steps": [
+          "Mulai dengan pengaturan standar untuk mengukur kemampuan dasar Anda secara objektif.",
+          "Ubah satu kontrol setiap kali agar hubungan sebab-akibat terlihat jelas."
+        ]
+      },
+      {
+        "title": "Menjalankan Sesi",
+        "steps": [
+          "Seimbangkan beban pada tuas menggunakan persamaan torsi di mode bebas atau waktu.",
+          "Periksa rumus, akurasi, dan waktu milidetik setelah setiap ronde."
+        ]
+      },
+      {
+        "title": "Menganalisis Hasil",
+        "steps": [
+          "Ya. Hasil sesi yang selesai otomatis tersimpan di dasbor Statistik lokal browser Anda.",
+          "Blok latihan 10 menit yang fokus jauh lebih efektif daripada sesi panjang yang melelahkan."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Ubah Satu Variabel Sekaligus",
+        "content": "Ubah satu kontrol setiap kali agar hubungan sebab-akibat terlihat jelas."
+      },
+      {
+        "title": "Utamakan Akurasi Sebelum Kecepatan",
+        "content": "Periksa rumus, akurasi, dan waktu milidetik setelah setiap ronde."
+      },
+      {
+        "title": "Pantau Kemajuan Secara Berkala",
+        "content": "Sepuluh hingga lima belas menit beberapa kali seminggu membangun intuisi dan ketepatan nyata."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Apakah modul ini sepenuhnya gratis?",
+        "answer": "Ya. Semua alat Reflextry berjalan langsung di browser tanpa akun, unduhan, atau biaya."
+      },
+      {
+        "question": "Apakah cocok untuk laptop sekolah dan tablet?",
+        "answer": "Ya. Tampilan menyesuaikan dengan rapi di laptop, Chromebook, tablet, dan papan interaktif."
+      },
+      {
+        "question": "Apakah skor terbaik saya tersimpan?",
+        "answer": "Ya. Hasil sesi yang selesai otomatis tersimpan di dasbor Statistik lokal browser Anda."
+      },
+      {
+        "question": "Seberapa sering sebaiknya berlatih?",
+        "answer": "Sesi fokus 10 menit sebanyak 3–5 kali seminggu memberikan peningkatan yang konsisten."
+      }
+    ]
+  },
+  "solar-gravity-3d": {
+    "description": [
+      {
+        "title": "Tentang Simulator Gravitasi Surya 3D",
+        "content": "Jelajahi sumur gravitasi ruang-waktu 3D dan luncurkan satelit buatanmu. Didukung fisika WebGL 3D langsung, putar kamera mengelilingi kisi ruang-waktu melengkung, luncurkan satelit ke orbit stabil, dan bidik drone 3D di bidang dekat, tengah, dan jauh."
+      },
+      {
+        "title": "Mekanika Utama & Ilmu Belajar",
+        "content": "Simulasi 3D browser berakselerasi untuk mekanika orbit astrofisika dan akurasi bidik kedalaman sumbu Z. WebGL 3D Real-Time: Kontrol kamera 3D interaktif dan pencahayaan dinamis. Persepsi Kedalaman: Latih penilaian ruang di bidang dekat, tengah, dan jauh."
+      },
+      {
+        "title": "Penilaian & Metrik Langsung",
+        "content": "Setiap simulasi memadukan umpan balik visual cepat dengan metrik kuantitatif yang transparan. Tanpa Unduhan: Rendering adaptif berjalan lancar di laptop dan desktop."
+      },
+      {
+        "title": "Penerapan di Kelas & Kerja",
+        "content": "Ya. Tampilan menyesuaikan dengan rapi di laptop, Chromebook, tablet, dan papan interaktif. Sepuluh hingga lima belas menit beberapa kali seminggu membangun intuisi dan ketepatan nyata."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Pengaturan & Kontrol",
+        "steps": [
+          "Mulai dengan pengaturan standar untuk mengukur kemampuan dasar Anda secara objektif.",
+          "Ubah satu kontrol setiap kali agar hubungan sebab-akibat terlihat jelas."
+        ]
+      },
+      {
+        "title": "Menjalankan Sesi",
+        "steps": [
+          "Jelajahi sumur gravitasi ruang-waktu 3D dan luncurkan satelit buatanmu.",
+          "Periksa rumus, akurasi, dan waktu milidetik setelah setiap ronde."
+        ]
+      },
+      {
+        "title": "Menganalisis Hasil",
+        "steps": [
+          "Ya. Hasil sesi yang selesai otomatis tersimpan di dasbor Statistik lokal browser Anda.",
+          "Blok latihan 10 menit yang fokus jauh lebih efektif daripada sesi panjang yang melelahkan."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Ubah Satu Variabel Sekaligus",
+        "content": "Ubah satu kontrol setiap kali agar hubungan sebab-akibat terlihat jelas."
+      },
+      {
+        "title": "Utamakan Akurasi Sebelum Kecepatan",
+        "content": "Periksa rumus, akurasi, dan waktu milidetik setelah setiap ronde."
+      },
+      {
+        "title": "Pantau Kemajuan Secara Berkala",
+        "content": "Sepuluh hingga lima belas menit beberapa kali seminggu membangun intuisi dan ketepatan nyata."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Apakah modul ini sepenuhnya gratis?",
+        "answer": "Ya. Semua alat Reflextry berjalan langsung di browser tanpa akun, unduhan, atau biaya."
+      },
+      {
+        "question": "Apakah cocok untuk laptop sekolah dan tablet?",
+        "answer": "Ya. Tampilan menyesuaikan dengan rapi di laptop, Chromebook, tablet, dan papan interaktif."
+      },
+      {
+        "question": "Apakah skor terbaik saya tersimpan?",
+        "answer": "Ya. Hasil sesi yang selesai otomatis tersimpan di dasbor Statistik lokal browser Anda."
+      },
+      {
+        "question": "Seberapa sering sebaiknya berlatih?",
+        "answer": "Sesi fokus 10 menit sebanyak 3–5 kali seminggu memberikan peningkatan yang konsisten."
+      }
+    ]
+  },
+  "spatial-aim-3d": {
+    "description": [
+      {
+        "title": "Tentang Arena Bidik Ruang 3D",
+        "content": "Bidik target drone 3D pada bidang kedalaman dekat, tengah, dan jauh. Didukung fisika WebGL 3D langsung, putar kamera mengelilingi kisi ruang-waktu melengkung, luncurkan satelit ke orbit stabil, dan bidik drone 3D di bidang dekat, tengah, dan jauh."
+      },
+      {
+        "title": "Mekanika Utama & Ilmu Belajar",
+        "content": "Simulasi 3D browser berakselerasi untuk mekanika orbit astrofisika dan akurasi bidik kedalaman sumbu Z. WebGL 3D Real-Time: Kontrol kamera 3D interaktif dan pencahayaan dinamis. Persepsi Kedalaman: Latih penilaian ruang di bidang dekat, tengah, dan jauh."
+      },
+      {
+        "title": "Penilaian & Metrik Langsung",
+        "content": "Setiap simulasi memadukan umpan balik visual cepat dengan metrik kuantitatif yang transparan. Tanpa Unduhan: Rendering adaptif berjalan lancar di laptop dan desktop."
+      },
+      {
+        "title": "Penerapan di Kelas & Kerja",
+        "content": "Ya. Tampilan menyesuaikan dengan rapi di laptop, Chromebook, tablet, dan papan interaktif. Sepuluh hingga lima belas menit beberapa kali seminggu membangun intuisi dan ketepatan nyata."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Pengaturan & Kontrol",
+        "steps": [
+          "Mulai dengan pengaturan standar untuk mengukur kemampuan dasar Anda secara objektif.",
+          "Ubah satu kontrol setiap kali agar hubungan sebab-akibat terlihat jelas."
+        ]
+      },
+      {
+        "title": "Menjalankan Sesi",
+        "steps": [
+          "Bidik target drone 3D pada bidang kedalaman dekat, tengah, dan jauh.",
+          "Periksa rumus, akurasi, dan waktu milidetik setelah setiap ronde."
+        ]
+      },
+      {
+        "title": "Menganalisis Hasil",
+        "steps": [
+          "Ya. Hasil sesi yang selesai otomatis tersimpan di dasbor Statistik lokal browser Anda.",
+          "Blok latihan 10 menit yang fokus jauh lebih efektif daripada sesi panjang yang melelahkan."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Ubah Satu Variabel Sekaligus",
+        "content": "Ubah satu kontrol setiap kali agar hubungan sebab-akibat terlihat jelas."
+      },
+      {
+        "title": "Utamakan Akurasi Sebelum Kecepatan",
+        "content": "Periksa rumus, akurasi, dan waktu milidetik setelah setiap ronde."
+      },
+      {
+        "title": "Pantau Kemajuan Secara Berkala",
+        "content": "Sepuluh hingga lima belas menit beberapa kali seminggu membangun intuisi dan ketepatan nyata."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Apakah modul ini sepenuhnya gratis?",
+        "answer": "Ya. Semua alat Reflextry berjalan langsung di browser tanpa akun, unduhan, atau biaya."
+      },
+      {
+        "question": "Apakah cocok untuk laptop sekolah dan tablet?",
+        "answer": "Ya. Tampilan menyesuaikan dengan rapi di laptop, Chromebook, tablet, dan papan interaktif."
+      },
+      {
+        "question": "Apakah skor terbaik saya tersimpan?",
+        "answer": "Ya. Hasil sesi yang selesai otomatis tersimpan di dasbor Statistik lokal browser Anda."
+      },
+      {
+        "question": "Seberapa sering sebaiknya berlatih?",
+        "answer": "Sesi fokus 10 menit sebanyak 3–5 kali seminggu memberikan peningkatan yang konsisten."
+      }
+    ]
+  },
+  "reaction-duel-2p": {
+    "description": [
+      {
+        "title": "Tentang Duel Refleks 2 Pemain",
+        "content": "Adu cepat milidetik 5 ronde dalam satu perangkat dengan deteksi curi start. Tanpa akun atau antrean. Bagikan satu layar untuk duel refleks milidetik, tarik tambang matematika, dan pertempuran meriam gravitasi dengan angin berubah."
+      },
+      {
+        "title": "Mekanika Utama & Ilmu Belajar",
+        "content": "Game kompetitif lokal 2 pemain untuk refleks, berhitung cepat, dan fisika di kelas maupun kelompok belajar. Keyboard & Sentuh Bersama: Kontrol kiri vs kanan untuk laptop dan tablet. Siap untuk Kelas: Tingkat kesulitan anak, pelajar, hingga pro."
+      },
+      {
+        "title": "Penilaian & Metrik Langsung",
+        "content": "Setiap simulasi memadukan umpan balik visual cepat dengan metrik kuantitatif yang transparan. Skor Milidetik Adil: Deteksi curi start dan statistik pertandingan instan."
+      },
+      {
+        "title": "Penerapan di Kelas & Kerja",
+        "content": "Ya. Tampilan menyesuaikan dengan rapi di laptop, Chromebook, tablet, dan papan interaktif. Sepuluh hingga lima belas menit beberapa kali seminggu membangun intuisi dan ketepatan nyata."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Pengaturan & Kontrol",
+        "steps": [
+          "Mulai dengan pengaturan standar untuk mengukur kemampuan dasar Anda secara objektif.",
+          "Ubah satu kontrol setiap kali agar hubungan sebab-akibat terlihat jelas."
+        ]
+      },
+      {
+        "title": "Menjalankan Sesi",
+        "steps": [
+          "Adu cepat milidetik 5 ronde dalam satu perangkat dengan deteksi curi start.",
+          "Periksa rumus, akurasi, dan waktu milidetik setelah setiap ronde."
+        ]
+      },
+      {
+        "title": "Menganalisis Hasil",
+        "steps": [
+          "Ya. Hasil sesi yang selesai otomatis tersimpan di dasbor Statistik lokal browser Anda.",
+          "Blok latihan 10 menit yang fokus jauh lebih efektif daripada sesi panjang yang melelahkan."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Ubah Satu Variabel Sekaligus",
+        "content": "Ubah satu kontrol setiap kali agar hubungan sebab-akibat terlihat jelas."
+      },
+      {
+        "title": "Utamakan Akurasi Sebelum Kecepatan",
+        "content": "Periksa rumus, akurasi, dan waktu milidetik setelah setiap ronde."
+      },
+      {
+        "title": "Pantau Kemajuan Secara Berkala",
+        "content": "Sepuluh hingga lima belas menit beberapa kali seminggu membangun intuisi dan ketepatan nyata."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Apakah modul ini sepenuhnya gratis?",
+        "answer": "Ya. Semua alat Reflextry berjalan langsung di browser tanpa akun, unduhan, atau biaya."
+      },
+      {
+        "question": "Apakah cocok untuk laptop sekolah dan tablet?",
+        "answer": "Ya. Tampilan menyesuaikan dengan rapi di laptop, Chromebook, tablet, dan papan interaktif."
+      },
+      {
+        "question": "Apakah skor terbaik saya tersimpan?",
+        "answer": "Ya. Hasil sesi yang selesai otomatis tersimpan di dasbor Statistik lokal browser Anda."
+      },
+      {
+        "question": "Seberapa sering sebaiknya berlatih?",
+        "answer": "Sesi fokus 10 menit sebanyak 3–5 kali seminggu memberikan peningkatan yang konsisten."
+      }
+    ]
+  },
+  "math-tug-of-war": {
+    "description": [
+      {
+        "title": "Tentang Tarik Tambang Matematika",
+        "content": "Jawab soal hitungan lebih cepat dari lawan untuk menarik tali kemenangan. Tanpa akun atau antrean. Bagikan satu layar untuk duel refleks milidetik, tarik tambang matematika, dan pertempuran meriam gravitasi dengan angin berubah."
+      },
+      {
+        "title": "Mekanika Utama & Ilmu Belajar",
+        "content": "Game kompetitif lokal 2 pemain untuk refleks, berhitung cepat, dan fisika di kelas maupun kelompok belajar. Keyboard & Sentuh Bersama: Kontrol kiri vs kanan untuk laptop dan tablet. Siap untuk Kelas: Tingkat kesulitan anak, pelajar, hingga pro."
+      },
+      {
+        "title": "Penilaian & Metrik Langsung",
+        "content": "Setiap simulasi memadukan umpan balik visual cepat dengan metrik kuantitatif yang transparan. Skor Milidetik Adil: Deteksi curi start dan statistik pertandingan instan."
+      },
+      {
+        "title": "Penerapan di Kelas & Kerja",
+        "content": "Ya. Tampilan menyesuaikan dengan rapi di laptop, Chromebook, tablet, dan papan interaktif. Sepuluh hingga lima belas menit beberapa kali seminggu membangun intuisi dan ketepatan nyata."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Pengaturan & Kontrol",
+        "steps": [
+          "Mulai dengan pengaturan standar untuk mengukur kemampuan dasar Anda secara objektif.",
+          "Ubah satu kontrol setiap kali agar hubungan sebab-akibat terlihat jelas."
+        ]
+      },
+      {
+        "title": "Menjalankan Sesi",
+        "steps": [
+          "Jawab soal hitungan lebih cepat dari lawan untuk menarik tali kemenangan.",
+          "Periksa rumus, akurasi, dan waktu milidetik setelah setiap ronde."
+        ]
+      },
+      {
+        "title": "Menganalisis Hasil",
+        "steps": [
+          "Ya. Hasil sesi yang selesai otomatis tersimpan di dasbor Statistik lokal browser Anda.",
+          "Blok latihan 10 menit yang fokus jauh lebih efektif daripada sesi panjang yang melelahkan."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Ubah Satu Variabel Sekaligus",
+        "content": "Ubah satu kontrol setiap kali agar hubungan sebab-akibat terlihat jelas."
+      },
+      {
+        "title": "Utamakan Akurasi Sebelum Kecepatan",
+        "content": "Periksa rumus, akurasi, dan waktu milidetik setelah setiap ronde."
+      },
+      {
+        "title": "Pantau Kemajuan Secara Berkala",
+        "content": "Sepuluh hingga lima belas menit beberapa kali seminggu membangun intuisi dan ketepatan nyata."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Apakah modul ini sepenuhnya gratis?",
+        "answer": "Ya. Semua alat Reflextry berjalan langsung di browser tanpa akun, unduhan, atau biaya."
+      },
+      {
+        "question": "Apakah cocok untuk laptop sekolah dan tablet?",
+        "answer": "Ya. Tampilan menyesuaikan dengan rapi di laptop, Chromebook, tablet, dan papan interaktif."
+      },
+      {
+        "question": "Apakah skor terbaik saya tersimpan?",
+        "answer": "Ya. Hasil sesi yang selesai otomatis tersimpan di dasbor Statistik lokal browser Anda."
+      },
+      {
+        "question": "Seberapa sering sebaiknya berlatih?",
+        "answer": "Sesi fokus 10 menit sebanyak 3–5 kali seminggu memberikan peningkatan yang konsisten."
+      }
+    ]
+  },
+  "cannon-battle-2p": {
+    "description": [
+      {
+        "title": "Tentang Pertempuran Meriam Gravitasi",
+        "content": "Artileri 2D bergiliran melintasi pegunungan dengan angin dan gravitasi planet. Tanpa akun atau antrean. Bagikan satu layar untuk duel refleks milidetik, tarik tambang matematika, dan pertempuran meriam gravitasi dengan angin berubah."
+      },
+      {
+        "title": "Mekanika Utama & Ilmu Belajar",
+        "content": "Game kompetitif lokal 2 pemain untuk refleks, berhitung cepat, dan fisika di kelas maupun kelompok belajar. Keyboard & Sentuh Bersama: Kontrol kiri vs kanan untuk laptop dan tablet. Siap untuk Kelas: Tingkat kesulitan anak, pelajar, hingga pro."
+      },
+      {
+        "title": "Penilaian & Metrik Langsung",
+        "content": "Setiap simulasi memadukan umpan balik visual cepat dengan metrik kuantitatif yang transparan. Skor Milidetik Adil: Deteksi curi start dan statistik pertandingan instan."
+      },
+      {
+        "title": "Penerapan di Kelas & Kerja",
+        "content": "Ya. Tampilan menyesuaikan dengan rapi di laptop, Chromebook, tablet, dan papan interaktif. Sepuluh hingga lima belas menit beberapa kali seminggu membangun intuisi dan ketepatan nyata."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Pengaturan & Kontrol",
+        "steps": [
+          "Mulai dengan pengaturan standar untuk mengukur kemampuan dasar Anda secara objektif.",
+          "Ubah satu kontrol setiap kali agar hubungan sebab-akibat terlihat jelas."
+        ]
+      },
+      {
+        "title": "Menjalankan Sesi",
+        "steps": [
+          "Artileri 2D bergiliran melintasi pegunungan dengan angin dan gravitasi planet.",
+          "Periksa rumus, akurasi, dan waktu milidetik setelah setiap ronde."
+        ]
+      },
+      {
+        "title": "Menganalisis Hasil",
+        "steps": [
+          "Ya. Hasil sesi yang selesai otomatis tersimpan di dasbor Statistik lokal browser Anda.",
+          "Blok latihan 10 menit yang fokus jauh lebih efektif daripada sesi panjang yang melelahkan."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Ubah Satu Variabel Sekaligus",
+        "content": "Ubah satu kontrol setiap kali agar hubungan sebab-akibat terlihat jelas."
+      },
+      {
+        "title": "Utamakan Akurasi Sebelum Kecepatan",
+        "content": "Periksa rumus, akurasi, dan waktu milidetik setelah setiap ronde."
+      },
+      {
+        "title": "Pantau Kemajuan Secara Berkala",
+        "content": "Sepuluh hingga lima belas menit beberapa kali seminggu membangun intuisi dan ketepatan nyata."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Apakah modul ini sepenuhnya gratis?",
+        "answer": "Ya. Semua alat Reflextry berjalan langsung di browser tanpa akun, unduhan, atau biaya."
+      },
+      {
+        "question": "Apakah cocok untuk laptop sekolah dan tablet?",
+        "answer": "Ya. Tampilan menyesuaikan dengan rapi di laptop, Chromebook, tablet, dan papan interaktif."
+      },
+      {
+        "question": "Apakah skor terbaik saya tersimpan?",
+        "answer": "Ya. Hasil sesi yang selesai otomatis tersimpan di dasbor Statistik lokal browser Anda."
+      },
+      {
+        "question": "Seberapa sering sebaiknya berlatih?",
+        "answer": "Sesi fokus 10 menit sebanyak 3–5 kali seminggu memberikan peningkatan yang konsisten."
+      }
+    ]
+  },
+  "speed-reading": {
+    "description": [
+      {
+        "title": "Tentang Baca Cepat & Pemahaman",
+        "content": "Baca dengan sorotan atau RSVP lalu jawab kuis untuk menghitung Effective WPM. Dirancang untuk pelajar dan profesional. Hitung Effective WPM dengan kuis pemahaman, kecepatan entri angka 10-Key KPH, dan perubahan refleks setelah sesi Pomodoro."
+      },
+      {
+        "title": "Mekanika Utama & Ilmu Belajar",
+        "content": "Tolok ukur harian untuk membaca cepat RSVP & sorotan, entri data angka akuntansi 10-Key, dan pelacak kelelahan fokus. Pemahaman Terverifikasi: Setiap tes baca cepat memvalidasi daya ingat lewat kuis. Metrik KPH Kerja: Akurasi dan KPH standar untuk entri numpad 10-Key."
+      },
+      {
+        "title": "Penilaian & Metrik Langsung",
+        "content": "Setiap simulasi memadukan umpan balik visual cepat dengan metrik kuantitatif yang transparan. Telemetri Kelelahan: Bandingkan latensi reaksi sebelum dan sesudah fokus."
+      },
+      {
+        "title": "Penerapan di Kelas & Kerja",
+        "content": "Ya. Tampilan menyesuaikan dengan rapi di laptop, Chromebook, tablet, dan papan interaktif. Sepuluh hingga lima belas menit beberapa kali seminggu membangun intuisi dan ketepatan nyata."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Pengaturan & Kontrol",
+        "steps": [
+          "Mulai dengan pengaturan standar untuk mengukur kemampuan dasar Anda secara objektif.",
+          "Ubah satu kontrol setiap kali agar hubungan sebab-akibat terlihat jelas."
+        ]
+      },
+      {
+        "title": "Menjalankan Sesi",
+        "steps": [
+          "Baca dengan sorotan atau RSVP lalu jawab kuis untuk menghitung Effective WPM.",
+          "Periksa rumus, akurasi, dan waktu milidetik setelah setiap ronde."
+        ]
+      },
+      {
+        "title": "Menganalisis Hasil",
+        "steps": [
+          "Ya. Hasil sesi yang selesai otomatis tersimpan di dasbor Statistik lokal browser Anda.",
+          "Blok latihan 10 menit yang fokus jauh lebih efektif daripada sesi panjang yang melelahkan."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Ubah Satu Variabel Sekaligus",
+        "content": "Ubah satu kontrol setiap kali agar hubungan sebab-akibat terlihat jelas."
+      },
+      {
+        "title": "Utamakan Akurasi Sebelum Kecepatan",
+        "content": "Periksa rumus, akurasi, dan waktu milidetik setelah setiap ronde."
+      },
+      {
+        "title": "Pantau Kemajuan Secara Berkala",
+        "content": "Sepuluh hingga lima belas menit beberapa kali seminggu membangun intuisi dan ketepatan nyata."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Apakah modul ini sepenuhnya gratis?",
+        "answer": "Ya. Semua alat Reflextry berjalan langsung di browser tanpa akun, unduhan, atau biaya."
+      },
+      {
+        "question": "Apakah cocok untuk laptop sekolah dan tablet?",
+        "answer": "Ya. Tampilan menyesuaikan dengan rapi di laptop, Chromebook, tablet, dan papan interaktif."
+      },
+      {
+        "question": "Apakah skor terbaik saya tersimpan?",
+        "answer": "Ya. Hasil sesi yang selesai otomatis tersimpan di dasbor Statistik lokal browser Anda."
+      },
+      {
+        "question": "Seberapa sering sebaiknya berlatih?",
+        "answer": "Sesi fokus 10 menit sebanyak 3–5 kali seminggu memberikan peningkatan yang konsisten."
+      }
+    ]
+  },
+  "ten-key": {
+    "description": [
+      {
+        "title": "Tentang Tes Kecepatan Numpad 10-Key",
+        "content": "Ukur KPH dan akurasi entri angka pada faktur, bilangan bulat, dan kode SKU. Dirancang untuk pelajar dan profesional. Hitung Effective WPM dengan kuis pemahaman, kecepatan entri angka 10-Key KPH, dan perubahan refleks setelah sesi Pomodoro."
+      },
+      {
+        "title": "Mekanika Utama & Ilmu Belajar",
+        "content": "Tolok ukur harian untuk membaca cepat RSVP & sorotan, entri data angka akuntansi 10-Key, dan pelacak kelelahan fokus. Pemahaman Terverifikasi: Setiap tes baca cepat memvalidasi daya ingat lewat kuis. Metrik KPH Kerja: Akurasi dan KPH standar untuk entri numpad 10-Key."
+      },
+      {
+        "title": "Penilaian & Metrik Langsung",
+        "content": "Setiap simulasi memadukan umpan balik visual cepat dengan metrik kuantitatif yang transparan. Telemetri Kelelahan: Bandingkan latensi reaksi sebelum dan sesudah fokus."
+      },
+      {
+        "title": "Penerapan di Kelas & Kerja",
+        "content": "Ya. Tampilan menyesuaikan dengan rapi di laptop, Chromebook, tablet, dan papan interaktif. Sepuluh hingga lima belas menit beberapa kali seminggu membangun intuisi dan ketepatan nyata."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Pengaturan & Kontrol",
+        "steps": [
+          "Mulai dengan pengaturan standar untuk mengukur kemampuan dasar Anda secara objektif.",
+          "Ubah satu kontrol setiap kali agar hubungan sebab-akibat terlihat jelas."
+        ]
+      },
+      {
+        "title": "Menjalankan Sesi",
+        "steps": [
+          "Ukur KPH dan akurasi entri angka pada faktur, bilangan bulat, dan kode SKU.",
+          "Periksa rumus, akurasi, dan waktu milidetik setelah setiap ronde."
+        ]
+      },
+      {
+        "title": "Menganalisis Hasil",
+        "steps": [
+          "Ya. Hasil sesi yang selesai otomatis tersimpan di dasbor Statistik lokal browser Anda.",
+          "Blok latihan 10 menit yang fokus jauh lebih efektif daripada sesi panjang yang melelahkan."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Ubah Satu Variabel Sekaligus",
+        "content": "Ubah satu kontrol setiap kali agar hubungan sebab-akibat terlihat jelas."
+      },
+      {
+        "title": "Utamakan Akurasi Sebelum Kecepatan",
+        "content": "Periksa rumus, akurasi, dan waktu milidetik setelah setiap ronde."
+      },
+      {
+        "title": "Pantau Kemajuan Secara Berkala",
+        "content": "Sepuluh hingga lima belas menit beberapa kali seminggu membangun intuisi dan ketepatan nyata."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Apakah modul ini sepenuhnya gratis?",
+        "answer": "Ya. Semua alat Reflextry berjalan langsung di browser tanpa akun, unduhan, atau biaya."
+      },
+      {
+        "question": "Apakah cocok untuk laptop sekolah dan tablet?",
+        "answer": "Ya. Tampilan menyesuaikan dengan rapi di laptop, Chromebook, tablet, dan papan interaktif."
+      },
+      {
+        "question": "Apakah skor terbaik saya tersimpan?",
+        "answer": "Ya. Hasil sesi yang selesai otomatis tersimpan di dasbor Statistik lokal browser Anda."
+      },
+      {
+        "question": "Seberapa sering sebaiknya berlatih?",
+        "answer": "Sesi fokus 10 menit sebanyak 3–5 kali seminggu memberikan peningkatan yang konsisten."
+      }
+    ]
+  },
+  "focus-sprint": {
+    "description": [
+      {
+        "title": "Tentang Focus Sprint & Pelacak Lelah",
+        "content": "Gabungkan timer Pomodoro nyata dengan cek reaksi sebelum dan sesudah sesi. Dirancang untuk pelajar dan profesional. Hitung Effective WPM dengan kuis pemahaman, kecepatan entri angka 10-Key KPH, dan perubahan refleks setelah sesi Pomodoro."
+      },
+      {
+        "title": "Mekanika Utama & Ilmu Belajar",
+        "content": "Tolok ukur harian untuk membaca cepat RSVP & sorotan, entri data angka akuntansi 10-Key, dan pelacak kelelahan fokus. Pemahaman Terverifikasi: Setiap tes baca cepat memvalidasi daya ingat lewat kuis. Metrik KPH Kerja: Akurasi dan KPH standar untuk entri numpad 10-Key."
+      },
+      {
+        "title": "Penilaian & Metrik Langsung",
+        "content": "Setiap simulasi memadukan umpan balik visual cepat dengan metrik kuantitatif yang transparan. Telemetri Kelelahan: Bandingkan latensi reaksi sebelum dan sesudah fokus."
+      },
+      {
+        "title": "Penerapan di Kelas & Kerja",
+        "content": "Ya. Tampilan menyesuaikan dengan rapi di laptop, Chromebook, tablet, dan papan interaktif. Sepuluh hingga lima belas menit beberapa kali seminggu membangun intuisi dan ketepatan nyata."
+      }
+    ],
+    "howToUse": [
+      {
+        "title": "Pengaturan & Kontrol",
+        "steps": [
+          "Mulai dengan pengaturan standar untuk mengukur kemampuan dasar Anda secara objektif.",
+          "Ubah satu kontrol setiap kali agar hubungan sebab-akibat terlihat jelas."
+        ]
+      },
+      {
+        "title": "Menjalankan Sesi",
+        "steps": [
+          "Gabungkan timer Pomodoro nyata dengan cek reaksi sebelum dan sesudah sesi.",
+          "Periksa rumus, akurasi, dan waktu milidetik setelah setiap ronde."
+        ]
+      },
+      {
+        "title": "Menganalisis Hasil",
+        "steps": [
+          "Ya. Hasil sesi yang selesai otomatis tersimpan di dasbor Statistik lokal browser Anda.",
+          "Blok latihan 10 menit yang fokus jauh lebih efektif daripada sesi panjang yang melelahkan."
+        ]
+      }
+    ],
+    "howToImprove": [
+      {
+        "title": "Ubah Satu Variabel Sekaligus",
+        "content": "Ubah satu kontrol setiap kali agar hubungan sebab-akibat terlihat jelas."
+      },
+      {
+        "title": "Utamakan Akurasi Sebelum Kecepatan",
+        "content": "Periksa rumus, akurasi, dan waktu milidetik setelah setiap ronde."
+      },
+      {
+        "title": "Pantau Kemajuan Secara Berkala",
+        "content": "Sepuluh hingga lima belas menit beberapa kali seminggu membangun intuisi dan ketepatan nyata."
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Apakah modul ini sepenuhnya gratis?",
+        "answer": "Ya. Semua alat Reflextry berjalan langsung di browser tanpa akun, unduhan, atau biaya."
+      },
+      {
+        "question": "Apakah cocok untuk laptop sekolah dan tablet?",
+        "answer": "Ya. Tampilan menyesuaikan dengan rapi di laptop, Chromebook, tablet, dan papan interaktif."
+      },
+      {
+        "question": "Apakah skor terbaik saya tersimpan?",
+        "answer": "Ya. Hasil sesi yang selesai otomatis tersimpan di dasbor Statistik lokal browser Anda."
+      },
+      {
+        "question": "Seberapa sering sebaiknya berlatih?",
+        "answer": "Sesi fokus 10 menit sebanyak 3–5 kali seminggu memberikan peningkatan yang konsisten."
+      }
+    ]
   }
 }

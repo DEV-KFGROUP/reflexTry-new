@@ -1,6 +1,7 @@
 import { TOOL_MAPPING, TOOL_COUNT } from "@/config/tool-mapping";
 import { SEO_CONFIGS } from "@/config/seo-config";
 import { getBaseUrl } from "@/lib/base-url";
+import { AVAILABLE_LANGUAGES } from "@/lib/international-seo";
 import { getAllContent } from "@/lib/content/loader";
 import type { Article } from "@/lib/content/types";
 
@@ -8,8 +9,8 @@ export async function getDiscoveryText(full = false) {
     const base = getBaseUrl();
     const lines = [
         '# Reflextry', '',
-        `> ${TOOL_COUNT} free browser-based practice tests for reaction time, memory, speed, accuracy, and aim.`, '',
-        'Published language: English. Scores describe performance in each exercise, including device and browser effects. These are not clinical assessments or validated measures of intelligence.',
+        `> ${TOOL_COUNT} free browser-based cognitive benchmarks, reaction time & memory tests, FPS aim trainers, STEM physics labs, 3D WebGL labs, classic puzzles, and student productivity tools.`, '',
+        `Published languages (${AVAILABLE_LANGUAGES.length}): ${AVAILABLE_LANGUAGES.join(', ')}. Scores describe performance in each exercise, including device and browser effects. These are not clinical assessments or validated measures of intelligence.`,
         'Reflextry does not publish a verified global benchmark dataset. /statistics is a personal progress dashboard, not a public source of population norms.', '',
         '## Tests', '',
     ];

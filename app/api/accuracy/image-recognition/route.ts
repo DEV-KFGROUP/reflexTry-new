@@ -1,46 +1,88 @@
 import { NextResponse } from "next/server";
 
 // Disable caching for API routes
-export const dynamic = 'force-dynamic';
+export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
+const CORRECT_ANSWERS: Record<string, string> = {
+    img_001: "cat",
+    img_002: "sunset",
+    img_003: "geometric shapes",
+};
+
+const MAX_INPUT_LENGTH = 120;
+
 export async function POST(request: Request) {
+    let body: unknown;
     try {
-        const body = await request.json();
-        const { imageId, userInput } = body;
+        body = await request.json();
+    } catch {
+        return NextResponse.json({ success: false, message: "Invalid JSON payload" }, { status: 400 });
+    }
 
-        // Mock functionality: In a real app, this would compare against ground truth
-        // For demo, we'll check if the user input matches a hardcoded "correct" answer
-        // or just return a similarity score based on string distance.
+    if (!body || typeof body !== "object" || Array.isArray(body)) {
+        return NextResponse.json({ success: false, message: "Invalid request body" }, { status: 400 });
+    }
 
-        // Simple mock logic
-        const correctAnswers: Record<string, string> = {
-            "img_001": "cat",
-            "img_002": "sunset",
-            "img_003": "geometric shapes",
-        };
-
-        const expected = correctAnswers[imageId] || "unknown";
-        const isCorrect = userInput.toLowerCase().trim() === expected;
-        const accuracy = isCorrect ? 100 : calculateSimilarity(userInput, expected);
-
-        return NextResponse.json({
-            success: true,
-            accuracy,
-            message: accuracy === 100 ? "Perfect Match!" : `Accuracy: ${accuracy}%`,
-        });
-    } catch (error) {
+    const record = body as Record<string, unknown>;
+    if (typeof record.imageId !== "string" || typeof record.userInput !== "string") {
         return NextResponse.json(
-            { message: "Invalid request" },
+            { success: false, message: "imageId and userInput must be strings" },
             { status: 400 }
         );
     }
+
+    const imageId = record.imageId.trim();
+    const normalizedInput = record.userInput.trim().toLowerCase();
+
+    if (!imageId || imageId.length > 64 || normalizedInput.length > MAX_INPUT_LENGTH) {
+        return NextResponse.json(
+            { success: false, message: "Input parameters out of bounds" },
+            { status: 400 }
+        );
+    }
+
+    const expected = Object.prototype.hasOwnProperty.call(CORRECT_ANSWERS, imageId)
+        ? CORRECT_ANSWERS[imageId]
+        : null;
+
+    if (!expected) {
+        return NextResponse.json(
+            { success: false, message: "Unknown imageId" },
+            { status: 404 }
+        );
+    }
+
+    const isCorrect = normalizedInput === expected;
+    const accuracy = isCorrect ? 100 : calculateSimilarity(normalizedInput, expected);
+
+    return NextResponse.json({
+        success: true,
+        accuracy,
+        message: accuracy === 100 ? "Perfect Match!" : `Accuracy: ${accuracy}%`,
+    });
 }
 
-function calculateSimilarity(s1: string, s2: string): number {
-    if (!s1 || !s2) return 0;
-    // Very basic length/char overlap mock
-    const overlap = s1.split('').filter(c => s2.includes(c)).length;
-    const maxLength = Math.max(s1.length, s2.length);
-    return Math.round((overlap / maxLength) * 100);
+function calculateSimilarity(a: string, b: string): number {
+    if (!a || !b) return 0;
+    const m = a.length;
+    const n = b.length;
+    const prev = new Array<number>(n + 1);
+    const curr = new Array<number>(n + 1);
+
+    for (let j = 0; j <= n; j++) prev[j] = j;
+
+    for (let i = 1; i <= m; i++) {
+        curr[0] = i;
+        for (let j = 1; j <= n; j++) {
+            const cost = a[i - 1] === b[j - 1] ? 0 : 1;
+            curr[j] = Math.min(prev[j] + 1, curr[j - 1] + 1, prev[j - 1] + cost);
+        }
+        for (let j = 0; j <= n; j++) prev[j] = curr[j];
+    }
+
+    const distance = prev[n];
+    const maxLen = Math.max(m, n);
+    return Math.max(0, Math.round((1 - distance / maxLen) * 100));
 }
+

@@ -950,5 +950,113 @@
       "BPMタップ精度ゲーム",
       "リズム反射トレーナー"
     ]
+  },
+  "gravity-lab": {
+    "title": "重力・軌道ラボ - STEM・物理ビジュアルラボ | Reflextry",
+    "description": "地球・月・火星・木星の自由落下を比較し、人工衛星の安定軌道投入に挑戦。",
+    "keywords": [
+      "重力・軌道ラボ",
+      "stem・物理ビジュアルラボ",
+      "reflextry"
+    ]
+  },
+  "laser-reflection": {
+    "title": "レーザー反射光学パズル - STEM・物理ビジュアルラボ | Reflextry",
+    "description": "鏡の角度を調整してレーザーをセンサーへ導き、反射の法則を体感。",
+    "keywords": [
+      "レーザー反射光学パズル",
+      "stem・物理ビジュアルラボ",
+      "reflextry"
+    ]
+  },
+  "projectile-cannon": {
+    "title": "放物線キャノン物理 - STEM・物理ビジュアルラボ | Reflextry",
+    "description": "発射角度・初速・風・重力を計算してターゲットを狙う運動学ゲーム。",
+    "keywords": [
+      "放物線キャノン物理",
+      "stem・物理ビジュアルラボ",
+      "reflextry"
+    ]
+  },
+  "torque-balance": {
+    "title": "シーソートルク天秤 - STEM・物理ビジュアルラボ | Reflextry",
+    "description": "てこの原理とモーメント計算で左右の重りを釣り合わせる物理・算数ラボ。",
+    "keywords": [
+      "シーソートルク天秤",
+      "stem・物理ビジュアルラボ",
+      "reflextry"
+    ]
+  },
+  "solar-gravity-3d": {
+    "title": "3D太陽系重力シミュレーター - 3Dインタラクティブラボ | Reflextry",
+    "description": "3D時空グリッドの重力井戸を観察し、衛星を安定軌道へ打ち上げよう。",
+    "keywords": [
+      "3d太陽系重力シミュレーター",
+      "3dインタラクティブラボ",
+      "reflextry"
+    ]
+  },
+  "spatial-aim-3d": {
+    "title": "3D空間エイムアリーナ - 3Dインタラクティブラボ | Reflextry",
+    "description": "近・中・遠の3D空間に出現するドローンを素早く撃ち抜く反射テスト。",
+    "keywords": [
+      "3d空間エイムアリーナ",
+      "3dインタラクティブラボ",
+      "reflextry"
+    ]
+  },
+  "reaction-duel-2p": {
+    "title": "2人用リアクション対決 - 2人対戦バトルアリーナ | Reflextry",
+    "description": "1台の画面で5本勝負のミリ秒早押しバトル。フライング判定付き。",
+    "keywords": [
+      "2人用リアクション対決",
+      "2人対戦バトルアリーナ",
+      "reflextry"
+    ]
+  },
+  "math-tug-of-war": {
+    "title": "算数・数学つなひき対戦 - 2人対戦バトルアリーナ | Reflextry",
+    "description": "相手より速く計算問題に正解してロープを自陣へ引き寄せよう。",
+    "keywords": [
+      "算数・数学つなひき対戦",
+      "2人対戦バトルアリーナ",
+      "reflextry"
+    ]
+  },
+  "cannon-battle-2p": {
+    "title": "2人用重力キャノン対戦 - 2人対戦バトルアリーナ | Reflextry",
+    "description": "山岳地形と変化する風・重力を読み合うターン制2D大砲バトル。",
+    "keywords": [
+      "2人用重力キャノン対戦",
+      "2人対戦バトルアリーナ",
+      "reflextry"
+    ]
+  },
+  "speed-reading": {
+    "title": "速読＆理解度テスト - 学習・ビジネス効率スイート | Reflextry",
+    "description": "ハイライトまたはRSVP表示で読み、理解度クイズから実効WPMを計測。",
+    "keywords": [
+      "速読＆理解度テスト",
+      "学習・ビジネス効率スイート",
+      "reflextry"
+    ]
+  },
+  "ten-key": {
+    "title": "テンキー10-Key速度テスト - 学習・ビジネス効率スイート | Reflextry",
+    "description": "請求書・整数・SKUコードでテンキー入力KPHと正確率をベンチマーク。",
+    "keywords": [
+      "テンキー10-key速度テスト",
+      "学習・ビジネス効率スイート",
+      "reflextry"
+    ]
+  },
+  "focus-sprint": {
+    "title": "集中スプリント＆疲労測定 - 学習・ビジネス効率スイート | Reflextry",
+    "description": "ポモドーロ集中タイマー前後の反応時間比較で認知疲労を見える化。",
+    "keywords": [
+      "集中スプリント＆疲労測定",
+      "学習・ビジネス効率スイート",
+      "reflextry"
+    ]
   }
 }

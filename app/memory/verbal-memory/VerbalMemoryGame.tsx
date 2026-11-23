@@ -265,15 +265,15 @@ export default function VerbalMemoryGame() {
             <div className="game-start-icon w-20 h-20 bg-indigo-50 dark:bg-indigo-900/20 rounded-full flex items-center justify-center mb-6">
               <BookA className="w-10 h-10 text-indigo-500" />
             </div>
-            <h2 className="text-2xl font-black text-slate-900 dark:text-white uppercase tracking-wider mb-4">
+            <h2 className="text-2xl font-black text-[#161614] dark:text-white uppercase tracking-wider mb-4">
               {t("verbalMemory.testTitle", "Verbal Memory Test")}
             </h2>
-            <p className="text-sm text-slate-500 dark:text-slate-400 mb-8 leading-relaxed">
+            <p className="text-sm text-[#78756C] dark:text-slate-400 mb-8 leading-relaxed">
               {t("verbalMemory.testDesc", "Test your verbal memory. Keep track of which words you've seen and which are new.")}
             </p>
             <button
               onClick={startGame}
-              className="w-full sm:w-auto px-12 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold uppercase tracking-widest text-sm transition-all shadow-lg hover:shadow-indigo-500/20 flex items-center justify-center gap-3"
+              className="w-full sm:w-auto px-12 py-4 bg-[#161614] hover:bg-[#2C2B27] text-[#FAF9F6] rounded-xl font-bold uppercase tracking-widest text-sm transition-all shadow-lg hover: flex items-center justify-center gap-3"
             >
               <Play className="w-4 h-4 fill-current" />
               {t("game.initializeTest", "Initialize Test")}
@@ -290,7 +290,7 @@ export default function VerbalMemoryGame() {
             className="w-full flex flex-col items-center justify-center p-4 max-w-2xl"
           >
             <div className="w-full mb-12 flex flex-col items-center">
-              <div className="text-5xl md:text-7xl font-black text-slate-900 dark:text-white tracking-tight break-all text-center leading-tight">
+              <div className="text-5xl md:text-7xl font-black text-[#161614] dark:text-white tracking-tight break-all text-center leading-tight">
                 {currentWord}
               </div>
             </div>
@@ -304,7 +304,7 @@ export default function VerbalMemoryGame() {
               </button>
               <button
                 onClick={() => handleChoice(false)}
-                className="flex-1 py-5 bg-indigo-600 hover:bg-indigo-700 border-2 border-indigo-600 hover:border-indigo-700 text-white rounded-2xl font-black text-xl tracking-widest uppercase transition-all hover:scale-105 active:scale-95 shadow-lg shadow-indigo-500/30"
+                className="flex-1 py-5 bg-indigo-600 hover:bg-indigo-700 border-2 border-indigo-600 hover:border-indigo-700 text-white rounded-2xl font-black text-xl tracking-widest uppercase transition-all hover:scale-105 active:scale-95 shadow-lg"
               >
                 {t("game.new", "New")}
               </button>
@@ -322,11 +322,11 @@ export default function VerbalMemoryGame() {
             <div className="w-20 h-20 bg-rose-50 dark:bg-rose-900/20 rounded-full flex items-center justify-center mb-6">
               <Trophy className="w-10 h-10 text-rose-500" />
             </div>
-            <h2 className="text-3xl font-black text-slate-900 dark:text-white uppercase tracking-widest mb-2">
+            <h2 className="text-3xl font-black text-[#161614] dark:text-white uppercase tracking-widest mb-2">
               {t("game.calibrationComplete", "Calibration Complete")}
             </h2>
-            <div className="text-slate-500 mb-2 text-sm uppercase tracking-widest">
-              {t("game.finalScore", "Final Score:")} <span className="text-xl font-black text-slate-900 dark:text-white ml-2">{score}</span>
+            <div className="text-[#78756C] mb-2 text-sm uppercase tracking-widest">
+              {t("game.finalScore", "Final Score:")} <span className="text-xl font-black text-[#161614] dark:text-white ml-2">{score}</span>
             </div>
             {score > 0 && score >= highScores[diffId] ? (
               <p className="text-amber-500 font-bold text-xs uppercase tracking-widest mb-6">{t("game.newRecord", "New Record!")}</p>
@@ -337,14 +337,14 @@ export default function VerbalMemoryGame() {
             <div className="flex gap-4">
               <button
                 onClick={startGame}
-                className="flex items-center gap-2 px-8 py-4 bg-indigo-600 hover:bg-indigo-700 text-white rounded-xl font-bold uppercase tracking-widest text-xs transition-all shadow-lg hover:shadow-indigo-500/20"
+                className="flex items-center gap-2 px-8 py-4 bg-[#161614] hover:bg-[#2C2B27] text-[#FAF9F6] rounded-xl font-bold uppercase tracking-widest text-xs transition-all shadow-lg hover:"
               >
                 <RotateCcw className="w-4 h-4" />
                 {t("game.recalibrate", "Recalibrate")}
               </button>
               <button
                 onClick={() => setGameState("select")}
-                className="flex items-center gap-2 px-8 py-4 bg-slate-100 hover:bg-slate-200 dark:bg-slate-800 dark:hover:bg-slate-700 text-slate-900 dark:text-white rounded-xl font-bold uppercase tracking-widest text-xs transition-all"
+                className="flex items-center gap-2 px-8 py-4 bg-[#F3F1EB] hover:bg-[#E6E3DB] dark:bg-slate-800 dark:hover:bg-slate-700 text-[#161614] dark:text-white rounded-xl font-bold uppercase tracking-widest text-xs transition-all"
               >
                 {t("game.menu", "Menu")}
               </button>
