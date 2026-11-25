@@ -7,7 +7,9 @@ const nextConfig: import('next').NextConfig = {
   compress: true,
 
   experimental: {
-    optimizePackageImports: ['lucide-react', 'framer-motion', 'recharts'],
+    inlineCss: true,
+    cssChunking: 'strict',
+    optimizePackageImports: ['lucide-react', 'framer-motion', 'recharts', 'three'],
   },
 
   // Allow Next.js 16 dev resources (/_next/static/*, HMR) when loaded inside hosted preview iframes

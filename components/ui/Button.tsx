@@ -1,10 +1,9 @@
 "use client";
 
-import { motion, HTMLMotionProps } from "framer-motion";
 import { cn } from "@/lib/utils";
-import { forwardRef } from "react";
+import { forwardRef, type ButtonHTMLAttributes } from "react";
 
-interface ButtonProps extends Omit<HTMLMotionProps<"button">, "asChild"> {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     variant?:
         | "primary"
         | "secondary"
@@ -18,6 +17,7 @@ interface ButtonProps extends Omit<HTMLMotionProps<"button">, "asChild"> {
         | "wisdom"
         | "accuracy";
     size?: "sm" | "md" | "lg" | "xl";
+    asChild?: boolean;
 }
 
 const Button = forwardRef<HTMLButtonElement, ButtonProps>(
@@ -56,14 +56,13 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
 
         // Filter out asChild prop to prevent it from being passed to DOM
         // eslint-disable-next-line @typescript-eslint/no-unused-vars
-        const { asChild, ...restProps } = props as ButtonProps & { asChild?: boolean };
+        const { asChild, ...restProps } = props;
 
         return (
-            <motion.button
+            <button
                 ref={ref}
-                whileTap={{ scale: 0.98 }}
                 className={cn(
-                    "inline-flex items-center justify-center gap-2 rounded-xl font-semibold transition-colors duration-150 cursor-pointer select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1E40AF] focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none",
+                    "inline-flex items-center justify-center gap-2 rounded-xl font-semibold transition-all duration-150 active:scale-[0.98] cursor-pointer select-none focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1E40AF] focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none",
                     variantClasses[variant],
                     sizes[size],
                     className
@@ -72,7 +71,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
                 {...restProps}
             >
                 {children}
-            </motion.button>
+            </button>
         );
     }
 );

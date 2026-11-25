@@ -241,4 +241,92 @@ describe("Full-Site Technical & On-Page SEO Audit", () => {
             );
         }
     });
+
+    it("eliminates render-blocking stylesheets and defers heavy Three.js / Framer Motion bundles from the initial critical path", () => {
+        const nextConfigSrc = fs.readFileSync(path.join(ROOT, "next.config.ts"), "utf8");
+        assert.match(
+            nextConfigSrc,
+            /\binlineCss:\s*true\b/,
+            "next.config.ts must enable experimental.inlineCss: true to eliminate render-blocking external CSS links"
+        );
+        assert.match(
+            nextConfigSrc,
+            /\bcssChunking:\s*['"]strict['"]/,
+            "next.config.ts must enable strict cssChunking"
+        );
+
+        const layoutSrc = fs.readFileSync(path.join(ROOT, "app/layout.tsx"), "utf8");
+        assert.match(
+            layoutSrc,
+            /id=["']critical-above-the-fold-css["']/,
+            "app/layout.tsx must inline critical above-the-fold CSS in <head>"
+        );
+        assert.doesNotMatch(
+            layoutSrc,
+            /<link[^>]+rel=["']stylesheet["']/i,
+            "app/layout.tsx must not hardcode render-blocking external <link rel='stylesheet'> tags"
+        );
+
+        const toolIconSrc = fs.readFileSync(path.join(ROOT, "components/ToolIcon.tsx"), "utf8");
+        assert.doesNotMatch(
+            toolIconSrc,
+            /^import\s+.*from\s+["']three["']/m,
+            "components/ToolIcon.tsx must not statically import three at top level"
+        );
+        assert.doesNotMatch(
+            toolIconSrc,
+            /^import\s+.*from\s+["']@\/lib\/three\/icon-renderer["']/m,
+            "components/ToolIcon.tsx must dynamically import @/lib/three/icon-renderer during idle time"
+        );
+        assert.match(
+            toolIconSrc,
+            /import\(["']@\/lib\/three\/icon-renderer["']\)/,
+            "components/ToolIcon.tsx must lazily import @/lib/three/icon-renderer"
+        );
+
+        for (const rootChromeFile of [
+            "components/ThemeProvider.tsx",
+            "components/Navbar.tsx",
+            "components/LanguageSwitcher.tsx",
+            "components/ui/Button.tsx",
+        ]) {
+            const chromeSrc = fs.readFileSync(path.join(ROOT, rootChromeFile), "utf8");
+            assert.doesNotMatch(
+                chromeSrc,
+                /^import\s+.*from\s+["']framer-motion["']/m,
+                `${rootChromeFile} must not pull framer-motion into the synchronous root layout bundle`
+            );
+        }
+
+        const lazySrc = fs.readFileSync(path.join(ROOT, "components/LazyLoadedComponents.tsx"), "utf8");
+        assert.match(
+            lazySrc,
+            /requestIdleCallback/,
+            "LazyLoadedComponents.tsx must defer mounting non-critical background widgets until browser idle"
+        );
+
+        const gaSrc = fs.readFileSync(path.join(ROOT, "components/GoogleAnalytics.tsx"), "utf8");
+        assert.doesNotMatch(
+            gaSrc,
+            /strategy=["']beforeInteractive["']/,
+            "GoogleAnalytics.tsx must never use render-blocking beforeInteractive scripts"
+        );
+        assert.match(
+            gaSrc,
+            /strategy=["']lazyOnload["']/,
+            "GoogleAnalytics.tsx must defer third-party scripts with lazyOnload"
+        );
+
+        assert.match(
+            layoutSrc,
+            /<script\s+async\s+src=\{GA_GTAG_SRC\}\s*\/>/,
+            "app/layout.tsx must render non-blocking <script async src={GA_GTAG_SRC} /> in <head> for Google Analytics detection"
+        );
+        assert.match(
+            layoutSrc,
+            /id=["']google-analytics["']/,
+            "app/layout.tsx must render the inline #google-analytics gtag config script in <head>"
+        );
+    });
 });
+

@@ -4,6 +4,11 @@ import "./globals.css";
 import { NavbarDynamic } from "@/components/NavbarDynamic";
 import { Footer } from "@/components/Footer";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
+import {
+  GA_GTAG_SRC,
+  GA_TRACKING_ID,
+  buildGaBootstrapScript,
+} from "@/lib/analytics/ga-config";
 import { LazyLoadedComponents } from "@/components/LazyLoadedComponents";
 import { ErrorBoundary } from "@/components/ErrorBoundary";
 import { ThemeProvider } from "@/components/ThemeProvider";
@@ -127,13 +132,23 @@ export default async function RootLayout({
       suppressHydrationWarning
     >
       <head>
+        {/* Google tag (gtag.js) - Non-blocking async GA4 with Consent Mode v2 & AI Referral Attribution */}
+        <script async src={GA_GTAG_SRC} />
+        <script
+          id="google-analytics"
+          dangerouslySetInnerHTML={{
+            __html: buildGaBootstrapScript(GA_TRACKING_ID),
+          }}
+        />
+
         <StructuredData type="Organization" data={organizationSchema} />
 
         {/* AdSense Publisher Meta Tag */}
         <meta name="google-adsense-account" content="ca-pub-3064655546051154" />
 
-        {/* Critical Root CSS Variables - Inline for zero FOUC/CLS */}
+        {/* Critical Above-the-Fold CSS - Inlined for zero render-blocking FOUC/CLS */}
         <style
+          id="critical-above-the-fold-css"
           dangerouslySetInnerHTML={{
             __html: `
               :root {
@@ -162,18 +177,44 @@ export default async function RootLayout({
                 --wisdom: 220 9% 46%;
                 --info: 221 63% 40%;
               }
+              *, ::before, ::after {
+                box-sizing: border-box;
+              }
               html {
                 color-scheme: light;
                 -webkit-font-smoothing: antialiased;
                 -moz-osx-font-smoothing: grayscale;
+                text-size-adjust: 100%;
               }
               body {
                 margin: 0;
                 padding: 0;
+                min-height: 100vh;
+                display: flex;
+                flex-direction: column;
                 background-color: #FAF9F6;
                 color: #161614;
                 font-family: var(--font-plus-jakarta, system-ui, -apple-system, sans-serif);
                 line-height: 1.55;
+              }
+              header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                z-index: 50;
+                background-color: rgba(250, 249, 246, 0.95);
+                border-bottom: 1px solid #E6E3DB;
+              }
+              main {
+                flex: 1 1 0%;
+                padding-top: 68px;
+              }
+              h1, h2, h3, .font-serif {
+                font-family: var(--font-fraunces, Georgia, "Times New Roman", serif);
+              }
+              .font-mono {
+                font-family: var(--font-ibm-plex-mono, ui-monospace, SFMono-Regular, monospace);
               }
             `,
           }}

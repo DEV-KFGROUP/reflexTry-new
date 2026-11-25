@@ -3,7 +3,6 @@
 import { useState, useEffect, useRef, useMemo } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion, AnimatePresence } from "framer-motion";
 import {
     Menu,
     X,
@@ -223,27 +222,18 @@ export function Navbar() {
             </nav>
 
             {/* Desktop Full-Site "All Pages" Editorial Directory Panel */}
-            <AnimatePresence>
-                {megaOpen && (
-                    <>
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 0.14 }}
-                            onClick={() => setMegaOpen(false)}
-                            className="hidden lg:block fixed inset-0 top-[68px] bg-[#161614]/25 z-40"
-                            aria-hidden="true"
-                        />
-                        <motion.div
-                            id="all-pages-mega-menu"
-                            data-testid="all-pages-mega-menu"
-                            initial={{ opacity: 0, y: -6 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -6 }}
-                            transition={{ duration: 0.16, ease: "easeOut" }}
-                            className="hidden lg:block fixed top-[68px] left-0 right-0 bg-[#FAF9F6] border-b border-[#D8D4C9] shadow-xl z-50 max-h-[calc(100vh-80px)] overflow-y-auto"
-                        >
+            {megaOpen && (
+                <>
+                    <div
+                        onClick={() => setMegaOpen(false)}
+                        className="hidden lg:block fixed inset-0 top-[68px] bg-[#161614]/25 z-40 animate-in fade-in duration-150"
+                        aria-hidden="true"
+                    />
+                    <div
+                        id="all-pages-mega-menu"
+                        data-testid="all-pages-mega-menu"
+                        className="hidden lg:block fixed top-[68px] left-0 right-0 bg-[#FAF9F6] border-b border-[#D8D4C9] shadow-xl z-50 max-h-[calc(100vh-80px)] overflow-y-auto animate-in fade-in duration-150"
+                    >
                             <div className="max-w-7xl mx-auto px-6 lg:px-8 py-7 space-y-6">
                                 {/* Top Search & Overview Bar */}
                                 <div className="flex items-center justify-between gap-6 pb-5 border-b border-[#E6E3DB]">
@@ -462,32 +452,22 @@ export function Navbar() {
                                     </div>
                                 )}
                             </div>
-                        </motion.div>
+                        </div>
                     </>
                 )}
-            </AnimatePresence>
 
             {/* Complete Solid Mobile Drawer showing every page cleanly */}
-            <AnimatePresence>
-                {mobileOpen && (
-                    <>
-                        <motion.div
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 0.15 }}
-                            onClick={() => setMobileOpen(false)}
-                            className="lg:hidden fixed inset-0 top-[68px] bg-[#161614]/35 z-40"
-                            aria-hidden="true"
-                        />
-                        <motion.div
-                            data-testid="mobile-nav-drawer"
-                            initial={{ opacity: 0, y: -8 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: -8 }}
-                            transition={{ duration: 0.18, ease: "easeOut" }}
-                            className="lg:hidden fixed top-[68px] left-0 right-0 bg-[#FAF9F6] border-b border-[#D8D4C9] shadow-xl z-50 max-h-[calc(100vh-68px)] overflow-y-auto"
-                        >
+            {mobileOpen && (
+                <>
+                    <div
+                        onClick={() => setMobileOpen(false)}
+                        className="lg:hidden fixed inset-0 top-[68px] bg-[#161614]/35 z-40 animate-in fade-in duration-150"
+                        aria-hidden="true"
+                    />
+                    <div
+                        data-testid="mobile-nav-drawer"
+                        className="lg:hidden fixed top-[68px] left-0 right-0 bg-[#FAF9F6] border-b border-[#D8D4C9] shadow-xl z-50 max-h-[calc(100vh-68px)] overflow-y-auto animate-in fade-in duration-150"
+                    >
                             <div className="max-w-7xl mx-auto px-4 sm:px-6 py-5 space-y-6">
                                 <div>
                                     <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#78756C] mb-2.5 px-1">
@@ -576,10 +556,9 @@ export function Navbar() {
                                     </Link>
                                 </div>
                             </div>
-                        </motion.div>
+                        </div>
                     </>
                 )}
-            </AnimatePresence>
         </header>
     );
 }

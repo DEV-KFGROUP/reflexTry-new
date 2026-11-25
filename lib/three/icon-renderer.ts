@@ -3,6 +3,14 @@
 import * as THREE from "three";
 import { RoomEnvironment } from "three/addons/environments/RoomEnvironment.js";
 import type { Tool3DIconSpec } from "@/lib/icons/tool-3d-catalog";
+import {
+    cacheKeyFor,
+    getCachedToolIconByKey,
+    getCachedToolIconUrl,
+    setCachedToolIconByKey,
+} from "./icon-cache";
+
+export { getCachedToolIconUrl };
 
 /**
  * Shared single-context Three.js PBR 3D Icon Renderer + Composite Sculpture Builder.
@@ -909,7 +917,6 @@ interface SnapshotEngine {
 
 let engine: SnapshotEngine | null = null;
 let engineFailed = false;
-const dataUrlCache = new Map<string, string>();
 
 interface QueueItem {
     key: string;
@@ -1006,14 +1013,6 @@ function getOrCreateEngine(): SnapshotEngine | null {
     }
 }
 
-function cacheKeyFor(spec: Tool3DIconSpec): string {
-    return `${spec.archetype}|${spec.primaryColor}|${spec.secondaryColor}|${spec.accentColor}`;
-}
-
-export function getCachedToolIconUrl(spec: Tool3DIconSpec): string | null {
-    return dataUrlCache.get(cacheKeyFor(spec)) ?? null;
-}
-
 function processQueueBatch() {
     if (renderQueue.length === 0) {
         queueRunning = false;
@@ -1038,7 +1037,7 @@ function processQueueBatch() {
 
     for (let i = 0; i < batchCount && renderQueue.length > 0; i++) {
         const item = renderQueue.shift()!;
-        let dataUrl = dataUrlCache.get(item.key) ?? null;
+        let dataUrl = getCachedToolIconByKey(item.key);
 
         if (!dataUrl) {
             const group = buildIconSculptureGroup(item.spec);
@@ -1046,7 +1045,7 @@ function processQueueBatch() {
             eng.renderer.render(eng.scene, eng.camera);
             try {
                 dataUrl = eng.renderer.domElement.toDataURL("image/png");
-                dataUrlCache.set(item.key, dataUrl);
+                setCachedToolIconByKey(item.key, dataUrl);
             } catch {
                 dataUrl = null;
             }
@@ -1075,7 +1074,7 @@ export function requestToolIconSnapshot(
     priority = false
 ): Promise<string | null> {
     const key = cacheKeyFor(spec);
-    const cached = dataUrlCache.get(key);
+    const cached = getCachedToolIconByKey(key);
     if (cached) return Promise.resolve(cached);
     if (engineFailed || typeof window === "undefined") return Promise.resolve(null);
 

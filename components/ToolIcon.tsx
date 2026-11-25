@@ -35,16 +35,21 @@ import {
     Zap,
     type LucideIcon,
 } from "lucide-react";
+import dynamic from "next/dynamic";
 import {
     resolveToolIconSpec,
     type FallbackLucideName,
     type Tool3DIconSpec,
 } from "@/lib/icons/tool-3d-catalog";
-import {
-    getCachedToolIconUrl,
-    requestToolIconSnapshot,
-} from "@/lib/three/icon-renderer";
-import { Tool3DInspectModal } from "@/components/Tool3DInspectModal";
+import { getCachedToolIconUrl } from "@/lib/three/icon-cache";
+
+const Tool3DInspectModal = dynamic(
+    () =>
+        import("@/components/Tool3DInspectModal").then((mod) => ({
+            default: mod.Tool3DInspectModal,
+        })),
+    { ssr: false }
+);
 
 export type ToolIconVariant = "3d" | "3d-pedestal" | "3d-floating" | "flat";
 export type ToolIconSize = "xs" | "sm" | "md" | "lg" | "xl";
@@ -122,8 +127,9 @@ const VARIANT_CLASSES: Record<ToolIconVariant, string> = {
  * Reusable ToolIcon component supporting procedural Three.js PBR 3D variants
  * ("3d", "3d-pedestal", "3d-floating") and a minimal clinical "flat" variant.
  *
- * Uses a single shared offscreen WebGL snapshot queue with viewport-priority
- * loading so hundreds of hub cards render smoothly without exhausting WebGL contexts.
+ * Renders the crisp vector icon immediately on first paint and lazily loads the
+ * Three.js offscreen snapshot queue during browser idle time so Three.js never
+ * blocks initial page render or FCP/LCP.
  */
 export function ToolIcon({
     toolId,
@@ -152,13 +158,28 @@ export function ToolIcon({
 
         let cancelled = false;
         let requested = false;
+        let idleTimer: ReturnType<typeof setTimeout> | null = null;
 
         const trigger = (priority: boolean) => {
             if (requested || cancelled) return;
             requested = true;
-            requestToolIconSnapshot(spec, priority).then((url) => {
-                if (!cancelled && url) setDataUrl(url);
-            });
+            const runSnapshot = () => {
+                if (cancelled) return;
+                import("@/lib/three/icon-renderer")
+                    .then((mod) => mod.requestToolIconSnapshot(spec, priority))
+                    .then((url) => {
+                        if (!cancelled && url) setDataUrl(url);
+                    })
+                    .catch(() => {
+                        // Keep vector fallback if WebGL or dynamic chunk is unavailable
+                    });
+            };
+
+            if (typeof window !== "undefined" && typeof window.requestIdleCallback === "function") {
+                window.requestIdleCallback(runSnapshot, { timeout: 1200 });
+            } else {
+                idleTimer = setTimeout(runSnapshot, 80);
+            }
         };
 
         const el = containerRef.current;
@@ -175,6 +196,7 @@ export function ToolIcon({
             observer.observe(el);
             return () => {
                 cancelled = true;
+                if (idleTimer !== null) clearTimeout(idleTimer);
                 observer.disconnect();
             };
         }
@@ -182,6 +204,7 @@ export function ToolIcon({
         trigger(false);
         return () => {
             cancelled = true;
+            if (idleTimer !== null) clearTimeout(idleTimer);
         };
     }, [is3D, spec]);
 
