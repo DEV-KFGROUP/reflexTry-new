@@ -36,16 +36,49 @@ export function LazyLoadedComponents() {
   useEffect(() => {
     let idleId: number | null = null;
     let timerId: ReturnType<typeof setTimeout> | null = null;
+    let activated = false;
 
-    const activate = () => setIdleReady(true);
+    const interactionEvents = [
+      "pointerdown",
+      "keydown",
+      "touchstart",
+      "scroll",
+      "tool:settings-toggle",
+    ] as const;
 
-    if (typeof window !== "undefined" && typeof window.requestIdleCallback === "function") {
-      idleId = window.requestIdleCallback(activate, { timeout: 1500 });
-    } else {
-      timerId = setTimeout(activate, 250);
+    const cleanupListeners = () => {
+      for (const evt of interactionEvents) {
+        window.removeEventListener(evt, activate);
+      }
+    };
+
+    function activate() {
+      if (activated) return;
+      activated = true;
+      cleanupListeners();
+      if (idleId !== null && typeof window !== "undefined" && typeof window.cancelIdleCallback === "function") {
+        window.cancelIdleCallback(idleId);
+      }
+      if (timerId !== null) {
+        clearTimeout(timerId);
+      }
+      setIdleReady(true);
     }
 
+    for (const evt of interactionEvents) {
+      window.addEventListener(evt, activate, { once: true, passive: true });
+    }
+
+    timerId = setTimeout(() => {
+      if (typeof window !== "undefined" && typeof window.requestIdleCallback === "function") {
+        idleId = window.requestIdleCallback(activate, { timeout: 2000 });
+      } else {
+        activate();
+      }
+    }, 5500);
+
     return () => {
+      cleanupListeners();
       if (idleId !== null && typeof window !== "undefined" && typeof window.cancelIdleCallback === "function") {
         window.cancelIdleCallback(idleId);
       }

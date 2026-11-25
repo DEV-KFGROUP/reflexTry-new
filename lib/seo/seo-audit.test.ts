@@ -327,6 +327,21 @@ describe("Full-Site Technical & On-Page SEO Audit", () => {
             /id=["']google-analytics["']/,
             "app/layout.tsx must render the inline #google-analytics gtag config script in <head>"
         );
+        assert.doesNotMatch(
+            layoutSrc,
+            /\bpreload:\s*true\b/,
+            "app/layout.tsx must not preload .woff2 fonts into the critical request chain"
+        );
+        assert.doesNotMatch(
+            layoutSrc,
+            /\bawait\s+headers\(\)/,
+            "app/layout.tsx must not call await headers() so static routes can be pre-rendered and edge-cached"
+        );
+        assert.match(
+            toolIconSrc,
+            /\beager3D\s*=\s*false\b/,
+            "components/ToolIcon.tsx must default eager3D to false to eliminate main-thread WebGL Total Blocking Time on page load"
+        );
     });
 });
 

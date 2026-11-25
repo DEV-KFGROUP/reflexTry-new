@@ -39,7 +39,7 @@ export function HomeSEOContent() {
     ];
 
     return (
-        <section className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
+        <section className="cv-auto w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
             <div className="border-t border-[#D8D4C9] pt-14 grid grid-cols-1 lg:grid-cols-12 gap-12">
                 {/* Left Editorial Notes */}
                 <div className="lg:col-span-7 space-y-10 max-w-2xl">

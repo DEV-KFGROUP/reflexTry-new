@@ -63,6 +63,8 @@ export interface ToolIconProps {
     size?: ToolIconSize;
     /** When true, clicking the icon opens a live interactive OrbitControls 3D inspector. */
     interactive?: boolean;
+    /** When true, schedules an offscreen WebGL 3D snapshot render. Defaults to false for zero TBT on catalog grids. */
+    eager3D?: boolean;
     /** Optional accessible title used in interactive inspector or tooltip. */
     title?: string;
     /** Optional override for visual label accessibility. */
@@ -124,18 +126,19 @@ const VARIANT_CLASSES: Record<ToolIconVariant, string> = {
 };
 
 /**
- * Reusable ToolIcon component supporting procedural Three.js PBR 3D variants
+ * Reusable ToolIcon component supporting tactile framed variants
  * ("3d", "3d-pedestal", "3d-floating") and a minimal clinical "flat" variant.
  *
- * Renders the crisp vector icon immediately on first paint and lazily loads the
- * Three.js offscreen snapshot queue during browser idle time so Three.js never
- * blocks initial page render or FCP/LCP.
+ * Renders the crisp vector icon immediately on first paint with zero main-thread
+ * WebGL overhead by default (0ms Total Blocking Time), and lazily loads Three.js
+ * only when interactive 3D inspection or eager3D is explicitly requested.
  */
 export function ToolIcon({
     toolId,
     variant = "3d",
     size = "md",
     interactive = false,
+    eager3D = false,
     title,
     decorative = true,
     className = "",
@@ -144,12 +147,12 @@ export function ToolIcon({
     const is3D = variant !== "flat";
     const containerRef = useRef<HTMLSpanElement | null>(null);
     const [dataUrl, setDataUrl] = useState<string | null>(() =>
-        is3D ? getCachedToolIconUrl(spec) : null
+        is3D && eager3D ? getCachedToolIconUrl(spec) : null
     );
     const [inspectOpen, setInspectOpen] = useState(false);
 
     useEffect(() => {
-        if (!is3D) return;
+        if (!is3D || !eager3D) return;
         const cached = getCachedToolIconUrl(spec);
         if (cached) {
             setDataUrl(cached);
@@ -176,9 +179,9 @@ export function ToolIcon({
             };
 
             if (typeof window !== "undefined" && typeof window.requestIdleCallback === "function") {
-                window.requestIdleCallback(runSnapshot, { timeout: 1200 });
+                window.requestIdleCallback(runSnapshot, { timeout: 4000 });
             } else {
-                idleTimer = setTimeout(runSnapshot, 80);
+                idleTimer = setTimeout(runSnapshot, 250);
             }
         };
 
@@ -191,7 +194,7 @@ export function ToolIcon({
                         trigger(true);
                     }
                 },
-                { rootMargin: "220px" }
+                { rootMargin: "120px" }
             );
             observer.observe(el);
             return () => {
@@ -206,7 +209,7 @@ export function ToolIcon({
             cancelled = true;
             if (idleTimer !== null) clearTimeout(idleTimer);
         };
-    }, [is3D, spec]);
+    }, [is3D, eager3D, spec]);
 
     const sizeStyles = SIZE_CLASSES[size];
     const variantStyles = VARIANT_CLASSES[variant];

@@ -475,8 +475,11 @@ export default function HomeClient() {
 
                     {/* Ruled Editorial Arena Sections */}
                     <div className="space-y-14">
-                        {visibleArenas.map((category) => (
-                            <div key={category.id} className="space-y-5">
+                        {visibleArenas.map((category, arenaIdx) => (
+                            <div
+                                key={category.id}
+                                className={arenaIdx > 0 ? "space-y-5 cv-auto" : "space-y-5"}
+                            >
                                 <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 pb-3 border-b border-[#D8D4C9]">
                                     <div className="flex items-start gap-3.5">
                                         <ToolIcon
@@ -564,7 +567,7 @@ export default function HomeClient() {
                 {/* 3. Cognitive Lab Journal (Asymmetric 2-Col Editorial Reading Band) */}
                 <section
                     aria-labelledby="journal-heading"
-                    className="border-t border-[#D8D4C9] pt-14 grid grid-cols-1 lg:grid-cols-12 gap-10"
+                    className="cv-auto border-t border-[#D8D4C9] pt-14 grid grid-cols-1 lg:grid-cols-12 gap-10"
                 >
                     <div className="lg:col-span-4 space-y-4">
                         <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-[#78756C]">

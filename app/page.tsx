@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import { headers } from "next/headers";
 import HomeClient from "./HomeClient";
 import { HeroSection } from "./HeroSection";
 import { HomeSEOContent } from "./HomeSEOContent";
@@ -10,15 +9,10 @@ import { generateWebsiteStructuredData, generateFAQPageSchema, generateBreadcrum
 
 import { HOME_FAQS } from "@/lib/site-faqs";
 
-export async function generateMetadata(): Promise<Metadata> {
-    const headerList = await headers();
-    const locale = headerList.get("x-locale") || "en";
-    return getHomeMetadata(locale);
-}
+export const metadata: Metadata = getHomeMetadata("en");
 
-export default async function Home() {
-    const headerList = await headers();
-    const locale = headerList.get("x-locale") || "en";
+export default function Home() {
+    const locale = "en";
     const structuredData = generateWebsiteStructuredData(locale);
     const faqSchema = generateFAQPageSchema(HOME_FAQS);
 

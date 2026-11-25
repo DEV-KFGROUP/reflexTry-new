@@ -1,6 +1,5 @@
 "use client";
 
-import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Twitter, Instagram, ChevronDown, ArrowUpRight } from "lucide-react";
 import Image from "next/image";
@@ -35,17 +34,10 @@ const FOOTER_PUZZLES_AND_LABS = [
 ];
 
 export function Footer() {
-    const [mounted, setMounted] = useState(false);
-    const [currentYear, setCurrentYear] = useState(2026);
     const { t, getLocalizedHref } = useTranslation();
 
-    useEffect(() => {
-        setMounted(true);
-        setCurrentYear(new Date().getFullYear());
-    }, []);
-
     return (
-        <footer className="mt-20 bg-white border-t border-[#E6E3DB] text-[#161614] font-sans">
+        <footer className="cv-auto mt-20 bg-white border-t border-[#E6E3DB] text-[#161614] font-sans">
             {/* Quick-Access Popular Tools Strip */}
             <div className="border-b border-[#E6E3DB] bg-[#FAF9F6]">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-wrap items-center gap-x-6 gap-y-2">
@@ -285,7 +277,7 @@ export function Footer() {
                 {/* Quiet Copyright Line */}
                 <div className="pt-5 border-t border-[#E6E3DB] flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-[#78756C]">
                     <p>
-                        &copy; {mounted ? currentYear : 2026} Reflextry. All rights reserved.
+                        &copy; 2026 Reflextry. All rights reserved.
                     </p>
                     <p>
                         {TOOL_COUNT} interactive tools across 11 arenas

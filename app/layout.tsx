@@ -24,7 +24,7 @@ const fraunces = Fraunces({
   variable: "--font-fraunces",
   subsets: ["latin"],
   display: "swap",
-  preload: true,
+  preload: false,
   fallback: ["Georgia", "Times New Roman", "serif"],
 });
 
@@ -32,7 +32,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta",
   subsets: ["latin"],
   display: "swap",
-  preload: true,
+  preload: false,
   fallback: ["system-ui", "-apple-system", "sans-serif"],
 });
 
@@ -109,20 +109,15 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-import { headers } from "next/headers";
 import { I18nProvider } from "@/lib/i18n/context";
-import { DEFAULT_LOCALE, isSupportedLocale, type Locale } from "@/lib/i18n/config";
-import { loadLocaleDictionary } from "@/lib/i18n/load-dictionary";
+import { DEFAULT_LOCALE, type Locale } from "@/lib/i18n/config";
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const headerList = await headers();
-  const rawLocale = headerList.get("x-locale");
-  const locale: Locale = rawLocale && isSupportedLocale(rawLocale) ? rawLocale : DEFAULT_LOCALE;
-  const initialDict = locale !== DEFAULT_LOCALE ? await loadLocaleDictionary(locale) : undefined;
+  const locale: Locale = DEFAULT_LOCALE;
   const organizationSchema = generateOrganizationSchema();
 
   return (
@@ -216,6 +211,10 @@ export default async function RootLayout({
               .font-mono {
                 font-family: var(--font-ibm-plex-mono, ui-monospace, SFMono-Regular, monospace);
               }
+              .cv-auto {
+                content-visibility: auto;
+                contain-intrinsic-size: auto 520px;
+              }
             `,
           }}
         />
@@ -224,7 +223,7 @@ export default async function RootLayout({
         className="font-sans antialiased bg-[#FAF9F6] text-[#161614] flex flex-col min-h-screen"
       >
         <ThemeProvider>
-          <I18nProvider initialLocale={locale} initialDict={initialDict}>
+          <I18nProvider initialLocale={locale}>
             <ErrorBoundary>
               <NavbarDynamic />
               <main className="flex-1 pt-[68px]">
